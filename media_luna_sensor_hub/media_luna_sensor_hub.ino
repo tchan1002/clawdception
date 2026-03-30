@@ -1,23 +1,16 @@
 /*
- * Media Luna — ESP32 Sensor Hub
+ * Media Luna — ESP32 Sensor Hub v2
  * Reads: DS18B20 temperature, DFRobot pH V2, DFRobot TDS
- * Posts: JSON to Flask endpoint every 15 minutes
+ * Posts: Rich JSON to Flask endpoint for AI agent consumption
  * 
- * WIRING SUMMARY (see build guide for details):
+ * WIRING:
  *   DS18B20 Data  → GPIO 4  (with 4.7kΩ pullup to 3.3V)
- *   pH Signal     → GPIO 34 (ADC1 — CRITICAL: ADC2 fails with WiFi)
+ *   pH Signal     → GPIO 34 (ADC1)
  *   TDS Signal    → GPIO 35 (ADC1)
  *   
- * LIBRARIES NEEDED (install via Arduino IDE Library Manager):
- *   - OneWire (by Jim Studt)
- *   - DallasTemperature (by Miles Burton)
- *   - WiFi (built into ESP32 board package)
- *   - HTTPClient (built into ESP32 board package)
- *
- * BOARD SETUP:
- *   Arduino IDE → Boards Manager → search "esp32" → install "ESP32 by Espressif"
- *   Select board: "ESP32 Dev Module"
- *   Upload speed: 115200
+ * TOOLCHAIN:
+ *   arduino-cli compile --fqbn esp32:esp32:esp32 ~/clawdception/media_luna_sensor_hub
+ *   arduino-cli upload  --fqbn esp32:esp32:esp32 --port /dev/cu.usbserial-0001 ~/clawdception/media_luna_sensor_hub
  */
 
 #include <WiFi.h>
@@ -26,52 +19,62 @@
 #include <DallasTemperature.h>
 
 // ============================================================
-// CONFIG — EDIT THESE
+// CONFIG
 // ============================================================
 
-// WiFi credentials
-const char* WIFI_SSID     = "Shroomies";
-const char* WIFI_PASSWORD  = "AhnTheSpectrum69";
+const char* WIFI_SSID      = "Shroomies";
+const char* WIFI_PASSWORD   = "AhnTheSpectrum69";
+const char* SERVER_URL      = "http://192.168.12.12:5001/api/sensors";
 
-// Flask server URL — find your laptop IP with: ifconfig (mac) or ipconfig (windows)
-// Example: "http://192.168.1.42:5000/api/sensors"
-const char* SERVER_URL = "http://192.168.12.12:5001/api/sensors";
-
-// Reading interval (milliseconds). 900000 = 15 min. Use 30000 (30s) for testing.
-const unsigned long READ_INTERVAL = 30000;  // START WITH 30s FOR TESTING, change to 900000 later
+// 900000 = 15 min (production), 30000 = 30s (testing)
+const unsigned long READ_INTERVAL = 10000;
 
 // ============================================================
-// PIN ASSIGNMENTS — ALL ADC1 PINS (ADC2 BROKEN WITH WIFI)
+// PIN ASSIGNMENTS — ADC1 ONLY (ADC2 broken with WiFi)
 // ============================================================
 
-#define DS18B20_PIN  4     // Digital — any GPIO works
-#define PH_PIN       34    // Analog — MUST be ADC1 (32-39)
-#define TDS_PIN      35    // Analog — MUST be ADC1 (32-39)
+#define DS18B20_PIN  4
+#define PH_PIN       34
+#define TDS_PIN      35
 
 // ============================================================
-// SENSOR SETUP
+// CALIBRATION — Mar 30, 2026
+//   pH 7.0 buffer → 1.37V avg
+//   pH 4.0 buffer → 1.88V avg
+//   Offset: -1.10 (matched to API kit reading of 6.4)
+//   Temp: DS18B20 factory spec ±0.5°C, no offset applied
+//   TDS: DFRobot formula, no offset needed
 // ============================================================
 
-OneWire oneWire(DS18B20_PIN);
-DallasTemperature tempSensor(&oneWire);
+#define PH_NEUTRAL_V    1.37
+#define PH_ACID_V       1.88
+#define PH_OFFSET       -1.10
 
-// pH calibration values (DFRobot V2 defaults)
-// Calibrate later: dip probe in pH 7.0 buffer, note voltage. Dip in pH 4.0, note voltage.
-// Then adjust these values.
-#define PH_OFFSET       -1.10    // Adjust after calibration
-#define PH_NEUTRAL_V    1.37     // Voltage at pH 7.0 (typical for DFRobot V2)
-#define PH_ACID_V       1.88     // Voltage at pH 4.0 (typical)
-
-// TDS calibration
-#define TDS_VREF        3.3     // ESP32 ADC reference voltage
-#define TDS_TEMP_COEFF  0.02    // Temperature compensation coefficient
+#define TDS_VREF        3.3
+#define TDS_TEMP_COEFF  0.02
 
 // ============================================================
 // GLOBALS
 // ============================================================
 
+OneWire oneWire(DS18B20_PIN);
+DallasTemperature tempSensor(&oneWire);
+
 unsigned long lastReadTime = 0;
-float lastTempC = 25.0;  // Default for TDS temp compensation before first reading
+float lastTempC = 25.0;
+
+// Debug/raw values — populated by read functions, sent in payload
+float dbg_ph_raw = 0;
+float dbg_ph_voltage = 0;
+float dbg_ph_before_offset = 0;
+float dbg_tds_raw = 0;
+float dbg_tds_voltage = 0;
+float dbg_tds_compensated_voltage = 0;
+float dbg_temp_raw_c = 0;
+int   dbg_wifi_reconnects = 0;
+int   dbg_post_failures = 0;
+int   dbg_reading_count = 0;
+unsigned long dbg_heap_free = 0;
 
 // ============================================================
 // SETUP
@@ -82,25 +85,20 @@ void setup() {
     delay(1000);
     
     Serial.println("\n=============================");
-    Serial.println("  Media Luna Sensor Hub v1");
+    Serial.println("  Media Luna Sensor Hub v2");
     Serial.println("=============================\n");
 
-    // Initialize temperature sensor
     tempSensor.begin();
     int deviceCount = tempSensor.getDeviceCount();
     Serial.printf("[temp] Found %d DS18B20 sensor(s)\n", deviceCount);
     if (deviceCount == 0) {
-        Serial.println("[temp] WARNING: No DS18B20 found! Check wiring:");
-        Serial.println("       Data → GPIO 4, 4.7kΩ pullup to 3.3V");
+        Serial.println("[temp] WARNING: No DS18B20 found!");
     }
 
-    // Configure ADC
-    analogReadResolution(12);  // 12-bit: 0-4095
-    // ADC attenuation for full 0-3.3V range
+    analogReadResolution(12);
     analogSetPinAttenuation(PH_PIN, ADC_11db);
     analogSetPinAttenuation(TDS_PIN, ADC_11db);
 
-    // Connect to WiFi
     connectWiFi();
 
     Serial.println("\n[ready] Sensor hub running. First reading in 5 seconds...\n");
@@ -116,29 +114,28 @@ void loop() {
     
     if (now - lastReadTime >= READ_INTERVAL || lastReadTime == 0) {
         lastReadTime = now;
+        dbg_reading_count++;
+        dbg_heap_free = ESP.getFreeHeap();
 
-        // Reconnect WiFi if dropped
         if (WiFi.status() != WL_CONNECTED) {
             Serial.println("[wifi] Connection lost, reconnecting...");
+            dbg_wifi_reconnects++;
             connectWiFi();
         }
 
-        // --- Read all sensors ---
         float tempC = readTemperature();
         float tempF = tempC * 9.0 / 5.0 + 32.0;
         float ph    = readPH(tempC);
         float tds   = readTDS(tempC);
 
-        // Store temp for TDS compensation
         lastTempC = tempC;
 
-        // --- Print to serial ---
         Serial.println("--- READING ---");
         Serial.printf("  Temp:  %.2f°C / %.2f°F\n", tempC, tempF);
         Serial.printf("  pH:    %.2f\n", ph);
         Serial.printf("  TDS:   %.0f ppm\n", tds);
+        Serial.printf("  Heap:  %lu bytes free\n", dbg_heap_free);
 
-        // --- POST to server ---
         postData(tempC, tempF, ph, tds);
         
         Serial.printf("  Next reading in %lu seconds\n\n", READ_INTERVAL / 1000);
@@ -155,66 +152,83 @@ float readTemperature() {
     
     if (tempC == DEVICE_DISCONNECTED_C || tempC == -127.0) {
         Serial.println("[temp] ERROR: Sensor disconnected. Using last known value.");
+        dbg_temp_raw_c = -127.0;
         return lastTempC;
     }
+
+    dbg_temp_raw_c = tempC;
     return tempC;
 }
 
 float readPH(float tempC) {
-    // Average multiple readings to reduce noise (DFRobot recommends this)
     long total = 0;
     int samples = 20;
+    int minRaw = 4095, maxRaw = 0;
     
     for (int i = 0; i < samples; i++) {
-        total += analogRead(PH_PIN);
+        int reading = analogRead(PH_PIN);
+        total += reading;
+        if (reading < minRaw) minRaw = reading;
+        if (reading > maxRaw) maxRaw = reading;
         delay(10);
     }
     
     float avgRaw = (float)total / samples;
     float voltage = avgRaw * 3.3 / 4095.0;
     
-    // Linear conversion: DFRobot V2 outputs ~1.5V at pH 7, ~2.0V at pH 4
-    // pH = 7.0 + ((PH_NEUTRAL_V - voltage) / ((PH_ACID_V - PH_NEUTRAL_V) / (7.0 - 4.0)))
-    // Simplified: slope from two calibration points
-    float slope = (7.0 - 4.0) / (PH_NEUTRAL_V - PH_ACID_V);
-    float ph = 7.0 + (PH_NEUTRAL_V - voltage) * slope + PH_OFFSET;
+    dbg_ph_raw = avgRaw;
+    dbg_ph_voltage = voltage;
     
-    // Basic temperature compensation (~0.03 pH per °C deviation from 25°C)
+    float slope = (7.0 - 4.0) / (PH_NEUTRAL_V - PH_ACID_V);
+    float ph = 7.0 + (PH_NEUTRAL_V - voltage) * slope;
+    
+    // Temperature compensation
     ph += (tempC - 25.0) * 0.003;
     
-    // Sanity clamp
+    dbg_ph_before_offset = ph;
+    
+    // API kit calibration offset
+    ph += PH_OFFSET;
+    
     if (ph < 0) ph = 0;
     if (ph > 14) ph = 14;
     
-    Serial.printf("  [pH debug] raw=%0.f  voltage=%.3fV  ph=%.2f\n", avgRaw, voltage, ph);
+    Serial.printf("  [pH] raw=%.0f (±%d) voltage=%.4fV  pre_offset=%.2f  final=%.2f\n", 
+                  avgRaw, (maxRaw - minRaw), voltage, dbg_ph_before_offset, ph);
     return ph;
 }
 
 float readTDS(float tempC) {
-    // Average readings
     long total = 0;
     int samples = 20;
+    int minRaw = 4095, maxRaw = 0;
     
     for (int i = 0; i < samples; i++) {
-        total += analogRead(TDS_PIN);
+        int reading = analogRead(TDS_PIN);
+        total += reading;
+        if (reading < minRaw) minRaw = reading;
+        if (reading > maxRaw) maxRaw = reading;
         delay(10);
     }
     
     float avgRaw = (float)total / samples;
     float voltage = avgRaw * TDS_VREF / 4095.0;
     
-    // Temperature compensation (DFRobot formula)
     float compensationCoefficient = 1.0 + TDS_TEMP_COEFF * (tempC - 25.0);
     float compensatedVoltage = voltage / compensationCoefficient;
     
-    // TDS conversion (DFRobot formula from their wiki)
+    dbg_tds_raw = avgRaw;
+    dbg_tds_voltage = voltage;
+    dbg_tds_compensated_voltage = compensatedVoltage;
+    
     float tds = (133.42 * compensatedVoltage * compensatedVoltage * compensatedVoltage
                - 255.86 * compensatedVoltage * compensatedVoltage
                + 857.39 * compensatedVoltage) * 0.5;
     
     if (tds < 0) tds = 0;
     
-    Serial.printf("  [TDS debug] raw=%.0f  voltage=%.3fV  tds=%.0fppm\n", avgRaw, voltage, tds);
+    Serial.printf("  [TDS] raw=%.0f (±%d) voltage=%.4fV  comp_v=%.4fV  tds=%.0fppm\n", 
+                  avgRaw, (maxRaw - minRaw), voltage, compensatedVoltage, tds);
     return tds;
 }
 
@@ -244,6 +258,7 @@ void connectWiFi() {
 void postData(float tempC, float tempF, float ph, float tds) {
     if (WiFi.status() != WL_CONNECTED) {
         Serial.println("[post] Skipping — WiFi not connected");
+        dbg_post_failures++;
         return;
     }
 
@@ -251,22 +266,59 @@ void postData(float tempC, float tempF, float ph, float tds) {
     http.begin(SERVER_URL);
     http.addHeader("Content-Type", "application/json");
 
-    // Build JSON payload
-    String payload = "{";
-    payload += "\"temp_c\":" + String(tempC, 2) + ",";
-    payload += "\"temp_f\":" + String(tempF, 2) + ",";
-    payload += "\"ph\":" + String(ph, 2) + ",";
-    payload += "\"tds_ppm\":" + String(tds, 0) + ",";
-    payload += "\"wifi_rssi\":" + String(WiFi.RSSI()) + ",";
-    payload += "\"uptime_sec\":" + String(millis() / 1000);
-    payload += "}";
+    // === AGENT-READY PAYLOAD ===
+    // Top-level: calibrated values the agent acts on
+    // "debug": raw sensor data for drift detection & self-calibration
+    // "system": ESP32 health metrics
+    // "calibration": current params so agent knows what's applied
+    
+    String p = "{";
+    
+    // --- Calibrated sensor values (agent acts on these) ---
+    p += "\"temp_c\":" + String(tempC, 2) + ",";
+    p += "\"temp_f\":" + String(tempF, 2) + ",";
+    p += "\"ph\":" + String(ph, 2) + ",";
+    p += "\"tds_ppm\":" + String(tds, 0) + ",";
+    
+    // --- Raw debug data (agent uses for drift detection) ---
+    p += "\"debug\":{";
+    p += "\"temp_raw_c\":" + String(dbg_temp_raw_c, 2) + ",";
+    p += "\"ph_raw_adc\":" + String(dbg_ph_raw, 0) + ",";
+    p += "\"ph_voltage\":" + String(dbg_ph_voltage, 4) + ",";
+    p += "\"ph_before_offset\":" + String(dbg_ph_before_offset, 2) + ",";
+    p += "\"tds_raw_adc\":" + String(dbg_tds_raw, 0) + ",";
+    p += "\"tds_voltage\":" + String(dbg_tds_voltage, 4) + ",";
+    p += "\"tds_comp_voltage\":" + String(dbg_tds_compensated_voltage, 4);
+    p += "},";
+    
+    // --- System health (agent monitors for failures) ---
+    p += "\"system\":{";
+    p += "\"wifi_rssi\":" + String(WiFi.RSSI()) + ",";
+    p += "\"heap_free\":" + String(dbg_heap_free) + ",";
+    p += "\"uptime_sec\":" + String(millis() / 1000) + ",";
+    p += "\"reading_num\":" + String(dbg_reading_count) + ",";
+    p += "\"wifi_reconnects\":" + String(dbg_wifi_reconnects) + ",";
+    p += "\"post_failures\":" + String(dbg_post_failures);
+    p += "},";
+    
+    // --- Calibration params (agent knows what's applied) ---
+    p += "\"calibration\":{";
+    p += "\"ph_neutral_v\":" + String(PH_NEUTRAL_V, 2) + ",";
+    p += "\"ph_acid_v\":" + String(PH_ACID_V, 2) + ",";
+    p += "\"ph_offset\":" + String(PH_OFFSET, 2) + ",";
+    p += "\"tds_vref\":" + String(TDS_VREF, 1) + ",";
+    p += "\"tds_temp_coeff\":" + String(TDS_TEMP_COEFF, 2);
+    p += "}";
+    
+    p += "}";
 
-    int httpCode = http.POST(payload);
+    int httpCode = http.POST(p);
 
     if (httpCode == 201) {
         Serial.println("  [post] ✓ Data sent to server");
     } else {
         Serial.printf("  [post] ✗ HTTP error: %d\n", httpCode);
+        dbg_post_failures++;
         if (httpCode == -1) {
             Serial.println("  [post]   Can't reach server. Check:");
             Serial.println("           1. Flask server running?");
