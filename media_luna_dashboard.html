@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media Luna — Tank Monitor</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:wght@300;400&display=swap');
+
+  :root {
+    --bg: #080e10;
+    --surface: #0d1a1e;
+    --border: #1a3a40;
+    --accent: #00c9a7;
+    --accent2: #0099cc;
+    --warn: #e8a838;
+    --danger: #e84040;
+    --text: #c8dde0;
+    --muted: #4a6a70;
+    --grid: #0f2428;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* animated background grid */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: 
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px 20px;
+  }
+
+  /* HEADER */
+  header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .logo-name {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+  }
+
+  .logo-sub {
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .status-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+  }
+
+  .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 8px var(--accent);
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  .dot.offline { background: var(--danger); box-shadow: 0 0 8px var(--danger); animation: none; }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  /* STAT CARDS */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--accent);
+    opacity: 0.6;
+  }
+
+  .card.warn::before { background: var(--warn); }
+  .card.danger::before { background: var(--danger); }
+
+  .card-label {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+
+  .card-value {
+    font-size: 28px;
+    font-weight: 300;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 4px;
+    transition: color 0.3s;
+  }
+
+  .card.warn .card-value { color: var(--warn); }
+  .card.danger .card-value { color: var(--danger); }
+
+  .card-unit {
+    font-size: 10px;
+    color: var(--muted);
+  }
+
+  .card-range {
+    position: absolute;
+    bottom: 10px;
+    right: 12px;
+    font-size: 9px;
+    color: var(--muted);
+    opacity: 0.5;
+  }
+
+  /* CHARTS */
+  .charts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .chart-panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 16px;
+  }
+
+  .chart-title {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+
+  .chart-wrap {
+    height: 140px;
+    position: relative;
+  }
+
+  /* LOG */
+  .log-panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  .log-title {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .log-entries {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-height: 140px;
+    overflow-y: auto;
+  }
+
+  .log-entry {
+    display: grid;
+    grid-template-columns: 140px 80px 80px 80px 1fr;
+    gap: 8px;
+    font-size: 10px;
+    padding: 4px 0;
+    border-bottom: 1px solid rgba(26,58,64,0.4);
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+  }
+
+  @keyframes fadeIn { to { opacity: 1; } }
+
+  .log-entry:last-child { border-bottom: none; }
+  .log-ts { color: var(--muted); }
+  .log-temp { color: var(--accent2); }
+  .log-tds { color: var(--accent); }
+  .log-ph { color: var(--muted); font-style: italic; }
+
+  /* CYCLE STATUS */
+  .cycle-panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 16px;
+  }
+
+  .cycle-title {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+
+  .cycle-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cycle-row {
+    display: grid;
+    grid-template-columns: 80px 1fr 60px;
+    align-items: center;
+    gap: 10px;
+    font-size: 10px;
+  }
+
+  .cycle-name { color: var(--muted); }
+
+  .bar-track {
+    height: 4px;
+    background: rgba(26,58,64,0.8);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bar-fill {
+    height: 100%;
+    background: var(--accent);
+    transition: width 1s ease;
+  }
+
+  .bar-fill.warn { background: var(--warn); }
+  .bar-fill.danger { background: var(--danger); }
+
+  .cycle-val { color: var(--text); text-align: right; }
+
+  /* FOOTER */
+  footer {
+    margin-top: 20px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    font-size: 9px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+  }
+
+  /* demo mode notice */
+  .demo-notice {
+    background: rgba(232,168,56,0.08);
+    border: 1px solid rgba(232,168,56,0.2);
+    padding: 8px 12px;
+    font-size: 10px;
+    color: var(--warn);
+    margin-bottom: 16px;
+    letter-spacing: 0.05em;
+  }
+
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border); }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <div class="logo">
+      <div class="logo-name">MEDIA LUNA</div>
+      <div class="logo-sub">Neocaridina Colony · 10 Gal · Hyde Park</div>
+    </div>
+    <div class="status-pill">
+      <div class="dot" id="statusDot"></div>
+      <span id="statusText">POLLING</span>
+    </div>
+  </header>
+
+  <div class="demo-notice" id="demoNotice">
+    ⚠ DEMO MODE — connect to http://192.168.12.12:5001/api/sensors for live data
+  </div>
+
+  <!-- STAT CARDS -->
+  <div class="cards">
+    <div class="card" id="cardTemp">
+      <div class="card-label">Temperature</div>
+      <div class="card-value" id="valTemp">—</div>
+      <div class="card-unit">°F</div>
+      <div class="card-range">target 74–76°F</div>
+    </div>
+    <div class="card" id="cardTds">
+      <div class="card-label">TDS</div>
+      <div class="card-value" id="valTds">—</div>
+      <div class="card-unit">ppm</div>
+      <div class="card-range">target 150–250</div>
+    </div>
+    <div class="card" id="cardPh">
+      <div class="card-label">pH</div>
+      <div class="card-value" id="valPh">—</div>
+      <div class="card-unit">sensor pending</div>
+      <div class="card-range">target 6.8–7.2</div>
+    </div>
+  </div>
+
+  <!-- CHARTS -->
+  <div class="charts">
+    <div class="chart-panel">
+      <div class="chart-title">Temperature (°F) — last 20 readings</div>
+      <div class="chart-wrap">
+        <canvas id="chartTemp"></canvas>
+      </div>
+    </div>
+    <div class="chart-panel">
+      <div class="chart-title">TDS (ppm) — last 20 readings</div>
+      <div class="chart-wrap">
+        <canvas id="chartTds"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOG TABLE -->
+  <div class="log-panel">
+    <div class="log-title">
+      <span>RAW SENSOR LOG</span>
+      <span id="logCount">0 readings</span>
+    </div>
+    <div class="log-entries" id="logEntries">
+    </div>
+  </div>
+
+  <!-- CYCLE STATUS -->
+  <div class="cycle-panel">
+    <div class="cycle-title">Nitrogen Cycle Status — Day <span id="cycleDay">8</span></div>
+    <div class="cycle-bars">
+      <div class="cycle-row">
+        <div class="cycle-name">Ammonia</div>
+        <div class="bar-track"><div class="bar-fill danger" id="barAmm" style="width:100%"></div></div>
+        <div class="cycle-val" id="valAmm">8.0 ppm</div>
+      </div>
+      <div class="cycle-row">
+        <div class="cycle-name">Nitrite</div>
+        <div class="bar-track"><div class="bar-fill warn" id="barNit" style="width:63%"></div></div>
+        <div class="cycle-val" id="valNit">5.0 ppm</div>
+      </div>
+      <div class="cycle-row">
+        <div class="cycle-name">Nitrate</div>
+        <div class="bar-track"><div class="bar-fill" id="barNat" style="width:40%"></div></div>
+        <div class="cycle-val" id="valNat">40 ppm</div>
+      </div>
+      <div class="cycle-row">
+        <div class="cycle-name">pH</div>
+        <div class="bar-track"><div class="bar-fill warn" id="barPh" style="width:32%"></div></div>
+        <div class="cycle-val">6.4</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span>CLAWDCEPTION v0.1 · ESP32 → FLASK → SQLITE</span>
+    <span id="lastUpdate">—</span>
+  </footer>
+
+</div>
+
+<script>
+// ─── CONFIG ───────────────────────────────────────────
+const API_URL = '/api/sensors';
+const POLL_MS = 30000;
+const MAX_POINTS = 20;
+
+// ─── DEMO DATA (from your actual readings) ─────────────
+const DEMO_DATA = [
+  {"temp_f":79.14,"tds_ppm":138,"timestamp":"2026-03-29T17:03:06"},
+  {"temp_f":79.14,"tds_ppm":137,"timestamp":"2026-03-29T17:03:36"},
+  {"temp_f":79.14,"tds_ppm":135,"timestamp":"2026-03-29T17:04:06"},
+  {"temp_f":79.14,"tds_ppm":134,"timestamp":"2026-03-29T17:04:36"},
+  {"temp_f":79.14,"tds_ppm":133,"timestamp":"2026-03-29T17:05:06"},
+  {"temp_f":79.14,"tds_ppm":132,"timestamp":"2026-03-29T17:05:36"},
+  {"temp_f":79.14,"tds_ppm":134,"timestamp":"2026-03-29T17:06:06"},
+  {"temp_f":79.14,"tds_ppm":133,"timestamp":"2026-03-29T17:06:36"},
+  {"temp_f":79.14,"tds_ppm":133,"timestamp":"2026-03-29T17:07:06"},
+  {"temp_f":79.14,"tds_ppm":131,"timestamp":"2026-03-29T17:07:36"},
+  {"temp_f":79.25,"tds_ppm":131,"timestamp":"2026-03-29T17:08:06"},
+  {"temp_f":79.25,"tds_ppm":131,"timestamp":"2026-03-29T17:08:36"},
+  {"temp_f":79.25,"tds_ppm":132,"timestamp":"2026-03-29T17:09:06"},
+  {"temp_f":79.25,"tds_ppm":132,"timestamp":"2026-03-29T17:09:36"},
+  {"temp_f":79.25,"tds_ppm":133,"timestamp":"2026-03-29T17:10:06"},
+  {"temp_f":79.25,"tds_ppm":129,"timestamp":"2026-03-29T17:10:36"},
+  {"temp_f":79.25,"tds_ppm":129,"timestamp":"2026-03-29T17:11:06"},
+  {"temp_f":79.25,"tds_ppm":129,"timestamp":"2026-03-29T17:11:36"},
+  {"temp_f":79.25,"tds_ppm":129,"timestamp":"2026-03-29T17:12:06"},
+  {"temp_f":79.25,"tds_ppm":129,"timestamp":"2026-03-29T17:12:36"},
+];
+
+// ─── STATE ─────────────────────────────────────────────
+let readings = [...DEMO_DATA];
+let isLive = false;
+let tempChart, tdsChart;
+
+// ─── CHART SETUP ───────────────────────────────────────
+function makeChart(id, color, min, max) {
+  const ctx = document.getElementById(id).getContext('2d');
+  return new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [],
+      datasets: [{
+        data: [],
+        borderColor: color,
+        borderWidth: 1.5,
+        pointRadius: 2,
+        pointBackgroundColor: color,
+        fill: true,
+        backgroundColor: color + '15',
+        tension: 0.3,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      animation: { duration: 400 },
+      plugins: { legend: { display: false }, tooltip: {
+        backgroundColor: '#0d1a1e',
+        borderColor: '#1a3a40',
+        borderWidth: 1,
+        titleColor: '#4a6a70',
+        bodyColor: color,
+        titleFont: { family: 'IBM Plex Mono', size: 10 },
+        bodyFont: { family: 'IBM Plex Mono', size: 11 },
+      }},
+      scales: {
+        x: { display: false },
+        y: {
+          min, max,
+          grid: { color: '#0f2428' },
+          ticks: {
+            color: '#4a6a70',
+            font: { family: 'IBM Plex Mono', size: 9 },
+            maxTicksLimit: 4,
+          },
+          border: { color: '#1a3a40' }
+        }
+      }
+    }
+  });
+}
+
+// ─── INIT CHARTS ───────────────────────────────────────
+tempChart = makeChart('chartTemp', '#0099cc', 74, 82);
+tdsChart  = makeChart('chartTds',  '#00c9a7', 100, 200);
+
+// ─── RENDER ────────────────────────────────────────────
+function render(data) {
+  const latest = data[data.length - 1];
+  const last20 = data.slice(-MAX_POINTS);
+
+  // Cards
+  const tf = latest.temp_f;
+  document.getElementById('valTemp').textContent = tf.toFixed(1);
+  const cTemp = document.getElementById('cardTemp');
+  cTemp.className = 'card' + (tf > 78 ? ' warn' : tf > 80 ? ' danger' : '');
+
+  const tds = latest.tds_ppm;
+  document.getElementById('valTds').textContent = tds;
+  const cTds = document.getElementById('cardTds');
+  cTds.className = 'card' + (tds < 150 ? ' warn' : '');
+
+  document.getElementById('valPh').textContent = '—';
+  document.getElementById('cardPh').className = 'card warn';
+
+  // Charts
+  const labels = last20.map(r => r.timestamp.slice(11,16));
+  const temps  = last20.map(r => r.temp_f);
+  const tdss   = last20.map(r => r.tds_ppm);
+
+  tempChart.data.labels = labels;
+  tempChart.data.datasets[0].data = temps;
+  tempChart.update();
+
+  tdsChart.data.labels = labels;
+  tdsChart.data.datasets[0].data = tdss;
+  tdsChart.update();
+
+  // Log
+  const logEl = document.getElementById('logEntries');
+  logEl.innerHTML = '';
+  [...data].reverse().slice(0, 10).forEach(r => {
+    const row = document.createElement('div');
+    row.className = 'log-entry';
+    const ts = r.timestamp.replace('T',' ').slice(0,19);
+    row.innerHTML = `
+      <span class="log-ts">${ts}</span>
+      <span class="log-temp">${r.temp_f.toFixed(2)}°F</span>
+      <span class="log-tds">${r.tds_ppm} ppm</span>
+      <span class="log-ph">pH —</span>
+    `;
+    logEl.appendChild(row);
+  });
+  document.getElementById('logCount').textContent = `${data.length} readings`;
+
+  // Last update
+  document.getElementById('lastUpdate').textContent =
+    'LAST UPDATE ' + new Date().toLocaleTimeString();
+}
+
+// ─── FETCH LIVE ────────────────────────────────────────
+async function poll() {
+  try {
+    const res = await fetch(`${API_URL}?limit=20`, { signal: AbortSignal.timeout(5000) });
+    if (!res.ok) throw new Error();
+    const json = await res.json();
+    if (json && json.length) {
+      readings = json;
+      isLive = true;
+      document.getElementById('statusDot').className = 'dot';
+      document.getElementById('statusText').textContent = 'LIVE';
+      document.getElementById('demoNotice').style.display = 'none';
+      render(readings);
+    }
+  } catch {
+    document.getElementById('statusDot').className = 'dot offline';
+    document.getElementById('statusText').textContent = 'DEMO';
+    render(readings);
+  }
+}
+
+// ─── BOOT ──────────────────────────────────────────────
+render(readings); // show demo immediately
+poll();           // try live
+setInterval(poll, POLL_MS);
+
+// Cycle day counter from tank start Mar 22
+const tankStart = new Date('2026-03-22');
+const daysSince = Math.floor((Date.now() - tankStart) / 86400000);
+document.getElementById('cycleDay').textContent = daysSince;
+</script>
+</body>
+</html>
