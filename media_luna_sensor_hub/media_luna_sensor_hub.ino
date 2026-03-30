@@ -58,7 +58,7 @@ DallasTemperature tempSensor(&oneWire);
 // pH calibration values (DFRobot V2 defaults)
 // Calibrate later: dip probe in pH 7.0 buffer, note voltage. Dip in pH 4.0, note voltage.
 // Then adjust these values.
-#define PH_OFFSET       0.00    // Adjust after calibration
+#define PH_OFFSET       -1.10    // Adjust after calibration
 #define PH_NEUTRAL_V    1.37     // Voltage at pH 7.0 (typical for DFRobot V2)
 #define PH_ACID_V       1.88     // Voltage at pH 4.0 (typical)
 
