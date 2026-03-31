@@ -27,7 +27,7 @@ const char* WIFI_PASSWORD   = "AhnTheSpectrum69";
 const char* SERVER_URL      = "http://192.168.12.76:5001/api/sensors";
 
 // 900000 = 15 min (production), 30000 = 30s (testing)
-const unsigned long READ_INTERVAL = 10000;
+const unsigned long READ_INTERVAL = 900000;
 
 // ============================================================
 // PIN ASSIGNMENTS — ADC1 ONLY (ADC2 broken with WiFi)
