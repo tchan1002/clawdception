@@ -465,7 +465,7 @@ function bucket30m(data) {
   return [...buckets.keys()].sort((a, b) => a - b).map(key => {
     const g = buckets.get(key);
     const mean = fn => g.reduce((s, r) => s + fn(r), 0) / g.length;
-    const phVals = g.filter(r => r.ph != null);
+    const phVals = g.filter(r => r.ph != null && r.ph > 0);
     return {
       timestamp: new Date(key).toISOString().slice(0, 16).replace('T', ' '),
       temp_f:  +mean(r => r.temp_f).toFixed(2),
@@ -503,6 +503,7 @@ function makeChart(id, color, min, max) {
       responsive: true,
       maintainAspectRatio: false,
       animation: { duration: 400 },
+      layout: { padding: { left: 4, right: 4, top: 2, bottom: 0 } },
       plugins: { legend: { display: false }, tooltip: {
         backgroundColor: '#0d1a1e',
         borderColor: '#1a3a40',
@@ -552,9 +553,9 @@ phChart   = makeChart('chartPh',   '#e8a838', 6.0, 7.5);
 
 // ─── RENDER ────────────────────────────────────────────
 function render(data) {
-  const latest = data[data.length - 1];
   const window24 = filter24h(data);
   const bucketed = bucket30m(window24);
+  const latest = bucketed.length ? bucketed[bucketed.length - 1] : data[0];
 
   // Cards
   const tf = latest.temp_f;
@@ -615,7 +616,7 @@ function render(data) {
   });
 
   // Cycle panel pH
-  if (ph != null) {
+  if (ph != null && ph > 0) {
     const pct = Math.min(100, Math.max(0, (ph / 14) * 100));
     const bar = document.getElementById('barPh');
     bar.style.width = pct.toFixed(1) + '%';
