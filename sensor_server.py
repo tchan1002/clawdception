@@ -39,12 +39,23 @@ def init_db():
             raw_json TEXT
         )
     """)
+    # Legacy table — kept for backward compatibility
     conn.execute("""
         CREATE TABLE IF NOT EXISTS manual_events (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             timestamp TEXT NOT NULL,
             event_type TEXT NOT NULL,
             notes TEXT
+        )
+    """)
+    # New structured events table used by agent skills
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS events (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            timestamp TEXT NOT NULL,
+            event_type TEXT NOT NULL,
+            data_json TEXT,
+            source TEXT DEFAULT 'manual'
         )
     """)
     conn.commit()
@@ -120,24 +131,71 @@ def get_latest():
     return jsonify({"error": "No readings yet"}), 404
 
 
-# --- Manual event logging (NFC stickers hit this) ---
+# --- Manual event logging (NFC stickers, agent calls, manual observations) ---
 @app.route("/api/events", methods=["POST"])
 def log_event():
-    data = request.get_json()
-    if not data or "event_type" not in data:
+    body = request.get_json()
+    if not body or "event_type" not in body:
         return jsonify({"error": "Need event_type"}), 400
 
-    timestamp = datetime.now().isoformat()
+    valid_types = {"water_test", "water_change", "feeding", "observation", "manual_override", "snapshot"}
+    if body["event_type"] not in valid_types:
+        return jsonify({"error": f"event_type must be one of: {', '.join(sorted(valid_types))}"}), 400
+
+    # Use provided timestamp or default to now
+    timestamp = body.get("timestamp") or datetime.now().isoformat()
+    event_type = body["event_type"]
+    data = body.get("data", {})
+    source = body.get("source", "manual")
+
     conn = get_db()
     conn.execute(
-        "INSERT INTO manual_events (timestamp, event_type, notes) VALUES (?, ?, ?)",
-        (timestamp, data["event_type"], data.get("notes", "")),
+        "INSERT INTO events (timestamp, event_type, data_json, source) VALUES (?, ?, ?, ?)",
+        (timestamp, event_type, json.dumps(data), source),
     )
     conn.commit()
     conn.close()
 
-    print(f"[{timestamp}] EVENT: {data['event_type']} — {data.get('notes', '')}")
+    print(f"[{timestamp}] EVENT ({source}): {event_type} — {data}")
     return jsonify({"status": "ok", "timestamp": timestamp}), 201
+
+
+@app.route("/api/events", methods=["GET"])
+def get_events():
+    limit = request.args.get("limit", 50, type=int)
+    since = request.args.get("since", None)
+    event_type = request.args.get("type", None)
+
+    conn = get_db()
+    query = "SELECT * FROM events"
+    params = []
+    conditions = []
+
+    if since:
+        conditions.append("timestamp > ?")
+        params.append(since)
+    if event_type:
+        conditions.append("event_type = ?")
+        params.append(event_type)
+
+    if conditions:
+        query += " WHERE " + " AND ".join(conditions)
+    query += " ORDER BY timestamp DESC LIMIT ?"
+    params.append(limit)
+
+    rows = conn.execute(query, params).fetchall()
+    conn.close()
+
+    results = []
+    for r in rows:
+        row = dict(r)
+        try:
+            row["data"] = json.loads(row.pop("data_json") or "{}")
+        except (json.JSONDecodeError, KeyError):
+            row["data"] = {}
+        results.append(row)
+
+    return jsonify(results)
 
 
 # --- Health check (Telegram heartbeat can ping this) ---

@@ -1,0 +1,29 @@
+# Media Luna agent crons
+# Review before installing. Install with:
+#   crontab ~/clawdception/crontab.txt
+# Or append to existing crontab:
+#   (crontab -l 2>/dev/null; cat ~/clawdception/crontab.txt) | crontab -
+#
+# IMPORTANT: cron does not inherit your shell environment.
+# Set ANTHROPIC_API_KEY here so all jobs can find it.
+
+ANTHROPIC_API_KEY=your_key_here_replace_me
+
+# shrimp-monitor: every 15 minutes
+# Calls Claude only when something warrants it (parameter drift, events, or every 4hr).
+# Danger alerts and local checks always run.
+*/15 * * * * cd ~/clawdception && python3 skills/shrimp_monitor/run.py >> logs/monitor.log 2>&1
+
+# shrimp-journal: every 2 hours at :05 (offset from monitor's :00)
+5 */2 * * * cd ~/clawdception && python3 skills/shrimp_journal/run.py >> logs/journal.log 2>&1
+
+# daily-log: 7:00 AM every morning (summarizes yesterday)
+0 7 * * * cd ~/clawdception && python3 skills/daily_log/run.py >> logs/daily_log.log 2>&1
+
+# skill-writer: daily at 8:30 AM — self-gates on conditions (needs 7+ daily logs, 7+ days since last proposal)
+# Will silently skip most days. Runs automatically when conditions are met.
+# To force a run: python3 skills/skill_writer/run.py --force
+30 8 * * * cd ~/clawdception && python3 skills/skill_writer/run.py >> logs/skill_writer.log 2>&1
+
+# shrimp-vision: every 2 hours at :30 — DISABLED until camera is connected
+# 30 */2 * * * cd ~/clawdception && python3 skills/shrimp_vision/run.py >> logs/vision.log 2>&1

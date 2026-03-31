@@ -1,0 +1,99 @@
+"""
+shrimp-journal — 2-hour narrative consolidation into the daily journal.
+
+Reads recent decisions + sensor data, asks Claude for a narrative entry,
+appends to today's journal. This is the agent's working memory.
+
+Usage:
+    python3 run.py
+"""
+
+import json
+import sys
+from datetime import datetime, timedelta
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+
+from config import get_cycle_day
+from utils import (
+    append_journal,
+    call_claude,
+    compute_stats,
+    fetch_events,
+    fetch_readings,
+    read_decisions_since,
+    read_journal,
+)
+
+
+def run():
+    ts = datetime.now()
+    cycle_day = get_cycle_day()
+    window_start = ts - timedelta(hours=2)
+
+    # --- Gather data ---
+    readings = fetch_readings(8)  # ~2 hours at 15-min intervals
+    decisions = read_decisions_since(window_start)
+    events = fetch_events(since=window_start.isoformat(), limit=20)
+    journal_so_far = read_journal()
+
+    # --- Summarize readings ---
+    reading_lines = []
+    for field, label, unit in [("temp_f", "Temp", "°F"), ("ph", "pH", ""), ("tds_ppm", "TDS", " ppm")]:
+        stats = compute_stats(readings, field)
+        if stats:
+            reading_lines.append(f"{label}: {stats['mean']}{unit} (min {stats['min']}, max {stats['max']})")
+    readings_summary = ", ".join(reading_lines) or "No readings available."
+
+    # --- Summarize decisions ---
+    decision_notes = []
+    for d in decisions[-4:]:  # last 4 decisions
+        risk = d.get("risk_level", "")
+        reasoning = d.get("reasoning", "")[:100]
+        decision_notes.append(f"[{risk}] {reasoning}")
+    decisions_summary = "\n".join(decision_notes) or "No decisions logged in this window."
+
+    # --- Events ---
+    event_lines = []
+    for e in events:
+        ts_short = e.get("timestamp", "")[:16]
+        event_lines.append(f"  [{ts_short}] {e.get('event_type')}: {json.dumps(e.get('data', {}))}")
+    events_summary = "\n".join(event_lines) or "No events in this window."
+
+    # --- Truncate existing journal to save tokens ---
+    journal_excerpt = journal_so_far[-600:] if len(journal_so_far) > 600 else journal_so_far
+
+    prompt = f"""Day {cycle_day} of the nitrogen cycle. It is {ts.strftime('%H:%M')}.
+
+You're writing a journal entry covering the past 2 hours in the Media Luna tank.
+
+SENSOR SUMMARY (last 2 hours):
+{readings_summary}
+
+AGENT DECISIONS (last 2 hours):
+{decisions_summary}
+
+EVENTS:
+{events_summary}
+
+JOURNAL SO FAR TODAY (last portion):
+{journal_excerpt or 'Nothing written yet today.'}
+
+Write a journal entry of 200-400 words. This is your internal record — write honestly about what you're observing, what concerns you, what seems fine, what you're curious about. It should read as a thoughtful naturalist's field notes, not a data report. Don't repeat what's already in the journal excerpt. End with a single sentence about your current state of mind regarding the tank."""
+
+    try:
+        entry = call_claude(
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=500,
+        )
+    except Exception as e:
+        print(f"[shrimp-journal] Claude call failed: {e} — skipping journal entry")
+        return
+
+    append_journal(entry)
+    print(f"[shrimp-journal] Entry written at {ts.strftime('%H:%M')} (Day {cycle_day})")
+
+
+if __name__ == "__main__":
+    run()
