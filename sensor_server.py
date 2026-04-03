@@ -54,16 +54,6 @@ def init_db():
         conn.commit()
     except sqlite3.OperationalError:
         pass  # column already exists
-    # New structured events table used by agent skills
-    conn.execute("""
-        CREATE TABLE IF NOT EXISTS events (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            timestamp TEXT NOT NULL,
-            event_type TEXT NOT NULL,
-            data_json TEXT,
-            source TEXT DEFAULT 'manual'
-        )
-    """)
     conn.commit()
     conn.close()
     print("[init] Database ready.")
@@ -368,6 +358,7 @@ def water_test():
                 const swatch = document.createElement('div');
                 swatch.className = 'swatch';
                 swatch.style.backgroundColor = s.color;
+                swatch.dataset.param = param;
                 swatch.onclick = () => selectSwatch(param, s.value, swatch);
 
                 const label = document.createElement('div');
@@ -382,8 +373,7 @@ def water_test():
 
         function selectSwatch(param, value, element) {
             // Deselect previous
-            const container = element.parentElement.parentElement;
-            container.querySelectorAll('.swatch').forEach(s => s.classList.remove('selected'));
+            document.querySelectorAll('.swatch[data-param="' + param + '"]').forEach(s => s.classList.remove('selected'));
 
             // Select new
             element.classList.add('selected');
