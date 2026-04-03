@@ -403,19 +403,19 @@
   <!-- CHARTS -->
   <div class="charts">
     <div class="chart-panel">
-      <div class="chart-title">Temperature (°F) — 24 h</div>
+      <div class="chart-title">Temperature (°F) — 24 h / 15 min</div>
       <div class="chart-wrap">
         <canvas id="chartTemp"></canvas>
       </div>
     </div>
     <div class="chart-panel">
-      <div class="chart-title">TDS (ppm) — 24 h</div>
+      <div class="chart-title">TDS (ppm) — 24 h / 15 min</div>
       <div class="chart-wrap">
         <canvas id="chartTds"></canvas>
       </div>
     </div>
     <div class="chart-panel">
-      <div class="chart-title">pH — 24 h</div>
+      <div class="chart-title">pH — 24 h / 15 min</div>
       <div class="chart-wrap">
         <canvas id="chartPh"></canvas>
       </div>
@@ -504,26 +504,6 @@ function filter24h(data) {
   return data.filter(r => new Date(r.timestamp).getTime() >= cutoff);
 }
 
-function bucket30m(data) {
-  const buckets = new Map();
-  data.forEach(r => {
-    const key = Math.floor(new Date(r.timestamp).getTime() / (30 * 60 * 1000)) * (30 * 60 * 1000);
-    if (!buckets.has(key)) buckets.set(key, []);
-    buckets.get(key).push(r);
-  });
-  return [...buckets.keys()].sort((a, b) => a - b).map(key => {
-    const g = buckets.get(key);
-    const mean = fn => g.reduce((s, r) => s + fn(r), 0) / g.length;
-    const phVals = g.filter(r => r.ph != null && r.ph > 0);
-    return {
-      timestamp: new Date(key).toISOString().slice(0, 16).replace('T', ' '),
-      temp_f:  +mean(r => r.temp_f).toFixed(2),
-      tds_ppm: Math.round(mean(r => r.tds_ppm)),
-      ph:      phVals.length ? +(phVals.reduce((s, r) => s + r.ph, 0) / phVals.length).toFixed(2) : null,
-    };
-  });
-}
-
 // ─── STATE ─────────────────────────────────────────────
 let readings = [...DEMO_DATA];
 let isLive = false;
@@ -595,13 +575,12 @@ function makeChart(id, color, min, max) {
 // ─── INIT CHARTS ───────────────────────────────────────
 tempChart = makeChart('chartTemp', '#0099cc', 74, 82);
 tdsChart  = makeChart('chartTds',  '#00c9a7', 100, 200);
-phChart   = makeChart('chartPh',   '#e8a838', 6.0, 7.5);
+phChart   = makeChart('chartPh',   '#e8a838', 5.0, 7.5);
 
 // ─── RENDER ────────────────────────────────────────────
 function render(data) {
   const window24 = filter24h(data);
-  const bucketed = bucket30m(window24);
-  const latest = bucketed.length ? bucketed[bucketed.length - 1] : data[0];
+  const latest = window24.length ? window24[0] : data[0];
 
   // Cards
   const tf = latest.temp_f;
@@ -626,11 +605,12 @@ function render(data) {
     cPh.className = 'card warn';
   }
 
-  // Charts
-  const labels = bucketed.map(r => r.timestamp.slice(11,16));
-  const temps  = bucketed.map(r => r.temp_f);
-  const tdss   = bucketed.map(r => r.tds_ppm);
-  const phs    = bucketed.map(r => r.ph ?? null);
+  // Charts - reverse to get chronological order
+  const chartData = [...window24].reverse();
+  const labels = chartData.map(r => new Date(r.timestamp).toLocaleTimeString('en-US', {hour: '2-digit', minute: '2-digit', hour12: false}));
+  const temps  = chartData.map(r => r.temp_f);
+  const tdss   = chartData.map(r => r.tds_ppm);
+  const phs    = chartData.map(r => r.ph ?? null);
 
   tempChart.data.labels = labels;
   tempChart.data.datasets[0].data = temps;
@@ -644,13 +624,15 @@ function render(data) {
   phChart.data.datasets[0].data = phs;
   phChart.update();
 
-  // Log
+  // Log - most recent first
   const logEl = document.getElementById('logEntries');
   logEl.innerHTML = '';
-  [...bucketed].reverse().forEach(r => {
+  window24.forEach(r => {
     const row = document.createElement('div');
     row.className = 'log-entry';
-    const ts = r.timestamp;
+    const ts = new Date(r.timestamp).toLocaleString('en-US', {
+      month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false
+    });
     const phStr = r.ph != null ? `pH ${r.ph.toFixed(2)}` : 'pH —';
     row.innerHTML = `
       <span class="log-ts">${ts}</span>
@@ -669,7 +651,7 @@ function render(data) {
     bar.className = 'bar-fill' + (ph < 6.5 || ph > 7.5 ? ' danger' : ph < 6.8 || ph > 7.2 ? ' warn' : '');
     document.getElementById('valPhCycle').textContent = ph.toFixed(2);
   }
-  document.getElementById('logCount').textContent = `${bucketed.length} × 30 min avg / 24 h`;
+  document.getElementById('logCount').textContent = `${window24.length} readings / 24 h`;
 
   // Last update
   document.getElementById('lastUpdate').textContent =
