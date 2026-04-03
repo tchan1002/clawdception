@@ -26,7 +26,7 @@ SKILL_MAX_TOKENS = {
     "shrimp-monitor": 500,
     "shrimp-journal": 500,
     "shrimp-vision": 300,
-    "daily-log": 2000,
+    "daily-log": 6000,
     "skill-writer": 2500,
     "tweet-log": 100,
 }
