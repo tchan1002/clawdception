@@ -241,7 +241,7 @@ Return ONLY valid JSON:
     try:
         response_text = call_claude(
             messages=[{"role": "user", "content": prompt}],
-            max_tokens=500,
+            skill_name="shrimp-monitor",
         )
         clean = response_text.strip()
         if clean.startswith("```"):

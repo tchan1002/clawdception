@@ -85,7 +85,7 @@ Write a journal entry of 200-400 words. This is your internal record — write h
     try:
         entry = call_claude(
             messages=[{"role": "user", "content": prompt}],
-            max_tokens=500,
+            skill_name="shrimp-journal",
         )
     except Exception as e:
         print(f"[shrimp-journal] Claude call failed: {e} — skipping journal entry")

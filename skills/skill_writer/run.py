@@ -144,7 +144,7 @@ Respond with exactly four sections delimited as shown:
     try:
         response = call_claude(
             messages=[{"role": "user", "content": prompt}],
-            max_tokens=2500,
+            skill_name="skill-writer",
         )
     except Exception as e:
         print(f"[skill-writer] Claude call failed: {e}")

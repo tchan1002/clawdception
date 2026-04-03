@@ -175,7 +175,7 @@ Write three sections, each clearly delimited:
     try:
         response = call_claude(
             messages=[{"role": "user", "content": log_prompt}],
-            max_tokens=2000,
+            skill_name="daily-log",
         )
     except Exception as e:
         print(f"[daily-log] Claude call failed: {e}")

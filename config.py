@@ -11,6 +11,32 @@ CYCLE_START = date(2026, 3, 22)
 API_BASE = "http://localhost:5001"
 CLAUDE_MODEL = "claude-sonnet-4-6"
 
+# Per-skill model routing (Haiku for frequent/small tasks, Sonnet for synthesis)
+SKILL_MODELS = {
+    "shrimp-monitor": "claude-haiku-4-5",
+    "shrimp-journal": "claude-haiku-4-5",
+    "shrimp-vision": "claude-haiku-4-5",
+    "daily-log": "claude-sonnet-4-6",
+    "skill-writer": "claude-sonnet-4-6",
+    "tweet-log": "claude-haiku-4-5",
+}
+
+# Per-skill max_tokens (tight limits for Haiku tasks)
+SKILL_MAX_TOKENS = {
+    "shrimp-monitor": 500,
+    "shrimp-journal": 500,
+    "shrimp-vision": 300,
+    "daily-log": 2000,
+    "skill-writer": 2500,
+    "tweet-log": 100,
+}
+
+# Sensor staleness threshold (minutes)
+STALE_READING_THRESHOLD_MINUTES = 30
+
+# Journal max characters when reading (preserves most recent content)
+JOURNAL_MAX_CHARS = 2000
+
 # Water parameter ranges for Neocaridina shrimp
 # Do not modify without Toby's explicit instruction — these reflect target shrimp conditions.
 RANGES = {

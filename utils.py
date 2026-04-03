@@ -11,7 +11,17 @@ from pathlib import Path
 
 import requests
 
-from config import API_BASE, CLAUDE_MODEL, PATHS, SYSTEM_PROMPT, get_cycle_day
+from config import (
+    API_BASE,
+    CLAUDE_MODEL,
+    JOURNAL_MAX_CHARS,
+    PATHS,
+    SKILL_MAX_TOKENS,
+    SKILL_MODELS,
+    STALE_READING_THRESHOLD_MINUTES,
+    SYSTEM_PROMPT,
+    get_cycle_day,
+)
 
 
 # ---------------------------------------------------------------------------
@@ -99,16 +109,23 @@ def hours_since_last_water_test():
 # Journal
 # ---------------------------------------------------------------------------
 
-def read_journal(target_date=None):
+def read_journal(target_date=None, max_chars=None):
     """
-    Returns the full text of a journal file for the given date (defaults to today).
+    Returns the text of a journal file for the given date (defaults to today).
+    If max_chars is specified (or JOURNAL_MAX_CHARS from config), returns the most recent
+    portion of the journal up to that length.
     Returns empty string if no journal exists yet.
     """
     if target_date is None:
         target_date = date.today()
+    if max_chars is None:
+        max_chars = JOURNAL_MAX_CHARS
     journal_path = PATHS["journal"] / f"{target_date}.md"
     if journal_path.exists():
-        return journal_path.read_text()
+        text = journal_path.read_text()
+        if len(text) > max_chars:
+            return text[-max_chars:]
+        return text
     return ""
 
 
@@ -228,21 +245,132 @@ def read_decisions_since(since_dt):
 # Claude API
 # ---------------------------------------------------------------------------
 
-def call_claude(messages, system=None, max_tokens=1500):
+def call_claude(messages, system=None, max_tokens=None, skill_name=None):
     """
     Thin wrapper around the Anthropic SDK.
+    Routes to the correct model and max_tokens based on skill_name.
+    Logs token usage to logs/spend.jsonl.
     Returns the response text, or raises on failure (callers should catch).
     """
     import anthropic
 
-    client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
+    # Check API key presence
+    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    if not api_key:
+        raise ValueError("ANTHROPIC_API_KEY environment variable not set")
+
+    # Route model and max_tokens by skill name
+    model = CLAUDE_MODEL
+    if skill_name and skill_name in SKILL_MODELS:
+        model = SKILL_MODELS[skill_name]
+    if max_tokens is None:
+        if skill_name and skill_name in SKILL_MAX_TOKENS:
+            max_tokens = SKILL_MAX_TOKENS[skill_name]
+        else:
+            max_tokens = 1500  # default fallback
+
+    client = anthropic.Anthropic(api_key=api_key)
     response = client.messages.create(
-        model=CLAUDE_MODEL,
+        model=model,
         max_tokens=max_tokens,
         system=system or SYSTEM_PROMPT,
         messages=messages,
     )
+
+    # Log token usage
+    usage = response.usage
+    spend_entry = {
+        "timestamp": datetime.now().isoformat(),
+        "skill": skill_name or "unknown",
+        "model": model,
+        "input_tokens": usage.input_tokens,
+        "output_tokens": usage.output_tokens,
+        "total_tokens": usage.input_tokens + usage.output_tokens,
+    }
+    PATHS["logs"].mkdir(parents=True, exist_ok=True)
+    spend_log = PATHS["logs"] / "spend.jsonl"
+    with open(spend_log, "a") as f:
+        f.write(json.dumps(spend_entry) + "\n")
+
     return response.content[0].text
+
+
+# ---------------------------------------------------------------------------
+# Utilities
+# ---------------------------------------------------------------------------
+
+class SkillLock:
+    """
+    Context manager for preventing overlapping cron executions of the same skill.
+    Uses fcntl file locking. Non-blocking — raises if lock is held by another process.
+    """
+    def __init__(self, skill_name):
+        import fcntl
+        self.skill_name = skill_name
+        self.lock_path = PATHS["logs"] / f"{skill_name}.lock"
+        self.lock_file = None
+        self.fcntl = fcntl
+
+    def __enter__(self):
+        PATHS["logs"].mkdir(parents=True, exist_ok=True)
+        self.lock_file = open(self.lock_path, "w")
+        try:
+            self.fcntl.flock(self.lock_file.fileno(), self.fcntl.LOCK_EX | self.fcntl.LOCK_NB)
+        except BlockingIOError:
+            self.lock_file.close()
+            raise RuntimeError(f"[{self.skill_name}] Lock held by another process — skipping")
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        if self.lock_file:
+            self.fcntl.flock(self.lock_file.fileno(), self.fcntl.LOCK_UN)
+            self.lock_file.close()
+
+
+def parse_json_response(response_text):
+    """
+    Parses JSON from Claude response, stripping markdown fences if present.
+    Logs parse failures to logs/ and raises JSONDecodeError on failure.
+    """
+    clean = response_text.strip()
+    if clean.startswith("```"):
+        lines = clean.split("\n")
+        # Remove first line (```json or ```) and last line (```)
+        clean = "\n".join(lines[1:-1]) if len(lines) > 2 else clean
+        clean = clean.strip()
+
+    try:
+        return json.loads(clean)
+    except json.JSONDecodeError as e:
+        # Log the failure
+        PATHS["logs"].mkdir(parents=True, exist_ok=True)
+        fail_log = PATHS["logs"] / "parse_failures.jsonl"
+        entry = {
+            "timestamp": datetime.now().isoformat(),
+            "error": str(e),
+            "response_text": response_text[:500],
+        }
+        with open(fail_log, "a") as f:
+            f.write(json.dumps(entry) + "\n")
+        raise
+
+
+def is_reading_stale(reading):
+    """
+    Returns True if the reading is older than STALE_READING_THRESHOLD_MINUTES
+    or if reading is None. Returns False if reading is fresh.
+    """
+    if reading is None:
+        return True
+    timestamp = reading.get("timestamp")
+    if not timestamp:
+        return True
+    try:
+        reading_dt = datetime.fromisoformat(timestamp)
+        age_minutes = (datetime.now() - reading_dt).total_seconds() / 60
+        return age_minutes > STALE_READING_THRESHOLD_MINUTES
+    except (ValueError, TypeError):
+        return True
 
 
 # ---------------------------------------------------------------------------
