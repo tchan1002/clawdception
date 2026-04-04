@@ -23,12 +23,12 @@ SKILL_MODELS = {
 
 # Per-skill max_tokens (tight limits for Haiku tasks)
 SKILL_MAX_TOKENS = {
-    "shrimp-monitor": 500,
-    "shrimp-journal": 500,
-    "shrimp-vision": 300,
-    "daily-log": 6000,
-    "skill-writer": 2500,
-    "tweet-log": 100,
+    "shrimp-monitor": 1024,
+    "shrimp-journal": 1024,
+    "shrimp-vision": 512,
+    "daily-log": 4096,
+    "skill-writer": 4096,
+    "tweet-log": 150,
 }
 
 # Sensor staleness threshold (minutes)
