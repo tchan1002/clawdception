@@ -13,7 +13,7 @@
 */15 * * * * cd ~/clawdception && python3 skills/shrimp_monitor/run.py >> logs/monitor.log 2>&1
 
 # shrimp-journal: every 2 hours at :05 (offset from monitor's :00)
-5 */2 * * * cd ~/clawdception && python3 skills/shrimp_journal/run.py >> logs/journal.log 2>&1
+5 */6 * * * cd ~/clawdception && python3 skills/shrimp_journal/run.py >> logs/journal.log 2>&1
 
 # daily-log: 7:00 AM every morning (summarizes yesterday)
 0 7 * * * cd ~/clawdception && python3 skills/daily_log/run.py >> logs/daily_log.log 2>&1
