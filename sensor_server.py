@@ -506,20 +506,28 @@ def agent_status():
     elif risk_level == "red":
         risk_color = "#da3633"
 
-    # Read latest journal entry
+    # Get all available journal dates sorted descending
+    journal_dates = []
+    if journal_dir.exists():
+        for journal_file in sorted(journal_dir.glob("*.md"), reverse=True):
+            try:
+                # Extract date from filename (YYYY-MM-DD.md)
+                date_str = journal_file.stem
+                datetime.strptime(date_str, "%Y-%m-%d")  # validate format
+                journal_dates.append(date_str)
+            except (ValueError, AttributeError):
+                pass
+
+    # Read most recent journal entry
     journal_text = ""
     journal_date = ""
-    for days_back in [0, 1]:
-        target_date = datetime.now() - timedelta(days=days_back)
-        journal_file = journal_dir / f"{target_date.date()}.md"
-
-        if journal_file.exists():
-            try:
-                journal_text = journal_file.read_text()
-                journal_date = str(target_date.date())
-                break
-            except FileNotFoundError:
-                pass
+    if journal_dates:
+        journal_date = journal_dates[0]
+        journal_file = journal_dir / f"{journal_date}.md"
+        try:
+            journal_text = journal_file.read_text()
+        except FileNotFoundError:
+            pass
 
     # Read monitor log tail
     monitor_lines = []
@@ -649,6 +657,38 @@ def agent_status():
             white-space: pre-wrap;
             font-size: 13px;
             line-height: 1.6;
+            min-height: 100px;
+        }}
+        .journal.loading {{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8b949e;
+            font-style: italic;
+        }}
+        .journal-nav {{
+            display: flex;
+            gap: 12px;
+            margin-top: 12px;
+        }}
+        .journal-nav button {{
+            flex: 1;
+            background: #2ea043;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 12px;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-family: inherit;
+        }}
+        .journal-nav button:active {{ background: #26843b; }}
+        .journal-nav button:disabled {{
+            background: #30363d;
+            color: #6e7681;
+            cursor: not-allowed;
         }}
         .monitor-log {{
             background: #161b22;
@@ -726,8 +766,12 @@ def agent_status():
         """ if decision else '<div class="section"><div class="not-available">No agent decisions available yet</div></div>'])}
 
         <div class="section">
-            <div class="section-title">Latest Journal Entry {f"({journal_date})" if journal_date else ""}</div>
-            {'<div class="journal">' + journal_text + '</div>' if journal_text else '<div class="not-available">No journal entries yet</div>'}
+            <div class="section-title">Journal Entry <span id="journal-date">{journal_date if journal_date else ""}</span></div>
+            <div id="journal-content" class="journal">{'<pre style="margin: 0; font-family: inherit; white-space: pre-wrap;">' + journal_text + '</pre>' if journal_text else '<div class="not-available">No journal entries yet</div>'}</div>
+            {f'''<div class="journal-nav">
+                <button id="prev-btn" onclick="navigateJournal(-1)">← Previous</button>
+                <button id="next-btn" onclick="navigateJournal(1)">Next →</button>
+            </div>''' if journal_dates else ''}
         </div>
 
         <div class="section">
@@ -737,6 +781,80 @@ def agent_status():
     </div>
 
     <script>
+        // Journal navigation
+        const journalDates = {json.dumps(journal_dates)};
+        let currentIndex = 0;
+
+        console.log('Journal dates loaded:', journalDates);
+        console.log('Current index:', currentIndex);
+
+        function updateNavigationButtons() {{
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+
+            console.log('Updating button states - currentIndex:', currentIndex, 'total dates:', journalDates.length);
+
+            if (prevBtn && nextBtn) {{
+                prevBtn.disabled = currentIndex >= journalDates.length - 1;
+                nextBtn.disabled = currentIndex <= 0;
+                console.log('Prev disabled:', prevBtn.disabled, 'Next disabled:', nextBtn.disabled);
+            }}
+        }}
+
+        async function navigateJournal(direction) {{
+            console.log('navigateJournal called with direction:', direction);
+            console.log('Current index before:', currentIndex);
+
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = 0;
+            if (currentIndex >= journalDates.length) currentIndex = journalDates.length - 1;
+
+            console.log('Current index after:', currentIndex);
+
+            const date = journalDates[currentIndex];
+            console.log('Fetching journal for date:', date);
+
+            const contentDiv = document.getElementById('journal-content');
+
+            // Show loading state
+            contentDiv.classList.add('loading');
+            contentDiv.innerHTML = 'Loading...';
+
+            try {{
+                const url = `/api/journal?date=${{date}}`;
+                console.log('Fetching URL:', url);
+
+                const response = await fetch(url);
+                console.log('Response status:', response.status);
+
+                if (!response.ok) throw new Error('Failed to fetch journal');
+
+                const data = await response.json();
+                console.log('Response data:', data);
+
+                document.getElementById('journal-date').textContent = data.date;
+
+                // Remove loading state
+                contentDiv.classList.remove('loading');
+
+                if (data.exists && data.content) {{
+                    contentDiv.innerHTML = '<pre style="margin: 0; font-family: inherit; white-space: pre-wrap;">' + data.content + '</pre>';
+                }} else {{
+                    contentDiv.innerHTML = '<div class="not-available">No journal entry for this date</div>';
+                }}
+
+                updateNavigationButtons();
+            }} catch (error) {{
+                console.error('Error fetching journal:', error);
+                contentDiv.classList.remove('loading');
+                contentDiv.innerHTML = '<div class="not-available">Error loading journal</div>';
+            }}
+        }}
+
+        // Initialize button states
+        console.log('Initializing navigation buttons');
+        updateNavigationButtons();
+
         // Auto-refresh every 60 seconds
         setTimeout(() => {{ window.location.reload(); }}, 60000);
     </script>
@@ -744,6 +862,44 @@ def agent_status():
 </html>
     """
     return render_template_string(html)
+
+
+# --- Journal API for agent page navigation ---
+@app.route("/api/journal", methods=["GET"])
+def get_journal():
+    from pathlib import Path
+    import os
+
+    date_param = request.args.get("date")
+    base_dir = Path(os.getcwd())
+    journal_dir = base_dir / "journal"
+
+    # If no date provided, return most recent
+    if not date_param:
+        if journal_dir.exists():
+            journal_files = sorted(journal_dir.glob("*.md"), reverse=True)
+            if journal_files:
+                date_param = journal_files[0].stem
+
+    if not date_param:
+        return jsonify({"date": "", "content": "", "exists": False})
+
+    # Validate date format
+    try:
+        datetime.strptime(date_param, "%Y-%m-%d")
+    except ValueError:
+        return jsonify({"error": "Invalid date format"}), 400
+
+    journal_file = journal_dir / f"{date_param}.md"
+
+    if journal_file.exists():
+        try:
+            content = journal_file.read_text()
+            return jsonify({"date": date_param, "content": content, "exists": True})
+        except Exception as e:
+            return jsonify({"error": str(e)}), 500
+    else:
+        return jsonify({"date": date_param, "content": "", "exists": False})
 
 
 # --- Health check (Telegram heartbeat can ping this) ---
