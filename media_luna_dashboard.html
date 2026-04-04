@@ -32,6 +32,29 @@
     overflow-x: hidden;
   }
 
+  /* NAV BAR */
+  .nav {
+    background: #161b22;
+    padding: 12px 20px;
+    display: flex;
+    gap: 24px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    z-index: 10;
+  }
+
+  .nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav a:hover { color: var(--text); }
+  .nav a.active { color: var(--accent); font-weight: 500; }
+
   /* animated background grid */
   body::before {
     content: '';
@@ -378,6 +401,11 @@
 </style>
 </head>
 <body>
+<div class="nav">
+  <a href="/" class="active">Dashboard</a>
+  <a href="/agent">Agent</a>
+  <a href="/water-test">Water Test</a>
+</div>
 <div class="container">
 
   <header>

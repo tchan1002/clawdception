@@ -196,9 +196,24 @@ def water_test():
             color: white;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
             font-size: 16px;
-            padding: 20px;
             -webkit-tap-highlight-color: transparent;
         }
+        .nav {
+            background: #161b22;
+            padding: 12px 20px;
+            display: flex;
+            gap: 24px;
+            border-bottom: 1px solid #30363d;
+        }
+        .nav a {
+            color: #8b949e;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+        .nav a:hover { color: white; }
+        .nav a.active { color: white; font-weight: 600; }
+        .container { padding: 20px; }
         h1 { font-size: 24px; margin-bottom: 24px; }
         .param-section { margin-bottom: 32px; }
         .param-label { font-size: 14px; font-weight: 600; margin-bottom: 12px; color: #8b949e; }
@@ -274,6 +289,12 @@ def water_test():
     </style>
 </head>
 <body>
+    <div class="nav">
+        <a href="/">Dashboard</a>
+        <a href="/agent">Agent</a>
+        <a href="/water-test" class="active">Water Test</a>
+    </div>
+    <div class="container">
     <div id="form-container">
         <h1>Water Test</h1>
 
@@ -436,6 +457,288 @@ def water_test():
         renderSwatches('ammonia', 'ammonia-swatches');
         renderSwatches('nitrite', 'nitrite-swatches');
         renderSwatches('nitrate', 'nitrate-swatches');
+    </script>
+    </div>
+</body>
+</html>
+    """
+    return render_template_string(html)
+
+
+# --- Agent status UI for mobile ---
+@app.route("/agent", methods=["GET"])
+def agent_status():
+    from pathlib import Path
+    import os
+
+    # Get paths
+    base_dir = Path(os.getcwd())
+    logs_dir = base_dir / "logs"
+    decisions_dir = logs_dir / "decisions"
+    journal_dir = base_dir / "journal"
+    monitor_log_path = logs_dir / "monitor.log"
+
+    # Read latest decision
+    decision = None
+    risk_level = "unknown"
+    risk_color = "#8b949e"
+
+    # Try today's decisions, then yesterday
+    for days_back in [0, 1]:
+        target_date = datetime.now() - timedelta(days=days_back)
+        decision_file = decisions_dir / f"{target_date.date()}.jsonl"
+
+        if decision_file.exists():
+            try:
+                lines = [line.strip() for line in decision_file.read_text().splitlines() if line.strip()]
+                if lines:
+                    decision = json.loads(lines[-1])
+                    risk_level = decision.get("risk_level", "unknown")
+                    break
+            except (json.JSONDecodeError, FileNotFoundError):
+                pass
+
+    # Map risk colors
+    if risk_level == "green":
+        risk_color = "#2ea043"
+    elif risk_level == "yellow":
+        risk_color = "#d29922"
+    elif risk_level == "red":
+        risk_color = "#da3633"
+
+    # Read latest journal entry
+    journal_text = ""
+    journal_date = ""
+    for days_back in [0, 1]:
+        target_date = datetime.now() - timedelta(days=days_back)
+        journal_file = journal_dir / f"{target_date.date()}.md"
+
+        if journal_file.exists():
+            try:
+                journal_text = journal_file.read_text()
+                journal_date = str(target_date.date())
+                break
+            except FileNotFoundError:
+                pass
+
+    # Read monitor log tail
+    monitor_lines = []
+    if monitor_log_path.exists():
+        try:
+            lines = monitor_log_path.read_text().splitlines()
+            monitor_lines = lines[-10:] if len(lines) > 10 else lines
+        except FileNotFoundError:
+            pass
+
+    html = f"""
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Media Luna · Agent Status</title>
+    <style>
+        * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+        body {{
+            background: #0d1117;
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            -webkit-tap-highlight-color: transparent;
+        }}
+        .nav {{
+            background: #161b22;
+            padding: 12px 20px;
+            display: flex;
+            gap: 24px;
+            border-bottom: 1px solid #30363d;
+        }}
+        .nav a {{
+            color: #8b949e;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }}
+        .nav a:hover {{ color: white; }}
+        .nav a.active {{ color: white; font-weight: 600; }}
+        .container {{ padding: 20px; }}
+        h1 {{ font-size: 24px; margin-bottom: 24px; }}
+        .section {{ margin-bottom: 32px; }}
+        .section-title {{
+            font-size: 12px;
+            font-weight: 600;
+            color: #8b949e;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+        }}
+        .risk-badge {{
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            background: {risk_color}20;
+            color: {risk_color};
+            border: 1px solid {risk_color}40;
+        }}
+        .param-grid {{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin-bottom: 16px;
+        }}
+        .param-card {{
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 12px;
+        }}
+        .param-name {{
+            font-size: 11px;
+            color: #8b949e;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }}
+        .param-value {{
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }}
+        .param-note {{
+            font-size: 12px;
+            color: #8b949e;
+            line-height: 1.4;
+        }}
+        .reasoning {{
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }}
+        .actions {{
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 16px;
+        }}
+        .actions ul {{
+            list-style: none;
+            padding-left: 0;
+        }}
+        .actions li {{
+            padding: 8px 0;
+            border-bottom: 1px solid #30363d40;
+        }}
+        .actions li:last-child {{ border-bottom: none; }}
+        .actions li:before {{
+            content: "→";
+            margin-right: 8px;
+            color: #2ea043;
+        }}
+        .journal {{
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 16px;
+            max-height: 400px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            font-size: 13px;
+            line-height: 1.6;
+        }}
+        .monitor-log {{
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 16px;
+            font-family: monospace;
+            font-size: 11px;
+            line-height: 1.8;
+        }}
+        .monitor-log div {{
+            padding: 4px 0;
+            color: #8b949e;
+        }}
+        .not-available {{
+            color: #6e7681;
+            font-style: italic;
+            padding: 20px;
+            text-align: center;
+        }}
+        .status-green {{ color: #2ea043; }}
+        .status-yellow {{ color: #d29922; }}
+        .status-red {{ color: #da3633; }}
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="/">Dashboard</a>
+        <a href="/agent" class="active">Agent</a>
+        <a href="/water-test">Water Test</a>
+    </div>
+    <div class="container">
+        <h1>Agent Status</h1>
+
+        <div class="section">
+            <div class="section-title">Current Risk Level</div>
+            <div class="risk-badge">{risk_level}</div>
+        </div>
+
+        {''.join([f"""
+        <div class="section">
+            <div class="section-title">Parameter Status</div>
+            <div class="param-grid">
+                <div class="param-card">
+                    <div class="param-name">Temperature</div>
+                    <div class="param-value status-{decision["parameter_status"]["temperature"]["status"]}">{decision["parameter_status"]["temperature"]["value"]}{decision["parameter_status"]["temperature"]["unit"]}</div>
+                    <div class="param-note">{decision["parameter_status"]["temperature"]["note"]}</div>
+                </div>
+                <div class="param-card">
+                    <div class="param-name">pH</div>
+                    <div class="param-value status-{decision["parameter_status"]["ph"]["status"]}">{decision["parameter_status"]["ph"]["value"]}</div>
+                    <div class="param-note">{decision["parameter_status"]["ph"]["note"]}</div>
+                </div>
+                <div class="param-card">
+                    <div class="param-name">TDS</div>
+                    <div class="param-value status-{decision["parameter_status"]["tds"]["status"]}">{decision["parameter_status"]["tds"]["value"]} {decision["parameter_status"]["tds"]["unit"]}</div>
+                    <div class="param-note">{decision["parameter_status"]["tds"]["note"]}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Reasoning</div>
+            <div class="reasoning">{decision.get("reasoning", "Not available")}</div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Recommended Actions</div>
+            <div class="actions">
+                <ul>
+                    {"".join([f"<li>{action}</li>" for action in decision.get("recommended_actions", [])])}
+                </ul>
+            </div>
+        </div>
+        """ if decision else '<div class="section"><div class="not-available">No agent decisions available yet</div></div>'])}
+
+        <div class="section">
+            <div class="section-title">Latest Journal Entry {f"({journal_date})" if journal_date else ""}</div>
+            {'<div class="journal">' + journal_text + '</div>' if journal_text else '<div class="not-available">No journal entries yet</div>'}
+        </div>
+
+        <div class="section">
+            <div class="section-title">Monitor Log (Last 10)</div>
+            {'<div class="monitor-log">' + "".join([f"<div>{line}</div>" for line in monitor_lines]) + '</div>' if monitor_lines else '<div class="not-available">No monitor log yet</div>'}
+        </div>
+    </div>
+
+    <script>
+        // Auto-refresh every 60 seconds
+        setTimeout(() => {{ window.location.reload(); }}, 60000);
     </script>
 </body>
 </html>
