@@ -28,5 +28,6 @@
 
 # shrimp-vision: every 2 hours at :30 — DISABLED until camera is connected
 # 30 */2 * * * cd ~/clawdception && python3 skills/shrimp_vision/run.py >> logs/vision.log 2>&1
-# git-commit: every hour
-0 * * * * cd ~/clawdception && git add -A && git commit -m "auto: $(date +\%Y-\%m-\%d_%H:%M)" && git push origin main >> logs/git.log 2>&1
+
+# git-commit: every hour — pull remote first (rebase, Pi wins conflicts), then push
+0 * * * * cd ~/clawdception && git add -A && git commit -m "auto: $(date +\%Y-\%m-\%d_%H:%M)" && git pull --rebase -X theirs origin main && git push origin main >> logs/git.log 2>&1
