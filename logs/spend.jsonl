@@ -1,3 +1,0 @@
-{"timestamp": "2026-04-03T19:06:17.624443", "skill": "shrimp-monitor", "model": "claude-haiku-4-5", "input_tokens": 800, "output_tokens": 500, "total_tokens": 1300}
-{"timestamp": "2026-04-03T19:13:44.940505", "skill": "shrimp-monitor", "model": "claude-haiku-4-5", "input_tokens": 821, "output_tokens": 331, "total_tokens": 1152}
-{"timestamp": "2026-04-03T19:21:48.868281", "skill": "shrimp-journal", "model": "claude-haiku-4-5", "input_tokens": 599, "output_tokens": 516, "total_tokens": 1115}

@@ -5,9 +5,7 @@
 #   (crontab -l 2>/dev/null; cat ~/clawdception/crontab.txt) | crontab -
 #
 # IMPORTANT: cron does not inherit your shell environment.
-# Set ANTHROPIC_API_KEY here so all jobs can find it.
-
-ANTHROPIC_API_KEY=your_key_here_replace_me
+# ANTHROPIC_API_KEY set in /etc/environment — do not add here (security)
 
 # shrimp-monitor: every 15 minutes
 # Calls Claude only when something warrants it (parameter drift, events, or every 4hr).
