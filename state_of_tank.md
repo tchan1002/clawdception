@@ -1,42 +1,47 @@
 # State of Tank — Media Luna
 
-**Last updated:** 2026-03-31
-**Cycle day:** 10
-**Tank status:** Cycling — no shrimp yet
+**Last updated:** 2026-04-03
+**Cycle day:** 13
+**Tank status:** Cycling — mid-phase — no shrimp
 
 ---
 
 ## Current Conditions
 
-- **Temperature:** ~77°F (room temp, heater off for testing)
-- **pH:** ~6.32 (low but expected — Fluval Stratum buffering + organic decomp)
-- **TDS:** ~150 ppm (bottom of target range)
-- **Ammonia:** Unknown — no manual test logged yet
-- **Nitrite:** Unknown — no manual test logged yet
-- **Nitrate:** Unknown — no manual test logged yet
+| Parameter | Current | Notes |
+|-----------|---------|-------|
+| Temperature | ~76.8°F avg | Normal diurnal swing; -0.9°F day change |
+| pH | ~6.45 avg (sensor); 6.6 (manual) | Sensor touching 5.95 at minimum — flagged for monitoring |
+| TDS | ~165 ppm | Slight downward drift; within acceptable range |
+| Ammonia | 1.0 ppm | Active spike — Nitrosomonas colony working |
+| Nitrite | 2.0 ppm | Elevated; mid-cycle expected but requires close tracking |
+| Nitrate | 80 ppm | High, confirming prior conversion chain is established |
 
-## Tank History
+---
 
-- **2026-03-22:** Tank started. Seeded with live ceramic bio media from Golden Aquarium.
-  Fritz Turbo Start was unavailable; live media used instead.
-- **2026-03-30:** pH calibrated with buffer solutions (pH 4.0 and pH 7.0).
-  Offset set to -1.10. API kit reading confirmed 6.4.
-- **2026-03-31:** Agent infrastructure initialized. Monitoring begins.
+## Cycle Status
 
-## What I'm Watching
+The nitrogen cycle is in active mid-phase. The first bacterial colony (*Nitrosomonas*, ammonia → nitrite) is clearly established and working. The second colony (*Nitrobacter*, nitrite → nitrate) is evidenced by the 80 ppm nitrate reading but has not yet caught up with nitrite production — hence the 2.0 ppm nitrite reading.
 
-- pH is stable but low. Fluval Stratum is known to buffer acidic. Expect gradual rise as cycle progresses.
-- TDS is at the low end of target. Should increase as nitrogen waste accumulates.
-- No manual ammonia/nitrite tests logged yet. Toby should test soon — we're 10 days in.
-- Cycle seeded with live media — bacterial colonies should be establishing now.
+The cycle is progressing normally. No interventions are indicated. The next 48–72 hours are the critical observation window.
 
-## What Comes Next
+---
 
-- Manual water test needed (ammonia/nitrite/nitrate) to gauge cycle progress
-- Expect ammonia to spike, then nitrite, then nitrate as cycle proceeds
-- Shrimp introduction pending successful cycle completion (~4-6 weeks from start)
+## Tank History Notes
 
-## Notes
+- Cycle started 2026-03-22
+- Substrate: Fluval Stratum (known pH buffer, pulling pH toward low-mid 6s)
+- Heater: status variable; temperature appears stable around 77°F
+- No shrimp in tank; bacteria are the sole inhabitants
+- First manual nitrogen test logged 2026-04-03
 
-Tank is empty except for substrate (Fluval Stratum), hardscape, and bio media.
-The bacteria are the current tenants. They are doing their job. Probably.
+---
+
+## Watch Items
+
+- Nitrite trajectory — looking for plateau or decline
+- pH sensor minimum readings — brief dips below 6.0 noted, needs corroboration
+- Ammonia consumption rate — confirm decline in next test
+- Nitrate at 80 ppm: will need substantial water change before shrimp introduction
+
+---

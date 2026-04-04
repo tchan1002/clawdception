@@ -33,6 +33,7 @@ from utils import (
     hours_since_last_water_test,
     log_decision,
     read_journal,
+    SkillLock,
 )
 from skills.call_toby.run import call_toby
 from skills.shrimp_alert.run import alert
@@ -221,114 +222,115 @@ def format_recent_events(events):
 
 
 def run(force=False):
-    ts = datetime.now().isoformat()
-    cycle_day = get_cycle_day()
+    with SkillLock("shrimp-monitor"):
+        ts = datetime.now().isoformat()
+        cycle_day = get_cycle_day()
 
-    # --- Fetch data ---
-    latest = fetch_latest_reading()
-    if not latest:
-        print(f"[{ts[:16]}] [shrimp-monitor] No sensor data — skipping.")
-        return
+        # --- Fetch data ---
+        latest = fetch_latest_reading()
+        if not latest:
+            print(f"[{ts[:16]}] [shrimp-monitor] No sensor data — skipping.")
+            return
 
-    readings_24h = fetch_readings(96)
-    readings_recent = readings_24h[:4]  # last ~1 hour
-    since_24h = (datetime.now() - timedelta(hours=24)).isoformat()
-    recent_events = fetch_events(since=since_24h)
-    last_claude_time = get_last_claude_time()
+        readings_24h = fetch_readings(96)
+        readings_recent = readings_24h[:4]  # last ~1 hour
+        since_24h = (datetime.now() - timedelta(hours=24)).isoformat()
+        recent_events = fetch_events(since=since_24h)
+        last_claude_time = get_last_claude_time()
 
-    # --- Always: check for overdue water test (once per 12hrs max, not every 15min) ---
-    # Only nag if it's been a while since we last sent a warning
-    last_call_hours = (
-        (datetime.now() - last_claude_time).total_seconds() / 3600
-        if last_claude_time else 999
-    )
-    if last_call_hours >= 12 or last_claude_time is None:
-        hrs_since_test = hours_since_last_water_test()
-        if hrs_since_test is None:
-            call_toby(
-                f"No water test logged yet. Day {cycle_day} of cycle — ammonia and nitrite are unknown.",
-                urgency="warning"
+        # --- Always: check for overdue water test (once per 12hrs max, not every 15min) ---
+        # Only nag if it's been a while since we last sent a warning
+        last_call_hours = (
+            (datetime.now() - last_claude_time).total_seconds() / 3600
+            if last_claude_time else 999
+        )
+        if last_call_hours >= 12 or last_claude_time is None:
+            hrs_since_test = hours_since_last_water_test()
+            if hrs_since_test is None:
+                call_toby(
+                    f"No water test logged yet. Day {cycle_day} of cycle — ammonia and nitrite are unknown.",
+                    urgency="warning"
+                )
+            elif hrs_since_test > WATER_TEST_WARNING_HOURS:
+                call_toby(
+                    f"It's been {int(hrs_since_test)}hr since last water test. "
+                    f"Day {cycle_day} — ammonia/nitrite need checking.",
+                    urgency="warning"
+                )
+
+        # --- Always: check danger zone and fire alerts ---
+        for param, value, threshold, direction in check_danger(latest):
+            alert(param, value, threshold, direction)
+
+        # --- Decide whether to call Claude ---
+        call_it, reason = should_call_claude(latest, readings_recent, recent_events, last_claude_time)
+        if not force and not call_it:
+            summary_line = (
+                f"[{ts[:16]}] Day {cycle_day} | skipped (stable) | "
+                f"T={latest.get('temp_f')}°F pH={latest.get('ph')} TDS={latest.get('tds_ppm')}ppm"
             )
-        elif hrs_since_test > WATER_TEST_WARNING_HOURS:
-            call_toby(
-                f"It's been {int(hrs_since_test)}hr since last water test. "
-                f"Day {cycle_day} — ammonia/nitrite need checking.",
-                urgency="warning"
+            print(summary_line)
+            PATHS["logs"].mkdir(parents=True, exist_ok=True)
+            with open(PATHS["monitor_log"], "a") as f:
+                f.write(summary_line + "\n")
+            return
+
+        # --- Build prompt ---
+        reading_summary = summarize_readings_for_prompt(readings_24h)
+        events_summary = format_recent_events(recent_events)
+        journal_snippet = read_journal()
+        journal_snippet = journal_snippet[-600:] if len(journal_snippet) > 600 else journal_snippet
+
+        prompt = f"""Day {cycle_day} of nitrogen cycle. Time: {ts[:16]}. Trigger: {reason}.
+
+    CURRENT: Temp {latest.get('temp_f')}°F | pH {latest.get('ph')} | TDS {latest.get('tds_ppm')}ppm
+
+    24HR STATS:
+    {reading_summary}
+
+    EVENTS:
+    {events_summary}
+
+    JOURNAL (recent):
+    {journal_snippet or 'None yet.'}
+
+    TARGET: Temp 72-78°F | pH 6.5-7.5 | TDS 150-250ppm
+    DANGER: Temp <65/>82 | pH <6.0/>8.0 | TDS <100/>350
+
+    Keep reasoning to 2 sentences. Be terse in all string fields."""
+
+        # --- Call Claude ---
+        try:
+            decision = call_claude(
+                messages=[{"role": "user", "content": prompt}],
+                skill_name="shrimp-monitor",
+                tools=[TOOL],
+                tool_name=TOOL["name"],
             )
+        except Exception as e:
+            print(f"[shrimp-monitor] Claude call failed: {e}")
+            log_decision({"error": str(e), "latest_reading": latest, "cycle_day": cycle_day})
+            return
 
-    # --- Always: check danger zone and fire alerts ---
-    for param, value, threshold, direction in check_danger(latest):
-        alert(param, value, threshold, direction)
+        # --- Log decision ---
+        decision["_cycle_day"] = cycle_day
+        decision["_timestamp"] = ts
+        decision["_trigger"] = reason
+        decision["_latest"] = {k: latest.get(k) for k in ("temp_f", "ph", "tds_ppm", "timestamp")}
+        log_decision(decision)
 
-    # --- Decide whether to call Claude ---
-    call_it, reason = should_call_claude(latest, readings_recent, recent_events, last_claude_time)
-    if not force and not call_it:
+        # --- One-line summary ---
+        risk = decision.get("risk_level", "?")
+        reasoning_snippet = decision.get("reasoning", "")[:80]
         summary_line = (
-            f"[{ts[:16]}] Day {cycle_day} | skipped (stable) | "
-            f"T={latest.get('temp_f')}°F pH={latest.get('ph')} TDS={latest.get('tds_ppm')}ppm"
+            f"[{ts[:16]}] Day {cycle_day} | risk={risk} | [{reason[:30]}] | "
+            f"T={latest.get('temp_f')}°F pH={latest.get('ph')} TDS={latest.get('tds_ppm')}ppm | "
+            f"{reasoning_snippet}"
         )
         print(summary_line)
         PATHS["logs"].mkdir(parents=True, exist_ok=True)
         with open(PATHS["monitor_log"], "a") as f:
             f.write(summary_line + "\n")
-        return
-
-    # --- Build prompt ---
-    reading_summary = summarize_readings_for_prompt(readings_24h)
-    events_summary = format_recent_events(recent_events)
-    journal_snippet = read_journal()
-    journal_snippet = journal_snippet[-600:] if len(journal_snippet) > 600 else journal_snippet
-
-    prompt = f"""Day {cycle_day} of nitrogen cycle. Time: {ts[:16]}. Trigger: {reason}.
-
-CURRENT: Temp {latest.get('temp_f')}°F | pH {latest.get('ph')} | TDS {latest.get('tds_ppm')}ppm
-
-24HR STATS:
-{reading_summary}
-
-EVENTS:
-{events_summary}
-
-JOURNAL (recent):
-{journal_snippet or 'None yet.'}
-
-TARGET: Temp 72-78°F | pH 6.5-7.5 | TDS 150-250ppm
-DANGER: Temp <65/>82 | pH <6.0/>8.0 | TDS <100/>350
-
-Keep reasoning to 2 sentences. Be terse in all string fields."""
-
-    # --- Call Claude ---
-    try:
-        decision = call_claude(
-            messages=[{"role": "user", "content": prompt}],
-            skill_name="shrimp-monitor",
-            tools=[TOOL],
-            tool_name=TOOL["name"],
-        )
-    except Exception as e:
-        print(f"[shrimp-monitor] Claude call failed: {e}")
-        log_decision({"error": str(e), "latest_reading": latest, "cycle_day": cycle_day})
-        return
-
-    # --- Log decision ---
-    decision["_cycle_day"] = cycle_day
-    decision["_timestamp"] = ts
-    decision["_trigger"] = reason
-    decision["_latest"] = {k: latest.get(k) for k in ("temp_f", "ph", "tds_ppm", "timestamp")}
-    log_decision(decision)
-
-    # --- One-line summary ---
-    risk = decision.get("risk_level", "?")
-    reasoning_snippet = decision.get("reasoning", "")[:80]
-    summary_line = (
-        f"[{ts[:16]}] Day {cycle_day} | risk={risk} | [{reason[:30]}] | "
-        f"T={latest.get('temp_f')}°F pH={latest.get('ph')} TDS={latest.get('tds_ppm')}ppm | "
-        f"{reasoning_snippet}"
-    )
-    print(summary_line)
-    PATHS["logs"].mkdir(parents=True, exist_ok=True)
-    with open(PATHS["monitor_log"], "a") as f:
-        f.write(summary_line + "\n")
 
 
 if __name__ == "__main__":
