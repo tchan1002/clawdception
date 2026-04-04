@@ -245,12 +245,14 @@ def read_decisions_since(since_dt):
 # Claude API
 # ---------------------------------------------------------------------------
 
-def call_claude(messages, system=None, max_tokens=None, skill_name=None):
+def call_claude(messages, system=None, max_tokens=None, skill_name=None, tools=None, tool_name=None):
     """
     Thin wrapper around the Anthropic SDK.
     Routes to the correct model and max_tokens based on skill_name.
     Logs token usage to logs/spend.jsonl.
-    Returns the response text, or raises on failure (callers should catch).
+
+    When tools and tool_name are provided, uses tool_use mode and returns
+    the tool input as a dict. Otherwise returns response text.
     """
     import anthropic
 
@@ -270,12 +272,21 @@ def call_claude(messages, system=None, max_tokens=None, skill_name=None):
             max_tokens = 1500  # default fallback
 
     client = anthropic.Anthropic(api_key=api_key)
-    response = client.messages.create(
-        model=model,
-        max_tokens=max_tokens,
-        system=system or SYSTEM_PROMPT,
-        messages=messages,
-    )
+
+    # Build API call parameters
+    api_params = {
+        "model": model,
+        "max_tokens": max_tokens,
+        "system": system or SYSTEM_PROMPT,
+        "messages": messages,
+    }
+
+    # Add tool_use parameters if provided
+    if tools and tool_name:
+        api_params["tools"] = tools
+        api_params["tool_choice"] = {"type": "tool", "name": tool_name}
+
+    response = client.messages.create(**api_params)
 
     # Log token usage
     usage = response.usage
@@ -292,7 +303,11 @@ def call_claude(messages, system=None, max_tokens=None, skill_name=None):
     with open(spend_log, "a") as f:
         f.write(json.dumps(spend_entry) + "\n")
 
-    return response.content[0].text
+    # Return tool input dict if using tool_use, otherwise text
+    if tools and tool_name:
+        return response.content[0].input
+    else:
+        return response.content[0].text
 
 
 # ---------------------------------------------------------------------------

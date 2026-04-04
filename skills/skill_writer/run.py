@@ -20,6 +20,40 @@ from config import MODIFIABLE_SKILLS, PATHS, PROTECTED_SKILLS, get_cycle_day
 from utils import call_claude, read_daily_logs
 from skills.call_toby.run import call_toby
 
+# Tool definition for skill proposal
+TOOL = {
+    "name": "propose_skill_change",
+    "description": "Propose a new skill or modification to an existing skill",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "skill_name": {
+                "type": "string",
+                "description": "Name of skill to modify, or 'new' for a new skill"
+            },
+            "proposal_type": {
+                "type": "string",
+                "enum": ["modify", "new"],
+                "description": "Whether this is a modification or new skill"
+            },
+            "rationale": {
+                "type": "string",
+                "description": "Why this skill is needed, with specific examples from past week"
+            },
+            "proposed_changes": {
+                "type": "string",
+                "description": "What to change or what the new skill does"
+            },
+            "risk_level": {
+                "type": "string",
+                "enum": ["low", "medium", "high"],
+                "description": "Risk level of implementing this change"
+            }
+        },
+        "required": ["skill_name", "proposal_type", "rationale", "proposed_changes", "risk_level"]
+    }
+}
+
 
 def read_week_journals():
     """Returns concatenated journal entries from the past 7 days (truncated to fit)."""
@@ -127,70 +161,44 @@ Task: Identify ONE gap in your current capabilities. Something you keep noticing
 Propose ONE concrete change: either a new skill or a modification to an existing skill.
 The proposal must reference a specific situation from the past week where this skill would have changed a decision.
 
-Respond with exactly four sections delimited as shown:
-
-===RATIONALE===
-[Why this skill? Reference specific journal entries or log situations. 150-250 words. Explain what decision would have been different.]
-
-===SKILL_MD===
-[Full SKILL.md content for the proposed skill or modified skill]
-
-===RUN_PY===
-[Full run.py implementation. Clean, functional Python. No classes unless needed.]
-
-===DIFF_MD===
-[If modifying an existing skill: what changed and why. If new skill: write "New skill — no diff."]"""
+Use the tool to submit your proposal with:
+- skill_name: the name of the skill to modify (or a name for a new skill)
+- proposal_type: "modify" or "new"
+- rationale: why this change is needed (150-250 words, reference specific situations)
+- proposed_changes: detailed description of what should change or what the new skill should do
+- risk_level: "low", "medium", or "high" based on potential impact"""
 
     try:
-        response = call_claude(
+        result = call_claude(
             messages=[{"role": "user", "content": prompt}],
             skill_name="skill-writer",
+            tools=[TOOL],
+            tool_name=TOOL["name"],
         )
     except Exception as e:
         print(f"[skill-writer] Claude call failed: {e}")
         return
 
-    # --- Parse sections ---
-    sections = {}
-    current_key = None
-    current_lines = []
-    for line in response.splitlines():
-        if line.strip() in ("===RATIONALE===", "===SKILL_MD===", "===RUN_PY===", "===DIFF_MD==="):
-            if current_key and current_lines:
-                sections[current_key] = "\n".join(current_lines).strip()
-            current_key = line.strip()
-            current_lines = []
-        else:
-            if current_key:
-                current_lines.append(line)
-    if current_key and current_lines:
-        sections[current_key] = "\n".join(current_lines).strip()
-
-    rationale = sections.get("===RATIONALE===", "")
-    skill_md = sections.get("===SKILL_MD===", "")
-    run_py = sections.get("===RUN_PY===", "")
-    diff_md = sections.get("===DIFF_MD===", "")
-
-    if not skill_md or not run_py:
-        print("[skill-writer] Could not parse proposal from Claude response")
-        print(response[:500])
-        return
-
-    # --- Infer skill name from SKILL.md ---
-    skill_name = "unnamed-skill"
-    for line in skill_md.splitlines():
-        if line.startswith("# Skill:"):
-            skill_name = line.replace("# Skill:", "").strip().lower().replace(" ", "-")
-            break
-
     # --- Write proposal ---
+    skill_name = result["skill_name"].lower().replace(" ", "-")
     proposal_dir = PATHS["proposals"] / f"{today}-{skill_name}"
     proposal_dir.mkdir(parents=True, exist_ok=True)
 
-    (proposal_dir / "SKILL.md").write_text(skill_md)
-    (proposal_dir / "run.py").write_text(run_py)
-    (proposal_dir / "rationale.md").write_text(rationale)
-    (proposal_dir / "diff.md").write_text(diff_md)
+    # Write proposal files
+    (proposal_dir / "proposal.md").write_text(f"""# Skill Proposal: {result['skill_name']}
+
+**Type:** {result['proposal_type']}
+**Risk Level:** {result['risk_level']}
+**Date:** {today}
+
+## Rationale
+
+{result['rationale']}
+
+## Proposed Changes
+
+{result['proposed_changes']}
+""")
 
     print(f"[skill-writer] Proposal written to {proposal_dir}")
 

@@ -19,6 +19,32 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 from config import PATHS
 from utils import call_claude
 
+# Tool definition for tweet generation
+TOOL = {
+    "name": "generate_daily_tweet",
+    "description": "Generate a tweet about the Media Luna tank from today's daily log",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "tweet_body": {
+                "type": "string",
+                "description": "Tweet text without signature (max 260 chars to leave room for —Media Luna)",
+                "maxLength": 260
+            },
+            "tone": {
+                "type": "string",
+                "enum": ["hopeful", "concerned", "observant", "proud", "curious"],
+                "description": "Emotional tone of the tweet"
+            },
+            "includes_data": {
+                "type": "boolean",
+                "description": "Whether the tweet includes specific parameter values"
+            }
+        },
+        "required": ["tweet_body", "tone", "includes_data"]
+    }
+}
+
 
 def read_todays_log():
     """Returns today's daily log content, or None if it doesn't exist yet."""
@@ -33,7 +59,7 @@ def read_todays_log():
 def generate_tweet(daily_log_content):
     """
     Calls Claude to generate a tweet from the daily log.
-    Returns the tweet text (max 280 chars, no em dashes, signs off —Media Luna).
+    Returns the tweet text (max 280 chars, signs off —Media Luna).
     """
     # Extract first 800 chars of log to keep prompt short
     excerpt = daily_log_content[:800] if len(daily_log_content) > 800 else daily_log_content
@@ -43,26 +69,17 @@ def generate_tweet(daily_log_content):
 DAILY LOG (excerpt):
 {excerpt}
 
-Write a single tweet (max 280 chars including signature). Use caretaker voice: personal, observant, caring. NO em dashes (—) except in the signature. Sign off with —Media Luna at the end.
+Write a single tweet. Use caretaker voice: personal, observant, caring. NO em dashes in the body text. Keep it under 260 chars (signature will be added automatically)."""
 
-Return ONLY the tweet text, nothing else."""
-
-    response = call_claude(
+    result = call_claude(
         messages=[{"role": "user", "content": prompt}],
         skill_name="tweet-log",
+        tools=[TOOL],
+        tool_name=TOOL["name"],
     )
 
-    tweet = response.strip()
-
-    # Ensure it doesn't exceed 280 chars
-    if len(tweet) > 280:
-        # Truncate but preserve the signature
-        if "—Media Luna" in tweet:
-            body = tweet.split("—Media Luna")[0].strip()
-            max_body = 280 - len(" —Media Luna")
-            tweet = body[:max_body].strip() + " —Media Luna"
-        else:
-            tweet = tweet[:280]
+    # Add signature to tweet body
+    tweet = result["tweet_body"].strip() + " —Media Luna"
 
     return tweet
 

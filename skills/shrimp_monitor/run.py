@@ -32,7 +32,6 @@ from utils import (
     fetch_readings,
     hours_since_last_water_test,
     log_decision,
-    parse_json_response,
     read_journal,
 )
 from skills.call_toby.run import call_toby
@@ -47,6 +46,67 @@ RATE_THRESHOLDS = {
     "ph": 0.1,
     "temp_f": 1.0,
     "tds_ppm": 20,
+}
+
+# Tool definition for structured output
+TOOL = {
+    "name": "assess_tank_status",
+    "description": "Assess the current status of the shrimp tank based on sensor readings and recent events",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "parameter_status": {
+                "type": "object",
+                "properties": {
+                    "temperature": {
+                        "type": "object",
+                        "properties": {
+                            "value": {"type": "number"},
+                            "unit": {"type": "string"},
+                            "status": {"type": "string", "enum": ["green", "yellow", "red"]},
+                            "note": {"type": "string"}
+                        },
+                        "required": ["value", "unit", "status", "note"]
+                    },
+                    "ph": {
+                        "type": "object",
+                        "properties": {
+                            "value": {"type": "number"},
+                            "unit": {"type": "string"},
+                            "status": {"type": "string", "enum": ["green", "yellow", "red"]},
+                            "note": {"type": "string"}
+                        },
+                        "required": ["value", "unit", "status", "note"]
+                    },
+                    "tds": {
+                        "type": "object",
+                        "properties": {
+                            "value": {"type": "number"},
+                            "unit": {"type": "string"},
+                            "status": {"type": "string", "enum": ["green", "yellow", "red"]},
+                            "note": {"type": "string"}
+                        },
+                        "required": ["value", "unit", "status", "note"]
+                    }
+                },
+                "required": ["temperature", "ph", "tds"]
+            },
+            "risk_level": {
+                "type": "string",
+                "enum": ["green", "yellow", "red"]
+            },
+            "reasoning": {"type": "string"},
+            "recommended_actions": {
+                "type": "array",
+                "items": {"type": "string"}
+            },
+            "suggested_actuator_actions": {
+                "type": "array",
+                "items": {"type": "string"}
+            }
+        },
+        "required": ["parameter_status", "risk_level", "reasoning", "recommended_actions", "suggested_actuator_actions"]
+    }
 }
 
 
@@ -235,22 +295,16 @@ JOURNAL (recent):
 TARGET: Temp 72-78°F | pH 6.5-7.5 | TDS 150-250ppm
 DANGER: Temp <65/>82 | pH <6.0/>8.0 | TDS <100/>350
 
-Keep reasoning to 2 sentences. Be terse in all string fields.
-
-Return ONLY valid JSON:
-{{"parameter_status":{{"temperature":{{"value":0,"unit":"°F","status":"green","note":""}},"ph":{{"value":0,"unit":"","status":"green","note":""}},"tds":{{"value":0,"unit":"ppm","status":"green","note":""}}}},"risk_level":"green","recommended_actions":[""],"reasoning":"2 sentences max","suggested_actuator_actions":[""]}}"""
+Keep reasoning to 2 sentences. Be terse in all string fields."""
 
     # --- Call Claude ---
     try:
-        response_text = call_claude(
+        decision = call_claude(
             messages=[{"role": "user", "content": prompt}],
             skill_name="shrimp-monitor",
+            tools=[TOOL],
+            tool_name=TOOL["name"],
         )
-        decision = parse_json_response(response_text)
-    except json.JSONDecodeError as e:
-        print(f"[shrimp-monitor] Failed to parse JSON response: {e}")
-        log_decision({"error": f"JSON parse failed: {e}", "latest_reading": latest, "cycle_day": cycle_day})
-        return
     except Exception as e:
         print(f"[shrimp-monitor] Claude call failed: {e}")
         log_decision({"error": str(e), "latest_reading": latest, "cycle_day": cycle_day})

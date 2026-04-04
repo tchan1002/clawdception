@@ -26,6 +26,32 @@ from utils import (
     read_journal,
 )
 
+# Tool definition for structured journal entry
+TOOL = {
+    "name": "write_journal_entry",
+    "description": "Write a journal entry for the Media Luna tank covering the past 2 hours",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "narrative": {
+                "type": "string",
+                "description": "200-400 word caretaker voice journal entry"
+            },
+            "key_observations": {
+                "type": "array",
+                "items": {"type": "string"},
+                "description": "2-4 key observations from this period"
+            },
+            "watch_list": {
+                "type": "array",
+                "items": {"type": "string"},
+                "description": "Parameters or conditions to monitor closely"
+            }
+        },
+        "required": ["narrative", "key_observations", "watch_list"]
+    }
+}
+
 
 def run():
     ts = datetime.now()
@@ -83,15 +109,30 @@ JOURNAL SO FAR TODAY (last portion):
 Write a journal entry of 200-400 words. This is your internal record — write honestly about what you're observing, what concerns you, what seems fine, what you're curious about. It should read as a thoughtful naturalist's field notes, not a data report. Don't repeat what's already in the journal excerpt. End with a single sentence about your current state of mind regarding the tank."""
 
     try:
-        entry = call_claude(
+        result = call_claude(
             messages=[{"role": "user", "content": prompt}],
             skill_name="shrimp-journal",
+            tools=[TOOL],
+            tool_name=TOOL["name"],
         )
     except Exception as e:
         print(f"[shrimp-journal] Claude call failed: {e} — skipping journal entry")
         return
 
-    append_journal(entry)
+    # Format the journal entry with narrative, key observations, and watch list
+    entry_text = result["narrative"]
+
+    if result.get("key_observations"):
+        entry_text += "\n\n**Key Observations:**\n"
+        for obs in result["key_observations"]:
+            entry_text += f"- {obs}\n"
+
+    if result.get("watch_list"):
+        entry_text += "\n**Watch List:**\n"
+        for item in result["watch_list"]:
+            entry_text += f"- {item}\n"
+
+    append_journal(entry_text)
     print(f"[shrimp-journal] Entry written at {ts.strftime('%H:%M')} (Day {cycle_day})")
 
 
