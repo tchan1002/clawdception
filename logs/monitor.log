@@ -123,3 +123,21 @@
 [2026-04-04T15:00] Day 14 | risk=yellow | [manual event since last check ] | T=76.21°F pH=6.48 TDS=169.0ppm | Day 14: ammonia halved (0.5→0.25ppm), nitrite holding steady at 5ppm while nitra
 [2026-04-04T15:15] Day 14 | risk=yellow | [manual event since last check ] | T=76.21°F pH=6.47 TDS=167.0ppm | Ammonia declining (0.5→0.25ppm) and nitrate holding steady (160ppm) suggest Nitr
 [2026-04-04T15:15] Day 14 | risk=yellow | [manual event since last check ] | T=76.21°F pH=6.47 TDS=167.0ppm | Ammonia declining (0.5→0.25ppm) and nitrate holding steady (160ppm) suggest Nitr
+[2026-04-04T15:30] Day 14 | risk=yellow | [manual event since last check ] | T=76.1°F pH=6.47 TDS=169.0ppm | Day 14: ammonia halving (0.5→0.25ppm) shows Nitrosomonas working, but nitrite pl
+[2026-04-04T15:30] Day 14 | risk=yellow | [manual event since last check ] | T=76.1°F pH=6.47 TDS=169.0ppm | Day 14: ammonia halving (0.5→0.25ppm) shows Nitrosomonas working, but nitrite pl
+[2026-04-04T15:45] Day 14 | risk=yellow | [manual event since last check ] | T=76.32°F pH=6.46 TDS=168.0ppm | Good news: ammonia dropped 50% in 12 hours (0.5→0.25ppm), indicating Nitrosomona
+[2026-04-04T15:45] Day 14 | risk=yellow | [manual event since last check ] | T=76.32°F pH=6.46 TDS=168.0ppm | Good news: ammonia dropped 50% in 12 hours (0.5→0.25ppm), indicating Nitrosomona
+[2026-04-04T16:00] Day 14 | risk=yellow | [manual event since last check ] | T=76.21°F pH=6.46 TDS=169.0ppm | Ammonia halved in 13 hours (0.5→0.25ppm), excellent Nitrosomonas progress. Howev
+[2026-04-04T16:00] Day 14 | risk=yellow | [manual event since last check ] | T=76.21°F pH=6.46 TDS=169.0ppm | Ammonia halved in 13 hours (0.5→0.25ppm), excellent Nitrosomonas progress. Howev
+[2026-04-04T16:15] Day 14 | risk=yellow | [manual event since last check ] | T=76.32°F pH=6.46 TDS=168.0ppm | Ammonia declining cleanly (0.5→0.25ppm) signals Nitrosomonas is working. Nitrite
+[2026-04-04T16:15] Day 14 | risk=yellow | [manual event since last check ] | T=76.32°F pH=6.46 TDS=168.0ppm | Ammonia declining cleanly (0.5→0.25ppm) signals Nitrosomonas is working. Nitrite
+[2026-04-04T16:30] Day 14 | risk=yellow | [manual event since last check ] | T=76.32°F pH=6.48 TDS=168.0ppm | Ammonia has declined (0.5→0.25ppm) and nitrate stable at 160ppm, but nitrite sta
+[2026-04-04T16:30] Day 14 | risk=yellow | [manual event since last check ] | T=76.32°F pH=6.48 TDS=168.0ppm | Ammonia has declined (0.5→0.25ppm) and nitrate stable at 160ppm, but nitrite sta
+[2026-04-04T16:45] Day 14 | risk=yellow | [manual event since last check ] | T=76.32°F pH=6.5 TDS=169.0ppm | Day 14 shows ammonia declining (0.5→0.25 ppm, 50% drop in 13 hours) which is exc
+[2026-04-04T16:45] Day 14 | risk=yellow | [manual event since last check ] | T=76.32°F pH=6.5 TDS=169.0ppm | Day 14 shows ammonia declining (0.5→0.25 ppm, 50% drop in 13 hours) which is exc
+[2026-04-04T17:00] Day 14 | risk=yellow | [manual event since last check ] | T=76.32°F pH=6.48 TDS=170.0ppm | Ammonia declining (0.5→0.25ppm) is excellent—first stage nitrification working. 
+[2026-04-04T17:00] Day 14 | risk=yellow | [manual event since last check ] | T=76.32°F pH=6.48 TDS=170.0ppm | Ammonia declining (0.5→0.25ppm) is excellent—first stage nitrification working. 
+[2026-04-04T17:15] Day 14 | risk=yellow | [manual event since last check ] | T=76.32°F pH=6.49 TDS=169.0ppm | Ammonia dropped 0.25ppm in 13 hours (0.5→0.25)—strong Nitrosomonas activity. Nit
+[2026-04-04T17:15] Day 14 | risk=yellow | [manual event since last check ] | T=76.32°F pH=6.49 TDS=169.0ppm | Ammonia dropped 0.25ppm in 13 hours (0.5→0.25)—strong Nitrosomonas activity. Nit
+[2026-04-04T17:30] Day 14 | risk=yellow | [manual event since last check ] | T=76.32°F pH=6.47 TDS=168.0ppm | Ammonia halving nicely (0.5→0.25ppm) shows Nitrosomonas working. Nitrite holding
+[2026-04-04T17:30] Day 14 | risk=yellow | [manual event since last check ] | T=76.32°F pH=6.47 TDS=168.0ppm | Ammonia halving nicely (0.5→0.25ppm) shows Nitrosomonas working. Nitrite holding
