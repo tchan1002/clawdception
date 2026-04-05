@@ -183,3 +183,11 @@
 [2026-04-04T22:30] Day 14 | risk=yellow | [ph outside target range: 6.4 (] | T=74.53°F pH=6.4 TDS=169.0ppm | Ammonia halving (0.5→0.25ppm) shows Nitrosomonas momentum, but nitrite plateau a
 [2026-04-04T22:45] Day 14 | risk=yellow | [ph outside target range: 6.42 ] | T=74.53°F pH=6.42 TDS=168.0ppm | Day 14 cycle shows healthy ammonia decline (0.5→0.25) and rising nitrate (160 pp
 [2026-04-04T22:45] Day 14 | risk=yellow | [ph outside target range: 6.42 ] | T=74.53°F pH=6.42 TDS=168.0ppm | Day 14 cycle shows healthy ammonia decline (0.5→0.25) and rising nitrate (160 pp
+[2026-04-04T23:00] Day 14 | risk=yellow | [ph outside target range: 6.41 ] | T=74.64°F pH=6.41 TDS=168.0ppm | pH has drifted into yellow (6.41 vs 6.5 floor) despite stable 24hr mean, signali
+[2026-04-04T23:00] Day 14 | risk=yellow | [ph outside target range: 6.41 ] | T=74.64°F pH=6.41 TDS=168.0ppm | pH has drifted into yellow (6.41 vs 6.5 floor) despite stable 24hr mean, signali
+[2026-04-04T23:15] Day 14 | risk=yellow | [ph outside target range: 6.46 ] | T=74.86°F pH=6.46 TDS=172.0ppm | pH has dipped to 6.46—just outside the 6.5 floor—at day 14 of an active cycle wh
+[2026-04-04T23:15] Day 14 | risk=yellow | [ph outside target range: 6.46 ] | T=74.86°F pH=6.46 TDS=172.0ppm | pH has dipped to 6.46—just outside the 6.5 floor—at day 14 of an active cycle wh
+[2026-04-04T23:30] Day 14 | risk=yellow | [ph outside target range: 6.46 ] | T=74.97°F pH=6.46 TDS=171.0ppm | pH at 6.46 breaches the 6.5 floor—ammonia and nitrite metabolism slow in acidic 
+[2026-04-04T23:30] Day 14 | risk=yellow | [ph outside target range: 6.46 ] | T=74.97°F pH=6.46 TDS=171.0ppm | pH at 6.46 breaches the 6.5 floor—ammonia and nitrite metabolism slow in acidic 
+[2026-04-04T23:45] Day 14 | risk=yellow | [ph outside target range: 6.49 ] | T=74.97°F pH=6.49 TDS=171.0ppm | pH dropped to 6.49 despite stable ammonia (0.25 ppm) and ongoing nitrite stress 
+[2026-04-04T23:45] Day 14 | risk=yellow | [ph outside target range: 6.49 ] | T=74.97°F pH=6.49 TDS=171.0ppm | pH dropped to 6.49 despite stable ammonia (0.25 ppm) and ongoing nitrite stress 
