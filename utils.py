@@ -201,6 +201,12 @@ def read_agent_state():
 
 
 def write_agent_state(content):
+    # Archive a dated snapshot before overwriting
+    history_dir = PATHS["agent_state_history"]
+    history_dir.mkdir(parents=True, exist_ok=True)
+    today = datetime.now().strftime("%Y-%m-%d-%H%M")
+    archive_path = history_dir / f"{today}.md"
+    archive_path.write_text(content)
     PATHS["agent_state"].write_text(content)
 
 

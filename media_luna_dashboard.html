@@ -551,6 +551,89 @@
       max-width: 1200px;
     }
   }
+
+  /* AGENT STATE HISTORY */
+  .agent-state-panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  .agent-state-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .agent-state-title {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .agent-state-nav {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .agent-state-nav button {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    padding: 3px 8px;
+    cursor: pointer;
+    letter-spacing: 0.1em;
+  }
+
+  .agent-state-nav button:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .agent-state-nav button:disabled {
+    opacity: 0.3;
+    cursor: default;
+    border-color: var(--border);
+    color: var(--muted);
+  }
+
+  .agent-state-date {
+    font-size: 9px;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    min-width: 80px;
+    text-align: center;
+  }
+
+  .agent-state-body {
+    font-size: 11px;
+    line-height: 1.7;
+    color: var(--text);
+    white-space: pre-wrap;
+    max-height: 320px;
+    overflow-y: auto;
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+  }
+
+  .agent-state-body .as-heading {
+    color: var(--accent);
+    font-weight: 500;
+    margin-top: 10px;
+    display: block;
+  }
+
+  .agent-state-body .as-meta {
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 0.1em;
+  }
 </style>
 </head>
 <body>
@@ -669,6 +752,19 @@
         <div class="cycle-val" id="valPhCycle">—</div>
       </div>
     </div>
+  </div>
+
+  <!-- AGENT STATE HISTORY -->
+  <div class="agent-state-panel">
+    <div class="agent-state-header">
+      <span class="agent-state-title">Agent State History</span>
+      <div class="agent-state-nav">
+        <button id="asPrev" onclick="agentStateNav(-1)" disabled>◀ prev</button>
+        <span class="agent-state-date" id="asDate">—</span>
+        <button id="asNext" onclick="agentStateNav(+1)" disabled>next ▶</button>
+      </div>
+    </div>
+    <div class="agent-state-body" id="agentStateBody">loading…</div>
   </div>
 
   <footer>
@@ -1102,6 +1198,62 @@ async function exportEvents() {
     alert('Export failed: ' + error.message);
   }
 }
+
+// ─── AGENT STATE HISTORY ───────────────────────────────
+let agentStateDates = [];
+let agentStateIndex = 0;
+
+async function initAgentStateHistory() {
+  try {
+    const res = await fetch('/api/agent-state-history');
+    if (!res.ok) throw new Error();
+    const data = await res.json();
+    agentStateDates = data.dates || [];
+    if (agentStateDates.length === 0) {
+      document.getElementById('agentStateBody').textContent = 'No history yet.';
+      return;
+    }
+    agentStateIndex = 0; // most recent first
+    await loadAgentState(agentStateIndex);
+  } catch (e) {
+    document.getElementById('agentStateBody').textContent = 'Could not load agent state history.';
+  }
+}
+
+async function loadAgentState(idx) {
+  const date = agentStateDates[idx];
+  document.getElementById('asDate').textContent = date;
+  document.getElementById('asPrev').disabled = (idx >= agentStateDates.length - 1);
+  document.getElementById('asNext').disabled = (idx <= 0);
+  try {
+    const res = await fetch(`/api/agent-state-history?date=${date}`);
+    if (!res.ok) throw new Error();
+    const data = await res.json();
+    renderAgentState(data.content || '');
+  } catch (e) {
+    document.getElementById('agentStateBody').textContent = 'Failed to load entry.';
+  }
+}
+
+function renderAgentState(md) {
+  const el = document.getElementById('agentStateBody');
+  // Minimal markdown: headings → styled spans, bold stripped, rest plain
+  const html = md
+    .replace(/^## (.+)$/gm, '<span class="as-heading">$1</span>')
+    .replace(/^# (.+)$/gm, '<span class="as-heading">$1</span>')
+    .replace(/^\*\*(.+?)\*\*$/gm, '<span class="as-meta">$1</span>')
+    .replace(/\*\*(.+?)\*\*/g, '$1');
+  el.innerHTML = html;
+}
+
+function agentStateNav(dir) {
+  const next = agentStateIndex + dir;
+  if (next < 0 || next >= agentStateDates.length) return;
+  agentStateIndex = next;
+  loadAgentState(agentStateIndex);
+}
+
+initAgentStateHistory();
 </script>
 </body>
 </html>

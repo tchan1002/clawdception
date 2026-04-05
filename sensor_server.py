@@ -894,6 +894,41 @@ def get_journal():
         return jsonify({"date": date_param, "content": "", "exists": False})
 
 
+# --- Agent state history ---
+@app.route("/api/agent-state-history", methods=["GET"])
+def get_agent_state_history():
+    from pathlib import Path
+    import os
+
+    history_dir = Path(os.getcwd()) / "agent_state_history"
+    date_param = request.args.get("date")
+
+    if not history_dir.exists():
+        return jsonify({"dates": [], "content": "", "exists": False})
+
+    if date_param:
+        try:
+            datetime.strptime(date_param, "%Y-%m-%d")
+        except ValueError:
+            return jsonify({"error": "Invalid date format"}), 400
+        # Match YYYY-MM-DD-HHMM.md; pick latest if multiple exist
+        matches = sorted(history_dir.glob(f"{date_param}-????.md"), reverse=True)
+        if matches:
+            return jsonify({"date": date_param, "content": matches[0].read_text(), "exists": True})
+        return jsonify({"date": date_param, "content": "", "exists": False})
+
+    # List unique dates (YYYY-MM-DD) from YYYY-MM-DD-HHMM.md files, most recent first
+    files = sorted(history_dir.glob("????-??-??-????.md"), reverse=True)
+    seen = set()
+    dates = []
+    for f in files:
+        date = f.stem[:10]
+        if date not in seen:
+            seen.add(date)
+            dates.append(date)
+    return jsonify({"dates": dates})
+
+
 # --- Health check (Telegram heartbeat can ping this) ---
 @app.route("/api/health", methods=["GET"])
 def health():

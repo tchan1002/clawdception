@@ -91,6 +91,7 @@ PATHS = {
     "proposals": BASE_DIR / "proposals",
     "state_of_tank": BASE_DIR / "state_of_tank.md",
     "agent_state": BASE_DIR / "agent_state.md",
+    "agent_state_history": BASE_DIR / "agent_state_history",
     "monitor_log": BASE_DIR / "logs" / "monitor.log",
     "alerts_log": BASE_DIR / "logs" / "alerts.jsonl",
     "calls_log": BASE_DIR / "logs" / "calls.jsonl",
