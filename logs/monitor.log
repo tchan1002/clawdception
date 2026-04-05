@@ -167,3 +167,11 @@
 [2026-04-04T20:30] Day 14 | risk=yellow | [ph outside target range: 6.42 ] | T=74.86°F pH=6.42 TDS=170.0ppm | Day 14: ammonia halving (0.5→0.25ppm), but nitrite climbing (5ppm stable over 18
 [2026-04-04T20:45] Day 14 | risk=yellow | [ph outside target range: 6.42 ] | T=74.75°F pH=6.42 TDS=169.0ppm | pH has dipped to 6.42—outside the safe floor. Simultaneous ammonia decline (0.5→
 [2026-04-04T20:45] Day 14 | risk=yellow | [ph outside target range: 6.42 ] | T=74.75°F pH=6.42 TDS=169.0ppm | pH has dipped to 6.42—outside the safe floor. Simultaneous ammonia decline (0.5→
+[2026-04-04T21:00] Day 14 | risk=yellow | [ph outside target range: 6.4 (] | T=74.64°F pH=6.4 TDS=171.0ppm | pH breach below 6.5 is the primary concern on day 14—acidification from organic 
+[2026-04-04T21:00] Day 14 | risk=yellow | [ph outside target range: 6.4 (] | T=74.64°F pH=6.4 TDS=171.0ppm | pH breach below 6.5 is the primary concern on day 14—acidification from organic 
+[2026-04-04T21:15] Day 14 | risk=yellow | [ph outside target range: 6.4 (] | T=74.53°F pH=6.4 TDS=168.0ppm | pH breach at 6.4 is a warning flag—bacterial metabolism slows below 6.5, risking
+[2026-04-04T21:15] Day 14 | risk=yellow | [ph outside target range: 6.4 (] | T=74.53°F pH=6.4 TDS=168.0ppm | pH breach at 6.4 is a warning flag—bacterial metabolism slows below 6.5, risking
+[2026-04-04T21:30] Day 14 | risk=yellow | [ph outside target range: 6.4 (] | T=74.53°F pH=6.4 TDS=171.0ppm | Day 14 shows ammonia declining (0.5→0.25ppm) and nitrate stabilized at 160ppm, i
+[2026-04-04T21:30] Day 14 | risk=yellow | [ph outside target range: 6.4 (] | T=74.53°F pH=6.4 TDS=171.0ppm | Day 14 shows ammonia declining (0.5→0.25ppm) and nitrate stabilized at 160ppm, i
+[2026-04-04T21:45] Day 14 | risk=yellow | [ph outside target range: 6.38 ] | T=74.53°F pH=6.38 TDS=170.0ppm | Day 14 shows ammonia declining (0.5→0.25ppm) and Nitrobacter active (nitrate sta
+[2026-04-04T21:45] Day 14 | risk=yellow | [ph outside target range: 6.38 ] | T=74.53°F pH=6.38 TDS=170.0ppm | Day 14 shows ammonia declining (0.5→0.25ppm) and Nitrobacter active (nitrate sta
