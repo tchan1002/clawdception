@@ -240,3 +240,11 @@
 [2026-04-05T05:30] Day 15 | risk=yellow | [manual event since last check ] | T=77.34°F pH=6.64 TDS=173.0ppm | Ammonia stable at 0.25ppm (excellent—Nitrosomonas locked in), but nitrite still 
 [2026-04-05T05:45] Day 15 | risk=yellow | [manual event since last check ] | T=77.34°F pH=6.63 TDS=171.0ppm | Ammonia and nitrite remain stubbornly elevated (0.25ppm and 2ppm respectively) a
 [2026-04-05T05:45] Day 15 | risk=yellow | [manual event since last check ] | T=77.34°F pH=6.63 TDS=171.0ppm | Ammonia and nitrite remain stubbornly elevated (0.25ppm and 2ppm respectively) a
+[2026-04-05T06:00] Day 15 | skipped (stable) | T=77.45°F pH=6.65 TDS=172.0ppm
+[2026-04-05T06:00] Day 15 | skipped (stable) | T=77.45°F pH=6.65 TDS=172.0ppm
+[2026-04-05T06:15] Day 15 | skipped (stable) | T=77.56°F pH=6.65 TDS=172.0ppm
+[2026-04-05T06:15] Day 15 | skipped (stable) | T=77.56°F pH=6.65 TDS=172.0ppm
+[2026-04-05T06:30] Day 15 | skipped (stable) | T=77.56°F pH=6.65 TDS=172.0ppm
+[2026-04-05T06:30] Day 15 | skipped (stable) | T=77.56°F pH=6.65 TDS=172.0ppm
+[2026-04-05T06:45] Day 15 | skipped (stable) | T=77.79°F pH=6.66 TDS=174.0ppm
+[2026-04-05T06:45] Day 15 | skipped (stable) | T=77.79°F pH=6.66 TDS=174.0ppm
