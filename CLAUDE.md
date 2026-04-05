@@ -87,6 +87,45 @@ the data in real time.
 
 ---
 
+## Verifying Changes
+
+### After editing `sensor_server.py`
+The Flask server must be restarted to pick up changes. It runs as a systemd service on the Pi:
+```bash
+sudo systemctl restart media-luna.service
+sudo systemctl status media-luna.service   # confirm active
+```
+Then run the smoke test to verify all endpoints respond correctly:
+```bash
+bash scripts/smoke_test.sh
+# Or target the Pi from a laptop:
+bash scripts/smoke_test.sh http://192.168.12.76:5001
+```
+
+### After editing a skill (`skills/*/run.py`, `utils.py`, `config.py`)
+No restart needed — skills are run directly by cron or manually. Test immediately:
+```bash
+cd ~/clawdception
+python3 skills/shrimp_monitor/run.py --force   # force a Claude call
+python3 skills/shrimp_journal/run.py
+python3 skills/call_toby/run.py --test
+```
+
+### Running unit tests
+Tests cover pure Python functions (no server, no hardware required):
+```bash
+cd ~/clawdception && python3 -m pytest tests/ -v
+```
+
+### Quick system health check
+Use the `/status` slash command in Claude Code, or manually:
+```bash
+curl http://localhost:5001/api/health
+tail -5 logs/monitor.log
+```
+
+---
+
 ## Do Not
 
 - Add npm, webpack, or any JS build tooling to this project
