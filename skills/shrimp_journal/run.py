@@ -25,6 +25,7 @@ from utils import (
     read_decisions_since,
     read_journal,
 )
+from skills.call_toby.run import call_toby
 
 # Tool definition for structured journal entry
 TOOL = {
