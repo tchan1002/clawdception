@@ -328,3 +328,11 @@
 [2026-04-05T16:30] Day 15 | risk=yellow | [manual event since last check ] | T=77.0°F pH=6.5 TDS=172.0ppm | Nitrogen cycle progressing (ammonia stable 0.25, nitrate climbing, nitrite eleva
 [2026-04-05T16:45] Day 15 | risk=yellow | [manual event since last check ] | T=77.11°F pH=6.5 TDS=174.0ppm | Nitrite plateau at 2ppm (no decline over 15 hours) combined with temperature cre
 [2026-04-05T16:45] Day 15 | risk=yellow | [manual event since last check ] | T=77.11°F pH=6.5 TDS=174.0ppm | Nitrite plateau at 2ppm (no decline over 15 hours) combined with temperature cre
+[2026-04-05T17:00] Day 15 | risk=yellow | [manual event since last check ] | T=77.11°F pH=6.52 TDS=175.0ppm | Nitrite plateau at 2ppm with ammonia stuck at 0.25ppm suggests Nitrobacter activ
+[2026-04-05T17:00] Day 15 | risk=yellow | [manual event since last check ] | T=77.11°F pH=6.52 TDS=175.0ppm | Nitrite plateau at 2ppm with ammonia stuck at 0.25ppm suggests Nitrobacter activ
+[2026-04-05T17:15] Day 15 | risk=yellow | [manual event since last check ] | T=77.11°F pH=6.53 TDS=173.0ppm | Nitrite plateau at 2ppm (three consecutive tests) and 0.25ppm ammonia persistenc
+[2026-04-05T17:15] Day 15 | risk=yellow | [manual event since last check ] | T=77.11°F pH=6.53 TDS=173.0ppm | Nitrite plateau at 2ppm (three consecutive tests) and 0.25ppm ammonia persistenc
+[2026-04-05T17:30] Day 15 | risk=yellow | [manual event since last check ] | T=77.22°F pH=6.54 TDS=174.0ppm | Nitrite plateau (2ppm across 24h) + ammonia hold (0.25ppm) + thermal/pH jitter s
+[2026-04-05T17:30] Day 15 | risk=yellow | [manual event since last check ] | T=77.22°F pH=6.54 TDS=174.0ppm | Nitrite plateau (2ppm across 24h) + ammonia hold (0.25ppm) + thermal/pH jitter s
+[2026-04-05T17:45] Day 15 | risk=yellow | [manual event since last check ] | T=77.22°F pH=6.54 TDS=174.0ppm | Nitrite plateau (2ppm) and ammonia persistence (0.25ppm) despite 15 days into cy
+[2026-04-05T17:45] Day 15 | risk=yellow | [manual event since last check ] | T=77.22°F pH=6.54 TDS=174.0ppm | Nitrite plateau (2ppm) and ammonia persistence (0.25ppm) despite 15 days into cy
