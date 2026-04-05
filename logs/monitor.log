@@ -312,3 +312,11 @@
 [2026-04-05T14:30] Day 15 | risk=yellow | [ph outside target range: 6.45 ] | T=76.78°F pH=6.45 TDS=173.0ppm | pH is marginally low at 6.45 (target floor 6.5) with a soft downtrend; combined 
 [2026-04-05T14:45] Day 15 | risk=yellow | [ph outside target range: 6.46 ] | T=76.78°F pH=6.46 TDS=176.0ppm | pH touching the bottom edge of acceptable range during active cycling is concern
 [2026-04-05T14:45] Day 15 | risk=yellow | [ph outside target range: 6.46 ] | T=76.78°F pH=6.46 TDS=176.0ppm | pH touching the bottom edge of acceptable range during active cycling is concern
+[2026-04-05T15:00] Day 15 | risk=yellow | [ph outside target range: 6.47 ] | T=76.89°F pH=6.47 TDS=174.0ppm | Day 15: Nitrification is advancing (nitrate spike 80→160 ppm observed), but nitr
+[2026-04-05T15:00] Day 15 | risk=yellow | [ph outside target range: 6.47 ] | T=76.89°F pH=6.47 TDS=174.0ppm | Day 15: Nitrification is advancing (nitrate spike 80→160 ppm observed), but nitr
+[2026-04-05T15:15] Day 15 | risk=yellow | [ph outside target range: 6.46 ] | T=76.89°F pH=6.46 TDS=173.0ppm | pH breach is minor but the timing worries me—we're at day 15 with nitrite still 
+[2026-04-05T15:15] Day 15 | risk=yellow | [ph outside target range: 6.46 ] | T=76.89°F pH=6.46 TDS=173.0ppm | pH breach is minor but the timing worries me—we're at day 15 with nitrite still 
+[2026-04-05T15:30] Day 15 | risk=yellow | [manual event since last check ] | T=77.0°F pH=6.47 TDS=173.0ppm | Nitrite plateau (5→2ppm, still 2ppm) plus pH drift toward 6.4 floor and rising t
+[2026-04-05T15:30] Day 15 | risk=yellow | [manual event since last check ] | T=77.0°F pH=6.47 TDS=173.0ppm | Nitrite plateau (5→2ppm, still 2ppm) plus pH drift toward 6.4 floor and rising t
+[2026-04-05T15:45] Day 15 | risk=yellow | [manual event since last check ] | T=76.89°F pH=6.47 TDS=175.0ppm | Day 15 shows a stalled nitrite decline (5→2ppm in 48hr is good progress, but amm
+[2026-04-05T15:45] Day 15 | risk=yellow | [manual event since last check ] | T=76.89°F pH=6.47 TDS=175.0ppm | Day 15 shows a stalled nitrite decline (5→2ppm in 48hr is good progress, but amm
