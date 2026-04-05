@@ -159,3 +159,11 @@
 [2026-04-04T19:30] Day 14 | risk=yellow | [ph outside target range: 6.45 ] | T=75.99°F pH=6.45 TDS=170.0ppm | Day 14: Ammonia dropping (0.5→0.25ppm), nitrification active, but Nitrobacter la
 [2026-04-04T19:45] Day 14 | risk=yellow | [ph outside target range: 6.45 ] | T=75.54°F pH=6.45 TDS=171.0ppm | pH is one tick below threshold at a critical cycle stage when bacterial metaboli
 [2026-04-04T19:45] Day 14 | risk=yellow | [ph outside target range: 6.45 ] | T=75.54°F pH=6.45 TDS=171.0ppm | pH is one tick below threshold at a critical cycle stage when bacterial metaboli
+[2026-04-04T20:00] Day 14 | risk=yellow | [ph outside target range: 6.43 ] | T=75.31°F pH=6.43 TDS=169.0ppm | pH has drifted to 6.43—below the 6.5 floor—driven by nitrification acidity. Ammo
+[2026-04-04T20:00] Day 14 | risk=yellow | [ph outside target range: 6.43 ] | T=75.31°F pH=6.43 TDS=169.0ppm | pH has drifted to 6.43—below the 6.5 floor—driven by nitrification acidity. Ammo
+[2026-04-04T20:15] Day 14 | risk=yellow | [ph outside target range: 6.42 ] | T=74.97°F pH=6.42 TDS=170.0ppm | pH has dipped to 6.42—the first time we've breached the 6.5 floor. This is day 1
+[2026-04-04T20:15] Day 14 | risk=yellow | [ph outside target range: 6.42 ] | T=74.97°F pH=6.42 TDS=170.0ppm | pH has dipped to 6.42—the first time we've breached the 6.5 floor. This is day 1
+[2026-04-04T20:30] Day 14 | risk=yellow | [ph outside target range: 6.42 ] | T=74.86°F pH=6.42 TDS=170.0ppm | Day 14: ammonia halving (0.5→0.25ppm), but nitrite climbing (5ppm stable over 18
+[2026-04-04T20:30] Day 14 | risk=yellow | [ph outside target range: 6.42 ] | T=74.86°F pH=6.42 TDS=170.0ppm | Day 14: ammonia halving (0.5→0.25ppm), but nitrite climbing (5ppm stable over 18
+[2026-04-04T20:45] Day 14 | risk=yellow | [ph outside target range: 6.42 ] | T=74.75°F pH=6.42 TDS=169.0ppm | pH has dipped to 6.42—outside the safe floor. Simultaneous ammonia decline (0.5→
+[2026-04-04T20:45] Day 14 | risk=yellow | [ph outside target range: 6.42 ] | T=74.75°F pH=6.42 TDS=169.0ppm | pH has dipped to 6.42—outside the safe floor. Simultaneous ammonia decline (0.5→
