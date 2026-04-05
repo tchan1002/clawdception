@@ -272,3 +272,11 @@
 [2026-04-05T09:30] Day 15 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.63 TDS=174.0ppm | Temperature at upper boundary with upward momentum is the primary concern on day
 [2026-04-05T09:45] Day 15 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.62 TDS=172.0ppm | Temperature at upper edge of tolerance with upward momentum; pH declining into a
 [2026-04-05T09:45] Day 15 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.62 TDS=172.0ppm | Temperature at upper edge of tolerance with upward momentum; pH declining into a
+[2026-04-05T10:00] Day 15 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.64 TDS=173.0ppm | Temperature breach at range ceiling combined with acidic drift creates dual stre
+[2026-04-05T10:00] Day 15 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.64 TDS=173.0ppm | Temperature breach at range ceiling combined with acidic drift creates dual stre
+[2026-04-05T10:15] Day 15 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.65 TDS=172.0ppm | Temperature breach at cycle day 15 is unfortunate timing: nitrifiers are metabol
+[2026-04-05T10:15] Day 15 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.65 TDS=172.0ppm | Temperature breach at cycle day 15 is unfortunate timing: nitrifiers are metabol
+[2026-04-05T10:30] Day 15 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.64 TDS=173.0ppm | Temperature breach alert is real—we're at ceiling and rising. The 24-hour climb 
+[2026-04-05T10:30] Day 15 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.64 TDS=173.0ppm | Temperature breach alert is real—we're at ceiling and rising. The 24-hour climb 
+[2026-04-05T10:45] Day 15 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.64 TDS=173.0ppm | Temperature is edging high and pH is creeping low—both are single-variable yello
+[2026-04-05T10:45] Day 15 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.64 TDS=173.0ppm | Temperature is edging high and pH is creeping low—both are single-variable yello
