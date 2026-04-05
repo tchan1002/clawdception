@@ -29,7 +29,7 @@ from skills.call_toby.run import call_toby, send_document
 
 # Tool definition for structured journal entry
 TOOL = {
-    "name": "write_journal_entry",
+    "name": "journal_entry",
     "description": "Write a journal entry for the Media Luna tank covering the past 2 hours",
     "input_schema": {
         "type": "object",

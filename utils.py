@@ -112,23 +112,15 @@ def hours_since_last_water_test():
 def read_journal(target_date=None, max_chars=None):
     """
     Reads all journal entries for a given date (defaults to today).
-    Concatenates multiple per-entry files (YYYY-MM-DD-HHMM.md) in chronological order.
-    Falls back to single daily file (YYYY-MM-DD.md) for backward compatibility.
-    Returns the most recent max_chars of the result.
+    Concatenates individual timestamped files (YYYY-MM-DD-HHMM.md) in chronological order.
     """
     if target_date is None:
         target_date = date.today()
     if max_chars is None:
         max_chars = JOURNAL_MAX_CHARS
 
-    # New format: individual timestamped files
     entry_files = sorted(PATHS["journal"].glob(f"{target_date}-*.md"))
-    if entry_files:
-        text = "\n".join(f.read_text() for f in entry_files)
-    else:
-        # Fallback: old single daily file
-        journal_path = PATHS["journal"] / f"{target_date}.md"
-        text = journal_path.read_text() if journal_path.exists() else ""
+    text = "\n".join(f.read_text() for f in entry_files)
 
     if len(text) > max_chars:
         return text[-max_chars:]
@@ -148,17 +140,6 @@ def write_journal_entry(entry_text, ts=None):
     header = f"## {ts.strftime('%H:%M')}\n\n"
     path.write_text(header + entry_text.strip() + "\n")
     return path
-
-
-def append_journal(entry_text, target_date=None):
-    """Deprecated — use write_journal_entry. Kept for backward compatibility."""
-    if target_date is None:
-        target_date = date.today()
-    journal_path = PATHS["journal"] / f"{target_date}.md"
-    PATHS["journal"].mkdir(parents=True, exist_ok=True)
-    ts = datetime.now().strftime("%H:%M")
-    with open(journal_path, "a") as f:
-        f.write(f"\n## {ts}\n\n{entry_text.strip()}\n")
 
 # ---------------------------------------------------------------------------
 # Daily logs
