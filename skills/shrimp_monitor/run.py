@@ -319,16 +319,6 @@ def run(force=False):
         decision["_latest"] = {k: latest.get(k) for k in ("temp_f", "ph", "tds_ppm", "timestamp")}
         log_decision(decision)
 
-        # --- Telegram push on red risk only ---
-        risk = decision.get("risk_level", "green")
-        if risk == "red":
-            actions = decision.get("recommended_actions", [])
-            reasoning = decision.get("reasoning", "")
-            msg = f"Day {cycle_day} | RED\n{reasoning}"
-            if actions:
-                msg += "\n" + "\n".join(f"• {a}" for a in actions[:3])
-            call_toby(msg, urgency="critical")
-
         # --- One-line summary ---
         risk = decision.get("risk_level", "?")
         reasoning_snippet = decision.get("reasoning", "")[:80]
