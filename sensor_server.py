@@ -541,172 +541,227 @@ def agent_status():
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Media Luna · Agent Status</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap');
+        :root {{
+            --bg: #080e10;
+            --surface: #0d1a1e;
+            --border: #1a3a40;
+            --accent: #00c9a7;
+            --accent2: #0099cc;
+            --warn: #e8a838;
+            --danger: #e84040;
+            --text: #c8dde0;
+            --muted: #4a6a70;
+            --grid: #0f2428;
+        }}
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         body {{
-            background: #0d1117;
-            color: white;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            font-size: 14px;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 12px;
             line-height: 1.5;
+            min-height: 100vh;
             -webkit-tap-highlight-color: transparent;
+        }}
+        body::before {{
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(var(--grid) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.6;
+            pointer-events: none;
+            z-index: 0;
         }}
         .nav {{
             background: #161b22;
             padding: 12px 20px;
             display: flex;
             gap: 24px;
-            border-bottom: 1px solid #30363d;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+            z-index: 10;
         }}
         .nav a {{
-            color: #8b949e;
+            color: var(--muted);
             text-decoration: none;
-            font-size: 14px;
-            transition: color 0.2s;
-        }}
-        .nav a:hover {{ color: white; }}
-        .nav a.active {{ color: white; font-weight: 600; }}
-        .container {{ padding: 20px; }}
-        h1 {{ font-size: 24px; margin-bottom: 24px; }}
-        .section {{ margin-bottom: 32px; }}
-        .section-title {{
-            font-size: 12px;
-            font-weight: 600;
-            color: #8b949e;
+            font-size: 11px;
+            letter-spacing: 0.1em;
             text-transform: uppercase;
+            transition: color 0.2s;
+            font-family: 'IBM Plex Mono', monospace;
+        }}
+        .nav a:hover {{ color: var(--text); }}
+        .nav a.active {{ color: var(--accent); font-weight: 500; }}
+        .container {{
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 24px 20px;
+        }}
+        h1 {{
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--accent);
             letter-spacing: 0.05em;
-            margin-bottom: 12px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }}
+        .section {{ margin-bottom: 28px; }}
+        .section-title {{
+            font-size: 9px;
+            font-weight: 400;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 10px;
         }}
         .risk-badge {{
             display: inline-block;
-            padding: 6px 12px;
-            border-radius: 6px;
-            font-size: 14px;
-            font-weight: 600;
+            padding: 4px 10px;
+            font-size: 10px;
+            font-weight: 500;
             text-transform: uppercase;
-            background: {risk_color}20;
+            letter-spacing: 0.15em;
+            background: {risk_color}18;
             color: {risk_color};
-            border: 1px solid {risk_color}40;
+            border: 1px solid {risk_color}50;
         }}
         .param-grid {{
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 12px;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 10px;
             margin-bottom: 16px;
         }}
         .param-card {{
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 6px;
+            background: var(--surface);
+            border: 1px solid var(--border);
             padding: 12px;
         }}
         .param-name {{
-            font-size: 11px;
-            color: #8b949e;
+            font-size: 9px;
+            color: var(--muted);
             text-transform: uppercase;
-            margin-bottom: 4px;
+            letter-spacing: 0.15em;
+            margin-bottom: 6px;
         }}
         .param-value {{
-            font-size: 20px;
-            font-weight: 600;
+            font-size: 18px;
+            font-weight: 500;
             margin-bottom: 4px;
         }}
         .param-note {{
-            font-size: 12px;
-            color: #8b949e;
-            line-height: 1.4;
+            font-size: 10px;
+            color: var(--muted);
+            line-height: 1.5;
         }}
         .reasoning {{
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 6px;
-            padding: 16px;
-            margin-bottom: 16px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 14px;
+            font-size: 11px;
+            line-height: 1.7;
+            color: var(--text);
         }}
         .actions {{
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 6px;
-            padding: 16px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 14px;
         }}
         .actions ul {{
             list-style: none;
             padding-left: 0;
         }}
         .actions li {{
-            padding: 8px 0;
-            border-bottom: 1px solid #30363d40;
+            padding: 7px 0;
+            border-bottom: 1px solid rgba(26,58,64,0.4);
+            font-size: 11px;
         }}
         .actions li:last-child {{ border-bottom: none; }}
         .actions li:before {{
             content: "→";
             margin-right: 8px;
-            color: #2ea043;
+            color: var(--accent);
         }}
         .journal {{
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 6px;
-            padding: 16px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 14px;
             max-height: 400px;
             overflow-y: auto;
             white-space: pre-wrap;
-            font-size: 13px;
-            line-height: 1.6;
-            min-height: 100px;
+            font-size: 11px;
+            line-height: 1.7;
+            color: var(--text);
+            min-height: 80px;
         }}
         .journal.loading {{
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #8b949e;
+            color: var(--muted);
             font-style: italic;
         }}
         .journal-nav {{
             display: flex;
-            gap: 12px;
-            margin-top: 12px;
+            gap: 8px;
+            margin-top: 10px;
+            align-items: center;
         }}
         .journal-nav button {{
-            flex: 1;
-            background: #2ea043;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 14px;
-            font-weight: 600;
-            padding: 12px;
+            background: none;
+            color: var(--muted);
+            border: 1px solid var(--border);
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 9px;
+            letter-spacing: 0.1em;
+            padding: 4px 10px;
             cursor: pointer;
-            transition: background 0.2s;
-            font-family: inherit;
+            transition: color 0.2s, border-color 0.2s;
         }}
-        .journal-nav button:active {{ background: #26843b; }}
+        .journal-nav button:hover {{ color: var(--accent); border-color: var(--accent); }}
         .journal-nav button:disabled {{
-            background: #30363d;
-            color: #6e7681;
+            opacity: 0.3;
             cursor: not-allowed;
+            color: var(--muted);
+            border-color: var(--border);
+        }}
+        .journal-nav #journal-date {{
+            font-size: 9px;
+            color: var(--accent);
+            letter-spacing: 0.1em;
+            flex: 1;
+            text-align: center;
         }}
         .monitor-log {{
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 6px;
-            padding: 16px;
-            font-family: monospace;
-            font-size: 11px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 14px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 10px;
             line-height: 1.8;
         }}
         .monitor-log div {{
-            padding: 4px 0;
-            color: #8b949e;
+            padding: 3px 0;
+            color: var(--muted);
+            border-bottom: 1px solid rgba(26,58,64,0.3);
         }}
+        .monitor-log div:last-child {{ border-bottom: none; }}
         .not-available {{
-            color: #6e7681;
+            color: var(--muted);
             font-style: italic;
             padding: 20px;
             text-align: center;
+            font-size: 11px;
         }}
-        .status-green {{ color: #2ea043; }}
-        .status-yellow {{ color: #d29922; }}
-        .status-red {{ color: #da3633; }}
+        .status-green {{ color: var(--accent); }}
+        .status-yellow {{ color: var(--warn); }}
+        .status-red {{ color: var(--danger); }}
     </style>
 </head>
 <body>
@@ -761,11 +816,12 @@ def agent_status():
         """ if decision else '<div class="section"><div class="not-available">No agent decisions available yet</div></div>'])}
 
         <div class="section">
-            <div class="section-title">Journal Entry <span id="journal-date">{journal_date if journal_date else ""}</span></div>
+            <div class="section-title">Journal Entry</div>
             <div id="journal-content" class="journal">{'<pre style="margin: 0; font-family: inherit; white-space: pre-wrap;">' + journal_text + '</pre>' if journal_text else '<div class="not-available">No journal entries yet</div>'}</div>
             {f'''<div class="journal-nav">
-                <button id="prev-btn" onclick="navigateJournal(-1)">← Previous</button>
-                <button id="next-btn" onclick="navigateJournal(1)">Next →</button>
+                <button id="prev-btn" onclick="navigateJournal(-1)">◀ prev</button>
+                <span id="journal-date">{journal_date if journal_date else ""}</span>
+                <button id="next-btn" onclick="navigateJournal(1)">next ▶</button>
             </div>''' if journal_dates else ''}
         </div>
 

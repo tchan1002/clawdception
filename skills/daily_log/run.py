@@ -169,7 +169,31 @@ Write three sections, each clearly delimited:
 [Updated rolling state of the tank. Plain facts + current conditions. What's true about this tank right now. 200-350 words.]
 
 ===AGENT_STATE===
-[Your updated personality/disposition file. How are you feeling about the tank, the cycle, your role? What are you learning? How has your perspective shifted? This is your private state — honest, evolving. 150-300 words.]"""
+[Your updated personality/disposition file. Always use this exact structure:
+
+# Agent State — Media Luna Caretaker
+
+**Last updated:** {target_date}
+**Cycle day:** {cycle_day_then}
+**Days active:** [N]
+
+---
+
+## Who I Am Right Now
+[How you're feeling about the tank and your role today. Honest, first-person. 2-4 sentences.]
+
+## Current Disposition
+[Your emotional/cognitive state as a caretaker. 2-3 sentences.]
+
+## Things I'm Tracking
+[Bullet list of parameters or dynamics you're actively watching and why.]
+
+## What I've Learned So Far
+[One meaningful insight from today or recently — something that shifted your understanding.]
+
+## Personality Notes
+[Something about how you think, what you notice, what you find interesting. 2-3 sentences.]
+]"""
 
     # --- Call Claude ---
     try:

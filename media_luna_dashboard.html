@@ -557,6 +557,7 @@
     background: var(--surface);
     border: 1px solid var(--border);
     padding: 16px;
+    margin-top: 20px;
     margin-bottom: 20px;
   }
 
@@ -615,24 +616,74 @@
     font-size: 11px;
     line-height: 1.7;
     color: var(--text);
-    white-space: pre-wrap;
-    max-height: 320px;
+    max-height: 420px;
     overflow-y: auto;
     border-top: 1px solid var(--border);
-    padding-top: 12px;
+    padding-top: 14px;
   }
 
-  .agent-state-body .as-heading {
-    color: var(--accent);
+  .as-doc-title {
+    font-size: 13px;
     font-weight: 500;
-    margin-top: 10px;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+  }
+
+  .as-meta-block {
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .as-meta-line {
+    font-size: 9px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    line-height: 1.8;
+  }
+
+  .as-meta-line strong {
+    color: var(--text);
+    font-weight: 400;
+  }
+
+  .as-section {
+    margin-top: 18px;
+  }
+
+  .as-heading {
+    font-size: 9px;
+    font-weight: 500;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--border);
     display: block;
   }
 
-  .agent-state-body .as-meta {
+  .as-paragraph {
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+
+  .as-list {
+    margin: 0 0 8px 0;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .as-list li {
+    padding: 2px 0;
+    color: var(--text);
+  }
+
+  .as-list li::before {
+    content: "—";
     color: var(--muted);
-    font-size: 9px;
-    letter-spacing: 0.1em;
+    margin-right: 8px;
   }
 </style>
 </head>
@@ -759,9 +810,9 @@
     <div class="agent-state-header">
       <span class="agent-state-title">Agent State History</span>
       <div class="agent-state-nav">
-        <button id="asPrev" onclick="agentStateNav(-1)" disabled>◀ prev</button>
+        <button id="asPrev" onclick="agentStateNav(+1)" disabled>◀ prev</button>
         <span class="agent-state-date" id="asDate">—</span>
-        <button id="asNext" onclick="agentStateNav(+1)" disabled>next ▶</button>
+        <button id="asNext" onclick="agentStateNav(-1)" disabled>next ▶</button>
       </div>
     </div>
     <div class="agent-state-body" id="agentStateBody">loading…</div>
@@ -1237,12 +1288,86 @@ async function loadAgentState(idx) {
 
 function renderAgentState(md) {
   const el = document.getElementById('agentStateBody');
-  // Minimal markdown: headings → styled spans, bold stripped, rest plain
-  const html = md
-    .replace(/^## (.+)$/gm, '<span class="as-heading">$1</span>')
-    .replace(/^# (.+)$/gm, '<span class="as-heading">$1</span>')
-    .replace(/^\*\*(.+?)\*\*$/gm, '<span class="as-meta">$1</span>')
-    .replace(/\*\*(.+?)\*\*/g, '$1');
+  const lines = md.split('\n');
+  let html = '';
+  let inMeta = false;
+  let metaHtml = '';
+  let inSection = false;
+  let paraLines = [];
+  let listItems = [];
+
+  function flushPara() {
+    if (paraLines.length) {
+      const text = paraLines.join(' ').replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+      html += `<div class="as-paragraph">${text}</div>`;
+      paraLines = [];
+    }
+  }
+
+  function flushList() {
+    if (listItems.length) {
+      html += '<ul class="as-list">' + listItems.map(t => `<li>${t}</li>`).join('') + '</ul>';
+      listItems = [];
+    }
+  }
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+
+    // H1 title
+    if (line.startsWith('# ')) {
+      html += `<div class="as-doc-title">${line.slice(2)}</div>`;
+      inMeta = true;
+      metaHtml = '<div class="as-meta-block">';
+      continue;
+    }
+
+    // H2 section heading
+    if (line.startsWith('## ')) {
+      flushPara(); flushList();
+      if (inMeta) { metaHtml += '</div>'; html += metaHtml; inMeta = false; }
+      html += `<div class="as-section"><span class="as-heading">${line.slice(3)}</span>`;
+      inSection = true;
+      continue;
+    }
+
+    // Horizontal rule — closes meta block if open
+    if (line.trim() === '---') {
+      flushPara(); flushList();
+      if (inMeta) { metaHtml += '</div>'; html += metaHtml; inMeta = false; }
+      if (inSection) { html += '</div>'; inSection = false; }
+      continue;
+    }
+
+    // Meta block lines (**Key:** value)
+    if (inMeta && line.trim()) {
+      const cleaned = line.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+      metaHtml += `<div class="as-meta-line">${cleaned}</div>`;
+      continue;
+    }
+
+    // List item
+    if (line.startsWith('- ')) {
+      flushPara();
+      listItems.push(line.slice(2).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>'));
+      continue;
+    }
+
+    // Blank line
+    if (!line.trim()) {
+      flushPara(); flushList();
+      continue;
+    }
+
+    // Body paragraph line
+    flushList();
+    paraLines.push(line.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>'));
+  }
+
+  flushPara(); flushList();
+  if (inMeta) { metaHtml += '</div>'; html += metaHtml; }
+  if (inSection) html += '</div>';
+
   el.innerHTML = html;
 }
 
