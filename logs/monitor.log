@@ -200,3 +200,11 @@
 [2026-04-05T00:30] Day 15 | skipped (stable) | T=75.09°F pH=6.52 TDS=169.0ppm
 [2026-04-05T00:45] Day 15 | risk=yellow | [manual event since last check ] | T=75.31°F pH=6.51 TDS=169.0ppm | Ammonia holding steady at 0.25ppm with strong nitrite conversion (80→5ppm in 24h
 [2026-04-05T00:45] Day 15 | risk=yellow | [manual event since last check ] | T=75.31°F pH=6.51 TDS=169.0ppm | Ammonia holding steady at 0.25ppm with strong nitrite conversion (80→5ppm in 24h
+[2026-04-05T01:00] Day 15 | risk=yellow | [manual event since last check ] | T=75.43°F pH=6.51 TDS=171.0ppm | Ammonia holding steady at 0.25ppm with robust consumption; pH now at edge of acc
+[2026-04-05T01:00] Day 15 | risk=yellow | [manual event since last check ] | T=75.43°F pH=6.51 TDS=171.0ppm | Ammonia holding steady at 0.25ppm with robust consumption; pH now at edge of acc
+[2026-04-05T01:15] Day 15 | risk=yellow | [manual event since last check ] | T=75.65°F pH=6.55 TDS=170.0ppm | Ammonia and nitrite remain elevated (0.25ppm and 2ppm respectively), but the amm
+[2026-04-05T01:15] Day 15 | risk=yellow | [manual event since last check ] | T=75.65°F pH=6.55 TDS=170.0ppm | Ammonia and nitrite remain elevated (0.25ppm and 2ppm respectively), but the amm
+[2026-04-05T01:30] Day 15 | risk=yellow | [manual event since last check ] | T=75.99°F pH=6.52 TDS=171.0ppm | Nitrite plateau at 2ppm (down from 5ppm yesterday) is encouraging—Nitrobacter ma
+[2026-04-05T01:30] Day 15 | risk=yellow | [manual event since last check ] | T=75.99°F pH=6.52 TDS=171.0ppm | Nitrite plateau at 2ppm (down from 5ppm yesterday) is encouraging—Nitrobacter ma
+[2026-04-05T01:45] Day 15 | risk=yellow | [manual event since last check ] | T=76.21°F pH=6.53 TDS=170.0ppm | Ammonia and nitrite remain elevated but stable (0.25ppm and 2ppm respectively), 
+[2026-04-05T01:45] Day 15 | risk=yellow | [manual event since last check ] | T=76.21°F pH=6.53 TDS=170.0ppm | Ammonia and nitrite remain elevated but stable (0.25ppm and 2ppm respectively), 
