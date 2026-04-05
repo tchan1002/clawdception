@@ -175,3 +175,11 @@
 [2026-04-04T21:30] Day 14 | risk=yellow | [ph outside target range: 6.4 (] | T=74.53°F pH=6.4 TDS=171.0ppm | Day 14 shows ammonia declining (0.5→0.25ppm) and nitrate stabilized at 160ppm, i
 [2026-04-04T21:45] Day 14 | risk=yellow | [ph outside target range: 6.38 ] | T=74.53°F pH=6.38 TDS=170.0ppm | Day 14 shows ammonia declining (0.5→0.25ppm) and Nitrobacter active (nitrate sta
 [2026-04-04T21:45] Day 14 | risk=yellow | [ph outside target range: 6.38 ] | T=74.53°F pH=6.38 TDS=170.0ppm | Day 14 shows ammonia declining (0.5→0.25ppm) and Nitrobacter active (nitrate sta
+[2026-04-04T22:00] Day 14 | risk=yellow | [ph outside target range: 6.41 ] | T=74.53°F pH=6.41 TDS=169.0ppm | pH breached floor threshold; acidification is real and measurable over 24hrs. Am
+[2026-04-04T22:00] Day 14 | risk=yellow | [ph outside target range: 6.41 ] | T=74.53°F pH=6.41 TDS=169.0ppm | pH breached floor threshold; acidification is real and measurable over 24hrs. Am
+[2026-04-04T22:15] Day 14 | risk=yellow | [ph outside target range: 6.39 ] | T=74.64°F pH=6.39 TDS=171.0ppm | Day 14: ammonia halving (0.5→0.25), nitrite plateau at 5ppm, nitrate locked at 1
+[2026-04-04T22:15] Day 14 | risk=yellow | [ph outside target range: 6.39 ] | T=74.64°F pH=6.39 TDS=171.0ppm | Day 14: ammonia halving (0.5→0.25), nitrite plateau at 5ppm, nitrate locked at 1
+[2026-04-04T22:30] Day 14 | risk=yellow | [ph outside target range: 6.4 (] | T=74.53°F pH=6.4 TDS=169.0ppm | Ammonia halving (0.5→0.25ppm) shows Nitrosomonas momentum, but nitrite plateau a
+[2026-04-04T22:30] Day 14 | risk=yellow | [ph outside target range: 6.4 (] | T=74.53°F pH=6.4 TDS=169.0ppm | Ammonia halving (0.5→0.25ppm) shows Nitrosomonas momentum, but nitrite plateau a
+[2026-04-04T22:45] Day 14 | risk=yellow | [ph outside target range: 6.42 ] | T=74.53°F pH=6.42 TDS=168.0ppm | Day 14 cycle shows healthy ammonia decline (0.5→0.25) and rising nitrate (160 pp
+[2026-04-04T22:45] Day 14 | risk=yellow | [ph outside target range: 6.42 ] | T=74.53°F pH=6.42 TDS=168.0ppm | Day 14 cycle shows healthy ammonia decline (0.5→0.25) and rising nitrate (160 pp
