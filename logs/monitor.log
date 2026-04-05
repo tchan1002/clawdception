@@ -191,3 +191,12 @@
 [2026-04-04T23:30] Day 14 | risk=yellow | [ph outside target range: 6.46 ] | T=74.97°F pH=6.46 TDS=171.0ppm | pH at 6.46 breaches the 6.5 floor—ammonia and nitrite metabolism slow in acidic 
 [2026-04-04T23:45] Day 14 | risk=yellow | [ph outside target range: 6.49 ] | T=74.97°F pH=6.49 TDS=171.0ppm | pH dropped to 6.49 despite stable ammonia (0.25 ppm) and ongoing nitrite stress 
 [2026-04-04T23:45] Day 14 | risk=yellow | [ph outside target range: 6.49 ] | T=74.97°F pH=6.49 TDS=171.0ppm | pH dropped to 6.49 despite stable ammonia (0.25 ppm) and ongoing nitrite stress 
+[2026-04-05T00:00] Day 15 | risk=yellow | [manual event logged (water_tes] | T=75.09°F pH=6.51 TDS=170.0ppm | Day 15 shows healthy chemistry across all three parameters, but the nitrogen cyc
+[call-toby] Telegram sent (warning): No water test logged yet. Day 15 of cycle — ammonia and nitrite are unknown.
+[2026-04-05T00:00] Day 15 | risk=yellow | [manual event logged (water_tes] | T=75.09°F pH=6.51 TDS=170.0ppm | Day 15 shows healthy chemistry across all three parameters, but the nitrogen cyc
+[2026-04-05T00:15] Day 15 | skipped (stable) | T=75.09°F pH=6.51 TDS=171.0ppm
+[2026-04-05T00:15] Day 15 | skipped (stable) | T=75.09°F pH=6.51 TDS=171.0ppm
+[2026-04-05T00:30] Day 15 | skipped (stable) | T=75.09°F pH=6.52 TDS=169.0ppm
+[2026-04-05T00:30] Day 15 | skipped (stable) | T=75.09°F pH=6.52 TDS=169.0ppm
+[2026-04-05T00:45] Day 15 | risk=yellow | [manual event since last check ] | T=75.31°F pH=6.51 TDS=169.0ppm | Ammonia holding steady at 0.25ppm with strong nitrite conversion (80→5ppm in 24h
+[2026-04-05T00:45] Day 15 | risk=yellow | [manual event since last check ] | T=75.31°F pH=6.51 TDS=169.0ppm | Ammonia holding steady at 0.25ppm with strong nitrite conversion (80→5ppm in 24h
