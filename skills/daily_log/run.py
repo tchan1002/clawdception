@@ -32,7 +32,7 @@ from utils import (
     write_state_of_tank,
     read_decisions_since,
 )
-from skills.call_toby.run import call_toby
+from skills.call_toby.run import call_toby, send_document
 
 TEMPLATE_PATH = Path(__file__).parent / "template.md"
 
@@ -231,12 +231,7 @@ Write three sections, each clearly delimited:
         f"Morning log ready 🌅 — Day {cycle_day_then} of the cycle. {teaser_line}",
         urgency="info"
     )
-    MAX_TG = 4000
-    log_truncated = daily_log_content[:MAX_TG] + ("…" if len(daily_log_content) > MAX_TG else "")
-    call_toby(
-        f"{log_truncated}",
-        urgency="info"
-    )
+    send_document(PATHS["daily_logs"] / f"{target_date}.md")
 
 
 if __name__ == "__main__":

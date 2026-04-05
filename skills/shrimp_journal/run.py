@@ -25,7 +25,7 @@ from utils import (
     read_decisions_since,
     read_journal,
 )
-from skills.call_toby.run import call_toby
+from skills.call_toby.run import call_toby, send_document
 
 # Tool definition for structured journal entry
 TOOL = {
@@ -136,13 +136,9 @@ Write a journal entry of 200-400 words. This is your internal record — write h
     append_journal(entry_text)
     print(f"[shrimp-journal] Entry written at {ts.strftime('%H:%M')} (Day {cycle_day})")
 
-    # --- Notify Toby ---
-    MAX_TG = 4000
-    entry_truncated = entry_text[:MAX_TG] + ("…" if len(entry_text) > MAX_TG else "")
-    call_toby(
-        f"📓 Journal — Day {cycle_day} {ts.strftime('%H:%M')}\n\n{entry_truncated}",
-        urgency="info"
-    )
+    # --- Notify Toby via document ---
+    journal_path = Path(__file__).parent.parent.parent / "journal" / f"{ts.date()}.md"
+    send_document(journal_path)
 
 if __name__ == "__main__":
     run()

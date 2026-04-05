@@ -6,7 +6,7 @@ Usage:
     python3 run.py --message "pH is dropping" --urgency warning
 
 Import:
-    from skills.call_toby.run import call_toby
+    from skills.call_toby.run import call_toby, send_document
 """
 
 import argparse
@@ -63,6 +63,37 @@ def call_toby(message, urgency="info"):
     _log_call(message, urgency, sent_via="log_fallback")
     print(f"[call-toby] {emoji} {message}")
     return False
+
+
+def send_document(file_path):
+    """
+    Send a file to Toby via Telegram sendDocument.
+    file_path: Path or str to the file to send.
+    Returns True if sent successfully, False otherwise.
+    """
+    import requests
+    token = os.environ.get("TELEGRAM_BOT_TOKEN")
+    chat_id = os.environ.get("TELEGRAM_CHAT_ID")
+
+    if not token or not chat_id:
+        print("[call-toby] send_document: no Telegram credentials, skipping")
+        return False
+
+    file_path = Path(file_path)
+    try:
+        with open(file_path, "rb") as f:
+            resp = requests.post(
+                f"https://api.telegram.org/bot{token}/sendDocument",
+                data={"chat_id": chat_id},
+                files={"document": (file_path.name, f, "text/markdown")},
+                timeout=15,
+            )
+            resp.raise_for_status()
+            print(f"[call-toby] Document sent: {file_path.name}")
+            return True
+    except Exception as e:
+        print(f"[call-toby] send_document failed: {e}")
+        return False
 
 
 def _log_call(message, urgency, sent_via):
