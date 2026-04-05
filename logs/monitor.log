@@ -264,3 +264,11 @@
 [2026-04-05T08:30] Day 15 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.63 TDS=172.0ppm | Temperature is technically in range but climbing—the upward trend is the red fla
 [2026-04-05T08:45] Day 15 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.64 TDS=172.0ppm | Tank is at day 15 of a proceeding nitrogen cycle with the critical Nitrobacter b
 [2026-04-05T08:45] Day 15 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.64 TDS=172.0ppm | Tank is at day 15 of a proceeding nitrogen cycle with the critical Nitrobacter b
+[2026-04-05T09:00] Day 15 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.64 TDS=172.0ppm | Day 15: ammonia and nitrite both holding steady (0.25, 2ppm) while nitrate dropp
+[2026-04-05T09:00] Day 15 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.64 TDS=172.0ppm | Day 15: ammonia and nitrite both holding steady (0.25, 2ppm) while nitrate dropp
+[2026-04-05T09:15] Day 15 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.64 TDS=172.0ppm | Temperature creeping into heat stress territory while pH drifts downward—a compo
+[2026-04-05T09:15] Day 15 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.64 TDS=172.0ppm | Temperature creeping into heat stress territory while pH drifts downward—a compo
+[2026-04-05T09:30] Day 15 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.63 TDS=174.0ppm | Temperature at upper boundary with upward momentum is the primary concern on day
+[2026-04-05T09:30] Day 15 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.63 TDS=174.0ppm | Temperature at upper boundary with upward momentum is the primary concern on day
+[2026-04-05T09:45] Day 15 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.62 TDS=172.0ppm | Temperature at upper edge of tolerance with upward momentum; pH declining into a
+[2026-04-05T09:45] Day 15 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.62 TDS=172.0ppm | Temperature at upper edge of tolerance with upward momentum; pH declining into a
