@@ -2,7 +2,7 @@
 shrimp-journal — 2-hour narrative consolidation into the daily journal.
 
 Reads recent decisions + sensor data, asks Claude for a narrative entry,
-appends to today's journal. This is the agent's working memory.
+writes to its own timestamped file, and sends to Toby via Telegram.
 
 Usage:
     python3 run.py
@@ -17,7 +17,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from config import get_cycle_day
 from utils import (
-    append_journal,
+    write_journal_entry,
     call_claude,
     compute_stats,
     fetch_events,
@@ -133,12 +133,17 @@ Write a journal entry of 200-400 words. This is your internal record — write h
         for item in result["watch_list"]:
             entry_text += f"- {item}\n"
 
-    append_journal(entry_text)
-    print(f"[shrimp-journal] Entry written at {ts.strftime('%H:%M')} (Day {cycle_day})")
+    # --- Write to individual timestamped file ---
+    path = write_journal_entry(entry_text, ts=ts)
+    print(f"[shrimp-journal] Entry written: {path.name} (Day {cycle_day})")
 
-    # --- Notify Toby via document ---
-    journal_path = Path(__file__).parent.parent.parent / "journal" / f"{ts.date()}.md"
-    send_document(journal_path)
+    # --- Notify Toby ---
+    call_toby(
+        f"Journal — Day {cycle_day} · {ts.strftime('%Y-%m-%d %H:%M')}",
+        urgency="info"
+    )
+    send_document(path)
+
 
 if __name__ == "__main__":
     run()

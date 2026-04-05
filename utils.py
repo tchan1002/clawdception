@@ -111,26 +111,47 @@ def hours_since_last_water_test():
 
 def read_journal(target_date=None, max_chars=None):
     """
-    Returns the text of a journal file for the given date (defaults to today).
-    If max_chars is specified (or JOURNAL_MAX_CHARS from config), returns the most recent
-    portion of the journal up to that length.
-    Returns empty string if no journal exists yet.
+    Reads all journal entries for a given date (defaults to today).
+    Concatenates multiple per-entry files (YYYY-MM-DD-HHMM.md) in chronological order.
+    Falls back to single daily file (YYYY-MM-DD.md) for backward compatibility.
+    Returns the most recent max_chars of the result.
     """
     if target_date is None:
         target_date = date.today()
     if max_chars is None:
         max_chars = JOURNAL_MAX_CHARS
-    journal_path = PATHS["journal"] / f"{target_date}.md"
-    if journal_path.exists():
-        text = journal_path.read_text()
-        if len(text) > max_chars:
-            return text[-max_chars:]
-        return text
-    return ""
+
+    # New format: individual timestamped files
+    entry_files = sorted(PATHS["journal"].glob(f"{target_date}-*.md"))
+    if entry_files:
+        text = "\n".join(f.read_text() for f in entry_files)
+    else:
+        # Fallback: old single daily file
+        journal_path = PATHS["journal"] / f"{target_date}.md"
+        text = journal_path.read_text() if journal_path.exists() else ""
+
+    if len(text) > max_chars:
+        return text[-max_chars:]
+    return text
+
+
+def write_journal_entry(entry_text, ts=None):
+    """
+    Writes a single journal entry to its own timestamped file.
+    Filename: journal/YYYY-MM-DD-HHMM.md
+    """
+    if ts is None:
+        ts = datetime.now()
+    PATHS["journal"].mkdir(parents=True, exist_ok=True)
+    filename = f"{ts.strftime('%Y-%m-%d-%H%M')}.md"
+    path = PATHS["journal"] / filename
+    header = f"## {ts.strftime('%H:%M')}\n\n"
+    path.write_text(header + entry_text.strip() + "\n")
+    return path
 
 
 def append_journal(entry_text, target_date=None):
-    """Appends a timestamped entry to the daily journal file."""
+    """Deprecated — use write_journal_entry. Kept for backward compatibility."""
     if target_date is None:
         target_date = date.today()
     journal_path = PATHS["journal"] / f"{target_date}.md"
@@ -138,7 +159,6 @@ def append_journal(entry_text, target_date=None):
     ts = datetime.now().strftime("%H:%M")
     with open(journal_path, "a") as f:
         f.write(f"\n## {ts}\n\n{entry_text.strip()}\n")
-
 
 # ---------------------------------------------------------------------------
 # Daily logs
