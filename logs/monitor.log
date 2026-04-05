@@ -248,3 +248,11 @@
 [2026-04-05T06:30] Day 15 | skipped (stable) | T=77.56°F pH=6.65 TDS=172.0ppm
 [2026-04-05T06:45] Day 15 | skipped (stable) | T=77.79°F pH=6.66 TDS=174.0ppm
 [2026-04-05T06:45] Day 15 | skipped (stable) | T=77.79°F pH=6.66 TDS=174.0ppm
+[2026-04-05T07:00] Day 15 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.68 TDS=171.0ppm | Temperature at upper bound signals cooling insufficiency in Hyde Park spring hea
+[2026-04-05T07:00] Day 15 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.68 TDS=171.0ppm | Temperature at upper bound signals cooling insufficiency in Hyde Park spring hea
+[2026-04-05T07:15] Day 15 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.66 TDS=172.0ppm | Temperature at edge of range with upward momentum is the acute concern—acidic pH
+[2026-04-05T07:15] Day 15 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.66 TDS=172.0ppm | Temperature at edge of range with upward momentum is the acute concern—acidic pH
+[2026-04-05T07:30] Day 15 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.64 TDS=171.0ppm | Temperature breach at cycle day 15 (am 78°F peak) is minor but worth attention: 
+[2026-04-05T07:30] Day 15 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.64 TDS=171.0ppm | Temperature breach at cycle day 15 (am 78°F peak) is minor but worth attention: 
+[2026-04-05T07:45] Day 15 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.65 TDS=172.0ppm | Tank is at cycle inflection point: ammonia holding steady at 0.25ppm while nitri
+[2026-04-05T07:45] Day 15 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.65 TDS=172.0ppm | Tank is at cycle inflection point: ammonia holding steady at 0.25ppm while nitri
