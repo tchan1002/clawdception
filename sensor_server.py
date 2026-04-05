@@ -13,7 +13,7 @@ Then ESP32 POSTs to http://<your-laptop-ip>:5000/api/sensors
 import sqlite3
 import json
 from datetime import datetime, timedelta
-from flask import Flask, request, jsonify, send_file, render_template_string
+from flask import Flask, request, jsonify, send_file
 
 app = Flask(__name__)
 DB_PATH = "media_luna.db"
@@ -462,7 +462,7 @@ def water_test():
 </body>
 </html>
     """
-    return render_template_string(html)
+    return html
 
 
 # --- Agent status UI for mobile ---
@@ -506,28 +506,23 @@ def agent_status():
     elif risk_level == "red":
         risk_color = "#da3633"
 
-    # Get all available journal dates sorted descending
+    # Get all available journal dates sorted descending (from YYYY-MM-DD-HHMM.md files)
     journal_dates = []
     if journal_dir.exists():
-        for journal_file in sorted(journal_dir.glob("*.md"), reverse=True):
-            try:
-                # Extract date from filename (YYYY-MM-DD.md)
-                date_str = journal_file.stem
-                datetime.strptime(date_str, "%Y-%m-%d")  # validate format
+        seen = set()
+        for journal_file in sorted(journal_dir.glob("????-??-??-????.md"), reverse=True):
+            date_str = journal_file.stem[:10]  # extract YYYY-MM-DD
+            if date_str not in seen:
+                seen.add(date_str)
                 journal_dates.append(date_str)
-            except (ValueError, AttributeError):
-                pass
 
-    # Read most recent journal entry
+    # Read most recent journal entry (concatenate all entries for that date)
     journal_text = ""
     journal_date = ""
     if journal_dates:
         journal_date = journal_dates[0]
-        journal_file = journal_dir / f"{journal_date}.md"
-        try:
-            journal_text = journal_file.read_text()
-        except FileNotFoundError:
-            pass
+        entries = sorted(journal_dir.glob(f"{journal_date}-????.md"))
+        journal_text = "\n\n".join(f.read_text() for f in entries)
 
     # Read monitor log tail
     monitor_lines = []
@@ -861,7 +856,7 @@ def agent_status():
 </body>
 </html>
     """
-    return render_template_string(html)
+    return html
 
 
 # --- Journal API for agent page navigation ---
@@ -877,9 +872,9 @@ def get_journal():
     # If no date provided, return most recent
     if not date_param:
         if journal_dir.exists():
-            journal_files = sorted(journal_dir.glob("*.md"), reverse=True)
-            if journal_files:
-                date_param = journal_files[0].stem
+            files = sorted(journal_dir.glob("????-??-??-????.md"), reverse=True)
+            if files:
+                date_param = files[0].stem[:10]
 
     if not date_param:
         return jsonify({"date": "", "content": "", "exists": False})
@@ -890,14 +885,11 @@ def get_journal():
     except ValueError:
         return jsonify({"error": "Invalid date format"}), 400
 
-    journal_file = journal_dir / f"{date_param}.md"
-
-    if journal_file.exists():
-        try:
-            content = journal_file.read_text()
-            return jsonify({"date": date_param, "content": content, "exists": True})
-        except Exception as e:
-            return jsonify({"error": str(e)}), 500
+    # Concatenate all timestamped entries for this date
+    entry_files = sorted(journal_dir.glob(f"{date_param}-????.md"))
+    if entry_files:
+        content = "\n\n".join(f.read_text() for f in entry_files)
+        return jsonify({"date": date_param, "content": content, "exists": True})
     else:
         return jsonify({"date": date_param, "content": "", "exists": False})
 
@@ -923,4 +915,4 @@ if __name__ == "__main__":
     print("View latest reading: http://localhost:5001/api/sensors/latest")
     print("View recent readings: http://localhost:5001/api/sensors?limit=20")
     print("================================\n")
-    app.run(host="0.0.0.0", port=5001, debug=True)
+    app.run(host="0.0.0.0", port=5001, debug=False)

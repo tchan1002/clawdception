@@ -28,7 +28,7 @@ Neocaridina shrimp colony named **Media Luna**, located in Hyde Park, Chicago.
   media_luna.db (SQLite — source of truth)
       ↓
 [Agent Stack — cron-driven]
-  shrimp-monitor (every 15min) → shrimp-journal (every 2hr) → daily-log (7am)
+  shrimp-monitor (every 15min) → shrimp-journal (every 6hr) → daily-log (7am)
   call-toby → Telegram notifications
   skill-writer (Sundays) → proposals/
       ↓
@@ -68,10 +68,10 @@ Each skill has `SKILL.md` (spec) and `run.py` (implementation).
 
 | Skill directory | Human name | Runs | Purpose |
 |----------------|------------|------|---------|
-| `skills/call_toby/` | call-toby | On-demand | Telegram notifications (info/warning/critical) |
+| `skills/call_toby/` | call-toby | On-demand | Telegram notifications (info/warning/critical) + file sends |
 | `skills/shrimp_alert/` | shrimp-alert | On-demand | Danger threshold alerter → calls call-toby |
 | `skills/shrimp_monitor/` | shrimp-monitor | Every 15min | Core loop: read sensors, Claude risk assessment, log decision |
-| `skills/shrimp_journal/` | shrimp-journal | Every 2hr :05 | Narrative consolidation → journal/YYYY-MM-DD.md |
+| `skills/shrimp_journal/` | shrimp-journal | Every 6hr :05 | Narrative consolidation → journal/YYYY-MM-DD-HHMM.md |
 | `skills/daily_log/` | daily-log | 7am daily | Morning summary + update state_of_tank.md + agent_state.md |
 | `skills/shrimp_vision/` | shrimp-vision | Every 2hr :30 (disabled) | Camera analysis stub — enable when Pi Camera connected |
 | `skills/skill_writer/` | skill-writer | Sundays 8am | Weekly self-improvement proposals → proposals/ |
@@ -83,7 +83,7 @@ Each skill has `SKILL.md` (spec) and `run.py` (implementation).
 ### How to import a skill
 
 ```python
-from skills.call_toby.run import call_toby
+from skills.call_toby.run import call_toby, send_document
 from skills.shrimp_alert.run import alert
 ```
 
@@ -103,7 +103,7 @@ python3 skills/daily_log/run.py --date 2026-03-30   # backfill a specific date
 
 ```
 ~/clawdception/
-├── journal/                  # working memory: journal/YYYY-MM-DD.md (appended by shrimp-journal)
+├── journal/                  # working memory: individual entries as YYYY-MM-DD-HHMM.md
 ├── daily-logs/               # immutable daily logs: YYYY-MM-DD.md (written by daily-log, never edited)
 ├── proposals/                # skill-writer proposals: YYYY-MM-DD-{name}/ dirs, reviewed by Toby
 ├── logs/
@@ -112,7 +112,7 @@ python3 skills/daily_log/run.py --date 2026-03-30   # backfill a specific date
 │   ├── calls.jsonl           # call-toby log (fallback when Telegram not configured)
 │   ├── journal.log           # shrimp-journal cron stdout
 │   ├── daily_log.log         # daily-log cron stdout
-│   ├── skill_writer.log      # skill-writer cron stdout
+│   ├── skill_writer.log      # skill-writer stdout
 │   ├── decisions/            # YYYY-MM-DD.jsonl decision logs from shrimp-monitor
 │   └── vision/               # YYYY-MM-DD.jsonl vision logs from shrimp-vision
 ├── state_of_tank.md          # rolling tank state — always current, rewritten daily
@@ -132,7 +132,7 @@ The agent has several layers of memory, from short to long:
 | Layer | File/Location | Scope | Written by |
 |-------|--------------|-------|------------|
 | Immediate | sensor readings in SQLite | real-time | ESP32 |
-| Working | `journal/YYYY-MM-DD.md` | today | shrimp-journal (every 2hr) |
+| Working | `journal/YYYY-MM-DD-HHMM.md` | today (one file per entry) | shrimp-journal (every 6hr) |
 | Decision log | `logs/decisions/YYYY-MM-DD.jsonl` | today | shrimp-monitor (every 15min) |
 | Daily record | `daily-logs/YYYY-MM-DD.md` | one day — **immutable** | daily-log (7am) |
 | Tank state | `state_of_tank.md` | rolling current | daily-log (overwrites daily) |
@@ -147,10 +147,11 @@ Daily logs are **never edited** after creation. They are the source of truth for
 | Variable | Required | Purpose |
 |----------|----------|---------|
 | `ANTHROPIC_API_KEY` | Yes | Claude API access for all skills |
-| `TELEGRAM_BOT_TOKEN` | Optional | call-toby Telegram notifications |
-| `TELEGRAM_CHAT_ID` | Optional | call-toby Telegram chat target |
+| `TELEGRAM_BOT_TOKEN` | Yes | call-toby Telegram notifications — configured Apr 4, 2026 |
+| `TELEGRAM_CHAT_ID` | Yes | call-toby Telegram chat target — configured Apr 4, 2026 |
 
-If Telegram is not configured, call-toby falls back to `logs/calls.jsonl` + stdout.
+All three are set in `/etc/environment` and `/etc/systemd/system/media-luna.service`.
+For interactive SSH sessions, export them manually after `source /etc/environment`.
 
 ---
 
@@ -256,30 +257,29 @@ scp ~/clawdception/sensor_server.py pi@192.168.12.76:~/clawdception/sensor_serve
 
 ```bash
 ssh pi@192.168.12.76
+# or
+ssh pi@media-luna.local
 ```
 
 ### Manage the Flask Server on Pi (systemd)
 
 ```bash
-# Find service name
-ssh pi@192.168.12.76 "systemctl list-units --type=service | grep -i sensor"
-
-ssh pi@192.168.12.76 "sudo systemctl restart <service-name>"
-ssh pi@192.168.12.76 "sudo systemctl status <service-name>"
-ssh pi@192.168.12.76 "sudo journalctl -u <service-name> -f"
+sudo systemctl restart media-luna.service
+sudo systemctl status media-luna.service
+sudo journalctl -u media-luna.service -f
 ```
 
 ### Install Cron Jobs on Pi
 
 ```bash
-# Review crontab.txt first — edit in ANTHROPIC_API_KEY
+# Review crontab.txt first
 nano ~/clawdception/crontab.txt
 
 # Install (replaces existing crontab)
 crontab ~/clawdception/crontab.txt
 
-# Or append to existing:
-(crontab -l 2>/dev/null; cat ~/clawdception/crontab.txt) | crontab -
+# Verify
+crontab -l
 ```
 
 ### SQLite Database Queries
@@ -296,6 +296,16 @@ sqlite3 ~/clawdception/media_luna.db "SELECT * FROM events ORDER BY id DESC LIMI
 cd ~/clawdception
 ./setup.sh
 python3 skills/call_toby/run.py --test
+```
+
+### Git
+
+```bash
+# Manual push (Pi auto-pushes hourly via cron)
+cd ~/clawdception && git add -A && git commit -m "message" && git pull --rebase -X theirs origin main && git push origin main
+
+# On Mac — pull latest from Pi
+git pull origin main
 ```
 
 ---
@@ -370,7 +380,7 @@ Top-level values are calibrated (for agent consumption).
 
 ## Tank Context
 
-- **Cycle started**: March 22, 2026. Seeded with live ceramic bio media from Golden Aquarium (Fritz Turbo Start unavailable). Fluval Stratum substrate buffers pH acidic.
+- **Cycle started**: March 22, 2026. Seeded with live ceramic bio media from Golden Aquarium. Fluval Stratum substrate buffers pH acidic.
 - **pH baseline**: ~6.32 (expected — substrate + organic decomposition). Should rise as cycle progresses.
 - **TDS baseline**: 150 ppm (bottom of target range). Should rise as nitrogen waste accumulates.
 - **Temp baseline**: ~77°F (room temp, heater off during testing).
@@ -381,14 +391,11 @@ Top-level values are calibrated (for agent consumption).
 ## Roadmap
 
 ### Near-term
-- [ ] Set up Telegram for call-toby (BOT_TOKEN + CHAT_ID)
-- [ ] Install crons on Pi (`crontab crontab.txt`)
-- [ ] NFC sticker tags → tap to POST to `/api/events`
-- [ ] First manual water test → POST to `/api/events` as `water_test`
 - [ ] Pi Camera Module v3 → enable shrimp-vision
+- [ ] Kasa smart plugs (heater, desk lamp) → actuator control skill
+- [ ] Twitter API credentials → enable tweet-log
 
 ### Future
-- [ ] Kasa smart plugs (heater, desk lamp, dosing pump) → actuator control skill
 - [ ] ESP32-CAM visual feed
 - [ ] skill-writer begins proposing its first improvements
 - [ ] Shrimp introduction (post-cycle)
@@ -402,6 +409,11 @@ Top-level values are calibrated (for agent consumption).
 - [x] Pi as always-on server
 - [x] pH calibration with buffer solutions (Mar 30, 2026)
 - [x] Full agent infrastructure (config, utils, 7 skills, state files, cron) — Mar 31, 2026
+- [x] NFC sticker tags → tap to POST to `/api/events` (Apr 3, 2026)
+- [x] Telegram configured — call-toby active (Apr 4, 2026)
+- [x] GitHub auto-push with pull --rebase -X theirs (Apr 5, 2026)
+- [x] Journal entries as individual timestamped files (Apr 5, 2026)
+- [x] Daily log + journal entries sent to Toby via Telegram (Apr 5, 2026)
 
 ---
 
@@ -415,3 +427,5 @@ Top-level values are calibrated (for agent consumption).
 - **Skill directories use underscores**: Python import compatibility. Human-readable names use hyphens.
 - **Daily logs are immutable**: Once written, never edited. Source of truth for each day.
 - **agent_state.md is the agent's private self**: Rewritten daily — this is how personality evolves over time.
+- **Journal entries are individual files**: Each shrimp-journal run writes YYYY-MM-DD-HHMM.md. read_journal() concatenates all entries for a given date in chronological order.
+- **Git cron uses --rebase -X theirs**: Pi wins all conflicts automatically. Mac edits should be infrequent.

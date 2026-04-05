@@ -10,6 +10,7 @@ Usage:
 """
 
 import argparse
+import re
 import sys
 from datetime import date, timedelta
 from pathlib import Path
@@ -180,7 +181,7 @@ Use the tool to submit your proposal with:
         return
 
     # --- Write proposal ---
-    skill_name = result["skill_name"].lower().replace(" ", "-")
+    skill_name = re.sub(r'[^a-z0-9-]', '', result["skill_name"].lower().replace(" ", "-"))
     proposal_dir = PATHS["proposals"] / f"{today}-{skill_name}"
     proposal_dir.mkdir(parents=True, exist_ok=True)
 
