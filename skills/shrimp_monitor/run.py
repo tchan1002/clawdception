@@ -238,25 +238,37 @@ def run(force=False):
         recent_events = fetch_events(since=since_24h)
         last_claude_time = get_last_claude_time()
 
-        # --- Always: check for overdue water test (once per 12hrs max, not every 15min) ---
-        # Only nag if it's been a while since we last sent a warning
-        last_call_hours = (
-            (datetime.now() - last_claude_time).total_seconds() / 3600
-            if last_claude_time else 999
+        # --- Always: check for overdue water test (nag at most once per 12hrs) ---
+        nag_path = PATHS["logs"] / "last_water_test_nag.txt"
+        last_nag_time = None
+        if nag_path.exists():
+            try:
+                last_nag_time = datetime.fromisoformat(nag_path.read_text().strip())
+            except Exception:
+                pass
+        hours_since_nag = (
+            (datetime.now() - last_nag_time).total_seconds() / 3600
+            if last_nag_time else 999
         )
-        if last_call_hours >= 12 or last_claude_time is None:
+        if hours_since_nag >= 12:
             hrs_since_test = hours_since_last_water_test()
+            nagged = False
             if hrs_since_test is None:
                 call_toby(
                     f"No water test logged yet. Day {cycle_day} of cycle — ammonia and nitrite are unknown.",
                     urgency="warning"
                 )
+                nagged = True
             elif hrs_since_test > WATER_TEST_WARNING_HOURS:
                 call_toby(
                     f"It's been {int(hrs_since_test)}hr since last water test. "
                     f"Day {cycle_day} — ammonia/nitrite need checking.",
                     urgency="warning"
                 )
+                nagged = True
+            if nagged:
+                PATHS["logs"].mkdir(parents=True, exist_ok=True)
+                nag_path.write_text(datetime.now().isoformat())
 
         # --- Always: check danger zone and fire alerts ---
         for param, value, threshold, direction in check_danger(latest):
