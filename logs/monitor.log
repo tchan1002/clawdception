@@ -224,3 +224,11 @@
 [2026-04-05T03:30] Day 15 | risk=yellow | [manual event since last check ] | T=77.34°F pH=6.61 TDS=172.0ppm | Ammonia holding steady at 0.25ppm while nitrite remains elevated (2ppm, down fro
 [2026-04-05T03:45] Day 15 | risk=yellow | [manual event since last check ] | T=77.34°F pH=6.63 TDS=172.0ppm | Ammonia stable at 0.25ppm with robust consumption, but nitrite plateauing at 2-5
 [2026-04-05T03:45] Day 15 | risk=yellow | [manual event since last check ] | T=77.34°F pH=6.63 TDS=172.0ppm | Ammonia stable at 0.25ppm with robust consumption, but nitrite plateauing at 2-5
+[2026-04-05T04:00] Day 15 | risk=yellow | [manual event since last check ] | T=77.22°F pH=6.61 TDS=171.0ppm | Ammonia holding at 0.25ppm and nitrite declining sharply (5→2ppm in 24h) signals
+[2026-04-05T04:00] Day 15 | risk=yellow | [manual event since last check ] | T=77.22°F pH=6.61 TDS=171.0ppm | Ammonia holding at 0.25ppm and nitrite declining sharply (5→2ppm in 24h) signals
+[2026-04-05T04:15] Day 15 | risk=yellow | [manual event since last check ] | T=77.34°F pH=6.63 TDS=171.0ppm | Ammonia holding steady at 0.25ppm while nitrite spikes to 5ppm shows Nitrosomona
+[2026-04-05T04:15] Day 15 | risk=yellow | [manual event since last check ] | T=77.34°F pH=6.63 TDS=171.0ppm | Ammonia holding steady at 0.25ppm while nitrite spikes to 5ppm shows Nitrosomona
+[2026-04-05T04:30] Day 15 | risk=yellow | [manual event since last check ] | T=77.34°F pH=6.63 TDS=172.0ppm | Nitrogen cycle progressing on day 15 with ammonia and nitrite both under control
+[2026-04-05T04:30] Day 15 | risk=yellow | [manual event since last check ] | T=77.34°F pH=6.63 TDS=172.0ppm | Nitrogen cycle progressing on day 15 with ammonia and nitrite both under control
+[2026-04-05T04:45] Day 15 | risk=yellow | [manual event since last check ] | T=77.45°F pH=6.64 TDS=173.0ppm | Ammonia holding steady at 0.25ppm while nitrite plateaus at 2-5ppm signals Nitro
+[2026-04-05T04:45] Day 15 | risk=yellow | [manual event since last check ] | T=77.45°F pH=6.64 TDS=173.0ppm | Ammonia holding steady at 0.25ppm while nitrite plateaus at 2-5ppm signals Nitro
