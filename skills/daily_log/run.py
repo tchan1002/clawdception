@@ -231,12 +231,12 @@ Write three sections, each clearly delimited:
         f"Morning log ready 🌅 — Day {cycle_day_then} of the cycle. {teaser_line}",
         urgency="info"
     )
-        MAX_TG = 4000
-        log_truncated = daily_log_content[:MAX_TG] + ("…" if len(daily_log_content) > MAX_TG else "")
-        call_toby(
-            f"📋 Daily Log — Day {cycle_day_then}\n\n{log_truncated}",
-            urgency="info"
-        )
+    MAX_TG = 4000
+    log_truncated = daily_log_content[:MAX_TG] + ("…" if len(daily_log_content) > MAX_TG else "")
+    call_toby(
+        f"{log_truncated}",
+        urgency="info"
+    )
 
 
 if __name__ == "__main__":
