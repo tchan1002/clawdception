@@ -216,3 +216,11 @@
 [2026-04-05T02:30] Day 15 | risk=yellow | [manual event since last check ] | T=76.89°F pH=6.58 TDS=172.0ppm | Ammonia and nitrite remain stubbornly high despite 15 days of cycling; Nitrobact
 [2026-04-05T02:45] Day 15 | risk=yellow | [manual event since last check ] | T=77.11°F pH=6.58 TDS=172.0ppm | Ammonia stable at 0.25ppm and nitrite dropping sharply (5→2ppm in 24h) signals N
 [2026-04-05T02:45] Day 15 | risk=yellow | [manual event since last check ] | T=77.11°F pH=6.58 TDS=172.0ppm | Ammonia stable at 0.25ppm and nitrite dropping sharply (5→2ppm in 24h) signals N
+[2026-04-05T03:00] Day 15 | risk=yellow | [manual event since last check ] | T=77.22°F pH=6.61 TDS=171.0ppm | Nitrite remains dangerously high at 2ppm (down from 5ppm—progress, but Nitrobact
+[2026-04-05T03:00] Day 15 | risk=yellow | [manual event since last check ] | T=77.22°F pH=6.61 TDS=171.0ppm | Nitrite remains dangerously high at 2ppm (down from 5ppm—progress, but Nitrobact
+[2026-04-05T03:15] Day 15 | risk=yellow | [manual event since last check ] | T=77.34°F pH=6.59 TDS=170.0ppm | Ammonia holding steady at 0.25ppm while nitrite plateaus at 2ppm suggests Nitros
+[2026-04-05T03:15] Day 15 | risk=yellow | [manual event since last check ] | T=77.34°F pH=6.59 TDS=170.0ppm | Ammonia holding steady at 0.25ppm while nitrite plateaus at 2ppm suggests Nitros
+[2026-04-05T03:30] Day 15 | risk=yellow | [manual event since last check ] | T=77.34°F pH=6.61 TDS=172.0ppm | Ammonia holding steady at 0.25ppm while nitrite remains elevated (2ppm, down fro
+[2026-04-05T03:30] Day 15 | risk=yellow | [manual event since last check ] | T=77.34°F pH=6.61 TDS=172.0ppm | Ammonia holding steady at 0.25ppm while nitrite remains elevated (2ppm, down fro
+[2026-04-05T03:45] Day 15 | risk=yellow | [manual event since last check ] | T=77.34°F pH=6.63 TDS=172.0ppm | Ammonia stable at 0.25ppm with robust consumption, but nitrite plateauing at 2-5
+[2026-04-05T03:45] Day 15 | risk=yellow | [manual event since last check ] | T=77.34°F pH=6.63 TDS=172.0ppm | Ammonia stable at 0.25ppm with robust consumption, but nitrite plateauing at 2-5
