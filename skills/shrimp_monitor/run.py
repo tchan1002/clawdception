@@ -297,7 +297,8 @@ def run(force=False):
     TARGET: Temp 72-78°F | pH 6.5-7.5 | TDS 150-250ppm
     DANGER: Temp <65/>82 | pH <6.0/>8.0 | TDS <100/>350
 
-    Keep reasoning to 2 sentences. Be terse in all string fields."""
+    Keep reasoning to 2 sentences. Be terse in all string fields.
+    For recommended_actions, be specific and actionable: include water change % (e.g. "do a 20% water change"), target values for adjustments (e.g. "lower heater to 75°F"), and timing (e.g. "within 24 hours"). Reference actual current readings when relevant."""
 
         # --- Call Claude ---
         try:
@@ -318,6 +319,17 @@ def run(force=False):
         decision["_trigger"] = reason
         decision["_latest"] = {k: latest.get(k) for k in ("temp_f", "ph", "tds_ppm", "timestamp")}
         log_decision(decision)
+
+        # --- Push recommended actions to Telegram when risk is elevated ---
+        risk = decision.get("risk_level", "green")
+        actions = decision.get("recommended_actions", [])
+        if actions and risk in ("yellow", "red"):
+            urgency = "critical" if risk == "red" else "warning"
+            action_lines = "\n".join(f"• {a}" for a in actions[:4])
+            call_toby(
+                f"Day {cycle_day} | {risk.upper()} — action needed:\n{action_lines}",
+                urgency=urgency,
+            )
 
         # --- One-line summary ---
         risk = decision.get("risk_level", "?")
