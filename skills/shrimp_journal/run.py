@@ -135,6 +135,13 @@ Write a journal entry of 200-400 words. This is your internal record — write h
     append_journal(entry_text)
     print(f"[shrimp-journal] Entry written at {ts.strftime('%H:%M')} (Day {cycle_day})")
 
+    # --- Notify Toby ---
+    MAX_TG = 4000
+    entry_truncated = entry_text[:MAX_TG] + ("…" if len(entry_text) > MAX_TG else "")
+    call_toby(
+        f"📓 Journal — Day {cycle_day} {ts.strftime('%H:%M')}\n\n{entry_truncated}",
+        urgency="info"
+    )
 
 if __name__ == "__main__":
     run()

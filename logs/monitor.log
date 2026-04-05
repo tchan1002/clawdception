@@ -294,3 +294,5 @@
 [2026-04-05T12:15] Day 15 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.63 TDS=173.0ppm | Temperature at upper boundary with warming trend (+1.92°F/24hr) is the active co
 [2026-04-05T12:30] Day 15 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.64 TDS=174.0ppm | Temperature at ceiling with upward momentum over 24h—if it breaches 78.5°F or co
 [2026-04-05T12:30] Day 15 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.64 TDS=174.0ppm | Temperature at ceiling with upward momentum over 24h—if it breaches 78.5°F or co
+[2026-04-05T12:45] Day 15 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.59 TDS=175.0ppm | Temperature breach is imminent if warming continues—we're at the 78°F ceiling wi
+[2026-04-05T12:45] Day 15 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.59 TDS=175.0ppm | Temperature breach is imminent if warming continues—we're at the 78°F ceiling wi
