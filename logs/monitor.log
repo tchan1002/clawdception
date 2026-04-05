@@ -151,3 +151,11 @@
 [2026-04-04T18:30] Day 14 | risk=yellow | [manual event since last check ] | T=76.21°F pH=6.51 TDS=168.0ppm | Ammonia declined meaningfully (0.5→0.25ppm) over 13 hours—stage one bacteria res
 [2026-04-04T18:45] Day 14 | risk=yellow | [manual event since last check ] | T=76.32°F pH=6.52 TDS=170.0ppm | Ammonia dropped 0.25ppm in 13 hours (0.5→0.25)—excellent momentum in stage one, 
 [2026-04-04T18:45] Day 14 | risk=yellow | [manual event since last check ] | T=76.32°F pH=6.52 TDS=170.0ppm | Ammonia dropped 0.25ppm in 13 hours (0.5→0.25)—excellent momentum in stage one, 
+[2026-04-04T19:00] Day 14 | risk=yellow | [manual event since last check ] | T=76.44°F pH=6.52 TDS=171.0ppm | Ammonia plummeting (0.5→0.25ppm in 13h) signals healthy nitrification, but nitri
+[2026-04-04T19:00] Day 14 | risk=yellow | [manual event since last check ] | T=76.44°F pH=6.52 TDS=171.0ppm | Ammonia plummeting (0.5→0.25ppm in 13h) signals healthy nitrification, but nitri
+[2026-04-04T19:15] Day 14 | risk=yellow | [manual event since last check ] | T=76.32°F pH=6.47 TDS=169.0ppm | Ammonia decline (0.5→0.25ppm in 13hrs) is encouraging and Nitrobacter conversion
+[2026-04-04T19:15] Day 14 | risk=yellow | [manual event since last check ] | T=76.32°F pH=6.47 TDS=169.0ppm | Ammonia decline (0.5→0.25ppm in 13hrs) is encouraging and Nitrobacter conversion
+[2026-04-04T19:30] Day 14 | risk=yellow | [ph outside target range: 6.45 ] | T=75.99°F pH=6.45 TDS=170.0ppm | Day 14: Ammonia dropping (0.5→0.25ppm), nitrification active, but Nitrobacter la
+[2026-04-04T19:30] Day 14 | risk=yellow | [ph outside target range: 6.45 ] | T=75.99°F pH=6.45 TDS=170.0ppm | Day 14: Ammonia dropping (0.5→0.25ppm), nitrification active, but Nitrobacter la
+[2026-04-04T19:45] Day 14 | risk=yellow | [ph outside target range: 6.45 ] | T=75.54°F pH=6.45 TDS=171.0ppm | pH is one tick below threshold at a critical cycle stage when bacterial metaboli
+[2026-04-04T19:45] Day 14 | risk=yellow | [ph outside target range: 6.45 ] | T=75.54°F pH=6.45 TDS=171.0ppm | pH is one tick below threshold at a critical cycle stage when bacterial metaboli
