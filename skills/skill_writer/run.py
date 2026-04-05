@@ -63,9 +63,9 @@ def read_week_journals():
     today = date.today()
     for i in range(1, 8):
         d = today - timedelta(days=i)
-        path = journal_dir / f"{d}.md"
-        if path.exists():
-            text = path.read_text()
+        day_files = sorted(journal_dir.glob(f"{d}-????.md"))
+        if day_files:
+            text = "\n\n".join(f.read_text() for f in day_files)
             # Truncate each day's journal to keep total tokens manageable
             entries.append(f"### {d}\n{text[:400]}")
     return "\n\n".join(entries) or "No journal entries in the past 7 days."
