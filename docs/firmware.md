@@ -22,6 +22,7 @@ arduino-cli upload --fqbn esp32:esp32:esp32cam --port /dev/cu.usbserial-110 ~/cl
 
 # Monitor ESP32-CAM serial output
 arduino-cli monitor --port /dev/cu.usbserial-110 --config baudrate=115200
+```
 
 **Sensor hub** USB port: `/dev/cu.usbserial-0001`  
 **ESP32-CAM** USB port: `/dev/cu.usbserial-110`  
