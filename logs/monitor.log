@@ -409,3 +409,11 @@
 [2026-04-06T02:30] Day 16 | risk=green | [manual event since last check ] | T=77.11°F pH=6.64 TDS=176.0ppm | Day 16: Ammonia cleared, nitrite holding steady at 2 ppm, nitrate robust at 80 p
 [2026-04-06T02:45] Day 16 | risk=green | [manual event since last check ] | T=77.22°F pH=6.66 TDS=176.0ppm | Ammonia now zero (was 0.25ppm)—second stage nitrifiers are working. Nitrite plat
 [2026-04-06T02:45] Day 16 | risk=green | [manual event since last check ] | T=77.22°F pH=6.66 TDS=176.0ppm | Ammonia now zero (was 0.25ppm)—second stage nitrifiers are working. Nitrite plat
+[2026-04-06T03:00] Day 16 | risk=? | [manual event since last check ] | T=77.11°F pH=6.66 TDS=175.0ppm | 
+[2026-04-06T03:00] Day 16 | risk=? | [manual event since last check ] | T=77.11°F pH=6.66 TDS=175.0ppm | 
+[2026-04-06T03:15] Day 16 | risk=green | [manual event since last check ] | T=77.11°F pH=6.67 TDS=175.0ppm | Ammonia undetectable as of 04:25—the spike to 0.25ppm two days ago has cleared, 
+[2026-04-06T03:15] Day 16 | risk=green | [manual event since last check ] | T=77.11°F pH=6.67 TDS=175.0ppm | Ammonia undetectable as of 04:25—the spike to 0.25ppm two days ago has cleared, 
+[2026-04-06T03:30] Day 16 | risk=green | [manual event since last check ] | T=77.11°F pH=6.68 TDS=176.0ppm | Ammonia crash from 0.25 to undetectable overnight signals robust nitrifier respo
+[2026-04-06T03:30] Day 16 | risk=green | [manual event since last check ] | T=77.11°F pH=6.68 TDS=176.0ppm | Ammonia crash from 0.25 to undetectable overnight signals robust nitrifier respo
+[2026-04-06T03:45] Day 16 | risk=yellow | [manual event since last check ] | T=77.22°F pH=6.67 TDS=175.0ppm | Ammonia undetectable (0 ppm) after yesterday's 0.25 spike shows fast bacterial r
+[2026-04-06T03:45] Day 16 | risk=yellow | [manual event since last check ] | T=77.22°F pH=6.67 TDS=175.0ppm | Ammonia undetectable (0 ppm) after yesterday's 0.25 spike shows fast bacterial r
