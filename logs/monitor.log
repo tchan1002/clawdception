@@ -367,3 +367,5 @@
 [2026-04-05T21:15] Day 15 | risk=yellow | [ph outside target range: 6.46 ] | T=76.78°F pH=6.46 TDS=174.0ppm | pH slipped below minimum threshold and is trending downward despite morning reco
 [2026-04-05T21:30] Day 15 | risk=yellow | [ph outside target range: 6.44 ] | T=76.78°F pH=6.44 TDS=175.0ppm | pH has dipped below target floor and is trending downward within 16 hours—acidif
 [2026-04-05T21:30] Day 15 | risk=yellow | [ph outside target range: 6.44 ] | T=76.78°F pH=6.44 TDS=175.0ppm | pH has dipped below target floor and is trending downward within 16 hours—acidif
+[2026-04-05T21:45] Day 15 | risk=yellow | [ph outside target range: 6.44 ] | T=76.66°F pH=6.44 TDS=175.0ppm | pH 6.44 breaches target minimum and edges toward stress zone; however, 24hr tren
+[2026-04-05T21:45] Day 15 | risk=yellow | [ph outside target range: 6.44 ] | T=76.66°F pH=6.44 TDS=175.0ppm | pH 6.44 breaches target minimum and edges toward stress zone; however, 24hr tren

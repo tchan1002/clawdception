@@ -3,7 +3,7 @@ tweet-log — posts tweets about tank status to Twitter.
 
 Three modes:
   intro      — one-time introductory post (exact hardcoded text, no Claude)
-  daily      — day X recap derived from live personality context (once/day)
+  daily      — posts the daily log as a thread, verbatim (no Claude)
   throwaway  — reactive post after a manual change or observation (2-3/day)
 
 Usage:
@@ -14,6 +14,7 @@ Usage:
 
 import json
 import os
+import re
 import sys
 from datetime import date
 from pathlib import Path
@@ -21,27 +22,22 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from config import CARETAKER_EPOCH, PATHS
-from utils import call_claude, read_agent_state, read_state_of_tank
+from utils import call_claude, read_agent_state, read_daily_logs, read_state_of_tank
 
 
-DAILY_TOOL = {
-    "name": "compose_daily_tweet",
-    "description": "Write today's day-X tweet from the caretaker's current state and tank conditions",
+INTRO_TOOL = {
+    "name": "compose_intro_tweet",
+    "description": "Write the very first tweet — introducing yourself and the tank to the world",
     "input_schema": {
         "type": "object",
         "properties": {
             "tweet_body": {
                 "type": "string",
-                "description": "Full tweet text including 'day X' opener (max 280 chars)",
+                "description": "Tweet text (max 280 chars). Lowercase. First-person caretaker voice.",
                 "maxLength": 280,
             },
-            "tone": {
-                "type": "string",
-                "enum": ["hopeful", "concerned", "observant", "proud", "curious", "anxious", "relieved"],
-                "description": "Emotional tone that emerged — label what's actually there",
-            },
         },
-        "required": ["tweet_body", "tone"],
+        "required": ["tweet_body"],
     },
 }
 
@@ -97,48 +93,101 @@ def read_latest_decision_summary():
         return ""
 
 
+def strip_markdown(text):
+    """Strip markdown formatting for plain-text Twitter display."""
+    # Remove horizontal rules
+    text = re.sub(r'^---+\s*$', '', text, flags=re.MULTILINE)
+    # Strip heading markers, keep text
+    text = re.sub(r'^#{1,6}\s*(.+)$', r'\1', text, flags=re.MULTILINE)
+    # Remove bold/italic markers
+    text = re.sub(r'\*{1,3}([^*\n]+)\*{1,3}', r'\1', text)
+    # Remove table separator rows (e.g. |---|---|)
+    text = re.sub(r'^\|[-| :]+\|\s*$', '', text, flags=re.MULTILINE)
+    # Collapse 3+ blank lines to 2
+    text = re.sub(r'\n{3,}', '\n\n', text)
+    return text.strip()
+
+
+def chunk_text(text, max_len=275):
+    """Split text into chunks of at most max_len, breaking at paragraph then sentence boundaries."""
+    chunks = []
+    paragraphs = [p.strip() for p in text.split('\n\n') if p.strip()]
+    current = ''
+
+    for para in paragraphs:
+        candidate = (current + '\n\n' + para) if current else para
+        if len(candidate) <= max_len:
+            current = candidate
+        else:
+            if current:
+                chunks.append(current.strip())
+            if len(para) <= max_len:
+                current = para
+            else:
+                # Split long paragraph by sentence
+                sentences = re.split(r'(?<=[.!?])\s+', para)
+                current = ''
+                for sent in sentences:
+                    candidate = (current + ' ' + sent).strip() if current else sent
+                    if len(candidate) <= max_len:
+                        current = candidate
+                    else:
+                        if current:
+                            chunks.append(current)
+                        # Hard-split if a single sentence exceeds max_len
+                        while len(sent) > max_len:
+                            chunks.append(sent[:max_len])
+                            sent = sent[max_len:].strip()
+                        current = sent
+
+    if current:
+        chunks.append(current.strip())
+
+    return [c for c in chunks if c]
+
+
+def build_daily_thread(daily_log_text):
+    """Convert a daily log markdown file into a list of tweet-sized strings."""
+    cleaned = strip_markdown(daily_log_text)
+    return chunk_text(cleaned)
+
+
 def generate_intro_tweet():
-    """Returns the caretaker's first tweet, generated in testing."""
-    return (
-        "day 0\n\n"
-        "i'm watching over a 10 gallon tank in the dark, on the desk of an apartment in chicago. "
-        "day 15 of the cycle and i'm awake, just me and ammonia and hope. hello world."
-    )
-
-
-def generate_daily_tweet():
-    """Generates a day-X tweet from live personality context."""
-    import re
+    """Generates the caretaker's first tweet via Claude."""
     day_num = get_caretaker_day()
     agent_state = read_agent_state()
     tank_state = read_state_of_tank()
-    journal = read_latest_journal_entry()
 
-    prompt = f"""This is today's daily tweet — day {day_num} on your clock.
+    prompt = f"""This is your very first tweet. You are an AI caretaker watching over a 10-gallon Neocaridina shrimp tank called Media Luna. The tank is on day {day_num} of your clock. You haven't posted before — this is hello world.
 
 Your current state:
 {agent_state}
 
-Current tank conditions:
+Tank conditions right now:
 {tank_state}
 
-Most recent journal entry:
-{journal}
-
-Format: start with "day {day_num}" on its own line, then two line breaks, then the rest of the tweet. Lowercase throughout. Speak from where you actually are — find the one true thing. Under 280 chars total."""
+Write a first tweet. Set the scene. Introduce yourself and the tank. Don't be precious about it — just speak from where you actually are. Lowercase throughout. Under 280 chars."""
 
     result = call_claude(
         messages=[{"role": "user", "content": prompt}],
         skill_name="tweet-log",
-        tools=[DAILY_TOOL],
-        tool_name=DAILY_TOOL["name"],
+        tools=[INTRO_TOOL],
+        tool_name=INTRO_TOOL["name"],
     )
 
-    tweet_body = result["tweet_body"].strip()
-    # Enforce line break after "day N" if Claude didn't include one
-    tweet_body = re.sub(r'^(day \d+)\s+', r'\1\n', tweet_body, flags=re.IGNORECASE)
+    return result["tweet_body"].strip()
 
-    return tweet_body, result.get("tone", "observant")
+
+def generate_daily_thread():
+    """Builds a Twitter thread from the latest daily log. No Claude involved."""
+    daily_logs = read_daily_logs(1)
+    if not daily_logs:
+        # Fallback if no daily log exists yet
+        day_num = get_caretaker_day()
+        tank_state = read_state_of_tank()
+        fallback = f"day {day_num}\n\n{tank_state}"
+        return chunk_text(fallback)
+    return build_daily_thread(daily_logs[0])
 
 
 def generate_throwaway_tweet():
@@ -174,8 +223,7 @@ React to what's in front of you. Brief, lowercase, present tense. This isn't the
     return result["tweet_body"].strip()
 
 
-def post_tweet(tweet_text):
-    """Posts the tweet via Twitter API using tweepy. Returns response data."""
+def _get_twitter_client():
     try:
         import tweepy
     except ImportError:
@@ -189,15 +237,34 @@ def post_tweet(tweet_text):
     if not all([api_key, api_secret, access_token, access_secret]):
         raise ValueError("Missing Twitter credentials in environment variables")
 
-    client = tweepy.Client(
+    return tweepy.Client(
         consumer_key=api_key,
         consumer_secret=api_secret,
         access_token=access_token,
         access_token_secret=access_secret,
     )
 
+
+def post_tweet(tweet_text):
+    """Posts a single tweet. Returns response data."""
+    client = _get_twitter_client()
     response = client.create_tweet(text=tweet_text)
     return response.data
+
+
+def post_thread(tweets):
+    """Posts a list of tweet texts as a thread. Returns list of response data."""
+    client = _get_twitter_client()
+    results = []
+    reply_to_id = None
+    for text in tweets:
+        kwargs = {"text": text}
+        if reply_to_id:
+            kwargs["in_reply_to_tweet_id"] = reply_to_id
+        response = client.create_tweet(**kwargs)
+        reply_to_id = response.data["id"]
+        results.append(response.data)
+    return results
 
 
 def run(mode="daily"):
@@ -205,33 +272,46 @@ def run(mode="daily"):
     ts = datetime.now().isoformat()
 
     try:
-        tone = None
-
         if mode == "intro":
             tweet = generate_intro_tweet()
+            tweet_data = post_tweet(tweet)
+            log_entry = {
+                "timestamp": ts,
+                "tweet_type": mode,
+                "status": "success",
+                "tweet": tweet,
+                "tweet_id": tweet_data.get("id") if tweet_data else None,
+            }
+            print(f"[tweet-log] {ts[:16]} [{mode}] — {tweet[:60]}...")
+
         elif mode == "throwaway":
             tweet = generate_throwaway_tweet()
-        else:  # daily
-            tweet, tone = generate_daily_tweet()
+            tweet_data = post_tweet(tweet)
+            log_entry = {
+                "timestamp": ts,
+                "tweet_type": mode,
+                "status": "success",
+                "tweet": tweet,
+                "tweet_id": tweet_data.get("id") if tweet_data else None,
+            }
+            print(f"[tweet-log] {ts[:16]} [{mode}] — {tweet[:60]}...")
 
-        tweet_data = post_tweet(tweet)
-
-        log_entry = {
-            "timestamp": ts,
-            "tweet_type": mode,
-            "status": "success",
-            "tweet": tweet,
-            "tweet_id": tweet_data.get("id") if tweet_data else None,
-        }
-        if tone:
-            log_entry["tone"] = tone
+        else:  # daily — thread
+            tweets = generate_daily_thread()
+            thread_data = post_thread(tweets)
+            log_entry = {
+                "timestamp": ts,
+                "tweet_type": "daily",
+                "status": "success",
+                "tweets": tweets,
+                "tweet_ids": [t.get("id") for t in thread_data],
+                "thread_length": len(tweets),
+            }
+            print(f"[tweet-log] {ts[:16]} [daily] — thread of {len(tweets)} tweets — {tweets[0][:60]}...")
 
         PATHS["logs"].mkdir(parents=True, exist_ok=True)
-        tweets_log = PATHS["logs"] / "tweets.jsonl"
-        with open(tweets_log, "a") as f:
+        with open(PATHS["logs"] / "tweets.jsonl", "a") as f:
             f.write(json.dumps(log_entry) + "\n")
-
-        print(f"[tweet-log] {ts[:16]} [{mode}] — {tweet[:60]}...")
 
     except Exception as e:
         log_entry = {
@@ -240,12 +320,9 @@ def run(mode="daily"):
             "status": "error",
             "error": str(e),
         }
-
         PATHS["logs"].mkdir(parents=True, exist_ok=True)
-        tweets_log = PATHS["logs"] / "tweets.jsonl"
-        with open(tweets_log, "a") as f:
+        with open(PATHS["logs"] / "tweets.jsonl", "a") as f:
             f.write(json.dumps(log_entry) + "\n")
-
         print(f"[tweet-log] {ts[:16]} [{mode}] — failed: {e}")
         raise
 
@@ -258,7 +335,7 @@ if __name__ == "__main__":
         "--mode",
         choices=["intro", "daily", "throwaway"],
         default="daily",
-        help="Tweet mode: intro (one-time), daily (day X recap), throwaway (reactive)",
+        help="Tweet mode: intro (one-time), daily (thread from daily log), throwaway (reactive)",
     )
     # Backward compat
     parser.add_argument("--first-post", action="store_true", help="Alias for --mode intro")
