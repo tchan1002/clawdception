@@ -254,6 +254,13 @@ def run(force=False):
                     urgency="warning"
                 )
                 stale_nag_path.write_text(datetime.now().isoformat())
+            log_decision({
+                "risk_level": "red",
+                "reasoning": f"ESP32 offline — no sensor data for {int(reading_age_min)} min. Last reading at {reading_ts.strftime('%H:%M')}.",
+                "_cycle_day": cycle_day,
+                "_timestamp": ts,
+                "_trigger": "stale_sensor",
+            })
             summary_line = (
                 f"[{ts[:16]}] Day {cycle_day} | stale | "
                 f"last reading {int(reading_age_min)}min ago ({reading_ts.strftime('%H:%M')})"
