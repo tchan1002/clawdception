@@ -18,9 +18,11 @@
       ↓
 [Agent Stack — cron-driven]
   shrimp-monitor (every 15min) → shrimp-journal (every 6hr) → daily-log (7am)
-  shrimp-vision (every 2hr) → Claude vision analysis of latest snapshot
+  tweet-log (7:05am) → Twitter thread from daily log
+  equipment-check (9am) → hardware health checks → call-toby
+  shrimp-vision (every 2hr, disabled) → Claude vision analysis of latest snapshot
   call-toby → Telegram notifications
-  skill-writer (Sundays) → proposals/
+  skill-writer (8:30am, self-gated) → proposals/
       ↓
 [Web Dashboard]
   media_luna_dashboard.html — served by Flask at GET /
@@ -55,8 +57,10 @@
 | `skills/shrimp_monitor/` | shrimp-monitor | Every 15min | Read sensors, Claude risk assessment, log decision |
 | `skills/shrimp_journal/` | shrimp-journal | Every 6hr :05 | Narrative consolidation → journal/YYYY-MM-DD-HHMM.md |
 | `skills/daily_log/` | daily-log | 7am daily | Morning summary + update state_of_tank.md + agent_state.md |
+| `skills/tweet_log/` | tweet-log | 7:05am daily | Post daily log as Twitter thread; throwaway reactive posts |
+| `skills/equipment_check/` | equipment-check | Every 30min | Sensor-derivable + schedule-based hardware health checks |
 | `skills/shrimp_vision/` | shrimp-vision | Every 2hr (disabled) | ESP32-CAM snapshot → Claude vision analysis → logs/vision/ |
-| `skills/skill_writer/` | skill-writer | Sundays 8am | Weekly self-improvement proposals → proposals/ |
+| `skills/skill_writer/` | skill-writer | 8:30am daily | Self-improvement proposals → proposals/ (self-gated) |
 
 ---
 

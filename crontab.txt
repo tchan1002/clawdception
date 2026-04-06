@@ -21,6 +21,9 @@
 # tweet-log: 7:05 AM daily (reads daily log and posts to Twitter)
 5 7 * * * cd ~/clawdception && python3 skills/tweet_log/run.py >> logs/tweet_log.log 2>&1
 
+# equipment-check: every 30 minutes — sensor-derivable and schedule-based hardware checks
+*/30 * * * * cd ~/clawdception && python3 skills/equipment_check/run.py >> logs/equipment_check.log 2>&1
+
 # skill-writer: daily at 8:30 AM — self-gates on conditions (needs 7+ daily logs, 7+ days since last proposal)
 # Will silently skip most days. Runs automatically when conditions are met.
 # To force a run: python3 skills/skill_writer/run.py --force
