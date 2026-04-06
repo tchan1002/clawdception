@@ -293,6 +293,7 @@ def water_test():
         <a href="/">Dashboard</a>
         <a href="/agent">Agent</a>
         <a href="/water-test" class="active">Water Test</a>
+        <a href="/log-event">Log Event</a>
     </div>
     <div class="container">
     <div id="form-container">
@@ -769,6 +770,7 @@ def agent_status():
         <a href="/">Dashboard</a>
         <a href="/agent" class="active">Agent</a>
         <a href="/water-test">Water Test</a>
+        <a href="/log-event">Log Event</a>
     </div>
     <div class="container">
         <h1>Agent Status</h1>
@@ -983,6 +985,229 @@ def get_agent_state_history():
             seen.add(date)
             dates.append(date)
     return jsonify({"dates": dates})
+
+
+# --- General manual event logging UI ---
+@app.route("/log-event", methods=["GET"])
+def log_event_ui():
+    html = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Log Event — Media Luna</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background: #0d1117;
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .nav {
+            background: #161b22;
+            padding: 12px 20px;
+            display: flex;
+            gap: 24px;
+            border-bottom: 1px solid #30363d;
+        }
+        .nav a {
+            color: #8b949e;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+        .nav a:hover { color: white; }
+        .nav a.active { color: white; font-weight: 600; }
+        .container { padding: 20px; }
+        h1 { font-size: 24px; margin-bottom: 24px; }
+        .field-label {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #8b949e;
+        }
+        .field-section { margin-bottom: 28px; }
+        select {
+            width: 100%;
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            color: white;
+            font-size: 16px;
+            padding: 12px;
+            font-family: inherit;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%238b949e' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+        }
+        select:focus { outline: none; border-color: #58a6ff; }
+        select option { background: #161b22; }
+        textarea {
+            width: 100%;
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            color: white;
+            font-size: 16px;
+            padding: 12px;
+            resize: vertical;
+            min-height: 100px;
+            font-family: inherit;
+        }
+        textarea::placeholder { color: #6e7681; }
+        textarea:focus { outline: none; border-color: #58a6ff; }
+        button {
+            width: 100%;
+            background: #2ea043;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 16px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:active { background: #26843b; }
+        button:disabled { background: #3a3a3a; cursor: not-allowed; }
+        .confirmation {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .confirmation h2 { font-size: 20px; margin-bottom: 16px; color: #2ea043; }
+        .confirmation .values {
+            background: #161b22;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        .confirmation .values div {
+            padding: 8px 0;
+            border-bottom: 1px solid #30363d;
+        }
+        .confirmation .values div:last-child { border-bottom: none; }
+        .confirmation .values span { color: #8b949e; margin-right: 8px; }
+        .confirmation button { background: #238636; margin-top: 20px; }
+        .error { color: #f85149; font-size: 14px; margin-top: 8px; display: none; }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="/">Dashboard</a>
+        <a href="/agent">Agent</a>
+        <a href="/water-test">Water Test</a>
+        <a href="/log-event" class="active">Log Event</a>
+    </div>
+    <div class="container">
+    <div id="form-container">
+        <h1>Log Event</h1>
+
+        <div class="field-section">
+            <div class="field-label">Event Type</div>
+            <select id="event-type">
+                <option value="water_change">Water Change</option>
+                <option value="heater_adjust">Heater Adjust</option>
+                <option value="feeding">Feeding</option>
+                <option value="observation">Observation</option>
+                <option value="dosing">Dosing</option>
+                <option value="maintenance">Maintenance</option>
+                <option value="plant_addition">Plant Addition</option>
+            </select>
+        </div>
+
+        <div class="field-section">
+            <div class="field-label">Notes</div>
+            <textarea id="notes" placeholder="e.g. 30% water change, adjusted heater to 76°F..."></textarea>
+        </div>
+
+        <div class="error" id="error-msg">Something went wrong. Please try again.</div>
+        <button onclick="submitEvent()">Log Event</button>
+    </div>
+
+    <div class="confirmation" id="confirmation">
+        <h2>✓ Event Logged</h2>
+        <div class="values" id="logged-values"></div>
+        <button onclick="resetForm()">Log Another</button>
+    </div>
+
+    <script>
+        const EVENT_LABELS = {
+            water_change: "Water Change",
+            heater_adjust: "Heater Adjust",
+            feeding: "Feeding",
+            observation: "Observation",
+            dosing: "Dosing",
+            maintenance: "Maintenance",
+            plant_addition: "Plant Addition"
+        };
+
+        async function submitEvent() {
+            const eventType = document.getElementById('event-type').value;
+            const notes = document.getElementById('notes').value.trim();
+            const btn = document.querySelector('button');
+            const errorEl = document.getElementById('error-msg');
+
+            errorEl.style.display = 'none';
+            btn.disabled = true;
+
+            const payload = {
+                event_type: eventType,
+                timestamp: new Date().toISOString(),
+                notes: notes,
+                data: {}
+            };
+
+            try {
+                const response = await fetch('/api/events', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
+                    showConfirmation(eventType, notes);
+                } else {
+                    errorEl.style.display = 'block';
+                    btn.disabled = false;
+                }
+            } catch (err) {
+                errorEl.textContent = 'Network error: ' + err.message;
+                errorEl.style.display = 'block';
+                btn.disabled = false;
+            }
+        }
+
+        function showConfirmation(eventType, notes) {
+            const html = `
+                <div><span>Type:</span>${EVENT_LABELS[eventType] || eventType}</div>
+                <div><span>Time:</span>${new Date().toLocaleTimeString()}</div>
+                ${notes ? '<div><span>Notes:</span>' + notes + '</div>' : ''}
+            `;
+            document.getElementById('logged-values').innerHTML = html;
+            document.getElementById('form-container').style.display = 'none';
+            document.getElementById('confirmation').style.display = 'block';
+        }
+
+        function resetForm() {
+            document.getElementById('notes').value = '';
+            document.getElementById('event-type').selectedIndex = 0;
+            document.getElementById('error-msg').style.display = 'none';
+            document.querySelector('#form-container button').disabled = false;
+            document.getElementById('form-container').style.display = 'block';
+            document.getElementById('confirmation').style.display = 'none';
+        }
+    </script>
+    </div>
+</body>
+</html>
+    """
+    return html
 
 
 # --- Health check (Telegram heartbeat can ping this) ---

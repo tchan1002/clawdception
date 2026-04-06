@@ -47,9 +47,14 @@ TOOL = {
                 "type": "array",
                 "items": {"type": "string"},
                 "description": "Parameters or conditions to monitor closely"
+            },
+            "recommended_actions": {
+                "type": "array",
+                "items": {"type": "string"},
+                "description": "Specific, actionable tasks for Toby based on current conditions. Include % for water changes (e.g. 'do a 20% water change'), target values for adjustments (e.g. 'lower heater to 75°F'), and timing (e.g. 'within 24 hours'). Leave empty if nothing needs attention."
             }
         },
-        "required": ["narrative", "key_observations", "watch_list"]
+        "required": ["narrative", "key_observations", "watch_list", "recommended_actions"]
     }
 }
 
@@ -133,6 +138,12 @@ Write a journal entry of 200-400 words. This is your internal record — write h
         for item in result["watch_list"]:
             entry_text += f"- {item}\n"
 
+    recommended_actions = result.get("recommended_actions", [])
+    if recommended_actions:
+        entry_text += "\n**Recommended Actions:**\n"
+        for action in recommended_actions:
+            entry_text += f"- {action}\n"
+
     # --- Write to individual timestamped file ---
     path = write_journal_entry(entry_text, ts=ts)
     print(f"[shrimp-journal] Entry written: {path.name} (Day {cycle_day})")
@@ -143,6 +154,10 @@ Write a journal entry of 200-400 words. This is your internal record — write h
         urgency="info"
     )
     send_document(path)
+
+    if recommended_actions:
+        action_lines = "\n".join(f"• {a}" for a in recommended_actions)
+        call_toby(f"Action items:\n{action_lines}", urgency="info")
 
 
 if __name__ == "__main__":
