@@ -369,3 +369,11 @@
 [2026-04-05T21:30] Day 15 | risk=yellow | [ph outside target range: 6.44 ] | T=76.78°F pH=6.44 TDS=175.0ppm | pH has dipped below target floor and is trending downward within 16 hours—acidif
 [2026-04-05T21:45] Day 15 | risk=yellow | [ph outside target range: 6.44 ] | T=76.66°F pH=6.44 TDS=175.0ppm | pH 6.44 breaches target minimum and edges toward stress zone; however, 24hr tren
 [2026-04-05T21:45] Day 15 | risk=yellow | [ph outside target range: 6.44 ] | T=76.66°F pH=6.44 TDS=175.0ppm | pH 6.44 breaches target minimum and edges toward stress zone; however, 24hr tren
+[2026-04-05T22:00] Day 15 | risk=yellow | [ph outside target range: 6.42 ] | T=76.44°F pH=6.42 TDS=174.0ppm | Day 15: Nitrite holding at 2.0ppm and ammonia flat at 0.25ppm suggests Nitrosomo
+[2026-04-05T22:00] Day 15 | risk=yellow | [ph outside target range: 6.42 ] | T=76.44°F pH=6.42 TDS=174.0ppm | Day 15: Nitrite holding at 2.0ppm and ammonia flat at 0.25ppm suggests Nitrosomo
+[2026-04-05T22:15] Day 15 | risk=yellow | [ph outside target range: 6.43 ] | T=76.44°F pH=6.43 TDS=175.0ppm | pH is drifting acidic (6.43 vs target 6.5–7.5), a critical concern during active
+[2026-04-05T22:15] Day 15 | risk=yellow | [ph outside target range: 6.43 ] | T=76.44°F pH=6.43 TDS=175.0ppm | pH is drifting acidic (6.43 vs target 6.5–7.5), a critical concern during active
+[2026-04-05T22:30] Day 15 | risk=yellow | [ph outside target range: 6.42 ] | T=76.55°F pH=6.42 TDS=175.0ppm | Nitrite holding at 2.0 ppm (stalled) and ammonia flat at 0.25 ppm signal Nitroba
+[2026-04-05T22:30] Day 15 | risk=yellow | [ph outside target range: 6.42 ] | T=76.55°F pH=6.42 TDS=175.0ppm | Nitrite holding at 2.0 ppm (stalled) and ammonia flat at 0.25 ppm signal Nitroba
+[2026-04-05T22:45] Day 15 | risk=yellow | [ph outside target range: 6.45 ] | T=76.44°F pH=6.45 TDS=174.0ppm | pH is creeping downward (6.6 → 6.45 over 17 hours) and now breaches the 6.5 floo
+[2026-04-05T22:45] Day 15 | risk=yellow | [ph outside target range: 6.45 ] | T=76.44°F pH=6.45 TDS=174.0ppm | pH is creeping downward (6.6 → 6.45 over 17 hours) and now breaches the 6.5 floo
