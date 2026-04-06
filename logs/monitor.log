@@ -474,3 +474,11 @@
 [2026-04-06T10:30] Day 16 | skipped (stable) | T=77.45°F pH=6.62 TDS=176.0ppm
 [2026-04-06T10:45] Day 16 | skipped (stable) | T=77.34°F pH=6.62 TDS=176.0ppm
 [2026-04-06T10:45] Day 16 | skipped (stable) | T=77.34°F pH=6.62 TDS=176.0ppm
+[2026-04-06T11:00] Day 16 | skipped (stable) | T=77.34°F pH=6.62 TDS=177.0ppm
+[2026-04-06T11:00] Day 16 | skipped (stable) | T=77.34°F pH=6.62 TDS=177.0ppm
+[2026-04-06T11:15] Day 16 | risk=yellow | [manual event since last check ] | T=77.34°F pH=6.64 TDS=175.0ppm | Cycle at day 16 shows ammonia clearing (0 ppm as of 04:25) and nitrite persistin
+[2026-04-06T11:15] Day 16 | risk=yellow | [manual event since last check ] | T=77.34°F pH=6.64 TDS=175.0ppm | Cycle at day 16 shows ammonia clearing (0 ppm as of 04:25) and nitrite persistin
+[2026-04-06T11:30] Day 16 | risk=yellow | [manual event since last check ] | T=77.34°F pH=6.63 TDS=176.0ppm | Day 16 cycle shows solid progress: ammonia killed (0 ppm as of 04:25), nitrite p
+[2026-04-06T11:30] Day 16 | risk=yellow | [manual event since last check ] | T=77.34°F pH=6.63 TDS=176.0ppm | Day 16 cycle shows solid progress: ammonia killed (0 ppm as of 04:25), nitrite p
+[2026-04-06T11:45] Day 16 | risk=yellow | [manual event since last check ] | T=77.22°F pH=6.64 TDS=179.0ppm | Cycle progress is tangible: ammonia and nitrite both zeroed out in latest test, 
+[2026-04-06T11:45] Day 16 | risk=yellow | [manual event since last check ] | T=77.22°F pH=6.64 TDS=179.0ppm | Cycle progress is tangible: ammonia and nitrite both zeroed out in latest test, 
