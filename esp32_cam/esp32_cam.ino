@@ -5,6 +5,10 @@
  * Every SNAPSHOT_INTERVAL_MS milliseconds, captures a JPEG frame and POSTs it
  * to the Media Luna sensor server at POST /api/snapshot.
  *
+ * Also runs a web server on port 80 for on-demand snapshots:
+ *   - GET http://<esp-ip>/ — status page
+ *   - GET http://<esp-ip>/capture — trigger immediate snapshot
+ *
  * Wiring reminder:
  *   - GPIO0 → GND during flash only; remove jumper before normal operation
  *   - FTDI: GND→GND, 5V→5V, TX→U0R, RX→U0T
@@ -15,6 +19,7 @@
 #include "esp_camera.h"
 #include <WiFi.h>
 #include <HTTPClient.h>
+#include <WebServer.h>
 
 // ── WiFi credentials ──────────────────────────────────────────────────────────
 const char* WIFI_SSID = "Shroomies";
@@ -27,6 +32,9 @@ const char* SERVER_URL = "http://192.168.12.76:5001/api/snapshot";
 // Post a snapshot every 5 minutes. shrimp-vision runs every 2 hours and
 // considers any snapshot < 30 min old as "live".
 const unsigned long SNAPSHOT_INTERVAL_MS = 5UL * 60UL * 1000UL;
+
+// ── Web server for on-demand capture ──────────────────────────────────────────
+WebServer server(80);
 
 // ── AI Thinker ESP32-CAM pin map ──────────────────────────────────────────────
 #define PWDN_GPIO_NUM  32
@@ -142,6 +150,26 @@ bool postSnapshot() {
 }
 
 
+void handleCapture() {
+  Serial.println("[web] capture request received");
+  bool success = postSnapshot();
+  if (success) {
+    server.send(200, "text/plain", "Snapshot captured and posted");
+  } else {
+    server.send(500, "text/plain", "Snapshot failed");
+  }
+}
+
+void handleRoot() {
+  String html = "<html><body><h1>Media Luna ESP32-CAM</h1>";
+  html += "<p>Status: Online</p>";
+  html += "<p>IP: " + WiFi.localIP().toString() + "</p>";
+  html += "<p><a href='/capture'>Trigger Snapshot</a></p>";
+  html += "</body></html>";
+  server.send(200, "text/html", html);
+}
+
+
 void setup() {
   Serial.begin(115200);
   Serial.println("\n[boot] Media Luna ESP32-CAM");
@@ -149,12 +177,20 @@ void setup() {
   initCamera();
   connectWiFi();
 
+  // Start web server for on-demand captures
+  server.on("/", handleRoot);
+  server.on("/capture", handleCapture);
+  server.begin();
+  Serial.printf("[web] server started at http://%s/\n", WiFi.localIP().toString().c_str());
+
   // Post immediately on boot so the server has a snapshot right away
   postSnapshot();
 }
 
 
 void loop() {
+  server.handleClient();  // Handle web requests
+
   static unsigned long lastPost = 0;
   unsigned long now = millis();
 
@@ -163,5 +199,5 @@ void loop() {
     lastPost = now;
   }
 
-  delay(1000);
+  delay(100);  // Reduced delay for more responsive web server
 }
