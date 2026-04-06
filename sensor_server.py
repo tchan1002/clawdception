@@ -76,7 +76,7 @@ def receive_sensors():
     timestamp = datetime.now().isoformat()
     temp_c = data.get("temp_c")
     temp_f = data.get("temp_f")
-    ph = data.get("ph")
+    ph = (data.get("debug") or {}).get("ph_before_offset") or data.get("ph")
     tds = data.get("tds_ppm")
 
     conn = get_db()

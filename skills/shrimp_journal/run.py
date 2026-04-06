@@ -62,12 +62,12 @@ TOOL = {
 def run():
     ts = datetime.now()
     cycle_day = get_cycle_day()
-    window_start = ts - timedelta(hours=2)
+    window_start = ts - timedelta(hours=6)
 
     # --- Gather data ---
-    readings = fetch_readings(8)  # ~2 hours at 15-min intervals
+    readings = fetch_readings(24)  # ~6 hours at 15-min intervals
     decisions = read_decisions_since(window_start)
-    events = fetch_events(since=window_start.isoformat(), limit=20)
+    events = fetch_events(since=window_start.isoformat(), limit=50)
     journal_so_far = read_journal()
 
     # --- Summarize readings ---
@@ -80,7 +80,7 @@ def run():
 
     # --- Summarize decisions ---
     decision_notes = []
-    for d in decisions[-4:]:  # last 4 decisions
+    for d in decisions[-12:]:  # last 12 decisions (~6 hours)
         risk = d.get("risk_level", "")
         reasoning = d.get("reasoning", "")[:100]
         decision_notes.append(f"[{risk}] {reasoning}")
@@ -98,12 +98,12 @@ def run():
 
     prompt = f"""Day {cycle_day} of the nitrogen cycle. It is {ts.strftime('%H:%M')}.
 
-You're writing a journal entry covering the past 2 hours in the Media Luna tank.
+You're writing a journal entry covering the past 6 hours in the Media Luna tank.
 
-SENSOR SUMMARY (last 2 hours):
+SENSOR SUMMARY (last 6 hours):
 {readings_summary}
 
-AGENT DECISIONS (last 2 hours):
+AGENT DECISIONS (last 6 hours):
 {decisions_summary}
 
 EVENTS:
