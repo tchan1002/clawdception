@@ -377,3 +377,11 @@
 [2026-04-05T22:30] Day 15 | risk=yellow | [ph outside target range: 6.42 ] | T=76.55°F pH=6.42 TDS=175.0ppm | Nitrite holding at 2.0 ppm (stalled) and ammonia flat at 0.25 ppm signal Nitroba
 [2026-04-05T22:45] Day 15 | risk=yellow | [ph outside target range: 6.45 ] | T=76.44°F pH=6.45 TDS=174.0ppm | pH is creeping downward (6.6 → 6.45 over 17 hours) and now breaches the 6.5 floo
 [2026-04-05T22:45] Day 15 | risk=yellow | [ph outside target range: 6.45 ] | T=76.44°F pH=6.45 TDS=174.0ppm | pH is creeping downward (6.6 → 6.45 over 17 hours) and now breaches the 6.5 floo
+[2026-04-05T23:00] Day 15 | risk=yellow | [ph outside target range: 6.47 ] | T=76.55°F pH=6.47 TDS=174.0ppm | pH dipped below target floor at 6.47 and shows micro-downtrend (6.6→6.4 over 18h
+[2026-04-05T23:00] Day 15 | risk=yellow | [ph outside target range: 6.47 ] | T=76.55°F pH=6.47 TDS=174.0ppm | pH dipped below target floor at 6.47 and shows micro-downtrend (6.6→6.4 over 18h
+[2026-04-05T23:15] Day 15 | risk=yellow | [ph outside target range: 6.47 ] | T=76.44°F pH=6.47 TDS=174.0ppm | pH edging below minimum suggests bioload acidification is outpacing buffering ca
+[2026-04-05T23:15] Day 15 | risk=yellow | [ph outside target range: 6.47 ] | T=76.44°F pH=6.47 TDS=174.0ppm | pH edging below minimum suggests bioload acidification is outpacing buffering ca
+[2026-04-05T23:30] Day 15 | risk=yellow | [manual event since last check ] | T=76.55°F pH=6.51 TDS=176.0ppm | Ammonia spike from 0 → 0.25ppm between 04:25 and 20:25 on 4/5 signals a bacteria
+[2026-04-05T23:30] Day 15 | risk=yellow | [manual event since last check ] | T=76.55°F pH=6.51 TDS=176.0ppm | Ammonia spike from 0 → 0.25ppm between 04:25 and 20:25 on 4/5 signals a bacteria
+[2026-04-05T23:45] Day 15 | risk=yellow | [manual event since last check ] | T=76.66°F pH=6.52 TDS=175.0ppm | Nitrite holding at 2.0 ppm (no decline since day 13) signals potential Nitrobact
+[2026-04-05T23:45] Day 15 | risk=yellow | [manual event since last check ] | T=76.66°F pH=6.52 TDS=175.0ppm | Nitrite holding at 2.0 ppm (no decline since day 13) signals potential Nitrobact
