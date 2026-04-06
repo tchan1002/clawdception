@@ -7,16 +7,18 @@
 ## Architecture
 
 ```
-[ESP32 Sensor Hub]
-  DS18B20 (temp) + DFRobot pH v2 + DFRobot TDS
-  → POST JSON every 15 min via WiFi
-      ↓
+[ESP32 Sensor Hub]                    [ESP32-CAM — 192.168.12.32]
+  DS18B20 (temp) + pH + TDS            AI Thinker, port 80 (web) + POST /api/snapshot
+  → POST JSON every 15 min               → POST JPEG every 5 min
+        ↓                                        ↓
 [Raspberry Pi — 192.168.12.76]
   sensor_server.py (Flask, port 5001)
   media_luna.db (SQLite — source of truth)
+  snapshots/ (latest.jpg + timestamped archive)
       ↓
 [Agent Stack — cron-driven]
   shrimp-monitor (every 15min) → shrimp-journal (every 6hr) → daily-log (7am)
+  shrimp-vision (every 2hr) → Claude vision analysis of latest snapshot
   call-toby → Telegram notifications
   skill-writer (Sundays) → proposals/
       ↓
@@ -30,7 +32,8 @@
 
 | File | Purpose |
 |------|---------|
-| `media_luna_sensor_hub/media_luna_sensor_hub.ino` | ESP32 firmware |
+| `media_luna_sensor_hub/media_luna_sensor_hub.ino` | ESP32 sensor hub firmware |
+| `esp32_cam/esp32_cam.ino` | ESP32-CAM firmware (AI Thinker, 192.168.12.32) |
 | `sensor_server.py` | Flask REST API + SQLite backend |
 | `media_luna_dashboard.html` | Single-file web dashboard |
 | `media_luna.db` | SQLite database (Pi copy is source of truth) |
@@ -52,7 +55,7 @@
 | `skills/shrimp_monitor/` | shrimp-monitor | Every 15min | Read sensors, Claude risk assessment, log decision |
 | `skills/shrimp_journal/` | shrimp-journal | Every 6hr :05 | Narrative consolidation → journal/YYYY-MM-DD-HHMM.md |
 | `skills/daily_log/` | daily-log | 7am daily | Morning summary + update state_of_tank.md + agent_state.md |
-| `skills/shrimp_vision/` | shrimp-vision | Every 2hr (disabled) | Camera analysis stub — enable when Pi Camera connected |
+| `skills/shrimp_vision/` | shrimp-vision | Every 2hr (disabled) | ESP32-CAM snapshot → Claude vision analysis → logs/vision/ |
 | `skills/skill_writer/` | skill-writer | Sundays 8am | Weekly self-improvement proposals → proposals/ |
 
 ---

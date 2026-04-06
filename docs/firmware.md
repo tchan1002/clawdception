@@ -2,15 +2,29 @@
 
 ## Arduino Commands
 
+arduino-cli is installed on the **Mac** (not the Pi). Flash from there.
+
 ```bash
 # Compile only (safe to run anytime)
 arduino-cli compile --fqbn esp32:esp32:esp32 ~/clawdception/media_luna_sensor_hub
 
-# Upload to ESP32 (flashes device — confirm with user before running)
+# Upload to ESP32 sensor hub (flashes device — confirm with user before running)
 arduino-cli upload --fqbn esp32:esp32:esp32 --port /dev/cu.usbserial-0001 ~/clawdception/media_luna_sensor_hub
+
+# Upload to ESP32-CAM (flashes device — confirm with user before running)
+arduino-cli upload --fqbn esp32:esp32:esp32cam --port /dev/cu.usbserial-110 ~/clawdception/esp32_cam
+
+# Monitor ESP32-CAM serial output
+arduino-cli monitor --port /dev/cu.usbserial-110 --config baudrate=115200
 ```
 
-USB port: `/dev/cu.usbserial-0001` — stable for this ESP32.  
+Serial monitor settings for ESP32-CAM (`/dev/cu.usbserial-110`):
+```
+baudrate=115200, bits=8, parity=none, stop_bits=1, dtr=on, rts=on
+```
+
+**Sensor hub** USB port: `/dev/cu.usbserial-0001`  
+**ESP32-CAM** USB port: `/dev/cu.usbserial-110`  
 **Always compile before suggesting an upload.**  
 **Do not run upload without explicit user instruction.**
 
