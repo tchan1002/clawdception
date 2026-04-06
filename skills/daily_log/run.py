@@ -163,7 +163,7 @@ CONTEXT:
 Write three sections, each clearly delimited:
 
 ===DAILY_LOG===
-[The immutable daily log for {target_date}. Day {cycle_day_then} of the cycle — let that inform the arc. Write something Toby will read with his morning coffee and remember. For each section in template: one thing happened, or one thing is changing, or one thing is wrong. Say that thing directly and don't pad it. 200–250 words.]
+[The immutable daily log for {target_date}. Day {cycle_day_then} of the cycle — let that inform the arc. Write something Toby will read with his morning coffee and remember. For each section in template: one thing happened, or one thing is changing, or one thing is wrong. Say that thing directly and prefer striking and specific images over verbose prose. 200–250 words.]
 
 ===STATE_OF_TANK===
 [Updated rolling state of the tank. Plain facts + current conditions. What's true about this tank right now. 200-350 words.]
