@@ -163,7 +163,7 @@ CONTEXT:
 Write three sections, each clearly delimited:
 
 ===DAILY_LOG===
-[The immutable daily log for {target_date}. Write for Toby — your human — to read with his morning coffee. Follow the template loosely. Let your personality show, but make sure the content of each section is distinct and does not overlap. Day {cycle_day_then} of the cycle should inform the narrative arc. 200-300 words.]
+[The immutable daily log for {target_date}. Day {cycle_day_then} of the cycle — let that inform the arc. Write something Toby will read with his morning coffee and remember. One thing happened, or one thing is changing, or one thing is wrong. Say that thing directly and don't pad it. 200–250 words.]
 
 ===STATE_OF_TANK===
 [Updated rolling state of the tank. Plain facts + current conditions. What's true about this tank right now. 200-350 words.]
