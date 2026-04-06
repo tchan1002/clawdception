@@ -147,8 +147,14 @@ def chunk_text(text, max_len=275):
 
 
 def build_daily_thread(daily_log_text):
-    """Convert a daily log markdown file into a list of tweet-sized strings."""
-    cleaned = strip_markdown(daily_log_text)
+    """Convert a daily log markdown file into a list of tweet-sized strings.
+
+    The first tweet always starts with 'day N' on its own line followed by
+    two line breaks, matching the established tweet format.
+    """
+    cleaned = strip_markdown(daily_log_text).lower()
+    # Normalize title line: "day 14 — 2026-04-04 — some title" → "day 14"
+    cleaned = re.sub(r'^day\s+(\d+)\s*[—–-].*$', r'day \1', cleaned, count=1, flags=re.MULTILINE)
     return chunk_text(cleaned)
 
 
