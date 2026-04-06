@@ -336,3 +336,11 @@
 [2026-04-05T17:30] Day 15 | risk=yellow | [manual event since last check ] | T=77.22°F pH=6.54 TDS=174.0ppm | Nitrite plateau (2ppm across 24h) + ammonia hold (0.25ppm) + thermal/pH jitter s
 [2026-04-05T17:45] Day 15 | risk=yellow | [manual event since last check ] | T=77.22°F pH=6.54 TDS=174.0ppm | Nitrite plateau (2ppm) and ammonia persistence (0.25ppm) despite 15 days into cy
 [2026-04-05T17:45] Day 15 | risk=yellow | [manual event since last check ] | T=77.22°F pH=6.54 TDS=174.0ppm | Nitrite plateau (2ppm) and ammonia persistence (0.25ppm) despite 15 days into cy
+[2026-04-05T18:00] Day 15 | risk=yellow | [manual event since last check ] | T=77.22°F pH=6.54 TDS=173.0ppm | Nitrite plateau at 2ppm (no decline in 24h after spike to 5ppm) signals possible
+[2026-04-05T18:00] Day 15 | risk=yellow | [manual event since last check ] | T=77.22°F pH=6.54 TDS=173.0ppm | Nitrite plateau at 2ppm (no decline in 24h after spike to 5ppm) signals possible
+[2026-04-05T18:15] Day 15 | risk=yellow | [manual event since last check ] | T=77.34°F pH=6.54 TDS=174.0ppm | Day 15: Nitrite stuck at 2.0ppm (plateau since yesterday, up from 5ppm on 04-04)
+[2026-04-05T18:15] Day 15 | risk=yellow | [manual event since last check ] | T=77.34°F pH=6.54 TDS=174.0ppm | Day 15: Nitrite stuck at 2.0ppm (plateau since yesterday, up from 5ppm on 04-04)
+[2026-04-05T18:30] Day 15 | risk=yellow | [manual event since last check ] | T=77.34°F pH=6.54 TDS=173.0ppm | Day 15: Ammonia stubbornly flatlined at 0.25ppm across 36+ hours suggests Nitros
+[2026-04-05T18:30] Day 15 | risk=yellow | [manual event since last check ] | T=77.34°F pH=6.54 TDS=173.0ppm | Day 15: Ammonia stubbornly flatlined at 0.25ppm across 36+ hours suggests Nitros
+[2026-04-05T18:45] Day 15 | risk=yellow | [manual event since last check ] | T=77.45°F pH=6.52 TDS=173.0ppm | Day 15: Nitrite declined sharply (5.0→2.0ppm in 24hrs)—Nitrobacter colonizing, g
+[2026-04-05T18:45] Day 15 | risk=yellow | [manual event since last check ] | T=77.45°F pH=6.52 TDS=173.0ppm | Day 15: Nitrite declined sharply (5.0→2.0ppm in 24hrs)—Nitrobacter colonizing, g
