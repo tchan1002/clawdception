@@ -361,3 +361,7 @@
 [2026-04-05T20:30] Day 15 | risk=yellow | [manual event since last check ] | T=77.0°F pH=6.49 TDS=174.0ppm | Ammonia and nitrite both flatlined at 0.25 and 2.0 ppm respectively over 15 hour
 [2026-04-05T20:45] Day 15 | risk=yellow | [ph outside target range: 6.47 ] | T=77.0°F pH=6.47 TDS=175.0ppm | pH trending downward (6.68→6.47) over 15h; we're now at the floor of target rang
 [2026-04-05T20:45] Day 15 | risk=yellow | [ph outside target range: 6.47 ] | T=77.0°F pH=6.47 TDS=175.0ppm | pH trending downward (6.68→6.47) over 15h; we're now at the floor of target rang
+[2026-04-05T21:00] Day 15 | risk=yellow | [ph outside target range: 6.46 ] | T=76.89°F pH=6.46 TDS=176.0ppm | pH breached lower target threshold; acidification from nitrification is expected
+[2026-04-05T21:00] Day 15 | risk=yellow | [ph outside target range: 6.46 ] | T=76.89°F pH=6.46 TDS=176.0ppm | pH breached lower target threshold; acidification from nitrification is expected
+[2026-04-05T21:15] Day 15 | risk=yellow | [ph outside target range: 6.46 ] | T=76.78°F pH=6.46 TDS=174.0ppm | pH slipped below minimum threshold and is trending downward despite morning reco
+[2026-04-05T21:15] Day 15 | risk=yellow | [ph outside target range: 6.46 ] | T=76.78°F pH=6.46 TDS=174.0ppm | pH slipped below minimum threshold and is trending downward despite morning reco

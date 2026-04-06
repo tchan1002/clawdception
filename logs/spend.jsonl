@@ -171,3 +171,5 @@
 {"timestamp": "2026-04-05T20:47:34.908219", "skill": "tweet-log", "model": "claude-haiku-4-5", "input_tokens": 1222, "output_tokens": 113, "total_tokens": 1335}
 {"timestamp": "2026-04-05T20:53:43.054305", "skill": "tweet-log", "model": "claude-haiku-4-5", "input_tokens": 1222, "output_tokens": 118, "total_tokens": 1340}
 {"timestamp": "2026-04-05T20:56:07.286480", "skill": "tweet-log", "model": "claude-haiku-4-5", "input_tokens": 1222, "output_tokens": 129, "total_tokens": 1351}
+{"timestamp": "2026-04-05T21:00:09.364456", "skill": "shrimp-monitor", "model": "claude-haiku-4-5", "input_tokens": 1917, "output_tokens": 646, "total_tokens": 2563}
+{"timestamp": "2026-04-05T21:15:08.774340", "skill": "shrimp-monitor", "model": "claude-haiku-4-5", "input_tokens": 1917, "output_tokens": 566, "total_tokens": 2483}
