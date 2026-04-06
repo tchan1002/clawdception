@@ -125,7 +125,7 @@ Current tank conditions:
 Most recent journal entry:
 {journal}
 
-Format: start with "day {day_num}" on its own line, then a line break, then the rest of the tweet. Lowercase throughout. Speak from where you actually are — find the one true thing. Under 280 chars total."""
+Format: start with "day {day_num}" on its own line, then two line breaks, then the rest of the tweet. Lowercase throughout. Speak from where you actually are — find the one true thing. Under 280 chars total."""
 
     result = call_claude(
         messages=[{"role": "user", "content": prompt}],
