@@ -232,6 +232,37 @@ def run(force=False):
             print(f"[{ts[:16]}] [shrimp-monitor] No sensor data — skipping.")
             return
 
+        # --- Staleness check: alert if ESP32 hasn't posted in >30 min ---
+        stale_nag_path = PATHS["logs"] / "last_stale_nag.txt"
+        reading_ts = datetime.fromisoformat(latest["timestamp"])
+        reading_age_min = (datetime.now() - reading_ts).total_seconds() / 60
+        if reading_age_min > 30:
+            last_stale_nag = None
+            if stale_nag_path.exists():
+                try:
+                    last_stale_nag = datetime.fromisoformat(stale_nag_path.read_text().strip())
+                except Exception:
+                    pass
+            hours_since_stale_nag = (
+                (datetime.now() - last_stale_nag).total_seconds() / 3600
+                if last_stale_nag else 999
+            )
+            if hours_since_stale_nag >= 1:
+                call_toby(
+                    f"ESP32 offline — no sensor data for {int(reading_age_min)} min. "
+                    f"Last reading: {reading_ts.strftime('%H:%M')}.",
+                    urgency="warning"
+                )
+                stale_nag_path.write_text(datetime.now().isoformat())
+            summary_line = (
+                f"[{ts[:16]}] Day {cycle_day} | stale | "
+                f"last reading {int(reading_age_min)}min ago ({reading_ts.strftime('%H:%M')})"
+            )
+            print(summary_line)
+            with open(PATHS["monitor_log"], "a") as f:
+                f.write(summary_line + "\n")
+            return
+
         readings_24h = fetch_readings(96)
         readings_recent = readings_24h[:4]  # last ~1 hour
         since_24h = (datetime.now() - timedelta(hours=24)).isoformat()
