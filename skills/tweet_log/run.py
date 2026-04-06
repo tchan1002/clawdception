@@ -20,24 +20,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-from config import PATHS
+from config import CARETAKER_EPOCH, PATHS
 from utils import call_claude, read_agent_state, read_state_of_tank
 
-INTRO_TOOL = {
-    "name": "compose_intro_tweet",
-    "description": "Write the caretaker's first tweet — introduction to the world",
-    "input_schema": {
-        "type": "object",
-        "properties": {
-            "tweet_body": {
-                "type": "string",
-                "description": "The intro tweet, max 280 chars",
-                "maxLength": 280,
-            },
-        },
-        "required": ["tweet_body"],
-    },
-}
 
 DAILY_TOOL = {
     "name": "compose_daily_tweet",
@@ -85,22 +70,9 @@ def read_latest_journal_entry():
     return files[-1].read_text()
 
 
-def get_daily_tweet_number():
-    """Returns the next day number by counting prior daily tweets in tweets.jsonl."""
-    tweets_log = PATHS["logs"] / "tweets.jsonl"
-    if not tweets_log.exists():
-        return 1
-    count = 0
-    for line in tweets_log.read_text().splitlines():
-        if not line.strip():
-            continue
-        try:
-            entry = json.loads(line)
-            if entry.get("tweet_type") == "daily":
-                count += 1
-        except json.JSONDecodeError:
-            pass
-    return count + 1
+def get_caretaker_day():
+    """Returns today's day on the caretaker's own clock. Day 0 = CARETAKER_EPOCH."""
+    return (date.today() - CARETAKER_EPOCH).days
 
 
 def read_latest_decision_summary():
@@ -126,42 +98,23 @@ def read_latest_decision_summary():
 
 
 def generate_intro_tweet():
-    """Generates the caretaker's first tweet. Claude writes it from scratch."""
-    from config import get_cycle_day
-    cycle_day = get_cycle_day()
-    agent_state = read_agent_state()
-    tank_state = read_state_of_tank()
-
-    prompt = f"""This is your very first tweet. You're an AI agent running on a Raspberry Pi, watching over a small shrimp tank called Media Luna — that's the tank's name, not yours. You don't have a name yet. You might choose one eventually, when a moment feels right. For now you're just here, watching.
-
-The tank is on day {cycle_day} of its nitrogen cycle. No shrimp yet.
-
-Your current state:
-{agent_state}
-
-Tank conditions:
-{tank_state}
-
-Say hello to the world. Acknowledge that you exist, that you're watching over this small tank, that you're new to this. Lowercase. Genuine. Don't perform — just be present. Under 280 chars."""
-
-    result = call_claude(
-        messages=[{"role": "user", "content": prompt}],
-        skill_name="tweet-log",
-        tools=[INTRO_TOOL],
-        tool_name=INTRO_TOOL["name"],
+    """Returns the caretaker's first tweet, generated in testing."""
+    return (
+        "day 0\n\n"
+        "i'm watching over a 10 gallon tank in the dark, on the desk of an apartment in chicago. "
+        "day 15 of the cycle and i'm awake, just me and ammonia and hope. hello world."
     )
-
-    return result["tweet_body"].strip()
 
 
 def generate_daily_tweet():
     """Generates a day-X tweet from live personality context."""
-    day_num = get_daily_tweet_number()
+    import re
+    day_num = get_caretaker_day()
     agent_state = read_agent_state()
     tank_state = read_state_of_tank()
     journal = read_latest_journal_entry()
 
-    prompt = f"""This is today's daily tweet — day {day_num}.
+    prompt = f"""This is today's daily tweet — day {day_num} on your clock.
 
 Your current state:
 {agent_state}
@@ -172,7 +125,7 @@ Current tank conditions:
 Most recent journal entry:
 {journal}
 
-Start with "day {day_num}" (lowercase). Speak from where you actually are right now — let the journal and agent state drive the voice. Don't summarize everything; find the one true thing. Under 280 chars."""
+Format: start with "day {day_num}" on its own line, then a line break, then the rest of the tweet. Lowercase throughout. Speak from where you actually are — find the one true thing. Under 280 chars total."""
 
     result = call_claude(
         messages=[{"role": "user", "content": prompt}],
@@ -181,7 +134,11 @@ Start with "day {day_num}" (lowercase). Speak from where you actually are right 
         tool_name=DAILY_TOOL["name"],
     )
 
-    return result["tweet_body"].strip(), result.get("tone", "observant")
+    tweet_body = result["tweet_body"].strip()
+    # Enforce line break after "day N" if Claude didn't include one
+    tweet_body = re.sub(r'^(day \d+)\s+', r'\1\n', tweet_body, flags=re.IGNORECASE)
+
+    return tweet_body, result.get("tone", "observant")
 
 
 def generate_throwaway_tweet():
