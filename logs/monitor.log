@@ -401,3 +401,11 @@
 [2026-04-06T01:30] Day 16 | risk=green | [manual event since last check ] | T=77.11°F pH=6.63 TDS=175.0ppm | Day 16 shows cycle momentum: ammonia spiked then cleared within 24 hours, nitrit
 [2026-04-06T01:45] Day 16 | risk=green | [manual event since last check ] | T=77.11°F pH=6.61 TDS=175.0ppm | Ammonia cleared to zero despite nitrite plateau—this is the Nitrobacter lag patt
 [2026-04-06T01:45] Day 16 | risk=green | [manual event since last check ] | T=77.11°F pH=6.61 TDS=175.0ppm | Ammonia cleared to zero despite nitrite plateau—this is the Nitrobacter lag patt
+[2026-04-06T02:00] Day 16 | risk=green | [manual event since last check ] | T=77.22°F pH=6.64 TDS=174.0ppm | Ammonia cleared to zero, nitrite plateaued at 2.0 ppm for 3 days suggests Nitrob
+[2026-04-06T02:00] Day 16 | risk=green | [manual event since last check ] | T=77.22°F pH=6.64 TDS=174.0ppm | Ammonia cleared to zero, nitrite plateaued at 2.0 ppm for 3 days suggests Nitrob
+[2026-04-06T02:15] Day 16 | risk=yellow | [manual event since last check ] | T=77.11°F pH=6.64 TDS=175.0ppm | Ammonia cleared to 0 ppm and nitrite holding at 2 ppm while nitrate sits steady 
+[2026-04-06T02:15] Day 16 | risk=yellow | [manual event since last check ] | T=77.11°F pH=6.64 TDS=175.0ppm | Ammonia cleared to 0 ppm and nitrite holding at 2 ppm while nitrate sits steady 
+[2026-04-06T02:30] Day 16 | risk=green | [manual event since last check ] | T=77.11°F pH=6.64 TDS=176.0ppm | Day 16: Ammonia cleared, nitrite holding steady at 2 ppm, nitrate robust at 80 p
+[2026-04-06T02:30] Day 16 | risk=green | [manual event since last check ] | T=77.11°F pH=6.64 TDS=176.0ppm | Day 16: Ammonia cleared, nitrite holding steady at 2 ppm, nitrate robust at 80 p
+[2026-04-06T02:45] Day 16 | risk=green | [manual event since last check ] | T=77.22°F pH=6.66 TDS=176.0ppm | Ammonia now zero (was 0.25ppm)—second stage nitrifiers are working. Nitrite plat
+[2026-04-06T02:45] Day 16 | risk=green | [manual event since last check ] | T=77.22°F pH=6.66 TDS=176.0ppm | Ammonia now zero (was 0.25ppm)—second stage nitrifiers are working. Nitrite plat
