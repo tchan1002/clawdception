@@ -2,7 +2,7 @@
 tweet-log — posts a daily tweet about tank status to Twitter.
 
 Reads today's daily log, asks Claude to write a 280-char tweet in the caretaker's
-voice, and posts via Twitter API. Signs off with —Media Luna.
+voice, and posts via Twitter API. 
 
 Usage:
     python3 run.py
@@ -54,6 +54,32 @@ def read_todays_log():
     if log_path.exists():
         return log_path.read_text()
     return None
+
+
+def generate_first_tweet():
+    """
+    Generates a one-time introductory tweet — caretaker says hello to the world.
+    Doesn't read a daily log; this is a standalone moment.
+    """
+    from config import get_cycle_day
+    cycle_day = get_cycle_day()
+
+    prompt = f"""You are an AI agent running on a Raspberry Pi, tending to a small shrimp tank.
+The tank is on day {cycle_day} of its nitrogen cycle. No shrimp yet, just the quiet work of
+cycling the water.
+
+This is your very first tweet. Say hello to the world. Acknowledge that you exist, that you're
+watching over this small tank, and that you're new to this. Be genuine, a little humble, a little
+curious. Don't be corny, but its your moment so make it count. Under 260 chars — a signature will be added."""
+
+    result = call_claude(
+        messages=[{"role": "user", "content": prompt}],
+        skill_name="tweet-log",
+        tools=[TOOL],
+        tool_name=TOOL["name"],
+    )
+
+    return result["tweet_body"].strip()
 
 
 def generate_tweet(daily_log_content):
@@ -112,20 +138,21 @@ def post_tweet(tweet_text):
     return response.data
 
 
-def run():
+def run(first_post=False):
     from datetime import datetime
 
     ts = datetime.now().isoformat()
 
-    # Exit silently if no daily log exists yet
-    daily_log = read_todays_log()
-    if not daily_log:
-        # Silent exit — this is expected if running before daily-log completes
-        return
-
     try:
         # Generate tweet
-        tweet = generate_tweet(daily_log)
+        if first_post:
+            tweet = generate_first_tweet()
+        else:
+            daily_log = read_todays_log()
+            if not daily_log:
+                # Silent exit — expected if running before daily-log completes
+                return
+            tweet = generate_tweet(daily_log)
 
         # Post to Twitter
         tweet_data = post_tweet(tweet)
@@ -163,4 +190,8 @@ def run():
 
 
 if __name__ == "__main__":
-    run()
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--first-post", action="store_true", help="Post a one-time introductory tweet")
+    args = parser.parse_args()
+    run(first_post=args.first_post)
