@@ -504,3 +504,5 @@
 [2026-04-06T14:15] Day 16 | risk=yellow | [manual event since last check ] | T=75.99°F pH=6.43 TDS=178.0ppm | Nitrogen cycle progressing cleanly—ammonia and nitrite both zeroed today, nitrat
 [2026-04-06T14:30] Day 16 | risk=yellow | [manual event since last check ] | T=75.76°F pH=6.38 TDS=177.0ppm | Ammonia and nitrite both cleared to zero as of this morning—the cycle is progres
 [2026-04-06T14:30] Day 16 | risk=yellow | [manual event since last check ] | T=75.76°F pH=6.38 TDS=177.0ppm | Ammonia and nitrite both cleared to zero as of this morning—the cycle is progres
+[2026-04-06T14:45] Day 16 | risk=green | [manual event since last check ] | T=75.76°F pH=6.38 TDS=177.0ppm | Ammonia is zero and nitrite crashed to zero—Nitrobacter is handling the workload
+[2026-04-06T14:45] Day 16 | risk=green | [manual event since last check ] | T=75.76°F pH=6.38 TDS=177.0ppm | Ammonia is zero and nitrite crashed to zero—Nitrobacter is handling the workload
