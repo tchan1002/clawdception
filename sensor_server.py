@@ -13,6 +13,7 @@ Then ESP32 POSTs to http://<your-laptop-ip>:5000/api/sensors
 import sqlite3
 import json
 from datetime import datetime, timedelta
+from pathlib import Path
 from flask import Flask, request, jsonify, send_file
 
 app = Flask(__name__)
@@ -1221,6 +1222,41 @@ def health():
 
     last_reading = dict(row)["timestamp"] if row else "never"
     return jsonify({"status": "alive", "last_reading": last_reading})
+
+
+# --- ESP32-CAM snapshot endpoints ---
+SNAPSHOTS_DIR = Path("snapshots")
+
+
+@app.route("/api/snapshot", methods=["POST"])
+def receive_snapshot():
+    """ESP32-CAM POSTs raw JPEG bytes here every 5 minutes."""
+    if not request.content_type or "image/jpeg" not in request.content_type:
+        return jsonify({"error": "Expected Content-Type: image/jpeg"}), 400
+
+    img_bytes = request.data
+    if not img_bytes:
+        return jsonify({"error": "Empty body"}), 400
+
+    timestamp = datetime.now()
+    ts_str = timestamp.isoformat()
+
+    SNAPSHOTS_DIR.mkdir(exist_ok=True)
+    (SNAPSHOTS_DIR / "latest.jpg").write_bytes(img_bytes)
+    archive_name = timestamp.strftime("%Y-%m-%d_%H-%M-%S") + ".jpg"
+    (SNAPSHOTS_DIR / archive_name).write_bytes(img_bytes)
+
+    print(f"[{ts_str}] SNAPSHOT {len(img_bytes)} bytes → snapshots/{archive_name}")
+    return jsonify({"status": "ok", "timestamp": ts_str, "bytes": len(img_bytes)}), 201
+
+
+@app.route("/api/snapshot/latest", methods=["GET"])
+def get_snapshot():
+    """Serve the most recent ESP32-CAM JPEG for vision analysis."""
+    latest = SNAPSHOTS_DIR / "latest.jpg"
+    if not latest.exists():
+        return jsonify({"error": "No snapshot yet"}), 404
+    return send_file(str(latest), mimetype="image/jpeg")
 
 
 if __name__ == "__main__":
