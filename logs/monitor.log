@@ -548,3 +548,12 @@
 [2026-04-06T19:30] Day 16 | risk=yellow | [manual event since last check ] | T=76.55°F pH=7.33 TDS=171.0ppm | Nitrogen cycle remains stable—ammonia and nitrite both zero, nitrate holding ste
 [2026-04-06T19:45] Day 16 | risk=green | [manual event since last check ] | T=76.55°F pH=7.35 TDS=170.0ppm | Day 16 shows textbook nitrogen cycle progression: zero ammonia/nitrite, stable 8
 [2026-04-06T19:45] Day 16 | risk=green | [manual event since last check ] | T=76.55°F pH=7.35 TDS=170.0ppm | Day 16 shows textbook nitrogen cycle progression: zero ammonia/nitrite, stable 8
+[2026-04-06T20:00] Day 16 | risk=green | [manual event since last check ] | T=76.44°F pH=7.37 TDS=172.0ppm | All parameters in target zones with no danger signals. Ammonia/nitrite remain ze
+[2026-04-06T20:00] Day 16 | risk=green | [manual event since last check ] | T=76.44°F pH=7.37 TDS=172.0ppm | All parameters in target zones with no danger signals. Ammonia/nitrite remain ze
+[2026-04-06T20:15] Day 16 | risk=yellow | [manual event since last check ] | T=76.55°F pH=7.41 TDS=170.0ppm | Ammonia and nitrite remain zero—bacteria are performing. The pH rise is the conc
+[2026-04-06T20:15] Day 16 | risk=yellow | [manual event since last check ] | T=76.55°F pH=7.41 TDS=170.0ppm | Ammonia and nitrite remain zero—bacteria are performing. The pH rise is the conc
+[2026-04-06T20:30] Day 16 | risk=green | [manual event since last check ] | T=76.55°F pH=7.41 TDS=170.0ppm | Day 16 nitrogen cycle stable: ammonia and nitrite zero, nitrate 80ppm (appropria
+[call-toby] Telegram sent (warning): No water test logged yet. Day 16 of cycle — ammonia and nitrite are unknown.
+[2026-04-06T20:30] Day 16 | risk=green | [manual event since last check ] | T=76.55°F pH=7.41 TDS=170.0ppm | Day 16 nitrogen cycle stable: ammonia and nitrite zero, nitrate 80ppm (appropria
+[2026-04-06T20:45] Day 16 | risk=green | [manual event since last check ] | T=76.55°F pH=7.41 TDS=170.0ppm | All parameters nominal for day 16 of cycle. Recent water change (21:13) explains
+[2026-04-06T20:45] Day 16 | risk=green | [manual event since last check ] | T=76.55°F pH=7.41 TDS=170.0ppm | All parameters nominal for day 16 of cycle. Recent water change (21:13) explains

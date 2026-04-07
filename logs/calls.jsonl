@@ -19,3 +19,4 @@
 {"timestamp": "2026-04-06T17:06:37.452182", "urgency": "warning", "message": "Filter cleaning has never been logged. Day 16 \u2014 check media condition.", "sent_via": "telegram"}
 {"timestamp": "2026-04-06T17:15:02.408152", "urgency": "critical", "message": "ph is below danger threshold: 5.98 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-04-06T18:05:15.626330", "urgency": "info", "message": "Journal \u2014 Day 16 \u00b7 2026-04-06 18:05", "sent_via": "telegram"}
+{"timestamp": "2026-04-06T20:30:02.599070", "urgency": "warning", "message": "No water test logged yet. Day 16 of cycle \u2014 ammonia and nitrite are unknown.", "sent_via": "telegram"}
