@@ -1,8 +1,8 @@
 # State of Tank — Media Luna
 
-**Last updated:** 2026-04-05
-**Cycle day:** 15 (started 2026-03-22)
-**Tank status:** Cycling — mid-phase plateau — no shrimp
+**Last updated:** 2026-04-06
+**Cycle day:** 16 (started 2026-03-22)
+**Tank status:** Cycling — late phase — ammonia and nitrite both at zero — no shrimp
 
 ---
 
@@ -10,30 +10,39 @@
 
 | Parameter | Current | Notes |
 |-----------|---------|-------|
-| Temperature | 77.26°F avg | 75.09–78.35°F range; +1.57°F day change; approaching upper comfort zone |
-| pH | 6.56 avg (sensor); 6.4–6.6 (manual) | Manual evening test touched 6.4 — at the floor; downward pressure ongoing |
-| TDS | 172.9 ppm avg | 169–176 ppm range; +4 ppm day change; slow upward creep continuing |
+| Temperature | 76.9°F avg | 75.09–77.56°F range; +0.67°F day change; within acceptable range |
+| pH | 6.52 avg (sensor); 6.4 (manual x2) | Sensor low of 5.98 flagged — may be artifact; downward pressure ongoing; post-water-change reading needed |
+| TDS | 174.4 ppm avg | 169–179 ppm range; -3.0 ppm day change; consistent with water change performed tonight |
+| Ammonia | 0 ppm | Confirmed at 4:25 AM and 4:33 PM — both stages of nitrification functioning |
+| Nitrite | 0 ppm | Confirmed at 4:25 AM and 4:33 PM — plateau resolved; Nitrobacter active |
+| Nitrate | 80 ppm | Stable across both tests; water change performed tonight to begin reducing load |
 
-## Nitrogen Parameters (Manual)
-
-| Parameter | Morning | Evening | Trend |
-|-----------|---------|---------|-------|
-| Ammonia (NH₃) | 0.25 ppm | 0.25 ppm | Flat — no movement |
-| Nitrite (NO₂) | 2.0 ppm | 2.0 ppm | Flat — plateau confirmed day 3 |
-| Nitrate (NO₃) | 80 ppm | 80 ppm | Flat — no conversion occurring |
+---
 
 ## Cycle Status
 
-**Stage:** Mid-cycle. Nitrosomonas activity confirmed (ammonia being partially processed), but Nitrobacter activity appears stalled — no nitrite-to-nitrate conversion visible in last 3 days. Nitrite plateau at 2.0 ppm is the primary concern.
-
-**Likely cause:** pH suppression. Sub-6.5 pH inhibits Nitrobacter metabolism. Buffering capacity appears depleted or insufficient for the bioload.
-
-**Shrimp readiness:** Not yet. Nitrite at 2.0 ppm is acutely toxic to Neocaridina. Tank needs complete nitrite crash before shrimp can be introduced.
-
-## Key Flags
-
-- 🟡 Nitrite plateau (Day 3 of no movement) — monitoring
-- 🟡 pH touching floor (6.4 manual) — buffer intervention under consideration
-- 🟡 Temperature ceiling approaching (78.35°F max) — watch for warming trend
+Nitrogen cycle is in late phase. Both ammonia and nitrite are reading zero on manual tests for the first time in the cycle. Nitrate at 80 ppm confirms active nitrification — this is expected end-stage accumulation. A water change was performed tonight (21:13). Nitrate post-change will be measured in next 24–48 hours. The cycle is not complete until we confirm: (1) zero ammonia, (2) zero nitrite, and (3) manageable nitrate across multiple consecutive days, including post-change readings.
 
 ---
+
+## Known Concerns
+
+- **pH floor** — Sensor recorded 5.98 at its lowest today. Manual tests read 6.4. Discrepancy may be artifact or real transient acidification. pH is trending low overall; buffering may eventually be needed but is not urgent yet. Watch closely post-water-change.
+- **Filter media** — No maintenance log exists for filter media. Visual inspection recommended before shrimp introduction.
+- **Nitrate accumulation rate** — Will monitor post-water-change to confirm Nitrobacter is functioning at expected scale.
+
+---
+
+## Equipment Status
+
+- Sensor: online and passing automated checks; RSSI stable at -48 dBm mean
+- Smoke tests: passed (22:32, 22:33)
+- Heater: no anomalies noted
+- Filter: running; media unverified visually
+- Actuators: none yet online
+
+---
+
+## Shrimp Readiness
+
+**Not yet.** Cycle is approaching completion but not confirmed complete. pH needs to stabilize above 6.6 post-water-change before shrimp introduction is appropriate. Nitrate should come down from 80 ppm before shrimp arrive — target under 20 ppm.

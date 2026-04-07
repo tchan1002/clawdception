@@ -637,3 +637,11 @@
 [2026-04-07T06:30] Day 17 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.51 TDS=176.0ppm | Temperature has crept to the absolute edge of target over 24 hours and needs wat
 [2026-04-07T06:45] Day 17 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.5 TDS=175.0ppm | Temperature kissing upper boundary after mild 24hr upward creep (+0.9°F); ammoni
 [2026-04-07T06:45] Day 17 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.5 TDS=175.0ppm | Temperature kissing upper boundary after mild 24hr upward creep (+0.9°F); ammoni
+[2026-04-07T07:00] Day 17 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.52 TDS=175.0ppm | Temperature is riding the upper edge of the target window at 78.12°F with a gent
+[2026-04-07T07:00] Day 17 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.52 TDS=175.0ppm | Temperature is riding the upper edge of the target window at 78.12°F with a gent
+[2026-04-07T07:15] Day 17 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.51 TDS=177.0ppm | Temperature has drifted to the upper target boundary and is trending upward; thi
+[2026-04-07T07:15] Day 17 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.51 TDS=177.0ppm | Temperature has drifted to the upper target boundary and is trending upward; thi
+[2026-04-07T07:30] Day 17 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.52 TDS=175.0ppm | Temperature breach alert justified: 78.12°F hits the ceiling of your 72–78°F ran
+[2026-04-07T07:30] Day 17 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.52 TDS=175.0ppm | Temperature breach alert justified: 78.12°F hits the ceiling of your 72–78°F ran
+[2026-04-07T07:45] Day 17 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.51 TDS=176.0ppm | Temperature nudging the upper bound and showing upward trajectory suggests heate
+[2026-04-07T07:45] Day 17 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.51 TDS=176.0ppm | Temperature nudging the upper bound and showing upward trajectory suggests heate

@@ -22,3 +22,4 @@
 {"timestamp": "2026-04-06T20:30:02.599070", "urgency": "warning", "message": "No water test logged yet. Day 16 of cycle \u2014 ammonia and nitrite are unknown.", "sent_via": "telegram"}
 {"timestamp": "2026-04-07T00:05:12.248610", "urgency": "info", "message": "Journal \u2014 Day 17 \u00b7 2026-04-07 00:05", "sent_via": "telegram"}
 {"timestamp": "2026-04-07T06:05:16.991493", "urgency": "info", "message": "Journal \u2014 Day 17 \u00b7 2026-04-07 06:05", "sent_via": "telegram"}
+{"timestamp": "2026-04-07T07:01:00.553536", "urgency": "info", "message": "Morning log ready \ud83c\udf05 \u2014 Day 16 of the cycle. Day 16 \u2014 2026-04-06 \u2014 The Water Change That Changed Everything", "sent_via": "telegram"}
