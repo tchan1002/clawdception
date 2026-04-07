@@ -532,3 +532,11 @@
 [2026-04-06T17:30] Day 16 | risk=yellow | [manual event since last check ] | T=75.31°F pH=7.13 TDS=173.0ppm | Day 16: ammonia and nitrite both zero, nitrate steady at 80 ppm—cycle is progres
 [2026-04-06T17:45] Day 16 | risk=yellow | [manual event since last check ] | T=75.65°F pH=7.17 TDS=170.0ppm | Ammonia and nitrite both zero with nitrate holding steady at 80 ppm signals stro
 [2026-04-06T17:45] Day 16 | risk=yellow | [manual event since last check ] | T=75.65°F pH=7.17 TDS=170.0ppm | Ammonia and nitrite both zero with nitrate holding steady at 80 ppm signals stro
+[2026-04-06T18:00] Day 16 | risk=yellow | [manual event since last check ] | T=75.99°F pH=7.18 TDS=169.0ppm | Nitrogen cycle progressing steadily—ammonia and nitrite remain zero, nitrate sta
+[2026-04-06T18:00] Day 16 | risk=yellow | [manual event since last check ] | T=75.99°F pH=7.18 TDS=169.0ppm | Nitrogen cycle progressing steadily—ammonia and nitrite remain zero, nitrate sta
+[2026-04-06T18:15] Day 16 | risk=green | [manual event since last check ] | T=75.99°F pH=7.21 TDS=170.0ppm | All parameters nominal and trending well post-water-change. Ammonia and nitrite 
+[2026-04-06T18:15] Day 16 | risk=green | [manual event since last check ] | T=75.99°F pH=7.21 TDS=170.0ppm | All parameters nominal and trending well post-water-change. Ammonia and nitrite 
+[2026-04-06T18:30] Day 16 | risk=green | [manual event since last check ] | T=76.21°F pH=7.24 TDS=170.0ppm | Day 16 snapshot: ammonia & nitrite both zero, nitrate stable at 80ppm—bacteria c
+[2026-04-06T18:30] Day 16 | risk=green | [manual event since last check ] | T=76.21°F pH=7.24 TDS=170.0ppm | Day 16 snapshot: ammonia & nitrite both zero, nitrate stable at 80ppm—bacteria c
+[2026-04-06T18:45] Day 16 | risk=green | [manual event since last check ] | T=76.32°F pH=7.27 TDS=170.0ppm | Day 16: ammonia zero, nitrite zero, nitrate stable at 80 ppm—nitrogen cycle prog
+[2026-04-06T18:45] Day 16 | risk=green | [manual event since last check ] | T=76.32°F pH=7.27 TDS=170.0ppm | Day 16: ammonia zero, nitrite zero, nitrate stable at 80 ppm—nitrogen cycle prog
