@@ -573,3 +573,11 @@
 [2026-04-06T22:30] Day 16 | risk=yellow | [ph outside target range: 7.52 ] | T=76.89°F pH=7.52 TDS=171.0ppm | pH crept to 7.52 immediately after water change—likely from tap water alkalinity
 [2026-04-06T22:45] Day 16 | risk=green | [manual event since last check ] | T=76.89°F pH=6.44 TDS=172.0ppm | Day 16 cycle status: ammonia 0, nitrite 0, nitrate 80ppm (stable across two test
 [2026-04-06T22:45] Day 16 | risk=green | [manual event since last check ] | T=76.89°F pH=6.44 TDS=172.0ppm | Day 16 cycle status: ammonia 0, nitrite 0, nitrate 80ppm (stable across two test
+[2026-04-06T23:00] Day 16 | risk=green | [manual event since last check ] | T=76.89°F pH=6.46 TDS=170.0ppm | Day 16 nitrogen cycle on track: ammonia 0, nitrite 0, nitrate stable at 80 ppm w
+[2026-04-06T23:00] Day 16 | risk=green | [manual event since last check ] | T=76.89°F pH=6.46 TDS=170.0ppm | Day 16 nitrogen cycle on track: ammonia 0, nitrite 0, nitrate stable at 80 ppm w
+[2026-04-06T23:15] Day 16 | risk=green | [manual event since last check ] | T=77.0°F pH=6.43 TDS=172.0ppm | Day 16: ammonia zero, nitrite zero, nitrate stable at 80ppm—cycle is progressing
+[2026-04-06T23:15] Day 16 | risk=green | [manual event since last check ] | T=77.0°F pH=6.43 TDS=172.0ppm | Day 16: ammonia zero, nitrite zero, nitrate stable at 80ppm—cycle is progressing
+[2026-04-06T23:30] Day 16 | risk=green | [manual event since last check ] | T=77.11°F pH=6.46 TDS=174.0ppm | Day 16 shows textbook nitrogen cycle progression: ammonia/nitrite zero, nitrate 
+[2026-04-06T23:30] Day 16 | risk=green | [manual event since last check ] | T=77.11°F pH=6.46 TDS=174.0ppm | Day 16 shows textbook nitrogen cycle progression: ammonia/nitrite zero, nitrate 
+[2026-04-06T23:45] Day 16 | risk=green | [manual event since last check ] | T=77.11°F pH=6.46 TDS=174.0ppm | Water chemistry is rock-solid: ammonia and nitrite both zero, nitrate steady at 
+[2026-04-06T23:45] Day 16 | risk=green | [manual event since last check ] | T=77.11°F pH=6.46 TDS=174.0ppm | Water chemistry is rock-solid: ammonia and nitrite both zero, nitrate steady at 
