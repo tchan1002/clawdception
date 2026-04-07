@@ -629,3 +629,11 @@
 [2026-04-07T05:30] Day 17 | risk=yellow | [ph outside target range: 6.49 ] | T=77.79°F pH=6.49 TDS=174.0ppm | pH breach is minor but real—we're 0.01 below the lower bound of acceptable. The 
 [2026-04-07T05:45] Day 17 | skipped (stable) | T=77.9°F pH=6.51 TDS=176.0ppm
 [2026-04-07T05:45] Day 17 | skipped (stable) | T=77.9°F pH=6.51 TDS=176.0ppm
+[2026-04-07T06:00] Day 17 | skipped (stable) | T=77.9°F pH=6.53 TDS=175.0ppm
+[2026-04-07T06:00] Day 17 | skipped (stable) | T=77.9°F pH=6.53 TDS=175.0ppm
+[2026-04-07T06:15] Day 17 | skipped (stable) | T=77.9°F pH=6.5 TDS=173.0ppm
+[2026-04-07T06:15] Day 17 | skipped (stable) | T=77.9°F pH=6.5 TDS=173.0ppm
+[2026-04-07T06:30] Day 17 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.51 TDS=176.0ppm | Temperature has crept to the absolute edge of target over 24 hours and needs wat
+[2026-04-07T06:30] Day 17 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.51 TDS=176.0ppm | Temperature has crept to the absolute edge of target over 24 hours and needs wat
+[2026-04-07T06:45] Day 17 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.5 TDS=175.0ppm | Temperature kissing upper boundary after mild 24hr upward creep (+0.9°F); ammoni
+[2026-04-07T06:45] Day 17 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.5 TDS=175.0ppm | Temperature kissing upper boundary after mild 24hr upward creep (+0.9°F); ammoni
