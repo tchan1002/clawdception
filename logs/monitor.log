@@ -621,3 +621,11 @@
 [2026-04-07T04:30] Day 17 | skipped (stable) | T=77.9°F pH=6.52 TDS=175.0ppm
 [2026-04-07T04:45] Day 17 | skipped (stable) | T=77.79°F pH=6.5 TDS=174.0ppm
 [2026-04-07T04:45] Day 17 | skipped (stable) | T=77.79°F pH=6.5 TDS=174.0ppm
+[2026-04-07T05:00] Day 17 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.49 TDS=175.0ppm | Temperature nudged just above ideal at 78.01°F—not a crisis, but we're at the th
+[2026-04-07T05:00] Day 17 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.49 TDS=175.0ppm | Temperature nudged just above ideal at 78.01°F—not a crisis, but we're at the th
+[2026-04-07T05:15] Day 17 | risk=yellow | [ph outside target range: 6.49 ] | T=77.79°F pH=6.49 TDS=173.0ppm | pH dipped to 6.49—technically outside target—but the 3.5-hour-old water test (6.
+[2026-04-07T05:15] Day 17 | risk=yellow | [ph outside target range: 6.49 ] | T=77.79°F pH=6.49 TDS=173.0ppm | pH dipped to 6.49—technically outside target—but the 3.5-hour-old water test (6.
+[2026-04-07T05:30] Day 17 | risk=yellow | [ph outside target range: 6.49 ] | T=77.79°F pH=6.49 TDS=174.0ppm | pH breach is minor but real—we're 0.01 below the lower bound of acceptable. The 
+[2026-04-07T05:30] Day 17 | risk=yellow | [ph outside target range: 6.49 ] | T=77.79°F pH=6.49 TDS=174.0ppm | pH breach is minor but real—we're 0.01 below the lower bound of acceptable. The 
+[2026-04-07T05:45] Day 17 | skipped (stable) | T=77.9°F pH=6.51 TDS=176.0ppm
+[2026-04-07T05:45] Day 17 | skipped (stable) | T=77.9°F pH=6.51 TDS=176.0ppm
