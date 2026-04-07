@@ -672,3 +672,9 @@
 [2026-04-07T10:45] Day 17 | risk=yellow | [ph outside target range: 6.44 ] | T=77.79°F pH=6.44 TDS=177.0ppm | pH is nudging below the 6.5 floor for the first time; the downward trend (-0.24 
 [2026-04-07T11:00] Day 17 | risk=yellow | [ph outside target range: 6.42 ] | T=77.56°F pH=6.42 TDS=177.0ppm | pH is edging below target and showing a mild downward trend over 24h, though sti
 [2026-04-07T11:00] Day 17 | risk=yellow | [ph outside target range: 6.42 ] | T=77.56°F pH=6.42 TDS=177.0ppm | pH is edging below target and showing a mild downward trend over 24h, though sti
+[2026-04-07T11:15] Day 17 | risk=yellow | [ph outside target range: 6.39 ] | T=77.79°F pH=6.39 TDS=177.0ppm | pH is sliding below the safe floor (6.39 vs. target 6.5–7.5) with a clear downwa
+[2026-04-07T11:15] Day 17 | risk=yellow | [ph outside target range: 6.39 ] | T=77.79°F pH=6.39 TDS=177.0ppm | pH is sliding below the safe floor (6.39 vs. target 6.5–7.5) with a clear downwa
+[2026-04-07T11:30] Day 17 | risk=yellow | [ph outside target range: 6.4 (] | T=77.68°F pH=6.4 TDS=177.0ppm | pH creeping downward (6.6→6.4 in ~17hr) is the concern; we're nudging toward the
+[2026-04-07T11:30] Day 17 | risk=yellow | [ph outside target range: 6.4 (] | T=77.68°F pH=6.4 TDS=177.0ppm | pH creeping downward (6.6→6.4 in ~17hr) is the concern; we're nudging toward the
+[2026-04-07T11:45] Day 17 | risk=yellow | [ph outside target range: 6.38 ] | T=77.68°F pH=6.38 TDS=177.0ppm | pH is drifting below safe range and shows a 0.27 drop since morning—this is acid
+[2026-04-07T11:45] Day 17 | risk=yellow | [ph outside target range: 6.38 ] | T=77.68°F pH=6.38 TDS=177.0ppm | pH is drifting below safe range and shows a 0.27 drop since morning—this is acid
