@@ -581,3 +581,11 @@
 [2026-04-06T23:30] Day 16 | risk=green | [manual event since last check ] | T=77.11°F pH=6.46 TDS=174.0ppm | Day 16 shows textbook nitrogen cycle progression: ammonia/nitrite zero, nitrate 
 [2026-04-06T23:45] Day 16 | risk=green | [manual event since last check ] | T=77.11°F pH=6.46 TDS=174.0ppm | Water chemistry is rock-solid: ammonia and nitrite both zero, nitrate steady at 
 [2026-04-06T23:45] Day 16 | risk=green | [manual event since last check ] | T=77.11°F pH=6.46 TDS=174.0ppm | Water chemistry is rock-solid: ammonia and nitrite both zero, nitrate steady at 
+[2026-04-07T00:00] Day 17 | risk=green | [manual event logged (water_tes] | T=77.56°F pH=6.44 TDS=172.0ppm | Day 17 cycle status is textbook: ammonia 0, nitrite 0, nitrate 80ppm. Nitrogen-f
+[2026-04-07T00:00] Day 17 | risk=green | [manual event logged (water_tes] | T=77.56°F pH=6.44 TDS=172.0ppm | Day 17 cycle status is textbook: ammonia 0, nitrite 0, nitrate 80ppm. Nitrogen-f
+[2026-04-07T00:15] Day 17 | risk=green | [manual event since last check ] | T=77.9°F pH=6.45 TDS=172.0ppm | Day 17: ammonia and nitrite remain zero, nitrate stable at 80ppm—cycle is lockin
+[2026-04-07T00:15] Day 17 | risk=green | [manual event since last check ] | T=77.9°F pH=6.45 TDS=172.0ppm | Day 17: ammonia and nitrite remain zero, nitrate stable at 80ppm—cycle is lockin
+[2026-04-07T00:30] Day 17 | risk=green | [manual event since last check ] | T=77.9°F pH=6.45 TDS=173.0ppm | Ammonia and nitrite remain at zero with healthy nitrate production (80ppm)—the c
+[2026-04-07T00:30] Day 17 | risk=green | [manual event since last check ] | T=77.9°F pH=6.45 TDS=173.0ppm | Ammonia and nitrite remain at zero with healthy nitrate production (80ppm)—the c
+[2026-04-07T00:45] Day 17 | risk=green | [manual event since last check ] | T=78.01°F pH=6.44 TDS=172.0ppm | Ammonia and nitrite both zero, nitrate holding steady at 80ppm—nitrogen cycle is
+[2026-04-07T00:45] Day 17 | risk=green | [manual event since last check ] | T=78.01°F pH=6.44 TDS=172.0ppm | Ammonia and nitrite both zero, nitrate holding steady at 80ppm—nitrogen cycle is
