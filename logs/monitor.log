@@ -613,3 +613,11 @@
 [2026-04-07T03:30] Day 17 | risk=green | [manual event since last check ] | T=78.01°F pH=6.49 TDS=175.0ppm | All parameters nominal on Day 17. Water test confirms ammonia=0, nitrite=0, nitr
 [2026-04-07T03:45] Day 17 | risk=green | [manual event since last check ] | T=77.9°F pH=6.5 TDS=175.0ppm | Ammonia and nitrite both zero; nitrate stable at 80ppm confirms robust nitrifica
 [2026-04-07T03:45] Day 17 | risk=green | [manual event since last check ] | T=77.9°F pH=6.5 TDS=175.0ppm | Ammonia and nitrite both zero; nitrate stable at 80ppm confirms robust nitrifica
+[2026-04-07T04:00] Day 17 | risk=green | [ph outside target range: 6.48 ] | T=77.9°F pH=6.48 TDS=174.0ppm | Ammonia and nitrite remain zero with strong nitrate at 80ppm—nitrogen cycle is p
+[2026-04-07T04:00] Day 17 | risk=green | [ph outside target range: 6.48 ] | T=77.9°F pH=6.48 TDS=174.0ppm | Ammonia and nitrite remain zero with strong nitrate at 80ppm—nitrogen cycle is p
+[2026-04-07T04:15] Day 17 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.46 TDS=173.0ppm | Temperature is at the upper edge of target (78.01°F) after a sustained warm 24 h
+[2026-04-07T04:15] Day 17 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.46 TDS=173.0ppm | Temperature is at the upper edge of target (78.01°F) after a sustained warm 24 h
+[2026-04-07T04:30] Day 17 | skipped (stable) | T=77.9°F pH=6.52 TDS=175.0ppm
+[2026-04-07T04:30] Day 17 | skipped (stable) | T=77.9°F pH=6.52 TDS=175.0ppm
+[2026-04-07T04:45] Day 17 | skipped (stable) | T=77.79°F pH=6.5 TDS=174.0ppm
+[2026-04-07T04:45] Day 17 | skipped (stable) | T=77.79°F pH=6.5 TDS=174.0ppm
