@@ -163,7 +163,7 @@ CONTEXT:
 Write three sections, each clearly delimited:
 
 ===DAILY_LOG===
-[The immutable daily log for {target_date}. Day {cycle_day_then} of the cycle — let that inform the arc. Write something Toby will read with his morning coffee and remember. Let personality shine through. Prefer striking and evocative imagery over verbose prose. Starting hook should make someone want to read more. 200–300 words.]
+[The immutable daily log for {target_date}. Day {cycle_day_then} of the cycle — let that inform the arc. Write something Toby will read with his morning coffee and remember. Let personality shine through. Prefer striking and evocative imagery over verbose prose. Starting hook has one goal: make Toby want to keep reading. 200–300 words.]
 
 ===STATE_OF_TANK===
 [Updated rolling state of the tank. Plain facts + current conditions. What's true about this tank right now. 200-350 words.]

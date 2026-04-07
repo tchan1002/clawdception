@@ -678,3 +678,9 @@
 [2026-04-07T11:30] Day 17 | risk=yellow | [ph outside target range: 6.4 (] | T=77.68°F pH=6.4 TDS=177.0ppm | pH creeping downward (6.6→6.4 in ~17hr) is the concern; we're nudging toward the
 [2026-04-07T11:45] Day 17 | risk=yellow | [ph outside target range: 6.38 ] | T=77.68°F pH=6.38 TDS=177.0ppm | pH is drifting below safe range and shows a 0.27 drop since morning—this is acid
 [2026-04-07T11:45] Day 17 | risk=yellow | [ph outside target range: 6.38 ] | T=77.68°F pH=6.38 TDS=177.0ppm | pH is drifting below safe range and shows a 0.27 drop since morning—this is acid
+[2026-04-07T12:00] Day 17 | risk=yellow | [ph outside target range: 6.38 ] | T=77.79°F pH=6.38 TDS=177.0ppm | pH has drifted into the yellow zone (6.38 vs. 6.5 target floor) and is trending 
+[2026-04-07T12:00] Day 17 | risk=yellow | [ph outside target range: 6.38 ] | T=77.79°F pH=6.38 TDS=177.0ppm | pH has drifted into the yellow zone (6.38 vs. 6.5 target floor) and is trending 
+[2026-04-07T12:15] Day 17 | risk=yellow | [manual event since last check ] | T=77.56°F pH=6.38 TDS=176.0ppm | Day 17 nitrogen cycle running clean: ammonia zero, nitrite zero, nitrate stable 
+[2026-04-07T12:15] Day 17 | risk=yellow | [manual event since last check ] | T=77.56°F pH=6.38 TDS=176.0ppm | Day 17 nitrogen cycle running clean: ammonia zero, nitrite zero, nitrate stable 
+[2026-04-07T12:30] Day 17 | risk=yellow | [manual event since last check ] | T=77.56°F pH=6.36 TDS=176.0ppm | pH is trending downward (mean 6.437, now 6.36) into the acidic margin despite st
+[2026-04-07T12:30] Day 17 | risk=yellow | [manual event since last check ] | T=77.56°F pH=6.36 TDS=176.0ppm | pH is trending downward (mean 6.437, now 6.36) into the acidic margin despite st
