@@ -557,3 +557,11 @@
 [2026-04-06T20:30] Day 16 | risk=green | [manual event since last check ] | T=76.55°F pH=7.41 TDS=170.0ppm | Day 16 nitrogen cycle stable: ammonia and nitrite zero, nitrate 80ppm (appropria
 [2026-04-06T20:45] Day 16 | risk=green | [manual event since last check ] | T=76.55°F pH=7.41 TDS=170.0ppm | All parameters nominal for day 16 of cycle. Recent water change (21:13) explains
 [2026-04-06T20:45] Day 16 | risk=green | [manual event since last check ] | T=76.55°F pH=7.41 TDS=170.0ppm | All parameters nominal for day 16 of cycle. Recent water change (21:13) explains
+[2026-04-06T21:00] Day 16 | risk=yellow | [manual event since last check ] | T=76.55°F pH=7.47 TDS=171.0ppm | pH spike after maintenance is notable—tap water pH appears higher than tank, pus
+[2026-04-06T21:00] Day 16 | risk=yellow | [manual event since last check ] | T=76.55°F pH=7.47 TDS=171.0ppm | pH spike after maintenance is notable—tap water pH appears higher than tank, pus
+[2026-04-06T21:15] Day 16 | risk=green | [manual event since last check ] | T=76.66°F pH=7.5 TDS=172.0ppm | All parameters in safe zone; nitrogen cycle progressing as expected with zero am
+[2026-04-06T21:15] Day 16 | risk=green | [manual event since last check ] | T=76.66°F pH=7.5 TDS=172.0ppm | All parameters in safe zone; nitrogen cycle progressing as expected with zero am
+[2026-04-06T21:30] Day 16 | risk=green | [manual event since last check ] | T=76.66°F pH=7.5 TDS=172.0ppm | All parameters in target zones post-water-change. The +0.99 pH spike is expected
+[2026-04-06T21:30] Day 16 | risk=green | [manual event since last check ] | T=76.66°F pH=7.5 TDS=172.0ppm | All parameters in target zones post-water-change. The +0.99 pH spike is expected
+[2026-04-06T21:45] Day 16 | risk=yellow | [manual event since last check ] | T=76.78°F pH=7.51 TDS=171.0ppm | pH spike post-water-change is expected but bears watching—7.51 sits at target ce
+[2026-04-06T21:45] Day 16 | risk=yellow | [manual event since last check ] | T=76.78°F pH=7.51 TDS=171.0ppm | pH spike post-water-change is expected but bears watching—7.51 sits at target ce
