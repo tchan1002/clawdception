@@ -654,3 +654,11 @@
 [2026-04-07T08:45] Day 17 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.51 TDS=174.0ppm | Temperature is climbing toward the ceiling at 78.12°F with a 3.15°F 24-hour rang
 [call-toby] Telegram sent (warning): No water test logged yet. Day 17 of cycle — ammonia and nitrite are unknown.
 [2026-04-07T08:45] Day 17 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.51 TDS=174.0ppm | Temperature is climbing toward the ceiling at 78.12°F with a 3.15°F 24-hour rang
+[2026-04-07T09:00] Day 17 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.52 TDS=175.0ppm | Temperature holding at upper boundary (78.12°F) with 3.15°F daily oscillation—co
+[2026-04-07T09:00] Day 17 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.52 TDS=175.0ppm | Temperature holding at upper boundary (78.12°F) with 3.15°F daily oscillation—co
+[2026-04-07T09:15] Day 17 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.52 TDS=175.0ppm | Temperature is creeping toward the ceiling at 78.12°F—not dangerous yet, but the
+[2026-04-07T09:15] Day 17 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.52 TDS=175.0ppm | Temperature is creeping toward the ceiling at 78.12°F—not dangerous yet, but the
+[2026-04-07T09:30] Day 17 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.52 TDS=175.0ppm | Temperature is pushing the upper boundary of your target range and shows a gentl
+[2026-04-07T09:30] Day 17 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.52 TDS=175.0ppm | Temperature is pushing the upper boundary of your target range and shows a gentl
+[2026-04-07T09:45] Day 17 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.48 TDS=177.0ppm | Temperature has breached the upper target bound and shows a 24-hour upward trend
+[2026-04-07T09:45] Day 17 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.48 TDS=177.0ppm | Temperature has breached the upper target bound and shows a 24-hour upward trend
