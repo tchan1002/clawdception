@@ -526,42 +526,48 @@
 [2026-04-06T17:00] Day 16 | stale | last reading 163min ago (14:16)
 [2026-04-06T17:00] Day 16 | stale | last reading 163min ago (14:16)
 [2026-04-06T17:01] Day 16 | stale | last reading 164min ago (14:16)
-[2026-04-06T17:15] Day 16 | risk=green | [water_change] | T=75.09°F pH=7.08 TDS=173.0ppm | 20% water change performed. Post-change: pH 7.08, TDS 173 ppm — both healthy. Ammonia undetectable, nitrite resolved. Cycle stable.
-[2026-04-06T17:15] Day 16 | risk=green | [water_change] | T=75.09°F pH=7.08 TDS=173.0ppm | 20% water change performed. Post-change: pH 7.08, TDS 173 ppm — both healthy. Ammonia undetectable, nitrite resolved. Cycle stable.
-[2026-04-06T17:30] Day 16 | risk=yellow | [manual event since last check ] | T=75.31°F pH=7.13 TDS=173.0ppm | Day 16: ammonia and nitrite both zero, nitrate steady at 80 ppm—cycle is progres
-[2026-04-06T17:30] Day 16 | risk=yellow | [manual event since last check ] | T=75.31°F pH=7.13 TDS=173.0ppm | Day 16: ammonia and nitrite both zero, nitrate steady at 80 ppm—cycle is progres
-[2026-04-06T17:45] Day 16 | risk=yellow | [manual event since last check ] | T=75.65°F pH=7.17 TDS=170.0ppm | Ammonia and nitrite both zero with nitrate holding steady at 80 ppm signals stro
-[2026-04-06T17:45] Day 16 | risk=yellow | [manual event since last check ] | T=75.65°F pH=7.17 TDS=170.0ppm | Ammonia and nitrite both zero with nitrate holding steady at 80 ppm signals stro
-[2026-04-06T18:00] Day 16 | risk=yellow | [manual event since last check ] | T=75.99°F pH=7.18 TDS=169.0ppm | Nitrogen cycle progressing steadily—ammonia and nitrite remain zero, nitrate sta
-[2026-04-06T18:00] Day 16 | risk=yellow | [manual event since last check ] | T=75.99°F pH=7.18 TDS=169.0ppm | Nitrogen cycle progressing steadily—ammonia and nitrite remain zero, nitrate sta
-[2026-04-06T18:15] Day 16 | risk=green | [manual event since last check ] | T=75.99°F pH=7.21 TDS=170.0ppm | All parameters nominal and trending well post-water-change. Ammonia and nitrite 
-[2026-04-06T18:15] Day 16 | risk=green | [manual event since last check ] | T=75.99°F pH=7.21 TDS=170.0ppm | All parameters nominal and trending well post-water-change. Ammonia and nitrite 
-[2026-04-06T18:30] Day 16 | risk=green | [manual event since last check ] | T=76.21°F pH=7.24 TDS=170.0ppm | Day 16 snapshot: ammonia & nitrite both zero, nitrate stable at 80ppm—bacteria c
-[2026-04-06T18:30] Day 16 | risk=green | [manual event since last check ] | T=76.21°F pH=7.24 TDS=170.0ppm | Day 16 snapshot: ammonia & nitrite both zero, nitrate stable at 80ppm—bacteria c
-[2026-04-06T18:45] Day 16 | risk=green | [manual event since last check ] | T=76.32°F pH=7.27 TDS=170.0ppm | Day 16: ammonia zero, nitrite zero, nitrate stable at 80 ppm—nitrogen cycle prog
-[2026-04-06T18:45] Day 16 | risk=green | [manual event since last check ] | T=76.32°F pH=7.27 TDS=170.0ppm | Day 16: ammonia zero, nitrite zero, nitrate stable at 80 ppm—nitrogen cycle prog
-[2026-04-06T19:00] Day 16 | risk=green | [manual event since last check ] | T=76.32°F pH=7.29 TDS=170.0ppm | Day 16 shows textbook nitrogen cycle progression: ammonia zero, nitrite zero, ni
-[2026-04-06T19:00] Day 16 | risk=green | [manual event since last check ] | T=76.32°F pH=7.29 TDS=170.0ppm | Day 16 shows textbook nitrogen cycle progression: ammonia zero, nitrite zero, ni
-[2026-04-06T19:15] Day 16 | risk=green | [manual event since last check ] | T=76.44°F pH=7.32 TDS=169.0ppm | All parameters in safe zones; ammonia/nitrite remain zero and nitrate stable at 
-[2026-04-06T19:15] Day 16 | risk=green | [manual event since last check ] | T=76.44°F pH=7.32 TDS=169.0ppm | All parameters in safe zones; ammonia/nitrite remain zero and nitrate stable at 
-[2026-04-06T19:30] Day 16 | risk=yellow | [manual event since last check ] | T=76.55°F pH=7.33 TDS=171.0ppm | Nitrogen cycle remains stable—ammonia and nitrite both zero, nitrate holding ste
-[2026-04-06T19:30] Day 16 | risk=yellow | [manual event since last check ] | T=76.55°F pH=7.33 TDS=171.0ppm | Nitrogen cycle remains stable—ammonia and nitrite both zero, nitrate holding ste
-[2026-04-06T19:45] Day 16 | risk=green | [manual event since last check ] | T=76.55°F pH=7.35 TDS=170.0ppm | Day 16 shows textbook nitrogen cycle progression: zero ammonia/nitrite, stable 8
-[2026-04-06T19:45] Day 16 | risk=green | [manual event since last check ] | T=76.55°F pH=7.35 TDS=170.0ppm | Day 16 shows textbook nitrogen cycle progression: zero ammonia/nitrite, stable 8
-[2026-04-06T20:00] Day 16 | risk=green | [manual event since last check ] | T=76.44°F pH=7.37 TDS=172.0ppm | All parameters in target zones with no danger signals. Ammonia/nitrite remain ze
-[2026-04-06T20:00] Day 16 | risk=green | [manual event since last check ] | T=76.44°F pH=7.37 TDS=172.0ppm | All parameters in target zones with no danger signals. Ammonia/nitrite remain ze
-[2026-04-06T20:15] Day 16 | risk=yellow | [manual event since last check ] | T=76.55°F pH=7.41 TDS=170.0ppm | Ammonia and nitrite remain zero—bacteria are performing. The pH rise is the conc
-[2026-04-06T20:15] Day 16 | risk=yellow | [manual event since last check ] | T=76.55°F pH=7.41 TDS=170.0ppm | Ammonia and nitrite remain zero—bacteria are performing. The pH rise is the conc
-[2026-04-06T20:30] Day 16 | risk=green | [manual event since last check ] | T=76.55°F pH=7.41 TDS=170.0ppm | Day 16 nitrogen cycle stable: ammonia and nitrite zero, nitrate 80ppm (appropria
+[2026-04-06T17:15] Day 16 | risk=green | [water_change] | T=75.09°F pH=5.98 TDS=173.0ppm | 20% water change performed. Post-change: pH 7.08, TDS 173 ppm — both healthy. Ammonia undetectable, nitrite resolved. Cycle stable.
+[2026-04-06T17:15] Day 16 | risk=green | [water_change] | T=75.09°F pH=5.98 TDS=173.0ppm | 20% water change performed. Post-change: pH 7.08, TDS 173 ppm — both healthy. Ammonia undetectable, nitrite resolved. Cycle stable.
+[2026-04-06T17:30] Day 16 | risk=yellow | [manual event since last check ] | T=75.31°F pH=6.03 TDS=173.0ppm | Day 16: ammonia and nitrite both zero, nitrate steady at 80 ppm—cycle is progres
+[2026-04-06T17:30] Day 16 | risk=yellow | [manual event since last check ] | T=75.31°F pH=6.03 TDS=173.0ppm | Day 16: ammonia and nitrite both zero, nitrate steady at 80 ppm—cycle is progres
+[2026-04-06T17:45] Day 16 | risk=yellow | [manual event since last check ] | T=75.65°F pH=6.07 TDS=170.0ppm | Ammonia and nitrite both zero with nitrate holding steady at 80 ppm signals stro
+[2026-04-06T17:45] Day 16 | risk=yellow | [manual event since last check ] | T=75.65°F pH=6.07 TDS=170.0ppm | Ammonia and nitrite both zero with nitrate holding steady at 80 ppm signals stro
+[2026-04-06T18:00] Day 16 | risk=yellow | [manual event since last check ] | T=75.99°F pH=6.08 TDS=169.0ppm | Nitrogen cycle progressing steadily—ammonia and nitrite remain zero, nitrate sta
+[2026-04-06T18:00] Day 16 | risk=yellow | [manual event since last check ] | T=75.99°F pH=6.08 TDS=169.0ppm | Nitrogen cycle progressing steadily—ammonia and nitrite remain zero, nitrate sta
+[2026-04-06T18:15] Day 16 | risk=green | [manual event since last check ] | T=75.99°F pH=6.11 TDS=170.0ppm | All parameters nominal and trending well post-water-change. Ammonia and nitrite 
+[2026-04-06T18:15] Day 16 | risk=green | [manual event since last check ] | T=75.99°F pH=6.11 TDS=170.0ppm | All parameters nominal and trending well post-water-change. Ammonia and nitrite 
+[2026-04-06T18:30] Day 16 | risk=green | [manual event since last check ] | T=76.21°F pH=6.14 TDS=170.0ppm | Day 16 snapshot: ammonia & nitrite both zero, nitrate stable at 80ppm—bacteria c
+[2026-04-06T18:30] Day 16 | risk=green | [manual event since last check ] | T=76.21°F pH=6.14 TDS=170.0ppm | Day 16 snapshot: ammonia & nitrite both zero, nitrate stable at 80ppm—bacteria c
+[2026-04-06T18:45] Day 16 | risk=green | [manual event since last check ] | T=76.32°F pH=6.17 TDS=170.0ppm | Day 16: ammonia zero, nitrite zero, nitrate stable at 80 ppm—nitrogen cycle prog
+[2026-04-06T18:45] Day 16 | risk=green | [manual event since last check ] | T=76.32°F pH=6.17 TDS=170.0ppm | Day 16: ammonia zero, nitrite zero, nitrate stable at 80 ppm—nitrogen cycle prog
+[2026-04-06T19:00] Day 16 | risk=green | [manual event since last check ] | T=76.32°F pH=6.19 TDS=170.0ppm | Day 16 shows textbook nitrogen cycle progression: ammonia zero, nitrite zero, ni
+[2026-04-06T19:00] Day 16 | risk=green | [manual event since last check ] | T=76.32°F pH=6.19 TDS=170.0ppm | Day 16 shows textbook nitrogen cycle progression: ammonia zero, nitrite zero, ni
+[2026-04-06T19:15] Day 16 | risk=green | [manual event since last check ] | T=76.44°F pH=6.22 TDS=169.0ppm | All parameters in safe zones; ammonia/nitrite remain zero and nitrate stable at 
+[2026-04-06T19:15] Day 16 | risk=green | [manual event since last check ] | T=76.44°F pH=6.22 TDS=169.0ppm | All parameters in safe zones; ammonia/nitrite remain zero and nitrate stable at 
+[2026-04-06T19:30] Day 16 | risk=yellow | [manual event since last check ] | T=76.55°F pH=6.23 TDS=171.0ppm | Nitrogen cycle remains stable—ammonia and nitrite both zero, nitrate holding ste
+[2026-04-06T19:30] Day 16 | risk=yellow | [manual event since last check ] | T=76.55°F pH=6.23 TDS=171.0ppm | Nitrogen cycle remains stable—ammonia and nitrite both zero, nitrate holding ste
+[2026-04-06T19:45] Day 16 | risk=green | [manual event since last check ] | T=76.55°F pH=6.25 TDS=170.0ppm | Day 16 shows textbook nitrogen cycle progression: zero ammonia/nitrite, stable 8
+[2026-04-06T19:45] Day 16 | risk=green | [manual event since last check ] | T=76.55°F pH=6.25 TDS=170.0ppm | Day 16 shows textbook nitrogen cycle progression: zero ammonia/nitrite, stable 8
+[2026-04-06T20:00] Day 16 | risk=green | [manual event since last check ] | T=76.44°F pH=6.27 TDS=172.0ppm | All parameters in target zones with no danger signals. Ammonia/nitrite remain ze
+[2026-04-06T20:00] Day 16 | risk=green | [manual event since last check ] | T=76.44°F pH=6.27 TDS=172.0ppm | All parameters in target zones with no danger signals. Ammonia/nitrite remain ze
+[2026-04-06T20:15] Day 16 | risk=yellow | [manual event since last check ] | T=76.55°F pH=6.31 TDS=170.0ppm | Ammonia and nitrite remain zero—bacteria are performing. The pH rise is the conc
+[2026-04-06T20:15] Day 16 | risk=yellow | [manual event since last check ] | T=76.55°F pH=6.31 TDS=170.0ppm | Ammonia and nitrite remain zero—bacteria are performing. The pH rise is the conc
+[2026-04-06T20:30] Day 16 | risk=green | [manual event since last check ] | T=76.55°F pH=6.31 TDS=170.0ppm | Day 16 nitrogen cycle stable: ammonia and nitrite zero, nitrate 80ppm (appropria
 [call-toby] Telegram sent (warning): No water test logged yet. Day 16 of cycle — ammonia and nitrite are unknown.
-[2026-04-06T20:30] Day 16 | risk=green | [manual event since last check ] | T=76.55°F pH=7.41 TDS=170.0ppm | Day 16 nitrogen cycle stable: ammonia and nitrite zero, nitrate 80ppm (appropria
-[2026-04-06T20:45] Day 16 | risk=green | [manual event since last check ] | T=76.55°F pH=7.41 TDS=170.0ppm | All parameters nominal for day 16 of cycle. Recent water change (21:13) explains
-[2026-04-06T20:45] Day 16 | risk=green | [manual event since last check ] | T=76.55°F pH=7.41 TDS=170.0ppm | All parameters nominal for day 16 of cycle. Recent water change (21:13) explains
-[2026-04-06T21:00] Day 16 | risk=yellow | [manual event since last check ] | T=76.55°F pH=7.47 TDS=171.0ppm | pH spike after maintenance is notable—tap water pH appears higher than tank, pus
-[2026-04-06T21:00] Day 16 | risk=yellow | [manual event since last check ] | T=76.55°F pH=7.47 TDS=171.0ppm | pH spike after maintenance is notable—tap water pH appears higher than tank, pus
-[2026-04-06T21:15] Day 16 | risk=green | [manual event since last check ] | T=76.66°F pH=7.5 TDS=172.0ppm | All parameters in safe zone; nitrogen cycle progressing as expected with zero am
-[2026-04-06T21:15] Day 16 | risk=green | [manual event since last check ] | T=76.66°F pH=7.5 TDS=172.0ppm | All parameters in safe zone; nitrogen cycle progressing as expected with zero am
-[2026-04-06T21:30] Day 16 | risk=green | [manual event since last check ] | T=76.66°F pH=7.5 TDS=172.0ppm | All parameters in target zones post-water-change. The +0.99 pH spike is expected
-[2026-04-06T21:30] Day 16 | risk=green | [manual event since last check ] | T=76.66°F pH=7.5 TDS=172.0ppm | All parameters in target zones post-water-change. The +0.99 pH spike is expected
-[2026-04-06T21:45] Day 16 | risk=yellow | [manual event since last check ] | T=76.78°F pH=7.51 TDS=171.0ppm | pH spike post-water-change is expected but bears watching—7.51 sits at target ce
-[2026-04-06T21:45] Day 16 | risk=yellow | [manual event since last check ] | T=76.78°F pH=7.51 TDS=171.0ppm | pH spike post-water-change is expected but bears watching—7.51 sits at target ce
+[2026-04-06T20:30] Day 16 | risk=green | [manual event since last check ] | T=76.55°F pH=6.31 TDS=170.0ppm | Day 16 nitrogen cycle stable: ammonia and nitrite zero, nitrate 80ppm (appropria
+[2026-04-06T20:45] Day 16 | risk=green | [manual event since last check ] | T=76.55°F pH=6.31 TDS=170.0ppm | All parameters nominal for day 16 of cycle. Recent water change (21:13) explains
+[2026-04-06T20:45] Day 16 | risk=green | [manual event since last check ] | T=76.55°F pH=6.31 TDS=170.0ppm | All parameters nominal for day 16 of cycle. Recent water change (21:13) explains
+[2026-04-06T21:00] Day 16 | risk=yellow | [manual event since last check ] | T=76.55°F pH=6.37 TDS=171.0ppm | pH spike after maintenance is notable—tap water pH appears higher than tank, pus
+[2026-04-06T21:00] Day 16 | risk=yellow | [manual event since last check ] | T=76.55°F pH=6.37 TDS=171.0ppm | pH spike after maintenance is notable—tap water pH appears higher than tank, pus
+[2026-04-06T21:15] Day 16 | risk=green | [manual event since last check ] | T=76.66°F pH=6.4 TDS=172.0ppm | All parameters in safe zone; nitrogen cycle progressing as expected with zero am
+[2026-04-06T21:15] Day 16 | risk=green | [manual event since last check ] | T=76.66°F pH=6.4 TDS=172.0ppm | All parameters in safe zone; nitrogen cycle progressing as expected with zero am
+[2026-04-06T21:30] Day 16 | risk=green | [manual event since last check ] | T=76.66°F pH=6.4 TDS=172.0ppm | All parameters in target zones post-water-change. The +0.99 pH spike is expected
+[2026-04-06T21:30] Day 16 | risk=green | [manual event since last check ] | T=76.66°F pH=6.4 TDS=172.0ppm | All parameters in target zones post-water-change. The +0.99 pH spike is expected
+[2026-04-06T21:45] Day 16 | risk=yellow | [manual event since last check ] | T=76.78°F pH=6.41 TDS=171.0ppm | pH spike post-water-change is expected but bears watching—7.51 sits at target ce
+[2026-04-06T21:45] Day 16 | risk=yellow | [manual event since last check ] | T=76.78°F pH=6.41 TDS=171.0ppm | pH spike post-water-change is expected but bears watching—7.51 sits at target ce
+[2026-04-06T22:00] Day 16 | risk=yellow | [manual event since last check ] | T=76.78°F pH=6.41 TDS=171.0ppm | Day 16 nitrogen cycle trending cleanly: zero ammonia/nitrite, nitrate stable at 
+[2026-04-06T22:00] Day 16 | risk=yellow | [manual event since last check ] | T=76.78°F pH=6.41 TDS=171.0ppm | Day 16 nitrogen cycle trending cleanly: zero ammonia/nitrite, nitrate stable at 
+[2026-04-06T22:15] Day 16 | risk=green | [manual event since last check ] | T=76.78°F pH=6.41 TDS=170.0ppm | Tank remains stable entering day 16 of nitrogen cycle with zero ammonia, zero ni
+[2026-04-06T22:15] Day 16 | risk=green | [manual event since last check ] | T=76.78°F pH=6.41 TDS=170.0ppm | Tank remains stable entering day 16 of nitrogen cycle with zero ammonia, zero ni
+[2026-04-06T22:30] Day 16 | risk=yellow | [ph outside target range: 7.52 ] | T=76.89°F pH=7.52 TDS=171.0ppm | pH crept to 7.52 immediately after water change—likely from tap water alkalinity
+[2026-04-06T22:30] Day 16 | risk=yellow | [ph outside target range: 7.52 ] | T=76.89°F pH=7.52 TDS=171.0ppm | pH crept to 7.52 immediately after water change—likely from tap water alkalinity
