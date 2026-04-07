@@ -540,3 +540,11 @@
 [2026-04-06T18:30] Day 16 | risk=green | [manual event since last check ] | T=76.21°F pH=7.24 TDS=170.0ppm | Day 16 snapshot: ammonia & nitrite both zero, nitrate stable at 80ppm—bacteria c
 [2026-04-06T18:45] Day 16 | risk=green | [manual event since last check ] | T=76.32°F pH=7.27 TDS=170.0ppm | Day 16: ammonia zero, nitrite zero, nitrate stable at 80 ppm—nitrogen cycle prog
 [2026-04-06T18:45] Day 16 | risk=green | [manual event since last check ] | T=76.32°F pH=7.27 TDS=170.0ppm | Day 16: ammonia zero, nitrite zero, nitrate stable at 80 ppm—nitrogen cycle prog
+[2026-04-06T19:00] Day 16 | risk=green | [manual event since last check ] | T=76.32°F pH=7.29 TDS=170.0ppm | Day 16 shows textbook nitrogen cycle progression: ammonia zero, nitrite zero, ni
+[2026-04-06T19:00] Day 16 | risk=green | [manual event since last check ] | T=76.32°F pH=7.29 TDS=170.0ppm | Day 16 shows textbook nitrogen cycle progression: ammonia zero, nitrite zero, ni
+[2026-04-06T19:15] Day 16 | risk=green | [manual event since last check ] | T=76.44°F pH=7.32 TDS=169.0ppm | All parameters in safe zones; ammonia/nitrite remain zero and nitrate stable at 
+[2026-04-06T19:15] Day 16 | risk=green | [manual event since last check ] | T=76.44°F pH=7.32 TDS=169.0ppm | All parameters in safe zones; ammonia/nitrite remain zero and nitrate stable at 
+[2026-04-06T19:30] Day 16 | risk=yellow | [manual event since last check ] | T=76.55°F pH=7.33 TDS=171.0ppm | Nitrogen cycle remains stable—ammonia and nitrite both zero, nitrate holding ste
+[2026-04-06T19:30] Day 16 | risk=yellow | [manual event since last check ] | T=76.55°F pH=7.33 TDS=171.0ppm | Nitrogen cycle remains stable—ammonia and nitrite both zero, nitrate holding ste
+[2026-04-06T19:45] Day 16 | risk=green | [manual event since last check ] | T=76.55°F pH=7.35 TDS=170.0ppm | Day 16 shows textbook nitrogen cycle progression: zero ammonia/nitrite, stable 8
+[2026-04-06T19:45] Day 16 | risk=green | [manual event since last check ] | T=76.55°F pH=7.35 TDS=170.0ppm | Day 16 shows textbook nitrogen cycle progression: zero ammonia/nitrite, stable 8
