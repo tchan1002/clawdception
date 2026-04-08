@@ -872,3 +872,11 @@
 [2026-04-08T11:30] Day 18 | risk=green | [temperature outside target ran] | T=78.01°F pH=6.47 TDS=180.0ppm | Nitrogen cycle progressing cleanly—ammonia and nitrite consistently zero, nitrat
 [2026-04-08T11:45] Day 18 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.46 TDS=178.0ppm | Temperature is nudging the ceiling—not urgent, but the upward creep bears watchi
 [2026-04-08T11:45] Day 18 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.46 TDS=178.0ppm | Temperature is nudging the ceiling—not urgent, but the upward creep bears watchi
+[2026-04-08T12:00] Day 18 | risk=yellow | [ph outside target range: 6.44 ] | T=77.9°F pH=6.44 TDS=180.0ppm | pH is marginally low (6.44 vs 6.5 floor) but shows gentle upward momentum and si
+[2026-04-08T12:00] Day 18 | risk=yellow | [ph outside target range: 6.44 ] | T=77.9°F pH=6.44 TDS=180.0ppm | pH is marginally low (6.44 vs 6.5 floor) but shows gentle upward momentum and si
+[2026-04-08T12:15] Day 18 | risk=yellow | [ph outside target range: 6.42 ] | T=77.79°F pH=6.42 TDS=181.0ppm | pH is nudging below the safe floor at 6.42—still shallow enough that the upward 
+[2026-04-08T12:15] Day 18 | risk=yellow | [ph outside target range: 6.42 ] | T=77.79°F pH=6.42 TDS=181.0ppm | pH is nudging below the safe floor at 6.42—still shallow enough that the upward 
+[2026-04-08T12:30] Day 18 | risk=green | [ph outside target range: 6.4 (] | T=77.9°F pH=6.4 TDS=180.0ppm | Cycle tracking well—ammonia zero, nitrite zero, nitrate climbing predictably. pH
+[2026-04-08T12:30] Day 18 | risk=green | [ph outside target range: 6.4 (] | T=77.9°F pH=6.4 TDS=180.0ppm | Cycle tracking well—ammonia zero, nitrite zero, nitrate climbing predictably. pH
+[2026-04-08T12:45] Day 18 | risk=green | [ph outside target range: 6.37 ] | T=77.9°F pH=6.37 TDS=179.0ppm | Nitrogen cycle progresses nominally—ammonia and nitrite remain undetectable, nit
+[2026-04-08T12:45] Day 18 | risk=green | [ph outside target range: 6.37 ] | T=77.9°F pH=6.37 TDS=179.0ppm | Nitrogen cycle progresses nominally—ammonia and nitrite remain undetectable, nit
