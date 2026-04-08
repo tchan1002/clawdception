@@ -815,3 +815,11 @@
 [2026-04-08T04:30] Day 18 | risk=yellow | [ph outside target range: 6.47 ] | T=77.79°F pH=6.47 TDS=178.0ppm | pH is drifting down despite recent stability—the 0.06-point drop over 24 hours a
 [2026-04-08T04:45] Day 18 | skipped (stable) | T=77.68°F pH=6.51 TDS=181.0ppm
 [2026-04-08T04:45] Day 18 | skipped (stable) | T=77.68°F pH=6.51 TDS=181.0ppm
+[2026-04-08T05:00] Day 18 | risk=yellow | [ph outside target range: 6.46 ] | T=77.9°F pH=6.46 TDS=179.0ppm | pH dipped to 6.46 after a 6-hour slide from 6.53, suggesting gentle acidificatio
+[2026-04-08T05:00] Day 18 | risk=yellow | [ph outside target range: 6.46 ] | T=77.9°F pH=6.46 TDS=179.0ppm | pH dipped to 6.46 after a 6-hour slide from 6.53, suggesting gentle acidificatio
+[2026-04-08T05:15] Day 18 | risk=yellow | [ph outside target range: 6.46 ] | T=77.79°F pH=6.46 TDS=180.0ppm | pH has slipped 0.03 units below the 6.5 floor over 24 hours and sits at 6.46—tec
+[2026-04-08T05:15] Day 18 | risk=yellow | [ph outside target range: 6.46 ] | T=77.79°F pH=6.46 TDS=180.0ppm | pH has slipped 0.03 units below the 6.5 floor over 24 hours and sits at 6.46—tec
+[2026-04-08T05:30] Day 18 | risk=yellow | [ph outside target range: 6.46 ] | T=77.79°F pH=6.46 TDS=179.0ppm | pH is creeping down (6.6 → 6.4 over 15 hours) and now sits below the 6.5 floor, 
+[2026-04-08T05:30] Day 18 | risk=yellow | [ph outside target range: 6.46 ] | T=77.79°F pH=6.46 TDS=179.0ppm | pH is creeping down (6.6 → 6.4 over 15 hours) and now sits below the 6.5 floor, 
+[2026-04-08T05:45] Day 18 | risk=yellow | [ph outside target range: 6.46 ] | T=77.9°F pH=6.46 TDS=180.0ppm | pH is marginally out of range but trend is more concerning than current value—a 
+[2026-04-08T05:45] Day 18 | risk=yellow | [ph outside target range: 6.46 ] | T=77.9°F pH=6.46 TDS=180.0ppm | pH is marginally out of range but trend is more concerning than current value—a 
