@@ -799,3 +799,11 @@
 [2026-04-08T02:30] Day 18 | risk=green | [manual event since last check ] | T=77.9°F pH=6.47 TDS=180.0ppm | Ammonia and nitrite remain zero with nitrate stable at 80ppm—biofilter is cyclin
 [2026-04-08T02:45] Day 18 | risk=green | [temperature outside target ran] | T=78.01°F pH=6.45 TDS=179.0ppm | Nitrogen cycle progressing normally: ammonia 0, nitrite 0, nitrate 80ppm. Temper
 [2026-04-08T02:45] Day 18 | risk=green | [temperature outside target ran] | T=78.01°F pH=6.45 TDS=179.0ppm | Nitrogen cycle progressing normally: ammonia 0, nitrite 0, nitrate 80ppm. Temper
+[2026-04-08T03:00] Day 18 | risk=yellow | [ph outside target range: 6.45 ] | T=77.79°F pH=6.45 TDS=179.0ppm | Nitrogen cycle progressing cleanly—ammonia/nitrite zero, nitrate steady at 80ppm
+[2026-04-08T03:00] Day 18 | risk=yellow | [ph outside target range: 6.45 ] | T=77.79°F pH=6.45 TDS=179.0ppm | Nitrogen cycle progressing cleanly—ammonia/nitrite zero, nitrate steady at 80ppm
+[2026-04-08T03:15] Day 18 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.48 TDS=178.0ppm | Temperature nudged 0.01°F above target, likely oscillation noise rather than tru
+[2026-04-08T03:15] Day 18 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.48 TDS=178.0ppm | Temperature nudged 0.01°F above target, likely oscillation noise rather than tru
+[2026-04-08T03:30] Day 18 | risk=yellow | [ph outside target range: 6.45 ] | T=77.9°F pH=6.45 TDS=179.0ppm | pH slipped to 6.45—below the 6.5 floor—and shows a downward drift (-0.04 in 24h)
+[2026-04-08T03:30] Day 18 | risk=yellow | [ph outside target range: 6.45 ] | T=77.9°F pH=6.45 TDS=179.0ppm | pH slipped to 6.45—below the 6.5 floor—and shows a downward drift (-0.04 in 24h)
+[2026-04-08T03:45] Day 18 | risk=yellow | [ph outside target range: 6.46 ] | T=77.79°F pH=6.46 TDS=181.0ppm | pH is technically out of target (6.46 < 6.5) and showing a minor downward drift 
+[2026-04-08T03:45] Day 18 | risk=yellow | [ph outside target range: 6.46 ] | T=77.79°F pH=6.46 TDS=181.0ppm | pH is technically out of target (6.46 < 6.5) and showing a minor downward drift 
