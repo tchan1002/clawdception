@@ -807,3 +807,11 @@
 [2026-04-08T03:30] Day 18 | risk=yellow | [ph outside target range: 6.45 ] | T=77.9°F pH=6.45 TDS=179.0ppm | pH slipped to 6.45—below the 6.5 floor—and shows a downward drift (-0.04 in 24h)
 [2026-04-08T03:45] Day 18 | risk=yellow | [ph outside target range: 6.46 ] | T=77.79°F pH=6.46 TDS=181.0ppm | pH is technically out of target (6.46 < 6.5) and showing a minor downward drift 
 [2026-04-08T03:45] Day 18 | risk=yellow | [ph outside target range: 6.46 ] | T=77.79°F pH=6.46 TDS=181.0ppm | pH is technically out of target (6.46 < 6.5) and showing a minor downward drift 
+[2026-04-08T04:00] Day 18 | risk=yellow | [ph outside target range: 6.45 ] | T=77.9°F pH=6.45 TDS=179.0ppm | pH drifting below target range despite current safety margin for shrimp; nitrate
+[2026-04-08T04:00] Day 18 | risk=yellow | [ph outside target range: 6.45 ] | T=77.9°F pH=6.45 TDS=179.0ppm | pH drifting below target range despite current safety margin for shrimp; nitrate
+[2026-04-08T04:15] Day 18 | risk=green | [temperature outside target ran] | T=78.01°F pH=6.46 TDS=179.0ppm | Nitrogen cycle progressing nominally: ammonia and nitrite both zero, nitrate at 
+[2026-04-08T04:15] Day 18 | risk=green | [temperature outside target ran] | T=78.01°F pH=6.46 TDS=179.0ppm | Nitrogen cycle progressing nominally: ammonia and nitrite both zero, nitrate at 
+[2026-04-08T04:30] Day 18 | risk=yellow | [ph outside target range: 6.47 ] | T=77.79°F pH=6.47 TDS=178.0ppm | pH is drifting down despite recent stability—the 0.06-point drop over 24 hours a
+[2026-04-08T04:30] Day 18 | risk=yellow | [ph outside target range: 6.47 ] | T=77.79°F pH=6.47 TDS=178.0ppm | pH is drifting down despite recent stability—the 0.06-point drop over 24 hours a
+[2026-04-08T04:45] Day 18 | skipped (stable) | T=77.68°F pH=6.51 TDS=181.0ppm
+[2026-04-08T04:45] Day 18 | skipped (stable) | T=77.68°F pH=6.51 TDS=181.0ppm
