@@ -742,3 +742,11 @@
 [2026-04-07T19:30] Day 17 | risk=yellow | [ph outside target range: 6.39 ] | T=77.79°F pH=6.39 TDS=178.0ppm | pH has drifted 0.21 units below target in 2 hours despite recent manual test sho
 [2026-04-07T19:45] Day 17 | risk=yellow | [ph outside target range: 6.38 ] | T=77.9°F pH=6.38 TDS=176.0ppm | Day 17: pH sensor reads 6.38, but water tests from 17 hours ago show 6.6—suggest
 [2026-04-07T19:45] Day 17 | risk=yellow | [ph outside target range: 6.38 ] | T=77.9°F pH=6.38 TDS=176.0ppm | Day 17: pH sensor reads 6.38, but water tests from 17 hours ago show 6.6—suggest
+[2026-04-07T20:00] Day 17 | risk=yellow | [ph outside target range: 6.42 ] | T=77.68°F pH=6.42 TDS=176.0ppm | pH has dipped to 6.42, breaching the lower target boundary, likely from organic 
+[2026-04-07T20:00] Day 17 | risk=yellow | [ph outside target range: 6.42 ] | T=77.68°F pH=6.42 TDS=176.0ppm | pH has dipped to 6.42, breaching the lower target boundary, likely from organic 
+[2026-04-07T20:15] Day 17 | risk=yellow | [ph outside target range: 6.46 ] | T=77.9°F pH=6.46 TDS=176.0ppm | pH sensor shows 6.46 vs. manual test 6.6 just 3h ago—possible drift or micro-var
+[2026-04-07T20:15] Day 17 | risk=yellow | [ph outside target range: 6.46 ] | T=77.9°F pH=6.46 TDS=176.0ppm | pH sensor shows 6.46 vs. manual test 6.6 just 3h ago—possible drift or micro-var
+[2026-04-07T20:30] Day 17 | risk=yellow | [ph outside target range: 6.45 ] | T=77.9°F pH=6.45 TDS=177.0ppm | pH is technically outside the safe zone by 0.05 units, which is marginal but wor
+[2026-04-07T20:30] Day 17 | risk=yellow | [ph outside target range: 6.45 ] | T=77.9°F pH=6.45 TDS=177.0ppm | pH is technically outside the safe zone by 0.05 units, which is marginal but wor
+[2026-04-07T20:45] Day 17 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.45 TDS=177.0ppm | Temperature is at the upper edge of target (78.01°F) with a clear upward trend o
+[2026-04-07T20:45] Day 17 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.45 TDS=177.0ppm | Temperature is at the upper edge of target (78.01°F) with a clear upward trend o
