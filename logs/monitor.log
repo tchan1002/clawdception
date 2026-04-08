@@ -775,3 +775,11 @@
 [2026-04-07T23:30] Day 17 | risk=yellow | [manual event since last check ] | T=78.12°F pH=6.5 TDS=178.0ppm | Nitrogen cycle established and robust (ammonia 0, nitrite 0, nitrate 80ppm for 2
 [2026-04-07T23:45] Day 17 | risk=yellow | [manual event since last check ] | T=78.01°F pH=6.49 TDS=177.0ppm | Nitrogen cycle progressing cleanly: ammonia 0, nitrite 0, nitrate steady at 80pp
 [2026-04-07T23:45] Day 17 | risk=yellow | [manual event since last check ] | T=78.01°F pH=6.49 TDS=177.0ppm | Nitrogen cycle progressing cleanly: ammonia 0, nitrite 0, nitrate steady at 80pp
+[2026-04-08T00:00] Day 18 | risk=green | [manual event since last check ] | T=78.12°F pH=6.49 TDS=176.0ppm | Day 18 cycling is progressing well: ammonia zero, nitrite zero, nitrate stable a
+[2026-04-08T00:00] Day 18 | risk=green | [manual event since last check ] | T=78.12°F pH=6.49 TDS=176.0ppm | Day 18 cycling is progressing well: ammonia zero, nitrite zero, nitrate stable a
+[2026-04-08T00:15] Day 18 | risk=green | [manual event since last check ] | T=78.24°F pH=6.47 TDS=178.0ppm | Ammonia and nitrite remain undetectable; nitrate at 80ppm shows steady biofilter
+[2026-04-08T00:15] Day 18 | risk=green | [manual event since last check ] | T=78.24°F pH=6.47 TDS=178.0ppm | Ammonia and nitrite remain undetectable; nitrate at 80ppm shows steady biofilter
+[2026-04-08T00:30] Day 18 | risk=green | [manual event since last check ] | T=78.12°F pH=6.5 TDS=179.0ppm | Biofilter is performing flawlessly—ammonia and nitrite remain zero across all te
+[2026-04-08T00:30] Day 18 | risk=green | [manual event since last check ] | T=78.12°F pH=6.5 TDS=179.0ppm | Biofilter is performing flawlessly—ammonia and nitrite remain zero across all te
+[2026-04-08T00:45] Day 18 | risk=green | [manual event since last check ] | T=77.9°F pH=6.45 TDS=179.0ppm | Nitrogen cycle day 18 progressing well: ammonia and nitrite remain zero, nitrate
+[2026-04-08T00:45] Day 18 | risk=green | [manual event since last check ] | T=77.9°F pH=6.45 TDS=179.0ppm | Nitrogen cycle day 18 progressing well: ammonia and nitrite remain zero, nitrate
