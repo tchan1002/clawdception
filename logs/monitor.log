@@ -726,3 +726,11 @@
 [2026-04-07T17:30] Day 17 | risk=yellow | [ph outside target range: 6.31 ] | T=77.79°F pH=6.31 TDS=175.0ppm | pH dip to 6.31 is unwelcome but ammonia and nitrite remain zero (per 17:08 and 0
 [2026-04-07T17:45] Day 17 | risk=yellow | [ph outside target range: 6.31 ] | T=77.79°F pH=6.31 TDS=177.0ppm | pH sensor reading (6.31) is 0.29 below manual test (6.6 @ 17:08, just 37min ago)
 [2026-04-07T17:45] Day 17 | risk=yellow | [ph outside target range: 6.31 ] | T=77.79°F pH=6.31 TDS=177.0ppm | pH sensor reading (6.31) is 0.29 below manual test (6.6 @ 17:08, just 37min ago)
+[2026-04-07T18:00] Day 17 | risk=yellow | [ph outside target range: 6.33 ] | T=77.79°F pH=6.33 TDS=176.0ppm | pH dip to 6.33 is expected during nitrification (nitrate at 80ppm confirms cycle
+[2026-04-07T18:00] Day 17 | risk=yellow | [ph outside target range: 6.33 ] | T=77.79°F pH=6.33 TDS=176.0ppm | pH dip to 6.33 is expected during nitrification (nitrate at 80ppm confirms cycle
+[2026-04-07T18:15] Day 17 | risk=yellow | [ph outside target range: 6.31 ] | T=77.68°F pH=6.31 TDS=179.0ppm | pH sensor shows sharp downward drift (~0.3 pt in 1 hour) after stable readings t
+[2026-04-07T18:15] Day 17 | risk=yellow | [ph outside target range: 6.31 ] | T=77.68°F pH=6.31 TDS=179.0ppm | pH sensor shows sharp downward drift (~0.3 pt in 1 hour) after stable readings t
+[2026-04-07T18:30] Day 17 | risk=yellow | [ph outside target range: 6.32 ] | T=77.9°F pH=6.32 TDS=177.0ppm | pH sensor reading (6.32) conflicts with manual test (6.6) taken 1.5 hours earlie
+[2026-04-07T18:30] Day 17 | risk=yellow | [ph outside target range: 6.32 ] | T=77.9°F pH=6.32 TDS=177.0ppm | pH sensor reading (6.32) conflicts with manual test (6.6) taken 1.5 hours earlie
+[2026-04-07T18:45] Day 17 | risk=yellow | [ph outside target range: 6.35 ] | T=77.68°F pH=6.35 TDS=176.0ppm | pH sensor reading 6.35 conflicts with manual test 6.6 from 1.5h ago—likely senso
+[2026-04-07T18:45] Day 17 | risk=yellow | [ph outside target range: 6.35 ] | T=77.68°F pH=6.35 TDS=176.0ppm | pH sensor reading 6.35 conflicts with manual test 6.6 from 1.5h ago—likely senso
