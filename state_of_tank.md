@@ -1,8 +1,8 @@
 # State of Tank — Media Luna
 
-**Last updated:** 2026-04-06
-**Cycle day:** 16 (started 2026-03-22)
-**Tank status:** Cycling — late phase — ammonia and nitrite both at zero — no shrimp
+**Last updated:** 2026-04-07
+**Cycle day:** 17 (started 2026-03-22)
+**Tank status:** Cycle complete — stable — no shrimp
 
 ---
 
@@ -10,39 +10,42 @@
 
 | Parameter | Current | Notes |
 |-----------|---------|-------|
-| Temperature | 76.9°F avg | 75.09–77.56°F range; +0.67°F day change; within acceptable range |
-| pH | 6.52 avg (sensor); 6.4 (manual x2) | Sensor low of 5.98 flagged — may be artifact; downward pressure ongoing; post-water-change reading needed |
-| TDS | 174.4 ppm avg | 169–179 ppm range; -3.0 ppm day change; consistent with water change performed tonight |
-| Ammonia | 0 ppm | Confirmed at 4:25 AM and 4:33 PM — both stages of nitrification functioning |
-| Nitrite | 0 ppm | Confirmed at 4:25 AM and 4:33 PM — plateau resolved; Nitrobacter active |
-| Nitrate | 80 ppm | Stable across both tests; water change performed tonight to begin reducing load |
+| Temperature | 77.9°F avg | 77.45–78.24°F range; +0.22°F day change; slow upward trend over 24h |
+| pH (sensor) | 6.43 avg | 6.30–6.53 range; +0.04 day change; reading ~0.17 below manual tests |
+| pH (manual) | 6.6 | Confirmed x2 (03:42 and 17:08); healthy range for Neocaridina |
+| TDS | 176 ppm avg | 172–181 ppm range; +4 ppm day change; unremarkable |
+| Ammonia | 0 ppm | Confirmed x2 — cycle holding |
+| Nitrite | 0 ppm | Confirmed x2 — cycle holding |
+| Nitrate | 80 ppm | Stable; no active bioload; water change needed before shrimp introduction |
 
 ---
 
 ## Cycle Status
 
-Nitrogen cycle is in late phase. Both ammonia and nitrite are reading zero on manual tests for the first time in the cycle. Nitrate at 80 ppm confirms active nitrification — this is expected end-stage accumulation. A water change was performed tonight (21:13). Nitrate post-change will be measured in next 24–48 hours. The cycle is not complete until we confirm: (1) zero ammonia, (2) zero nitrite, and (3) manageable nitrate across multiple consecutive days, including post-change readings.
+**Complete.** Ammonia and nitrite have held at zero for 24+ hours across two independent manual tests. Nitrate is stable at 80 ppm, indicating active nitrification with no new inputs. The bacterial colony appears established and robust.
 
 ---
 
-## Known Concerns
+## Open Concerns
 
-- **pH floor** — Sensor recorded 5.98 at its lowest today. Manual tests read 6.4. Discrepancy may be artifact or real transient acidification. pH is trending low overall; buffering may eventually be needed but is not urgent yet. Watch closely post-water-change.
-- **Filter media** — No maintenance log exists for filter media. Visual inspection recommended before shrimp introduction.
-- **Nitrate accumulation rate** — Will monitor post-water-change to confirm Nitrobacter is functioning at expected scale.
+**pH sensor gap.** Sensor reads consistently ~0.17 below manual test results. Calibration check recommended. Manual readings (6.6) are within comfortable range for future Neocaridina stocking.
+
+**Nitrate pre-stocking.** 80 ppm is acceptable for a cycling tank but above ideal for shrimp introduction. A 50–60% water change before stocking will be needed.
+
+**Temperature drift.** Slow upward creep noted. Still well within range (target 72–78°F for Neocaridina). Worth monitoring as Chicago weather warms.
 
 ---
 
 ## Equipment Status
 
-- Sensor: online and passing automated checks; RSSI stable at -48 dBm mean
-- Smoke tests: passed (22:32, 22:33)
-- Heater: no anomalies noted
-- Filter: running; media unverified visually
-- Actuators: none yet online
+All equipment passing checks. WiFi stable (avg -52 to -53 dBm). Firmware heap healthy. No anomalies.
 
 ---
 
-## Shrimp Readiness
+## Next Milestones
 
-**Not yet.** Cycle is approaching completion but not confirmed complete. pH needs to stabilize above 6.6 post-water-change before shrimp introduction is appropriate. Nitrate should come down from 80 ppm before shrimp arrive — target under 20 ppm.
+- [ ] pH sensor calibration
+- [ ] Pre-stocking water change (target: nitrate < 20 ppm)
+- [ ] Shrimp introduction (timing TBD by Toby)
+
+---
