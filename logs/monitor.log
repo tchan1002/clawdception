@@ -904,3 +904,11 @@
 [2026-04-08T15:30] Day 18 | risk=green | [ph outside target range: 6.37 ] | T=77.79°F pH=6.37 TDS=180.0ppm | Cycle is nominal. pH is slightly suppressed—typical for nitrogen cycle as nitrif
 [2026-04-08T15:45] Day 18 | risk=green | [manual event since last check ] | T=78.01°F pH=6.4 TDS=180.0ppm | Day 18 shows textbook cycling: ammonia and nitrite remain zero (biofilter is est
 [2026-04-08T15:45] Day 18 | risk=green | [manual event since last check ] | T=78.01°F pH=6.4 TDS=180.0ppm | Day 18 shows textbook cycling: ammonia and nitrite remain zero (biofilter is est
+[2026-04-08T16:00] Day 18 | risk=green | [manual event since last check ] | T=78.01°F pH=6.42 TDS=180.0ppm | Day 18 shows a textbook nitrogen cycle in progress: zero ammonia, zero nitrite, 
+[2026-04-08T16:00] Day 18 | risk=green | [manual event since last check ] | T=78.01°F pH=6.42 TDS=180.0ppm | Day 18 shows a textbook nitrogen cycle in progress: zero ammonia, zero nitrite, 
+[2026-04-08T16:15] Day 18 | risk=green | [manual event since last check ] | T=78.01°F pH=6.44 TDS=180.0ppm | The nitrogen cycle is executing cleanly—ammonia and nitrite remain undetectable 
+[2026-04-08T16:15] Day 18 | risk=green | [manual event since last check ] | T=78.01°F pH=6.44 TDS=180.0ppm | The nitrogen cycle is executing cleanly—ammonia and nitrite remain undetectable 
+[2026-04-08T16:30] Day 18 | risk=green | [manual event since last check ] | T=78.12°F pH=6.42 TDS=180.0ppm | Nitrogen cycle progressing smoothly at day 18: ammonia and nitrite both zero, ni
+[2026-04-08T16:30] Day 18 | risk=green | [manual event since last check ] | T=78.12°F pH=6.42 TDS=180.0ppm | Nitrogen cycle progressing smoothly at day 18: ammonia and nitrite both zero, ni
+[2026-04-08T16:45] Day 18 | risk=green | [manual event since last check ] | T=78.01°F pH=6.43 TDS=179.0ppm | Day 18 shows textbook progression: ammonia and nitrite undetectable, nitrate sta
+[2026-04-08T16:45] Day 18 | risk=green | [manual event since last check ] | T=78.01°F pH=6.43 TDS=179.0ppm | Day 18 shows textbook progression: ammonia and nitrite undetectable, nitrate sta
