@@ -759,3 +759,11 @@
 [2026-04-07T21:30] Day 17 | risk=yellow | [manual event since last check ] | T=77.79°F pH=6.48 TDS=177.0ppm | Nitrogen cycle maturing steadily: ammonia 0, nitrite 0, nitrate 80ppm indicates 
 [2026-04-07T21:45] Day 17 | risk=green | [manual event since last check ] | T=78.01°F pH=6.53 TDS=180.0ppm | Ammonia and nitrite remain zero; nitrate steady at 80ppm confirms bacterial colo
 [2026-04-07T21:45] Day 17 | risk=green | [manual event since last check ] | T=78.01°F pH=6.53 TDS=180.0ppm | Ammonia and nitrite remain zero; nitrate steady at 80ppm confirms bacterial colo
+[2026-04-07T22:00] Day 17 | risk=yellow | [manual event since last check ] | T=77.9°F pH=6.5 TDS=176.0ppm | Day 17: nitrogen cycle stable (NH₃=0, NO₂=0, NO₃=80ppm confirmed by three consec
+[2026-04-07T22:00] Day 17 | risk=yellow | [manual event since last check ] | T=77.9°F pH=6.5 TDS=176.0ppm | Day 17: nitrogen cycle stable (NH₃=0, NO₂=0, NO₃=80ppm confirmed by three consec
+[2026-04-07T22:15] Day 17 | risk=yellow | [manual event since last check ] | T=78.12°F pH=6.49 TDS=178.0ppm | Day 17 is solid—ammonia zero, nitrite zero, nitrate steady at 80ppm. But two sof
+[2026-04-07T22:15] Day 17 | risk=yellow | [manual event since last check ] | T=78.12°F pH=6.49 TDS=178.0ppm | Day 17 is solid—ammonia zero, nitrite zero, nitrate steady at 80ppm. But two sof
+[2026-04-07T22:30] Day 17 | risk=yellow | [manual event since last check ] | T=78.01°F pH=6.51 TDS=178.0ppm | Nitrogen cycle is holding steady—three tests confirm zero ammonia, zero nitrite,
+[2026-04-07T22:30] Day 17 | risk=yellow | [manual event since last check ] | T=78.01°F pH=6.51 TDS=178.0ppm | Nitrogen cycle is holding steady—three tests confirm zero ammonia, zero nitrite,
+[2026-04-07T22:45] Day 17 | risk=yellow | [manual event since last check ] | T=77.9°F pH=6.49 TDS=178.0ppm | Cycle is healthy: ammonia and nitrite remain zero, nitrate stable at 80ppm, biof
+[2026-04-07T22:45] Day 17 | risk=yellow | [manual event since last check ] | T=77.9°F pH=6.49 TDS=178.0ppm | Cycle is healthy: ammonia and nitrite remain zero, nitrate stable at 80ppm, biof
