@@ -896,3 +896,11 @@
 [2026-04-08T14:30] Day 18 | risk=yellow | [ph outside target range: 6.36 ] | T=77.68°F pH=6.36 TDS=180.0ppm | pH dipped below the 6.5 floor despite a slight upward trend, likely from biofilm
 [2026-04-08T14:45] Day 18 | risk=yellow | [ph outside target range: 6.37 ] | T=77.68°F pH=6.37 TDS=180.0ppm | pH at 6.37 is creeping below the safe floor of 6.5—concerning on day 18 when bio
 [2026-04-08T14:45] Day 18 | risk=yellow | [ph outside target range: 6.37 ] | T=77.68°F pH=6.37 TDS=180.0ppm | pH at 6.37 is creeping below the safe floor of 6.5—concerning on day 18 when bio
+[2026-04-08T15:00] Day 18 | risk=yellow | [ph outside target range: 6.35 ] | T=77.68°F pH=6.35 TDS=181.0ppm | pH is dipping into the acidic side at 6.35—just under the 6.5 minimum. The nitro
+[2026-04-08T15:00] Day 18 | risk=yellow | [ph outside target range: 6.35 ] | T=77.68°F pH=6.35 TDS=181.0ppm | pH is dipping into the acidic side at 6.35—just under the 6.5 minimum. The nitro
+[2026-04-08T15:15] Day 18 | risk=yellow | [ph outside target range: 6.38 ] | T=77.79°F pH=6.38 TDS=180.0ppm | pH is dipping slightly below range, but the positive 24hr trend and zero ammonia
+[2026-04-08T15:15] Day 18 | risk=yellow | [ph outside target range: 6.38 ] | T=77.79°F pH=6.38 TDS=180.0ppm | pH is dipping slightly below range, but the positive 24hr trend and zero ammonia
+[2026-04-08T15:30] Day 18 | risk=green | [ph outside target range: 6.37 ] | T=77.79°F pH=6.37 TDS=180.0ppm | Cycle is nominal. pH is slightly suppressed—typical for nitrogen cycle as nitrif
+[2026-04-08T15:30] Day 18 | risk=green | [ph outside target range: 6.37 ] | T=77.79°F pH=6.37 TDS=180.0ppm | Cycle is nominal. pH is slightly suppressed—typical for nitrogen cycle as nitrif
+[2026-04-08T15:45] Day 18 | risk=green | [manual event since last check ] | T=78.01°F pH=6.4 TDS=180.0ppm | Day 18 shows textbook cycling: ammonia and nitrite remain zero (biofilter is est
+[2026-04-08T15:45] Day 18 | risk=green | [manual event since last check ] | T=78.01°F pH=6.4 TDS=180.0ppm | Day 18 shows textbook cycling: ammonia and nitrite remain zero (biofilter is est
