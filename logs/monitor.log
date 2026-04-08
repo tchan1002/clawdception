@@ -734,3 +734,11 @@
 [2026-04-07T18:30] Day 17 | risk=yellow | [ph outside target range: 6.32 ] | T=77.9°F pH=6.32 TDS=177.0ppm | pH sensor reading (6.32) conflicts with manual test (6.6) taken 1.5 hours earlie
 [2026-04-07T18:45] Day 17 | risk=yellow | [ph outside target range: 6.35 ] | T=77.68°F pH=6.35 TDS=176.0ppm | pH sensor reading 6.35 conflicts with manual test 6.6 from 1.5h ago—likely senso
 [2026-04-07T18:45] Day 17 | risk=yellow | [ph outside target range: 6.35 ] | T=77.68°F pH=6.35 TDS=176.0ppm | pH sensor reading 6.35 conflicts with manual test 6.6 from 1.5h ago—likely senso
+[2026-04-07T19:00] Day 17 | risk=yellow | [ph outside target range: 6.35 ] | T=77.68°F pH=6.35 TDS=176.0ppm | pH sensor reading (6.35) is 0.25 points below target floor and diverges from man
+[2026-04-07T19:00] Day 17 | risk=yellow | [ph outside target range: 6.35 ] | T=77.68°F pH=6.35 TDS=176.0ppm | pH sensor reading (6.35) is 0.25 points below target floor and diverges from man
+[2026-04-07T19:15] Day 17 | risk=yellow | [ph outside target range: 6.36 ] | T=77.68°F pH=6.36 TDS=177.0ppm | pH has drifted 0.24 units below floor in ~16 hours despite upward trend today; m
+[2026-04-07T19:15] Day 17 | risk=yellow | [ph outside target range: 6.36 ] | T=77.68°F pH=6.36 TDS=177.0ppm | pH has drifted 0.24 units below floor in ~16 hours despite upward trend today; m
+[2026-04-07T19:30] Day 17 | risk=yellow | [ph outside target range: 6.39 ] | T=77.79°F pH=6.39 TDS=178.0ppm | pH has drifted 0.21 units below target in 2 hours despite recent manual test sho
+[2026-04-07T19:30] Day 17 | risk=yellow | [ph outside target range: 6.39 ] | T=77.79°F pH=6.39 TDS=178.0ppm | pH has drifted 0.21 units below target in 2 hours despite recent manual test sho
+[2026-04-07T19:45] Day 17 | risk=yellow | [ph outside target range: 6.38 ] | T=77.9°F pH=6.38 TDS=176.0ppm | Day 17: pH sensor reads 6.38, but water tests from 17 hours ago show 6.6—suggest
+[2026-04-07T19:45] Day 17 | risk=yellow | [ph outside target range: 6.38 ] | T=77.9°F pH=6.38 TDS=176.0ppm | Day 17: pH sensor reads 6.38, but water tests from 17 hours ago show 6.6—suggest
