@@ -888,3 +888,11 @@
 [2026-04-08T13:30] Day 18 | risk=yellow | [ph outside target range: 6.38 ] | T=77.79°F pH=6.38 TDS=180.0ppm | pH drifting acidic in a 10-gallon with high bioload accumulation—tank is natural
 [2026-04-08T13:45] Day 18 | risk=yellow | [ph outside target range: 6.37 ] | T=77.68°F pH=6.37 TDS=181.0ppm | pH is 0.13 units below target minimum—drift is minimal but direction is wrong. A
 [2026-04-08T13:45] Day 18 | risk=yellow | [ph outside target range: 6.37 ] | T=77.68°F pH=6.37 TDS=181.0ppm | pH is 0.13 units below target minimum—drift is minimal but direction is wrong. A
+[2026-04-08T14:00] Day 18 | risk=yellow | [ph outside target range: 6.36 ] | T=77.9°F pH=6.36 TDS=179.0ppm | pH dipping below target range on day 18 is typical during heavy nitrification—th
+[2026-04-08T14:00] Day 18 | risk=yellow | [ph outside target range: 6.36 ] | T=77.9°F pH=6.36 TDS=179.0ppm | pH dipping below target range on day 18 is typical during heavy nitrification—th
+[2026-04-08T14:15] Day 18 | risk=yellow | [ph outside target range: 6.37 ] | T=77.79°F pH=6.37 TDS=179.0ppm | Day 18 nitrogen cycle running clean—ammonia and nitrite at zero, nitrate climbin
+[2026-04-08T14:15] Day 18 | risk=yellow | [ph outside target range: 6.37 ] | T=77.79°F pH=6.37 TDS=179.0ppm | Day 18 nitrogen cycle running clean—ammonia and nitrite at zero, nitrate climbin
+[2026-04-08T14:30] Day 18 | risk=yellow | [ph outside target range: 6.36 ] | T=77.68°F pH=6.36 TDS=180.0ppm | pH dipped below the 6.5 floor despite a slight upward trend, likely from biofilm
+[2026-04-08T14:30] Day 18 | risk=yellow | [ph outside target range: 6.36 ] | T=77.68°F pH=6.36 TDS=180.0ppm | pH dipped below the 6.5 floor despite a slight upward trend, likely from biofilm
+[2026-04-08T14:45] Day 18 | risk=yellow | [ph outside target range: 6.37 ] | T=77.68°F pH=6.37 TDS=180.0ppm | pH at 6.37 is creeping below the safe floor of 6.5—concerning on day 18 when bio
+[2026-04-08T14:45] Day 18 | risk=yellow | [ph outside target range: 6.37 ] | T=77.68°F pH=6.37 TDS=180.0ppm | pH at 6.37 is creeping below the safe floor of 6.5—concerning on day 18 when bio
