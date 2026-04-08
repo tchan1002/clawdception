@@ -823,3 +823,11 @@
 [2026-04-08T05:30] Day 18 | risk=yellow | [ph outside target range: 6.46 ] | T=77.79°F pH=6.46 TDS=179.0ppm | pH is creeping down (6.6 → 6.4 over 15 hours) and now sits below the 6.5 floor, 
 [2026-04-08T05:45] Day 18 | risk=yellow | [ph outside target range: 6.46 ] | T=77.9°F pH=6.46 TDS=180.0ppm | pH is marginally out of range but trend is more concerning than current value—a 
 [2026-04-08T05:45] Day 18 | risk=yellow | [ph outside target range: 6.46 ] | T=77.9°F pH=6.46 TDS=180.0ppm | pH is marginally out of range but trend is more concerning than current value—a 
+[2026-04-08T06:00] Day 18 | risk=yellow | [ph outside target range: 6.46 ] | T=77.79°F pH=6.46 TDS=178.0ppm | pH drifting downward at day 18 of cycle suggests mild acid accumulation from bio
+[2026-04-08T06:00] Day 18 | risk=yellow | [ph outside target range: 6.46 ] | T=77.79°F pH=6.46 TDS=178.0ppm | pH drifting downward at day 18 of cycle suggests mild acid accumulation from bio
+[2026-04-08T06:15] Day 18 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.47 TDS=179.0ppm | Temperature nudging upper boundary with persistent upward drift—warmer water hol
+[2026-04-08T06:15] Day 18 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.47 TDS=179.0ppm | Temperature nudging upper boundary with persistent upward drift—warmer water hol
+[2026-04-08T06:30] Day 18 | risk=green | [temperature outside target ran] | T=78.01°F pH=6.46 TDS=179.0ppm | Nitrogen cycle proceeding textbook: ammonia and nitrite both zero, nitrate at 80
+[2026-04-08T06:30] Day 18 | risk=green | [temperature outside target ran] | T=78.01°F pH=6.46 TDS=179.0ppm | Nitrogen cycle proceeding textbook: ammonia and nitrite both zero, nitrate at 80
+[2026-04-08T06:45] Day 18 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.47 TDS=179.0ppm | Temperature just kissed the ceiling (78.12°F) after a steady 24-hour climb; whil
+[2026-04-08T06:45] Day 18 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.47 TDS=179.0ppm | Temperature just kissed the ceiling (78.12°F) after a steady 24-hour climb; whil
