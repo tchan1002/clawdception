@@ -864,3 +864,11 @@
 [2026-04-08T10:30] Day 18 | risk=green | [temperature outside target ran] | T=78.01°F pH=6.5 TDS=178.0ppm | Day 18 nitrogen cycle proceeding nominally: ammonia and nitrite remain zero, ind
 [2026-04-08T10:45] Day 18 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.5 TDS=180.0ppm | Temperature is at the upper edge of target and trending upward; this warrants ob
 [2026-04-08T10:45] Day 18 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.5 TDS=180.0ppm | Temperature is at the upper edge of target and trending upward; this warrants ob
+[2026-04-08T11:00] Day 18 | risk=green | [temperature outside target ran] | T=78.01°F pH=6.51 TDS=180.0ppm | Day 18 is textbook nitrogen cycle—ammonia and nitrite zero, nitrate steady at 80
+[2026-04-08T11:00] Day 18 | risk=green | [temperature outside target ran] | T=78.01°F pH=6.51 TDS=180.0ppm | Day 18 is textbook nitrogen cycle—ammonia and nitrite zero, nitrate steady at 80
+[2026-04-08T11:15] Day 18 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.51 TDS=177.0ppm | Temperature creeping toward ceiling suggests ambient warmth or reduced evaporati
+[2026-04-08T11:15] Day 18 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.51 TDS=177.0ppm | Temperature creeping toward ceiling suggests ambient warmth or reduced evaporati
+[2026-04-08T11:30] Day 18 | risk=green | [temperature outside target ran] | T=78.01°F pH=6.47 TDS=180.0ppm | Nitrogen cycle progressing cleanly—ammonia and nitrite consistently zero, nitrat
+[2026-04-08T11:30] Day 18 | risk=green | [temperature outside target ran] | T=78.01°F pH=6.47 TDS=180.0ppm | Nitrogen cycle progressing cleanly—ammonia and nitrite consistently zero, nitrat
+[2026-04-08T11:45] Day 18 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.46 TDS=178.0ppm | Temperature is nudging the ceiling—not urgent, but the upward creep bears watchi
+[2026-04-08T11:45] Day 18 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.46 TDS=178.0ppm | Temperature is nudging the ceiling—not urgent, but the upward creep bears watchi
