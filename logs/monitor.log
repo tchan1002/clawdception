@@ -750,3 +750,12 @@
 [2026-04-07T20:30] Day 17 | risk=yellow | [ph outside target range: 6.45 ] | T=77.9°F pH=6.45 TDS=177.0ppm | pH is technically outside the safe zone by 0.05 units, which is marginal but wor
 [2026-04-07T20:45] Day 17 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.45 TDS=177.0ppm | Temperature is at the upper edge of target (78.01°F) with a clear upward trend o
 [2026-04-07T20:45] Day 17 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.45 TDS=177.0ppm | Temperature is at the upper edge of target (78.01°F) with a clear upward trend o
+[2026-04-07T21:00] Day 17 | risk=yellow | [ph outside target range: 6.47 ] | T=77.9°F pH=6.47 TDS=178.0ppm | pH is 0.03 below target floor (6.47 vs 6.5 minimum) and shows a subtle downward 
+[call-toby] Telegram sent (warning): No water test logged yet. Day 17 of cycle — ammonia and nitrite are unknown.
+[2026-04-07T21:00] Day 17 | risk=yellow | [ph outside target range: 6.47 ] | T=77.9°F pH=6.47 TDS=178.0ppm | pH is 0.03 below target floor (6.47 vs 6.5 minimum) and shows a subtle downward 
+[2026-04-07T21:15] Day 17 | risk=yellow | [ph outside target range: 6.49 ] | T=77.79°F pH=6.49 TDS=177.0ppm | pH sensor reading (6.49) contradicts manual test logged 3h prior (6.6), suggesti
+[2026-04-07T21:15] Day 17 | risk=yellow | [ph outside target range: 6.49 ] | T=77.79°F pH=6.49 TDS=177.0ppm | pH sensor reading (6.49) contradicts manual test logged 3h prior (6.6), suggesti
+[2026-04-07T21:30] Day 17 | risk=yellow | [manual event since last check ] | T=77.79°F pH=6.48 TDS=177.0ppm | Nitrogen cycle maturing steadily: ammonia 0, nitrite 0, nitrate 80ppm indicates 
+[2026-04-07T21:30] Day 17 | risk=yellow | [manual event since last check ] | T=77.79°F pH=6.48 TDS=177.0ppm | Nitrogen cycle maturing steadily: ammonia 0, nitrite 0, nitrate 80ppm indicates 
+[2026-04-07T21:45] Day 17 | risk=green | [manual event since last check ] | T=78.01°F pH=6.53 TDS=180.0ppm | Ammonia and nitrite remain zero; nitrate steady at 80ppm confirms bacterial colo
+[2026-04-07T21:45] Day 17 | risk=green | [manual event since last check ] | T=78.01°F pH=6.53 TDS=180.0ppm | Ammonia and nitrite remain zero; nitrate steady at 80ppm confirms bacterial colo
