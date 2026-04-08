@@ -856,3 +856,11 @@
 [2026-04-08T09:30] Day 18 | risk=yellow | [ph outside target range: 6.49 ] | T=77.9°F pH=6.49 TDS=179.0ppm | pH is marginal—just kissing the lower boundary at 6.49, and the 24-hour trend is
 [2026-04-08T09:45] Day 18 | risk=green | [temperature outside target ran] | T=78.01°F pH=6.48 TDS=178.0ppm | Cycle day 18 shows classic healthy progression: ammonia and nitrite zero, nitrat
 [2026-04-08T09:45] Day 18 | risk=green | [temperature outside target ran] | T=78.01°F pH=6.48 TDS=178.0ppm | Cycle day 18 shows classic healthy progression: ammonia and nitrite zero, nitrat
+[2026-04-08T10:00] Day 18 | risk=green | [temperature outside target ran] | T=78.12°F pH=6.49 TDS=177.0ppm | Nitrogen cycle proceeding excellently: ammonia zero, nitrite zero, nitrate climb
+[2026-04-08T10:00] Day 18 | risk=green | [temperature outside target ran] | T=78.12°F pH=6.49 TDS=177.0ppm | Nitrogen cycle proceeding excellently: ammonia zero, nitrite zero, nitrate climb
+[2026-04-08T10:15] Day 18 | risk=green | [temperature outside target ran] | T=78.01°F pH=6.5 TDS=180.0ppm | Cycle on day 18 is proceeding cleanly: ammonia and nitrite both zero, nitrate st
+[2026-04-08T10:15] Day 18 | risk=green | [temperature outside target ran] | T=78.01°F pH=6.5 TDS=180.0ppm | Cycle on day 18 is proceeding cleanly: ammonia and nitrite both zero, nitrate st
+[2026-04-08T10:30] Day 18 | risk=green | [temperature outside target ran] | T=78.01°F pH=6.5 TDS=178.0ppm | Day 18 nitrogen cycle proceeding nominally: ammonia and nitrite remain zero, ind
+[2026-04-08T10:30] Day 18 | risk=green | [temperature outside target ran] | T=78.01°F pH=6.5 TDS=178.0ppm | Day 18 nitrogen cycle proceeding nominally: ammonia and nitrite remain zero, ind
+[2026-04-08T10:45] Day 18 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.5 TDS=180.0ppm | Temperature is at the upper edge of target and trending upward; this warrants ob
+[2026-04-08T10:45] Day 18 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.5 TDS=180.0ppm | Temperature is at the upper edge of target and trending upward; this warrants ob
