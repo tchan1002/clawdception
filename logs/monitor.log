@@ -1074,3 +1074,11 @@
 [2026-04-09T12:30] Day 19 | skipped (stable) | T=77.9°F pH=6.58 TDS=184.0ppm
 [2026-04-09T12:45] Day 19 | skipped (stable) | T=77.9°F pH=6.54 TDS=182.0ppm
 [2026-04-09T12:45] Day 19 | skipped (stable) | T=77.9°F pH=6.54 TDS=182.0ppm
+[2026-04-09T13:00] Day 19 | skipped (stable) | T=77.79°F pH=6.51 TDS=183.0ppm
+[2026-04-09T13:00] Day 19 | skipped (stable) | T=77.79°F pH=6.51 TDS=183.0ppm
+[2026-04-09T13:15] Day 19 | risk=yellow | [ph outside target range: 6.47 ] | T=77.68°F pH=6.47 TDS=180.0ppm | pH dropped to 6.47—below our 6.5 floor—likely from ongoing nitrification and org
+[2026-04-09T13:15] Day 19 | risk=yellow | [ph outside target range: 6.47 ] | T=77.68°F pH=6.47 TDS=180.0ppm | pH dropped to 6.47—below our 6.5 floor—likely from ongoing nitrification and org
+[2026-04-09T13:30] Day 19 | risk=yellow | [ph outside target range: 6.45 ] | T=77.56°F pH=6.45 TDS=183.0ppm | pH has dipped to 6.45—just outside safe range—but the 24-hour trend shows recove
+[2026-04-09T13:30] Day 19 | risk=yellow | [ph outside target range: 6.45 ] | T=77.56°F pH=6.45 TDS=183.0ppm | pH has dipped to 6.45—just outside safe range—but the 24-hour trend shows recove
+[2026-04-09T13:45] Day 19 | risk=yellow | [ph outside target range: 6.44 ] | T=77.45°F pH=6.44 TDS=181.0ppm | pH is drifting below target despite yesterday's stable 6.6 reading—the 0.16 drop
+[2026-04-09T13:45] Day 19 | risk=yellow | [ph outside target range: 6.44 ] | T=77.45°F pH=6.44 TDS=181.0ppm | pH is drifting below target despite yesterday's stable 6.6 reading—the 0.16 drop
