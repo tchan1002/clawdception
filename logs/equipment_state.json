@@ -1,4 +1,6 @@
 {
   "ph_probe_last_calibrated": "2026-03-22",
-  "last_nag": {}
+  "last_nag": {
+    "post_failures": "2026-04-09T00:30:02.325283"
+  }
 }

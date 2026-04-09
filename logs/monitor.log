@@ -969,3 +969,11 @@
 [2026-04-08T23:30] Day 18 | risk=yellow | [ph outside target range: 6.47 ] | T=77.68°F pH=6.47 TDS=181.0ppm | pH sensor reading (6.47) has dipped below target minimum (6.5), but manual test 
 [2026-04-08T23:45] Day 18 | risk=yellow | [ph outside target range: 6.45 ] | T=77.68°F pH=6.45 TDS=180.0ppm | pH trending slightly acidic despite being within danger margins—common during ea
 [2026-04-08T23:45] Day 18 | risk=yellow | [ph outside target range: 6.45 ] | T=77.68°F pH=6.45 TDS=180.0ppm | pH trending slightly acidic despite being within danger margins—common during ea
+[2026-04-09T00:00] Day 19 | risk=yellow | [ph outside target range: 6.45 ] | T=77.68°F pH=6.45 TDS=181.0ppm | pH dipped to 6.45—just barely outside the safe floor of 6.5—likely due to bioloa
+[2026-04-09T00:00] Day 19 | risk=yellow | [ph outside target range: 6.45 ] | T=77.68°F pH=6.45 TDS=181.0ppm | pH dipped to 6.45—just barely outside the safe floor of 6.5—likely due to bioloa
+[2026-04-09T00:15] Day 19 | risk=yellow | [ph outside target range: 6.45 ] | T=77.68°F pH=6.45 TDS=181.0ppm | pH is nudging the acidic boundary—still safe for shrimp, but the downward trend 
+[2026-04-09T00:15] Day 19 | risk=yellow | [ph outside target range: 6.45 ] | T=77.68°F pH=6.45 TDS=181.0ppm | pH is nudging the acidic boundary—still safe for shrimp, but the downward trend 
+[2026-04-09T00:30] Day 19 | risk=yellow | [ph outside target range: 6.45 ] | T=77.68°F pH=6.45 TDS=181.0ppm | pH is at the edge—6.45 is just outside the safe floor, and the 24hr mean of 6.45
+[2026-04-09T00:30] Day 19 | risk=yellow | [ph outside target range: 6.45 ] | T=77.68°F pH=6.45 TDS=181.0ppm | pH is at the edge—6.45 is just outside the safe floor, and the 24hr mean of 6.45
+[2026-04-09T00:45] Day 19 | risk=yellow | [ph outside target range: 6.46 ] | T=77.68°F pH=6.46 TDS=180.0ppm | pH has drifted 0.14 units below target since 2026-04-08T02:27, settling at the e
+[2026-04-09T00:45] Day 19 | risk=yellow | [ph outside target range: 6.46 ] | T=77.68°F pH=6.46 TDS=180.0ppm | pH has drifted 0.14 units below target since 2026-04-08T02:27, settling at the e
