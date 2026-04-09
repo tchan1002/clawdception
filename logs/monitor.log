@@ -1098,3 +1098,11 @@
 [2026-04-09T15:30] Day 19 | risk=yellow | [ph outside target range: 6.38 ] | T=77.56°F pH=6.38 TDS=184.0ppm | pH at 6.38 breaches the safe lower bound (6.5) but is not yet in danger territor
 [2026-04-09T15:45] Day 19 | risk=yellow | [ph outside target range: 6.38 ] | T=77.56°F pH=6.38 TDS=183.0ppm | pH has crossed below the 6.5 target floor and continues a shallow acidic drift d
 [2026-04-09T15:45] Day 19 | risk=yellow | [ph outside target range: 6.38 ] | T=77.56°F pH=6.38 TDS=183.0ppm | pH has crossed below the 6.5 target floor and continues a shallow acidic drift d
+[2026-04-09T16:00] Day 19 | risk=yellow | [ph outside target range: 6.38 ] | T=77.56°F pH=6.38 TDS=180.0ppm | pH has dipped to 6.38—below our 6.5–7.5 target and flagging acidification despit
+[2026-04-09T16:00] Day 19 | risk=yellow | [ph outside target range: 6.38 ] | T=77.56°F pH=6.38 TDS=180.0ppm | pH has dipped to 6.38—below our 6.5–7.5 target and flagging acidification despit
+[2026-04-09T16:15] Day 19 | risk=yellow | [ph outside target range: 6.39 ] | T=77.56°F pH=6.39 TDS=183.0ppm | pH dropped to 6.39—below target and 0.21 units lower than yesterday's 6.6 readin
+[2026-04-09T16:15] Day 19 | risk=yellow | [ph outside target range: 6.39 ] | T=77.56°F pH=6.39 TDS=183.0ppm | pH dropped to 6.39—below target and 0.21 units lower than yesterday's 6.6 readin
+[2026-04-09T16:30] Day 19 | risk=yellow | [ph outside target range: 6.37 ] | T=77.45°F pH=6.37 TDS=184.0ppm | pH dip to 6.37 breaches lower target boundary and suggests acidification—likely 
+[2026-04-09T16:30] Day 19 | risk=yellow | [ph outside target range: 6.37 ] | T=77.45°F pH=6.37 TDS=184.0ppm | pH dip to 6.37 breaches lower target boundary and suggests acidification—likely 
+[2026-04-09T16:45] Day 19 | risk=yellow | [ph outside target range: 6.38 ] | T=77.45°F pH=6.38 TDS=184.0ppm | pH has drifted 0.22 units below the target floor in 19 days and shows a persiste
+[2026-04-09T16:45] Day 19 | risk=yellow | [ph outside target range: 6.38 ] | T=77.45°F pH=6.38 TDS=184.0ppm | pH has drifted 0.22 units below the target floor in 19 days and shows a persiste
