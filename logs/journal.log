@@ -71,3 +71,10 @@
 [call-toby] Telegram sent (info): Action items:
 • Monitor pH closely over next 12 hours; if it dips below 6.4, prepare a 15% water change with fresh dechlorinated water within 24 hours
 • Consider manual water test in 24-48 hours to track ammonia, nitrite, and nitrate progression
+[shrimp-journal] Entry written: 2026-04-09-0605.md (Day 19)
+[call-toby] Telegram sent (info): Journal — Day 19 · 2026-04-09 06:05
+[call-toby] Document sent: 2026-04-09-0605.md
+[call-toby] Telegram sent (info): Action items:
+• Monitor pH closely; if it drops below 6.4 within 24 hours, prepare a 15% water change with fresh dechlorinated water
+• Manual water test in 24–48 hours to measure ammonia, nitrite, and nitrate progression
+• Check ESP32 connection and WiFi signal strength; restart device if post failures continue to escalate
