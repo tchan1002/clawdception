@@ -1033,3 +1033,11 @@
 [2026-04-09T07:30] Day 19 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.55 TDS=180.0ppm | Temperature breach triggers alert but is marginal and declining; pH is stable an
 [2026-04-09T07:45] Day 19 | skipped (stable) | T=77.9°F pH=6.57 TDS=180.0ppm
 [2026-04-09T07:45] Day 19 | skipped (stable) | T=77.9°F pH=6.57 TDS=180.0ppm
+[2026-04-09T08:00] Day 19 | skipped (stable) | T=77.9°F pH=6.58 TDS=181.0ppm
+[2026-04-09T08:00] Day 19 | skipped (stable) | T=77.9°F pH=6.58 TDS=181.0ppm
+[2026-04-09T08:15] Day 19 | skipped (stable) | T=77.9°F pH=6.56 TDS=182.0ppm
+[2026-04-09T08:15] Day 19 | skipped (stable) | T=77.9°F pH=6.56 TDS=182.0ppm
+[2026-04-09T08:30] Day 19 | skipped (stable) | T=77.9°F pH=6.57 TDS=183.0ppm
+[2026-04-09T08:30] Day 19 | skipped (stable) | T=77.9°F pH=6.57 TDS=183.0ppm
+[2026-04-09T08:45] Day 19 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.57 TDS=183.0ppm | Temperature has drifted to the upper edge of the safe zone and needs cooling; pH
+[2026-04-09T08:45] Day 19 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.57 TDS=183.0ppm | Temperature has drifted to the upper edge of the safe zone and needs cooling; pH
