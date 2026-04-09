@@ -1106,3 +1106,11 @@
 [2026-04-09T16:30] Day 19 | risk=yellow | [ph outside target range: 6.37 ] | T=77.45°F pH=6.37 TDS=184.0ppm | pH dip to 6.37 breaches lower target boundary and suggests acidification—likely 
 [2026-04-09T16:45] Day 19 | risk=yellow | [ph outside target range: 6.38 ] | T=77.45°F pH=6.38 TDS=184.0ppm | pH has drifted 0.22 units below the target floor in 19 days and shows a persiste
 [2026-04-09T16:45] Day 19 | risk=yellow | [ph outside target range: 6.38 ] | T=77.45°F pH=6.38 TDS=184.0ppm | pH has drifted 0.22 units below the target floor in 19 days and shows a persiste
+[2026-04-09T17:00] Day 19 | risk=yellow | [ph outside target range: 6.38 ] | T=77.45°F pH=6.38 TDS=183.0ppm | pH has dropped to 6.38—below our 6.5 floor but not yet critical. The 24-hour tre
+[2026-04-09T17:00] Day 19 | risk=yellow | [ph outside target range: 6.38 ] | T=77.45°F pH=6.38 TDS=183.0ppm | pH has dropped to 6.38—below our 6.5 floor but not yet critical. The 24-hour tre
+[2026-04-09T17:15] Day 19 | risk=yellow | [ph outside target range: 6.38 ] | T=77.45°F pH=6.38 TDS=184.0ppm | pH has slipped below the lower bound despite yesterday's manual reading of 6.6, 
+[2026-04-09T17:15] Day 19 | risk=yellow | [ph outside target range: 6.38 ] | T=77.45°F pH=6.38 TDS=184.0ppm | pH has slipped below the lower bound despite yesterday's manual reading of 6.6, 
+[2026-04-09T17:30] Day 19 | risk=yellow | [ph outside target range: 6.39 ] | T=77.56°F pH=6.39 TDS=182.0ppm | pH is drifting below safe range and the 24-hour trend confirms slow acidificatio
+[2026-04-09T17:30] Day 19 | risk=yellow | [ph outside target range: 6.39 ] | T=77.56°F pH=6.39 TDS=182.0ppm | pH is drifting below safe range and the 24-hour trend confirms slow acidificatio
+[2026-04-09T17:45] Day 19 | risk=yellow | [ph outside target range: 6.39 ] | T=77.56°F pH=6.39 TDS=182.0ppm | pH has drifted 0.06 points below target and now sits at 6.39—the trigger thresho
+[2026-04-09T17:45] Day 19 | risk=yellow | [ph outside target range: 6.39 ] | T=77.56°F pH=6.39 TDS=182.0ppm | pH has drifted 0.06 points below target and now sits at 6.39—the trigger thresho
