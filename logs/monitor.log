@@ -1090,3 +1090,11 @@
 [2026-04-09T14:30] Day 19 | risk=yellow | [ph outside target range: 6.41 ] | T=77.45°F pH=6.41 TDS=179.0ppm | pH dipped to 6.41, just below the 6.5 floor—typical for a maturing cycle as nitr
 [2026-04-09T14:45] Day 19 | risk=yellow | [ph outside target range: 6.39 ] | T=77.45°F pH=6.39 TDS=182.0ppm | pH has breached the lower target boundary; while the 24h mean (6.493) and recent
 [2026-04-09T14:45] Day 19 | risk=yellow | [ph outside target range: 6.39 ] | T=77.45°F pH=6.39 TDS=182.0ppm | pH has breached the lower target boundary; while the 24h mean (6.493) and recent
+[2026-04-09T15:00] Day 19 | risk=yellow | [ph outside target range: 6.39 ] | T=77.45°F pH=6.39 TDS=183.0ppm | pH has drifted below target minimum (6.39 vs 6.5 floor) but shows micro-recovery
+[2026-04-09T15:00] Day 19 | risk=yellow | [ph outside target range: 6.39 ] | T=77.45°F pH=6.39 TDS=183.0ppm | pH has drifted below target minimum (6.39 vs 6.5 floor) but shows micro-recovery
+[2026-04-09T15:15] Day 19 | risk=yellow | [ph outside target range: 6.39 ] | T=77.56°F pH=6.39 TDS=183.0ppm | pH has drifted 0.21 below target minimum in 24 hours despite stable cycling mark
+[2026-04-09T15:15] Day 19 | risk=yellow | [ph outside target range: 6.39 ] | T=77.56°F pH=6.39 TDS=183.0ppm | pH has drifted 0.21 below target minimum in 24 hours despite stable cycling mark
+[2026-04-09T15:30] Day 19 | risk=yellow | [ph outside target range: 6.38 ] | T=77.56°F pH=6.38 TDS=184.0ppm | pH at 6.38 breaches the safe lower bound (6.5) but is not yet in danger territor
+[2026-04-09T15:30] Day 19 | risk=yellow | [ph outside target range: 6.38 ] | T=77.56°F pH=6.38 TDS=184.0ppm | pH at 6.38 breaches the safe lower bound (6.5) but is not yet in danger territor
+[2026-04-09T15:45] Day 19 | risk=yellow | [ph outside target range: 6.38 ] | T=77.56°F pH=6.38 TDS=183.0ppm | pH has crossed below the 6.5 target floor and continues a shallow acidic drift d
+[2026-04-09T15:45] Day 19 | risk=yellow | [ph outside target range: 6.38 ] | T=77.56°F pH=6.38 TDS=183.0ppm | pH has crossed below the 6.5 target floor and continues a shallow acidic drift d
