@@ -1025,3 +1025,11 @@
 [2026-04-09T06:30] Day 19 | skipped (stable) | T=77.79°F pH=6.56 TDS=180.0ppm
 [2026-04-09T06:45] Day 19 | skipped (stable) | T=77.9°F pH=6.55 TDS=180.0ppm
 [2026-04-09T06:45] Day 19 | skipped (stable) | T=77.9°F pH=6.55 TDS=180.0ppm
+[2026-04-09T07:00] Day 19 | skipped (stable) | T=77.9°F pH=6.55 TDS=180.0ppm
+[2026-04-09T07:00] Day 19 | skipped (stable) | T=77.9°F pH=6.55 TDS=180.0ppm
+[2026-04-09T07:15] Day 19 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.57 TDS=182.0ppm | Temperature spike to 78.01°F breaches comfort zone; shrimp tolerate it but susta
+[2026-04-09T07:15] Day 19 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.57 TDS=182.0ppm | Temperature spike to 78.01°F breaches comfort zone; shrimp tolerate it but susta
+[2026-04-09T07:30] Day 19 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.55 TDS=180.0ppm | Temperature breach triggers alert but is marginal and declining; pH is stable an
+[2026-04-09T07:30] Day 19 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.55 TDS=180.0ppm | Temperature breach triggers alert but is marginal and declining; pH is stable an
+[2026-04-09T07:45] Day 19 | skipped (stable) | T=77.9°F pH=6.57 TDS=180.0ppm
+[2026-04-09T07:45] Day 19 | skipped (stable) | T=77.9°F pH=6.57 TDS=180.0ppm
