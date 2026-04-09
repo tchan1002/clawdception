@@ -961,3 +961,11 @@
 [2026-04-08T22:30] Day 18 | skipped (stable) | T=77.79°F pH=6.51 TDS=180.0ppm
 [2026-04-08T22:45] Day 18 | skipped (stable) | T=77.79°F pH=6.5 TDS=181.0ppm
 [2026-04-08T22:45] Day 18 | skipped (stable) | T=77.79°F pH=6.5 TDS=181.0ppm
+[2026-04-08T23:00] Day 18 | risk=yellow | [ph outside target range: 6.48 ] | T=77.79°F pH=6.48 TDS=179.0ppm | pH dipped 0.12 below target overnight; manual test at 20:44 showed 6.6, now sens
+[2026-04-08T23:00] Day 18 | risk=yellow | [ph outside target range: 6.48 ] | T=77.79°F pH=6.48 TDS=179.0ppm | pH dipped 0.12 below target overnight; manual test at 20:44 showed 6.6, now sens
+[2026-04-08T23:15] Day 18 | risk=yellow | [ph outside target range: 6.46 ] | T=77.79°F pH=6.46 TDS=180.0ppm | pH nudging into acidic territory on day 18 of cycle—consistent with nitrogen met
+[2026-04-08T23:15] Day 18 | risk=yellow | [ph outside target range: 6.46 ] | T=77.79°F pH=6.46 TDS=180.0ppm | pH nudging into acidic territory on day 18 of cycle—consistent with nitrogen met
+[2026-04-08T23:30] Day 18 | risk=yellow | [ph outside target range: 6.47 ] | T=77.68°F pH=6.47 TDS=181.0ppm | pH sensor reading (6.47) has dipped below target minimum (6.5), but manual test 
+[2026-04-08T23:30] Day 18 | risk=yellow | [ph outside target range: 6.47 ] | T=77.68°F pH=6.47 TDS=181.0ppm | pH sensor reading (6.47) has dipped below target minimum (6.5), but manual test 
+[2026-04-08T23:45] Day 18 | risk=yellow | [ph outside target range: 6.45 ] | T=77.68°F pH=6.45 TDS=180.0ppm | pH trending slightly acidic despite being within danger margins—common during ea
+[2026-04-08T23:45] Day 18 | risk=yellow | [ph outside target range: 6.45 ] | T=77.68°F pH=6.45 TDS=180.0ppm | pH trending slightly acidic despite being within danger margins—common during ea
