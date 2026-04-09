@@ -331,7 +331,7 @@ def run(force=False):
         journal_snippet = read_journal()
         journal_snippet = journal_snippet[-600:] if len(journal_snippet) > 600 else journal_snippet
 
-        prompt = f"""Day {cycle_day} of nitrogen cycle. Time: {ts[:16]}. Trigger: {reason}.
+        prompt = f"""Day {cycle_day}. Time: {ts[:16]}. Trigger: {reason}.
 
     CURRENT: Temp {latest.get('temp_f')}°F | pH {latest.get('ph')} | TDS {latest.get('tds_ppm')}ppm
 

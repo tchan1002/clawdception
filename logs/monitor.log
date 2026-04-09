@@ -944,3 +944,10 @@
 [2026-04-08T20:30] Day 18 | risk=green | [manual event since last check ] | T=77.79°F pH=6.47 TDS=181.0ppm | Day 18: Ammonia and nitrite remain zero; nitrate stable at 80ppm. The biofilter 
 [2026-04-08T20:45] Day 18 | risk=green | [manual event since last check ] | T=77.79°F pH=6.5 TDS=180.0ppm | Day 18: Ammonia and nitrite remain undetectable; nitrate stable at 80ppm. Biofil
 [2026-04-08T20:45] Day 18 | risk=green | [manual event since last check ] | T=77.79°F pH=6.5 TDS=180.0ppm | Day 18: Ammonia and nitrite remain undetectable; nitrate stable at 80ppm. Biofil
+[2026-04-08T21:00] Day 18 | skipped (stable) | T=77.79°F pH=6.53 TDS=180.0ppm
+[2026-04-08T21:00] Day 18 | skipped (stable) | T=77.79°F pH=6.53 TDS=180.0ppm
+[2026-04-08T21:15] Day 18 | skipped (stable) | T=77.79°F pH=6.54 TDS=180.0ppm
+[2026-04-08T21:15] Day 18 | skipped (stable) | T=77.79°F pH=6.54 TDS=180.0ppm
+[2026-04-08T21:30] Day 18 | skipped (stable) | T=77.79°F pH=6.54 TDS=179.0ppm
+[call-toby] Telegram sent (warning): No water test logged yet. Day 18 of cycle — ammonia and nitrite are unknown.
+[2026-04-08T21:30] Day 18 | skipped (stable) | T=77.79°F pH=6.54 TDS=179.0ppm
