@@ -977,3 +977,11 @@
 [2026-04-09T00:30] Day 19 | risk=yellow | [ph outside target range: 6.45 ] | T=77.68°F pH=6.45 TDS=181.0ppm | pH is at the edge—6.45 is just outside the safe floor, and the 24hr mean of 6.45
 [2026-04-09T00:45] Day 19 | risk=yellow | [ph outside target range: 6.46 ] | T=77.68°F pH=6.46 TDS=180.0ppm | pH has drifted 0.14 units below target since 2026-04-08T02:27, settling at the e
 [2026-04-09T00:45] Day 19 | risk=yellow | [ph outside target range: 6.46 ] | T=77.68°F pH=6.46 TDS=180.0ppm | pH has drifted 0.14 units below target since 2026-04-08T02:27, settling at the e
+[2026-04-09T01:00] Day 19 | risk=yellow | [ph outside target range: 6.48 ] | T=77.68°F pH=6.48 TDS=179.0ppm | pH has drifted 0.12 units lower since yesterday's 20:44 test and is now 0.02 bel
+[2026-04-09T01:00] Day 19 | risk=yellow | [ph outside target range: 6.48 ] | T=77.68°F pH=6.48 TDS=179.0ppm | pH has drifted 0.12 units lower since yesterday's 20:44 test and is now 0.02 bel
+[2026-04-09T01:15] Day 19 | risk=yellow | [ph outside target range: 6.47 ] | T=77.68°F pH=6.47 TDS=180.0ppm | pH dipping to 6.47 triggers alert, but biofilm and substrate stabilization in a 
+[2026-04-09T01:15] Day 19 | risk=yellow | [ph outside target range: 6.47 ] | T=77.68°F pH=6.47 TDS=180.0ppm | pH dipping to 6.47 triggers alert, but biofilm and substrate stabilization in a 
+[2026-04-09T01:30] Day 19 | risk=yellow | [ph outside target range: 6.48 ] | T=77.56°F pH=6.48 TDS=181.0ppm | pH is trending acidic (mean 6.454, now 6.48) but ammonia and nitrite remain zero
+[2026-04-09T01:30] Day 19 | risk=yellow | [ph outside target range: 6.48 ] | T=77.56°F pH=6.48 TDS=181.0ppm | pH is trending acidic (mean 6.454, now 6.48) but ammonia and nitrite remain zero
+[2026-04-09T01:45] Day 19 | risk=yellow | [ph outside target range: 6.49 ] | T=77.56°F pH=6.49 TDS=181.0ppm | pH is one decimal point below target (6.49 vs 6.5 minimum), technically outside 
+[2026-04-09T01:45] Day 19 | risk=yellow | [ph outside target range: 6.49 ] | T=77.56°F pH=6.49 TDS=181.0ppm | pH is one decimal point below target (6.49 vs 6.5 minimum), technically outside 
