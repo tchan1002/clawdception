@@ -1138,3 +1138,11 @@
 [2026-04-09T20:30] Day 19 | risk=yellow | [manual event since last check ] | T=77.79°F pH=6.45 TDS=183.0ppm | pH is creeping down—now two manual tests confirm it's not sensor drift. Nitrate 
 [2026-04-09T20:45] Day 19 | risk=yellow | [manual event since last check ] | T=77.79°F pH=6.44 TDS=183.0ppm | Cycle progressing well—ammonia zero, nitrate climbing to 80ppm confirms nitrific
 [2026-04-09T20:45] Day 19 | risk=yellow | [manual event since last check ] | T=77.79°F pH=6.44 TDS=183.0ppm | Cycle progressing well—ammonia zero, nitrate climbing to 80ppm confirms nitrific
+[2026-04-09T21:00] Day 19 | risk=yellow | [manual event since last check ] | T=77.68°F pH=6.46 TDS=184.0ppm | Tank is cycling cleanly—ammonia 0, nitrite 0, nitrate 80 is expected Day 19 prog
+[2026-04-09T21:00] Day 19 | risk=yellow | [manual event since last check ] | T=77.68°F pH=6.46 TDS=184.0ppm | Tank is cycling cleanly—ammonia 0, nitrite 0, nitrate 80 is expected Day 19 prog
+[2026-04-09T21:15] Day 19 | risk=yellow | [manual event since last check ] | T=77.45°F pH=6.49 TDS=183.0ppm | Cycle is progressing cleanly—ammonia 0, nitrite 0, nitrate 80 confirms nitrogen 
+[2026-04-09T21:15] Day 19 | risk=yellow | [manual event since last check ] | T=77.45°F pH=6.49 TDS=183.0ppm | Cycle is progressing cleanly—ammonia 0, nitrite 0, nitrate 80 confirms nitrogen 
+[2026-04-09T21:30] Day 19 | risk=yellow | [manual event since last check ] | T=77.56°F pH=6.5 TDS=184.0ppm | Day 19 of cycling shows strong ammonia/nitrite control (0/0) with nitrate at 80p
+[2026-04-09T21:30] Day 19 | risk=yellow | [manual event since last check ] | T=77.56°F pH=6.5 TDS=184.0ppm | Day 19 of cycling shows strong ammonia/nitrite control (0/0) with nitrate at 80p
+[2026-04-09T21:45] Day 19 | risk=yellow | [manual event since last check ] | T=77.56°F pH=6.52 TDS=186.0ppm | Tank is cycling well—ammonia 0, nitrate 80, nitrite 0 shows healthy progression.
+[2026-04-09T21:45] Day 19 | risk=yellow | [manual event since last check ] | T=77.56°F pH=6.52 TDS=186.0ppm | Tank is cycling well—ammonia 0, nitrate 80, nitrite 0 shows healthy progression.
