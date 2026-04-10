@@ -1122,3 +1122,11 @@
 [2026-04-09T18:30] Day 19 | risk=yellow | [manual event since last check ] | T=77.68°F pH=6.41 TDS=184.0ppm | Tank is in active nitrogen cycle (ammonia 0, nitrite 0, nitrate 80ppm—healthy pr
 [2026-04-09T18:45] Day 19 | risk=yellow | [manual event since last check ] | T=77.56°F pH=6.4 TDS=183.0ppm | pH drifting downward despite stable ammonia/nitrite (both 0, ammonia still undet
 [2026-04-09T18:45] Day 19 | risk=yellow | [manual event since last check ] | T=77.56°F pH=6.4 TDS=183.0ppm | pH drifting downward despite stable ammonia/nitrite (both 0, ammonia still undet
+[2026-04-09T19:00] Day 19 | risk=yellow | [manual event since last check ] | T=77.56°F pH=6.41 TDS=184.0ppm | Tank is cycling well — zero ammonia and nitrite, 80 ppm nitrate confirms nitrifi
+[2026-04-09T19:00] Day 19 | risk=yellow | [manual event since last check ] | T=77.56°F pH=6.41 TDS=184.0ppm | Tank is cycling well — zero ammonia and nitrite, 80 ppm nitrate confirms nitrifi
+[2026-04-09T19:15] Day 19 | risk=yellow | [manual event since last check ] | T=77.56°F pH=6.43 TDS=183.0ppm | pH dropping measurably day-to-day (6.6→6.43) as nitrification accelerates. Ammon
+[2026-04-09T19:15] Day 19 | risk=yellow | [manual event since last check ] | T=77.56°F pH=6.43 TDS=183.0ppm | pH dropping measurably day-to-day (6.6→6.43) as nitrification accelerates. Ammon
+[2026-04-09T19:30] Day 19 | risk=yellow | [manual event since last check ] | T=77.56°F pH=6.41 TDS=184.0ppm | Cycle is progressing well: ammonia and nitrite both zero across two tests, nitra
+[2026-04-09T19:30] Day 19 | risk=yellow | [manual event since last check ] | T=77.56°F pH=6.41 TDS=184.0ppm | Cycle is progressing well: ammonia and nitrite both zero across two tests, nitra
+[2026-04-09T19:45] Day 19 | risk=yellow | [manual event since last check ] | T=77.79°F pH=6.42 TDS=184.0ppm | pH has dropped 0.17 units in 24 hours and now sits 0.08 below target minimum—con
+[2026-04-09T19:45] Day 19 | risk=yellow | [manual event since last check ] | T=77.79°F pH=6.42 TDS=184.0ppm | pH has dropped 0.17 units in 24 hours and now sits 0.08 below target minimum—con
