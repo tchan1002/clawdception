@@ -94,3 +94,6 @@
 • If pH drops below 6.4 within next 24 hours, execute a 15% water change with fresh dechlorinated water
 • Restart ESP32 if WiFi post failures exceed 3 in the next 2-hour window; check router signal strength and proximity
 • If next manual pH test confirms sensor drift (reads 6.5+), recalibrate pH probe; if reading confirms acidification trend, prepare additional buffer source
+[shrimp-journal] Entry written: 2026-04-10-0005.md (Day 20)
+[call-toby] Telegram sent (info): Journal — Day 20 · 2026-04-10 00:05
+[call-toby] Document sent: 2026-04-10-0005.md
