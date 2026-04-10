@@ -52,3 +52,4 @@
 {"timestamp": "2026-04-09T22:00:02.259099", "urgency": "warning", "message": "No water test logged yet. Day 19 of cycle \u2014 ammonia and nitrite are unknown.", "sent_via": "telegram"}
 {"timestamp": "2026-04-10T00:00:02.688372", "urgency": "warning", "message": "ESP32 post failures elevated (6) in last hour \u2014 WiFi instability likely.", "sent_via": "telegram"}
 {"timestamp": "2026-04-10T00:05:13.083186", "urgency": "info", "message": "Journal \u2014 Day 20 \u00b7 2026-04-10 00:05", "sent_via": "telegram"}
+{"timestamp": "2026-04-10T06:05:14.347198", "urgency": "info", "message": "Journal \u2014 Day 20 \u00b7 2026-04-10 06:05", "sent_via": "telegram"}
