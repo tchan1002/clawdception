@@ -1179,3 +1179,11 @@
 [2026-04-10T01:30] Day 20 | skipped (stable) | T=77.45°F pH=6.51 TDS=184.0ppm
 [2026-04-10T01:45] Day 20 | skipped (stable) | T=77.45°F pH=6.51 TDS=183.0ppm
 [2026-04-10T01:45] Day 20 | skipped (stable) | T=77.45°F pH=6.51 TDS=183.0ppm
+[2026-04-10T02:00] Day 20 | skipped (stable) | T=77.34°F pH=6.52 TDS=184.0ppm
+[2026-04-10T02:00] Day 20 | skipped (stable) | T=77.34°F pH=6.52 TDS=184.0ppm
+[2026-04-10T02:15] Day 20 | skipped (stable) | T=77.34°F pH=6.5 TDS=186.0ppm
+[2026-04-10T02:15] Day 20 | skipped (stable) | T=77.34°F pH=6.5 TDS=186.0ppm
+[2026-04-10T02:30] Day 20 | risk=yellow | [ph outside target range: 6.48 ] | T=77.34°F pH=6.48 TDS=187.0ppm | pH is riding the edge of target—not emergency, but the 24h trend (mean 6.499, no
+[2026-04-10T02:30] Day 20 | risk=yellow | [ph outside target range: 6.48 ] | T=77.34°F pH=6.48 TDS=187.0ppm | pH is riding the edge of target—not emergency, but the 24h trend (mean 6.499, no
+[2026-04-10T02:45] Day 20 | risk=yellow | [ph outside target range: 6.48 ] | T=77.22°F pH=6.48 TDS=185.0ppm | pH is marginally low but stable—not in free fall. Day 20 of cycling: nitrificati
+[2026-04-10T02:45] Day 20 | risk=yellow | [ph outside target range: 6.48 ] | T=77.22°F pH=6.48 TDS=185.0ppm | pH is marginally low but stable—not in free fall. Day 20 of cycling: nitrificati
