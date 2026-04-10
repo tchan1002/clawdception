@@ -1195,3 +1195,11 @@
 [2026-04-10T03:30] Day 20 | risk=yellow | [ph outside target range: 6.45 ] | T=77.11°F pH=6.45 TDS=187.0ppm | pH dip to 6.45 is minor but the 24-hour trajectory is downward, consistent with 
 [2026-04-10T03:45] Day 20 | risk=yellow | [ph outside target range: 6.45 ] | T=77.11°F pH=6.45 TDS=185.0ppm | pH is edging below range and showing a downward trajectory—typical for cycling t
 [2026-04-10T03:45] Day 20 | risk=yellow | [ph outside target range: 6.45 ] | T=77.11°F pH=6.45 TDS=185.0ppm | pH is edging below range and showing a downward trajectory—typical for cycling t
+[2026-04-10T04:00] Day 20 | risk=yellow | [ph outside target range: 6.45 ] | T=77.11°F pH=6.45 TDS=183.0ppm | pH is just below target and tracking downward—nitrate at 80ppm + nitrification i
+[2026-04-10T04:00] Day 20 | risk=yellow | [ph outside target range: 6.45 ] | T=77.11°F pH=6.45 TDS=183.0ppm | pH is just below target and tracking downward—nitrate at 80ppm + nitrification i
+[2026-04-10T04:15] Day 20 | risk=yellow | [ph outside target range: 6.43 ] | T=77.11°F pH=6.43 TDS=186.0ppm | pH has dipped 0.05 units in 24 hours and sits at 6.43—outside lower bound but no
+[2026-04-10T04:15] Day 20 | risk=yellow | [ph outside target range: 6.43 ] | T=77.11°F pH=6.43 TDS=186.0ppm | pH has dipped 0.05 units in 24 hours and sits at 6.43—outside lower bound but no
+[2026-04-10T04:30] Day 20 | risk=yellow | [ph outside target range: 6.44 ] | T=77.22°F pH=6.44 TDS=185.0ppm | pH has slipped below the 6.5 floor and shows a consistent downward trajectory ov
+[2026-04-10T04:30] Day 20 | risk=yellow | [ph outside target range: 6.44 ] | T=77.22°F pH=6.44 TDS=185.0ppm | pH has slipped below the 6.5 floor and shows a consistent downward trajectory ov
+[2026-04-10T04:45] Day 20 | risk=yellow | [ph outside target range: 6.43 ] | T=77.11°F pH=6.43 TDS=185.0ppm | pH nudged below target but not yet critical—we're at 6.43 with a gentle downward
+[2026-04-10T04:45] Day 20 | risk=yellow | [ph outside target range: 6.43 ] | T=77.11°F pH=6.43 TDS=185.0ppm | pH nudged below target but not yet critical—we're at 6.43 with a gentle downward
