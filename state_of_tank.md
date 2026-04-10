@@ -1,7 +1,7 @@
 # State of Tank — Media Luna
 
-**Last updated:** 2026-04-08
-**Cycle day:** 18 (started 2026-03-22)
+**Last updated:** 2026-04-09
+**Cycle day:** 19 (started 2026-03-22)
 **Tank status:** Cycle complete — stable — no shrimp
 
 ---
@@ -10,37 +10,40 @@
 
 | Parameter | Current | Notes |
 |-----------|---------|-------|
-| Temperature | 77.9°F avg | 77.68–78.24°F range; −0.56°F day change; slow cooling trend vs. yesterday |
-| pH (sensor) | 6.45 avg | 6.35–6.55 range; consistent ~0.15 offset below manual tests |
-| pH (manual) | 6.6 | Confirmed ×2 today (02:27 and 20:44); stable across 18-hour window |
-| TDS | 179.4 ppm avg | 177–182 ppm range; +3 ppm day change; slow upward creep |
-| Ammonia | 0 ppm | Confirmed ×2 today |
-| Nitrite | 0 ppm | Confirmed ×2 today |
-| Nitrate | 80 ppm | Confirmed ×2 today; third consecutive day at this level |
+| Temperature | 77.7°F avg | 77.45–78.12°F range; −0.12°F day change; slow gradual cooling trend |
+| pH (sensor) | 6.50 avg | 6.37–6.59 range; +0.13 day change |
+| pH (manual) | 6.4 | Tested 23:06; sensor and manual now in close agreement — offset appears closed |
+| TDS | 182 ppm avg | 179–186 ppm range; +3 ppm day change; slow upward creep |
+| Ammonia | 0 ppm | Confirmed 23:06 |
+| Nitrite | 0 ppm | Confirmed 23:06 |
+| Nitrate | 80 ppm | Stable across multiple days; cycle confirmed complete |
 
 ---
 
 ## Cycle Status
 
-**Complete.** Ammonia and nitrite have been at zero for three consecutive days with double-daily confirmation. Nitrate is stable at 80 ppm — notably not climbing, which may indicate reduced ammonia input in recent days. The biofilter is established and working.
+**Complete.** Ammonia and nitrite have been at zero for multiple consecutive days. Nitrate is holding at 80 ppm, confirming active nitrification. The bacterial colony is established and stable. The tank is biologically ready for inhabitants.
 
 ---
 
-## Known Sensor Behavior
+## Key Concerns
 
-The pH sensor reads approximately 0.10–0.15 below manual test results. This appears to be a stable calibration offset rather than a growing discrepancy. Manual tests should be treated as ground truth until the sensor is recalibrated.
+**pH at 6.4:** This is the primary pre-introduction concern. Cherry shrimp prefer 6.8–7.4. A water change before introduction would raise pH and lower nitrate simultaneously. Crushed coral or a Wonder Shell could provide ongoing gentle buffering. No immediate crisis — tank has no shrimp — but this needs to be addressed before introduction day.
 
----
+**Nitrate at 80 ppm:** Acceptable for a cycling tank with no shrimp, but should be reduced to below 20 ppm before shrimp are introduced. A 20–25% water change is the right move.
 
-## Shrimp Readiness
-
-The tank is ready to receive Neocaridina. Recommend a 20% water change immediately prior to introduction to bring nitrate from ~80 ppm down to ~60–65 ppm, giving new arrivals a cleaner baseline. pH at 6.6 is on the low end of Neocaridina's preferred range (6.5–7.5) but acceptable. Monitor for any upward drift after shrimp introduction.
+**ESP32 WiFi instability:** Intermittent post failures observed. Not affecting data quality at current frequency, but should be resolved before shrimp arrive and monitoring stakes increase.
 
 ---
 
-## Watch List
+## Equipment
 
-- Nitrate plateau — confirm whether this is stable equilibrium or measurement artifact
-- pH sensor offset — monitor for drift; consider recalibration
-- Temperature — mild cooling trend; verify heater setpoint
-- Nitrate trajectory once shrimp (and feeding) are introduced
+- Senztek pH/TDS/Temp sensor: online, reading accurately (manual agreement confirmed tonight)
+- ESP32: intermittent WiFi post failures; monitoring
+- Heater, filter, light: presumed operational; no anomalies reported
+
+---
+
+## Recent History
+
+Days 17–19 have all returned the same result: ammonia 0, nitrite 0, nitrate 80 ppm. This consistency is the signature of a mature, stable cycle. The tank has been ready for shrimp for at least two days.

@@ -1219,3 +1219,11 @@
 [2026-04-10T06:30] Day 20 | risk=yellow | [ph outside target range: 6.49 ] | T=77.56°F pH=6.49 TDS=187.0ppm | pH has drifted to 6.49—just below the 6.5 floor—continuing a gentle downward tra
 [2026-04-10T06:45] Day 20 | risk=yellow | [ph outside target range: 6.49 ] | T=77.68°F pH=6.49 TDS=185.0ppm | pH touching the danger line at 6.49 is concerning but not critical—still safely 
 [2026-04-10T06:45] Day 20 | risk=yellow | [ph outside target range: 6.49 ] | T=77.68°F pH=6.49 TDS=185.0ppm | pH touching the danger line at 6.49 is concerning but not critical—still safely 
+[2026-04-10T07:00] Day 20 | risk=yellow | [ph outside target range: 6.48 ] | T=77.68°F pH=6.48 TDS=186.0ppm | pH is marginally low but not critical; ammonia and nitrite remain at zero (good 
+[2026-04-10T07:00] Day 20 | risk=yellow | [ph outside target range: 6.48 ] | T=77.68°F pH=6.48 TDS=186.0ppm | pH is marginally low but not critical; ammonia and nitrite remain at zero (good 
+[2026-04-10T07:15] Day 20 | risk=yellow | [ph outside target range: 6.49 ] | T=77.68°F pH=6.49 TDS=187.0ppm | pH is tracking downward into the acidic zone despite stable temp and healthy TDS
+[2026-04-10T07:15] Day 20 | risk=yellow | [ph outside target range: 6.49 ] | T=77.68°F pH=6.49 TDS=187.0ppm | pH is tracking downward into the acidic zone despite stable temp and healthy TDS
+[2026-04-10T07:30] Day 20 | risk=yellow | [ph outside target range: 6.48 ] | T=77.68°F pH=6.48 TDS=187.0ppm | pH sits at 6.48—just outside safe range and trending downward (−0.07 over 24h). 
+[2026-04-10T07:30] Day 20 | risk=yellow | [ph outside target range: 6.48 ] | T=77.68°F pH=6.48 TDS=187.0ppm | pH sits at 6.48—just outside safe range and trending downward (−0.07 over 24h). 
+[2026-04-10T07:45] Day 20 | risk=yellow | [ph outside target range: 6.48 ] | T=77.68°F pH=6.48 TDS=185.0ppm | pH has dipped 0.09 below target in 24h, consistent with acid accumulation as the
+[2026-04-10T07:45] Day 20 | risk=yellow | [ph outside target range: 6.48 ] | T=77.68°F pH=6.48 TDS=185.0ppm | pH has dipped 0.09 below target in 24h, consistent with acid accumulation as the
