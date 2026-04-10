@@ -1284,3 +1284,11 @@
 [2026-04-10T14:30] Day 20 | risk=yellow | [ph outside target range: 6.43 ] | T=76.66°F pH=6.43 TDS=186.0ppm | pH at 6.43 is creeping below the 6.5 floor but shows micro-upward momentum—the t
 [2026-04-10T14:45] Day 20 | risk=green | [ph outside target range: 6.45 ] | T=76.78°F pH=6.45 TDS=186.0ppm | pH is marginally low but the 24-hour trend shows upward movement (+0.06), sugges
 [2026-04-10T14:45] Day 20 | risk=green | [ph outside target range: 6.45 ] | T=76.78°F pH=6.45 TDS=186.0ppm | pH is marginally low but the 24-hour trend shows upward movement (+0.06), sugges
+[2026-04-10T15:00] Day 20 | risk=yellow | [ph outside target range: 6.48 ] | T=77.0°F pH=6.48 TDS=188.0ppm | pH is 0.02 units shy of the 6.5 floor—technically out of spec, but the 24-hour t
+[2026-04-10T15:00] Day 20 | risk=yellow | [ph outside target range: 6.48 ] | T=77.0°F pH=6.48 TDS=188.0ppm | pH is 0.02 units shy of the 6.5 floor—technically out of spec, but the 24-hour t
+[2026-04-10T15:15] Day 20 | risk=yellow | [ph outside target range: 6.48 ] | T=77.11°F pH=6.48 TDS=187.0ppm | pH at 6.48 touches the lower boundary but 24hr data shows upward creep (+0.09), 
+[2026-04-10T15:15] Day 20 | risk=yellow | [ph outside target range: 6.48 ] | T=77.11°F pH=6.48 TDS=187.0ppm | pH at 6.48 touches the lower boundary but 24hr data shows upward creep (+0.09), 
+[2026-04-10T15:30] Day 20 | risk=yellow | [ph outside target range: 6.49 ] | T=77.0°F pH=6.49 TDS=187.0ppm | pH is marginally outside range but the 24-hour trend is upward (+0.11), suggesti
+[2026-04-10T15:30] Day 20 | risk=yellow | [ph outside target range: 6.49 ] | T=77.0°F pH=6.49 TDS=187.0ppm | pH is marginally outside range but the 24-hour trend is upward (+0.11), suggesti
+[2026-04-10T15:45] Day 20 | skipped (stable) | T=77.0°F pH=6.51 TDS=189.0ppm
+[2026-04-10T15:45] Day 20 | skipped (stable) | T=77.0°F pH=6.51 TDS=189.0ppm
