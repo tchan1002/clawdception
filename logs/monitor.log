@@ -1146,3 +1146,12 @@
 [2026-04-09T21:30] Day 19 | risk=yellow | [manual event since last check ] | T=77.56°F pH=6.5 TDS=184.0ppm | Day 19 of cycling shows strong ammonia/nitrite control (0/0) with nitrate at 80p
 [2026-04-09T21:45] Day 19 | risk=yellow | [manual event since last check ] | T=77.56°F pH=6.52 TDS=186.0ppm | Tank is cycling well—ammonia 0, nitrate 80, nitrite 0 shows healthy progression.
 [2026-04-09T21:45] Day 19 | risk=yellow | [manual event since last check ] | T=77.56°F pH=6.52 TDS=186.0ppm | Tank is cycling well—ammonia 0, nitrate 80, nitrite 0 shows healthy progression.
+[2026-04-09T22:00] Day 19 | risk=yellow | [manual event since last check ] | T=77.56°F pH=6.54 TDS=186.0ppm | Tank is in healthy cycling phase with stable temperature and good TDS trajectory
+[call-toby] Telegram sent (warning): No water test logged yet. Day 19 of cycle — ammonia and nitrite are unknown.
+[2026-04-09T22:00] Day 19 | risk=yellow | [manual event since last check ] | T=77.56°F pH=6.54 TDS=186.0ppm | Tank is in healthy cycling phase with stable temperature and good TDS trajectory
+[2026-04-09T22:15] Day 19 | risk=yellow | [manual event since last check ] | T=77.56°F pH=6.54 TDS=186.0ppm | Tank is cycling—zero ammonia and nitrite confirm bacterial colonization is worki
+[2026-04-09T22:15] Day 19 | risk=yellow | [manual event since last check ] | T=77.56°F pH=6.54 TDS=186.0ppm | Tank is cycling—zero ammonia and nitrite confirm bacterial colonization is worki
+[2026-04-09T22:30] Day 19 | risk=yellow | [manual event since last check ] | T=77.45°F pH=6.56 TDS=184.0ppm | Nitrate at 80ppm signals active cycling—good news for day 19. pH drifting down (
+[2026-04-09T22:30] Day 19 | risk=yellow | [manual event since last check ] | T=77.45°F pH=6.56 TDS=184.0ppm | Nitrate at 80ppm signals active cycling—good news for day 19. pH drifting down (
+[2026-04-09T22:45] Day 19 | risk=yellow | [manual event since last check ] | T=77.56°F pH=6.56 TDS=185.0ppm | Ammonia 0, nitrate 80, nitrite 0 signals solid cycle progress. pH creeping down 
+[2026-04-09T22:45] Day 19 | risk=yellow | [manual event since last check ] | T=77.56°F pH=6.56 TDS=185.0ppm | Ammonia 0, nitrate 80, nitrite 0 signals solid cycle progress. pH creeping down 
