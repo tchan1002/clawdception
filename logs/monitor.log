@@ -1268,3 +1268,11 @@
 [2026-04-10T12:30] Day 20 | risk=yellow | [ph outside target range: 6.42 ] | T=77.0°F pH=6.42 TDS=187.0ppm | pH is creeping downward and now breaches the lower target bound—we're in the ear
 [2026-04-10T12:45] Day 20 | risk=yellow | [ph outside target range: 6.43 ] | T=77.11°F pH=6.43 TDS=187.0ppm | pH is sliding below minimum threshold but decline rate is gentle and within buff
 [2026-04-10T12:45] Day 20 | risk=yellow | [ph outside target range: 6.43 ] | T=77.11°F pH=6.43 TDS=187.0ppm | pH is sliding below minimum threshold but decline rate is gentle and within buff
+[2026-04-10T13:00] Day 20 | risk=yellow | [ph outside target range: 6.41 ] | T=77.0°F pH=6.41 TDS=186.0ppm | pH breach is modest but real—we're 0.09 units below floor and on a downtrend. Ni
+[2026-04-10T13:00] Day 20 | risk=yellow | [ph outside target range: 6.41 ] | T=77.0°F pH=6.41 TDS=186.0ppm | pH breach is modest but real—we're 0.09 units below floor and on a downtrend. Ni
+[2026-04-10T13:15] Day 20 | risk=yellow | [ph outside target range: 6.42 ] | T=77.0°F pH=6.42 TDS=187.0ppm | pH has slipped to 6.42—just shy of the 6.5 floor—and the 24-hour trend shows gen
+[2026-04-10T13:15] Day 20 | risk=yellow | [ph outside target range: 6.42 ] | T=77.0°F pH=6.42 TDS=187.0ppm | pH has slipped to 6.42—just shy of the 6.5 floor—and the 24-hour trend shows gen
+[2026-04-10T13:30] Day 20 | risk=yellow | [ph outside target range: 6.41 ] | T=76.89°F pH=6.41 TDS=185.0ppm | pH has crossed below the 6.5 floor but remains well above danger threshold (6.0)
+[2026-04-10T13:30] Day 20 | risk=yellow | [ph outside target range: 6.41 ] | T=76.89°F pH=6.41 TDS=185.0ppm | pH has crossed below the 6.5 floor but remains well above danger threshold (6.0)
+[2026-04-10T13:45] Day 20 | risk=yellow | [ph outside target range: 6.41 ] | T=76.78°F pH=6.41 TDS=187.0ppm | pH is nudging below target but the 24hr trend shows only -0.03 change—gentle, no
+[2026-04-10T13:45] Day 20 | risk=yellow | [ph outside target range: 6.41 ] | T=76.78°F pH=6.41 TDS=187.0ppm | pH is nudging below target but the 24hr trend shows only -0.03 change—gentle, no
