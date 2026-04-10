@@ -1276,3 +1276,11 @@
 [2026-04-10T13:30] Day 20 | risk=yellow | [ph outside target range: 6.41 ] | T=76.89°F pH=6.41 TDS=185.0ppm | pH has crossed below the 6.5 floor but remains well above danger threshold (6.0)
 [2026-04-10T13:45] Day 20 | risk=yellow | [ph outside target range: 6.41 ] | T=76.78°F pH=6.41 TDS=187.0ppm | pH is nudging below target but the 24hr trend shows only -0.03 change—gentle, no
 [2026-04-10T13:45] Day 20 | risk=yellow | [ph outside target range: 6.41 ] | T=76.78°F pH=6.41 TDS=187.0ppm | pH is nudging below target but the 24hr trend shows only -0.03 change—gentle, no
+[2026-04-10T14:00] Day 20 | risk=yellow | [ph outside target range: 6.41 ] | T=76.78°F pH=6.41 TDS=187.0ppm | pH is sliding into soft territory—we're at 6.41, below the safe floor of 6.5. Th
+[2026-04-10T14:00] Day 20 | risk=yellow | [ph outside target range: 6.41 ] | T=76.78°F pH=6.41 TDS=187.0ppm | pH is sliding into soft territory—we're at 6.41, below the safe floor of 6.5. Th
+[2026-04-10T14:15] Day 20 | risk=yellow | [ph outside target range: 6.42 ] | T=76.66°F pH=6.42 TDS=186.0ppm | pH just breached the lower target threshold at 6.42 despite showing a tiny upwar
+[2026-04-10T14:15] Day 20 | risk=yellow | [ph outside target range: 6.42 ] | T=76.66°F pH=6.42 TDS=186.0ppm | pH just breached the lower target threshold at 6.42 despite showing a tiny upwar
+[2026-04-10T14:30] Day 20 | risk=yellow | [ph outside target range: 6.43 ] | T=76.66°F pH=6.43 TDS=186.0ppm | pH at 6.43 is creeping below the 6.5 floor but shows micro-upward momentum—the t
+[2026-04-10T14:30] Day 20 | risk=yellow | [ph outside target range: 6.43 ] | T=76.66°F pH=6.43 TDS=186.0ppm | pH at 6.43 is creeping below the 6.5 floor but shows micro-upward momentum—the t
+[2026-04-10T14:45] Day 20 | risk=green | [ph outside target range: 6.45 ] | T=76.78°F pH=6.45 TDS=186.0ppm | pH is marginally low but the 24-hour trend shows upward movement (+0.06), sugges
+[2026-04-10T14:45] Day 20 | risk=green | [ph outside target range: 6.45 ] | T=76.78°F pH=6.45 TDS=186.0ppm | pH is marginally low but the 24-hour trend shows upward movement (+0.06), sugges
