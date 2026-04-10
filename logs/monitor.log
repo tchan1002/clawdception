@@ -1235,3 +1235,11 @@
 [2026-04-10T08:30] Day 20 | risk=yellow | [ph outside target range: 6.46 ] | T=77.45°F pH=6.46 TDS=187.0ppm | pH is trending downward and now breaches the target floor at 6.46; nitrate is el
 [2026-04-10T08:45] Day 20 | risk=yellow | [ph outside target range: 6.46 ] | T=77.68°F pH=6.46 TDS=186.0ppm | pH has drifted 0.14 units below target in 24 hours; while not yet dangerous, the
 [2026-04-10T08:45] Day 20 | risk=yellow | [ph outside target range: 6.46 ] | T=77.68°F pH=6.46 TDS=186.0ppm | pH has drifted 0.14 units below target in 24 hours; while not yet dangerous, the
+[2026-04-10T09:00] Day 20 | risk=yellow | [ph outside target range: 6.45 ] | T=77.45°F pH=6.45 TDS=187.0ppm | pH is nudging below target (6.45 vs 6.5 floor) but not alarming—still well above
+[2026-04-10T09:00] Day 20 | risk=yellow | [ph outside target range: 6.45 ] | T=77.45°F pH=6.45 TDS=187.0ppm | pH is nudging below target (6.45 vs 6.5 floor) but not alarming—still well above
+[2026-04-10T09:15] Day 20 | risk=yellow | [ph outside target range: 6.46 ] | T=77.45°F pH=6.46 TDS=187.0ppm | pH is down 0.11 pH units in 24 hours and now sitting at 6.46—technically outside
+[2026-04-10T09:15] Day 20 | risk=yellow | [ph outside target range: 6.46 ] | T=77.45°F pH=6.46 TDS=187.0ppm | pH is down 0.11 pH units in 24 hours and now sitting at 6.46—technically outside
+[2026-04-10T09:30] Day 20 | risk=yellow | [ph outside target range: 6.47 ] | T=77.34°F pH=6.47 TDS=186.0ppm | pH nudged 0.03 below floor on day 20 of cycling; acid accumulation is normal but
+[2026-04-10T09:30] Day 20 | risk=yellow | [ph outside target range: 6.47 ] | T=77.34°F pH=6.47 TDS=186.0ppm | pH nudged 0.03 below floor on day 20 of cycling; acid accumulation is normal but
+[2026-04-10T09:45] Day 20 | risk=yellow | [ph outside target range: 6.45 ] | T=77.22°F pH=6.45 TDS=187.0ppm | pH is nudging into the caution zone at 6.45—just below the 6.5 floor and showing
+[2026-04-10T09:45] Day 20 | risk=yellow | [ph outside target range: 6.45 ] | T=77.22°F pH=6.45 TDS=187.0ppm | pH is nudging into the caution zone at 6.45—just below the 6.5 floor and showing
