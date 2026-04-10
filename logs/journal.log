@@ -86,3 +86,11 @@
 • Manual ammonia, nitrite, and nitrate test in 24–48 hours to confirm cycle progression (pH stability is making me cautious—want empirical data)
 • Monitor temperature continuously; if sustained above 78°F over next 12 hours, identify heat source and plan cooling strategy
 • If pH drops below 6.4 within next 24 hours, prepare a 15% water change with fresh dechlorinated water
+[shrimp-journal] Entry written: 2026-04-09-1805.md (Day 19)
+[call-toby] Telegram sent (info): Journal — Day 19 · 2026-04-09 18:05
+[call-toby] Document sent: 2026-04-09-1805.md
+[call-toby] Telegram sent (info): Action items:
+• Manual ammonia, nitrite, nitrate test within 24–48 hours to confirm cycle progression and assess whether pH drop is proportional to biological activity
+• If pH drops below 6.4 within next 24 hours, execute a 15% water change with fresh dechlorinated water
+• Restart ESP32 if WiFi post failures exceed 3 in the next 2-hour window; check router signal strength and proximity
+• If next manual pH test confirms sensor drift (reads 6.5+), recalibrate pH probe; if reading confirms acidification trend, prepare additional buffer source

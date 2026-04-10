@@ -1114,3 +1114,11 @@
 [2026-04-09T17:30] Day 19 | risk=yellow | [ph outside target range: 6.39 ] | T=77.56°F pH=6.39 TDS=182.0ppm | pH is drifting below safe range and the 24-hour trend confirms slow acidificatio
 [2026-04-09T17:45] Day 19 | risk=yellow | [ph outside target range: 6.39 ] | T=77.56°F pH=6.39 TDS=182.0ppm | pH has drifted 0.06 points below target and now sits at 6.39—the trigger thresho
 [2026-04-09T17:45] Day 19 | risk=yellow | [ph outside target range: 6.39 ] | T=77.56°F pH=6.39 TDS=182.0ppm | pH has drifted 0.06 points below target and now sits at 6.39—the trigger thresho
+[2026-04-09T18:00] Day 19 | risk=yellow | [ph outside target range: 6.39 ] | T=77.68°F pH=6.39 TDS=182.0ppm | pH is slipping below safe range (6.39 vs 6.5 floor) with a downward vector; this
+[2026-04-09T18:00] Day 19 | risk=yellow | [ph outside target range: 6.39 ] | T=77.68°F pH=6.39 TDS=182.0ppm | pH is slipping below safe range (6.39 vs 6.5 floor) with a downward vector; this
+[2026-04-09T18:15] Day 19 | risk=yellow | [manual event since last check ] | T=77.68°F pH=6.41 TDS=184.0ppm | pH dropping 0.19 units over 24 hours while ammonia and nitrite stay zero indicat
+[2026-04-09T18:15] Day 19 | risk=yellow | [manual event since last check ] | T=77.68°F pH=6.41 TDS=184.0ppm | pH dropping 0.19 units over 24 hours while ammonia and nitrite stay zero indicat
+[2026-04-09T18:30] Day 19 | risk=yellow | [manual event since last check ] | T=77.68°F pH=6.41 TDS=184.0ppm | Tank is in active nitrogen cycle (ammonia 0, nitrite 0, nitrate 80ppm—healthy pr
+[2026-04-09T18:30] Day 19 | risk=yellow | [manual event since last check ] | T=77.68°F pH=6.41 TDS=184.0ppm | Tank is in active nitrogen cycle (ammonia 0, nitrite 0, nitrate 80ppm—healthy pr
+[2026-04-09T18:45] Day 19 | risk=yellow | [manual event since last check ] | T=77.56°F pH=6.4 TDS=183.0ppm | pH drifting downward despite stable ammonia/nitrite (both 0, ammonia still undet
+[2026-04-09T18:45] Day 19 | risk=yellow | [manual event since last check ] | T=77.56°F pH=6.4 TDS=183.0ppm | pH drifting downward despite stable ammonia/nitrite (both 0, ammonia still undet
