@@ -1300,3 +1300,13 @@
 [2026-04-10T16:30] Day 20 | skipped (stable) | T=77.0°F pH=6.57 TDS=188.0ppm
 [2026-04-10T16:45] Day 20 | skipped (stable) | T=77.0°F pH=6.57 TDS=187.0ppm
 [2026-04-10T16:45] Day 20 | skipped (stable) | T=77.0°F pH=6.57 TDS=187.0ppm
+[2026-04-10T17:00] Day 20 | skipped (stable) | T=77.11°F pH=6.58 TDS=189.0ppm
+[2026-04-10T17:00] Day 20 | skipped (stable) | T=77.11°F pH=6.58 TDS=189.0ppm
+[2026-04-10T17:15] Day 20 | risk=yellow | [manual event since last check ] | T=77.11°F pH=6.03 TDS=179.0ppm | pH has crossed into the 6.0–6.5 caution band and is accelerating downward at 0.3
+[2026-04-10T17:15] Day 20 | risk=yellow | [manual event since last check ] | T=77.11°F pH=6.03 TDS=179.0ppm | pH has crossed into the 6.0–6.5 caution band and is accelerating downward at 0.3
+[2026-04-10T17:30] Day 20 | risk=red | [manual event since last check ] | T=76.1°F pH=5.91 TDS=180.0ppm | pH has breached the 6.0 danger floor despite a water change 17.5 hours ago, indi
+[shrimp-alert] 🚨 ph is below danger threshold: 5.91 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.91 (below 6.0)
+[2026-04-10T17:30] Day 20 | risk=red | [manual event since last check ] | T=76.1°F pH=5.91 TDS=180.0ppm | pH has breached the 6.0 danger floor despite a water change 17.5 hours ago, indi
+[2026-04-10T17:45] Day 20 | risk=yellow | [manual event since last check ] | T=76.44°F pH=6.01 TDS=182.0ppm | pH has breached the yellow threshold (6.01) and shows a -0.38 decline in 24 hour
+[2026-04-10T17:45] Day 20 | risk=yellow | [manual event since last check ] | T=76.44°F pH=6.01 TDS=182.0ppm | pH has breached the yellow threshold (6.01) and shows a -0.38 decline in 24 hour

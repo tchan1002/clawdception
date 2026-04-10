@@ -57,3 +57,4 @@
 {"timestamp": "2026-04-10T08:30:23.867045", "urgency": "info", "message": "New skill proposal: cycletracker \ud83d\udee0\ufe0f  Review at ~/clawdception/proposals/2026-04-10-cycletracker/", "sent_via": "telegram"}
 {"timestamp": "2026-04-10T10:15:02.928137", "urgency": "warning", "message": "No water test logged yet. Day 20 of cycle \u2014 ammonia and nitrite are unknown.", "sent_via": "telegram"}
 {"timestamp": "2026-04-10T12:05:14.368151", "urgency": "info", "message": "Journal \u2014 Day 20 \u00b7 2026-04-10 12:05", "sent_via": "telegram"}
+{"timestamp": "2026-04-10T17:30:02.514872", "urgency": "critical", "message": "ph is below danger threshold: 5.91 (below 6.0)", "sent_via": "telegram"}
