@@ -1130,3 +1130,11 @@
 [2026-04-09T19:30] Day 19 | risk=yellow | [manual event since last check ] | T=77.56°F pH=6.41 TDS=184.0ppm | Cycle is progressing well: ammonia and nitrite both zero across two tests, nitra
 [2026-04-09T19:45] Day 19 | risk=yellow | [manual event since last check ] | T=77.79°F pH=6.42 TDS=184.0ppm | pH has dropped 0.17 units in 24 hours and now sits 0.08 below target minimum—con
 [2026-04-09T19:45] Day 19 | risk=yellow | [manual event since last check ] | T=77.79°F pH=6.42 TDS=184.0ppm | pH has dropped 0.17 units in 24 hours and now sits 0.08 below target minimum—con
+[2026-04-09T20:00] Day 19 | risk=yellow | [manual event since last check ] | T=77.79°F pH=6.43 TDS=184.0ppm | Cycle is progressing (ammonia 0, nitrate holding at 80ppm confirms active nitrif
+[2026-04-09T20:00] Day 19 | risk=yellow | [manual event since last check ] | T=77.79°F pH=6.43 TDS=184.0ppm | Cycle is progressing (ammonia 0, nitrate holding at 80ppm confirms active nitrif
+[2026-04-09T20:15] Day 19 | risk=yellow | [manual event since last check ] | T=77.79°F pH=6.44 TDS=185.0ppm | pH is creeping down—now confirmed at 6.4 by manual test, matching sensor data. T
+[2026-04-09T20:15] Day 19 | risk=yellow | [manual event since last check ] | T=77.79°F pH=6.44 TDS=185.0ppm | pH is creeping down—now confirmed at 6.4 by manual test, matching sensor data. T
+[2026-04-09T20:30] Day 19 | risk=yellow | [manual event since last check ] | T=77.79°F pH=6.45 TDS=183.0ppm | pH is creeping down—now two manual tests confirm it's not sensor drift. Nitrate 
+[2026-04-09T20:30] Day 19 | risk=yellow | [manual event since last check ] | T=77.79°F pH=6.45 TDS=183.0ppm | pH is creeping down—now two manual tests confirm it's not sensor drift. Nitrate 
+[2026-04-09T20:45] Day 19 | risk=yellow | [manual event since last check ] | T=77.79°F pH=6.44 TDS=183.0ppm | Cycle progressing well—ammonia zero, nitrate climbing to 80ppm confirms nitrific
+[2026-04-09T20:45] Day 19 | risk=yellow | [manual event since last check ] | T=77.79°F pH=6.44 TDS=183.0ppm | Cycle progressing well—ammonia zero, nitrate climbing to 80ppm confirms nitrific
