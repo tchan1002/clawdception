@@ -1252,3 +1252,11 @@
 [2026-04-10T10:30] Day 20 | risk=yellow | [ph outside target range: 6.47 ] | T=77.11°F pH=6.47 TDS=188.0ppm | pH is 0.03 units below target and showing a steady decline trajectory; combined 
 [2026-04-10T10:45] Day 20 | risk=yellow | [ph outside target range: 6.48 ] | T=77.22°F pH=6.48 TDS=187.0ppm | pH at 6.48 is just outside the safe floor (6.5) but still in shrimp tolerance. T
 [2026-04-10T10:45] Day 20 | risk=yellow | [ph outside target range: 6.48 ] | T=77.22°F pH=6.48 TDS=187.0ppm | pH at 6.48 is just outside the safe floor (6.5) but still in shrimp tolerance. T
+[2026-04-10T11:00] Day 20 | risk=yellow | [ph outside target range: 6.49 ] | T=77.34°F pH=6.49 TDS=187.0ppm | pH has slipped to 6.49 (just below 6.5 threshold) with a gentle downward trend o
+[2026-04-10T11:00] Day 20 | risk=yellow | [ph outside target range: 6.49 ] | T=77.34°F pH=6.49 TDS=187.0ppm | pH has slipped to 6.49 (just below 6.5 threshold) with a gentle downward trend o
+[2026-04-10T11:15] Day 20 | risk=yellow | [ph outside target range: 6.49 ] | T=77.45°F pH=6.49 TDS=185.0ppm | pH is 0.01 units below target and trending downward slightly, but still well wit
+[2026-04-10T11:15] Day 20 | risk=yellow | [ph outside target range: 6.49 ] | T=77.45°F pH=6.49 TDS=185.0ppm | pH is 0.01 units below target and trending downward slightly, but still well wit
+[2026-04-10T11:30] Day 20 | risk=yellow | [ph outside target range: 6.47 ] | T=77.34°F pH=6.47 TDS=186.0ppm | pH is slightly below target and trending down—consistent with acid accumulation 
+[2026-04-10T11:30] Day 20 | risk=yellow | [ph outside target range: 6.47 ] | T=77.34°F pH=6.47 TDS=186.0ppm | pH is slightly below target and trending down—consistent with acid accumulation 
+[2026-04-10T11:45] Day 20 | risk=yellow | [ph outside target range: 6.45 ] | T=77.22°F pH=6.45 TDS=187.0ppm | pH is creeping downward despite being barely out of spec—this is the acid accumu
+[2026-04-10T11:45] Day 20 | risk=yellow | [ph outside target range: 6.45 ] | T=77.22°F pH=6.45 TDS=187.0ppm | pH is creeping downward despite being barely out of spec—this is the acid accumu
