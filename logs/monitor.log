@@ -1464,3 +1464,11 @@
 [2026-04-11T12:30] Day 21 | skipped (stable) | T=77.9°F pH=6.51 TDS=187.0ppm
 [2026-04-11T12:45] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.5 TDS=187.0ppm | Temperature just kissed the ceiling—78.01°F is at the upper boundary and climbin
 [2026-04-11T12:45] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.5 TDS=187.0ppm | Temperature just kissed the ceiling—78.01°F is at the upper boundary and climbin
+[2026-04-11T13:00] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.49 TDS=186.0ppm | Temperature breached upper target threshold and shows persistent upward trend—Ch
+[2026-04-11T13:00] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.49 TDS=186.0ppm | Temperature breached upper target threshold and shows persistent upward trend—Ch
+[2026-04-11T13:15] Day 21 | risk=yellow | [ph outside target range: 6.49 ] | T=77.79°F pH=6.49 TDS=185.0ppm | pH is 0.01 units below target and triggered the alert—technically a violation bu
+[2026-04-11T13:15] Day 21 | risk=yellow | [ph outside target range: 6.49 ] | T=77.79°F pH=6.49 TDS=185.0ppm | pH is 0.01 units below target and triggered the alert—technically a violation bu
+[2026-04-11T13:30] Day 21 | risk=yellow | [ph outside target range: 6.49 ] | T=77.79°F pH=6.49 TDS=185.0ppm | pH is marginally below range but trending upward—likely cycle stabilization at d
+[2026-04-11T13:30] Day 21 | risk=yellow | [ph outside target range: 6.49 ] | T=77.79°F pH=6.49 TDS=185.0ppm | pH is marginally below range but trending upward—likely cycle stabilization at d
+[2026-04-11T13:45] Day 21 | risk=yellow | [ph outside target range: 6.48 ] | T=77.9°F pH=6.48 TDS=186.0ppm | pH is marginally low (6.48 vs 6.5 minimum), but trending upward and within round
+[2026-04-11T13:45] Day 21 | risk=yellow | [ph outside target range: 6.48 ] | T=77.9°F pH=6.48 TDS=186.0ppm | pH is marginally low (6.48 vs 6.5 minimum), but trending upward and within round
