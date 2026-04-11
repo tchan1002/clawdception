@@ -1310,3 +1310,11 @@
 [2026-04-10T17:30] Day 20 | risk=red | [manual event since last check ] | T=76.1°F pH=5.91 TDS=180.0ppm | pH has breached the 6.0 danger floor despite a water change 17.5 hours ago, indi
 [2026-04-10T17:45] Day 20 | risk=yellow | [manual event since last check ] | T=76.44°F pH=6.01 TDS=182.0ppm | pH has breached the yellow threshold (6.01) and shows a -0.38 decline in 24 hour
 [2026-04-10T17:45] Day 20 | risk=yellow | [manual event since last check ] | T=76.44°F pH=6.01 TDS=182.0ppm | pH has breached the yellow threshold (6.01) and shows a -0.38 decline in 24 hour
+[2026-04-10T18:00] Day 20 | risk=yellow | [manual event since last check ] | T=76.55°F pH=6.07 TDS=182.0ppm | pH at 6.07 is edging close to the 6.0 danger floor and has declined -0.32 in 24h
+[2026-04-10T18:00] Day 20 | risk=yellow | [manual event since last check ] | T=76.55°F pH=6.07 TDS=182.0ppm | pH at 6.07 is edging close to the 6.0 danger floor and has declined -0.32 in 24h
+[2026-04-10T18:15] Day 20 | risk=yellow | [manual event since last check ] | T=76.78°F pH=6.12 TDS=181.0ppm | pH is drifting downward and now sits just below the safe minimum (6.0 hard floor
+[2026-04-10T18:15] Day 20 | risk=yellow | [manual event since last check ] | T=76.78°F pH=6.12 TDS=181.0ppm | pH is drifting downward and now sits just below the safe minimum (6.0 hard floor
+[2026-04-10T18:30] Day 20 | risk=yellow | [manual event since last check ] | T=77.0°F pH=6.15 TDS=182.0ppm | pH decline is steady and intentional—the tank is still in active cycling and hyd
+[2026-04-10T18:30] Day 20 | risk=yellow | [manual event since last check ] | T=77.0°F pH=6.15 TDS=182.0ppm | pH decline is steady and intentional—the tank is still in active cycling and hyd
+[2026-04-10T18:45] Day 20 | risk=yellow | [manual event since last check ] | T=77.22°F pH=6.22 TDS=183.0ppm | pH drift downward is the concern—we're at 6.22 and trending -0.18/day, which put
+[2026-04-10T18:45] Day 20 | risk=yellow | [manual event since last check ] | T=77.22°F pH=6.22 TDS=183.0ppm | pH drift downward is the concern—we're at 6.22 and trending -0.18/day, which put
