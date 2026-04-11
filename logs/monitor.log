@@ -1367,3 +1367,11 @@
 [2026-04-11T00:30] Day 21 | skipped (stable) | T=77.45°F pH=6.5 TDS=186.0ppm
 [2026-04-11T00:45] Day 21 | risk=yellow | [ph outside target range: 6.49 ] | T=77.45°F pH=6.49 TDS=184.0ppm | pH has drifted to 6.49—just outside target—and the 24h trend is downward. Tank i
 [2026-04-11T00:45] Day 21 | risk=yellow | [ph outside target range: 6.49 ] | T=77.45°F pH=6.49 TDS=184.0ppm | pH has drifted to 6.49—just outside target—and the 24h trend is downward. Tank i
+[2026-04-11T01:00] Day 21 | skipped (stable) | T=77.34°F pH=6.52 TDS=185.0ppm
+[2026-04-11T01:00] Day 21 | skipped (stable) | T=77.34°F pH=6.52 TDS=185.0ppm
+[2026-04-11T01:15] Day 21 | skipped (stable) | T=77.34°F pH=6.53 TDS=185.0ppm
+[2026-04-11T01:15] Day 21 | skipped (stable) | T=77.34°F pH=6.53 TDS=185.0ppm
+[2026-04-11T01:30] Day 21 | skipped (stable) | T=77.45°F pH=6.52 TDS=185.0ppm
+[2026-04-11T01:30] Day 21 | skipped (stable) | T=77.45°F pH=6.52 TDS=185.0ppm
+[2026-04-11T01:45] Day 21 | skipped (stable) | T=77.56°F pH=6.52 TDS=183.0ppm
+[2026-04-11T01:45] Day 21 | skipped (stable) | T=77.56°F pH=6.52 TDS=183.0ppm
