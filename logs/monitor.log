@@ -1431,3 +1431,11 @@
 [2026-04-11T08:30] Day 21 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.62 TDS=185.0ppm | Temperature breach triggered this alert but remains within safe bounds—we're at 
 [2026-04-11T08:45] Day 21 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.63 TDS=186.0ppm | Temperature is kissing the ceiling—one more degree and we breach safe zone. pH a
 [2026-04-11T08:45] Day 21 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.63 TDS=186.0ppm | Temperature is kissing the ceiling—one more degree and we breach safe zone. pH a
+[2026-04-11T09:00] Day 21 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.6 TDS=183.0ppm | Temperature has crept to the ceiling of our target band and is trending upward—D
+[2026-04-11T09:00] Day 21 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.6 TDS=183.0ppm | Temperature has crept to the ceiling of our target band and is trending upward—D
+[2026-04-11T09:15] Day 21 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.61 TDS=184.0ppm | Temperature has crept to 78.24°F (top of range) with a +0.9°F upward trend over 
+[2026-04-11T09:15] Day 21 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.61 TDS=184.0ppm | Temperature has crept to 78.24°F (top of range) with a +0.9°F upward trend over 
+[2026-04-11T09:30] Day 21 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.62 TDS=184.0ppm | Temperature is climbing toward the ceiling and trending up over 24 hours—this is
+[2026-04-11T09:30] Day 21 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.62 TDS=184.0ppm | Temperature is climbing toward the ceiling and trending up over 24 hours—this is
+[2026-04-11T09:45] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.62 TDS=186.0ppm | Temperature creeping toward ceiling (78.01°F) with upward 24hr trend; room ambie
+[2026-04-11T09:45] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.62 TDS=186.0ppm | Temperature creeping toward ceiling (78.01°F) with upward 24hr trend; room ambie
