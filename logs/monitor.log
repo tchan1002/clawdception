@@ -1480,3 +1480,11 @@
 [2026-04-11T14:30] Day 21 | risk=yellow | [ph outside target range: 6.46 ] | T=77.79°F pH=6.46 TDS=186.0ppm | pH dipped to 6.46—just outside the lower bound—likely due to yesterday's water c
 [2026-04-11T14:45] Day 21 | risk=yellow | [ph outside target range: 6.46 ] | T=77.9°F pH=6.46 TDS=186.0ppm | pH is 0.04 units below target but trending stable and within safe bounds; this i
 [2026-04-11T14:45] Day 21 | risk=yellow | [ph outside target range: 6.46 ] | T=77.9°F pH=6.46 TDS=186.0ppm | pH is 0.04 units below target but trending stable and within safe bounds; this i
+[2026-04-11T15:00] Day 21 | risk=yellow | [ph outside target range: 6.46 ] | T=77.9°F pH=6.46 TDS=186.0ppm | pH is barely outside target but the 24-hour trend shows stability after yesterda
+[2026-04-11T15:00] Day 21 | risk=yellow | [ph outside target range: 6.46 ] | T=77.9°F pH=6.46 TDS=186.0ppm | pH is barely outside target but the 24-hour trend shows stability after yesterda
+[2026-04-11T15:15] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.36 TDS=185.0ppm | Temp at upper boundary with upward momentum is the primary concern on day 21 of 
+[2026-04-11T15:15] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.36 TDS=185.0ppm | Temp at upper boundary with upward momentum is the primary concern on day 21 of 
+[2026-04-11T15:30] Day 21 | risk=yellow | [ph outside target range: 6.45 ] | T=77.9°F pH=6.45 TDS=187.0ppm | pH dip to 6.45 is minor and expected during active cycling when biofilm establis
+[2026-04-11T15:30] Day 21 | risk=yellow | [ph outside target range: 6.45 ] | T=77.9°F pH=6.45 TDS=187.0ppm | pH dip to 6.45 is minor and expected during active cycling when biofilm establis
+[2026-04-11T15:45] Day 21 | risk=yellow | [ph outside target range: 6.46 ] | T=77.79°F pH=6.46 TDS=186.0ppm | pH edge is the concern—we're 0.04 below minimum but the 24h volatility (5.91–6.6
+[2026-04-11T15:45] Day 21 | risk=yellow | [ph outside target range: 6.46 ] | T=77.79°F pH=6.46 TDS=186.0ppm | pH edge is the concern—we're 0.04 below minimum but the 24h volatility (5.91–6.6
