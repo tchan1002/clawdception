@@ -1448,3 +1448,11 @@
 [2026-04-11T10:45] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.58 TDS=186.0ppm | Temperature brushed the ceiling at 78.01°F and shows a gentle uptrend over 24 ho
 [call-toby] Telegram sent (warning): No water test logged yet. Day 21 of cycle — ammonia and nitrite are unknown.
 [2026-04-11T10:45] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.58 TDS=186.0ppm | Temperature brushed the ceiling at 78.01°F and shows a gentle uptrend over 24 ho
+[2026-04-11T11:00] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.58 TDS=187.0ppm | Temperature creeping to the ceiling at day 21 of cycle; ambient Chicago spring w
+[2026-04-11T11:00] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.58 TDS=187.0ppm | Temperature creeping to the ceiling at day 21 of cycle; ambient Chicago spring w
+[2026-04-11T11:15] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.57 TDS=185.0ppm | Temperature creeping toward ceiling on warming trend; if it hits 79°F+ overnight
+[2026-04-11T11:15] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.57 TDS=185.0ppm | Temperature creeping toward ceiling on warming trend; if it hits 79°F+ overnight
+[2026-04-11T11:30] Day 21 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.57 TDS=185.0ppm | Temperature creeping toward ceiling—minor but worth noting on a warm Chicago spr
+[2026-04-11T11:30] Day 21 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.57 TDS=185.0ppm | Temperature creeping toward ceiling—minor but worth noting on a warm Chicago spr
+[2026-04-11T11:45] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.53 TDS=185.0ppm | Temperature breach triggered by ambient warmth—we're at the ceiling of tolerance
+[2026-04-11T11:45] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.53 TDS=185.0ppm | Temperature breach triggered by ambient warmth—we're at the ceiling of tolerance
