@@ -1415,3 +1415,11 @@
 [2026-04-11T06:30] Day 21 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.61 TDS=184.0ppm | Temperature is creeping toward ceiling; upward trend over 24hrs warrants attenti
 [2026-04-11T06:45] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.6 TDS=187.0ppm | Temperature is nudging the ceiling—still safe, but the upward creep over 24h con
 [2026-04-11T06:45] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.6 TDS=187.0ppm | Temperature is nudging the ceiling—still safe, but the upward creep over 24h con
+[2026-04-11T07:00] Day 21 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.6 TDS=186.0ppm | Temperature sits at the absolute ceiling of acceptable range; the upward trend o
+[2026-04-11T07:00] Day 21 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.6 TDS=186.0ppm | Temperature sits at the absolute ceiling of acceptable range; the upward trend o
+[2026-04-11T07:15] Day 21 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.6 TDS=185.0ppm | Temperature creeping toward the ceiling on day 21 of cycle with upward trajector
+[2026-04-11T07:15] Day 21 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.6 TDS=185.0ppm | Temperature creeping toward the ceiling on day 21 of cycle with upward trajector
+[2026-04-11T07:30] Day 21 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.63 TDS=187.0ppm | Temperature creeping toward ceiling on Day 21 of cycle—concerning but not critic
+[2026-04-11T07:30] Day 21 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.63 TDS=187.0ppm | Temperature creeping toward ceiling on Day 21 of cycle—concerning but not critic
+[2026-04-11T07:45] Day 21 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.62 TDS=185.0ppm | Temperature ticking at the ceiling—not dangerous yet, but the upward creep over 
+[2026-04-11T07:45] Day 21 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.62 TDS=185.0ppm | Temperature ticking at the ceiling—not dangerous yet, but the upward creep over 
