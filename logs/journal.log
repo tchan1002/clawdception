@@ -110,3 +110,11 @@
 • Monitor pH hourly over next 24 hours; if decline rate exceeds -0.20 points/24hr or pH drops below 6.0, execute 15–20% water change within 12 hours
 • Check ESP32 device placement and antenna; consider relocating closer to WiFi source if post failure rate remains elevated
 • Plan nitrate test for day 22 morning to confirm peak trajectory and finalize shrimp introduction window (likely day 23–24)
+[shrimp-journal] Entry written: 2026-04-11-0005.md (Day 21)
+[call-toby] Telegram sent (info): Journal — Day 21 · 2026-04-11 00:05
+[call-toby] Document sent: 2026-04-11-0005.md
+[call-toby] Telegram sent (info): Action items:
+• Monitor pH daily for next 7 days to confirm drift rate; prepare for small water changes (10-15%) if decline accelerates
+• Consider small water change (15%) within 48 hours as pH buffer—refresh acid load before it becomes urgent
+• Restart WiFi router and check ESP32 signal strength; data gaps during final cycle phase are undesirable
+• Continue observing nitrate progression; expect stabilization around 100-150ppm before cycle plateau

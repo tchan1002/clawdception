@@ -593,3 +593,6 @@
 {"timestamp": "2026-04-10T22:15:09.079662", "skill": "shrimp-monitor", "model": "claude-haiku-4-5", "input_tokens": 1991, "output_tokens": 635, "total_tokens": 2626}
 {"timestamp": "2026-04-10T22:30:08.841092", "skill": "shrimp-monitor", "model": "claude-haiku-4-5", "input_tokens": 2003, "output_tokens": 546, "total_tokens": 2549}
 {"timestamp": "2026-04-10T23:30:08.160214", "skill": "shrimp-monitor", "model": "claude-haiku-4-5", "input_tokens": 1958, "output_tokens": 572, "total_tokens": 2530}
+{"timestamp": "2026-04-11T00:05:13.694330", "skill": "shrimp-journal", "model": "claude-haiku-4-5", "input_tokens": 1957, "output_tokens": 999, "total_tokens": 2956}
+{"timestamp": "2026-04-11T00:15:07.528509", "skill": "shrimp-monitor", "model": "claude-haiku-4-5", "input_tokens": 1941, "output_tokens": 519, "total_tokens": 2460}
+{"timestamp": "2026-04-11T00:45:07.341410", "skill": "shrimp-monitor", "model": "claude-haiku-4-5", "input_tokens": 1940, "output_tokens": 552, "total_tokens": 2492}
