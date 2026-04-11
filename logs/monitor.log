@@ -1334,3 +1334,11 @@
 [2026-04-10T20:30] Day 20 | risk=yellow | [manual event since last check ] | T=77.68°F pH=6.37 TDS=181.0ppm | Tank is cycling well—nitrate at 80ppm confirms active nitrification on day 20. p
 [2026-04-10T20:45] Day 20 | risk=green | [manual event since last check ] | T=77.68°F pH=6.38 TDS=183.0ppm | Tank is stable and cycling normally on day 20. pH is slightly low but stable; th
 [2026-04-10T20:45] Day 20 | risk=green | [manual event since last check ] | T=77.68°F pH=6.38 TDS=183.0ppm | Tank is stable and cycling normally on day 20. pH is slightly low but stable; th
+[2026-04-10T21:00] Day 20 | risk=yellow | [manual event since last check ] | T=77.68°F pH=6.4 TDS=183.0ppm | pH is sliding gently downward (-0.06/24hr) and yesterday's test hit 5.91—concern
+[2026-04-10T21:00] Day 20 | risk=yellow | [manual event since last check ] | T=77.68°F pH=6.4 TDS=183.0ppm | pH is sliding gently downward (-0.06/24hr) and yesterday's test hit 5.91—concern
+[2026-04-10T21:15] Day 20 | risk=green | [manual event since last check ] | T=77.56°F pH=6.43 TDS=183.0ppm | Tank chemistry remains solid on day 20 of cycling. Temp is steady, TDS stable, a
+[2026-04-10T21:15] Day 20 | risk=green | [manual event since last check ] | T=77.56°F pH=6.43 TDS=183.0ppm | Tank chemistry remains solid on day 20 of cycling. Temp is steady, TDS stable, a
+[2026-04-10T21:30] Day 20 | risk=green | [manual event since last check ] | T=77.68°F pH=6.42 TDS=182.0ppm | Cycle progressing normally: ammonia and nitrite zero, nitrate at 80ppm signals n
+[2026-04-10T21:30] Day 20 | risk=green | [manual event since last check ] | T=77.68°F pH=6.42 TDS=182.0ppm | Cycle progressing normally: ammonia and nitrite zero, nitrate at 80ppm signals n
+[2026-04-10T21:45] Day 20 | risk=green | [manual event since last check ] | T=77.45°F pH=6.44 TDS=184.0ppm | Tank is cycling cleanly—ammonia at zero, nitrite zero, nitrate climbing (80ppm c
+[2026-04-10T21:45] Day 20 | risk=green | [manual event since last check ] | T=77.45°F pH=6.44 TDS=184.0ppm | Tank is cycling cleanly—ammonia at zero, nitrite zero, nitrate climbing (80ppm c
