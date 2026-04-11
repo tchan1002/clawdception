@@ -1472,3 +1472,11 @@
 [2026-04-11T13:30] Day 21 | risk=yellow | [ph outside target range: 6.49 ] | T=77.79°F pH=6.49 TDS=185.0ppm | pH is marginally below range but trending upward—likely cycle stabilization at d
 [2026-04-11T13:45] Day 21 | risk=yellow | [ph outside target range: 6.48 ] | T=77.9°F pH=6.48 TDS=186.0ppm | pH is marginally low (6.48 vs 6.5 minimum), but trending upward and within round
 [2026-04-11T13:45] Day 21 | risk=yellow | [ph outside target range: 6.48 ] | T=77.9°F pH=6.48 TDS=186.0ppm | pH is marginally low (6.48 vs 6.5 minimum), but trending upward and within round
+[2026-04-11T14:00] Day 21 | risk=? | [ph outside target range: 6.45 ] | T=77.9°F pH=6.45 TDS=186.0ppm | 
+[2026-04-11T14:00] Day 21 | risk=? | [ph outside target range: 6.45 ] | T=77.9°F pH=6.45 TDS=186.0ppm | 
+[2026-04-11T14:15] Day 21 | risk=yellow | [ph outside target range: 6.45 ] | T=77.9°F pH=6.45 TDS=186.0ppm | pH is marginally low at 6.45 but trending upward—this is typical post-water-chan
+[2026-04-11T14:15] Day 21 | risk=yellow | [ph outside target range: 6.45 ] | T=77.9°F pH=6.45 TDS=186.0ppm | pH is marginally low at 6.45 but trending upward—this is typical post-water-chan
+[2026-04-11T14:30] Day 21 | risk=yellow | [ph outside target range: 6.46 ] | T=77.79°F pH=6.46 TDS=186.0ppm | pH dipped to 6.46—just outside the lower bound—likely due to yesterday's water c
+[2026-04-11T14:30] Day 21 | risk=yellow | [ph outside target range: 6.46 ] | T=77.79°F pH=6.46 TDS=186.0ppm | pH dipped to 6.46—just outside the lower bound—likely due to yesterday's water c
+[2026-04-11T14:45] Day 21 | risk=yellow | [ph outside target range: 6.46 ] | T=77.9°F pH=6.46 TDS=186.0ppm | pH is 0.04 units below target but trending stable and within safe bounds; this i
+[2026-04-11T14:45] Day 21 | risk=yellow | [ph outside target range: 6.46 ] | T=77.9°F pH=6.46 TDS=186.0ppm | pH is 0.04 units below target but trending stable and within safe bounds; this i
