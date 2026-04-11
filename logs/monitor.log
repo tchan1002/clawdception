@@ -1439,3 +1439,12 @@
 [2026-04-11T09:30] Day 21 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.62 TDS=184.0ppm | Temperature is climbing toward the ceiling and trending up over 24 hours—this is
 [2026-04-11T09:45] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.62 TDS=186.0ppm | Temperature creeping toward ceiling (78.01°F) with upward 24hr trend; room ambie
 [2026-04-11T09:45] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.62 TDS=186.0ppm | Temperature creeping toward ceiling (78.01°F) with upward 24hr trend; room ambie
+[2026-04-11T10:00] Day 21 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.6 TDS=186.0ppm | Temperature breach is marginal and contextual: we're at day 21 of cycle, ambient
+[2026-04-11T10:00] Day 21 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.6 TDS=186.0ppm | Temperature breach is marginal and contextual: we're at day 21 of cycle, ambient
+[2026-04-11T10:15] Day 21 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.62 TDS=186.0ppm | Temperature breach at upper threshold signals ambient room heat rising—likely ap
+[2026-04-11T10:15] Day 21 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.62 TDS=186.0ppm | Temperature breach at upper threshold signals ambient room heat rising—likely ap
+[2026-04-11T10:30] Day 21 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.6 TDS=185.0ppm | Temperature is at the upper boundary of safe range and trending upward; this is 
+[2026-04-11T10:30] Day 21 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.6 TDS=185.0ppm | Temperature is at the upper boundary of safe range and trending upward; this is 
+[2026-04-11T10:45] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.58 TDS=186.0ppm | Temperature brushed the ceiling at 78.01°F and shows a gentle uptrend over 24 ho
+[call-toby] Telegram sent (warning): No water test logged yet. Day 21 of cycle — ammonia and nitrite are unknown.
+[2026-04-11T10:45] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.58 TDS=186.0ppm | Temperature brushed the ceiling at 78.01°F and shows a gentle uptrend over 24 ho
