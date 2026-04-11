@@ -1407,3 +1407,11 @@
 [2026-04-11T05:30] Day 21 | skipped (stable) | T=77.9°F pH=6.59 TDS=187.0ppm
 [2026-04-11T05:45] Day 21 | skipped (stable) | T=77.9°F pH=6.6 TDS=186.0ppm
 [2026-04-11T05:45] Day 21 | skipped (stable) | T=77.9°F pH=6.6 TDS=186.0ppm
+[2026-04-11T06:00] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.62 TDS=185.0ppm | Temperature touched ceiling at 78.01°F after warm night; pH corrected nicely pos
+[2026-04-11T06:00] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.62 TDS=185.0ppm | Temperature touched ceiling at 78.01°F after warm night; pH corrected nicely pos
+[2026-04-11T06:15] Day 21 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.61 TDS=184.0ppm | Temperature is at the upper boundary and trending upward; this is the only conce
+[2026-04-11T06:15] Day 21 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.61 TDS=184.0ppm | Temperature is at the upper boundary and trending upward; this is the only conce
+[2026-04-11T06:30] Day 21 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.61 TDS=184.0ppm | Temperature is creeping toward ceiling; upward trend over 24hrs warrants attenti
+[2026-04-11T06:30] Day 21 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.61 TDS=184.0ppm | Temperature is creeping toward ceiling; upward trend over 24hrs warrants attenti
+[2026-04-11T06:45] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.6 TDS=187.0ppm | Temperature is nudging the ceiling—still safe, but the upward creep over 24h con
+[2026-04-11T06:45] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.6 TDS=187.0ppm | Temperature is nudging the ceiling—still safe, but the upward creep over 24h con

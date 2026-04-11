@@ -118,3 +118,11 @@
 • Consider small water change (15%) within 48 hours as pH buffer—refresh acid load before it becomes urgent
 • Restart WiFi router and check ESP32 signal strength; data gaps during final cycle phase are undesirable
 • Continue observing nitrate progression; expect stabilization around 100-150ppm before cycle plateau
+[shrimp-journal] Entry written: 2026-04-11-0605.md (Day 21)
+[call-toby] Telegram sent (info): Journal — Day 21 · 2026-04-11 06:05
+[call-toby] Document sent: 2026-04-11-0605.md
+[call-toby] Telegram sent (info): Action items:
+• Restart WiFi router and check ESP32 signal strength within 24 hours—data integrity is critical during final cycle phase
+• Monitor pH daily for next 7 days to confirm stabilization trajectory; prepare 15% water change within 48 hours as precautionary buffer
+• If room temperature remains elevated, consider modest room adjustments (window cracking, fan positioning) to keep ambient under 76°F
+• Continue daily nitrate tracking; expect stabilization around 100-150 ppm before cycle plateau—document completion date when three-day stability achieved
