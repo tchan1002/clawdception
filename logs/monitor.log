@@ -1456,3 +1456,11 @@
 [2026-04-11T11:30] Day 21 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.57 TDS=185.0ppm | Temperature creeping toward ceiling—minor but worth noting on a warm Chicago spr
 [2026-04-11T11:45] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.53 TDS=185.0ppm | Temperature breach triggered by ambient warmth—we're at the ceiling of tolerance
 [2026-04-11T11:45] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.53 TDS=185.0ppm | Temperature breach triggered by ambient warmth—we're at the ceiling of tolerance
+[2026-04-11T12:00] Day 21 | skipped (stable) | T=77.9°F pH=6.54 TDS=185.0ppm
+[2026-04-11T12:00] Day 21 | skipped (stable) | T=77.9°F pH=6.54 TDS=185.0ppm
+[2026-04-11T12:15] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.52 TDS=186.0ppm | Temperature at 78.01°F hits the upper boundary and shows upward drift over 24 ho
+[2026-04-11T12:15] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.52 TDS=186.0ppm | Temperature at 78.01°F hits the upper boundary and shows upward drift over 24 ho
+[2026-04-11T12:30] Day 21 | skipped (stable) | T=77.9°F pH=6.51 TDS=187.0ppm
+[2026-04-11T12:30] Day 21 | skipped (stable) | T=77.9°F pH=6.51 TDS=187.0ppm
+[2026-04-11T12:45] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.5 TDS=187.0ppm | Temperature just kissed the ceiling—78.01°F is at the upper boundary and climbin
+[2026-04-11T12:45] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.5 TDS=187.0ppm | Temperature just kissed the ceiling—78.01°F is at the upper boundary and climbin
