@@ -1351,3 +1351,11 @@
 [2026-04-10T22:30] Day 20 | risk=yellow | [ph outside target range: 6.49 ] | T=77.56°F pH=6.49 TDS=182.0ppm | pH is marginally out of target but drift is slow; the 24-hour low of 5.91 is mor
 [2026-04-10T22:45] Day 20 | skipped (stable) | T=77.56°F pH=6.5 TDS=184.0ppm
 [2026-04-10T22:45] Day 20 | skipped (stable) | T=77.56°F pH=6.5 TDS=184.0ppm
+[2026-04-10T23:00] Day 20 | skipped (stable) | T=77.56°F pH=6.5 TDS=184.0ppm
+[2026-04-10T23:00] Day 20 | skipped (stable) | T=77.56°F pH=6.5 TDS=184.0ppm
+[2026-04-10T23:15] Day 20 | skipped (stable) | T=77.79°F pH=6.5 TDS=185.0ppm
+[2026-04-10T23:15] Day 20 | skipped (stable) | T=77.79°F pH=6.5 TDS=185.0ppm
+[2026-04-10T23:30] Day 20 | risk=yellow | [ph outside target range: 6.49 ] | T=77.79°F pH=6.49 TDS=184.0ppm | pH is marginally out of spec and trending down, but the decline rate (-0.08/24hr
+[2026-04-10T23:30] Day 20 | risk=yellow | [ph outside target range: 6.49 ] | T=77.79°F pH=6.49 TDS=184.0ppm | pH is marginally out of spec and trending down, but the decline rate (-0.08/24hr
+[2026-04-10T23:45] Day 20 | skipped (stable) | T=77.56°F pH=6.51 TDS=184.0ppm
+[2026-04-10T23:45] Day 20 | skipped (stable) | T=77.56°F pH=6.51 TDS=184.0ppm
