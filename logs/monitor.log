@@ -1318,3 +1318,11 @@
 [2026-04-10T18:30] Day 20 | risk=yellow | [manual event since last check ] | T=77.0°F pH=6.15 TDS=182.0ppm | pH decline is steady and intentional—the tank is still in active cycling and hyd
 [2026-04-10T18:45] Day 20 | risk=yellow | [manual event since last check ] | T=77.22°F pH=6.22 TDS=183.0ppm | pH drift downward is the concern—we're at 6.22 and trending -0.18/day, which put
 [2026-04-10T18:45] Day 20 | risk=yellow | [manual event since last check ] | T=77.22°F pH=6.22 TDS=183.0ppm | pH drift downward is the concern—we're at 6.22 and trending -0.18/day, which put
+[2026-04-10T19:00] Day 20 | risk=yellow | [manual event since last check ] | T=77.45°F pH=6.26 TDS=182.0ppm | pH is the primary concern—it's dropped 0.15 points in 24 hours and sits at 6.26,
+[2026-04-10T19:00] Day 20 | risk=yellow | [manual event since last check ] | T=77.45°F pH=6.26 TDS=182.0ppm | pH is the primary concern—it's dropped 0.15 points in 24 hours and sits at 6.26,
+[2026-04-10T19:15] Day 20 | risk=yellow | [manual event since last check ] | T=77.68°F pH=6.29 TDS=182.0ppm | pH decline is the concern—down 0.14 points in 24 hours. At this rate, we'd hit 6
+[2026-04-10T19:15] Day 20 | risk=yellow | [manual event since last check ] | T=77.68°F pH=6.29 TDS=182.0ppm | pH decline is the concern—down 0.14 points in 24 hours. At this rate, we'd hit 6
+[2026-04-10T19:30] Day 20 | risk=yellow | [manual event since last check ] | T=77.79°F pH=6.3 TDS=182.0ppm | Day 20 shows a cycling tank progressing well—nitrate 80ppm (day 19) confirms act
+[2026-04-10T19:30] Day 20 | risk=yellow | [manual event since last check ] | T=77.79°F pH=6.3 TDS=182.0ppm | Day 20 shows a cycling tank progressing well—nitrate 80ppm (day 19) confirms act
+[2026-04-10T19:45] Day 20 | risk=yellow | [manual event since last check ] | T=77.68°F pH=6.34 TDS=183.0ppm | Tank is in day 20 of cycle, approaching peak window (day 22–23) for introduction
+[2026-04-10T19:45] Day 20 | risk=yellow | [manual event since last check ] | T=77.68°F pH=6.34 TDS=183.0ppm | Tank is in day 20 of cycle, approaching peak window (day 22–23) for introduction
