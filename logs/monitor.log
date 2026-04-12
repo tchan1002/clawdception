@@ -1674,3 +1674,11 @@
 [2026-04-12T14:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.43 TDS=187.0ppm | Temperature is touching the ceiling at 78.35°F with a micro-trend upward; combin
 [2026-04-12T14:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.46°F pH=6.42 TDS=187.0ppm | Temperature nudging the ceiling and pH creeping down slightly—neither critical y
 [2026-04-12T14:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.46°F pH=6.42 TDS=187.0ppm | Temperature nudging the ceiling and pH creeping down slightly—neither critical y
+[2026-04-12T15:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.41 TDS=186.0ppm | Temperature creeping upward at the margin—day 22 of cycle, apartment warming lik
+[2026-04-12T15:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.41 TDS=186.0ppm | Temperature creeping upward at the margin—day 22 of cycle, apartment warming lik
+[2026-04-12T15:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.46°F pH=6.43 TDS=187.0ppm | Temperature breach at upper bound is minor but trending; pH drifting slightly up
+[2026-04-12T15:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.46°F pH=6.43 TDS=187.0ppm | Temperature breach at upper bound is minor but trending; pH drifting slightly up
+[2026-04-12T15:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.42 TDS=187.0ppm | Temperature crept to 78.35°F—technically compliant but trending upward on day 22
+[2026-04-12T15:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.42 TDS=187.0ppm | Temperature crept to 78.35°F—technically compliant but trending upward on day 22
+[2026-04-12T15:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.46°F pH=6.41 TDS=186.0ppm | Temperature is creeping toward the ceiling—0.67°F rise in 24 hours suggests Chic
+[2026-04-12T15:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.46°F pH=6.41 TDS=186.0ppm | Temperature is creeping toward the ceiling—0.67°F rise in 24 hours suggests Chic
