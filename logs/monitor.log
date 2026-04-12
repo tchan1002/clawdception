@@ -1593,3 +1593,11 @@
 [2026-04-12T04:30] Day 22 | skipped (stable) | T=77.9°F pH=6.55 TDS=186.0ppm
 [2026-04-12T04:45] Day 22 | skipped (stable) | T=77.9°F pH=6.55 TDS=186.0ppm
 [2026-04-12T04:45] Day 22 | skipped (stable) | T=77.9°F pH=6.55 TDS=186.0ppm
+[2026-04-12T05:00] Day 22 | skipped (stable) | T=77.9°F pH=6.55 TDS=186.0ppm
+[2026-04-12T05:00] Day 22 | skipped (stable) | T=77.9°F pH=6.55 TDS=186.0ppm
+[2026-04-12T05:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.54 TDS=186.0ppm | Temperature just kissed the upper boundary—not dangerous, but it signals apartme
+[2026-04-12T05:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.54 TDS=186.0ppm | Temperature just kissed the upper boundary—not dangerous, but it signals apartme
+[2026-04-12T05:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.54 TDS=185.0ppm | Temperature nudging the ceiling at 78.01°F with gentle upward drift (+0.11°F/24h
+[2026-04-12T05:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.54 TDS=185.0ppm | Temperature nudging the ceiling at 78.01°F with gentle upward drift (+0.11°F/24h
+[2026-04-12T05:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.55 TDS=187.0ppm | Temperature is kissing the upper limit and creeping upward—Day 22 of the cycle i
+[2026-04-12T05:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.55 TDS=187.0ppm | Temperature is kissing the upper limit and creeping upward—Day 22 of the cycle i
