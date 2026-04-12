@@ -1641,3 +1641,12 @@
 [2026-04-12T10:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.51 TDS=188.0ppm | Temperature is at the upper boundary but stable; no acute danger. Early cycle is
 [2026-04-12T10:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.51 TDS=189.0ppm | Temperature breach is minor but real—78.01°F touches the boundary and 24hr trend
 [2026-04-12T10:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.51 TDS=189.0ppm | Temperature breach is minor but real—78.01°F touches the boundary and 24hr trend
+[2026-04-12T11:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.5 TDS=187.0ppm | Temperature sits at the ceiling of the safe window—still acceptable, but any fur
+[2026-04-12T11:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.5 TDS=187.0ppm | Temperature sits at the ceiling of the safe window—still acceptable, but any fur
+[2026-04-12T11:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.47 TDS=187.0ppm | Temperature nudged to 78.01°F (upper edge) but is stable and not climbing—likely
+[call-toby] Telegram sent (warning): No water test logged yet. Day 22 of cycle — ammonia and nitrite are unknown.
+[2026-04-12T11:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.47 TDS=187.0ppm | Temperature nudged to 78.01°F (upper edge) but is stable and not climbing—likely
+[2026-04-12T11:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.46 TDS=187.0ppm | Temperature is at the ceiling of acceptable range but stable; the real concern i
+[2026-04-12T11:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.46 TDS=187.0ppm | Temperature is at the ceiling of acceptable range but stable; the real concern i
+[2026-04-12T11:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.46 TDS=188.0ppm | Temperature is kissing the upper boundary—not dangerous yet, but the +0.23°F 24-
+[2026-04-12T11:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.46 TDS=188.0ppm | Temperature is kissing the upper boundary—not dangerous yet, but the +0.23°F 24-
