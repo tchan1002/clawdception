@@ -1577,3 +1577,11 @@
 [2026-04-12T02:30] Day 22 | skipped (stable) | T=77.9°F pH=6.55 TDS=186.0ppm
 [2026-04-12T02:45] Day 22 | skipped (stable) | T=77.9°F pH=6.55 TDS=187.0ppm
 [2026-04-12T02:45] Day 22 | skipped (stable) | T=77.9°F pH=6.55 TDS=187.0ppm
+[2026-04-12T03:00] Day 22 | skipped (stable) | T=77.9°F pH=6.55 TDS=186.0ppm
+[2026-04-12T03:00] Day 22 | skipped (stable) | T=77.9°F pH=6.55 TDS=186.0ppm
+[2026-04-12T03:15] Day 22 | skipped (stable) | T=77.9°F pH=6.56 TDS=187.0ppm
+[2026-04-12T03:15] Day 22 | skipped (stable) | T=77.9°F pH=6.56 TDS=187.0ppm
+[2026-04-12T03:30] Day 22 | skipped (stable) | T=77.9°F pH=6.56 TDS=188.0ppm
+[2026-04-12T03:30] Day 22 | skipped (stable) | T=77.9°F pH=6.56 TDS=188.0ppm
+[2026-04-12T03:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.54 TDS=188.0ppm | Temperature is nudging the ceiling—it's climbed 0.11°F in 24 hours and sits righ
+[2026-04-12T03:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.54 TDS=188.0ppm | Temperature is nudging the ceiling—it's climbed 0.11°F in 24 hours and sits righ
