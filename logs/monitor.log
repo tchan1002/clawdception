@@ -1504,3 +1504,11 @@
 [2026-04-11T17:30] Day 21 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.44 TDS=186.0ppm | Temperature is creeping toward the ceiling—78.01°F pins the upper bound, and the
 [2026-04-11T17:45] Day 21 | risk=yellow | [ph outside target range: 6.46 ] | T=77.9°F pH=6.46 TDS=186.0ppm | pH dipped to 6.46—just below the 6.5 floor—likely from residual bioload or CO₂ a
 [2026-04-11T17:45] Day 21 | risk=yellow | [ph outside target range: 6.46 ] | T=77.9°F pH=6.46 TDS=186.0ppm | pH dipped to 6.46—just below the 6.5 floor—likely from residual bioload or CO₂ a
+[2026-04-11T18:00] Day 21 | risk=yellow | [ph outside target range: 6.43 ] | T=77.79°F pH=6.43 TDS=185.0ppm | pH is marginally low but trending up post water-change and within expected acid 
+[2026-04-11T18:00] Day 21 | risk=yellow | [ph outside target range: 6.43 ] | T=77.79°F pH=6.43 TDS=185.0ppm | pH is marginally low but trending up post water-change and within expected acid 
+[2026-04-11T18:15] Day 21 | risk=yellow | [ph outside target range: 6.45 ] | T=77.9°F pH=6.45 TDS=186.0ppm | pH is edging below the safe floor after yesterday's water change, likely from bu
+[2026-04-11T18:15] Day 21 | risk=yellow | [ph outside target range: 6.45 ] | T=77.9°F pH=6.45 TDS=186.0ppm | pH is edging below the safe floor after yesterday's water change, likely from bu
+[2026-04-11T18:30] Day 21 | risk=yellow | [ph outside target range: 6.44 ] | T=77.79°F pH=6.44 TDS=185.0ppm | pH dipped to 6.44—just outside the safe floor—but 24-hour trend is positive, and
+[2026-04-11T18:30] Day 21 | risk=yellow | [ph outside target range: 6.44 ] | T=77.79°F pH=6.44 TDS=185.0ppm | pH dipped to 6.44—just outside the safe floor—but 24-hour trend is positive, and
+[2026-04-11T18:45] Day 21 | risk=yellow | [ph outside target range: 6.45 ] | T=77.79°F pH=6.45 TDS=186.0ppm | pH dip below 6.5 is a yellow flag, but yesterday's water change is working—pH ro
+[2026-04-11T18:45] Day 21 | risk=yellow | [ph outside target range: 6.45 ] | T=77.79°F pH=6.45 TDS=186.0ppm | pH dip below 6.5 is a yellow flag, but yesterday's water change is working—pH ro
