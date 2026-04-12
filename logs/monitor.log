@@ -1625,3 +1625,11 @@
 [2026-04-12T08:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.53 TDS=187.0ppm | Temperature nudged the upper alarm at 78.12°F but remains within target; the 24h
 [2026-04-12T08:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.51 TDS=188.0ppm | Temperature nudging the ceiling warrants observation but cycle parameters (pH st
 [2026-04-12T08:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.51 TDS=188.0ppm | Temperature nudging the ceiling warrants observation but cycle parameters (pH st
+[2026-04-12T09:00] Day 22 | risk=green | [temperature outside target ran] | T=78.12°F pH=6.53 TDS=187.0ppm | Temperature spike is marginal and declining; tank is stable overall. Day 22 cycl
+[2026-04-12T09:00] Day 22 | risk=green | [temperature outside target ran] | T=78.12°F pH=6.53 TDS=187.0ppm | Temperature spike is marginal and declining; tank is stable overall. Day 22 cycl
+[2026-04-12T09:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.52 TDS=186.0ppm | Temperature is kissing the upper target limit; while not dangerous, it signals e
+[2026-04-12T09:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.52 TDS=186.0ppm | Temperature is kissing the upper target limit; while not dangerous, it signals e
+[2026-04-12T09:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.53 TDS=188.0ppm | Temperature is nudging the upper boundary—still safe, but the trend matters give
+[2026-04-12T09:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.53 TDS=188.0ppm | Temperature is nudging the upper boundary—still safe, but the trend matters give
+[2026-04-12T09:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.5 TDS=187.0ppm | Temperature nudged the upper bound (78.12°F hits the 72–78 ceiling), likely due 
+[2026-04-12T09:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.5 TDS=187.0ppm | Temperature nudged the upper bound (78.12°F hits the 72–78 ceiling), likely due 
