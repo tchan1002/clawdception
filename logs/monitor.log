@@ -1536,3 +1536,11 @@
 [2026-04-11T21:30] Day 21 | risk=yellow | [ph outside target range: 6.43 ] | T=77.9°F pH=6.43 TDS=185.0ppm | pH dipped to 6.43, triggering alert, but 24hr mean is 6.52 and drift is minimal—
 [2026-04-11T21:45] Day 21 | risk=yellow | [ph outside target range: 6.45 ] | T=77.79°F pH=6.45 TDS=185.0ppm | pH edging into cautionary zone despite yesterday's water change; the 24hr mean o
 [2026-04-11T21:45] Day 21 | risk=yellow | [ph outside target range: 6.45 ] | T=77.79°F pH=6.45 TDS=185.0ppm | pH edging into cautionary zone despite yesterday's water change; the 24hr mean o
+[2026-04-11T22:00] Day 21 | risk=yellow | [ph outside target range: 6.43 ] | T=77.79°F pH=6.43 TDS=186.0ppm | pH has drifted 0.07 points below target since Day 20 (6.5 baseline) despite stab
+[2026-04-11T22:00] Day 21 | risk=yellow | [ph outside target range: 6.43 ] | T=77.79°F pH=6.43 TDS=186.0ppm | pH has drifted 0.07 points below target since Day 20 (6.5 baseline) despite stab
+[2026-04-11T22:15] Day 21 | risk=yellow | [ph outside target range: 6.44 ] | T=77.68°F pH=6.44 TDS=187.0ppm | pH dips to 6.44—just below safe floor—but 24hr stats show it's bouncing off a lo
+[2026-04-11T22:15] Day 21 | risk=yellow | [ph outside target range: 6.44 ] | T=77.68°F pH=6.44 TDS=187.0ppm | pH dips to 6.44—just below safe floor—but 24hr stats show it's bouncing off a lo
+[2026-04-11T22:30] Day 21 | risk=yellow | [ph outside target range: 6.46 ] | T=77.79°F pH=6.46 TDS=187.0ppm | pH dipped 0.04 units below target on day 21 during active nitrogen cycle—slight 
+[2026-04-11T22:30] Day 21 | risk=yellow | [ph outside target range: 6.46 ] | T=77.79°F pH=6.46 TDS=187.0ppm | pH dipped 0.04 units below target on day 21 during active nitrogen cycle—slight 
+[2026-04-11T22:45] Day 21 | risk=yellow | [ph outside target range: 6.45 ] | T=77.79°F pH=6.45 TDS=186.0ppm | pH has slipped just below the safe threshold and is trending downward—no emergen
+[2026-04-11T22:45] Day 21 | risk=yellow | [ph outside target range: 6.45 ] | T=77.79°F pH=6.45 TDS=186.0ppm | pH has slipped just below the safe threshold and is trending downward—no emergen
