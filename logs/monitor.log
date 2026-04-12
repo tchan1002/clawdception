@@ -1690,3 +1690,11 @@
 [2026-04-12T16:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.42 TDS=188.0ppm | Temperature at ceiling and rising—Day 22 of cycle, biofilter still maturing, ele
 [2026-04-12T16:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.46°F pH=6.43 TDS=187.0ppm | Temperature edge-case activation is likely WiFi noise—78.46°F is within spec but
 [2026-04-12T16:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.46°F pH=6.43 TDS=187.0ppm | Temperature edge-case activation is likely WiFi noise—78.46°F is within spec but
+[2026-04-12T17:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.44 TDS=186.0ppm | Temperature is creeping toward the ceiling on day 22 of cycle—likely tied to amb
+[2026-04-12T17:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.44 TDS=186.0ppm | Temperature is creeping toward the ceiling on day 22 of cycle—likely tied to amb
+[2026-04-12T17:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.46°F pH=6.43 TDS=186.0ppm | Temperature breach at 78.46°F (upper limit) combined with persistent warmth tren
+[2026-04-12T17:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.46°F pH=6.43 TDS=186.0ppm | Temperature breach at 78.46°F (upper limit) combined with persistent warmth tren
+[2026-04-12T17:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.43 TDS=187.0ppm | Temperature touching the ceiling and pH drifting low are both minor concerns on 
+[2026-04-12T17:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.43 TDS=187.0ppm | Temperature touching the ceiling and pH drifting low are both minor concerns on 
+[2026-04-12T17:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.46°F pH=6.42 TDS=187.0ppm | Temperature is bumping the ceiling after a gradual warm-up; pH is sliding lower 
+[2026-04-12T17:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.46°F pH=6.42 TDS=187.0ppm | Temperature is bumping the ceiling after a gradual warm-up; pH is sliding lower 
