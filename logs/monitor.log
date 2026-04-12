@@ -1609,3 +1609,11 @@
 [2026-04-12T06:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.53 TDS=187.0ppm | Temperature is pushing the ceiling at 78.12°F—not dangerous, but uncomfortably w
 [2026-04-12T06:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.53 TDS=187.0ppm | Temperature nudging the ceiling while cycling continues normally—manageable but 
 [2026-04-12T06:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.53 TDS=187.0ppm | Temperature nudging the ceiling while cycling continues normally—manageable but 
+[2026-04-12T07:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.51 TDS=188.0ppm | Temperature is riding the upper boundary of target range and showing persistent 
+[2026-04-12T07:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.51 TDS=188.0ppm | Temperature is riding the upper boundary of target range and showing persistent 
+[2026-04-12T07:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.52 TDS=186.0ppm | Temperature is bumping the ceiling—likely seasonal or HVAC shift in Hyde Park. p
+[2026-04-12T07:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.52 TDS=186.0ppm | Temperature is bumping the ceiling—likely seasonal or HVAC shift in Hyde Park. p
+[2026-04-12T07:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.53 TDS=186.0ppm | Temperature is spiking to upper boundary—likely apartment warmth (spring/HVAC), 
+[2026-04-12T07:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.53 TDS=186.0ppm | Temperature is spiking to upper boundary—likely apartment warmth (spring/HVAC), 
+[2026-04-12T07:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.51 TDS=186.0ppm | Temperature nudged into yellow (78.01°F) at the boundary—not dangerous but worth
+[2026-04-12T07:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.51 TDS=186.0ppm | Temperature nudged into yellow (78.01°F) at the boundary—not dangerous but worth
