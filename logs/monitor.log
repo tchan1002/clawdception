@@ -1553,3 +1553,11 @@
 [2026-04-11T23:30] Day 21 | risk=yellow | [ph outside target range: 6.48 ] | T=77.79°F pH=6.48 TDS=188.0ppm | pH is marginally below target and showing a shallow downward drift—likely biofil
 [2026-04-11T23:45] Day 21 | risk=yellow | [ph outside target range: 6.48 ] | T=77.9°F pH=6.48 TDS=187.0ppm | pH has drifted 0.03 units lower over 24h and now sits at the lower edge of the a
 [2026-04-11T23:45] Day 21 | risk=yellow | [ph outside target range: 6.48 ] | T=77.9°F pH=6.48 TDS=187.0ppm | pH has drifted 0.03 units lower over 24h and now sits at the lower edge of the a
+[2026-04-12T00:00] Day 22 | risk=yellow | [ph outside target range: 6.48 ] | T=77.79°F pH=6.48 TDS=186.0ppm | pH is marginally below range and showing a gentle downward trend—likely from org
+[2026-04-12T00:00] Day 22 | risk=yellow | [ph outside target range: 6.48 ] | T=77.79°F pH=6.48 TDS=186.0ppm | pH is marginally below range and showing a gentle downward trend—likely from org
+[2026-04-12T00:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.51 TDS=188.0ppm | Temperature has breached the 78°F ceiling and is trending upward, even if slowly
+[2026-04-12T00:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.51 TDS=188.0ppm | Temperature has breached the 78°F ceiling and is trending upward, even if slowly
+[2026-04-12T00:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.5 TDS=187.0ppm | Temperature breach is the only active concern—we're 0.01°F into the red zone at 
+[2026-04-12T00:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.5 TDS=187.0ppm | Temperature breach is the only active concern—we're 0.01°F into the red zone at 
+[2026-04-12T00:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.5 TDS=187.0ppm | Temperature breach triggered alert but we're only 0.01°F over the hard ceiling—t
+[2026-04-12T00:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.5 TDS=187.0ppm | Temperature breach triggered alert but we're only 0.01°F over the hard ceiling—t

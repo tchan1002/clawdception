@@ -255,3 +255,5 @@
 [call-toby] Telegram sent (warning): ESP32 post failures elevated (7) in last hour — WiFi instability likely.
 [2026-04-11T23:00] equipment-check | yellow | 1 issue(s) | 1 equipment issue(s): ESP32 post failures elevated (7) in last hour — WiFi insta
 [2026-04-11T23:30] equipment-check | yellow | 1 issue(s) | 1 equipment issue(s): ESP32 post failures elevated (7) in last hour — WiFi insta
+[2026-04-12T00:00] equipment-check | yellow | 1 issue(s) | 1 equipment issue(s): ESP32 post failures elevated (7) in last hour — WiFi insta
+[2026-04-12T00:30] equipment-check | yellow | 1 issue(s) | 1 equipment issue(s): ESP32 post failures elevated (7) in last hour — WiFi insta
