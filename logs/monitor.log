@@ -1512,3 +1512,11 @@
 [2026-04-11T18:30] Day 21 | risk=yellow | [ph outside target range: 6.44 ] | T=77.79°F pH=6.44 TDS=185.0ppm | pH dipped to 6.44—just outside the safe floor—but 24-hour trend is positive, and
 [2026-04-11T18:45] Day 21 | risk=yellow | [ph outside target range: 6.45 ] | T=77.79°F pH=6.45 TDS=186.0ppm | pH dip below 6.5 is a yellow flag, but yesterday's water change is working—pH ro
 [2026-04-11T18:45] Day 21 | risk=yellow | [ph outside target range: 6.45 ] | T=77.79°F pH=6.45 TDS=186.0ppm | pH dip below 6.5 is a yellow flag, but yesterday's water change is working—pH ro
+[2026-04-11T19:00] Day 21 | risk=yellow | [ph outside target range: 6.45 ] | T=77.79°F pH=6.45 TDS=186.0ppm | pH is technically outside range but shows positive 24hr trend (+0.19) and 24hr m
+[2026-04-11T19:00] Day 21 | risk=yellow | [ph outside target range: 6.45 ] | T=77.79°F pH=6.45 TDS=186.0ppm | pH is technically outside range but shows positive 24hr trend (+0.19) and 24hr m
+[2026-04-11T19:15] Day 21 | risk=yellow | [ph outside target range: 6.46 ] | T=77.9°F pH=6.46 TDS=186.0ppm | pH at 6.46 is outside the lower target bound but shows a positive 24hr trend (+0
+[2026-04-11T19:15] Day 21 | risk=yellow | [ph outside target range: 6.46 ] | T=77.9°F pH=6.46 TDS=186.0ppm | pH at 6.46 is outside the lower target bound but shows a positive 24hr trend (+0
+[2026-04-11T19:30] Day 21 | risk=yellow | [ph outside target range: 6.47 ] | T=77.79°F pH=6.47 TDS=187.0ppm | pH dipped to 6.47—just below the 6.5 floor—but the trend is encouraging: it's cl
+[2026-04-11T19:30] Day 21 | risk=yellow | [ph outside target range: 6.47 ] | T=77.79°F pH=6.47 TDS=187.0ppm | pH dipped to 6.47—just below the 6.5 floor—but the trend is encouraging: it's cl
+[2026-04-11T19:45] Day 21 | risk=yellow | [ph outside target range: 6.46 ] | T=77.9°F pH=6.46 TDS=186.0ppm | pH dropped just below 6.5 following yesterday's water change—expected acidic reb
+[2026-04-11T19:45] Day 21 | risk=yellow | [ph outside target range: 6.46 ] | T=77.9°F pH=6.46 TDS=186.0ppm | pH dropped just below 6.5 following yesterday's water change—expected acidic reb
