@@ -1617,3 +1617,11 @@
 [2026-04-12T07:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.53 TDS=186.0ppm | Temperature is spiking to upper boundary—likely apartment warmth (spring/HVAC), 
 [2026-04-12T07:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.51 TDS=186.0ppm | Temperature nudged into yellow (78.01°F) at the boundary—not dangerous but worth
 [2026-04-12T07:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.51 TDS=186.0ppm | Temperature nudged into yellow (78.01°F) at the boundary—not dangerous but worth
+[2026-04-12T08:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.52 TDS=187.0ppm | Temperature breach at 78.12°F is marginal but real—this is the ceiling, not the 
+[2026-04-12T08:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.52 TDS=187.0ppm | Temperature breach at 78.12°F is marginal but real—this is the ceiling, not the 
+[2026-04-12T08:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.51 TDS=187.0ppm | Tank is technically in-spec but temperature is climbing toward the ceiling at da
+[2026-04-12T08:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.51 TDS=187.0ppm | Tank is technically in-spec but temperature is climbing toward the ceiling at da
+[2026-04-12T08:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.53 TDS=187.0ppm | Temperature nudged the upper alarm at 78.12°F but remains within target; the 24h
+[2026-04-12T08:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.53 TDS=187.0ppm | Temperature nudged the upper alarm at 78.12°F but remains within target; the 24h
+[2026-04-12T08:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.51 TDS=188.0ppm | Temperature nudging the ceiling warrants observation but cycle parameters (pH st
+[2026-04-12T08:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.51 TDS=188.0ppm | Temperature nudging the ceiling warrants observation but cycle parameters (pH st
