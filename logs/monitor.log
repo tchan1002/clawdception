@@ -1544,3 +1544,12 @@
 [2026-04-11T22:30] Day 21 | risk=yellow | [ph outside target range: 6.46 ] | T=77.79°F pH=6.46 TDS=187.0ppm | pH dipped 0.04 units below target on day 21 during active nitrogen cycle—slight 
 [2026-04-11T22:45] Day 21 | risk=yellow | [ph outside target range: 6.45 ] | T=77.79°F pH=6.45 TDS=186.0ppm | pH has slipped just below the safe threshold and is trending downward—no emergen
 [2026-04-11T22:45] Day 21 | risk=yellow | [ph outside target range: 6.45 ] | T=77.79°F pH=6.45 TDS=186.0ppm | pH has slipped just below the safe threshold and is trending downward—no emergen
+[2026-04-11T23:00] Day 21 | risk=yellow | [ph outside target range: 6.48 ] | T=77.68°F pH=6.48 TDS=188.0ppm | pH dipped to 6.48 at an odd hour—just a micron below threshold, but the 24-hour 
+[call-toby] Telegram sent (warning): No water test logged yet. Day 21 of cycle — ammonia and nitrite are unknown.
+[2026-04-11T23:00] Day 21 | risk=yellow | [ph outside target range: 6.48 ] | T=77.68°F pH=6.48 TDS=188.0ppm | pH dipped to 6.48 at an odd hour—just a micron below threshold, but the 24-hour 
+[2026-04-11T23:15] Day 21 | risk=yellow | [ph outside target range: 6.47 ] | T=77.79°F pH=6.47 TDS=187.0ppm | pH at 6.47 breaches the 6.5 minimum and shows a declining 24h trend, though the 
+[2026-04-11T23:15] Day 21 | risk=yellow | [ph outside target range: 6.47 ] | T=77.79°F pH=6.47 TDS=187.0ppm | pH at 6.47 breaches the 6.5 minimum and shows a declining 24h trend, though the 
+[2026-04-11T23:30] Day 21 | risk=yellow | [ph outside target range: 6.48 ] | T=77.79°F pH=6.48 TDS=188.0ppm | pH is marginally below target and showing a shallow downward drift—likely biofil
+[2026-04-11T23:30] Day 21 | risk=yellow | [ph outside target range: 6.48 ] | T=77.79°F pH=6.48 TDS=188.0ppm | pH is marginally below target and showing a shallow downward drift—likely biofil
+[2026-04-11T23:45] Day 21 | risk=yellow | [ph outside target range: 6.48 ] | T=77.9°F pH=6.48 TDS=187.0ppm | pH has drifted 0.03 units lower over 24h and now sits at the lower edge of the a
+[2026-04-11T23:45] Day 21 | risk=yellow | [ph outside target range: 6.48 ] | T=77.9°F pH=6.48 TDS=187.0ppm | pH has drifted 0.03 units lower over 24h and now sits at the lower edge of the a
