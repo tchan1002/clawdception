@@ -1633,3 +1633,11 @@
 [2026-04-12T09:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.53 TDS=188.0ppm | Temperature is nudging the upper boundary—still safe, but the trend matters give
 [2026-04-12T09:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.5 TDS=187.0ppm | Temperature nudged the upper bound (78.12°F hits the 72–78 ceiling), likely due 
 [2026-04-12T09:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.5 TDS=187.0ppm | Temperature nudged the upper bound (78.12°F hits the 72–78 ceiling), likely due 
+[2026-04-12T10:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.52 TDS=187.0ppm | Temperature is bumping the ceiling at 78.12°F with a stable 24h mean of 77.95°F—
+[2026-04-12T10:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.52 TDS=187.0ppm | Temperature is bumping the ceiling at 78.12°F with a stable 24h mean of 77.95°F—
+[2026-04-12T10:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.52 TDS=187.0ppm | Temperature breached target ceiling by 0.01°F and maintained elevated 24hr avera
+[2026-04-12T10:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.52 TDS=187.0ppm | Temperature breached target ceiling by 0.01°F and maintained elevated 24hr avera
+[2026-04-12T10:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.51 TDS=188.0ppm | Temperature is at the upper boundary but stable; no acute danger. Early cycle is
+[2026-04-12T10:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.51 TDS=188.0ppm | Temperature is at the upper boundary but stable; no acute danger. Early cycle is
+[2026-04-12T10:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.51 TDS=189.0ppm | Temperature breach is minor but real—78.01°F touches the boundary and 24hr trend
+[2026-04-12T10:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.51 TDS=189.0ppm | Temperature breach is minor but real—78.01°F touches the boundary and 24hr trend
