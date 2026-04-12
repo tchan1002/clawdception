@@ -1650,3 +1650,11 @@
 [2026-04-12T11:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.46 TDS=187.0ppm | Temperature is at the ceiling of acceptable range but stable; the real concern i
 [2026-04-12T11:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.46 TDS=188.0ppm | Temperature is kissing the upper boundary—not dangerous yet, but the +0.23°F 24-
 [2026-04-12T11:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.46 TDS=188.0ppm | Temperature is kissing the upper boundary—not dangerous yet, but the +0.23°F 24-
+[2026-04-12T12:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.45 TDS=187.0ppm | Temperature breach at upper limit and soft pH decline suggest early season warmi
+[2026-04-12T12:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.45 TDS=187.0ppm | Temperature breach at upper limit and soft pH decline suggest early season warmi
+[2026-04-12T12:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.43 TDS=187.0ppm | Temperature just breached the 78°F ceiling and is climbing—likely apartment warm
+[2026-04-12T12:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.43 TDS=187.0ppm | Temperature just breached the 78°F ceiling and is climbing—likely apartment warm
+[2026-04-12T12:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.44 TDS=187.0ppm | Temperature is creeping toward the ceiling—not dangerous yet, but the +0.34°F 24
+[2026-04-12T12:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.44 TDS=187.0ppm | Temperature is creeping toward the ceiling—not dangerous yet, but the +0.34°F 24
+[2026-04-12T12:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.43 TDS=187.0ppm | Temperature at upper boundary and climbing; pH drifting down both warrant observ
+[2026-04-12T12:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.43 TDS=187.0ppm | Temperature at upper boundary and climbing; pH drifting down both warrant observ

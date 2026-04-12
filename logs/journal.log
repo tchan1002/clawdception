@@ -148,3 +148,11 @@
 • Monitor apartment temperature; if living space has warmed (seasonal or HVAC change), consider temporary fan placement near tank
 • Increase direct visual observation of shrimp behavior until ESP32 WiFi stability improves
 • Do not intervene with water change yet—cycle is progressing normally; hold at 25% partial water change threshold unless pH drops below 6.4
+[shrimp-journal] Entry written: 2026-04-12-1205.md (Day 22)
+[call-toby] Telegram sent (info): Journal — Day 22 · 2026-04-12 12:05
+[call-toby] Document sent: 2026-04-12-1205.md
+[call-toby] Telegram sent (info): Action items:
+• Request full ammonia/nitrite/nitrate panel within 24 hours—critical to confirm cycle phase and validate biofilter colonization
+• Observe apartment temperature trends and consider temporary fan placement near tank if sustained warming continues above 78.2°F
+• Increase direct visual checks of shrimp behavior daily until WiFi stability improves—cannot rely on automated monitoring alone
+• Hold water change threshold at 25% mark; do not intervene unless pH drops below 6.4 or shrimp show stress
