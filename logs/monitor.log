@@ -1658,3 +1658,11 @@
 [2026-04-12T12:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.44 TDS=187.0ppm | Temperature is creeping toward the ceiling—not dangerous yet, but the +0.34°F 24
 [2026-04-12T12:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.43 TDS=187.0ppm | Temperature at upper boundary and climbing; pH drifting down both warrant observ
 [2026-04-12T12:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.43 TDS=187.0ppm | Temperature at upper boundary and climbing; pH drifting down both warrant observ
+[2026-04-12T13:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.43 TDS=187.0ppm | Temperature tipped the alert at 78.35°F—one tick above target ceiling, but trend
+[2026-04-12T13:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.43 TDS=187.0ppm | Temperature tipped the alert at 78.35°F—one tick above target ceiling, but trend
+[2026-04-12T13:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.43 TDS=188.0ppm | Temperature is creeping toward the ceiling while pH drifts downward—both individ
+[2026-04-12T13:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.43 TDS=188.0ppm | Temperature is creeping toward the ceiling while pH drifts downward—both individ
+[2026-04-12T13:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.41 TDS=188.0ppm | Temperature breach at upper threshold after steady climb; pH creeping downward s
+[2026-04-12T13:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.41 TDS=188.0ppm | Temperature breach at upper threshold after steady climb; pH creeping downward s
+[2026-04-12T13:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.42 TDS=188.0ppm | Temperature breach at upper target edge combined with upward trend suggests apar
+[2026-04-12T13:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.42 TDS=188.0ppm | Temperature breach at upper target edge combined with upward trend suggests apar
