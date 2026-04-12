@@ -1601,3 +1601,11 @@
 [2026-04-12T05:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.54 TDS=185.0ppm | Temperature nudging the ceiling at 78.01°F with gentle upward drift (+0.11°F/24h
 [2026-04-12T05:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.55 TDS=187.0ppm | Temperature is kissing the upper limit and creeping upward—Day 22 of the cycle i
 [2026-04-12T05:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.55 TDS=187.0ppm | Temperature is kissing the upper limit and creeping upward—Day 22 of the cycle i
+[2026-04-12T06:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.55 TDS=187.0ppm | Temperature is kissing the ceiling but stable; the real watch is pH's slow decli
+[2026-04-12T06:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.55 TDS=187.0ppm | Temperature is kissing the ceiling but stable; the real watch is pH's slow decli
+[2026-04-12T06:15] Day 22 | risk=green | [temperature outside target ran] | T=78.01°F pH=6.55 TDS=188.0ppm | Day 22 shows a maturing cycle with stable chemistry at the high end of temperatu
+[2026-04-12T06:15] Day 22 | risk=green | [temperature outside target ran] | T=78.01°F pH=6.55 TDS=188.0ppm | Day 22 shows a maturing cycle with stable chemistry at the high end of temperatu
+[2026-04-12T06:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.53 TDS=187.0ppm | Temperature is pushing the ceiling at 78.12°F—not dangerous, but uncomfortably w
+[2026-04-12T06:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.53 TDS=187.0ppm | Temperature is pushing the ceiling at 78.12°F—not dangerous, but uncomfortably w
+[2026-04-12T06:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.53 TDS=187.0ppm | Temperature nudging the ceiling while cycling continues normally—manageable but 
+[2026-04-12T06:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.53 TDS=187.0ppm | Temperature nudging the ceiling while cycling continues normally—manageable but 
