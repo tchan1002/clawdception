@@ -1561,3 +1561,11 @@
 [2026-04-12T00:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.5 TDS=187.0ppm | Temperature breach is the only active concern—we're 0.01°F into the red zone at 
 [2026-04-12T00:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.5 TDS=187.0ppm | Temperature breach triggered alert but we're only 0.01°F over the hard ceiling—t
 [2026-04-12T00:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.5 TDS=187.0ppm | Temperature breach triggered alert but we're only 0.01°F over the hard ceiling—t
+[2026-04-12T01:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.51 TDS=184.0ppm | Temperature spike to 78.01°F pushes the upper boundary—likely ambient warmth in 
+[2026-04-12T01:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.51 TDS=184.0ppm | Temperature spike to 78.01°F pushes the upper boundary—likely ambient warmth in 
+[2026-04-12T01:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.52 TDS=186.0ppm | Temperature is officially at the edge—78.01 exceeds the 78°F target cap by 0.01°
+[2026-04-12T01:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.52 TDS=186.0ppm | Temperature is officially at the edge—78.01 exceeds the 78°F target cap by 0.01°
+[2026-04-12T01:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.52 TDS=188.0ppm | Temperature is kissing the 78°F ceiling with a steady upward drift over 24 hours
+[2026-04-12T01:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.52 TDS=188.0ppm | Temperature is kissing the 78°F ceiling with a steady upward drift over 24 hours
+[2026-04-12T01:45] Day 22 | risk=green | [temperature outside target ran] | T=78.01°F pH=6.55 TDS=187.0ppm | Temperature nudged just over the line but trending naturally in a 10g tank witho
+[2026-04-12T01:45] Day 22 | risk=green | [temperature outside target ran] | T=78.01°F pH=6.55 TDS=187.0ppm | Temperature nudged just over the line but trending naturally in a 10g tank witho
