@@ -1,8 +1,8 @@
 # State of Tank — Media Luna
 
-**Last updated:** 2026-04-11
-**Cycle day:** 21 (started 2026-03-22)
-**Tank status:** Cycling — stable — no shrimp — no events logged today
+**Last updated:** 2026-04-12
+**Cycle day:** 22 (started 2026-03-22)
+**Tank status:** Cycling — no shrimp — no events logged — stable but chemistry drifting
 
 ---
 
@@ -10,42 +10,39 @@
 
 | Parameter | Current | Notes |
 |-----------|---------|-------|
-| Temperature | 77.89°F avg | 77.34–78.24°F range; +0.23°F day change; slow upward creep over 3+ days |
-| pH (sensor) | 6.52 avg | 6.36–6.63 range; −0.01 day change; has been grazing 6.5 floor all week |
-| TDS | 185.6 ppm avg | 183–188 ppm range; +1.0 ppm day change; stable |
+| Temperature | 78.15°F avg | 77.79–78.46°F range; −0.22°F day change; slight overnight relief but ceiling still warm |
+| pH (sensor) | 6.47 avg | 6.40–6.56 range; −0.09 day change; floor at 6.4 two consecutive days — active drift |
+| TDS | 187.3 ppm avg | 184–190 ppm range; +1.0 ppm day change; slow steady rise, within normal bounds |
 
----
+## Nitrogen Panel
 
-## Cycle History Summary
+**Last tested:** Unknown — no manual test logged since cycling began.
+**Ammonia:** Unknown
+**Nitrite:** Unknown
+**Nitrate:** Unknown
 
-- Ammonia: 0 ppm (last confirmed Day 19)
-- Nitrite: 0 ppm (last confirmed Day 19)
-- Nitrate: 80 ppm (last confirmed Day 19)
-- pH (manual): 6.4 (last confirmed Day 19)
+Critical gap. At day 22, nitrogen chemistry is the most important data missing from this picture.
 
-No manual test conducted on Day 20 or Day 21. Trend inference only.
+## Equipment Status
 
----
+- **ESP32 sensor node:** Intermittent — 7 post failures in one hour on 2026-04-12. WiFi instability suspected. Sensor readings appear to continue between failures but gaps in coverage possible.
+- **Heater, filter, lighting:** No anomalies logged.
 
-## Active Concerns
+## Biological Status
 
-**pH (low-grade):** Sensor pH has been flirting with the 6.5 lower bound for several days. The daily average today was 6.52 — marginally above threshold — but the day's low hit 6.36. This is consistent with active nitrification acidifying the water. Not critical. Worth watching daily.
+- **Cycle phase:** Day 22. Bacterial colonization likely ongoing. pH acidification consistent with active biofilm/nitrifier growth. No confirmation of ammonia→nitrite→nitrate conversion without test.
+- **Livestock:** None. Tank uninhabited.
+- **Algae/biofilm:** Not directly observed; pH pattern consistent with bacterial alkalinity consumption.
 
-**Temperature (trending):** Tank has gained approximately 0.8°F over the past three days. No heater anomaly detected — ambient room temperature is likely the driver as Chicago moves into spring. Currently within safe range. Monitor for approach to 79°F.
+## Key Thresholds to Watch
 
-**ESP32 WiFi:** 7 failed posts logged in a single hour. Data gaps remain manageable but signal reliability is degraded. Router restart recommended.
+| Concern | Trigger | Response |
+|---------|---------|----------|
+| pH | Below 6.4 sustained | 20% water change, conditioned and pH-adjusted |
+| Temperature | Sustained above 78.5°F | Passive surface cooling (fan) |
+| Ammonia/Nitrite | Any reading above 2 ppm | Partial water change, reassess cycle |
+| ESP32 failures | >5/hour sustained | Daily manual sensor backup checks |
 
----
+## Recent Trend Summary
 
-## Recent Interventions
-
-- **Day 20 (2026-04-10):** Toby logged an observation and water change at ~10pm. Fields were left blank — details unconfirmed. Sensor data shows pH recovery and TDS shift consistent with a water change.
-- **Day 19 (2026-04-09):** Manual test: NH₃ 0, NO₂ 0, NO₃ 80 ppm, pH 6.4.
-
----
-
-## What This Tank Needs Next
-
-- Manual chemistry test (Day 22–23 target)
-- Ambient temperature monitoring; passive cooling if room sustains above 76°F
-- Router restart for ESP32 stability
+Three consecutive days of gradual pH decline. Temperature has eased slightly but remains near the top of the acceptable range. TDS rising slowly — not yet a concern. No Toby interventions in 48+ hours. Manual chemistry data urgently needed.

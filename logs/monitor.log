@@ -1803,3 +1803,11 @@
 [2026-04-13T06:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.54 TDS=190.0ppm | Temperature holding at upper boundary is the only concern—sustained 78°F+ can st
 [2026-04-13T06:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.55 TDS=189.0ppm | Temperature is nudging the ceiling of our comfort zone—not alarming yet, but the
 [2026-04-13T06:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.55 TDS=189.0ppm | Temperature is nudging the ceiling of our comfort zone—not alarming yet, but the
+[2026-04-13T07:00] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.56 TDS=190.0ppm | Temperature is brushing the ceiling at 78.24°F with a gentle upward creep over 2
+[2026-04-13T07:00] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.56 TDS=190.0ppm | Temperature is brushing the ceiling at 78.24°F with a gentle upward creep over 2
+[2026-04-13T07:15] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.57 TDS=190.0ppm | Tank is on day 23 of cycle with stable chemistry and predictable parameter drift
+[2026-04-13T07:15] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.57 TDS=190.0ppm | Tank is on day 23 of cycle with stable chemistry and predictable parameter drift
+[2026-04-13T07:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.57 TDS=190.0ppm | Temperature is drifting toward the ceiling of acceptable range on day 23 of cycl
+[2026-04-13T07:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.57 TDS=190.0ppm | Temperature is drifting toward the ceiling of acceptable range on day 23 of cycl
+[2026-04-13T07:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.58 TDS=190.0ppm | Temperature is creeping toward the ceiling—we're at 78.24°F on day 23 of a criti
+[2026-04-13T07:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.58 TDS=190.0ppm | Temperature is creeping toward the ceiling—we're at 78.24°F on day 23 of a criti
