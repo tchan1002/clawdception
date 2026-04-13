@@ -1771,3 +1771,11 @@
 [2026-04-13T02:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.42 TDS=190.0ppm | Day 23: tank hovering at thermal ceiling with subtle pH decline and rising TDS—a
 [2026-04-13T02:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.42 TDS=190.0ppm | Temperature is at the absolute ceiling of target range with a gentle upward tren
 [2026-04-13T02:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.42 TDS=190.0ppm | Temperature is at the absolute ceiling of target range with a gentle upward tren
+[2026-04-13T03:00] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.43 TDS=189.0ppm | Day 23 of cycle: temperature creeping toward ceiling while pH drifts down—both m
+[2026-04-13T03:00] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.43 TDS=189.0ppm | Day 23 of cycle: temperature creeping toward ceiling while pH drifts down—both m
+[2026-04-13T03:15] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.65 TDS=190.0ppm | Temperature at upper edge on day 23 of cycle—warmer water accelerates nitrificat
+[2026-04-13T03:15] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.65 TDS=190.0ppm | Temperature at upper edge on day 23 of cycle—warmer water accelerates nitrificat
+[2026-04-13T03:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.46 TDS=189.0ppm | Day 23 is still early in nitrogen cycle—we're watching for ammonia/nitrite spike
+[2026-04-13T03:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.46 TDS=189.0ppm | Day 23 is still early in nitrogen cycle—we're watching for ammonia/nitrite spike
+[2026-04-13T03:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.47 TDS=191.0ppm | Temperature is at the ceiling—harmless for now, but trending upward on a 24h tim
+[2026-04-13T03:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.47 TDS=191.0ppm | Temperature is at the ceiling—harmless for now, but trending upward on a 24h tim
