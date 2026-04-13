@@ -195,6 +195,31 @@ def should_call_claude(latest, readings_recent, recent_events, last_claude_time)
     return False, "stable — no notable changes"
 
 
+def detect_water_change(readings):
+    """
+    Returns (True, description) if the last few readings show a simultaneous
+    step-change in all three parameters — the signature of a water change.
+    Looks at delta between reading[0] and reading[2] (~30 min span).
+    """
+    if len(readings) < 3:
+        return False, ""
+    r0, r2 = readings[0], readings[2]
+    shifts = {}
+    for field, threshold in [("temp_f", 0.8), ("ph", 0.08), ("tds_ppm", 15)]:
+        v0, v2 = r0.get(field), r2.get(field)
+        if v0 is not None and v2 is not None:
+            delta = abs(v0 - v2)
+            shifts[field] = delta >= threshold
+    if all(shifts.values()) and len(shifts) == 3:
+        return True, (
+            f"Simultaneous shift detected — "
+            f"temp {r2.get('temp_f')}→{r0.get('temp_f')}°F, "
+            f"pH {r2.get('ph')}→{r0.get('ph')}, "
+            f"TDS {r2.get('tds_ppm')}→{r0.get('tds_ppm')}ppm — consistent with a water change."
+        )
+    return False, ""
+
+
 def summarize_readings_for_prompt(readings):
     if not readings:
         return "No readings available."
@@ -344,10 +369,13 @@ def run(force=False):
         reading_summary = summarize_readings_for_prompt(readings_24h)
         events_summary = format_recent_events(recent_events)
         notable_summary = format_notable_events(notable_events)
+        water_change_likely, water_change_note = detect_water_change(readings_24h)
         journal_snippet = read_journal()
         journal_snippet = journal_snippet[-600:] if len(journal_snippet) > 600 else journal_snippet
 
-        prompt = f"""Day {cycle_day}. Time: {ts[:16]}. Trigger: {reason}.
+        water_change_line = f"\n    ⚠ CONTEXT: {water_change_note}" if water_change_likely else ""
+
+        prompt = f"""Day {cycle_day}. Time: {ts[:16]}. Trigger: {reason}.{water_change_line}
 
     CURRENT: Temp {latest.get('temp_f')}°F | pH {latest.get('ph')} | TDS {latest.get('tds_ppm')}ppm
 

@@ -1891,3 +1891,4 @@
 [call-toby] Telegram sent (critical): ph is below danger threshold: 5.96 (below 6.0)
 [2026-04-13T16:15] Day 23 | risk=red | [temperature outside target ran] | T=78.46°F pH=5.96 TDS=174.0ppm | Two critical issues converge: pH has dropped below safe range (5.96 vs. target 6
 [2026-04-13T16:19] Day 23 | risk=yellow | [temperature outside target ran] | T=78.46°F pH=5.96 TDS=174.0ppm | Day 23 with 6 shrimp just introduced—critical acclimation window. pH now acidic 
+[2026-04-13T16:22] Day 23 | risk=yellow | [temperature outside target ran] | T=78.46°F pH=6.03 TDS=175.0ppm | Temperature is at the upper boundary of target and sustained in the 78°C zone ov
