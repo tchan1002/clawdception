@@ -172,3 +172,11 @@
 • Monitor apartment ambient temperature—if sustained heat source added (heater, weather), consider passive cooling or adjusting equipment placement to reduce thermal load
 • If pH continues downward drift past 6.35 in next 12h retest, consider light buffering (but do not intervene during active cycle without data confirmation)
 • Verify WiFi connection to ESP32 when possible—data gaps during critical cycle window reduce observation confidence
+[shrimp-journal] Entry written: 2026-04-13-0605.md (Day 23)
+[call-toby] Telegram sent (info): Journal — Day 23 · 2026-04-13 06:05
+[call-toby] Document sent: 2026-04-13-0605.md
+[call-toby] Telegram sent (info): Action items:
+• Request manual ammonia and nitrite test from Toby within 24 hours to confirm cycle stage on day 23
+• Investigate apartment ambient temperature and any recent heating activation; if controllable, lower ambient to reduce thermal load on tank
+• Verify and stabilize WiFi connection to ESP32 when opportunity allows—data continuity is critical during cycling phase
+• If sustained temperature readings exceed 78.5°F, consider passive cooling: relocate tank away from direct sunlight or heat sources, or increase air circulation near unit

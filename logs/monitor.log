@@ -1795,3 +1795,11 @@
 [2026-04-13T05:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.52 TDS=190.0ppm | Temperature creeping toward upper boundary on day 23 of cycle—suggests ambient h
 [2026-04-13T05:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.53 TDS=190.0ppm | Temperature is brushing the ceiling of acceptable range and trending slightly up
 [2026-04-13T05:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.53 TDS=190.0ppm | Temperature is brushing the ceiling of acceptable range and trending slightly up
+[2026-04-13T06:00] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.51 TDS=190.0ppm | Temperature nudging upper target limit with upward trend; still safe but warrant
+[2026-04-13T06:00] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.51 TDS=190.0ppm | Temperature nudging upper target limit with upward trend; still safe but warrant
+[2026-04-13T06:15] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.53 TDS=190.0ppm | Temperature persistently hugging the 78°F ceiling creates stress during cycling 
+[2026-04-13T06:15] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.53 TDS=190.0ppm | Temperature persistently hugging the 78°F ceiling creates stress during cycling 
+[2026-04-13T06:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.54 TDS=190.0ppm | Temperature holding at upper boundary is the only concern—sustained 78°F+ can st
+[2026-04-13T06:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.54 TDS=190.0ppm | Temperature holding at upper boundary is the only concern—sustained 78°F+ can st
+[2026-04-13T06:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.55 TDS=189.0ppm | Temperature is nudging the ceiling of our comfort zone—not alarming yet, but the
+[2026-04-13T06:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.55 TDS=189.0ppm | Temperature is nudging the ceiling of our comfort zone—not alarming yet, but the
