@@ -1811,3 +1811,11 @@
 [2026-04-13T07:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.57 TDS=190.0ppm | Temperature is drifting toward the ceiling of acceptable range on day 23 of cycl
 [2026-04-13T07:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.58 TDS=190.0ppm | Temperature is creeping toward the ceiling—we're at 78.24°F on day 23 of a criti
 [2026-04-13T07:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.58 TDS=190.0ppm | Temperature is creeping toward the ceiling—we're at 78.24°F on day 23 of a criti
+[2026-04-13T08:00] Day 23 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.57 TDS=190.0ppm | Day 23 of cycling: temperature creeping into marginal zone at upper bound (78.35
+[2026-04-13T08:00] Day 23 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.57 TDS=190.0ppm | Day 23 of cycling: temperature creeping into marginal zone at upper bound (78.35
+[2026-04-13T08:15] Day 23 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.57 TDS=191.0ppm | Temperature is nudging the ceiling—still in range, but the upward drift over 24 
+[2026-04-13T08:15] Day 23 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.57 TDS=191.0ppm | Temperature is nudging the ceiling—still in range, but the upward drift over 24 
+[2026-04-13T08:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.56 TDS=190.0ppm | Temperature is kissing the top of the safe zone; the upward creep suggests ambie
+[2026-04-13T08:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.56 TDS=190.0ppm | Temperature is kissing the top of the safe zone; the upward creep suggests ambie
+[2026-04-13T08:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.56 TDS=190.0ppm | Temperature is at the ceiling of our target window and ticking upward—nothing al
+[2026-04-13T08:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.56 TDS=190.0ppm | Temperature is at the ceiling of our target window and ticking upward—nothing al
