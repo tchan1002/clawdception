@@ -1706,3 +1706,11 @@
 [2026-04-12T18:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.46°F pH=6.42 TDS=187.0ppm | Temperature is creeping toward the ceiling during a critical cycling phase when 
 [2026-04-12T18:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.42 TDS=187.0ppm | Temperature nudged into the upper yellow zone during cycle phase—metabolically s
 [2026-04-12T18:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.42 TDS=187.0ppm | Temperature nudged into the upper yellow zone during cycle phase—metabolically s
+[2026-04-12T19:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.42 TDS=187.0ppm | Temperature is at the threshold and climbing; we're on Day 22 of the cycle where
+[2026-04-12T19:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.42 TDS=187.0ppm | Temperature is at the threshold and climbing; we're on Day 22 of the cycle where
+[2026-04-12T19:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.42 TDS=188.0ppm | Temperature creeping toward ceiling during critical cycling phase creates risk w
+[2026-04-12T19:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.42 TDS=188.0ppm | Temperature creeping toward ceiling during critical cycling phase creates risk w
+[2026-04-12T19:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.42 TDS=186.0ppm | Temperature breach triggers caution during Day 22 cycling window when biofilter 
+[2026-04-12T19:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.42 TDS=186.0ppm | Temperature breach triggers caution during Day 22 cycling window when biofilter 
+[2026-04-12T19:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.42 TDS=187.0ppm | Temperature is riding the upper boundary of acceptable range during an active cy
+[2026-04-12T19:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.42 TDS=187.0ppm | Temperature is riding the upper boundary of acceptable range during an active cy
