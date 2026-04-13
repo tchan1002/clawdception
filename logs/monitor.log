@@ -1698,3 +1698,11 @@
 [2026-04-12T17:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.43 TDS=187.0ppm | Temperature touching the ceiling and pH drifting low are both minor concerns on 
 [2026-04-12T17:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.46°F pH=6.42 TDS=187.0ppm | Temperature is bumping the ceiling after a gradual warm-up; pH is sliding lower 
 [2026-04-12T17:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.46°F pH=6.42 TDS=187.0ppm | Temperature is bumping the ceiling after a gradual warm-up; pH is sliding lower 
+[2026-04-12T18:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.43 TDS=187.0ppm | Tank is at thermal ceiling—78.24°F is technically in range but the upward trend 
+[2026-04-12T18:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.43 TDS=187.0ppm | Tank is at thermal ceiling—78.24°F is technically in range but the upward trend 
+[2026-04-12T18:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.42 TDS=188.0ppm | Temperature is creeping toward upper limit during critical cycle phase—thermal s
+[2026-04-12T18:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.42 TDS=188.0ppm | Temperature is creeping toward upper limit during critical cycle phase—thermal s
+[2026-04-12T18:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.46°F pH=6.42 TDS=187.0ppm | Temperature is creeping toward the ceiling during a critical cycling phase when 
+[2026-04-12T18:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.46°F pH=6.42 TDS=187.0ppm | Temperature is creeping toward the ceiling during a critical cycling phase when 
+[2026-04-12T18:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.42 TDS=187.0ppm | Temperature nudged into the upper yellow zone during cycle phase—metabolically s
+[2026-04-12T18:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.42 TDS=187.0ppm | Temperature nudged into the upper yellow zone during cycle phase—metabolically s
