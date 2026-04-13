@@ -1755,3 +1755,11 @@
 [2026-04-13T00:30] Day 23 | risk=yellow | [ph outside target range: 6.42 ] | T=77.9°F pH=6.42 TDS=187.0ppm | pH is creeping below target, likely from nitrification acid production mid-cycle
 [2026-04-13T00:45] Day 23 | risk=yellow | [ph outside target range: 6.41 ] | T=77.9°F pH=6.41 TDS=187.0ppm | pH drift into suboptimal zone on day 23 of cycle suggests mild acid production (
 [2026-04-13T00:45] Day 23 | risk=yellow | [ph outside target range: 6.41 ] | T=77.9°F pH=6.41 TDS=187.0ppm | pH drift into suboptimal zone on day 23 of cycle suggests mild acid production (
+[2026-04-13T01:00] Day 23 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.42 TDS=188.0ppm | Temperature at upper bound after sustained 24h warmth (~78.1°F mean) signals pos
+[2026-04-13T01:00] Day 23 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.42 TDS=188.0ppm | Temperature at upper bound after sustained 24h warmth (~78.1°F mean) signals pos
+[2026-04-13T01:15] Day 23 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.41 TDS=189.0ppm | Temperature is at the ceiling of our target window—sustained ambient heat in the
+[2026-04-13T01:15] Day 23 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.41 TDS=189.0ppm | Temperature is at the ceiling of our target window—sustained ambient heat in the
+[2026-04-13T01:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.43 TDS=190.0ppm | Day 23 of cycle: temp at ceiling + pH drifting down suggests mild environmental 
+[2026-04-13T01:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.43 TDS=190.0ppm | Day 23 of cycle: temp at ceiling + pH drifting down suggests mild environmental 
+[2026-04-13T01:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.42 TDS=190.0ppm | Temperature at ceiling of acceptable range with modest upward creep; pH drift is
+[2026-04-13T01:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.42 TDS=190.0ppm | Temperature at ceiling of acceptable range with modest upward creep; pH drift is
