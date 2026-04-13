@@ -29,6 +29,9 @@
 # To force a run: python3 skills/skill_writer/run.py --force
 30 8 * * * cd ~/clawdception && python3 skills/skill_writer/run.py >> logs/skill_writer.log 2>&1
 
+# telegram-listener: every 2 minutes — polls for owner messages, records as events
+*/2 * * * * cd ~/clawdception && python3 skills/telegram_listener/run.py >> logs/telegram_listener.log 2>&1
+
 # shrimp-vision: every 2 hours at :30 — DISABLED until camera is connected
 # 30 */2 * * * cd ~/clawdception && python3 skills/shrimp_vision/run.py >> logs/vision.log 2>&1
 

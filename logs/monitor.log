@@ -1868,3 +1868,9 @@
 [2026-04-13T14:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.44 TDS=192.0ppm | Temperature spiked to 78.35°F, hitting the ceiling of our target band—this is ex
 [2026-04-13T14:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.46°F pH=6.45 TDS=189.0ppm | Temperature is creeping toward ceiling—78.46°F is technically in-range but the u
 [2026-04-13T14:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.46°F pH=6.45 TDS=189.0ppm | Temperature is creeping toward ceiling—78.46°F is technically in-range but the u
+[2026-04-13T15:00] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.43 TDS=191.0ppm | Temperature is at the edge of acceptable range but showing a modest downward tre
+[2026-04-13T15:00] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.43 TDS=191.0ppm | Temperature is at the edge of acceptable range but showing a modest downward tre
+[2026-04-13T15:15] Day 23 | risk=yellow | [ph outside target range: 5.66 ] | T=77.22°F pH=5.66 TDS=176.0ppm | pH crash is the immediate concern—acidification below 6.0 inhibits nitrification
+[shrimp-alert] 🚨 ph is below danger threshold: 5.66 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.66 (below 6.0)
+[2026-04-13T15:15] Day 23 | risk=yellow | [ph outside target range: 5.66 ] | T=77.22°F pH=5.66 TDS=176.0ppm | pH crash is the immediate concern—acidification below 6.0 inhibits nitrification

@@ -1230,6 +1230,50 @@ def health():
     return jsonify({"status": "alive", "last_reading": last_reading})
 
 
+# --- Owner photo upload endpoints ---
+PHOTOS_DIR = Path("snapshots/photos")
+
+
+@app.route("/api/photos", methods=["POST"])
+def upload_photo():
+    """Owner POSTs a photo (multipart form) with optional notes text."""
+    if "file" not in request.files:
+        return jsonify({"error": "No file field"}), 400
+    f = request.files["file"]
+    if not f.filename:
+        return jsonify({"error": "Empty filename"}), 400
+
+    notes = request.form.get("notes", "")
+    timestamp = datetime.now()
+    ts_str = timestamp.isoformat()
+    PHOTOS_DIR.mkdir(parents=True, exist_ok=True)
+
+    filename = timestamp.strftime("%Y-%m-%d_%H-%M-%S") + ".jpg"
+    dest = PHOTOS_DIR / filename
+    f.save(str(dest))
+
+    data_payload = json.dumps({"filename": filename})
+    conn = get_db()
+    conn.execute(
+        "INSERT INTO manual_events (timestamp, event_type, data, notes) VALUES (?, ?, ?, ?)",
+        (ts_str, "photo", data_payload, notes),
+    )
+    conn.commit()
+    conn.close()
+
+    print(f"[{ts_str}] PHOTO uploaded: {filename} — {notes}")
+    return jsonify({"status": "ok", "filename": filename, "timestamp": ts_str}), 201
+
+
+@app.route("/api/photos/<filename>", methods=["GET"])
+def serve_photo(filename):
+    """Serve an owner-uploaded photo."""
+    path = PHOTOS_DIR / filename
+    if not path.exists():
+        return jsonify({"error": "Not found"}), 404
+    return send_file(str(path), mimetype="image/jpeg")
+
+
 # --- ESP32-CAM snapshot endpoints ---
 SNAPSHOTS_DIR = Path("snapshots")
 

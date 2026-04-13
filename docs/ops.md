@@ -83,7 +83,13 @@ python3 skills/shrimp_journal/run.py
 python3 skills/daily_log/run.py
 python3 skills/daily_log/run.py --date 2026-03-30   # backfill specific date
 python3 skills/call_toby/run.py --test
+python3 skills/telegram_listener/run.py   # test inbound message polling
 
 # Unit tests (no server or hardware required)
 python3 -m pytest tests/ -v
 ```
+
+## Crontab Changes (2026-04-13)
+
+Added `telegram-listener` — runs every 2 minutes to poll owner Telegram messages and record them as `owner_note` or `owner_photo` events. Offset state stored in `logs/telegram_offset.txt`.
+

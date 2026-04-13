@@ -10,6 +10,8 @@
 | GET | `/api/sensors/latest` | Single latest reading |
 | POST | `/api/events` | Log a structured event |
 | GET | `/api/events` | Query events (`?limit=N`, `?since=ISO`, `?type=water_test`) |
+| POST | `/api/photos` | Upload owner photo (multipart: `file` + optional `notes`); saves to `snapshots/photos/` and creates a `photo` event |
+| GET | `/api/photos/<filename>` | Serve a photo from `snapshots/photos/` |
 | GET | `/api/health` | Health check, returns last reading timestamp |
 
 Server: `http://localhost:5001` (Pi) or `http://192.168.12.76:5001` (remote)
@@ -18,9 +20,9 @@ Server: `http://localhost:5001` (Pi) or `http://192.168.12.76:5001` (remote)
 
 ```json
 {
-  "event_type": "water_test" | "water_change" | "feeding" | "observation" | "manual_override" | "snapshot",
+  "event_type": "water_test" | "water_change" | "feeding" | "observation" | "manual_override" | "snapshot" | "shrimp_added" | "photo" | "owner_note" | "owner_photo",
   "data": {},
-  "source": "nfc" | "manual" | "agent",
+  "source": "nfc" | "manual" | "agent" | "telegram",
   "timestamp": "ISO 8601 (optional, defaults to now)"
 }
 ```
@@ -30,6 +32,17 @@ Examples:
 {"event_type": "water_test", "data": {"ammonia_ppm": 1.0, "nitrite_ppm": 0.25, "nitrate_ppm": 5.0}, "source": "manual"}
 {"event_type": "water_change", "data": {"percent": 25, "treated": true, "notes": "used Prime"}, "source": "manual"}
 {"event_type": "observation", "data": {"note": "biofilm forming on driftwood"}, "source": "manual"}
+{"event_type": "shrimp_added", "data": {"count": 10, "source": "LFS"}, "notes": "Initial colony introduction"}
+{"event_type": "owner_note", "data": {"source": "telegram"}, "notes": "Free-text message from owner"}
+{"event_type": "owner_photo", "data": {"filename": "2026-04-13_14-30-00.jpg", "source": "telegram"}, "notes": "Optional caption"}
+{"event_type": "photo", "data": {"filename": "2026-04-13_14-30-00.jpg"}, "notes": "Uploaded via dashboard"}
+```
+
+**Photo upload** (multipart form to `/api/photos`):
+```bash
+curl -X POST http://localhost:5001/api/photos \
+  -F "file=@tank.jpg" \
+  -F "notes=shrimp looking active today"
 ```
 
 ## Database Schema

@@ -91,3 +91,4 @@
 {"timestamp": "2026-04-13T07:00:53.572255", "urgency": "info", "message": "Morning log ready \ud83c\udf05 \u2014 Day 22 of the cycle. Day 22 \u2014 2026-04-12 \u2014 The Quiet That Asks Questions", "sent_via": "telegram"}
 {"timestamp": "2026-04-13T11:45:02.764825", "urgency": "warning", "message": "No water test logged yet. Day 23 of cycle \u2014 ammonia and nitrite are unknown.", "sent_via": "telegram"}
 {"timestamp": "2026-04-13T12:05:15.455509", "urgency": "info", "message": "Journal \u2014 Day 23 \u00b7 2026-04-13 12:05", "sent_via": "telegram"}
+{"timestamp": "2026-04-13T15:15:07.297998", "urgency": "critical", "message": "ph is below danger threshold: 5.66 (below 6.0)", "sent_via": "telegram"}

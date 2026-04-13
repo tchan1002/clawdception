@@ -775,6 +775,19 @@
       <span>EVENTS LOG</span>
       <span id="eventCount">0 events</span>
     </div>
+    <div style="padding: 10px 12px; border-bottom: 1px solid var(--border);">
+      <form id="photoForm" onsubmit="submitPhoto(event)" style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+        <input type="file" id="photoFile" accept="image/*" required
+          style="font-family: inherit; font-size: 10px; color: var(--muted); background: transparent; border: 1px solid var(--border); padding: 4px 8px; flex: 0 0 auto;">
+        <input type="text" id="photoNotes" placeholder="notes (optional)"
+          style="font-family: inherit; font-size: 10px; background: transparent; border: 1px solid var(--border); padding: 4px 8px; color: var(--text); flex: 1 1 160px; min-width: 0;">
+        <button type="submit" id="photoSubmitBtn"
+          style="font-family: inherit; font-size: 10px; letter-spacing: 0.08em; background: transparent; border: 1px solid var(--border); padding: 4px 10px; color: var(--muted); cursor: pointer; flex: 0 0 auto;">
+          UPLOAD PHOTO
+        </button>
+        <span id="photoStatus" style="font-size: 10px; color: var(--muted);"></span>
+      </form>
+    </div>
     <div class="log-entries" id="eventEntries">
     </div>
   </div>
@@ -1108,6 +1121,10 @@ function renderEvents(events) {
           </div>
         </div>
       `;
+    } else if ((event.event_type === 'photo' || event.event_type === 'owner_photo') && event.data && event.data.filename) {
+      dataHtml = `<div style="margin-top: 6px;"><img src="/api/photos/${event.data.filename}"
+        style="max-width: 100%; max-height: 240px; border: 1px solid var(--border); display: block;"
+        onerror="this.style.display='none'"></div>`;
     }
 
     const notesHtml = event.notes ? `<div class="event-notes">"${event.notes}"</div>` : '';
@@ -1159,6 +1176,35 @@ function updateCyclePanel(latestTest) {
   }
 
   // pH already updated from sensor data in render() function
+}
+
+async function submitPhoto(e) {
+  e.preventDefault();
+  const fileInput = document.getElementById('photoFile');
+  const notes = document.getElementById('photoNotes').value.trim();
+  const btn = document.getElementById('photoSubmitBtn');
+  const status = document.getElementById('photoStatus');
+
+  const form = new FormData();
+  form.append('file', fileInput.files[0]);
+  if (notes) form.append('notes', notes);
+
+  btn.disabled = true;
+  status.textContent = 'uploading…';
+  try {
+    const res = await fetch('/api/photos', { method: 'POST', body: form });
+    if (!res.ok) throw new Error(await res.text());
+    status.textContent = 'uploaded ✓';
+    fileInput.value = '';
+    document.getElementById('photoNotes').value = '';
+    window.eventsFetched = false;
+    fetchEvents();
+    setTimeout(() => { status.textContent = ''; }, 3000);
+  } catch (err) {
+    status.textContent = 'failed: ' + err.message;
+  } finally {
+    btn.disabled = false;
+  }
 }
 
 // Fetch events on boot to update cycle panel
