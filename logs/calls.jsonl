@@ -98,3 +98,4 @@
 {"timestamp": "2026-04-13T15:40:02.944348", "urgency": "info", "message": "Note logged: conducted a 35% water change to lower nitrate concentration before shrimp introduction\u2014explains the drop in ph, tds and temp which is just a sensor issue. \u2713", "sent_via": "telegram"}
 {"timestamp": "2026-04-13T15:40:05.179650", "urgency": "info", "message": "Photo logged: added christmas moss and duckweed to tank \u2713", "sent_via": "telegram"}
 {"timestamp": "2026-04-13T15:40:07.416445", "urgency": "info", "message": "Photo logged \u2713", "sent_via": "telegram"}
+{"timestamp": "2026-04-13T15:45:02.712045", "urgency": "critical", "message": "ph is below danger threshold: 5.85 (below 6.0)", "sent_via": "telegram"}

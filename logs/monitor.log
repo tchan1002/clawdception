@@ -1878,3 +1878,7 @@
 [shrimp-alert] 🚨 ph is below danger threshold: 5.71 (below 6.0)
 [call-toby] Telegram sent (critical): ph is below danger threshold: 5.71 (below 6.0)
 [2026-04-13T15:30] Day 23 | risk=? | [temperature outside target ran] | T=78.57°F pH=5.71 TDS=173.0ppm | 
+[2026-04-13T15:45] Day 23 | risk=red | [manual event since last check ] | T=78.46°F pH=5.85 TDS=174.0ppm | pH crash to 5.85 is immediate concern—nitrifying bacteria activity + fresh organ
+[shrimp-alert] 🚨 ph is below danger threshold: 5.85 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.85 (below 6.0)
+[2026-04-13T15:45] Day 23 | risk=red | [manual event since last check ] | T=78.46°F pH=5.85 TDS=174.0ppm | pH crash to 5.85 is immediate concern—nitrifying bacteria activity + fresh organ
