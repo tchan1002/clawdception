@@ -1787,3 +1787,11 @@
 [2026-04-13T04:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.48 TDS=190.0ppm | Temperature is at the ceiling of our range and shows a persistent upward micro-t
 [2026-04-13T04:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.48 TDS=190.0ppm | Temperature has crept to the ceiling of target range and shows a persistent upwa
 [2026-04-13T04:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.48 TDS=190.0ppm | Temperature has crept to the ceiling of target range and shows a persistent upwa
+[2026-04-13T05:00] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.49 TDS=189.0ppm | Temperature holds at upper boundary with upward drift over 24h, suggesting susta
+[2026-04-13T05:00] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.49 TDS=189.0ppm | Temperature holds at upper boundary with upward drift over 24h, suggesting susta
+[2026-04-13T05:15] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.5 TDS=188.0ppm | Temperature is creeping toward the ceiling; three consecutive readings at 78°C+ 
+[2026-04-13T05:15] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.5 TDS=188.0ppm | Temperature is creeping toward the ceiling; three consecutive readings at 78°C+ 
+[2026-04-13T05:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.52 TDS=190.0ppm | Temperature creeping toward upper boundary on day 23 of cycle—suggests ambient h
+[2026-04-13T05:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.52 TDS=190.0ppm | Temperature creeping toward upper boundary on day 23 of cycle—suggests ambient h
+[2026-04-13T05:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.53 TDS=190.0ppm | Temperature is brushing the ceiling of acceptable range and trending slightly up
+[2026-04-13T05:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.53 TDS=190.0ppm | Temperature is brushing the ceiling of acceptable range and trending slightly up
