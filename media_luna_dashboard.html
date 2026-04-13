@@ -775,19 +775,6 @@
       <span>EVENTS LOG</span>
       <span id="eventCount">0 events</span>
     </div>
-    <div style="padding: 10px 12px; border-bottom: 1px solid var(--border);">
-      <form id="photoForm" onsubmit="submitPhoto(event)" style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
-        <input type="file" id="photoFile" accept="image/*" required
-          style="font-family: inherit; font-size: 10px; color: var(--muted); background: transparent; border: 1px solid var(--border); padding: 4px 8px; flex: 0 0 auto;">
-        <input type="text" id="photoNotes" placeholder="notes (optional)"
-          style="font-family: inherit; font-size: 10px; background: transparent; border: 1px solid var(--border); padding: 4px 8px; color: var(--text); flex: 1 1 160px; min-width: 0;">
-        <button type="submit" id="photoSubmitBtn"
-          style="font-family: inherit; font-size: 10px; letter-spacing: 0.08em; background: transparent; border: 1px solid var(--border); padding: 4px 10px; color: var(--muted); cursor: pointer; flex: 0 0 auto;">
-          UPLOAD PHOTO
-        </button>
-        <span id="photoStatus" style="font-size: 10px; color: var(--muted);"></span>
-      </form>
-    </div>
     <div class="log-entries" id="eventEntries">
     </div>
   </div>

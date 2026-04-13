@@ -40,6 +40,8 @@ python3 skills/shrimp_monitor/run.py --force
 Unit tests: `python3 -m pytest tests/ -v`  
 Health check: `/status` slash command, or `curl http://localhost:5001/api/health`
 
+**Smoke tests must pass (18/18) before considering any server-side change done.** Run with `/smoke` or `bash scripts/smoke_test.sh`. If a pre-existing failure is found, fix it before moving on.
+
 ---
 
 ## Documentation Protocol

@@ -499,6 +499,9 @@ def agent_status():
                     entry = json.loads(line)
                     if "parameter_status" in entry:
                         decision = entry
+                        # parameter_status may be stored as a JSON string
+                        if isinstance(decision["parameter_status"], str):
+                            decision["parameter_status"] = json.loads(decision["parameter_status"])
                         risk_level = decision.get("risk_level", "unknown")
                         break
                 if decision:
@@ -1118,14 +1121,22 @@ def log_event_ui():
         <div class="field-section">
             <div class="field-label">Event Type</div>
             <select id="event-type">
-                <option value="water_change">Water Change</option>
-                <option value="heater_adjust">Heater Adjust</option>
-                <option value="feeding">Feeding</option>
+                <option value="photo">Photo</option>
                 <option value="observation">Observation</option>
+                <option value="water_change">Water Change</option>
+                <option value="feeding">Feeding</option>
+                <option value="heater_adjust">Heater Adjust</option>
                 <option value="dosing">Dosing</option>
                 <option value="maintenance">Maintenance</option>
                 <option value="plant_addition">Plant Addition</option>
             </select>
+        </div>
+
+        <div class="field-section" id="photo-field" style="display: none;">
+            <div class="field-label">Photo</div>
+            <input type="file" id="photo-input" accept="image/*"
+                style="width: 100%; background: #161b22; border: 1px solid #30363d; border-radius: 6px;
+                       color: white; font-size: 16px; padding: 12px; font-family: inherit;">
         </div>
 
         <div class="field-section">
@@ -1145,14 +1156,20 @@ def log_event_ui():
 
     <script>
         const EVENT_LABELS = {
+            photo: "Photo",
+            observation: "Observation",
             water_change: "Water Change",
             heater_adjust: "Heater Adjust",
             feeding: "Feeding",
-            observation: "Observation",
             dosing: "Dosing",
             maintenance: "Maintenance",
             plant_addition: "Plant Addition"
         };
+
+        document.getElementById('event-type').addEventListener('change', function() {
+            document.getElementById('photo-field').style.display =
+                this.value === 'photo' ? 'block' : 'none';
+        });
 
         async function submitEvent() {
             const eventType = document.getElementById('event-type').value;
@@ -1163,23 +1180,38 @@ def log_event_ui():
             errorEl.style.display = 'none';
             btn.disabled = true;
 
-            const payload = {
-                event_type: eventType,
-                timestamp: new Date().toISOString(),
-                notes: notes,
-                data: {}
-            };
-
             try {
-                const response = await fetch('/api/events', {
-                    method: 'POST',
-                    headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify(payload)
-                });
+                let response;
+                if (eventType === 'photo') {
+                    const fileInput = document.getElementById('photo-input');
+                    if (!fileInput.files.length) {
+                        errorEl.textContent = 'Please select a photo.';
+                        errorEl.style.display = 'block';
+                        btn.disabled = false;
+                        return;
+                    }
+                    const form = new FormData();
+                    form.append('file', fileInput.files[0]);
+                    if (notes) form.append('notes', notes);
+                    response = await fetch('/api/photos', { method: 'POST', body: form });
+                } else {
+                    const payload = {
+                        event_type: eventType,
+                        timestamp: new Date().toISOString(),
+                        notes: notes,
+                        data: {}
+                    };
+                    response = await fetch('/api/events', {
+                        method: 'POST',
+                        headers: {'Content-Type': 'application/json'},
+                        body: JSON.stringify(payload)
+                    });
+                }
 
                 if (response.ok) {
                     showConfirmation(eventType, notes);
                 } else {
+                    errorEl.textContent = 'Something went wrong. Please try again.';
                     errorEl.style.display = 'block';
                     btn.disabled = false;
                 }
