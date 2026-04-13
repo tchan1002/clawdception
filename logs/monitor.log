@@ -1819,3 +1819,11 @@
 [2026-04-13T08:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.56 TDS=190.0ppm | Temperature is kissing the top of the safe zone; the upward creep suggests ambie
 [2026-04-13T08:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.56 TDS=190.0ppm | Temperature is at the ceiling of our target window and ticking upward—nothing al
 [2026-04-13T08:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.56 TDS=190.0ppm | Temperature is at the ceiling of our target window and ticking upward—nothing al
+[2026-04-13T09:00] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.56 TDS=190.0ppm | Temperature is nudging the ceiling at 78.24°F; sustained cycling on day 23 is ge
+[2026-04-13T09:00] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.56 TDS=190.0ppm | Temperature is nudging the ceiling at 78.24°F; sustained cycling on day 23 is ge
+[2026-04-13T09:15] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.58 TDS=190.0ppm | Temperature is creeping toward the ceiling on day 23 of cycling—concerning timin
+[2026-04-13T09:15] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.58 TDS=190.0ppm | Temperature is creeping toward the ceiling on day 23 of cycling—concerning timin
+[2026-04-13T09:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.57 TDS=191.0ppm | Temperature is at the upper boundary after 23 days of cycling—this matters becau
+[2026-04-13T09:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.57 TDS=191.0ppm | Temperature is at the upper boundary after 23 days of cycling—this matters becau
+[2026-04-13T09:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.56 TDS=191.0ppm | Temp at ceiling—upward creep suggests Toby's apartment is warming. Nitrogen cycl
+[2026-04-13T09:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.56 TDS=191.0ppm | Temp at ceiling—upward creep suggests Toby's apartment is warming. Nitrogen cycl
