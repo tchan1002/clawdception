@@ -1722,3 +1722,11 @@
 [2026-04-12T20:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.43 TDS=188.0ppm | Temperature creeping toward ceiling during critical Day 22 cycle window—elevated
 [2026-04-12T20:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.41 TDS=188.0ppm | Temperature is creeping toward the ceiling during cycling—thermal stress during 
 [2026-04-12T20:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.41 TDS=188.0ppm | Temperature is creeping toward the ceiling during cycling—thermal stress during 
+[2026-04-12T21:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.42 TDS=189.0ppm | Temperature creeping upward at Day 22 during active cycle phase creates mild str
+[2026-04-12T21:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.42 TDS=189.0ppm | Temperature creeping upward at Day 22 during active cycle phase creates mild str
+[2026-04-12T21:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.4 TDS=187.0ppm | Temperature kissing ceiling during critical cycling phase—each degree toward 79°
+[2026-04-12T21:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.4 TDS=187.0ppm | Temperature kissing ceiling during critical cycling phase—each degree toward 79°
+[2026-04-12T21:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.42 TDS=189.0ppm | Tank is at the thermal ceiling (78.24°F = upper edge of 72–78 target). We're in 
+[2026-04-12T21:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.42 TDS=189.0ppm | Tank is at the thermal ceiling (78.24°F = upper edge of 72–78 target). We're in 
+[2026-04-12T21:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.41 TDS=189.0ppm | Tank is at a thermally sensitive moment during active cycling. Temp breach at th
+[2026-04-12T21:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.41 TDS=189.0ppm | Tank is at a thermally sensitive moment during active cycling. Temp breach at th
