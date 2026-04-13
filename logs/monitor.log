@@ -1730,3 +1730,11 @@
 [2026-04-12T21:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.42 TDS=189.0ppm | Tank is at the thermal ceiling (78.24°F = upper edge of 72–78 target). We're in 
 [2026-04-12T21:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.41 TDS=189.0ppm | Tank is at a thermally sensitive moment during active cycling. Temp breach at th
 [2026-04-12T21:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.41 TDS=189.0ppm | Tank is at a thermally sensitive moment during active cycling. Temp breach at th
+[2026-04-12T22:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.42 TDS=190.0ppm | Temperature is creeping upward and has now breached the safe zone—we're at the c
+[2026-04-12T22:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.42 TDS=190.0ppm | Temperature is creeping upward and has now breached the safe zone—we're at the c
+[2026-04-12T22:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.43 TDS=190.0ppm | Temperature is skating the upper boundary of target range, and we're in a critic
+[2026-04-12T22:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.43 TDS=190.0ppm | Temperature is skating the upper boundary of target range, and we're in a critic
+[2026-04-12T22:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.42 TDS=188.0ppm | Temperature is riding the ceiling of acceptable range with a micro-uptrend, sugg
+[2026-04-12T22:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.42 TDS=188.0ppm | Temperature is riding the ceiling of acceptable range with a micro-uptrend, sugg
+[2026-04-12T22:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.42 TDS=190.0ppm | Temperature at upper boundary with upward drift; we're in a critical nitrogen cy
+[2026-04-12T22:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.42 TDS=190.0ppm | Temperature at upper boundary with upward drift; we're in a critical nitrogen cy
