@@ -1827,3 +1827,11 @@
 [2026-04-13T09:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.57 TDS=191.0ppm | Temperature is at the upper boundary after 23 days of cycling—this matters becau
 [2026-04-13T09:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.56 TDS=191.0ppm | Temp at ceiling—upward creep suggests Toby's apartment is warming. Nitrogen cycl
 [2026-04-13T09:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.56 TDS=191.0ppm | Temp at ceiling—upward creep suggests Toby's apartment is warming. Nitrogen cycl
+[2026-04-13T10:00] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.53 TDS=191.0ppm | Temperature is creeping toward the ceiling—78.24°F is technically within target 
+[2026-04-13T10:00] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.53 TDS=191.0ppm | Temperature is creeping toward the ceiling—78.24°F is technically within target 
+[2026-04-13T10:15] Day 23 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.53 TDS=190.0ppm | Temperature is nudging the ceiling at day 23 of cycle—not critical, but Chicago 
+[2026-04-13T10:15] Day 23 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.53 TDS=190.0ppm | Temperature is nudging the ceiling at day 23 of cycle—not critical, but Chicago 
+[2026-04-13T10:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.5 TDS=190.0ppm | Temperature is creeping toward the ceiling of our safe zone—nothing alarming yet
+[2026-04-13T10:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.5 TDS=190.0ppm | Temperature is creeping toward the ceiling of our safe zone—nothing alarming yet
+[2026-04-13T10:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.51 TDS=191.0ppm | Temperature has crept to the ceiling of acceptable range and shows a gentle upwa
+[2026-04-13T10:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.51 TDS=191.0ppm | Temperature has crept to the ceiling of acceptable range and shows a gentle upwa
