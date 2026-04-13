@@ -1779,3 +1779,11 @@
 [2026-04-13T03:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.46 TDS=189.0ppm | Day 23 is still early in nitrogen cycle—we're watching for ammonia/nitrite spike
 [2026-04-13T03:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.47 TDS=191.0ppm | Temperature is at the ceiling—harmless for now, but trending upward on a 24h tim
 [2026-04-13T03:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.47 TDS=191.0ppm | Temperature is at the ceiling—harmless for now, but trending upward on a 24h tim
+[2026-04-13T04:00] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.47 TDS=190.0ppm | Temperature creeping toward ceiling and pH drifting downward during active cycle
+[2026-04-13T04:00] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.47 TDS=190.0ppm | Temperature creeping toward ceiling and pH drifting downward during active cycle
+[2026-04-13T04:15] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.48 TDS=191.0ppm | Temperature nudging the ceiling isn't crisis, but sustained heat slows nitrifica
+[2026-04-13T04:15] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.48 TDS=191.0ppm | Temperature nudging the ceiling isn't crisis, but sustained heat slows nitrifica
+[2026-04-13T04:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.48 TDS=190.0ppm | Temperature is at the ceiling of our range and shows a persistent upward micro-t
+[2026-04-13T04:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.48 TDS=190.0ppm | Temperature is at the ceiling of our range and shows a persistent upward micro-t
+[2026-04-13T04:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.48 TDS=190.0ppm | Temperature has crept to the ceiling of target range and shows a persistent upwa
+[2026-04-13T04:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.48 TDS=190.0ppm | Temperature has crept to the ceiling of target range and shows a persistent upwa
