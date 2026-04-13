@@ -21,6 +21,7 @@ from utils import (
     call_claude,
     compute_stats,
     fetch_events,
+    fetch_notable_events,
     fetch_readings,
     read_decisions_since,
     read_journal,
@@ -68,6 +69,7 @@ def run():
     readings = fetch_readings(24)  # ~6 hours at 15-min intervals
     decisions = read_decisions_since(window_start)
     events = fetch_events(since=window_start.isoformat(), limit=50)
+    notable_events = fetch_notable_events(days=14)
     journal_so_far = read_journal()
 
     # --- Summarize readings ---
@@ -93,6 +95,16 @@ def run():
         event_lines.append(f"  [{ts_short}] {e.get('event_type')}: {json.dumps(e.get('data', {}))}")
     events_summary = "\n".join(event_lines) or "No events in this window."
 
+    # --- Notable events (14-day history) ---
+    notable_lines = []
+    for e in notable_events:
+        ts_short = e.get("timestamp", "")[:10]
+        notes = e.get("notes", "")
+        data = e.get("data", {})
+        detail = notes or json.dumps(data) if data else ""
+        notable_lines.append(f"  [{ts_short}] {e.get('event_type')}: {detail}")
+    notable_summary = "\n".join(notable_lines) or "No notable events in past 14 days."
+
     # --- Truncate existing journal to save tokens ---
     journal_excerpt = journal_so_far[-600:] if len(journal_so_far) > 600 else journal_so_far
 
@@ -106,8 +118,11 @@ SENSOR SUMMARY (last 6 hours):
 AGENT DECISIONS (last 6 hours):
 {decisions_summary}
 
-EVENTS:
+EVENTS (last 6 hours):
 {events_summary}
+
+NOTABLE TANK HISTORY (past 14 days):
+{notable_summary}
 
 JOURNAL SO FAR TODAY (last portion):
 {journal_excerpt or 'Nothing written yet today.'}

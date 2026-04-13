@@ -28,6 +28,7 @@ from utils import (
     call_claude,
     compute_stats,
     fetch_events,
+    fetch_notable_events,
     fetch_latest_reading,
     fetch_readings,
     hours_since_last_water_test,
@@ -221,6 +222,19 @@ def format_recent_events(events):
     return "\n".join(lines)
 
 
+def format_notable_events(events):
+    if not events:
+        return "None in past 14 days."
+    lines = []
+    for e in events:
+        ts = e.get("timestamp", "")[:10]
+        notes = e.get("notes", "")
+        data = e.get("data", {})
+        detail = notes or (json.dumps(data) if data else "")
+        lines.append(f"  [{ts}] {e.get('event_type')}: {detail}")
+    return "\n".join(lines)
+
+
 def run(force=False):
     with SkillLock("shrimp-monitor"):
         ts = datetime.now().isoformat()
@@ -274,6 +288,7 @@ def run(force=False):
         readings_recent = readings_24h[:4]  # last ~1 hour
         since_24h = (datetime.now() - timedelta(hours=24)).isoformat()
         recent_events = fetch_events(since=since_24h)
+        notable_events = fetch_notable_events(days=14)
         last_claude_time = get_last_claude_time()
 
         # --- Always: check for overdue water test (nag at most once per 12hrs) ---
@@ -328,6 +343,7 @@ def run(force=False):
         # --- Build prompt ---
         reading_summary = summarize_readings_for_prompt(readings_24h)
         events_summary = format_recent_events(recent_events)
+        notable_summary = format_notable_events(notable_events)
         journal_snippet = read_journal()
         journal_snippet = journal_snippet[-600:] if len(journal_snippet) > 600 else journal_snippet
 
@@ -338,8 +354,11 @@ def run(force=False):
     24HR STATS:
     {reading_summary}
 
-    EVENTS:
+    EVENTS (last 24hr):
     {events_summary}
+
+    NOTABLE TANK HISTORY (past 14 days):
+    {notable_summary}
 
     JOURNAL (recent):
     {journal_snippet or 'None yet.'}

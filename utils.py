@@ -69,9 +69,19 @@ def compute_stats(readings, field):
 # Events
 # ---------------------------------------------------------------------------
 
+INTERNAL_EVENT_TYPES = {"smoke_test"}
+
+NOTABLE_EVENT_TYPES = {
+    "shrimp_added", "water_change", "water_test", "plant_addition",
+    "maintenance", "heater_adjust", "dosing", "feeding",
+    "owner_note", "owner_photo", "plant_addition", "observation",
+}
+
+
 def fetch_events(since=None, event_type=None, limit=50):
     """
     Returns events from the API, filtered by since (ISO timestamp), event_type, or limit.
+    Internal event types (smoke_test) are always excluded.
     """
     try:
         params = {"limit": limit}
@@ -81,10 +91,26 @@ def fetch_events(since=None, event_type=None, limit=50):
             params["type"] = event_type
         r = requests.get(f"{API_BASE}/api/events", params=params, timeout=10)
         r.raise_for_status()
-        return r.json()
+        return [e for e in r.json() if e.get("event_type") not in INTERNAL_EVENT_TYPES]
     except Exception as e:
         _log_error("fetch_events", e)
         return []
+
+
+def fetch_notable_events(days=14, limit=30):
+    """
+    Returns notable tank events (water changes, tests, shrimp additions, etc.)
+    from the past N days. Excludes observations and internal events.
+    Used to give agents persistent memory of significant tank history.
+    """
+    since = (datetime.now() - timedelta(days=days)).isoformat()
+    events = fetch_events(since=since, limit=limit * 2)
+    notable = [
+        e for e in events
+        if e.get("event_type") in NOTABLE_EVENT_TYPES
+        and e.get("event_type") != "observation"
+    ]
+    return notable[:limit]
 
 
 def hours_since_last_water_test():
