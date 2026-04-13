@@ -1852,3 +1852,11 @@
 [2026-04-13T12:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.45 TDS=190.0ppm | Temperature is edging the ceiling of the safe zone—still compliant but trending 
 [2026-04-13T12:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.46 TDS=191.0ppm | Tank is stable but temperature is knocking on the 78.5°F alarm. We're not in dan
 [2026-04-13T12:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.46 TDS=191.0ppm | Tank is stable but temperature is knocking on the 78.5°F alarm. We're not in dan
+[2026-04-13T13:00] Day 23 | risk=yellow | [temperature outside target ran] | T=78.46°F pH=6.43 TDS=191.0ppm | Temperature is nudging the ceiling—78.46°F at max of target, with three consecut
+[2026-04-13T13:00] Day 23 | risk=yellow | [temperature outside target ran] | T=78.46°F pH=6.43 TDS=191.0ppm | Temperature is nudging the ceiling—78.46°F at max of target, with three consecut
+[2026-04-13T13:15] Day 23 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.46 TDS=191.0ppm | Temperature crossed the alert threshold (78.35°F) but remains within safe range 
+[2026-04-13T13:15] Day 23 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.46 TDS=191.0ppm | Temperature crossed the alert threshold (78.35°F) but remains within safe range 
+[2026-04-13T13:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.46 TDS=191.0ppm | Temperature is knocking on the ceiling (78.24°F, target max 78°F); 24-hour mean 
+[2026-04-13T13:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.46 TDS=191.0ppm | Temperature is knocking on the ceiling (78.24°F, target max 78°F); 24-hour mean 
+[2026-04-13T13:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.44 TDS=191.0ppm | Temperature is at the ceiling of acceptable range and has held there for at leas
+[2026-04-13T13:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.44 TDS=191.0ppm | Temperature is at the ceiling of acceptable range and has held there for at leas
