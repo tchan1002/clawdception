@@ -1714,3 +1714,11 @@
 [2026-04-12T19:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.35°F pH=6.42 TDS=186.0ppm | Temperature breach triggers caution during Day 22 cycling window when biofilter 
 [2026-04-12T19:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.42 TDS=187.0ppm | Temperature is riding the upper boundary of acceptable range during an active cy
 [2026-04-12T19:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.42 TDS=187.0ppm | Temperature is riding the upper boundary of acceptable range during an active cy
+[2026-04-12T20:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.43 TDS=189.0ppm | Tank is on the warm edge during active cycle phase with no manual events in 24h.
+[2026-04-12T20:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.43 TDS=189.0ppm | Tank is on the warm edge during active cycle phase with no manual events in 24h.
+[2026-04-12T20:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.41 TDS=189.0ppm | Temperature is at the edge—78.12°F is technically in range but the upward creep 
+[2026-04-12T20:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.41 TDS=189.0ppm | Temperature is at the edge—78.12°F is technically in range but the upward creep 
+[2026-04-12T20:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.43 TDS=188.0ppm | Temperature creeping toward ceiling during critical Day 22 cycle window—elevated
+[2026-04-12T20:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.43 TDS=188.0ppm | Temperature creeping toward ceiling during critical Day 22 cycle window—elevated
+[2026-04-12T20:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.41 TDS=188.0ppm | Temperature is creeping toward the ceiling during cycling—thermal stress during 
+[2026-04-12T20:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.41 TDS=188.0ppm | Temperature is creeping toward the ceiling during cycling—thermal stress during 
