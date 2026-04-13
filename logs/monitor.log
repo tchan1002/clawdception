@@ -1738,3 +1738,12 @@
 [2026-04-12T22:30] Day 22 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.42 TDS=188.0ppm | Temperature is riding the ceiling of acceptable range with a micro-uptrend, sugg
 [2026-04-12T22:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.42 TDS=190.0ppm | Temperature at upper boundary with upward drift; we're in a critical nitrogen cy
 [2026-04-12T22:45] Day 22 | risk=yellow | [temperature outside target ran] | T=78.24°F pH=6.42 TDS=190.0ppm | Temperature at upper boundary with upward drift; we're in a critical nitrogen cy
+[2026-04-12T23:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.42 TDS=188.0ppm | Temperature is nudging the ceiling at 78.01°F with a small upward 24hr trend; we
+[2026-04-12T23:00] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.42 TDS=188.0ppm | Temperature is nudging the ceiling at 78.01°F with a small upward 24hr trend; we
+[2026-04-12T23:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.4 TDS=190.0ppm | Temperature is creeping toward the ceiling; we're at day 22 of cycling with crit
+[2026-04-12T23:15] Day 22 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.4 TDS=190.0ppm | Temperature is creeping toward the ceiling; we're at day 22 of cycling with crit
+[2026-04-12T23:30] Day 22 | risk=yellow | [ph outside target range: 6.4 (] | T=77.9°F pH=6.4 TDS=188.0ppm | pH dip to 6.4 signals early acidification—likely biofilm/bacterial colonization 
+[call-toby] Telegram sent (warning): No water test logged yet. Day 22 of cycle — ammonia and nitrite are unknown.
+[2026-04-12T23:30] Day 22 | risk=yellow | [ph outside target range: 6.4 (] | T=77.9°F pH=6.4 TDS=188.0ppm | pH dip to 6.4 signals early acidification—likely biofilm/bacterial colonization 
+[2026-04-12T23:45] Day 22 | risk=yellow | [ph outside target range: 6.42 ] | T=77.9°F pH=6.42 TDS=189.0ppm | pH creeping below target during thermal stress window (apartment heat, day 22 of
+[2026-04-12T23:45] Day 22 | risk=yellow | [ph outside target range: 6.42 ] | T=77.9°F pH=6.42 TDS=189.0ppm | pH creeping below target during thermal stress window (apartment heat, day 22 of
