@@ -164,3 +164,11 @@
 • If apartment temperature remains elevated, place small fan near tank exhaust to passively lower water temp toward 77.5°F
 • Increase manual visual shrimp checks to twice daily until WiFi stability improves—cannot rely on sensors alone during critical cycle phase
 • Do not perform water change unless pH drops below 6.4 or ammonia/nitrite spike; hold at current 25% threshold
+[shrimp-journal] Entry written: 2026-04-13-0005.md (Day 23)
+[call-toby] Telegram sent (info): Journal — Day 23 · 2026-04-13 00:05
+[call-toby] Document sent: 2026-04-13-0005.md
+[call-toby] Telegram sent (info): Action items:
+• Request manual ammonia and nitrite test from Toby within 24 hours to confirm cycle stage on day 23
+• Monitor apartment ambient temperature—if sustained heat source added (heater, weather), consider passive cooling or adjusting equipment placement to reduce thermal load
+• If pH continues downward drift past 6.35 in next 12h retest, consider light buffering (but do not intervene during active cycle without data confirmation)
+• Verify WiFi connection to ESP32 when possible—data gaps during critical cycle window reduce observation confidence

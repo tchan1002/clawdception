@@ -1747,3 +1747,11 @@
 [2026-04-12T23:30] Day 22 | risk=yellow | [ph outside target range: 6.4 (] | T=77.9°F pH=6.4 TDS=188.0ppm | pH dip to 6.4 signals early acidification—likely biofilm/bacterial colonization 
 [2026-04-12T23:45] Day 22 | risk=yellow | [ph outside target range: 6.42 ] | T=77.9°F pH=6.42 TDS=189.0ppm | pH creeping below target during thermal stress window (apartment heat, day 22 of
 [2026-04-12T23:45] Day 22 | risk=yellow | [ph outside target range: 6.42 ] | T=77.9°F pH=6.42 TDS=189.0ppm | pH creeping below target during thermal stress window (apartment heat, day 22 of
+[2026-04-13T00:00] Day 23 | risk=yellow | [ph outside target range: 6.42 ] | T=77.79°F pH=6.42 TDS=189.0ppm | pH is edging below the safe floor and has drifted down 0.09 points over 24 hours
+[2026-04-13T00:00] Day 23 | risk=yellow | [ph outside target range: 6.42 ] | T=77.79°F pH=6.42 TDS=189.0ppm | pH is edging below the safe floor and has drifted down 0.09 points over 24 hours
+[2026-04-13T00:15] Day 23 | risk=yellow | [ph outside target range: 6.41 ] | T=77.9°F pH=6.41 TDS=188.0ppm | pH is creeping down toward the danger zone. Day 23 in the nitrogen cycle means a
+[2026-04-13T00:15] Day 23 | risk=yellow | [ph outside target range: 6.41 ] | T=77.9°F pH=6.41 TDS=188.0ppm | pH is creeping down toward the danger zone. Day 23 in the nitrogen cycle means a
+[2026-04-13T00:30] Day 23 | risk=yellow | [ph outside target range: 6.42 ] | T=77.9°F pH=6.42 TDS=187.0ppm | pH is creeping below target, likely from nitrification acid production mid-cycle
+[2026-04-13T00:30] Day 23 | risk=yellow | [ph outside target range: 6.42 ] | T=77.9°F pH=6.42 TDS=187.0ppm | pH is creeping below target, likely from nitrification acid production mid-cycle
+[2026-04-13T00:45] Day 23 | risk=yellow | [ph outside target range: 6.41 ] | T=77.9°F pH=6.41 TDS=187.0ppm | pH drift into suboptimal zone on day 23 of cycle suggests mild acid production (
+[2026-04-13T00:45] Day 23 | risk=yellow | [ph outside target range: 6.41 ] | T=77.9°F pH=6.41 TDS=187.0ppm | pH drift into suboptimal zone on day 23 of cycle suggests mild acid production (
