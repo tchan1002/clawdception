@@ -1763,3 +1763,11 @@
 [2026-04-13T01:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.43 TDS=190.0ppm | Day 23 of cycle: temp at ceiling + pH drifting down suggests mild environmental 
 [2026-04-13T01:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.42 TDS=190.0ppm | Temperature at ceiling of acceptable range with modest upward creep; pH drift is
 [2026-04-13T01:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.42 TDS=190.0ppm | Temperature at ceiling of acceptable range with modest upward creep; pH drift is
+[2026-04-13T02:00] Day 23 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.41 TDS=188.0ppm | Temperature kissing the ceiling after steady climb—no immediate threat but signa
+[2026-04-13T02:00] Day 23 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.41 TDS=188.0ppm | Temperature kissing the ceiling after steady climb—no immediate threat but signa
+[2026-04-13T02:15] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.42 TDS=190.0ppm | Temperature has drifted to the ceiling of target range and is climbing slightly;
+[2026-04-13T02:15] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.42 TDS=190.0ppm | Temperature has drifted to the ceiling of target range and is climbing slightly;
+[2026-04-13T02:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.42 TDS=190.0ppm | Day 23: tank hovering at thermal ceiling with subtle pH decline and rising TDS—a
+[2026-04-13T02:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.01°F pH=6.42 TDS=190.0ppm | Day 23: tank hovering at thermal ceiling with subtle pH decline and rising TDS—a
+[2026-04-13T02:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.42 TDS=190.0ppm | Temperature is at the absolute ceiling of target range with a gentle upward tren
+[2026-04-13T02:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.12°F pH=6.42 TDS=190.0ppm | Temperature is at the absolute ceiling of target range with a gentle upward tren
