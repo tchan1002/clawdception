@@ -31,7 +31,7 @@ Journal = individual files (`YYYY-MM-DD-HHMM.md`). `read_journal()` in `utils.py
 │   ├── skill_writer.log      # skill-writer stdout
 │   ├── decisions/            # YYYY-MM-DD.jsonl from shrimp-monitor
 │   ├── action_cooldowns.json # last-sent timestamp per owner action type
-│   └── vision/               # YYYY-MM-DD.jsonl from shrimp-vision
+│   └── vision/               # YYYY-MM-DD.jsonl — vision analysis entries; includes `filename` field linking to snapshots/photos/; written by telegram-listener (owner photos) and shrimp-vision (ESP32-CAM, disabled)
 ├── state_of_tank.md          # rolling tank state — always current
 ├── agent_state.md            # agent personality + disposition
 ├── agent_state_history/      # snapshots of past agent_state.md

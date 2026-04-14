@@ -14,7 +14,6 @@ Usage:
     python3 run.py
 """
 
-import base64
 import json
 import os
 import shutil
@@ -29,6 +28,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 from config import get_cycle_day, PATHS
 from utils import call_claude
 from skills.call_toby.run import call_toby, send_with_buttons
+from skills.shrimp_vision.run import analyze_snapshot, log_entry as log_vision_entry
 
 SERVER_URL = "http://localhost:5001"
 PHOTOS_DIR = Path("snapshots/photos")
@@ -60,41 +60,6 @@ CLASSIFY_TOOL = {
             }
         },
         "required": ["event_type", "notes", "data"]
-    }
-}
-
-VISION_TOOL = {
-    "name": "analyze_tank_image",
-    "description": "Analyze an owner-submitted photo of the Media Luna shrimp tank",
-    "input_schema": {
-        "type": "object",
-        "properties": {
-            "shrimp_count_estimate": {
-                "type": "integer",
-                "description": "Estimated number of visible shrimp"
-            },
-            "water_clarity": {
-                "type": "string",
-                "enum": ["clear", "slightly_cloudy", "cloudy", "murky"]
-            },
-            "visible_algae": {"type": "boolean"},
-            "algae_description": {"type": "string"},
-            "substrate_condition": {"type": "string"},
-            "plant_health": {
-                "type": "string",
-                "enum": ["thriving", "stable", "declining", "none_visible"]
-            },
-            "concerns": {
-                "type": "array",
-                "items": {"type": "string"}
-            },
-            "narrative": {
-                "type": "string",
-                "description": "2-3 sentence caretaker voice observation"
-            }
-        },
-        "required": ["shrimp_count_estimate", "water_clarity", "visible_algae",
-                     "substrate_condition", "plant_health", "concerns", "narrative"]
     }
 }
 
@@ -171,38 +136,6 @@ Use owner_note only if the message doesn't clearly map to a known event type."""
     except Exception as e:
         print(f"[telegram-listener] Classification failed: {e}")
         return {"event_type": "owner_note", "notes": text, "data": {"source": "telegram"}}
-
-
-def analyze_photo(img_bytes, caption=""):
-    """Send photo to Claude vision. Returns analysis dict or None."""
-    cycle_day = get_cycle_day()
-    img_b64 = base64.standard_b64encode(img_bytes).decode("utf-8")
-
-    context = f' The owner captioned it: "{caption}".' if caption else ""
-    prompt = f"""Day {cycle_day} of the nitrogen cycle. The tank owner sent this photo of the Media Luna shrimp tank.{context}
-
-Analyze what's visible: shrimp count, water clarity, algae, substrate, plant health, any concerns.
-Write a brief caretaker-voice narrative."""
-
-    try:
-        return call_claude(
-            messages=[{
-                "role": "user",
-                "content": [
-                    {
-                        "type": "image",
-                        "source": {"type": "base64", "media_type": "image/jpeg", "data": img_b64},
-                    },
-                    {"type": "text", "text": prompt},
-                ],
-            }],
-            skill_name="telegram-listener",
-            tools=[VISION_TOOL],
-            tool_name=VISION_TOOL["name"],
-        )
-    except Exception as e:
-        print(f"[telegram-listener] Vision analysis failed: {e}")
-        return None
 
 
 def format_vision_reply(analysis, caption=""):
@@ -506,8 +439,10 @@ def run():
                 post_event("owner_photo", notes=caption, data={"filename": filename, "source": "telegram"})
                 print(f"[telegram-listener] Photo saved: {filename} — {caption!r}")
 
-                analysis = analyze_photo(img_bytes, caption)
+                analysis = analyze_snapshot(img_bytes)
                 if analysis:
+                    ts = datetime.now().isoformat()
+                    log_vision_entry({**analysis, "timestamp": ts, "filename": filename, "status": "success", "source": "telegram", "owner_comment": caption})
                     reply = format_vision_reply(analysis, caption)
                     call_toby(reply, urgency="info")
                     print(f"[telegram-listener] Vision reply sent")

@@ -2042,3 +2042,10 @@
 [2026-04-14T11:30] Day 24 | risk=green | [manual event since last check ] | T=77.34°F pH=6.44 TDS=182.0ppm | All parameters squarely in target range; 19.5 hours post-introduction, colony ac
 [2026-04-14T11:45] Day 24 | skipped (stable) | T=77.45°F pH=6.42 TDS=181.0ppm
 [2026-04-14T12:00] Day 24 | skipped (stable) | T=77.34°F pH=6.37 TDS=182.0ppm
+[2026-04-14T12:15] Day 24 | skipped (stable) | T=77.45°F pH=6.35 TDS=182.0ppm
+[2026-04-14T12:30] Day 24 | risk=green | [ph changed 0.13 in last hour] | T=77.34°F pH=6.29 TDS=181.0ppm | The colony is just past the 20-hour mark post-introduction; early acclimation fl
+[call-toby] Telegram sent (info): The colony is just past the 20-hour mark post-introduction; early acclimation fluctuations in pH are normal and expected as biofilm colonizes live media and shrimp stress hormones settle. All parameters remain safely within target ranges—this is noise, not signal.
+
+• 👀 Observe shrimp behavior — Watch shrimp behavior for next 6–12 hours; feeding and grazing near sponges is healthy acclimation sign. Gentle ongoing molting is also expected.
+• 🧪 Run a water test (ammonia / nitrite / pH) — Check pH manually in 24hr to confirm sensor drift vs. real drift; compare to yesterday's 6.6 baseline.
+[2026-04-14T12:45] Day 24 | skipped (stable) | T=77.34°F pH=6.29 TDS=182.0ppm

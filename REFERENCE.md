@@ -21,7 +21,7 @@
   tweet-log (7:05am) → Twitter thread from daily log
   equipment-check (9am) → hardware health checks → call-toby
   shrimp-vision (every 2hr, disabled) → Claude vision analysis of latest snapshot
-  telegram-listener (every 2min) → polls owner Telegram messages → classifies text into structured events, analyzes photos via vision → replies with analysis
+  telegram-listener (every 2min) → polls owner Telegram messages → classifies text into structured events, analyzes photos via shrimp-vision pathway → logs/vision/ (with filename) → replies with analysis
   call-toby → Telegram notifications
   skill-writer (8:30am, self-gated) → proposals/
       ↓
@@ -61,7 +61,7 @@
 | `skills/tweet_log/` | tweet-log | 7:05am daily | Post daily log as Twitter thread; throwaway reactive posts |
 | `skills/equipment_check/` | equipment-check | Every 30min | Sensor-derivable + schedule-based hardware health checks |
 | `skills/shrimp_vision/` | shrimp-vision | Every 2hr (disabled) | ESP32-CAM snapshot → Claude vision analysis → logs/vision/ |
-| `skills/telegram_listener/` | telegram-listener | Every 2min | Poll Telegram for owner messages → classifies text into structured events (water_change, feeding, etc.), analyzes photos via Claude vision and replies with findings |
+| `skills/telegram_listener/` | telegram-listener | Every 2min | Poll Telegram for owner messages → classifies text into structured events (water_change, feeding, etc.), analyzes photos via `shrimp_vision.analyze_snapshot` → logs to logs/vision/ with filename → replies with findings |
 | `skills/skill_writer/` | skill-writer | 8:30am daily | Self-improvement proposals → proposals/ (self-gated) |
 
 ---

@@ -52,17 +52,18 @@ Every edit follows this sequence — **in order, no skipping**:
 
 1. **Implement** — make code change
 2. **Test** — run `python3 -m pytest tests/ -v` (and smoke test if server-side). Do not report done until tests pass.
-3. **Document** — update relevant docs before closing task. Code change not done until docs reflect it.
+3. **Document** — mandatory, not optional. Task not done until docs updated.
 
-**Docs to update (update only what changed):**
+**Always update after any code change:**
+- `REFERENCE.md` — arch diagram, file map, skill table. Any change to skill behavior, data flow, or file output = update here first.
 
-- `REFERENCE.md` — arch diagram, file map, skill table. Update when add skill/endpoint/new dir.
-- `docs/api.md` — all Flask endpoint and event type. Update when add/change endpoint or event schema.
-- `docs/ops.md` — deploy, cron, systemd. Update when change `crontab.txt` or ops procedure.
-- `docs/agent-memory.md` — agent state, memory, skill behavior. Update when change how skill read/write state.
-- `CLAUDE.md` (this file) — key context and hard rule. Update when project state change (e.g. shrimp add, camera enable).
+**Update when relevant section touched:**
+- `docs/api.md` — add/change endpoint or event schema
+- `docs/ops.md` — change `crontab.txt` or ops procedure
+- `docs/agent-memory.md` — change how skill read/write state, logs, or memory files
+- `CLAUDE.md` (this file) — project state change (e.g. shrimp add, camera enable, new hard rule)
 
-This keep future Claude session from re-derive system state from code alone.
+Future Claude session must not re-derive system state from code alone.
 
 ---
 
@@ -87,6 +88,10 @@ All docs Claude writes to itself (CLAUDE.md, REFERENCE.md, docs/*.md) use cavema
 ## Coding Philosophy
 
 Cut > add. Shorter solution beat longer one. If two approaches solve same problem, pick one with less code.
+
+Code self-documents. Name reveals intent. No comment needed for obvious thing. Comment only where logic non-obvious.
+
+No duplication. One pathway per result. Use existing code/resource before build new. Extend, don't parallel.
 
 When cut — clean completely. Remove dead imports, unused constants, obsolete comments, now-unreachable branches. Cut leaves no corpse.
 

@@ -93,7 +93,7 @@ def read_latest_decision_summary():
         return ""
 
 
-SECTIONS_TO_STRIP = ["What I'm Watching", "Suggested Actions"]
+SECTIONS_TO_STRIP = ["What Happened", "What I'm Watching", "Suggested Actions"]
 
 
 def remove_sections(text, names):
