@@ -1965,3 +1965,15 @@
 
 ⏳ 🧪 Run a water test (ammonia / nitrite / pH) — Retest ammonia, nitrite, and pH to confirm sensor accuracy vs. true water chemistry. 2hr-old manual test showed pH 7.0—want clarity before dawn.
 • 👀 Observe shrimp behavior — Shrimp behavior over next 12 hours—grazing activity and mold patterns will confirm acclimation stability. No behavioral red flags yet.
+[2026-04-13T23:15] Day 23 | risk=yellow | [manual event since last check ] | T=77.34°F pH=6.38 TDS=177.0ppm | pH dipped to 6.38 post-water-change and sensor calibration—expected acclimation 
+[call-toby] Telegram sent (warning): pH dipped to 6.38 post-water-change and sensor calibration—expected acclimation volatility during shrimp introduction. All nitrogen compounds zero; tank biofilter is solid. Monitor pH recovery over next 12 hours; if it holds below 6.0, buffer the system.
+
+⏳ 👀 Observe shrimp behavior — Shrimp acclimation behavior—grazing, molting signals, female berrying activity
+• 🧪 Run a water test (ammonia / nitrite / pH) — Retest pH in 12 hours to confirm recovery trajectory post-water-change
+• 👀 Observe shrimp behavior — Temperature ceiling—verify heater setpoint if trend exceeds 78.5°F sustained
+[2026-04-13T23:30] Day 23 | risk=yellow | [manual event since last check ] | T=77.45°F pH=6.38 TDS=177.0ppm | Six shrimp are 10 hours into the tank post-acclimation; chemistry is settling no
+[2026-04-13T23:45] Day 23 | risk=green | [manual event since last check ] | T=77.34°F pH=6.38 TDS=177.0ppm | Tank is 24 hours post-shrimp introduction with expected post-water-change pH dip
+[call-toby] Telegram sent (info): Tank is 24 hours post-shrimp introduction with expected post-water-change pH dip; ammonia and nitrite remain zero, nitrate dropped from 80 to 40ppm (water change working), and shrimp observed grazing and behaving normally. All parameters are stable—no urgent intervention needed, but pH warrants gentle monitoring over the next 12–24 hours to confirm it stabilizes above 6.3.
+
+• 🧪 Run a water test (ammonia / nitrite / pH) — Verify ammonia and nitrite again to confirm cycle stability; check if pH has recovered toward 6.5 after settling post-water change.
+• 👀 Observe shrimp behavior — Watch for molt cycles, feeding response, and any isolation or stress signals in the first 48 hours post-introduction.

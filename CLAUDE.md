@@ -77,4 +77,6 @@ Monitor use **typed action schema** — no freeform recommended_actions string. 
 - Add Python dependency beyond Flask without check
 - Create new file speculative — edit exist file
 - Add error handle for scenario can't happen in this control hardware environment
+- Write redundant/defensive code — no `.get()` with defaults for keys that always exist in schema, no fallback paths for impossible states. Trust the schema.
 - Guess Pi username/path — it's `pi@192.168.12.76`, repo at `~/clawdception`
+- **Create two pathways to the same outcome.** If one thing needs doing, one code path does it. Prefer deleting duplicate logic over adding coordination between duplicates (cooldowns, suppression flags, deduplication). When tempted to add sync between two paths, delete one path instead.

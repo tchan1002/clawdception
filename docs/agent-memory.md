@@ -69,6 +69,17 @@ Photo requests are injected automatically if >4 hours since last `owner_photo` e
 
 ---
 
+## shrimp-monitor Claude Call Triggers
+
+Claude is called when **any** of:
+- Manual event logged since last Claude call
+- Notable rate of change (pH >0.1, temp >1°F, TDS >20ppm over last ~1 hour)
+- Periodic check: ≥10hr since last call
+
+Params outside target range are **not** a separate trigger — the periodic check handles persistent issues, rate-of-change handles active drift. `shrimp-alert` handles danger zones independently.
+
+Water test reminders are **not** sent as standalone Toby messages — Claude includes `water_test` in owner actions when warranted.
+
 ## Key utils.py Functions
 
 | Function | Purpose |

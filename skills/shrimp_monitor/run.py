@@ -26,7 +26,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-from config import PATHS, RANGES, WATER_TEST_WARNING_HOURS, get_cycle_day
+from config import PATHS, RANGES, get_cycle_day
 from utils import (
     call_claude,
     compute_stats,
@@ -35,7 +35,6 @@ from utils import (
     fetch_latest_reading,
     fetch_readings,
     hours_since_last_photo,
-    hours_since_last_water_test,
     log_decision,
     read_journal,
     SkillLock,
@@ -219,18 +218,6 @@ def should_call_claude(latest, readings_recent, recent_events, last_claude_time)
         newest_event_ts = recent_events[0].get("timestamp", "")
         if newest_event_ts > last_claude_time.isoformat():
             return True, f"manual event since last check ({recent_events[0].get('event_type')})"
-
-    # Any parameter outside target range
-    for param, cfg in RANGES.items():
-        field = cfg.get("field")
-        if not field or not latest.get(field):
-            continue
-        value = latest[field]
-        lo, hi = cfg["target"]
-        if lo == hi == 0:
-            continue  # skip ammonia/nitrite — manual only
-        if value < lo or value > hi:
-            return True, f"{param} outside target range: {value} (target {lo}–{hi})"
 
     # Notable rate of change over last ~4 readings (~1 hour)
     if len(readings_recent) >= 4:
@@ -434,38 +421,6 @@ def run(force=False):
         recent_events = fetch_events(since=since_24h)
         notable_events = fetch_notable_events(days=14)
         last_claude_time = get_last_claude_time()
-
-        # --- Always: check for overdue water test (nag at most once per 12hrs) ---
-        nag_path = PATHS["logs"] / "last_water_test_nag.txt"
-        last_nag_time = None
-        if nag_path.exists():
-            try:
-                last_nag_time = datetime.fromisoformat(nag_path.read_text().strip())
-            except Exception:
-                pass
-        hours_since_nag = (
-            (datetime.now() - last_nag_time).total_seconds() / 3600
-            if last_nag_time else 999
-        )
-        if hours_since_nag >= 12:
-            hrs_since_test = hours_since_last_water_test()
-            nagged = False
-            if hrs_since_test is None:
-                call_toby(
-                    f"No water test logged yet. Day {cycle_day} of cycle — ammonia and nitrite are unknown.",
-                    urgency="warning"
-                )
-                nagged = True
-            elif hrs_since_test > WATER_TEST_WARNING_HOURS:
-                call_toby(
-                    f"It's been {int(hrs_since_test)}hr since last water test. "
-                    f"Day {cycle_day} — ammonia/nitrite need checking.",
-                    urgency="warning"
-                )
-                nagged = True
-            if nagged:
-                PATHS["logs"].mkdir(parents=True, exist_ok=True)
-                nag_path.write_text(datetime.now().isoformat())
 
         # --- Always: check danger zone and fire alerts ---
         for param, value, threshold, direction in check_danger(latest):

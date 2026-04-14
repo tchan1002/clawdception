@@ -351,3 +351,4 @@
 [2026-04-13T22:00] equipment-check | yellow | 1 issue(s) | 1 equipment issue(s): ESP32 post failures elevated (8) in last hour — WiFi insta
 [2026-04-13T22:30] equipment-check | green | 0 issue(s) | All equipment checks passed. WiFi RSSI OK — mean -45 dBm. Heap OK — min 226,164 
 [2026-04-13T23:00] equipment-check | green | 0 issue(s) | All equipment checks passed. WiFi RSSI OK — mean -45 dBm. Heap OK — min 226,164 
+[2026-04-13T23:30] equipment-check | green | 0 issue(s) | All equipment checks passed. WiFi RSSI OK — mean -44 dBm. Heap OK — min 226,164 
