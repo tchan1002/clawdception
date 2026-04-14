@@ -1977,3 +1977,23 @@
 
 • 🧪 Run a water test (ammonia / nitrite / pH) — Verify ammonia and nitrite again to confirm cycle stability; check if pH has recovered toward 6.5 after settling post-water change.
 • 👀 Observe shrimp behavior — Watch for molt cycles, feeding response, and any isolation or stress signals in the first 48 hours post-introduction.
+[2026-04-14T00:00] Day 24 | risk=green | [manual event since last check ] | T=77.56°F pH=6.37 TDS=178.0ppm | All parameters within target range post-water change (April 13). Nitrate dropped
+[call-toby] Telegram sent (info): All parameters within target range post-water change (April 13). Nitrate dropped sharply from 80 to 40ppm immediately after the 35% change, then climbed back to 80ppm by this morning—typical bioload recovery as the newly added shrimp establish themselves.
+
+• 👀 Observe shrimp behavior
+• 🧪 Run a water test (ammonia / nitrite / pH)
+[2026-04-14T00:15] Day 24 | risk=yellow | [manual event since last check ] | T=77.34°F pH=6.39 TDS=176.0ppm | pH is creeping lower post-water-change and warrants confirmation via manual test
+[call-toby] Telegram sent (warning): pH is creeping lower post-water-change and warrants confirmation via manual test to rule out sensor drift. Nitrate nearly doubled in 24 hours (40→80ppm), suggesting bioload from 6 new shrimp is ramping up faster than expected—normal but worth tracking closely.
+
+⏳ 🧪 Run a water test (ammonia / nitrite / pH) — Confirm pH trend—compare manual result to sensor. Test ammonia/nitrite as routine.
+• 👀 Observe shrimp behavior — Shrimp acclimation behavior, molting status, any stress indicators
+[2026-04-14T00:30] Day 24 | risk=green | [manual event since last check ] | T=77.45°F pH=6.39 TDS=177.0ppm | Shrimp are now ~20 hours post-introduction; all parameters nominal with natural 
+[call-toby] Telegram sent (info): Shrimp are now ~20 hours post-introduction; all parameters nominal with natural post-change and post-acclimation settling. Nitrate spike from 40→80ppm (24hr test) is expected as bioload resumes with feeding population.
+
+• 👀 Observe shrimp behavior — Watch for shrimp activity, feeding response, and early molts over next 48–72 hours
+• 🧪 Run a water test (ammonia / nitrite / pH) — Next manual pH + nitrate check in 12–24 hours; compare pH to current 6.39 to assess sensor vs. actual drift
+[2026-04-14T00:45] Day 24 | risk=green | [manual event since last check ] | T=77.45°F pH=6.38 TDS=177.0ppm | Shrimp are less than 25 hours post-introduction; slight pH decline is consistent
+[call-toby] Telegram sent (info): Shrimp are less than 25 hours post-introduction; slight pH decline is consistent with acclimation stress and tap water influence (35% change yesterday). Biofilm grazing observed—animals appear to be settling, not distressed.
+
+• 👀 Observe shrimp behavior — Watch for continued acclimation behavior (hiding, cautious grazing) over next 48–72 hours; normal stress response
+• 🧪 Run a water test (ammonia / nitrite / pH) — Next pH test within 12–24 hours; compare against tap water baseline to rule out supply-side drift

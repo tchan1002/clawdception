@@ -24,3 +24,6 @@ One cherry shrimp — vivid red, looks healthy and active — is perched right a
 [telegram-listener] Processed 2 message(s), offset now 236832998
 [telegram-listener] action_completed logged (context=actions)
 [telegram-listener] Processed 1 message(s), offset now 236832999
+[telegram-listener] 'It’s not been 25 hours, shrimp were introduced this afternoon at around 4pm.' → shrimp_added
+[call-toby] Telegram sent (info): Logged as shrimp added: Shrimp were introduced to the tank this afternoon at around 4pm. Owner notes it has not yet been 25 hours since introduction. ✓
+[telegram-listener] Processed 1 message(s), offset now 236833000

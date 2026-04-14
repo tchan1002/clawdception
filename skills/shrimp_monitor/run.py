@@ -49,6 +49,9 @@ PERIODIC_CHECK_HOURS = 10
 # How many hours between photo requests (scheduled)
 PHOTO_REQUEST_INTERVAL_HOURS = 4
 
+# Hours of day when a bundled check-in message is sent (24hr, local time)
+CHECKIN_HOURS = (8, 20)
+
 # Rate-of-change thresholds that trigger a Claude call (measured over last ~4 readings / 1 hour)
 RATE_THRESHOLDS = {
     "ph": 0.1,
@@ -216,7 +219,11 @@ def should_call_claude(latest, readings_recent, recent_events, last_claude_time)
         if last_claude_time is None:
             return True, f"manual event logged ({recent_events[0].get('event_type')})"
         newest_event_ts = recent_events[0].get("timestamp", "")
-        if newest_event_ts > last_claude_time.isoformat():
+        try:
+            newest_event_dt = datetime.fromisoformat(newest_event_ts.rstrip("Z"))
+        except (ValueError, AttributeError):
+            newest_event_dt = None
+        if newest_event_dt and newest_event_dt > last_claude_time:
             return True, f"manual event since last check ({recent_events[0].get('event_type')})"
 
     # Notable rate of change over last ~4 readings (~1 hour)
@@ -227,6 +234,12 @@ def should_call_claude(latest, readings_recent, recent_events, last_claude_time)
                 change = abs(vals[0] - vals[-1])
                 if change >= threshold:
                     return True, f"{field} changed {round(change, 3)} in last hour"
+
+    # Scheduled check-in window
+    now = datetime.now()
+    if now.hour in CHECKIN_HOURS and now.minute < 15:
+        if last_claude_time is None or (now - last_claude_time).total_seconds() > 3600:
+            return True, f"scheduled check-in ({now.hour:02d}:00)"
 
     # Periodic check — at least every N hours
     if last_claude_time is None:
@@ -288,19 +301,26 @@ def record_photo_request_nag():
 
 def send_owner_actions(decision):
     """
-    Extract owner actions from a decision and send as one bundled Telegram message.
-    Skips if no owner actions (other than none).
+    Send owner actions to Toby if this is an emergency or a scheduled check-in time.
+    Emergencies: risk=red or any urgent action → send immediately.
+    Otherwise: only send during check-in windows (CHECKIN_HOURS).
     """
     actions = decision.get("actions", [])
-    owner_actions = [
-        a for a in actions
-        if a.get("actor") == "owner" and a.get("type") != "none"
-    ]
+    owner_actions = [a for a in actions if a.get("actor") == "owner" and a.get("type") != "none"]
     if not owner_actions:
         return
 
-    owner_actions.sort(key=lambda a: URGENCY_ORDER.get(a.get("urgency", "routine"), 2))
+    is_emergency = (
+        decision.get("risk_level") == "red"
+        or any(a.get("urgency") == "urgent" for a in owner_actions)
+    )
+    now = datetime.now()
+    in_checkin_window = now.hour in CHECKIN_HOURS and now.minute < 15
 
+    if not is_emergency and not in_checkin_window:
+        return
+
+    owner_actions.sort(key=lambda a: URGENCY_ORDER.get(a.get("urgency", "routine"), 2))
     lines = []
     for a in owner_actions:
         label = ACTION_LABELS.get(a["type"], a["type"].replace("_", " "))
@@ -314,8 +334,7 @@ def send_owner_actions(decision):
     msg = f"{reasoning}\n\n{body}" if reasoning else body
 
     risk = decision.get("risk_level", "green")
-    msg_urgency = "warning" if risk in ("yellow", "red") else "info"
-
+    msg_urgency = "critical" if risk == "red" else ("warning" if risk == "yellow" else "info")
     call_toby(msg, urgency=msg_urgency)
 
 
