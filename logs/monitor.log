@@ -1947,3 +1947,9 @@
 [2026-04-13T21:27] Day 23 | risk=yellow | [manual event logged (water_tes] | T=77.34°F pH=6.31 TDS=176.0ppm | pH dropped to 6.31 following the 35% water change and shrimp introduction—expect
 [2026-04-13T21:30] Day 23 | risk=green | [manual event since last check ] | T=77.34°F pH=6.31 TDS=176.0ppm | Water test logged at 22:14 shows ammonia 0, nitrite 0, nitrate 40—cycle is stabl
 [2026-04-13T21:45] Day 23 | risk=green | [manual event since last check ] | T=77.45°F pH=6.32 TDS=176.0ppm | Six shrimp introduced 5.5 hours ago; water chemistry shows expected post-35%-cha
+[2026-04-13T22:00] Day 23 | risk=yellow | [manual event since last check ] | T=77.34°F pH=6.32 TDS=176.0ppm | The 35% water change this afternoon explains the synchronized drops in pH, TDS, 
+[call-toby] Sent with buttons (msg_id=168): The 35% water change this afternoon explains the synchronized drops in pH, TDS, and temperature—textbook post-change behavior. Ammonia and nitrite are zero and nitrate is at 40ppm; the cycle is solid and new shrimp are safe. pH at 6.32 is slightly low but not alarming; watch for recovery trend over the next 12 hours as the tank re-equilibrates.
+
+⏳ 🧪 Run a water test (ammonia / nitrite / pH) — Retest pH and general hardness in ~8 hours to confirm recovery and assess buffer stability for these new residents.
+• 👀 Observe shrimp behavior — Shrimp settling in—watch for grazing activity and any signs of molting or stress over next 24–48 hours.
+• 👀 Observe shrimp behavior — Monitor pH recovery. If it drifts below 6.0 and stays there after 12 hours, buffer may need a nudge.

@@ -118,19 +118,6 @@ def run(force=False):
                 notes.append(f"DS18B20 had {error_count} transient error(s) in last 24h.")
 
         if recent:
-            # ESP32 post failure trend
-            post_failures = [
-                parse_raw(r)[1].get("post_failures", 0) or
-                parse_raw(r)[1].get("failure_count", 0)
-                for r in recent
-            ]
-            if max(post_failures) >= 3:
-                issues.append((
-                    "post_failures",
-                    f"ESP32 post failures elevated ({max(post_failures)}) in last hour — WiFi instability likely.",
-                    "warning",
-                ))
-
             # WiFi RSSI
             rssi_values = [
                 parse_raw(r)[1].get("wifi_rssi")

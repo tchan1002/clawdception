@@ -347,3 +347,5 @@
 [2026-04-13T20:30] equipment-check | yellow | 1 issue(s) | 1 equipment issue(s): ESP32 post failures elevated (8) in last hour — WiFi insta
 [2026-04-13T21:00] equipment-check | yellow | 1 issue(s) | 1 equipment issue(s): ESP32 post failures elevated (8) in last hour — WiFi insta
 [2026-04-13T21:30] equipment-check | yellow | 1 issue(s) | 1 equipment issue(s): ESP32 post failures elevated (8) in last hour — WiFi insta
+[call-toby] Telegram sent (warning): ESP32 post failures elevated (8) in last hour — WiFi instability likely.
+[2026-04-13T22:00] equipment-check | yellow | 1 issue(s) | 1 equipment issue(s): ESP32 post failures elevated (8) in last hour — WiFi insta
