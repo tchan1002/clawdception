@@ -93,6 +93,95 @@ def read_latest_decision_summary():
         return ""
 
 
+SECTIONS_TO_STRIP = ["What I'm Watching", "Suggested Actions"]
+
+
+def remove_sections(text, names):
+    """Remove named ## sections from markdown before formatting."""
+    for name in names:
+        pattern = rf'## {re.escape(name)}\n.*?(?=\n---|\Z)'
+        text = re.sub(pattern, '', text, flags=re.DOTALL)
+    return text
+
+
+def collapse_table_rows(text):
+    """Compress markdown tables into compact single lines. Run before strip_markdown.
+
+    Converts:
+      | Parameter   | Avg   | Min → Max         | Day Δ      |
+      |-------------|-------|-------------------|------------|
+      | Temperature | 78.15°F | 77.79 → 78.46°F | −0.22°F ↓ |
+      | pH          | 6.47    | 6.40 → 6.56      | −0.09 ↓   |
+    Into:
+      temperature 78.15°f (77.79–78.46°f, −0.22°f ↓) · ph 6.47 (6.40–6.56, −0.09 ↓)
+    """
+    lines = text.split('\n')
+    result = []
+    header = None
+    in_table = False
+    data_rows = []
+
+    def flush_table():
+        nonlocal header, in_table, data_rows
+        parts = []
+        for row in data_rows:
+            if len(row) >= 4:
+                param, avg, minmax, delta = row[0], row[1], row[2], row[3]
+                minmax = minmax.replace(' → ', '–')
+                parts.append(f"{param} {avg} ({minmax}, {delta})")
+            elif row:
+                parts.append(' '.join(row))
+        if parts:
+            result.append(' · '.join(parts))
+        header = None
+        in_table = False
+        data_rows = []
+
+    for line in lines:
+        stripped = line.strip()
+        if re.match(r'^\|[-| :]+\|', stripped):
+            # Separator row — confirms previous pipe row was the header
+            in_table = True
+        elif stripped.startswith('|'):
+            cells = [c.strip() for c in stripped.split('|') if c.strip()]
+            if not in_table:
+                # Before separator: this is the header row
+                header = cells
+            else:
+                data_rows.append(cells)
+        else:
+            if data_rows:
+                flush_table()
+            elif header is not None:
+                # Header with no data — treat as normal line
+                result.append(line)
+                header = None
+                in_table = False
+            result.append(line)
+
+    if data_rows:
+        flush_table()
+
+    return '\n'.join(result)
+
+
+def merge_short_chunks(chunks, max_len=275):
+    """Merge orphaned short chunks (e.g. bare section labels) into adjacent content."""
+    merged = []
+    i = 0
+    while i < len(chunks):
+        chunk = chunks[i]
+        if len(chunk) < 50 and i + 1 < len(chunks):
+            combined = chunk + '\n\n' + chunks[i + 1]
+            if len(combined) <= max_len:
+                merged.append(combined)
+                i += 2
+                continue
+        merged.append(chunk)
+        i += 1
+    return merged
+
+
 def strip_markdown(text):
     """Strip markdown formatting for plain-text Twitter display."""
     # Remove horizontal rules
@@ -149,13 +238,18 @@ def chunk_text(text, max_len=275):
 def build_daily_thread(daily_log_text):
     """Convert a daily log markdown file into a list of tweet-sized strings.
 
+    Strips action-oriented sections (What I'm Watching, Suggested Actions) —
+    those are preserved in the log but not needed in the public thread.
+    Numbers table is compressed to a single compact line to save tweets.
     The first tweet always starts with 'day N' on its own line followed by
     two line breaks, matching the established tweet format.
     """
-    cleaned = strip_markdown(daily_log_text).lower()
+    text = remove_sections(daily_log_text, SECTIONS_TO_STRIP)
+    text = collapse_table_rows(text)  # before strip_markdown while structure is intact
+    cleaned = strip_markdown(text).lower()
     # Normalize title line: "day 14 — 2026-04-04 — some title" → "day 14"
     cleaned = re.sub(r'^day\s+(\d+)\s*[—–-].*$', r'day \1', cleaned, count=1, flags=re.MULTILINE)
-    return chunk_text(cleaned)
+    return merge_short_chunks(chunk_text(cleaned))
 
 
 def generate_intro_tweet():
