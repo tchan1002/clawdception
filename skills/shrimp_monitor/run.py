@@ -26,7 +26,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-from config import PATHS, RANGES, get_cycle_day
+from config import PATHS, RANGES, COLONY_START, get_cycle_day
 from utils import (
     call_claude,
     compute_stats,
@@ -470,7 +470,10 @@ def run(force=False):
 
         water_change_line = f"\n    ⚠ CONTEXT: {water_change_note}" if water_change_likely else ""
 
-        prompt = f"""Day {cycle_day}. Time: {ts[:16]}. Trigger: {reason}.{water_change_line}
+        colony_hours = (datetime.now() - COLONY_START).total_seconds() / 3600
+        colony_line = f"{colony_hours:.1f}hr post-introduction (introduced 2026-04-13 16:00)"
+
+        prompt = f"""Day {cycle_day}. Time: {ts[:16]}. Colony: {colony_line}. Trigger: {reason}.{water_change_line}
 
     CURRENT: Temp {latest.get('temp_f')}°F | pH {latest.get('ph')} | TDS {latest.get('tds_ppm')}ppm
 
@@ -491,7 +494,7 @@ def run(force=False):
     TARGET: Temp 72-78°F | pH 6.5-7.5 | TDS 150-250ppm
     DANGER: Temp <65/>82 | pH <6.0/>8.0 | TDS <100/>350
 
-    Keep reasoning to 1 sentence. Use typed actions only. Omit notes unless non-obvious."""
+    Keep reasoning to 2 sentences. Use typed actions only. Omit notes unless non-obvious."""
 
         # --- Call Claude ---
         try:

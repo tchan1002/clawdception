@@ -4,12 +4,11 @@ All target ranges, paths, the system prompt, and shared constants live here.
 """
 
 from pathlib import Path
-from datetime import date
-
-from datetime import timedelta
+from datetime import date, datetime, timedelta
 
 BASE_DIR = Path(__file__).parent
 CYCLE_START = date(2026, 3, 22)
+COLONY_START = datetime(2026, 4, 13, 16, 0)  # Shrimp introduced April 13, 2026 at 4:00 PM
 CARETAKER_EPOCH = CYCLE_START + timedelta(days=14)  # day 0 of the caretaker's own clock
 API_BASE = "http://localhost:5001"
 CLAUDE_MODEL = "claude-sonnet-4-6"
