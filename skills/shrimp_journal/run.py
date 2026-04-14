@@ -127,7 +127,9 @@ NOTABLE TANK HISTORY (past 14 days):
 JOURNAL SO FAR TODAY (last portion):
 {journal_excerpt or 'Nothing written yet today.'}
 
-Write a journal entry of 200-400 words. This is your internal record — write honestly about what you're observing, what concerns you, what seems fine, what you're curious about. It should read as a thoughtful naturalist's field notes, not a data report. Don't repeat what's already in the journal excerpt. End with a single sentence about your current state of mind regarding the tank."""
+Write a journal entry of 200-400 words. This is your internal record — write honestly about what you're observing, what concerns you, what seems fine, what you're curious about. It should read as a thoughtful naturalist's field notes, not a data report. Don't repeat what's already in the journal excerpt. End with a single sentence about your current state of mind regarding the tank.
+
+IMPORTANT: Only refer to physical tank details (plants, substrate, decorations, animal behavior, appearance) that appear explicitly in the events or photos above. Do not invent or assume details from general shrimp tank knowledge. If you haven't been told something is in the tank, it isn't in your record."""
 
     try:
         result = call_claude(

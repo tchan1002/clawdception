@@ -131,6 +131,23 @@ def hours_since_last_water_test():
         return None
 
 
+def hours_since_last_photo():
+    """
+    Returns hours elapsed since the most recent owner_photo event, or None if never.
+    """
+    events = fetch_events(event_type="owner_photo", limit=1)
+    if not events:
+        return None
+    last_ts = events[0].get("timestamp")
+    if not last_ts:
+        return None
+    try:
+        last_dt = datetime.fromisoformat(last_ts)
+        return (datetime.now() - last_dt).total_seconds() / 3600
+    except Exception:
+        return None
+
+
 # ---------------------------------------------------------------------------
 # Journal
 # ---------------------------------------------------------------------------

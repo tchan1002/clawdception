@@ -32,7 +32,7 @@ from utils import (
     write_state_of_tank,
     read_decisions_since,
 )
-from skills.call_toby.run import call_toby, send_document
+from skills.call_toby.run import call_toby, send_document, send_photo
 
 TEMPLATE_PATH = Path(__file__).parent / "template.md"
 
@@ -163,7 +163,7 @@ CONTEXT:
 Write three sections, each clearly delimited:
 
 ===DAILY_LOG===
-[The immutable daily log for {target_date}. Day {cycle_day_then} of the cycle — let that inform the arc. Write something Toby will read with his morning coffee and remember. Let personality shine through. Prefer striking and evocative imagery over verbose prose. Starting hook has one goal: make Toby want to keep reading. 200–300 words.]
+[The immutable daily log for {target_date}. Day {cycle_day_then} of the cycle — let that inform the arc. Write something Toby will read with his morning coffee and remember. Let personality shine through. 200–300 words. STRICT: Only describe physical tank details (plants, substrate, decorations, animal behavior) that appear explicitly in the events, journal, or state above. Do not invent details from general aquarium knowledge — if it wasn't logged or submitted, it doesn't exist in your record.]
 
 ===STATE_OF_TANK===
 [Updated rolling state of the tank. Plain facts + current conditions. What's true about this tank right now. 200-350 words.]
@@ -256,6 +256,14 @@ Write three sections, each clearly delimited:
         urgency="info"
     )
     send_document(PATHS["daily_logs"] / f"{target_date}.md")
+
+    # --- Send latest tank photo if one exists ---
+    photos_dir = Path("snapshots/photos")
+    if photos_dir.exists():
+        photos = sorted(photos_dir.glob("*.jpg")) + sorted(photos_dir.glob("*.jpeg")) + sorted(photos_dir.glob("*.png"))
+        if photos:
+            latest_photo = photos[-1]
+            send_photo(latest_photo, caption=f"Media Luna — {target_date} (Day {cycle_day_then})")
 
 
 if __name__ == "__main__":

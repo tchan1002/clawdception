@@ -10,6 +10,9 @@ Claude is called when:
   - A manual event was logged since the last Claude call
   - 4+ hours have passed since the last Claude call (periodic sanity check)
 
+After each Claude call, owner actions are bundled and sent to Toby via Telegram.
+A photo request is injected if it has been >4 hours since the last owner_photo.
+
 Usage:
     python3 run.py
     python3 run.py --force    # always call Claude regardless of conditions
@@ -31,17 +34,21 @@ from utils import (
     fetch_notable_events,
     fetch_latest_reading,
     fetch_readings,
+    hours_since_last_photo,
     hours_since_last_water_test,
     log_decision,
     read_journal,
     SkillLock,
 )
-from skills.call_toby.run import call_toby
+from skills.call_toby.run import call_toby, send_with_buttons
 from skills.shrimp_alert.run import alert
 
 
 # How many hours between periodic Claude calls when nothing notable is happening
 PERIODIC_CHECK_HOURS = 4
+
+# How many hours between photo requests (scheduled)
+PHOTO_REQUEST_INTERVAL_HOURS = 4
 
 # Rate-of-change thresholds that trigger a Claude call (measured over last ~4 readings / 1 hour)
 RATE_THRESHOLDS = {
@@ -50,10 +57,25 @@ RATE_THRESHOLDS = {
     "tds_ppm": 20,
 }
 
-# Tool definition for structured output
+# Human-readable labels for owner action types
+ACTION_LABELS = {
+    "observe":         "👀 Observe shrimp behavior",
+    "water_test":      "🧪 Run a water test (ammonia / nitrite / pH)",
+    "water_change":    "💧 Do a water change",
+    "photo_request":   "📸 Send a photo of the tank",
+    "check_equipment": "🔧 Check equipment",
+}
+
+URGENCY_ORDER = {"urgent": 0, "soon": 1, "routine": 2}
+
+# Tool definition — typed actions, optional notes
 TOOL = {
     "name": "assess_tank_status",
-    "description": "Assess the current status of the shrimp tank based on sensor readings and recent events",
+    "description": (
+        "Assess the current status of the shrimp tank. "
+        "Use typed actions only — no freeform text in the actions array. "
+        "Omit optional fields (note, value) when they add nothing."
+    ),
     "input_schema": {
         "type": "object",
         "properties": {
@@ -63,54 +85,90 @@ TOOL = {
                     "temperature": {
                         "type": "object",
                         "properties": {
-                            "value": {"type": "number"},
-                            "unit": {"type": "string"},
+                            "value":  {"type": "number"},
                             "status": {"type": "string", "enum": ["green", "yellow", "red"]},
-                            "note": {"type": "string"}
+                            "note":   {"type": "string", "description": "Only when context is non-obvious."},
                         },
-                        "required": ["value", "unit", "status", "note"]
+                        "required": ["value", "status"],
                     },
                     "ph": {
                         "type": "object",
                         "properties": {
-                            "value": {"type": "number"},
-                            "unit": {"type": "string"},
+                            "value":  {"type": "number"},
                             "status": {"type": "string", "enum": ["green", "yellow", "red"]},
-                            "note": {"type": "string"}
+                            "note":   {"type": "string", "description": "Only when context is non-obvious."},
                         },
-                        "required": ["value", "unit", "status", "note"]
+                        "required": ["value", "status"],
                     },
                     "tds": {
                         "type": "object",
                         "properties": {
-                            "value": {"type": "number"},
-                            "unit": {"type": "string"},
+                            "value":  {"type": "number"},
                             "status": {"type": "string", "enum": ["green", "yellow", "red"]},
-                            "note": {"type": "string"}
+                            "note":   {"type": "string", "description": "Only when context is non-obvious."},
                         },
-                        "required": ["value", "unit", "status", "note"]
-                    }
+                        "required": ["value", "status"],
+                    },
                 },
-                "required": ["temperature", "ph", "tds"]
+                "required": ["temperature", "ph", "tds"],
             },
             "risk_level": {
                 "type": "string",
-                "enum": ["green", "yellow", "red"]
+                "enum": ["green", "yellow", "red"],
             },
-            "reasoning": {"type": "string"},
-            "recommended_actions": {
-                "type": "array",
-                "items": {"type": "string"}
+            "reasoning": {
+                "type": "string",
+                "description": "2 sentences max. Be terse.",
             },
-            "suggested_actuator_actions": {
+            "actions": {
                 "type": "array",
-                "items": {"type": "string"}
-            }
+                "description": (
+                    "All recommended actions. Owner types: observe, water_test, water_change, "
+                    "photo_request, check_equipment, none. "
+                    "Actuator types: heater, aeration, light, dosing, feeding, none. "
+                    "Use none/actuator when no actuator action is needed rather than omitting actuators entirely."
+                ),
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "observe", "water_test", "water_change", "photo_request",
+                                "check_equipment", "heater", "aeration", "light",
+                                "dosing", "feeding", "none",
+                            ],
+                        },
+                        "actor": {
+                            "type": "string",
+                            "enum": ["owner", "actuator"],
+                        },
+                        "urgency": {
+                            "type": "string",
+                            "enum": ["routine", "soon", "urgent"],
+                            "description": "Required for owner actions. Omit for actuator.",
+                        },
+                        "value": {
+                            "type": ["number", "string"],
+                            "description": "Optional setpoint or state (e.g. heater→76, light→'off').",
+                        },
+                        "note": {
+                            "type": "string",
+                            "description": "Only when non-obvious context is needed.",
+                        },
+                    },
+                    "required": ["type", "actor"],
+                },
+            },
         },
-        "required": ["parameter_status", "risk_level", "reasoning", "recommended_actions", "suggested_actuator_actions"]
-    }
+        "required": ["parameter_status", "risk_level", "reasoning", "actions"],
+    },
 }
 
+
+# ---------------------------------------------------------------------------
+# Helpers
+# ---------------------------------------------------------------------------
 
 def check_danger(reading):
     """Returns list of (param, value, threshold, direction) for any danger-zone readings."""
@@ -220,6 +278,71 @@ def detect_water_change(readings):
     return False, ""
 
 
+def should_inject_photo_request():
+    """
+    Returns True if a scheduled photo request should be added to actions.
+    Guards against repeat nags using logs/last_photo_request.txt.
+    """
+    nag_path = PATHS["logs"] / "last_photo_request.txt"
+    if nag_path.exists():
+        try:
+            last_nag = datetime.fromisoformat(nag_path.read_text().strip())
+            if (datetime.now() - last_nag).total_seconds() / 3600 < PHOTO_REQUEST_INTERVAL_HOURS:
+                return False
+        except Exception:
+            pass
+
+    hours = hours_since_last_photo()
+    return hours is None or hours >= PHOTO_REQUEST_INTERVAL_HOURS
+
+
+def record_photo_request_nag():
+    PATHS["logs"].mkdir(parents=True, exist_ok=True)
+    (PATHS["logs"] / "last_photo_request.txt").write_text(datetime.now().isoformat())
+
+
+def send_owner_actions(decision):
+    """
+    Extract owner actions from a decision and send as one bundled Telegram message.
+    Skips if no owner actions (other than none).
+    """
+    actions = decision.get("actions", [])
+    owner_actions = [
+        a for a in actions
+        if a.get("actor") == "owner" and a.get("type") != "none"
+    ]
+    if not owner_actions:
+        return
+
+    owner_actions.sort(key=lambda a: URGENCY_ORDER.get(a.get("urgency", "routine"), 2))
+
+    lines = []
+    for a in owner_actions:
+        label = ACTION_LABELS.get(a["type"], a["type"].replace("_", " "))
+        urgency = a.get("urgency", "routine")
+        prefix = "❗" if urgency == "urgent" else ("⏳" if urgency == "soon" else "•")
+        note = a.get("note", "")
+        lines.append(f"{prefix} {label}" + (f" — {note}" if note else ""))
+
+    reasoning = decision.get("reasoning", "").strip()
+    body = "\n".join(lines)
+    msg = f"{reasoning}\n\n{body}" if reasoning else body
+
+    risk = decision.get("risk_level", "green")
+    msg_urgency = "warning" if risk in ("yellow", "red") else "info"
+
+    # Photo-only messages need no Done button — user just sends the photo
+    has_non_photo = any(a["type"] != "photo_request" for a in owner_actions)
+    if has_non_photo:
+        send_with_buttons(msg, buttons=[("✅ Done", "ack:actions")], urgency=msg_urgency)
+    else:
+        call_toby(msg, urgency=msg_urgency)
+
+
+# ---------------------------------------------------------------------------
+# Prompt formatting
+# ---------------------------------------------------------------------------
+
 def summarize_readings_for_prompt(readings):
     if not readings:
         return "No readings available."
@@ -259,6 +382,10 @@ def format_notable_events(events):
         lines.append(f"  [{ts}] {e.get('event_type')}: {detail}")
     return "\n".join(lines)
 
+
+# ---------------------------------------------------------------------------
+# Main
+# ---------------------------------------------------------------------------
 
 def run(force=False):
     with SkillLock("shrimp-monitor"):
@@ -373,6 +500,9 @@ def run(force=False):
         journal_snippet = read_journal()
         journal_snippet = journal_snippet[-600:] if len(journal_snippet) > 600 else journal_snippet
 
+        photo_hours = hours_since_last_photo()
+        photo_line = f"{int(photo_hours)}hr ago" if photo_hours is not None else "never"
+
         water_change_line = f"\n    ⚠ CONTEXT: {water_change_note}" if water_change_likely else ""
 
         prompt = f"""Day {cycle_day}. Time: {ts[:16]}. Trigger: {reason}.{water_change_line}
@@ -391,10 +521,12 @@ def run(force=False):
     JOURNAL (recent):
     {journal_snippet or 'None yet.'}
 
+    LAST PHOTO: {photo_line}
+
     TARGET: Temp 72-78°F | pH 6.5-7.5 | TDS 150-250ppm
     DANGER: Temp <65/>82 | pH <6.0/>8.0 | TDS <100/>350
 
-    Keep reasoning to 2 sentences. Be terse in all string fields."""
+    Keep reasoning to 2 sentences. Use typed actions only. Omit notes unless non-obvious."""
 
         # --- Call Claude ---
         try:
@@ -408,6 +540,23 @@ def run(force=False):
             print(f"[shrimp-monitor] Claude call failed: {e}")
             log_decision({"error": str(e), "latest_reading": latest, "cycle_day": cycle_day})
             return
+
+        # --- Inject scheduled photo request if due ---
+        if should_inject_photo_request():
+            existing_types = {a.get("type") for a in decision.get("actions", [])}
+            if "photo_request" not in existing_types:
+                decision.setdefault("actions", []).append({
+                    "type": "photo_request",
+                    "actor": "owner",
+                    "urgency": "routine",
+                })
+
+        # --- Send owner actions to Toby ---
+        send_owner_actions(decision)
+
+        # --- Record photo nag if a photo_request was sent ---
+        if any(a.get("type") == "photo_request" for a in decision.get("actions", [])):
+            record_photo_request_nag()
 
         # --- Log decision ---
         decision["_cycle_day"] = cycle_day

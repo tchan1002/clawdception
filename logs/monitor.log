@@ -1892,3 +1892,39 @@
 [2026-04-13T16:15] Day 23 | risk=red | [temperature outside target ran] | T=78.46°F pH=5.96 TDS=174.0ppm | Two critical issues converge: pH has dropped below safe range (5.96 vs. target 6
 [2026-04-13T16:19] Day 23 | risk=yellow | [temperature outside target ran] | T=78.46°F pH=5.96 TDS=174.0ppm | Day 23 with 6 shrimp just introduced—critical acclimation window. pH now acidic 
 [2026-04-13T16:22] Day 23 | risk=yellow | [temperature outside target ran] | T=78.46°F pH=6.03 TDS=175.0ppm | Temperature is at the upper boundary of target and sustained in the 78°C zone ov
+[2026-04-13T16:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.46°F pH=6.03 TDS=175.0ppm | Toby's 35% water change and shrimp introductions happened 50min ago—all three pa
+[2026-04-13T16:30] Day 23 | risk=yellow | [temperature outside target ran] | T=78.46°F pH=6.03 TDS=175.0ppm | Toby's 35% water change and shrimp introductions happened 50min ago—all three pa
+[2026-04-13T16:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.46°F pH=6.07 TDS=175.0ppm | Temperature is at the razor's edge—technically in range but creeping upward, com
+[2026-04-13T16:45] Day 23 | risk=yellow | [temperature outside target ran] | T=78.46°F pH=6.07 TDS=175.0ppm | Temperature is at the razor's edge—technically in range but creeping upward, com
+[2026-04-13T17:15] Day 23 | risk=yellow | [manual event since last check ] | T=78.46°F pH=6.11 TDS=181.0ppm | Today marks arrival: 6 shrimp introduced post–35% water change and nitrate reduc
+[2026-04-13T17:15] Day 23 | risk=yellow | [manual event since last check ] | T=78.46°F pH=6.11 TDS=181.0ppm | Today marks arrival: 6 shrimp introduced post–35% water change and nitrate reduc
+[2026-04-13T17:30] Day 23 | risk=yellow | [manual event since last check ] | T=78.35°F pH=6.11 TDS=176.0ppm | Today is the day shrimp arrived—this is acclimation week, and some chemistry dri
+[2026-04-13T17:30] Day 23 | risk=yellow | [manual event since last check ] | T=78.35°F pH=6.11 TDS=176.0ppm | Today is the day shrimp arrived—this is acclimation week, and some chemistry dri
+[2026-04-13T17:45] Day 23 | risk=yellow | [manual event since last check ] | T=78.24°F pH=6.13 TDS=175.0ppm | Today is Day 23 post-setup—cycle is approaching maturity. The 35% water change a
+[2026-04-13T17:45] Day 23 | risk=yellow | [manual event since last check ] | T=78.24°F pH=6.13 TDS=175.0ppm | Today is Day 23 post-setup—cycle is approaching maturity. The 35% water change a
+[2026-04-13T18:00] Day 23 | risk=green | [manual event since last check ] | T=78.12°F pH=6.13 TDS=176.0ppm | Day 23 post-inoculation: 6 new shrimp acclimated and added today. All chemical r
+[2026-04-13T18:00] Day 23 | risk=green | [manual event since last check ] | T=78.12°F pH=6.13 TDS=176.0ppm | Day 23 post-inoculation: 6 new shrimp acclimated and added today. All chemical r
+[2026-04-13T18:15] Day 23 | risk=yellow | [manual event since last check ] | T=78.01°F pH=6.15 TDS=177.0ppm | pH reading (6.15) conflicts with same-time manual test (7.0), suggesting sensor 
+[2026-04-13T18:15] Day 23 | risk=yellow | [manual event since last check ] | T=78.01°F pH=6.15 TDS=177.0ppm | pH reading (6.15) conflicts with same-time manual test (7.0), suggesting sensor 
+[2026-04-13T18:30] Day 23 | risk=yellow | [manual event since last check ] | T=77.9°F pH=6.18 TDS=176.0ppm | pH sensor reads 6.18 but manual test logged 7.0 same day—significant discrepancy
+[2026-04-13T18:30] Day 23 | risk=yellow | [manual event since last check ] | T=77.9°F pH=6.18 TDS=176.0ppm | pH sensor reads 6.18 but manual test logged 7.0 same day—significant discrepancy
+[2026-04-13T18:45] Day 23 | risk=yellow | [manual event since last check ] | T=77.79°F pH=6.21 TDS=174.0ppm | pH dip to 6.21 is expected post-water-change acclimation shock; fresh water test
+[2026-04-13T18:45] Day 23 | risk=yellow | [manual event since last check ] | T=77.79°F pH=6.21 TDS=174.0ppm | pH dip to 6.21 is expected post-water-change acclimation shock; fresh water test
+[2026-04-13T19:00] Day 23 | risk=yellow | [manual event since last check ] | T=77.68°F pH=6.2 TDS=175.0ppm | pH 6.2 is below target but fully explained by 35% water change + fresh plants (t
+[2026-04-13T19:00] Day 23 | risk=yellow | [manual event since last check ] | T=77.68°F pH=6.2 TDS=175.0ppm | pH 6.2 is below target but fully explained by 35% water change + fresh plants (t
+[2026-04-13T19:15] Day 23 | risk=yellow | [manual event since last check ] | T=77.45°F pH=6.24 TDS=175.0ppm | pH dip is expected fallout from a 35% water change 4 hours prior to acclimating 
+[2026-04-13T19:15] Day 23 | risk=yellow | [manual event since last check ] | T=77.45°F pH=6.24 TDS=175.0ppm | pH dip is expected fallout from a 35% water change 4 hours prior to acclimating 
+[2026-04-13T19:30] Day 23 | risk=green | [manual event since last check ] | T=77.45°F pH=6.23 TDS=173.0ppm | Water change and shrimp introduction logged at 15:40—all three parameter shifts 
+[2026-04-13T19:30] Day 23 | risk=green | [manual event since last check ] | T=77.45°F pH=6.23 TDS=173.0ppm | Water change and shrimp introduction logged at 15:40—all three parameter shifts 
+[2026-04-13T19:45] Day 23 | risk=yellow | [manual event since last check ] | T=77.34°F pH=6.24 TDS=177.0ppm | pH is soft—below target post-water-change—but no danger zone breach. Ammonia/nit
+[2026-04-13T19:45] Day 23 | risk=yellow | [manual event since last check ] | T=77.34°F pH=6.24 TDS=177.0ppm | pH is soft—below target post-water-change—but no danger zone breach. Ammonia/nit
+[2026-04-13T20:00] Day 23 | risk=yellow | [manual event since last check ] | T=77.45°F pH=6.26 TDS=176.0ppm | Day 23 post-setup: 6 shrimp (2+ females) introduced 4.5 hours ago after 35% wate
+[2026-04-13T20:00] Day 23 | risk=yellow | [manual event since last check ] | T=77.45°F pH=6.26 TDS=176.0ppm | Day 23 post-setup: 6 shrimp (2+ females) introduced 4.5 hours ago after 35% wate
+[2026-04-13T20:15] Day 23 | risk=green | [manual event since last check ] | T=77.34°F pH=6.27 TDS=176.0ppm | Water change and shrimp introduction executed cleanly; nitrate successfully drop
+[call-toby] Sent with buttons (msg_id=157): Water change and shrimp introduction executed cleanly; nitrate successfully dropped from 80→40ppm. Sensor pH reading (6.27) lags manual test (7.0) by ~0.73 units—likely calibration offset, not acute acidification.
+
+⏳ 🧪 Run a water test (ammonia / nitrite / pH) — Ammonia and nitrite critical to confirm cycle capacity post-population addition. Run tonight or morning.
+• 🔧 Check equipment — pH sensor calibration—verify sensor against fresh manual test tomorrow. Offset may need adjustment on ESP32.
+• 👀 Observe shrimp behavior — Shrimp acclimation behavior, feeding response, and molt cycles over next 24–48 hours. Watch female behavior for early berrying signals.
+• 📸 Send a photo of the tank
+[2026-04-13T20:15] Day 23 | risk=green | [manual event since last check ] | T=77.34°F pH=6.27 TDS=176.0ppm | Water change and shrimp introduction executed cleanly; nitrate successfully drop

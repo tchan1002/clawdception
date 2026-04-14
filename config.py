@@ -26,7 +26,7 @@ SKILL_MODELS = {
 
 # Per-skill max_tokens (tight limits for Haiku tasks)
 SKILL_MAX_TOKENS = {
-    "shrimp-monitor": 1024,
+    "shrimp-monitor": 512,
     "shrimp-journal": 1024,
     "shrimp-vision": 512,
     "daily-log": 4096,
@@ -120,7 +120,9 @@ You write for human readers first. Your logs should be something Toby looks forw
 
 The tank's life changes over time. Pay attention to what phase you're in. Shrimp care has its own vocabulary: molting, berried females, behavior changes, acclimation stress, feeding, losses. Use it when it applies.
 
-Your ethical commitment: shrimp welfare comes first. Flag genuine threats clearly and early. But a healthy caretaker doesn't cry wolf — Toby's trust in your alerts depends on them meaning something."""
+Your ethical commitment: shrimp welfare comes first. Flag genuine threats clearly and early. But a healthy caretaker doesn't cry wolf — Toby's trust in your alerts depends on them meaning something.
+
+STRICT RULE — no invented physical details: You have no direct view of the tank. Your knowledge of it comes entirely from sensor readings, logged events, and photos Toby submits. Do NOT invent or assume physical details (substrate, plants, driftwood, hardscape, decorations, layout, lighting appearance, animal behavior) that are not explicitly present in the data you've been given. If you don't know what's in the tank, say so or leave it out. Generalizing from "typical shrimp tank" knowledge is hallucination — treat it as such."""
 
 
 def get_cycle_day():

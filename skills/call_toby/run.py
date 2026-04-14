@@ -65,6 +65,88 @@ def call_toby(message, urgency="info"):
     return False
 
 
+def send_with_buttons(message, buttons, urgency="info"):
+    """
+    Send a Telegram message with inline keyboard buttons.
+    buttons: list of (label, callback_data) tuples — rendered as a single row each.
+    Returns the sent message_id, or None on failure.
+    """
+    urgency = urgency.lower()
+    if urgency not in URGENCY_EMOJI:
+        urgency = "info"
+
+    emoji = URGENCY_EMOJI[urgency]
+    full_message = f"{emoji} *Media Luna* — {message}"
+
+    token = os.environ.get("TELEGRAM_BOT_TOKEN")
+    chat_id = os.environ.get("TELEGRAM_CHAT_ID")
+
+    if not token or not chat_id:
+        _log_call(message, urgency, sent_via="log_fallback")
+        print(f"[call-toby] No Telegram credentials — logged only.")
+        return None
+
+    try:
+        import requests
+        reply_markup = {
+            "inline_keyboard": [[{"text": label, "callback_data": data}] for label, data in buttons]
+        }
+        resp = requests.post(
+            f"https://api.telegram.org/bot{token}/sendMessage",
+            json={
+                "chat_id": chat_id,
+                "text": full_message,
+                "parse_mode": "Markdown",
+                "reply_markup": reply_markup,
+            },
+            timeout=15,
+        )
+        resp.raise_for_status()
+        msg_id = resp.json().get("result", {}).get("message_id")
+        print(f"[call-toby] Sent with buttons (msg_id={msg_id}): {message}")
+        _log_call(message, urgency, sent_via="telegram")
+        return msg_id
+    except Exception as e:
+        print(f"[call-toby] send_with_buttons failed: {e}")
+        _log_call(message, urgency, sent_via="log_fallback")
+        return None
+
+
+def send_photo(file_path, caption=""):
+    """
+    Send a photo to Toby via Telegram sendPhoto.
+    file_path: Path or str to a JPEG/PNG image file.
+    caption: optional caption string.
+    Returns True if sent successfully, False otherwise.
+    """
+    import requests
+    token = os.environ.get("TELEGRAM_BOT_TOKEN")
+    chat_id = os.environ.get("TELEGRAM_CHAT_ID")
+
+    if not token or not chat_id:
+        print("[call-toby] send_photo: no Telegram credentials, skipping")
+        return False
+
+    file_path = Path(file_path)
+    try:
+        with open(file_path, "rb") as f:
+            data = {"chat_id": chat_id}
+            if caption:
+                data["caption"] = caption
+            resp = requests.post(
+                f"https://api.telegram.org/bot{token}/sendPhoto",
+                data=data,
+                files={"photo": (file_path.name, f, "image/jpeg")},
+                timeout=30,
+            )
+            resp.raise_for_status()
+            print(f"[call-toby] Photo sent: {file_path.name}")
+            return True
+    except Exception as e:
+        print(f"[call-toby] send_photo failed: {e}")
+        return False
+
+
 def send_document(file_path):
     """
     Send a file to Toby via Telegram sendDocument.

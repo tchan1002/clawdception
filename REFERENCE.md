@@ -78,6 +78,55 @@
 
 ---
 
+## Decision Schema
+
+Each entry in `logs/decisions/YYYY-MM-DD.jsonl` follows this structure:
+
+```json
+{
+  "parameter_status": {
+    "temperature": { "value": 77.4, "status": "green" },
+    "ph":          { "value": 6.24, "status": "yellow", "note": "optional context" },
+    "tds":         { "value": 175,  "status": "green" }
+  },
+  "risk_level": "yellow",
+  "reasoning": "2 sentences max.",
+  "actions": [
+    { "type": "water_test",    "actor": "owner",    "urgency": "soon" },
+    { "type": "observe",       "actor": "owner",    "urgency": "routine" },
+    { "type": "photo_request", "actor": "owner",    "urgency": "routine", "note": "optional" },
+    { "type": "heater",        "actor": "actuator", "value": 76 },
+    { "type": "none",          "actor": "actuator" }
+  ],
+  "_cycle_day": 23,
+  "_timestamp": "2026-04-13T19:00:01",
+  "_trigger": "ph outside target range: 6.24 (target 6.5–7.5)",
+  "_latest": { "temp_f": 77.4, "ph": 6.24, "tds_ppm": 175, "timestamp": "..." }
+}
+```
+
+### Action types
+
+| Type | Actor | Notes |
+|------|-------|-------|
+| `observe` | owner | Watch shrimp behavior |
+| `water_test` | owner | Manual ammonia / nitrite / pH test |
+| `water_change` | owner | Partial water change |
+| `photo_request` | owner | Send a tank photo for Claude to analyze |
+| `check_equipment` | owner | Check heater, filter, pump |
+| `heater` | actuator | Optional `value`: setpoint °F |
+| `aeration` | actuator | Optional `value`: "low" / "medium" / "high" |
+| `light` | actuator | Optional `value`: "on" / "off" / "normal" |
+| `dosing` | actuator | Optional `value`: agent name |
+| `feeding` | actuator | Optional `value`: amount |
+| `none` | either | Explicit no-op |
+
+**Urgency** (`routine` / `soon` / `urgent`) applies to owner actions only.  
+**Optional fields**: `note` (any action), `value` (actuator actions).  
+`actor: actuator` entries are the future actuator dispatch queue — logged now, automated later.
+
+---
+
 ## Detailed Reference Docs
 
 Read these only when the task requires it:

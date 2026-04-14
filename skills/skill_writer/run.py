@@ -19,7 +19,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from config import MODIFIABLE_SKILLS, PATHS, PROTECTED_SKILLS, get_cycle_day
 from utils import call_claude, read_daily_logs
-from skills.call_toby.run import call_toby
+from skills.call_toby.run import call_toby, send_with_buttons
 
 # Tool definition for skill proposal
 TOOL = {
@@ -203,10 +203,24 @@ Use the tool to submit your proposal with:
 
     print(f"[skill-writer] Proposal written to {proposal_dir}")
 
-    call_toby(
-        f"New skill proposal: {skill_name} 🛠️  Review at ~/clawdception/proposals/{today}-{skill_name}/",
-        urgency="info"
+    proposal_id = f"{today}-{skill_name}"
+    summary = (
+        f"*New skill proposal:* `{skill_name}`\n"
+        f"Type: {result['proposal_type']}  |  Risk: {result['risk_level']}\n\n"
+        f"{result['rationale'][:300].strip()}{'...' if len(result['rationale']) > 300 else ''}"
     )
+    sent = send_with_buttons(
+        summary,
+        buttons=[
+            ("✅ Approve", f"approve:{proposal_id}"),
+            ("❌ Reject",  f"reject:{proposal_id}"),
+            ("✏️ Edit",    f"edit:{proposal_id}"),
+        ],
+        urgency="info",
+    )
+    if not sent:
+        # Fallback if Telegram failed
+        call_toby(f"New skill proposal: {skill_name} — review at proposals/{proposal_id}/", urgency="info")
 
 
 if __name__ == "__main__":

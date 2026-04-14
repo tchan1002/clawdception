@@ -47,6 +47,28 @@ from skills.shrimp_alert.run import alert
 
 Skill directories use underscores (Python import compat). Human-readable names use hyphens.
 
+## Decision Log Format
+
+Each line of `logs/decisions/YYYY-MM-DD.jsonl` is a JSON object with:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `parameter_status` | object | `temperature`, `ph`, `tds` — each with `value`, `status` (green/yellow/red), optional `note` |
+| `risk_level` | string | `green` / `yellow` / `red` |
+| `reasoning` | string | 2-sentence caretaker assessment |
+| `actions` | array | Typed action objects (see below) |
+| `_cycle_day` | int | Day number of nitrogen cycle |
+| `_timestamp` | ISO string | When Claude was called |
+| `_trigger` | string | Why Claude was called |
+| `_latest` | object | Sensor values at decision time |
+
+Each action object: `{ type, actor, urgency?, value?, note? }`.  
+Owner actions (`actor: owner`) are sent to Toby via Telegram as a bundled message.  
+Actuator actions (`actor: actuator`) are logged only — future dispatch queue.  
+Photo requests are injected automatically if >4 hours since last `owner_photo` event (rate-limited by `logs/last_photo_request.txt`).
+
+---
+
 ## Key utils.py Functions
 
 | Function | Purpose |
@@ -60,6 +82,8 @@ Skill directories use underscores (Python import compat). Human-readable names u
 | `read_agent_state()` / `write_agent_state(text)` | agent_state.md |
 | `read_state_of_tank()` / `write_state_of_tank(text)` | state_of_tank.md |
 | `compute_stats(readings, field)` | mean/min/max/first/last for a field |
+| `hours_since_last_water_test()` | Hours since last water_test event, or None |
+| `hours_since_last_photo()` | Hours since last owner_photo event, or None |
 | `SkillLock(name)` | Context manager — prevents concurrent skill runs |
 
 ## Protected vs. Modifiable Skills

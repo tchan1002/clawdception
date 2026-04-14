@@ -1,67 +1,78 @@
 # CLAUDE.md — Agent Behavior for Clawdception
 
-**Clawdception** is an aquarium monitoring system for a 10-gallon Neocaridina shrimp colony ("Media Luna"). An ESP32 reads water sensors every 15 min and POSTs JSON to a Flask/SQLite server on a Raspberry Pi (`192.168.12.76:5001`). A cron-driven agent stack monitors the tank and writes logs. See REFERENCE.md for architecture, file map, and skills. See `docs/` for detailed reference.
+**Clawdception** = aquarium monitor for 10gal Neocaridina shrimp colony ("Media Luna"). ESP32 read sensor every 15min, POST JSON to Flask/SQLite on Pi (`192.168.12.76:5001`). Cron agent watch tank, write log. See REFERENCE.md for arch/file/skill. See `docs/` for detail.
 
 ---
 
 ## Hard Rules — Never do without explicit user confirmation
 
-1. **Do not SCP/rsync/deploy to the Pi** — deployment is always manual.
-2. **Do not modify sensor calibration constants** — set against physical solutions, non-trivial to re-establish.
-3. **Do not change the ESP32 reading interval** (900,000 ms / 15 min) — affects WiFi/data behavior.
-4. **Do not run `arduino-cli upload`** — compiling is fine, flashing is not.
-5. **Do not auto-commit or auto-push to git.**
+1. **No SCP/rsync/deploy to Pi** — deploy always manual.
+2. **No modify sensor calibration constants** — set against physical solution, hard re-establish.
+3. **No change ESP32 reading interval** (900,000 ms / 15 min) — affect WiFi/data.
+4. **No run `arduino-cli upload`** — compile ok, flash not.
+5. **No auto-commit or auto-push git.**
 
 ---
 
 ## Key Context
 
-- **Tank started**: March 22, 2026. **Shrimp introduced**: April 13, 2026 — colony is now active.
-- **Target parameters**: Temp 72–78°F, pH 6.5–7.5, TDS 150–250 ppm.
-- **ESP JSON payload** has a deliberate 4-section structure (top-level, `debug`, `system`, `calibration`) — do not flatten it.
-- **Dashboard** (`media_luna_dashboard.html`) is a single self-contained HTML file — no build tooling. Keep it that way.
-- **`media_luna.db`** on the Pi is source of truth. Local copy may be stale.
-- **Skill dirs** use underscores (Python imports); human names use hyphens.
+- **Tank start**: March 22, 2026. **Shrimp add**: April 13, 2026 — colony now active.
+- **Target param**: Temp 72–78°F, pH 6.5–7.5, TDS 150–250 ppm.
+- **ESP JSON** have deliberate 4-section structure (top-level, `debug`, `system`, `calibration`) — no flatten.
+- **Dashboard** (`media_luna_dashboard.html`) = single self-contain HTML — no build tool. Keep that way.
+- **`media_luna.db`** on Pi = source truth. Local copy maybe stale.
+- **Skill dirs** use underscore (Python import); human name use hyphen.
 
 ---
 
 ## Verification
 
-After editing `sensor_server.py`:
+After edit `sensor_server.py`:
 ```bash
 sudo systemctl restart media-luna.service && bash scripts/smoke_test.sh
 ```
 
-After editing a skill or `utils.py`/`config.py` (no restart needed):
+After edit skill or `utils.py`/`config.py` (no restart need):
 ```bash
 python3 skills/shrimp_monitor/run.py --force
 ```
 
-Unit tests: `python3 -m pytest tests/ -v`  
+Unit test: `python3 -m pytest tests/ -v`  
 Health check: `/status` slash command, or `curl http://localhost:5001/api/health`
 
-**Smoke tests must pass (18/18) before considering any server-side change done.** Run with `/smoke` or `bash scripts/smoke_test.sh`. If a pre-existing failure is found, fix it before moving on.
+**Smoke test must pass (18/18) before consider any server-side change done.** Run with `/smoke` or `bash scripts/smoke_test.sh`. If pre-exist fail found, fix before move on.
 
 ---
 
 ## Documentation Protocol
 
-**After every edit session, update the relevant docs:**
+**After every edit session, update relevant docs:**
 
-- `REFERENCE.md` — architecture diagram, file map, skills table. Update when adding skills, endpoints, or new directories.
-- `docs/api.md` — all Flask endpoints and event types. Update when adding/changing endpoints or event schemas.
-- `docs/ops.md` — deployment, cron, systemd. Update when changing `crontab.txt` or ops procedures.
-- `docs/agent-memory.md` — agent state, memory, skill behavior. Update when changing how skills read/write state.
-- `CLAUDE.md` (this file) — key context and hard rules. Update when project state changes (e.g. shrimp added, camera enabled).
+- `REFERENCE.md` — arch diagram, file map, skill table. Update when add skill/endpoint/new dir.
+- `docs/api.md` — all Flask endpoint and event type. Update when add/change endpoint or event schema.
+- `docs/ops.md` — deploy, cron, systemd. Update when change `crontab.txt` or ops procedure.
+- `docs/agent-memory.md` — agent state, memory, skill behavior. Update when change how skill read/write state.
+- `CLAUDE.md` (this file) — key context and hard rule. Update when project state change (e.g. shrimp add, camera enable).
 
-This keeps future Claude sessions from having to re-derive the system state from code alone.
+This keep future Claude session from re-derive system state from code alone.
+
+---
+
+## Action System
+
+Monitor use **typed action schema** — no freeform recommended_actions string. Each decision's `actions` array contain object with `{type, actor, urgency?, value?, note?}`.
+
+- `actor: owner` action sent to Toby via Telegram as bundle message after each Claude call. Owner tap "✅ Done" to log `action_completed` event.
+- `actor: actuator` action log in decision JSON only — future dispatch queue. No send actuator action to Telegram.
+- `photo_request` inject auto every 4hr (rate-limit by `logs/last_photo_request.txt`). Claude can also emit independent when visual context would change assess.
+- See REFERENCE.md → "Decision Schema" for full action type table.
 
 ---
 
 ## Do Not
 
-- Add npm, webpack, or any JS build tooling
-- Add Python dependencies beyond Flask without checking
-- Create new files speculatively — edit existing files
-- Add error handling for scenarios that can't happen in this controlled hardware environment
+- Add npm, webpack, or any JS build tool
+- Add Python dependency beyond Flask without check
+- Create new file speculative — edit exist file
+- Add error handle for scenario can't happen in this control hardware environment
 - Guess Pi username/path — it's `pi@192.168.12.76`, repo at `~/clawdception`
