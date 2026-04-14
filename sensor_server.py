@@ -796,18 +796,18 @@ def agent_status():
             <div class="param-grid">
                 <div class="param-card">
                     <div class="param-name">Temperature</div>
-                    <div class="param-value status-{decision["parameter_status"]["temperature"]["status"]}">{decision["parameter_status"]["temperature"]["value"]}{decision["parameter_status"]["temperature"]["unit"]}</div>
-                    <div class="param-note">{decision["parameter_status"]["temperature"]["note"]}</div>
+                    <div class="param-value status-{decision["parameter_status"]["temperature"]["status"]}">{decision["parameter_status"]["temperature"]["value"]}°F</div>
+                    <div class="param-note">{decision["parameter_status"]["temperature"].get("note", "")}</div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">pH</div>
                     <div class="param-value status-{decision["parameter_status"]["ph"]["status"]}">{decision["parameter_status"]["ph"]["value"]}</div>
-                    <div class="param-note">{decision["parameter_status"]["ph"]["note"]}</div>
+                    <div class="param-note">{decision["parameter_status"]["ph"].get("note", "")}</div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">TDS</div>
-                    <div class="param-value status-{decision["parameter_status"]["tds"]["status"]}">{decision["parameter_status"]["tds"]["value"]} {decision["parameter_status"]["tds"]["unit"]}</div>
-                    <div class="param-note">{decision["parameter_status"]["tds"]["note"]}</div>
+                    <div class="param-value status-{decision["parameter_status"]["tds"]["status"]}">{decision["parameter_status"]["tds"]["value"]} ppm</div>
+                    <div class="param-note">{decision["parameter_status"]["tds"].get("note", "")}</div>
                 </div>
             </div>
         </div>
