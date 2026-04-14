@@ -45,7 +45,7 @@ from skills.shrimp_alert.run import alert
 
 
 # How many hours between periodic Claude calls when nothing notable is happening
-PERIODIC_CHECK_HOURS = 4
+PERIODIC_CHECK_HOURS = 10
 
 # How many hours between photo requests (scheduled)
 PHOTO_REQUEST_INTERVAL_HOURS = 4
@@ -189,24 +189,22 @@ def check_danger(reading):
 
 def get_last_claude_time():
     """
-    Returns the datetime of the last successful Claude decision, or None.
-    Reads the last line of today's decisions JSONL.
+    Returns the datetime of the last successful Claude call by shrimp-monitor, or None.
+    Uses a dedicated file to avoid confusion with other skills' decision log entries.
     """
-    today = datetime.now().date()
-    path = PATHS["decisions"] / f"{today}.jsonl"
+    path = PATHS["logs"] / "last_monitor_call.txt"
     if not path.exists():
         return None
     try:
-        lines = [l for l in path.read_text().splitlines() if l.strip()]
-        if not lines:
-            return None
-        last = json.loads(lines[-1])
-        ts_str = last.get("_timestamp")
-        if ts_str:
-            return datetime.fromisoformat(ts_str)
+        return datetime.fromisoformat(path.read_text().strip())
     except Exception:
-        pass
-    return None
+        return None
+
+
+def record_monitor_call():
+    """Records the current time as the last shrimp-monitor Claude call."""
+    PATHS["logs"].mkdir(parents=True, exist_ok=True)
+    (PATHS["logs"] / "last_monitor_call.txt").write_text(datetime.now().isoformat())
 
 
 def should_call_claude(latest, readings_recent, recent_events, last_claude_time):
@@ -431,7 +429,6 @@ def run(force=False):
                 f"[{ts[:16]}] Day {cycle_day} | stale | "
                 f"last reading {int(reading_age_min)}min ago ({reading_ts.strftime('%H:%M')})"
             )
-            print(summary_line)
             with open(PATHS["monitor_log"], "a") as f:
                 f.write(summary_line + "\n")
             return
@@ -486,7 +483,6 @@ def run(force=False):
                 f"[{ts[:16]}] Day {cycle_day} | skipped (stable) | "
                 f"T={latest.get('temp_f')}°F pH={latest.get('ph')} TDS={latest.get('tds_ppm')}ppm"
             )
-            print(summary_line)
             PATHS["logs"].mkdir(parents=True, exist_ok=True)
             with open(PATHS["monitor_log"], "a") as f:
                 f.write(summary_line + "\n")
@@ -554,6 +550,9 @@ def run(force=False):
         # --- Send owner actions to Toby ---
         send_owner_actions(decision)
 
+        # --- Record this Claude call time ---
+        record_monitor_call()
+
         # --- Record photo nag if a photo_request was sent ---
         if any(a.get("type") == "photo_request" for a in decision.get("actions", [])):
             record_photo_request_nag()
@@ -573,7 +572,6 @@ def run(force=False):
             f"T={latest.get('temp_f')}°F pH={latest.get('ph')} TDS={latest.get('tds_ppm')}ppm | "
             f"{reasoning_snippet}"
         )
-        print(summary_line)
         PATHS["logs"].mkdir(parents=True, exist_ok=True)
         with open(PATHS["monitor_log"], "a") as f:
             f.write(summary_line + "\n")

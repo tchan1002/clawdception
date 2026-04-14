@@ -42,6 +42,8 @@ Health check: `/status` slash command, or `curl http://localhost:5001/api/health
 
 **Smoke test must pass (18/18) before consider any server-side change done.** Run with `/smoke` or `bash scripts/smoke_test.sh`. If pre-exist fail found, fix before move on.
 
+**Always run `python3 -m pytest tests/ -v` after any code edit to confirm nothing broke.** Do not report edit done until tests pass.
+
 ---
 
 ## Documentation Protocol

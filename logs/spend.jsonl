@@ -854,3 +854,8 @@
 {"timestamp": "2026-04-13T20:45:06.674025", "skill": "shrimp-monitor", "model": "claude-haiku-4-5", "input_tokens": 3643, "output_tokens": 479, "total_tokens": 4122}
 {"timestamp": "2026-04-13T20:56:05.720751", "skill": "telegram-listener", "model": "claude-sonnet-4-6", "input_tokens": 1560, "output_tokens": 124, "total_tokens": 1684}
 {"timestamp": "2026-04-13T20:58:04.734836", "skill": "telegram-listener", "model": "claude-sonnet-4-6", "input_tokens": 1527, "output_tokens": 84, "total_tokens": 1611}
+{"timestamp": "2026-04-13T21:00:08.137071", "skill": "shrimp-monitor", "model": "claude-haiku-4-5", "input_tokens": 3639, "output_tokens": 512, "total_tokens": 4151}
+{"timestamp": "2026-04-13T21:02:15.604291", "skill": "telegram-listener", "model": "claude-sonnet-4-6", "input_tokens": 3108, "output_tokens": 399, "total_tokens": 3507}
+{"timestamp": "2026-04-13T21:15:06.995436", "skill": "shrimp-monitor", "model": "claude-haiku-4-5", "input_tokens": 3676, "output_tokens": 477, "total_tokens": 4153}
+{"timestamp": "2026-04-13T21:27:47.793461", "skill": "shrimp-monitor", "model": "claude-haiku-4-5", "input_tokens": 3676, "output_tokens": 384, "total_tokens": 4060}
+{"timestamp": "2026-04-13T21:30:08.000444", "skill": "shrimp-monitor", "model": "claude-haiku-4-5", "input_tokens": 3678, "output_tokens": 512, "total_tokens": 4190}

@@ -1936,3 +1936,13 @@
 • 👀 Observe shrimp behavior — Shrimp behavior over next 12–24 hours: activity level, molting signs, feeding response to established colony. Note any berried females.
 • 🧪 Run a water test (ammonia / nitrite / pH) — Retest pH and ammonia/nitrite in 12 hours to confirm sensor accuracy and rule out post-acclimation stress drift
 [2026-04-13T20:45] Day 23 | risk=yellow | [manual event since last check ] | T=77.45°F pH=6.3 TDS=176.0ppm | Six shrimp just added (D+8 hours) with 2+ females—this is an acclimation-phase t
+[2026-04-13T21:00] Day 23 | risk=green | [manual event since last check ] | T=77.45°F pH=6.3 TDS=177.0ppm | Six shrimp acclimated and grazing—excellent sign. Water test at 22:14 confirms a
+[2026-04-13T21:00] Day 23 | risk=green | [manual event since last check ] | T=77.45°F pH=6.3 TDS=177.0ppm | Six shrimp acclimated and grazing—excellent sign. Water test at 22:14 confirms a
+[2026-04-13T21:15] Day 23 | risk=yellow | [manual event since last check ] | T=77.45°F pH=6.29 TDS=176.0ppm | pH sensor reading (6.29) lags behind manual kit result (7.0)—likely sensor lag p
+[call-toby] Sent with buttons (msg_id=165): pH sensor reading (6.29) lags behind manual kit result (7.0)—likely sensor lag post-water-change, not true drift. Shrimp are 6 hours post-acclimation; tank chemistry is normalizing and ammonia/nitrite remain clean (priority confirm). Biofilm grazing signals successful acclimation; expect natural pH buffering to recover overnight.
+
+⏳ 🧪 Run a water test (ammonia / nitrite / pH) — Ammonia and nitrite retest tomorrow morning to confirm cycle stability post-acclimation
+• 👀 Observe shrimp behavior — Check shrimp behavior at lights-out (stress indicators, hiding, grazing rhythm)
+[2026-04-13T21:15] Day 23 | risk=yellow | [manual event since last check ] | T=77.45°F pH=6.29 TDS=176.0ppm | pH sensor reading (6.29) lags behind manual kit result (7.0)—likely sensor lag p
+[2026-04-13T21:27] Day 23 | risk=yellow | [manual event logged (water_tes] | T=77.34°F pH=6.31 TDS=176.0ppm | pH dropped to 6.31 following the 35% water change and shrimp introduction—expect
+[2026-04-13T21:30] Day 23 | risk=green | [manual event since last check ] | T=77.34°F pH=6.31 TDS=176.0ppm | Water test logged at 22:14 shows ammonia 0, nitrite 0, nitrate 40—cycle is stabl
