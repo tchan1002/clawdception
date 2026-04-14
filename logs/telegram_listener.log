@@ -8,3 +8,9 @@
 [telegram-listener] Photo saved: 2026-04-13_15-40-06.jpg — ''
 [call-toby] Telegram sent (info): Photo logged ✓
 [telegram-listener] Processed 3 message(s), offset now 236832994
+[telegram-listener] 'shrimp appear to be enjoying hanging out and feeding near the filters, as well as on a patch of christmas moss hidden behind the bag of live media. they are eating up the accumulated biofilm' → observation
+[call-toby] Telegram sent (info): Logged as observation: Shrimp actively grazing near filters and on a patch of Christmas moss behind the live media bag. Feeding on accumulated biofilm. ✓
+[telegram-listener] Processed 1 message(s), offset now 236832995
+[telegram-listener] 'don’t think females are berried' → observation
+[call-toby] Telegram sent (info): Logged as observation: Owner observed no berried females in the tank. ✓
+[telegram-listener] Processed 1 message(s), offset now 236832996
