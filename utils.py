@@ -78,6 +78,16 @@ NOTABLE_EVENT_TYPES = {
 }
 
 
+def post_event(event_type, notes="", data=None):
+    """Posts an event to the API."""
+    try:
+        payload = {"event_type": event_type, "notes": notes, "data": data or {}}
+        r = requests.post(f"{API_BASE}/api/events", json=payload, timeout=10)
+        r.raise_for_status()
+    except Exception as e:
+        _log_error("post_event", e)
+
+
 def fetch_events(since=None, event_type=None, limit=50):
     """
     Returns events from the API, filtered by since (ISO timestamp), event_type, or limit.

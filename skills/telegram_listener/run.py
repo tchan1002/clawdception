@@ -26,11 +26,10 @@ import requests
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from config import get_cycle_day, PATHS
-from utils import call_claude
+from utils import call_claude, post_event
 from skills.call_toby.run import call_toby, send_with_buttons
-from skills.shrimp_vision.run import analyze_snapshot, log_entry as log_vision_entry
+from skills.shrimp_vision.run import process_photo
 
-SERVER_URL = "http://localhost:5001"
 PHOTOS_DIR = Path("snapshots/photos")
 OFFSET_FILE = Path("logs/telegram_offset.txt")
 PENDING_EDIT_FILE = Path("state/pending_edit.json")
@@ -77,14 +76,6 @@ def save_offset(offset):
     OFFSET_FILE.parent.mkdir(parents=True, exist_ok=True)
     OFFSET_FILE.write_text(str(offset))
 
-
-def post_event(event_type, notes, data=None):
-    payload = {"event_type": event_type, "notes": notes, "data": data or {}}
-    try:
-        resp = requests.post(f"{SERVER_URL}/api/events", json=payload, timeout=10)
-        resp.raise_for_status()
-    except Exception as e:
-        print(f"[telegram-listener] Failed to post event: {e}")
 
 
 def download_photo(token, file_id):
@@ -436,13 +427,10 @@ def run():
 
             if img_bytes:
                 filename = save_photo(img_bytes)
-                post_event("owner_photo", notes=caption, data={"filename": filename, "source": "telegram"})
                 print(f"[telegram-listener] Photo saved: {filename} — {caption!r}")
 
-                analysis = analyze_snapshot(img_bytes)
+                analysis = process_photo(img_bytes, filename, caption=caption, source="telegram")
                 if analysis:
-                    ts = datetime.now().isoformat()
-                    log_vision_entry({**analysis, "timestamp": ts, "filename": filename, "status": "success", "source": "telegram", "owner_comment": caption})
                     reply = format_vision_reply(analysis, caption)
                     call_toby(reply, urgency="info")
                     print(f"[telegram-listener] Vision reply sent")

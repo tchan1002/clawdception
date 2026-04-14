@@ -243,7 +243,7 @@ def chunk_text(text, max_len=275):
 def build_daily_thread(daily_log_text):
     """Convert a daily log markdown file into a list of tweet-sized strings.
 
-    Strips action-oriented sections (What I'm Watching, Suggested Actions) —
+    Strips action-oriented sections (What Happened, What I'm Watching, Suggested Actions) —
     those are preserved in the log but not needed in the public thread.
     Numbers table is compressed to a single compact line to save tweets.
     The first tweet always starts with 'day N' on its own line followed by

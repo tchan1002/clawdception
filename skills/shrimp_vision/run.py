@@ -19,7 +19,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 from config import PATHS, API_BASE, get_cycle_day
-from utils import call_claude
+from utils import call_claude, post_event
 
 SNAPSHOT_MAX_AGE_MINUTES = 30
 
@@ -96,13 +96,15 @@ def analyze_snapshot(img_bytes):
 
     prompt = f"""Day {cycle_day} of the nitrogen cycle. Analyze this image of the Media Luna shrimp tank.
 
+The tank has an active Neocaridina shrimp colony. Shrimp not visible in frame are hiding or out of shot — not missing. Do not flag low visible shrimp count as a concern.
+
 Look for:
 - Number of visible shrimp
 - Water clarity
 - Algae growth (type, location)
 - Substrate condition
 - Plant health
-- Any concerns or anomalies
+- Any concerns or anomalies (water quality, disease signs, equipment issues — not shrimp count)
 
 Provide a structured assessment and a brief narrative observation in caretaker voice."""
 
@@ -138,6 +140,20 @@ def log_entry(entry):
         f.write(json.dumps(entry) + "\n")
 
 
+def process_photo(img_bytes, filename, caption=None, source="esp32"):
+    """Analyze photo, log vision entry, post owner_photo event. Returns analysis dict or None."""
+    ts = datetime.now().isoformat()
+    analysis = analyze_snapshot(img_bytes)
+    if analysis:
+        log_entry({**analysis, "timestamp": ts, "filename": filename, "status": "success",
+                   "source": source, "owner_comment": caption})
+    event_data = {"filename": filename, "source": source}
+    if analysis:
+        event_data.update(analysis)
+    post_event("owner_photo", notes=caption or "", data=event_data)
+    return analysis
+
+
 def run(force=False):
     ts = datetime.now().isoformat()
 
@@ -150,12 +166,11 @@ def run(force=False):
         return
 
     try:
-        analysis = analyze_snapshot(img_bytes)
-        log_entry({**analysis, "timestamp": ts, "status": "success"})
-
-        concerns_str = ", ".join(analysis["concerns"]) if analysis["concerns"] else "none"
-        print(f"[shrimp-vision] {ts[:16]} — {analysis['shrimp_count_estimate']} shrimp | "
-              f"{analysis['water_clarity']} water | concerns: {concerns_str}")
+        analysis = process_photo(img_bytes, str(PATHS["snapshots"] / "latest.jpg"))
+        if analysis:
+            concerns_str = ", ".join(analysis["concerns"]) if analysis["concerns"] else "none"
+            print(f"[shrimp-vision] {ts[:16]} — {analysis['shrimp_count_estimate']} shrimp | "
+                  f"{analysis['water_clarity']} water | concerns: {concerns_str}")
 
     except Exception as e:
         entry = {"timestamp": ts, "status": "error", "error": str(e)}

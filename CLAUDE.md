@@ -51,17 +51,10 @@ Health check: `/status` slash command, or `curl http://localhost:5001/api/health
 Every edit follows this sequence — **in order, no skipping**:
 
 1. **Implement** — make code change
-2. **Test** — run `python3 -m pytest tests/ -v` (and smoke test if server-side). Do not report done until tests pass.
-3. **Document** — mandatory, not optional. Task not done until docs updated.
-
-**Always update after any code change:**
-- `REFERENCE.md` — arch diagram, file map, skill table. Any change to skill behavior, data flow, or file output = update here first.
-
-**Update when relevant section touched:**
-- `docs/api.md` — add/change endpoint or event schema
-- `docs/ops.md` — change `crontab.txt` or ops procedure
-- `docs/agent-memory.md` — change how skill read/write state, logs, or memory files
-- `CLAUDE.md` (this file) — project state change (e.g. shrimp add, camera enable, new hard rule)
+2. **Verify** — manually confirm edit works and check for bugs (run skill, inspect output, trace data flow)
+3. **Test** — ask: does this verification reveal a new test case worth saving? If yes, write it to `tests/`
+4. **Run tests** — `python3 -m pytest tests/ -v` (+ smoke test if server-side). All must pass before done
+5. **Document** — always: `REFERENCE.md` (arch/file map), `skills/<name>/SKILL.md`. When touched: `docs/api.md` (endpoint/schema change), `docs/ops.md` (cron/ops change), `docs/agent-memory.md` (state/log change), `CLAUDE.md` (project state change)
 
 Future Claude session must not re-derive system state from code alone.
 
