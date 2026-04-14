@@ -121,18 +121,23 @@ def collapse_table_rows(text):
     in_table = False
     data_rows = []
 
+    NITROGEN_PARAMS = {"ammonia", "nitrite", "nitrate"}
+
     def flush_table():
         nonlocal header, in_table, data_rows
-        parts = []
+        nitrogen = []
         for row in data_rows:
             if len(row) >= 4:
                 param, avg, minmax, delta = row[0], row[1], row[2], row[3]
                 minmax = minmax.replace(' → ', '–')
-                parts.append(f"{param} {avg} ({minmax}, {delta})")
+                if param.lower() in NITROGEN_PARAMS:
+                    nitrogen.append(f"{param} {avg}")
+                else:
+                    result.append(f"{param} | {avg} | {minmax} | {delta}")
             elif row:
-                parts.append(' '.join(row))
-        if parts:
-            result.append(' · '.join(parts))
+                result.append(' '.join(row))
+        if nitrogen:
+            result.append(' | '.join(nitrogen))
         header = None
         in_table = False
         data_rows = []
@@ -323,7 +328,7 @@ React to what's in front of you. Brief, lowercase, present tense. This isn't the
     return result["tweet_body"].strip()
 
 
-def _get_twitter_client():
+def _get_twitter_clients():
     try:
         import tweepy
     except ImportError:
@@ -337,30 +342,43 @@ def _get_twitter_client():
     if not all([api_key, api_secret, access_token, access_secret]):
         raise ValueError("Missing Twitter credentials in environment variables")
 
-    return tweepy.Client(
+    v2 = tweepy.Client(
         consumer_key=api_key,
         consumer_secret=api_secret,
         access_token=access_token,
         access_token_secret=access_secret,
     )
+    auth = tweepy.OAuth1UserHandler(api_key, api_secret, access_token, access_secret)
+    v1 = tweepy.API(auth)
+    return v2, v1
+
+
+def get_latest_photo():
+    """Returns path to most recent tank photo, or None."""
+    photos_dir = PATHS["snapshots"] / "photos"
+    photos = sorted(photos_dir.glob("*.jpg"))
+    return str(photos[-1]) if photos else None
 
 
 def post_tweet(tweet_text):
     """Posts a single tweet. Returns response data."""
-    client = _get_twitter_client()
+    client, _ = _get_twitter_clients()
     response = client.create_tweet(text=tweet_text)
     return response.data
 
 
-def post_thread(tweets):
-    """Posts a list of tweet texts as a thread. Returns list of response data."""
-    client = _get_twitter_client()
+def post_thread(tweets, photo_path=None):
+    """Posts a list of tweet texts as a thread. Attaches photo to first tweet if provided."""
+    client, v1 = _get_twitter_clients()
     results = []
     reply_to_id = None
-    for text in tweets:
+    for i, text in enumerate(tweets):
         kwargs = {"text": text}
         if reply_to_id:
             kwargs["in_reply_to_tweet_id"] = reply_to_id
+        if i == 0 and photo_path:
+            media = v1.media_upload(photo_path)
+            kwargs["media_ids"] = [media.media_id]
         response = client.create_tweet(**kwargs)
         reply_to_id = response.data["id"]
         results.append(response.data)
@@ -398,7 +416,8 @@ def run(mode="daily"):
 
         else:  # daily — thread
             tweets = generate_daily_thread()
-            thread_data = post_thread(tweets)
+            photo = get_latest_photo()
+            thread_data = post_thread(tweets, photo_path=photo)
             log_entry = {
                 "timestamp": ts,
                 "tweet_type": "daily",
