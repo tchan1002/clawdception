@@ -46,9 +46,15 @@ Health check: `/status` slash command, or `curl http://localhost:5001/api/health
 
 ---
 
-## Documentation Protocol
+## Edit Protocol
 
-**After every edit session, update relevant docs:**
+Every edit follows this sequence — **in order, no skipping**:
+
+1. **Implement** — make the code change
+2. **Test** — run `python3 -m pytest tests/ -v` (and smoke test if server-side). Do not report done until tests pass.
+3. **Document** — update relevant docs before closing the task. Code change is not done until docs reflect it.
+
+**Docs to update (update only what changed):**
 
 - `REFERENCE.md` — arch diagram, file map, skill table. Update when add skill/endpoint/new dir.
 - `docs/api.md` — all Flask endpoint and event type. Update when add/change endpoint or event schema.
@@ -64,9 +70,10 @@ This keep future Claude session from re-derive system state from code alone.
 
 Monitor use **typed action schema** — no freeform recommended_actions string. Each decision's `actions` array contain object with `{type, actor, urgency?, value?, note?}`.
 
-- `actor: owner` action sent to Toby via Telegram as bundle message after each Claude call.
+- `actor: owner` action sent to Toby via Telegram when its per-type cooldown has elapsed (see `ACTION_COOLDOWNS` in `shrimp_monitor/run.py`). Urgent actions bypass cooldown.
 - `actor: actuator` action log in decision JSON only — future dispatch queue. No send actuator action to Telegram.
-- `photo_request` inject auto every 4hr (rate-limit by `logs/last_photo_request.txt`). Claude can also emit independent when visual context would change assess.
+- `photo_request` inject auto when `hours_since_last_photo() >= 4`. Cooldown prevents re-nag within 4hr of last sent. State persisted in `logs/action_cooldowns.json`.
+- At 8/20 check-in, if no actions pass cooldown, a status-only blurb is sent ("all clear + readings").
 - See REFERENCE.md → "Decision Schema" for full action type table.
 
 ---

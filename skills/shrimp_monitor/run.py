@@ -10,8 +10,8 @@ Claude is called when:
   - A manual event was logged since the last Claude call
   - 4+ hours have passed since the last Claude call (periodic sanity check)
 
-After each Claude call, owner actions are bundled and sent to Toby via Telegram.
-A photo request is injected if it has been >4 hours since the last owner_photo.
+After each Claude call, owner actions are sent to Toby via Telegram if their
+per-type cooldown has elapsed. A photo request is injected if >4hr since last owner_photo.
 
 Usage:
     python3 run.py
@@ -46,11 +46,17 @@ from skills.shrimp_alert.run import alert
 # How many hours between periodic Claude calls when nothing notable is happening
 PERIODIC_CHECK_HOURS = 10
 
-# How many hours between photo requests (scheduled)
-PHOTO_REQUEST_INTERVAL_HOURS = 4
-
-# Hours of day when a bundled check-in message is sent (24hr, local time)
+# Hours of day when a status-only check-in is sent if no actions are pending (24hr, local time)
 CHECKIN_HOURS = (8, 20)
+
+# Minimum hours between sends of the same action type (urgent actions bypass cooldown)
+ACTION_COOLDOWNS = {
+    "photo_request":   4,
+    "observe":         6,
+    "water_test":      24,
+    "water_change":    48,
+    "check_equipment": 48,
+}
 
 # Rate-of-change thresholds that trigger a Claude call (measured over last ~4 readings / 1 hour)
 RATE_THRESHOLDS = {
@@ -277,52 +283,79 @@ def detect_water_change(readings):
 
 
 def should_inject_photo_request():
-    """
-    Returns True if a scheduled photo request should be added to actions.
-    Guards against repeat nags using logs/last_photo_request.txt.
-    """
-    nag_path = PATHS["logs"] / "last_photo_request.txt"
-    if nag_path.exists():
-        try:
-            last_nag = datetime.fromisoformat(nag_path.read_text().strip())
-            if (datetime.now() - last_nag).total_seconds() / 3600 < PHOTO_REQUEST_INTERVAL_HOURS:
-                return False
-        except Exception:
-            pass
-
+    """Returns True if a photo request should be added to actions."""
     hours = hours_since_last_photo()
-    return hours is None or hours >= PHOTO_REQUEST_INTERVAL_HOURS
+    return hours is None or hours >= ACTION_COOLDOWNS["photo_request"]
 
 
-def record_photo_request_nag():
+def load_cooldowns():
+    path = PATHS["logs"] / "action_cooldowns.json"
+    if not path.exists():
+        return {}
+    try:
+        return json.loads(path.read_text())
+    except Exception:
+        return {}
+
+
+def save_cooldowns(cooldowns):
     PATHS["logs"].mkdir(parents=True, exist_ok=True)
-    (PATHS["logs"] / "last_photo_request.txt").write_text(datetime.now().isoformat())
+    (PATHS["logs"] / "action_cooldowns.json").write_text(json.dumps(cooldowns, indent=2))
 
 
-def send_owner_actions(decision):
+def cooldown_elapsed(action_type, cooldowns):
+    hours = ACTION_COOLDOWNS.get(action_type)
+    if hours is None:
+        return True
+    last_sent = cooldowns.get(action_type)
+    if not last_sent:
+        return True
+    try:
+        elapsed = (datetime.now() - datetime.fromisoformat(last_sent)).total_seconds() / 3600
+        return elapsed >= hours
+    except Exception:
+        return True
+
+
+def _send_status_only(decision, latest):
+    reasoning = decision.get("reasoning", "").strip()
+    reading_str = f"T={latest.get('temp_f')}°F pH={latest.get('ph')} TDS={latest.get('tds_ppm')}ppm"
+    msg = f"✅ All clear — {reading_str}"
+    if reasoning:
+        msg += f"\n{reasoning}"
+    call_toby(msg, urgency="info")
+
+
+def send_owner_actions(decision, latest):
     """
-    Send owner actions to Toby if this is an emergency or a scheduled check-in time.
-    Emergencies: risk=red or any urgent action → send immediately.
-    Otherwise: only send during check-in windows (CHECKIN_HOURS).
+    Send owner actions to Toby, gated by per-type cooldowns.
+    Urgent actions bypass cooldowns. If nothing is eligible and it's a check-in
+    window, send a status-only blurb.
     """
     actions = decision.get("actions", [])
     owner_actions = [a for a in actions if a.get("actor") == "owner" and a.get("type") != "none"]
-    if not owner_actions:
-        return
 
     is_emergency = (
         decision.get("risk_level") == "red"
         or any(a.get("urgency") == "urgent" for a in owner_actions)
     )
-    now = datetime.now()
-    in_checkin_window = now.hour in CHECKIN_HOURS and now.minute < 15
 
-    if not is_emergency and not in_checkin_window:
+    cooldowns = load_cooldowns()
+
+    if is_emergency:
+        to_send = [a for a in owner_actions if a.get("urgency") == "urgent"]
+    else:
+        to_send = [a for a in owner_actions if cooldown_elapsed(a["type"], cooldowns)]
+
+    if not to_send:
+        now = datetime.now()
+        if now.hour in CHECKIN_HOURS and now.minute < 15:
+            _send_status_only(decision, latest)
         return
 
-    owner_actions.sort(key=lambda a: URGENCY_ORDER.get(a.get("urgency", "routine"), 2))
+    to_send.sort(key=lambda a: URGENCY_ORDER.get(a.get("urgency", "routine"), 2))
     lines = []
-    for a in owner_actions:
+    for a in to_send:
         label = ACTION_LABELS.get(a["type"], a["type"].replace("_", " "))
         urgency = a.get("urgency", "routine")
         prefix = "❗" if urgency == "urgent" else ("⏳" if urgency == "soon" else "•")
@@ -336,6 +369,12 @@ def send_owner_actions(decision):
     risk = decision.get("risk_level", "green")
     msg_urgency = "critical" if risk == "red" else ("warning" if risk == "yellow" else "info")
     call_toby(msg, urgency=msg_urgency)
+
+    now_iso = datetime.now().isoformat()
+    for a in to_send:
+        if a["type"] in ACTION_COOLDOWNS:
+            cooldowns[a["type"]] = now_iso
+    save_cooldowns(cooldowns)
 
 
 # ---------------------------------------------------------------------------
@@ -520,14 +559,10 @@ def run(force=False):
                 })
 
         # --- Send owner actions to Toby ---
-        send_owner_actions(decision)
+        send_owner_actions(decision, latest)
 
         # --- Record this Claude call time ---
         record_monitor_call()
-
-        # --- Record photo nag if a photo_request was sent ---
-        if any(a.get("type") == "photo_request" for a in decision.get("actions", [])):
-            record_photo_request_nag()
 
         # --- Log decision ---
         decision["_cycle_day"] = cycle_day
