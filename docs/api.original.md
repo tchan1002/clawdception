@@ -4,15 +4,15 @@
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET | `/` | Serve dashboard HTML |
-| POST | `/api/sensors` | Receive ESP32 reading (return 201) |
-| GET | `/api/sensors` | Recent read (`?limit=50`, `?hours=N`) |
-| GET | `/api/sensors/latest` | Single latest read |
-| POST | `/api/events` | Log structured event |
+| GET | `/` | Serves dashboard HTML |
+| POST | `/api/sensors` | Receive ESP32 reading (returns 201) |
+| GET | `/api/sensors` | Recent readings (`?limit=50`, `?hours=N`) |
+| GET | `/api/sensors/latest` | Single latest reading |
+| POST | `/api/events` | Log a structured event |
 | GET | `/api/events` | Query events (`?limit=N`, `?since=ISO`, `?type=water_test`) |
-| POST | `/api/photos` | Upload owner photo (multipart: `file` + optional `notes`); save to `snapshots/photos/` & create `photo` event |
-| GET | `/api/photos/<filename>` | Serve photo from `snapshots/photos/` |
-| GET | `/api/health` | Health check, return last read timestamp |
+| POST | `/api/photos` | Upload owner photo (multipart: `file` + optional `notes`); saves to `snapshots/photos/` and creates a `photo` event |
+| GET | `/api/photos/<filename>` | Serve a photo from `snapshots/photos/` |
+| GET | `/api/health` | Health check, returns last reading timestamp |
 
 Server: `http://localhost:5001` (Pi) or `http://192.168.12.76:5001` (remote)
 
@@ -81,4 +81,4 @@ sqlite3 ~/clawdception/media_luna.db "SELECT * FROM events ORDER BY id DESC LIMI
 
 ## Schema Changes
 
-If modify schema, note migration needed & flag to user — Pi's `media_luna.db` is source of truth, must migrate manual.
+If modifying the schema, note the migration needed and flag it to the user — the Pi's `media_luna.db` is source of truth and must be migrated manually.

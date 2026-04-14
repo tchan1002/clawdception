@@ -50,9 +50,9 @@ Health check: `/status` slash command, or `curl http://localhost:5001/api/health
 
 Every edit follows this sequence — **in order, no skipping**:
 
-1. **Implement** — make the code change
+1. **Implement** — make code change
 2. **Test** — run `python3 -m pytest tests/ -v` (and smoke test if server-side). Do not report done until tests pass.
-3. **Document** — update relevant docs before closing the task. Code change is not done until docs reflect it.
+3. **Document** — update relevant docs before closing task. Code change not done until docs reflect it.
 
 **Docs to update (update only what changed):**
 
@@ -70,11 +70,29 @@ This keep future Claude session from re-derive system state from code alone.
 
 Monitor use **typed action schema** — no freeform recommended_actions string. Each decision's `actions` array contain object with `{type, actor, urgency?, value?, note?}`.
 
-- `actor: owner` action sent to Toby via Telegram when its per-type cooldown has elapsed (see `ACTION_COOLDOWNS` in `shrimp_monitor/run.py`). Urgent actions bypass cooldown.
+- `actor: owner` action sent to Toby via Telegram when its per-type cooldown elapsed (see `ACTION_COOLDOWNS` in `shrimp_monitor/run.py`). Urgent actions bypass cooldown.
 - `actor: actuator` action log in decision JSON only — future dispatch queue. No send actuator action to Telegram.
 - `photo_request` inject auto when `hours_since_last_photo() >= 4`. Cooldown prevents re-nag within 4hr of last sent. State persisted in `logs/action_cooldowns.json`.
-- At 8/20 check-in, if no actions pass cooldown, a status-only blurb is sent ("all clear + readings").
+- At 8/20 check-in, if no actions pass cooldown, status-only blurb sent ("all clear + readings").
 - See REFERENCE.md → "Decision Schema" for full action type table.
+
+---
+
+## Writing Style for Agent Instructions
+
+All docs Claude writes to itself (CLAUDE.md, REFERENCE.md, docs/*.md) use caveman style — drop articles, fragments ok, short synonyms. Technical substance preserved exactly. Code blocks unchanged. Token cost cut ~50%.
+
+---
+
+## Coding Philosophy
+
+Cut > add. Shorter solution beat longer one. If two approaches solve same problem, pick one with less code.
+
+When cut — clean completely. Remove dead imports, unused constants, obsolete comments, now-unreachable branches. Cut leaves no corpse.
+
+Never add complexity to solve what deletion could solve. No wrapper around thing that should not exist. No flag to suppress behavior that should be removed. No coordination between two paths — delete one path.
+
+Code done when nothing left to remove, not when nothing left to add.
 
 ---
 
@@ -84,6 +102,6 @@ Monitor use **typed action schema** — no freeform recommended_actions string. 
 - Add Python dependency beyond Flask without check
 - Create new file speculative — edit exist file
 - Add error handle for scenario can't happen in this control hardware environment
-- Write redundant/defensive code — no `.get()` with defaults for keys that always exist in schema, no fallback paths for impossible states. Trust the schema.
+- Write redundant/defensive code — no `.get()` with defaults for keys that always exist in schema, no fallback paths for impossible states. Trust schema.
 - Guess Pi username/path — it's `pi@192.168.12.76`, repo at `~/clawdception`
-- **Create two pathways to the same outcome.** If one thing needs doing, one code path does it. Prefer deleting duplicate logic over adding coordination between duplicates (cooldowns, suppression flags, deduplication). When tempted to add sync between two paths, delete one path instead.
+- **Create two pathways to same outcome.** If one thing needs doing, one code path does it. Prefer deleting duplicate logic over adding coordination between duplicates (cooldowns, suppression flags, deduplication). When tempted to add sync between two paths, delete one path instead.

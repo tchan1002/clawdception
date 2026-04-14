@@ -1,6 +1,6 @@
 # REFERENCE.md — Clawdception Project Map
 
-**Tank**: 10gal Neocaridina shrimp colony, Hyde Park, Chicago. Cycle start March 22, 2026. Shrimp intro April 13, 2026.
+**Tank**: 10-gallon Neocaridina shrimp colony, Hyde Park, Chicago. Cycle started March 22, 2026. Shrimp introduced April 13, 2026.
 
 ---
 
@@ -80,7 +80,7 @@
 
 ## Decision Schema
 
-Each entry in `logs/decisions/YYYY-MM-DD.jsonl` follows:
+Each entry in `logs/decisions/YYYY-MM-DD.jsonl` follows this structure:
 
 ```json
 {
@@ -112,7 +112,7 @@ Each entry in `logs/decisions/YYYY-MM-DD.jsonl` follows:
 | `observe` | owner | Watch shrimp behavior |
 | `water_test` | owner | Manual ammonia / nitrite / pH test |
 | `water_change` | owner | Partial water change |
-| `photo_request` | owner | Send tank photo for Claude analyze |
+| `photo_request` | owner | Send a tank photo for Claude to analyze |
 | `check_equipment` | owner | Check heater, filter, pump |
 | `heater` | actuator | Optional `value`: setpoint °F |
 | `aeration` | actuator | Optional `value`: "low" / "medium" / "high" |
@@ -121,19 +121,19 @@ Each entry in `logs/decisions/YYYY-MM-DD.jsonl` follows:
 | `feeding` | actuator | Optional `value`: amount |
 | `none` | either | Explicit no-op |
 
-**Urgency** (`routine` / `soon` / `urgent`) owner actions only.  
+**Urgency** (`routine` / `soon` / `urgent`) applies to owner actions only.  
 **Optional fields**: `note` (any action), `value` (actuator actions).  
-`actor: actuator` entries future actuator dispatch queue — logged now, automated later.
+`actor: actuator` entries are the future actuator dispatch queue — logged now, automated later.
 
 ---
 
 ## Detailed Reference Docs
 
-Read only when task requires:
+Read these only when the task requires it:
 
 | File | Read when... |
 |------|-------------|
-| `docs/api.md` | Editing `sensor_server.py`, adding endpoints, or querying DB |
+| `docs/api.md` | Editing `sensor_server.py`, adding endpoints, or querying the DB |
 | `docs/firmware.md` | Editing `.ino`, debugging sensor drift, or checking calibration |
 | `docs/ops.md` | Deployment, systemd, SSH, crontab, or git workflow |
 | `docs/agent-memory.md` | Editing skills, `utils.py`, or understanding agent state/memory |

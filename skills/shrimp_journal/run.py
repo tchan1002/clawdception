@@ -1,5 +1,5 @@
 """
-shrimp-journal — 2-hour narrative consolidation into the daily journal.
+shrimp-journal — 6-hour narrative consolidation into the daily journal.
 
 Reads recent decisions + sensor data, asks Claude for a narrative entry,
 writes to its own timestamped file, and sends to Toby via Telegram.

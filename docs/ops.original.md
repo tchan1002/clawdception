@@ -8,7 +8,7 @@ sudo systemctl status media-luna.service
 sudo journalctl -u media-luna.service -f
 ```
 
-After edit `sensor_server.py`, restart service, run smoke test:
+After editing `sensor_server.py`, restart the service and run the smoke test:
 ```bash
 bash scripts/smoke_test.sh
 # From laptop targeting Pi:
@@ -23,7 +23,7 @@ ssh pi@192.168.12.76
 ssh pi@media-luna.local
 ```
 
-**Agent no run SCP — user deploy manual.**
+**Agents must not run SCP — the user deploys manually.**
 ```bash
 # Push entire repo to Pi (user runs this)
 scp -r ~/clawdception pi@192.168.12.76:~/clawdception
@@ -48,7 +48,7 @@ crontab -l
 ## Environment Variables
 
 Set in `/etc/environment` and `/etc/systemd/system/media-luna.service`.  
-For interactive SSH: `source /etc/environment`
+For interactive SSH sessions: `source /etc/environment`
 
 | Variable | Purpose |
 |----------|---------|
@@ -91,4 +91,5 @@ python3 -m pytest tests/ -v
 
 ## Crontab Changes (2026-04-13)
 
-Added `telegram-listener` — run every 2 min, poll owner Telegram message, record as `owner_note` or `owner_photo` event. Offset state in `logs/telegram_offset.txt`.
+Added `telegram-listener` — runs every 2 minutes to poll owner Telegram messages and record them as `owner_note` or `owner_photo` events. Offset state stored in `logs/telegram_offset.txt`.
+

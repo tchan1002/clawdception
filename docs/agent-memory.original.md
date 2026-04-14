@@ -11,9 +11,9 @@
 | Tank state | `state_of_tank.md` | rolling current | daily-log (overwrites daily) |
 | Self | `agent_state.md` | personality, disposition | daily-log (overwrites daily) |
 
-Daily logs never edit after make. Truth for day. `agent_state.md` = agent private self — rewrite daily, personality evolve over time.
+Daily logs are **never edited** after creation. They are the source of truth for what happened on a given day. `agent_state.md` is the agent's private self — rewritten daily, this is how personality evolves over time.
 
-Journal = individual files (`YYYY-MM-DD-HHMM.md`). `read_journal()` in `utils.py` concat all for date in order.
+Journal entries are individual files (`YYYY-MM-DD-HHMM.md`). `read_journal()` in `utils.py` concatenates all entries for a date in chronological order.
 
 ## File Structure
 
@@ -46,11 +46,11 @@ from skills.call_toby.run import call_toby, send_document
 from skills.shrimp_alert.run import alert
 ```
 
-Skill dirs use underscores (Python import). Human names use hyphens.
+Skill directories use underscores (Python import compat). Human-readable names use hyphens.
 
 ## Decision Log Format
 
-Each line `logs/decisions/YYYY-MM-DD.jsonl` = JSON object:
+Each line of `logs/decisions/YYYY-MM-DD.jsonl` is a JSON object with:
 
 | Field | Type | Description |
 |-------|------|-------------|
@@ -63,24 +63,24 @@ Each line `logs/decisions/YYYY-MM-DD.jsonl` = JSON object:
 | `_trigger` | string | Why Claude was called |
 | `_latest` | object | Sensor values at decision time |
 
-Each action: `{ type, actor, urgency?, value?, note? }`.  
-Owner actions (`actor: owner`) send to Toby when per-type cooldown elapsed (state in `logs/action_cooldowns.json`). Urgent bypass cooldown.  
-Actuator actions (`actor: actuator`) log only — future dispatch queue.  
-Photo request inject when `hours_since_last_photo() >= 4`. Cooldown prevent re-nag within 4hr. At 8/20 check-in with no eligible actions, status-only blurb send instead.
+Each action object: `{ type, actor, urgency?, value?, note? }`.  
+Owner actions (`actor: owner`) are sent to Toby when their per-type cooldown has elapsed (state in `logs/action_cooldowns.json`). Urgent actions bypass cooldown.  
+Actuator actions (`actor: actuator`) are logged only — future dispatch queue.  
+Photo requests inject when `hours_since_last_photo() >= 4`. Cooldown prevents re-nag within 4hr. At 8/20 check-in with no eligible actions, a status-only blurb is sent instead.
 
 ---
 
 ## shrimp-monitor Claude Call Triggers
 
-Claude call when **any**:
-- Manual event log since last Claude call
-- Notable rate change (pH >0.1, temp >1°F, TDS >20ppm over last ~1 hour)
+Claude is called when **any** of:
+- Manual event logged since last Claude call
+- Notable rate of change (pH >0.1, temp >1°F, TDS >20ppm over last ~1 hour)
 - Scheduled check-in window: 8:00–8:14 or 20:00–20:14 (if >1hr since last call)
 - Periodic check: ≥10hr since last call
 
-Params outside target range **not** separate trigger — periodic check handle persist issues, rate-of-change handle active drift. `shrimp-alert` handle danger zones independent.
+Params outside target range are **not** a separate trigger — the periodic check handles persistent issues, rate-of-change handles active drift. `shrimp-alert` handles danger zones independently.
 
-Water test reminders **not** send as standalone Toby messages — Claude include `water_test` in owner actions when warranted.
+Water test reminders are **not** sent as standalone Toby messages — Claude includes `water_test` in owner actions when warranted.
 
 ## Key utils.py Functions
 
@@ -102,5 +102,5 @@ Water test reminders **not** send as standalone Toby messages — Claude include
 
 ## Protected vs. Modifiable Skills
 
-**Protected** (never modify by skill-writer): `call-toby`, `shrimp-alert`, `skill-writer`  
-**Modifiable** (skill-writer may propose change): `shrimp-monitor`, `shrimp-journal`, `shrimp-vision`, `daily-log`
+**Protected** (never modified by skill-writer): `call-toby`, `shrimp-alert`, `skill-writer`  
+**Modifiable** (skill-writer may propose changes): `shrimp-monitor`, `shrimp-journal`, `shrimp-vision`, `daily-log`

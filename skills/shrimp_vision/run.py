@@ -1,5 +1,5 @@
 """
-shrimp-vision — visual tank monitoring via ESP32-CAM.
+shrimp-vision — visual tank monitoring via ESP32-CAM. DISABLED — camera not yet connected.
 
 Fetches the latest JPEG snapshot from /api/snapshot/latest (posted by the
 ESP32-CAM every 5 min), sends it to Claude vision, and logs a structured

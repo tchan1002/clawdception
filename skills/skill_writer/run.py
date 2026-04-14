@@ -1,5 +1,6 @@
 """
-skill-writer — weekly self-improvement proposal generator.
+skill-writer — self-improvement proposal generator. Runs daily at 8:30 AM but
+self-gates: skips unless 7+ daily logs exist and 7+ days since last proposal.
 
 Reads the past week of logs, reflects on gaps, proposes ONE new or modified skill.
 Writes the proposal to ~/clawdception/proposals/ for Toby's review.
