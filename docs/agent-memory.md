@@ -95,6 +95,7 @@ Water test reminders are **not** sent as standalone Toby messages — Claude inc
 | `read_agent_state()` / `write_agent_state(text)` | agent_state.md |
 | `read_state_of_tank()` / `write_state_of_tank(text)` | state_of_tank.md |
 | `compute_stats(readings, field)` | mean/min/max/first/last for a field |
+| `fetch_notable_events(days, limit)` | Notable tank events (water changes, tests, etc.) from past N days |
 | `hours_since_last_water_test()` | Hours since last water_test event, or None |
 | `hours_since_last_photo()` | Hours since last owner_photo event, or None |
 | `SkillLock(name)` | Context manager — prevents concurrent skill runs |

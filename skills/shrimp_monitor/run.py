@@ -5,10 +5,10 @@ Reads sensor data, checks for danger, and asks Claude for a risk assessment
 only when something warrants it. Danger checks and alert firing always happen.
 
 Claude is called when:
-  - A parameter is outside target range (yellow/red)
-  - Rate of change is notable (pH >0.1, temp >1°F, TDS >20 ppm in ~1 hour)
   - A manual event was logged since the last Claude call
-  - 4+ hours have passed since the last Claude call (periodic sanity check)
+  - Rate of change is notable (pH >0.1, temp >1°F, TDS >20 ppm in ~1 hour)
+  - Scheduled check-in window: 8:00–8:14 or 20:00–20:14 (if >1hr since last call)
+  - 10+ hours have passed since the last Claude call (periodic sanity check)
 
 After each Claude call, owner actions are sent to Toby via Telegram if their
 per-type cooldown has elapsed. A photo request is injected if >4hr since last owner_photo.

@@ -8,7 +8,7 @@
 # ANTHROPIC_API_KEY set in /etc/environment — do not add here (security)
 
 # shrimp-monitor: every 15 minutes
-# Calls Claude only when something warrants it (parameter drift, events, or every 4hr).
+# Calls Claude only when something warrants it (parameter drift, events, check-in windows, or every 10hr).
 # Danger alerts and local checks always run.
 */15 * * * * cd ~/clawdception && python3 skills/shrimp_monitor/run.py >> logs/monitor.log 2>&1
 
