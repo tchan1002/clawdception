@@ -2025,3 +2025,7 @@
 [2026-04-14T07:15] Day 24 | skipped (stable) | T=77.45°F pH=6.52 TDS=179.0ppm
 [2026-04-14T07:30] Day 24 | skipped (stable) | T=77.34°F pH=6.53 TDS=181.0ppm
 [2026-04-14T07:45] Day 24 | skipped (stable) | T=77.45°F pH=6.52 TDS=179.0ppm
+[2026-04-14T08:00] Day 24 | risk=green | [scheduled check-in (08:00)] | T=77.45°F pH=6.52 TDS=179.0ppm | Colony is 16 hours post-introduction and all parameters are stable within target
+[2026-04-14T08:15] Day 24 | skipped (stable) | T=77.34°F pH=6.52 TDS=181.0ppm
+[2026-04-14T08:30] Day 24 | skipped (stable) | T=77.45°F pH=6.53 TDS=180.0ppm
+[2026-04-14T08:45] Day 24 | skipped (stable) | T=77.34°F pH=6.53 TDS=180.0ppm
