@@ -69,7 +69,7 @@ def compute_stats(readings, field):
 # Events
 # ---------------------------------------------------------------------------
 
-INTERNAL_EVENT_TYPES = {"smoke_test", "equipment_check", "action_completed"}
+INTERNAL_EVENT_TYPES = {"smoke_test", "equipment_check"}
 
 NOTABLE_EVENT_TYPES = {
     "shrimp_added", "water_change", "water_test", "plant_addition",

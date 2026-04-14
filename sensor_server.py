@@ -796,18 +796,18 @@ def agent_status():
             <div class="param-grid">
                 <div class="param-card">
                     <div class="param-name">Temperature</div>
-                    <div class="param-value status-{decision["parameter_status"]["temperature"]["status"]}">{decision["parameter_status"]["temperature"]["value"]}{decision["parameter_status"]["temperature"]["unit"]}</div>
-                    <div class="param-note">{decision["parameter_status"]["temperature"]["note"]}</div>
+                    <div class="param-value status-{decision["parameter_status"]["temperature"]["status"]}">{decision["parameter_status"]["temperature"]["value"]}{decision["parameter_status"]["temperature"].get("unit", "°F")}</div>
+                    <div class="param-note">{decision["parameter_status"]["temperature"].get("note", "")}</div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">pH</div>
                     <div class="param-value status-{decision["parameter_status"]["ph"]["status"]}">{decision["parameter_status"]["ph"]["value"]}</div>
-                    <div class="param-note">{decision["parameter_status"]["ph"]["note"]}</div>
+                    <div class="param-note">{decision["parameter_status"]["ph"].get("note", "")}</div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">TDS</div>
-                    <div class="param-value status-{decision["parameter_status"]["tds"]["status"]}">{decision["parameter_status"]["tds"]["value"]} {decision["parameter_status"]["tds"]["unit"]}</div>
-                    <div class="param-note">{decision["parameter_status"]["tds"]["note"]}</div>
+                    <div class="param-value status-{decision["parameter_status"]["tds"]["status"]}">{decision["parameter_status"]["tds"]["value"]} {decision["parameter_status"]["tds"].get("unit", "ppm")}</div>
+                    <div class="param-note">{decision["parameter_status"]["tds"].get("note", "")}</div>
                 </div>
             </div>
         </div>
@@ -818,10 +818,10 @@ def agent_status():
         </div>
 
         <div class="section">
-            <div class="section-title">Recommended Actions</div>
+            <div class="section-title">Actions</div>
             <div class="actions">
                 <ul>
-                    {"".join([f"<li>{action}</li>" for action in decision.get("recommended_actions", [])])}
+                    {"".join([f'<li><strong>{a.get("type","")}</strong> [{a.get("urgency","routine")}] — {a.get("note","")}</li>' for a in (decision.get("actions") or [])]) or "<li style=\'color:#6e7681\'>No actions</li>"}
                 </ul>
             </div>
         </div>
@@ -1132,11 +1132,14 @@ def log_event_ui():
             </select>
         </div>
 
-        <div class="field-section" id="photo-field" style="display: none;">
-            <div class="field-label">Photo</div>
-            <input type="file" id="photo-input" accept="image/*"
+        <div class="field-section" id="photo-field">
+            <div class="field-label">Photo <span style="color:#6e7681; font-weight:400;">(optional)</span></div>
+            <input type="file" id="photo-input" accept="image/*" capture="environment"
                 style="width: 100%; background: #161b22; border: 1px solid #30363d; border-radius: 6px;
                        color: white; font-size: 16px; padding: 12px; font-family: inherit;">
+            <div id="photo-preview" style="margin-top: 10px; display: none;">
+                <img id="preview-img" style="max-width: 100%; border-radius: 6px; border: 1px solid #30363d;">
+            </div>
         </div>
 
         <div class="field-section">
@@ -1166,14 +1169,22 @@ def log_event_ui():
             plant_addition: "Plant Addition"
         };
 
-        document.getElementById('event-type').addEventListener('change', function() {
-            document.getElementById('photo-field').style.display =
-                this.value === 'photo' ? 'block' : 'none';
+        document.getElementById('photo-input').addEventListener('change', function() {
+            const preview = document.getElementById('photo-preview');
+            const img = document.getElementById('preview-img');
+            if (this.files && this.files[0]) {
+                img.src = URL.createObjectURL(this.files[0]);
+                preview.style.display = 'block';
+            } else {
+                preview.style.display = 'none';
+            }
         });
 
         async function submitEvent() {
             const eventType = document.getElementById('event-type').value;
             const notes = document.getElementById('notes').value.trim();
+            const fileInput = document.getElementById('photo-input');
+            const hasPhoto = fileInput.files && fileInput.files.length > 0;
             const btn = document.querySelector('button');
             const errorEl = document.getElementById('error-msg');
 
@@ -1181,35 +1192,44 @@ def log_event_ui():
             btn.disabled = true;
 
             try {
-                let response;
-                if (eventType === 'photo') {
-                    const fileInput = document.getElementById('photo-input');
-                    if (!fileInput.files.length) {
-                        errorEl.textContent = 'Please select a photo.';
+                let photoPath = null;
+
+                // Upload photo first if present
+                if (hasPhoto) {
+                    const form = new FormData();
+                    form.append('file', fileInput.files[0]);
+                    if (notes) form.append('notes', notes);
+                    const photoResp = await fetch('/api/photos', { method: 'POST', body: form });
+                    if (!photoResp.ok) {
+                        errorEl.textContent = 'Photo upload failed. Please try again.';
                         errorEl.style.display = 'block';
                         btn.disabled = false;
                         return;
                     }
-                    const form = new FormData();
-                    form.append('file', fileInput.files[0]);
-                    if (notes) form.append('notes', notes);
-                    response = await fetch('/api/photos', { method: 'POST', body: form });
-                } else {
-                    const payload = {
-                        event_type: eventType,
-                        timestamp: new Date().toISOString(),
-                        notes: notes,
-                        data: {}
-                    };
-                    response = await fetch('/api/events', {
-                        method: 'POST',
-                        headers: {'Content-Type': 'application/json'},
-                        body: JSON.stringify(payload)
-                    });
+                    const photoData = await photoResp.json();
+                    photoPath = photoData.filename || null;
+                    // If event type is photo, we're done
+                    if (eventType === 'photo') {
+                        showConfirmation(eventType, notes, true);
+                        return;
+                    }
                 }
 
+                // Log the event
+                const payload = {
+                    event_type: eventType,
+                    timestamp: new Date().toISOString(),
+                    notes: notes,
+                    data: photoPath ? { photo: photoPath } : {}
+                };
+                const response = await fetch('/api/events', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(payload)
+                });
+
                 if (response.ok) {
-                    showConfirmation(eventType, notes);
+                    showConfirmation(eventType, notes, hasPhoto);
                 } else {
                     errorEl.textContent = 'Something went wrong. Please try again.';
                     errorEl.style.display = 'block';
@@ -1222,11 +1242,12 @@ def log_event_ui():
             }
         }
 
-        function showConfirmation(eventType, notes) {
+        function showConfirmation(eventType, notes, hasPhoto) {
             const html = `
                 <div><span>Type:</span>${EVENT_LABELS[eventType] || eventType}</div>
                 <div><span>Time:</span>${new Date().toLocaleTimeString()}</div>
                 ${notes ? '<div><span>Notes:</span>' + notes + '</div>' : ''}
+                ${hasPhoto ? '<div><span>Photo:</span>uploaded ✓</div>' : ''}
             `;
             document.getElementById('logged-values').innerHTML = html;
             document.getElementById('form-container').style.display = 'none';
@@ -1236,6 +1257,8 @@ def log_event_ui():
         function resetForm() {
             document.getElementById('notes').value = '';
             document.getElementById('event-type').selectedIndex = 0;
+            document.getElementById('photo-input').value = '';
+            document.getElementById('photo-preview').style.display = 'none';
             document.getElementById('error-msg').style.display = 'none';
             document.querySelector('#form-container button').disabled = false;
             document.getElementById('form-container').style.display = 'block';

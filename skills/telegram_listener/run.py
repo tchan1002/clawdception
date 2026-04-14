@@ -400,16 +400,6 @@ def handle_callback_query(token, chat_id, callback_query):
             urgency="info",
         )
 
-    elif action == "ack":
-        # Owner confirmed they've handled the recommended actions
-        answer_callback(token, cq_id, "Logged ✓")
-        post_event(
-            "action_completed",
-            notes="Owner acknowledged caretaker actions",
-            data={"context": proposal_id, "source": "telegram"},
-        )
-        print(f"[telegram-listener] action_completed logged (context={proposal_id})")
-
     else:
         answer_callback(token, cq_id, "Unknown action.")
 

@@ -64,7 +64,7 @@ This keep future Claude session from re-derive system state from code alone.
 
 Monitor use **typed action schema** — no freeform recommended_actions string. Each decision's `actions` array contain object with `{type, actor, urgency?, value?, note?}`.
 
-- `actor: owner` action sent to Toby via Telegram as bundle message after each Claude call. Owner tap "✅ Done" to log `action_completed` event.
+- `actor: owner` action sent to Toby via Telegram as bundle message after each Claude call.
 - `actor: actuator` action log in decision JSON only — future dispatch queue. No send actuator action to Telegram.
 - `photo_request` inject auto every 4hr (rate-limit by `logs/last_photo_request.txt`). Claude can also emit independent when visual context would change assess.
 - See REFERENCE.md → "Decision Schema" for full action type table.

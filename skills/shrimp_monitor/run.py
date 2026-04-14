@@ -40,7 +40,7 @@ from utils import (
     read_journal,
     SkillLock,
 )
-from skills.call_toby.run import call_toby, send_with_buttons
+from skills.call_toby.run import call_toby
 from skills.shrimp_alert.run import alert
 
 
@@ -329,12 +329,7 @@ def send_owner_actions(decision):
     risk = decision.get("risk_level", "green")
     msg_urgency = "warning" if risk in ("yellow", "red") else "info"
 
-    # Photo-only messages need no Done button — user just sends the photo
-    has_non_photo = any(a["type"] != "photo_request" for a in owner_actions)
-    if has_non_photo:
-        send_with_buttons(msg, buttons=[("✅ Done", "ack:actions")], urgency=msg_urgency)
-    else:
-        call_toby(msg, urgency=msg_urgency)
+    call_toby(msg, urgency=msg_urgency)
 
 
 # ---------------------------------------------------------------------------
