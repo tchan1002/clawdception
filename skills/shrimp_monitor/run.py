@@ -491,7 +491,7 @@ def run(force=False):
     TARGET: Temp 72-78°F | pH 6.5-7.5 | TDS 150-250ppm
     DANGER: Temp <65/>82 | pH <6.0/>8.0 | TDS <100/>350
 
-    Keep reasoning to 2 sentences. Use typed actions only. Omit notes unless non-obvious."""
+    Keep reasoning to 1 sentence. Use typed actions only. Omit notes unless non-obvious."""
 
         # --- Call Claude ---
         try:
