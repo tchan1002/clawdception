@@ -1953,3 +1953,10 @@
 ⏳ 🧪 Run a water test (ammonia / nitrite / pH) — Retest pH and general hardness in ~8 hours to confirm recovery and assess buffer stability for these new residents.
 • 👀 Observe shrimp behavior — Shrimp settling in—watch for grazing activity and any signs of molting or stress over next 24–48 hours.
 • 👀 Observe shrimp behavior — Monitor pH recovery. If it drifts below 6.0 and stays there after 12 hours, buffer may need a nudge.
+[2026-04-13T22:15] Day 23 | risk=green | [manual event since last check ] | T=77.45°F pH=6.34 TDS=176.0ppm | Six shrimp introduced 7 hours ago post-35% water change; all core parameters sta
+[2026-04-13T22:30] Day 23 | risk=yellow | [ph outside target range: 6.34 ] | T=77.34°F pH=6.34 TDS=178.0ppm | pH sensor reading (6.34) conflicts with Toby's manual test 16 min ago (7.0), sug
+[2026-04-13T22:45] Day 23 | risk=yellow | [ph outside target range: 6.36 ] | T=77.45°F pH=6.36 TDS=177.0ppm | pH has drifted below the 6.5 floor following today's 35% water change and shrimp
+[call-toby] Sent with buttons (msg_id=169): pH has drifted below the 6.5 floor following today's 35% water change and shrimp introduction; this is expected acclimation noise, but sustained drift below 6.2 would signal inadequate buffering capacity. Ammonia and nitrite cleared, shrimp are grazing normally—the system is intact, just settling.
+
+⏳ 🧪 Run a water test (ammonia / nitrite / pH)
+• 👀 Observe shrimp behavior
