@@ -1,8 +1,18 @@
 # State of Tank — Media Luna
 
-**Last updated:** 2026-04-12
-**Cycle day:** 22 (started 2026-03-22)
-**Tank status:** Cycling — no shrimp — no events logged — stable but chemistry drifting
+**Last updated:** 2026-04-13
+**Cycle day:** 23 (started 2026-03-22)
+**Tank status:** Cycle complete — shrimp introduced — active monitoring
+
+---
+
+## Inhabitants
+
+| Animal | Count | Notes |
+|--------|-------|-------|
+| Neocaridina shrimp | 6 | Introduced 2026-04-13 ~15:36; 4 male, 2 female; actively grazing by ~18:30 |
+
+No berried females as of 20:58 observation.
 
 ---
 
@@ -10,39 +20,37 @@
 
 | Parameter | Current | Notes |
 |-----------|---------|-------|
-| Temperature | 78.15°F avg | 77.79–78.46°F range; −0.22°F day change; slight overnight relief but ceiling still warm |
-| pH (sensor) | 6.47 avg | 6.40–6.56 range; −0.09 day change; floor at 6.4 two consecutive days — active drift |
-| TDS | 187.3 ppm avg | 184–190 ppm range; +1.0 ppm day change; slow steady rise, within normal bounds |
+| Temperature | 78.03°F avg | 77.22–78.57°F range; −0.34°F day change; still running warm |
+| pH (sensor) | 6.38 avg | Sensor likely needs calibration — conflicts with manual test by ~0.6 points |
+| pH (manual) | 7.0 | Logged 22:14; treat as ground truth until sensor is recalibrated |
+| TDS | 184.8 ppm avg | 173–192 ppm range; −10 ppm day change; post-water-change drop, expected |
+| Ammonia | 0 ppm | Manual test 22:14 — cycle confirmed mature |
+| Nitrite | 0 ppm | Manual test 22:14 — cycle confirmed mature |
+| Nitrate | 40 ppm | Manual test 22:14 — expected post-cycle; manageable with regular water changes |
 
-## Nitrogen Panel
+---
 
-**Last tested:** Unknown — no manual test logged since cycling began.
-**Ammonia:** Unknown
-**Nitrite:** Unknown
-**Nitrate:** Unknown
+## Known Tank Contents
 
-Critical gap. At day 22, nitrogen chemistry is the most important data missing from this picture.
+- Christmas moss (confirmed via behavior observation log)
+- A plant addition was made 2026-04-13 ~15:40; species not specified
 
-## Equipment Status
+---
 
-- **ESP32 sensor node:** Intermittent — 7 post failures in one hour on 2026-04-12. WiFi instability suspected. Sensor readings appear to continue between failures but gaps in coverage possible.
-- **Heater, filter, lighting:** No anomalies logged.
+## Recent Events
 
-## Biological Status
+- **2026-04-13:** 35% water change; 6 shrimp introduced (4M/2F); plant added; manual water test confirming cycle completion; shrimp observed grazing on biofilm at filter area and Christmas moss
 
-- **Cycle phase:** Day 22. Bacterial colonization likely ongoing. pH acidification consistent with active biofilm/nitrifier growth. No confirmation of ammonia→nitrite→nitrate conversion without test.
-- **Livestock:** None. Tank uninhabited.
-- **Algae/biofilm:** Not directly observed; pH pattern consistent with bacterial alkalinity consumption.
+---
 
-## Key Thresholds to Watch
+## Outstanding Issues
 
-| Concern | Trigger | Response |
-|---------|---------|----------|
-| pH | Below 6.4 sustained | 20% water change, conditioned and pH-adjusted |
-| Temperature | Sustained above 78.5°F | Passive surface cooling (fan) |
-| Ammonia/Nitrite | Any reading above 2 ppm | Partial water change, reassess cycle |
-| ESP32 failures | >5/hour sustained | Daily manual sensor backup checks |
+- **pH sensor calibration needed** — reading ~0.6 pH units lower than manual test; sensor trend data unreliable until resolved
+- **Temperature** — consistently above 78°F; watch for upward drift as ambient temps rise in Chicago spring
+- **Nitrate management** — at 40 ppm; regular partial water changes required to hold below 20 ppm long-term
 
-## Recent Trend Summary
+---
 
-Three consecutive days of gradual pH decline. Temperature has eased slightly but remains near the top of the acceptable range. TDS rising slowly — not yet a concern. No Toby interventions in 48+ hours. Manual chemistry data urgently needed.
+## Cycle Status
+
+**Complete.** Ammonia 0, nitrite 0, nitrate present — the bacterial colony is established. Tank is ready to support livestock.
