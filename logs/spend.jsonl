@@ -902,3 +902,6 @@
 {"timestamp": "2026-04-14T13:05:49.986630", "skill": "shrimp-vision", "model": "claude-haiku-4-5", "input_tokens": 3199, "output_tokens": 396, "total_tokens": 3595}
 {"timestamp": "2026-04-14T13:08:14.367410", "skill": "shrimp-vision", "model": "claude-haiku-4-5", "input_tokens": 3263, "output_tokens": 512, "total_tokens": 3775}
 {"timestamp": "2026-04-14T13:08:26.340041", "skill": "shrimp-vision", "model": "claude-haiku-4-5", "input_tokens": 3263, "output_tokens": 432, "total_tokens": 3695}
+{"timestamp": "2026-04-14T18:02:10.124763", "skill": "shrimp-vision", "model": "claude-haiku-4-5", "input_tokens": 3263, "output_tokens": 457, "total_tokens": 3720}
+{"timestamp": "2026-04-14T18:05:14.142747", "skill": "shrimp-journal", "model": "claude-haiku-4-5", "input_tokens": 3868, "output_tokens": 932, "total_tokens": 4800}
+{"timestamp": "2026-04-14T18:15:07.607257", "skill": "shrimp-monitor", "model": "claude-haiku-4-5", "input_tokens": 4179, "output_tokens": 504, "total_tokens": 4683}
