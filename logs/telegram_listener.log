@@ -57,3 +57,4 @@ Concerns: Minor: visible red coloration on shrimp suggests recent molt or possib
 Day 24 of the nitrogen cycle and the tank is settling into its rhythm. Water is crystal clear—a good sign. The shrimp are out and active, exploring the hardscape and container fixtures. Brown diatom algae is colonizing surfaces as expected this early in the cycle; green filamentous growth is beginning on the black container. This is noise, not signal—classic early-cycle biofilm succession. The substrate looks lightly grazed, which is exactly what you want to see from Neocaridina. I'm watching the visible red coloration on a couple of shrimp; could be fresh molt or normal pigmentation. If it persists or spreads, we'll escalate to concern.
 [telegram-listener] Vision reply sent
 [telegram-listener] Processed 1 message(s), offset now 236833004
+[telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
