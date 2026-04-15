@@ -942,3 +942,5 @@
 {"timestamp": "2026-04-15T13:15:08.080748", "skill": "shrimp-monitor", "model": "claude-haiku-4-5", "input_tokens": 4868, "output_tokens": 512, "total_tokens": 5380}
 {"timestamp": "2026-04-15T13:35:00.864683", "skill": "telegram-listener", "model": "claude-sonnet-4-6", "input_tokens": 1325, "output_tokens": 499, "total_tokens": 1824}
 {"timestamp": "2026-04-15T13:36:18.119858", "skill": "telegram-listener", "model": "claude-sonnet-4-6", "input_tokens": 1343, "output_tokens": 115, "total_tokens": 1458}
+{"timestamp": "2026-04-15T13:48:04.478064", "skill": "telegram-listener", "model": "claude-sonnet-4-6", "input_tokens": 1556, "output_tokens": 80, "total_tokens": 1636}
+{"timestamp": "2026-04-15T13:48:08.445149", "skill": "telegram-listener", "model": "claude-sonnet-4-6", "input_tokens": 1274, "output_tokens": 78, "total_tokens": 1352}

@@ -81,3 +81,6 @@ Day 25 of the cycle looks quiet and steady. The colony is establishing — a han
 [telegram-listener] 'what kind of plants might we consider introducing?' → owner_note
 [call-toby] Telegram sent (info): Logged as owner note: Toby is curious about which plant species might be good candidates for introduction into the tank. ✓
 [telegram-listener] Processed 1 message(s), offset now 236833008
+[telegram-listener] 'what are ways we can safely and slowly increase ph' → question — answering
+[call-toby] Telegram sent (info): Crushed coral is the classic low-intervention option — a small amount tucked into the filter or a mesh bag raises and buffers pH slowly without swings. Aragonite substrate mixed in or added to a filter sock works similarly. Both dissolve in response to acidity, so they're naturally self-limiting — harder to overdo than liquid additives.
+[telegram-listener] Processed 1 message(s), offset now 236833010
