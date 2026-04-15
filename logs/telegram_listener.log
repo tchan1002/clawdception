@@ -61,3 +61,4 @@ Day 24 of the nitrogen cycle and the tank is settling into its rhythm. Water is 
 [telegram-listener] 'another molt observed near the christmas moss. some of the shrimp are hanging out in there now' → observation
 [call-toby] Telegram sent (info): Logged as observation: Another molt observed near the christmas moss. Some shrimp are actively hanging out in the moss now. ✓
 [telegram-listener] Processed 1 message(s), offset now 236833005
+[telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
