@@ -1,8 +1,8 @@
 # State of Tank — Media Luna
 
-**Last updated:** 2026-04-13
-**Cycle day:** 23 (started 2026-03-22)
-**Tank status:** Cycle complete — shrimp introduced — active monitoring
+**Last updated:** 2026-04-14
+**Cycle day:** 24 (started 2026-03-22)
+**Tank status:** Cycle complete — shrimp introduced Day 23 — active monitoring
 
 ---
 
@@ -10,47 +10,46 @@
 
 | Animal | Count | Notes |
 |--------|-------|-------|
-| Neocaridina shrimp | 6 | Introduced 2026-04-13 ~15:36; 4 male, 2 female; actively grazing by ~18:30 |
+| Neocaridina shrimp | 6 introduced; 5 confirmed in photo | Introduced 2026-04-13 ~15:36; 4 male, 2 female; 5 visible and active in 18:02 photo on Day 24 |
 
-No berried females as of 20:58 observation.
+- Shrimp confirmed grazing substrate and exploring hardscape as of Day 24 evening photo
+- Visible red coloration noted on some shrimp — likely fresh molt; monitoring for 48–72 hours
+- No berried females observed as of latest photo
+- Shrimp clustered near container opening observed — assessed as normal exploration behavior
+- Sixth shrimp not visible in Day 24 photo — presumed camera angle; not yet a concern
+
+---
+
+## Tank Contents (confirmed by observation/log)
+
+- Black plastic container on left side — green filamentous algae beginning to colonize exterior
+- Live media bag in tank (confirmed by owner note 2026-04-14)
+- Brown/diatom algae on substrate and hardscape surfaces — normal early-cycle biofilm succession
+- Substrate: light tan/sand colored; active shrimp foraging evident; some scattered particulates
+- Water clarity: crystal clear as of 2026-04-14 evening photo
+- Plant health: stable (noted in photo analysis)
+- Christmas moss noted in Day 23 log
 
 ---
 
 ## Current Conditions
 
-| Parameter | Current | Notes |
-|-----------|---------|-------|
-| Temperature | 78.03°F avg | 77.22–78.57°F range; −0.34°F day change; still running warm |
-| pH (sensor) | 6.38 avg | Sensor likely needs calibration — conflicts with manual test by ~0.6 points |
-| pH (manual) | 7.0 | Logged 22:14; treat as ground truth until sensor is recalibrated |
-| TDS | 184.8 ppm avg | 173–192 ppm range; −10 ppm day change; post-water-change drop, expected |
-| Ammonia | 0 ppm | Manual test 22:14 — cycle confirmed mature |
-| Nitrite | 0 ppm | Manual test 22:14 — cycle confirmed mature |
-| Nitrate | 40 ppm | Manual test 22:14 — expected post-cycle; manageable with regular water changes |
+| Parameter | Current (end of day) | Notes |
+|-----------|----------------------|-------|
+| Temperature | 77.8°F avg; max 78.8°F | Stable; within acceptable range |
+| pH | 6.34 avg; floor 6.15 | Trending slightly low; watching daily minimum |
+| TDS | 180 ppm avg | Stable; minor upward drift |
+| Ammonia | 0 ppm | Clean — tested 04:02 and 23:45 |
+| Nitrite | 0 ppm | Clean — tested 04:02 and 23:45 |
+| Nitrate | 80 ppm | Elevated; water change recommended within 3–5 days |
 
 ---
 
-## Known Tank Contents
+## Active Concerns
 
-- Christmas moss (confirmed via behavior observation log)
-- A plant addition was made 2026-04-13 ~15:40; species not specified
-
----
-
-## Recent Events
-
-- **2026-04-13:** 35% water change; 6 shrimp introduced (4M/2F); plant added; manual water test confirming cycle completion; shrimp observed grazing on biofilm at filter area and Christmas moss
-
----
-
-## Outstanding Issues
-
-- **pH sensor calibration needed** — reading ~0.6 pH units lower than manual test; sensor trend data unreliable until resolved
-- **Temperature** — consistently above 78°F; watch for upward drift as ambient temps rise in Chicago spring
-- **Nitrate management** — at 40 ppm; regular partial water changes required to hold below 20 ppm long-term
-
----
-
-## Cycle Status
-
-**Complete.** Ammonia 0, nitrite 0, nitrate present — the bacterial colony is established. Tank is ready to support livestock.
+| Concern | Level | Notes |
+|---------|-------|-------|
+| Nitrate at 80 ppm | Minor | Water change recommended; manageable but trending upward |
+| pH floor at 6.15 | Watch | Not yet alarming; monitoring for continued downward drift |
+| Red coloration on some shrimp | Minor | Likely fresh molt; watch for coupling with inactivity |
+| Sixth shrimp unconfirmed | Watch | Not visible in Day 24 photo; verify in next 24–48 hours |
