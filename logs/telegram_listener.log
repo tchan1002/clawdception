@@ -117,3 +117,9 @@ Day 25: one red cherry shrimp visible, foraging calmly across the substrate. Wat
 [telegram-listener] 'note that sometimes it’s refraction from the glass. the water itself is not cloudy. it’s pretty clear.' → owner_note
 [call-toby] Telegram sent (info): Logged as owner note: Owner clarifies that previously noted cloudiness is likely refraction from the glass — the water itself is clear. ✓
 [telegram-listener] Processed 1 message(s), offset now 236833015
+[telegram-listener] 'tank has a couple surprise baby snails.' → observation
+[call-toby] Telegram sent (info): Logged as observation: Owner discovered a couple of unexpected baby snails in the tank. ✓
+[telegram-listener] Processed 1 message(s), offset now 236833016
+[telegram-listener] 'the snails are about 1mm in diameter' → observation
+[call-toby] Telegram sent (info): Logged as observation: Toby reports snails are approximately 1mm in diameter. ✓
+[telegram-listener] Processed 1 message(s), offset now 236833017
