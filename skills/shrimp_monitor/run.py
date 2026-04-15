@@ -34,6 +34,8 @@ from utils import (
     fetch_notable_events,
     fetch_latest_reading,
     fetch_readings,
+    format_notable_events,
+    format_recent_events,
     hours_since_last_photo,
     log_decision,
     read_journal,
@@ -395,29 +397,6 @@ def summarize_readings_for_prompt(readings):
                 f"  {param}: now={stats['last']}{unit} mean={stats['mean']}{unit} "
                 f"min={stats['min']} max={stats['max']} 24hr_change={rate:+}{unit} {direction}"
             )
-    return "\n".join(lines)
-
-
-def format_recent_events(events):
-    if not events:
-        return "None in past 24 hours."
-    lines = []
-    for e in events[:8]:
-        ts = e.get("timestamp", "")[:16]
-        lines.append(f"  [{ts}] {e.get('event_type')}: {json.dumps(e.get('data', {}))}")
-    return "\n".join(lines)
-
-
-def format_notable_events(events):
-    if not events:
-        return "None in past 14 days."
-    lines = []
-    for e in events:
-        ts = e.get("timestamp", "")[:10]
-        notes = e.get("notes", "")
-        data = e.get("data", {})
-        detail = notes or (json.dumps(data) if data else "")
-        lines.append(f"  [{ts}] {e.get('event_type')}: {detail}")
     return "\n".join(lines)
 
 

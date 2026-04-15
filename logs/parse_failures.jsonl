@@ -52,3 +52,9 @@
 {"timestamp": "2026-04-14T13:23:03.520858", "error": "Expecting value: line 1 column 1 (char 0)", "response_text": "```json\n```"}
 {"timestamp": "2026-04-14T13:25:13.518010", "error": "Expecting value: line 1 column 1 (char 0)", "response_text": "not valid json"}
 {"timestamp": "2026-04-14T13:25:13.518684", "error": "Expecting value: line 1 column 1 (char 0)", "response_text": "```json\n```"}
+{"timestamp": "2026-04-15T13:13:47.848233", "error": "Expecting value: line 1 column 1 (char 0)", "response_text": "not valid json"}
+{"timestamp": "2026-04-15T13:13:47.848924", "error": "Expecting value: line 1 column 1 (char 0)", "response_text": "```json\n```"}
+{"timestamp": "2026-04-15T13:28:43.171015", "error": "Expecting value: line 1 column 1 (char 0)", "response_text": "not valid json"}
+{"timestamp": "2026-04-15T13:28:43.171719", "error": "Expecting value: line 1 column 1 (char 0)", "response_text": "```json\n```"}
+{"timestamp": "2026-04-15T13:32:49.613233", "error": "Expecting value: line 1 column 1 (char 0)", "response_text": "not valid json"}
+{"timestamp": "2026-04-15T13:32:49.613997", "error": "Expecting value: line 1 column 1 (char 0)", "response_text": "```json\n```"}

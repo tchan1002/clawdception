@@ -25,8 +25,18 @@ import requests
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-from config import get_cycle_day, PATHS
-from utils import call_claude, post_event
+from config import get_cycle_day, PATHS, COLONY_START
+from utils import (
+    call_claude,
+    fetch_events,
+    fetch_latest_reading,
+    fetch_notable_events,
+    format_notable_events,
+    format_recent_events,
+    post_event,
+    read_agent_state,
+    read_journal,
+)
 from skills.call_toby.run import call_toby, send_with_buttons
 from skills.shrimp_vision.run import process_photo
 
@@ -45,9 +55,9 @@ CLASSIFY_TOOL = {
                 "enum": [
                     "water_change", "water_test", "feeding", "observation",
                     "heater_adjust", "dosing", "maintenance", "plant_addition",
-                    "shrimp_added", "owner_note"
+                    "shrimp_added", "owner_note", "question"
                 ],
-                "description": "Best-fit event type. Use owner_note if intent is unclear."
+                "description": "Best-fit event type. Use question if owner is asking about tank status/parameters/history. Use owner_note if intent is unclear."
             },
             "notes": {
                 "type": "string",
@@ -115,7 +125,7 @@ def classify_message(text):
 The tank owner sent this message: "{text}"
 
 Classify it as a tank event. Extract any structured data (amounts, values, counts).
-Use owner_note only if the message doesn't clearly map to a known event type."""
+Use question if the message is asking about tank status, parameters, history, or advice. Use owner_note if intent is unclear."""
 
     try:
         return call_claude(
@@ -127,6 +137,55 @@ Use owner_note only if the message doesn't clearly map to a known event type."""
     except Exception as e:
         print(f"[telegram-listener] Classification failed: {e}")
         return {"event_type": "owner_note", "notes": text, "data": {"source": "telegram"}}
+
+
+def answer_question(text):
+    """Ask Claude a freeform question about the tank using current state as context."""
+    from datetime import timedelta
+
+    latest = fetch_latest_reading()
+    since_24h = (datetime.now() - timedelta(hours=24)).isoformat()
+    recent_events = fetch_events(since=since_24h)
+    notable_events = [e for e in fetch_notable_events(days=7, limit=10) if e.get("event_type") != "owner_photo"]
+    journal = read_journal()
+    agent_state = read_agent_state()
+    cycle_day = get_cycle_day()
+
+    reading_str = (
+        f"T={latest.get('temp_f')}°F | pH={latest.get('ph')} | TDS={latest.get('tds_ppm')}ppm"
+        if latest else "No sensor data."
+    )
+    colony_hours = (datetime.now() - COLONY_START).total_seconds() / 3600
+
+    prompt = f"""Day {cycle_day}. Colony: {colony_hours:.1f}hr post-introduction (2026-04-13 16:00).
+
+CURRENT: {reading_str}
+
+RECENT EVENTS (24hr):
+{format_recent_events(recent_events)}
+
+NOTABLE HISTORY (7 days):
+{format_notable_events(notable_events)}
+
+JOURNAL:
+{journal[-300:] or 'None yet.'}
+
+AGENT STATE:
+{agent_state[:250] if agent_state else 'None.'}
+
+Toby asks: {text}
+
+Answer in 2-3 sentences. Telegram message, not a report."""
+
+    try:
+        return call_claude(
+            messages=[{"role": "user", "content": prompt}],
+            skill_name="telegram-listener",
+            max_tokens=500,
+        )
+    except Exception as e:
+        print(f"[telegram-listener] answer_question failed: {e}")
+        return None
 
 
 def format_vision_reply(analysis, caption=""):
@@ -453,11 +512,18 @@ def run():
                 data = classified.get("data", {})
                 data["source"] = "telegram"
 
-                post_event(event_type, notes=notes, data=data)
-                print(f"[telegram-listener] '{caption}' → {event_type}")
-
-                label = event_type.replace("_", " ")
-                call_toby(f"Logged as {label}: {notes} ✓", urgency="info")
+                if event_type == "question":
+                    print(f"[telegram-listener] '{caption}' → question — answering")
+                    reply = answer_question(caption)
+                    if reply:
+                        call_toby(reply, urgency="info")
+                    else:
+                        call_toby("Couldn't answer that right now — check logs.", urgency="warning")
+                else:
+                    post_event(event_type, notes=notes, data=data)
+                    print(f"[telegram-listener] '{caption}' → {event_type}")
+                    label = event_type.replace("_", " ")
+                    call_toby(f"Logged as {label}: {notes} ✓", urgency="info")
 
         processed += 1
 

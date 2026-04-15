@@ -123,6 +123,33 @@ def fetch_notable_events(days=14, limit=30):
     return notable[:limit]
 
 
+def format_recent_events(events):
+    if not events:
+        return "None in past 24 hours."
+    lines = []
+    for e in events[:8]:
+        ts = e.get("timestamp", "")[:16]
+        notes = e.get("notes", "")
+        data_str = notes or json.dumps({k: v for k, v in e.get("data", {}).items() if k != "source"})
+        if len(data_str) > 120:
+            data_str = data_str[:120] + "…"
+        lines.append(f"  [{ts}] {e.get('event_type')}: {data_str}")
+    return "\n".join(lines)
+
+
+def format_notable_events(events):
+    if not events:
+        return "None in past 14 days."
+    lines = []
+    for e in events:
+        ts = e.get("timestamp", "")[:10]
+        notes = e.get("notes", "")
+        data = e.get("data", {})
+        detail = notes or (json.dumps(data) if data else "")
+        lines.append(f"  [{ts}] {e.get('event_type')}: {detail}")
+    return "\n".join(lines)
+
+
 def hours_since_last_water_test():
     """
     Returns hours elapsed since the most recent water_test event, or None if never.

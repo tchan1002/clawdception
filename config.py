@@ -30,6 +30,7 @@ SKILL_MAX_TOKENS = {
     "shrimp-vision": 512,
     "daily-log": 4096,
     "skill-writer": 4096,
+    "telegram-listener": 500,
     "tweet-log": 150,
 }
 
