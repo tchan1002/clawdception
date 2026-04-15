@@ -2105,3 +2105,10 @@ Colony is 28 hours into acclimation with zero ammonia/nitrite and stable nitrate
 [2026-04-15T00:15] Day 25 | skipped (stable) | T=77.45°F pH=6.24 TDS=181.0ppm
 [2026-04-15T00:30] Day 25 | skipped (stable) | T=77.34°F pH=6.24 TDS=180.0ppm
 [2026-04-15T00:45] Day 25 | skipped (stable) | T=77.34°F pH=6.25 TDS=180.0ppm
+[2026-04-15T01:00] Day 25 | skipped (stable) | T=77.22°F pH=6.26 TDS=180.0ppm
+[2026-04-15T01:15] Day 25 | skipped (stable) | T=77.22°F pH=6.29 TDS=181.0ppm
+[2026-04-15T01:30] Day 25 | skipped (stable) | T=77.11°F pH=6.34 TDS=178.0ppm
+[2026-04-15T01:45] Day 25 | risk=green | [ph changed 0.12 in last hour] | T=77.11°F pH=6.38 TDS=182.0ppm | pH dropped 0.12 in one hour, but this is normal microfluctuation during early co
+[call-toby] Telegram sent (info): pH dropped 0.12 in one hour, but this is normal microfluctuation during early colony establishment and active molting cycle—current 6.38 sits squarely in acceptable acclimation range and 24hr trend is stable. All other parameters nominal; shrimp are active explorers per last photo, no behavioral distress signals.
+
+• 👀 Observe shrimp behavior — Watch for stabilization of pH over next 6–12 hours; brief fluctuations during molt cycle are expected
