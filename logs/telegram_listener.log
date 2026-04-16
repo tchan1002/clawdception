@@ -123,3 +123,8 @@ Day 25: one red cherry shrimp visible, foraging calmly across the substrate. Wat
 [telegram-listener] 'the snails are about 1mm in diameter' → observation
 [call-toby] Telegram sent (info): Logged as observation: Toby reports snails are approximately 1mm in diameter. ✓
 [telegram-listener] Processed 1 message(s), offset now 236833017
+[telegram-listener] 'had a little shrimp guy feed on the duckweed' → observation
+[call-toby] Telegram sent (info): Logged as observation: Shrimp observed feeding on duckweed. ✓
+[telegram-listener] 'the filter spout was pushing him around though' → observation
+[call-toby] Telegram sent (info): Logged as observation: Filter outlet current was strong enough to push a shrimp around the tank. ✓
+[telegram-listener] Processed 2 message(s), offset now 236833019
