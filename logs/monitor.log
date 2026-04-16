@@ -2261,3 +2261,10 @@ Colony is 28 hours into acclimation with zero ammonia/nitrite and stable nitrate
 [2026-04-16T08:15] Day 26 | skipped (stable) | T=76.44°F pH=6.5 TDS=183.0ppm
 [2026-04-16T08:30] Day 26 | skipped (stable) | T=76.32°F pH=6.51 TDS=184.0ppm
 [2026-04-16T08:45] Day 26 | skipped (stable) | T=76.55°F pH=6.49 TDS=184.0ppm
+[2026-04-16T09:00] Day 26 | skipped (stable) | T=76.55°F pH=6.49 TDS=184.0ppm
+[2026-04-16T09:15] Day 26 | skipped (stable) | T=76.44°F pH=6.48 TDS=184.0ppm
+[shrimp-monitor] Claude call failed: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}, 'request_id': 'req_011Ca7cM2CcB8mSdtjPqSVYA'}
+[2026-04-16T09:45] Day 26 | risk=green | [manual event since last check ] | T=76.44°F pH=6.48 TDS=184.0ppm | All parameters well within target range; snail removal is a proactive decision, 
+[call-toby] Telegram sent (info): All parameters well within target range; snail removal is a proactive decision, not a crisis response. The 19ppm TDS rise over 24hr is modest and expected as biofilm accumulates during active cycling with a feeding population.
+
+• 📸 Send a photo of the tank — Macro closeups of individuals for sex confirmation and berried female check (look for saddle pattern and colored abdomen in females)

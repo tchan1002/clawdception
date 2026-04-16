@@ -128,3 +128,6 @@ Day 25: one red cherry shrimp visible, foraging calmly across the substrate. Wat
 [telegram-listener] 'the filter spout was pushing him around though' → observation
 [call-toby] Telegram sent (info): Logged as observation: Filter outlet current was strong enough to push a shrimp around the tank. ✓
 [telegram-listener] Processed 2 message(s), offset now 236833019
+[telegram-listener] 'removed 4 snails from the tank as a preventative measure' → maintenance
+[call-toby] Telegram sent (info): Logged as maintenance: Removed 4 snails from the tank as a preventative measure. ✓
+[telegram-listener] Processed 1 message(s), offset now 236833020
