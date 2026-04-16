@@ -131,3 +131,6 @@ Day 25: one red cherry shrimp visible, foraging calmly across the substrate. Wat
 [telegram-listener] 'removed 4 snails from the tank as a preventative measure' → maintenance
 [call-toby] Telegram sent (info): Logged as maintenance: Removed 4 snails from the tank as a preventative measure. ✓
 [telegram-listener] Processed 1 message(s), offset now 236833020
+[telegram-listener] 'how’s the shrimp doing?' → question — answering
+[call-toby] Telegram sent (info): The shrimp are doing well — ammonia and nitrite are clean, they're actively feeding on the duckweed, which is a good sign. The nitrate at 80ppm is worth keeping an eye on; a partial water change soon would be good. Main thing to watch is that filter current — if it's strong enough to push them around, it might be worth dialing it back a little.
+[telegram-listener] Processed 1 message(s), offset now 236833021
