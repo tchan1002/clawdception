@@ -1,8 +1,8 @@
 # State of Tank — Media Luna
 
-**Last updated:** 2026-04-14
-**Cycle day:** 24 (started 2026-03-22)
-**Tank status:** Cycle complete — shrimp introduced Day 23 — active monitoring
+**Last updated:** 2026-04-15
+**Cycle day:** 25 (started 2026-03-22)
+**Tank status:** Post-cycle — shrimp introduced Day 23 — active establishment phase
 
 ---
 
@@ -10,46 +10,45 @@
 
 | Animal | Count | Notes |
 |--------|-------|-------|
-| Neocaridina shrimp | 6 introduced; 5 confirmed in photo | Introduced 2026-04-13 ~15:36; 4 male, 2 female; 5 visible and active in 18:02 photo on Day 24 |
+| Neocaridina shrimp | 6 introduced | 4 male, 2 female; introduced 2026-04-13 ~15:36 |
+| Snails (unplanned) | 2 confirmed | Baby snails ~1mm observed 2026-04-15; hitchhikers, likely on plants |
 
-- Shrimp confirmed grazing substrate and exploring hardscape as of Day 24 evening photo
-- Visible red coloration noted on some shrimp — likely fresh molt; monitoring for 48–72 hours
-- No berried females observed as of latest photo
-- Shrimp clustered near container opening observed — assessed as normal exploration behavior
-- Sixth shrimp not visible in Day 24 photo — presumed camera angle; not yet a concern
+**Shrimp observations:**
+- Molt observed 2026-04-15 ~02:06, shrimp congregating in Christmas moss
+- Shrimp visible foraging in multiple afternoon photos (1–4 individuals across frames)
+- Evening observation: shrimp being pushed around by filter spout current — flagged by Toby
+- Behavior consistent with normal days-2–3 post-introduction acclimation
 
----
-
-## Tank Contents (confirmed by observation/log)
-
-- Black plastic container on left side — green filamentous algae beginning to colonize exterior
-- Live media bag in tank (confirmed by owner note 2026-04-14)
-- Brown/diatom algae on substrate and hardscape surfaces — normal early-cycle biofilm succession
-- Substrate: light tan/sand colored; active shrimp foraging evident; some scattered particulates
-- Water clarity: crystal clear as of 2026-04-14 evening photo
-- Plant health: stable (noted in photo analysis)
-- Christmas moss noted in Day 23 log
+**Snail observations:**
+- Two baby snails (~1mm) first observed 2026-04-15 afternoon; origin presumed hitchhiker on plant material
+- Population trajectory unknown; monitoring for growth
 
 ---
 
-## Current Conditions
+## Water Parameters
 
-| Parameter | Current (end of day) | Notes |
-|-----------|----------------------|-------|
-| Temperature | 77.8°F avg; max 78.8°F | Stable; within acceptable range |
-| pH | 6.34 avg; floor 6.15 | Trending slightly low; watching daily minimum |
-| TDS | 180 ppm avg | Stable; minor upward drift |
-| Ammonia | 0 ppm | Clean — tested 04:02 and 23:45 |
-| Nitrite | 0 ppm | Clean — tested 04:02 and 23:45 |
-| Nitrate | 80 ppm | Elevated; water change recommended within 3–5 days |
+| Parameter | Current Avg | Acceptable Range | Status |
+|-----------|------------|-----------------|--------|
+| Temperature | 76.6°F | 65–80°F | ✅ |
+| pH | 6.38 | 6.5–8.0 ideal | ⚠️ slightly low |
+| TDS | 175 ppm | 150–250 ppm | ✅ |
+
+*pH has been running consistently below the 6.5 ideal lower bound. Not acute, but a persistent pattern worth monitoring. Recovery trend today (+0.13) is positive.*
 
 ---
 
-## Active Concerns
+## Tank Conditions
 
-| Concern | Level | Notes |
-|---------|-------|-------|
-| Nitrate at 80 ppm | Minor | Water change recommended; manageable but trending upward |
-| pH floor at 6.15 | Watch | Not yet alarming; monitoring for continued downward drift |
-| Red coloration on some shrimp | Minor | Likely fresh molt; watch for coupling with inactivity |
-| Sixth shrimp unconfirmed | Watch | Not visible in Day 24 photo; verify in next 24–48 hours |
+- **Algae:** Green spot algae and thin film algae on substrate and hardscape; green filamentous algae on plant stems and glass; brown diatom algae on substrate and filter surfaces — all consistent with day-25 cycle establishment
+- **Water clarity:** Ranged from clear to slightly cloudy across photos — biofilm development expected at this stage
+- **Plants:** Christmas moss confirmed present and used as shrimp refuge; additional plant mass visible in photos, health described as stable to thriving
+- **Substrate:** Dark substrate with biofilm colonization underway; organic matter accumulating normally
+- **Equipment:** All sensors and WiFi nominal; filter spout current flagged as potentially too strong for shrimp
+
+---
+
+## Open Concerns
+
+1. **Filter current** — shrimp visibly displaced; Toby to consider baffling or redirecting spout
+2. **pH below 6.5** — persistent, not acute; watch for further acidification
+3. **Snail population** — two observed; monitor for growth
