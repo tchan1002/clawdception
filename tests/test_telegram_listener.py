@@ -13,7 +13,7 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from skills.telegram_listener.run import answer_question
+from skills.telegram_listener.run import answer_question, is_question, handle_text
 from utils import format_recent_events
 
 
@@ -74,6 +74,89 @@ class TestAnswerQuestion:
         with patch.multiple("skills.telegram_listener.run", **patches):
             result = answer_question("Status?")
         assert result is None
+
+
+class TestIsQuestion:
+    def test_question_mark_suffix(self):
+        assert is_question("is pH ok?") is True
+
+    def test_question_words(self):
+        for text in ("what is ammonia", "how are shrimp", "why is TDS high",
+                     "when did I feed", "are they stressed", "can I add more",
+                     "should I do water change", "will they survive", "did nitrite spike",
+                     "does this look normal"):
+            assert is_question(text) is True, f"Expected True for {text!r}"
+
+    def test_non_questions(self):
+        for text in ("fed them half a tab", "50% water change", "added 2 nerites",
+                     "top off tonight", "adjusted heater to 76F", ""):
+            assert is_question(text) is False, f"Expected False for {text!r}"
+
+    def test_case_insensitive(self):
+        assert is_question("WHAT is the temperature") is True
+        assert is_question("Is pH ok?") is True
+
+
+class TestHandleTextRouting:
+    def _base_patches(self):
+        return {
+            "get_pending_edit": MagicMock(return_value=None),
+            "call_toby": MagicMock(),
+        }
+
+    def test_question_routes_to_answer_not_classify(self):
+        patches = self._base_patches()
+        patches["answer_question"] = MagicMock(return_value="pH looks fine.")
+        patches["classify_message"] = MagicMock()
+        with patch.multiple("skills.telegram_listener.run", **patches):
+            handle_text("is pH ok?")
+        patches["answer_question"].assert_called_once_with("is pH ok?")
+        patches["classify_message"].assert_not_called()
+
+    def test_event_routes_to_classify_not_answer(self):
+        patches = self._base_patches()
+        patches["answer_question"] = MagicMock()
+        patches["classify_message"] = MagicMock(return_value={
+            "event_type": "feeding", "notes": "half tab", "data": {}
+        })
+        patches["post_event"] = MagicMock()
+        with patch.multiple("skills.telegram_listener.run", **patches):
+            handle_text("fed them half a tab")
+        patches["classify_message"].assert_called_once()
+        patches["answer_question"].assert_not_called()
+        patches["post_event"].assert_called_once_with("feeding", notes="half tab",
+                                                       data={"source": "telegram"})
+
+    def test_question_answer_failure_sends_warning(self):
+        patches = self._base_patches()
+        patches["answer_question"] = MagicMock(return_value=None)
+        with patch.multiple("skills.telegram_listener.run", **patches):
+            handle_text("how are they?")
+        call_args = patches["call_toby"].call_args
+        assert call_args.kwargs.get("urgency") == "warning"
+
+    def test_pending_edit_routes_to_handle_edit_reply(self):
+        pending = {"proposal": "2026-04-16-some-skill", "waiting_since": "2026-04-16T10:00:00"}
+        patches = self._base_patches()
+        patches["get_pending_edit"] = MagicMock(return_value=pending)
+        patches["handle_edit_reply"] = MagicMock()
+        patches["classify_message"] = MagicMock()
+        with patch.multiple("skills.telegram_listener.run", **patches):
+            handle_text("make it run every 5 min instead")
+        patches["handle_edit_reply"].assert_called_once_with("make it run every 5 min instead", pending)
+        patches["classify_message"].assert_not_called()
+
+    def test_classify_result_source_injected(self):
+        patches = self._base_patches()
+        patches["classify_message"] = MagicMock(return_value={
+            "event_type": "observation", "notes": "molting shrimp", "data": {"color": "pale"}
+        })
+        patches["post_event"] = MagicMock()
+        with patch.multiple("skills.telegram_listener.run", **patches):
+            handle_text("molting shrimp spotted")
+        _, kwargs = patches["post_event"].call_args
+        assert kwargs["data"]["source"] == "telegram"
+        assert kwargs["data"]["color"] == "pale"
 
 
 class TestFormatRecentEventsTruncation:
