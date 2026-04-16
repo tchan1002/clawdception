@@ -55,9 +55,9 @@ CLASSIFY_TOOL = {
                 "enum": [
                     "water_change", "water_test", "feeding", "observation",
                     "heater_adjust", "dosing", "maintenance", "plant_addition",
-                    "shrimp_added", "owner_note", "question"
+                    "shrimp_added", "owner_note"
                 ],
-                "description": "Best-fit event type. Use question if owner is asking about tank status/parameters/history. Use owner_note if intent is unclear."
+                "description": "Best-fit event type. Use owner_note if intent is unclear."
             },
             "notes": {
                 "type": "string",
@@ -139,6 +139,14 @@ Use question if the message is asking about tank status, parameters, history, or
         return {"event_type": "owner_note", "notes": text, "data": {"source": "telegram"}}
 
 
+def is_question(text):
+    t = text.strip().lower()
+    if t.endswith("?"):
+        return True
+    starters = ("what", "how", "why", "when", "is ", "are ", "do ", "does ", "did ", "can ", "should ", "will ")
+    return any(t.startswith(s) for s in starters)
+
+
 def answer_question(text):
     """Ask Claude a freeform question about the tank using current state as context."""
     from datetime import timedelta
@@ -204,6 +212,47 @@ def format_vision_reply(analysis, caption=""):
     lines.append(f"Concerns: {', '.join(concerns) if concerns else 'none'}")
     lines.append(f"\n{analysis['narrative']}")
     return "\n".join(lines)
+
+
+def handle_photo(msg, token):
+    caption = msg.get("caption", "")
+    file_id = msg["photo"][-1]["file_id"]
+    img_bytes = download_photo(token, file_id)
+
+    if img_bytes:
+        filename = save_photo(img_bytes)
+        print(f"[telegram-listener] Photo saved: {filename} — {caption!r}")
+        analysis = process_photo(img_bytes, filename, caption=caption, source="telegram")
+        if analysis:
+            call_toby(format_vision_reply(analysis, caption), urgency="info")
+            print("[telegram-listener] Vision reply sent")
+        else:
+            call_toby("Photo logged" + (f": {caption}" if caption else "") + " ✓", urgency="info")
+    else:
+        post_event("owner_photo", notes=caption, data={"source": "telegram", "error": "download_failed"})
+        call_toby("Photo received but download failed — event logged without image.", urgency="warning")
+
+
+def handle_text(text):
+    pending = get_pending_edit()
+    if pending:
+        handle_edit_reply(text, pending)
+        return
+
+    if is_question(text):
+        print(f"[telegram-listener] '{text}' → question — answering")
+        reply = answer_question(text)
+        call_toby(reply if reply else "Couldn't answer that right now — check logs.",
+                  urgency="info" if reply else "warning")
+        return
+
+    classified = classify_message(text)
+    event_type = classified.get("event_type", "owner_note")
+    notes = classified.get("notes", text)
+    data = {**classified.get("data", {}), "source": "telegram"}
+    post_event(event_type, notes=notes, data=data)
+    print(f"[telegram-listener] '{text}' → {event_type}")
+    call_toby(f"Logged as {event_type.replace('_', ' ')}: {notes} ✓", urgency="info")
 
 
 def answer_callback(token, callback_query_id, text=""):
@@ -463,7 +512,6 @@ def run():
         update_id = update["update_id"]
         new_offset = max(new_offset, update_id + 1)
 
-        # --- Inline button tap ---
         if "callback_query" in update:
             cq = update["callback_query"]
             if str(cq.get("message", {}).get("chat", {}).get("id", "")) == str(chat_id):
@@ -472,58 +520,13 @@ def run():
             continue
 
         msg = update.get("message") or update.get("channel_post")
-        if not msg:
+        if not msg or str(msg.get("chat", {}).get("id", "")) != str(chat_id):
             continue
-
-        if str(msg.get("chat", {}).get("id", "")) != str(chat_id):
-            continue
-
-        caption = msg.get("caption", "") or msg.get("text", "")
 
         if "photo" in msg:
-            file_id = msg["photo"][-1]["file_id"]
-            img_bytes = download_photo(token, file_id)
-
-            if img_bytes:
-                filename = save_photo(img_bytes)
-                print(f"[telegram-listener] Photo saved: {filename} — {caption!r}")
-
-                analysis = process_photo(img_bytes, filename, caption=caption, source="telegram")
-                if analysis:
-                    reply = format_vision_reply(analysis, caption)
-                    call_toby(reply, urgency="info")
-                    print(f"[telegram-listener] Vision reply sent")
-                else:
-                    ack = "Photo logged" + (f": {caption}" if caption else "") + " ✓"
-                    call_toby(ack, urgency="info")
-            else:
-                post_event("owner_photo", notes=caption, data={"source": "telegram", "error": "download_failed"})
-                call_toby("Photo received but download failed — event logged without image.", urgency="warning")
-
-        elif caption:
-            # Check if we're waiting for edit instructions for a proposal
-            pending = get_pending_edit()
-            if pending:
-                handle_edit_reply(caption, pending)
-            else:
-                classified = classify_message(caption)
-                event_type = classified.get("event_type", "owner_note")
-                notes = classified.get("notes", caption)
-                data = classified.get("data", {})
-                data["source"] = "telegram"
-
-                if event_type == "question":
-                    print(f"[telegram-listener] '{caption}' → question — answering")
-                    reply = answer_question(caption)
-                    if reply:
-                        call_toby(reply, urgency="info")
-                    else:
-                        call_toby("Couldn't answer that right now — check logs.", urgency="warning")
-                else:
-                    post_event(event_type, notes=notes, data=data)
-                    print(f"[telegram-listener] '{caption}' → {event_type}")
-                    label = event_type.replace("_", " ")
-                    call_toby(f"Logged as {label}: {notes} ✓", urgency="info")
+            handle_photo(msg, token)
+        elif text := (msg.get("text") or msg.get("caption")):
+            handle_text(text)
 
         processed += 1
 

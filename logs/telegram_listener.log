@@ -166,3 +166,18 @@ Day 26 and the cycle is in full swing. Water's got that milky cast we expect whe
 [telegram-listener] 'no there’s been a misunderstanding. the 6 shrimp are doing well in the main tank and all our measures have been about that. I just pulled out a tray this afternoon to grow duckweed.' → owner_note
 [call-toby] Telegram sent (info): Logged as owner note: Owner clarified a misunderstanding: the 6 shrimp have been in the main tank all along — all prior measurements reflect the main tank. A separate tray was pulled out this afternoon to begin growing duckweed (likely for future addition or supplemental feeding). ✓
 [telegram-listener] Processed 1 message(s), offset now 236833028
+[telegram-listener] Photo saved: 2026-04-16_18-38-03.jpg — 'they’re digging the moss'
+Traceback (most recent call last):
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 539, in <module>
+    run()
+    ~~~^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 527, in run
+    handle_photo(msg, token)
+    ~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 227, in handle_photo
+    call_toby(format_vision_reply(analysis, caption), urgency="info")
+              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 205, in format_vision_reply
+    f"{analysis['shrimp_count_estimate']} shrimp visible · "
+       ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'shrimp_count_estimate'
