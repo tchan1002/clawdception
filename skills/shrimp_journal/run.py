@@ -142,20 +142,27 @@ IMPORTANT: Only refer to physical tank details (plants, substrate, decorations, 
         print(f"[shrimp-journal] Claude call failed: {e} — skipping journal entry")
         return
 
+    def _as_list(val):
+        if isinstance(val, str):
+            return json.loads(val)
+        return val or []
+
     # Format the journal entry with narrative, key observations, and watch list
     entry_text = result["narrative"]
 
-    if result.get("key_observations"):
+    key_observations = _as_list(result.get("key_observations"))
+    if key_observations:
         entry_text += "\n\n**Key Observations:**\n"
-        for obs in result["key_observations"]:
+        for obs in key_observations:
             entry_text += f"- {obs}\n"
 
-    if result.get("watch_list"):
+    watch_list = _as_list(result.get("watch_list"))
+    if watch_list:
         entry_text += "\n**Watch List:**\n"
-        for item in result["watch_list"]:
+        for item in watch_list:
             entry_text += f"- {item}\n"
 
-    recommended_actions = result.get("recommended_actions", [])
+    recommended_actions = _as_list(result.get("recommended_actions"))
     if recommended_actions:
         entry_text += "\n**Recommended Actions:**\n"
         for action in recommended_actions:

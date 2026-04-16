@@ -25,13 +25,17 @@ SNAPSHOT_MAX_AGE_MINUTES = 30
 
 TOOL = {
     "name": "analyze_tank_image",
-    "description": "Analyze a camera image of the Media Luna shrimp tank",
+    "description": "Catalog a visual observation from a photo related to the Media Luna shrimp tank",
     "input_schema": {
         "type": "object",
         "properties": {
-            "shrimp_count_estimate": {
+            "tank_visible": {
+                "type": "boolean",
+                "description": "Whether the tank itself is visible in this image"
+            },
+            "shrimp_count_visible": {
                 "type": "integer",
-                "description": "Estimated number of visible shrimp"
+                "description": "Number of shrimp clearly visible in the image. Only count confirmed individuals — report 0 if none seen."
             },
             "water_clarity": {
                 "type": "string",
@@ -60,13 +64,12 @@ TOOL = {
                 "items": {"type": "string"},
                 "description": "List of visual concerns or anomalies"
             },
-            "narrative": {
+            "image_subject": {
                 "type": "string",
-                "description": "2-3 sentence caretaker voice observation"
+                "description": "What this image is of, if not the tank (e.g. 'test strip', 'equipment', 'full tank shot')"
             }
         },
-        "required": ["shrimp_count_estimate", "water_clarity", "visible_algae", "substrate_condition",
-                     "plant_health", "concerns", "narrative"]
+        "required": ["tank_visible", "concerns"]
     }
 }
 
@@ -94,19 +97,17 @@ def analyze_snapshot(img_bytes):
     img_b64 = base64.standard_b64encode(img_bytes).decode("utf-8")
     cycle_day = get_cycle_day()
 
-    prompt = f"""Day {cycle_day} of the nitrogen cycle. Analyze this image of the Media Luna shrimp tank.
+    prompt = f"""Day {cycle_day} of the nitrogen cycle. Catalog what you observe in this photo related to the Media Luna shrimp tank.
 
-The tank has an active Neocaridina shrimp colony. Shrimp not visible in frame are hiding or out of shot — not missing. Do not flag low visible shrimp count as a concern.
+This photo may be of the tank, or it may be of something related (test strips, equipment, a product, etc). First determine if the tank itself is visible.
 
-Look for:
-- Number of visible shrimp
-- Water clarity
-- Algae growth (type, location)
-- Substrate condition
-- Plant health
-- Any concerns or anomalies (water quality, disease signs, equipment issues — not shrimp count)
+If tank visible:
+- Neocaridina shrimp in this colony are small (1-2cm), appear red or reddish-orange, or gray/translucent. Look specifically for these.
+- Count ONLY shrimp you can clearly see. If none are visible, report 0. Do not infer, estimate, or guess hidden shrimp.
+- Assess water clarity: only mark cloudy/murky if water itself looks turbid or muddy — suspended particles, milky haze, brown tint. Glass glare, reflections, or camera angle artifacts are NOT cloudiness. Default to "clear" unless water column itself is visibly degraded.
+- Flag concerns (water quality, disease signs, equipment issues) — not shrimp count
 
-Provide a structured assessment and a brief narrative observation in caretaker voice."""
+If tank not visible: set tank_visible=false, describe image_subject, leave tank fields empty."""
 
     messages = [
         {
@@ -169,8 +170,14 @@ def run(force=False):
         analysis = process_photo(img_bytes, str(PATHS["snapshots"] / "latest.jpg"))
         if analysis:
             concerns_str = ", ".join(analysis["concerns"]) if analysis["concerns"] else "none"
-            print(f"[shrimp-vision] {ts[:16]} — {analysis['shrimp_count_estimate']} shrimp | "
-                  f"{analysis['water_clarity']} water | concerns: {concerns_str}")
+            if analysis.get("tank_visible"):
+                count = analysis.get("shrimp_count_visible", "?")
+                clarity = analysis.get("water_clarity", "unknown")
+                print(f"[shrimp-vision] {ts[:16]} — {count} shrimp visible | "
+                      f"{clarity} water | concerns: {concerns_str}")
+            else:
+                subject = analysis.get("image_subject", "unknown subject")
+                print(f"[shrimp-vision] {ts[:16]} — tank not visible ({subject}) | concerns: {concerns_str}")
 
     except Exception as e:
         entry = {"timestamp": ts, "status": "error", "error": str(e)}

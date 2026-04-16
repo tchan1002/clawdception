@@ -144,7 +144,6 @@ Day 26 into the cycle and the tank is reading as genuinely stable. Water is crys
 [telegram-listener] Vision reply sent
 [telegram-listener] Processed 1 message(s), offset now 236833022
 [telegram-listener] 'recalibrate that response, the tray has no shrimp in it' → owner_note
-[call-toby] Telegram sent (info): Logged as owner note: Owner is correcting a prior response — clarifying that the tank (referred to as "the tray") currently has no shrimp in it. ✓
 [telegram-listener] Processed 1 message(s), offset now 236833023
 [telegram-listener] 'no the tray is a separate tray from the tank where we put in some duckweed to grow' → owner_note
 [call-toby] Telegram sent (info): Logged as owner note: Owner clarified that the tray is a separate grow-out tray (not part of the main tank) being used to cultivate duckweed. ✓
@@ -164,3 +163,6 @@ Day 26 and the cycle is in full swing. Water's got that milky cast we expect whe
 [telegram-listener] 'water looks pretty clear to me' → observation
 [call-toby] Telegram sent (info): Logged as observation: Water appears visually clear to owner. ✓
 [telegram-listener] Processed 1 message(s), offset now 236833027
+[telegram-listener] 'no there’s been a misunderstanding. the 6 shrimp are doing well in the main tank and all our measures have been about that. I just pulled out a tray this afternoon to grow duckweed.' → owner_note
+[call-toby] Telegram sent (info): Logged as owner note: Owner clarified a misunderstanding: the 6 shrimp have been in the main tank all along — all prior measurements reflect the main tank. A separate tray was pulled out this afternoon to begin growing duckweed (likely for future addition or supplemental feeding). ✓
+[telegram-listener] Processed 1 message(s), offset now 236833028
