@@ -27,6 +27,15 @@ URGENCY_EMOJI = {
 }
 
 
+def _safe_err(e):
+    """Strip bot token from exception message before logging."""
+    token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+    msg = str(e)
+    if token:
+        msg = msg.replace(token, "***")
+    return msg
+
+
 def call_toby(message, urgency="info"):
     """
     Send a notification to Toby.
@@ -57,7 +66,7 @@ def call_toby(message, urgency="info"):
             _log_call(message, urgency, sent_via="telegram")
             return True
         except Exception as e:
-            print(f"[call-toby] Telegram failed: {e} — falling back to log file")
+            print(f"[call-toby] Telegram failed: {_safe_err(e)} — falling back to log file")
 
     # Fallback: write to calls.jsonl
     _log_call(message, urgency, sent_via="log_fallback")
@@ -107,7 +116,7 @@ def send_with_buttons(message, buttons, urgency="info"):
         _log_call(message, urgency, sent_via="telegram")
         return msg_id
     except Exception as e:
-        print(f"[call-toby] send_with_buttons failed: {e}")
+        print(f"[call-toby] send_with_buttons failed: {_safe_err(e)}")
         _log_call(message, urgency, sent_via="log_fallback")
         return None
 
@@ -143,7 +152,7 @@ def send_photo(file_path, caption=""):
             print(f"[call-toby] Photo sent: {file_path.name}")
             return True
     except Exception as e:
-        print(f"[call-toby] send_photo failed: {e}")
+        print(f"[call-toby] send_photo failed: {_safe_err(e)}")
         return False
 
 
@@ -174,7 +183,7 @@ def send_document(file_path):
             print(f"[call-toby] Document sent: {file_path.name}")
             return True
     except Exception as e:
-        print(f"[call-toby] send_document failed: {e}")
+        print(f"[call-toby] send_document failed: {_safe_err(e)}")
         return False
 
 

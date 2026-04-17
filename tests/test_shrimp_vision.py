@@ -226,7 +226,7 @@ class TestSafeguards:
         assert "Glass glare" in prompt
         assert "reflections" in prompt
         assert "turbid or muddy" in prompt
-        assert "Default to" in prompt and "clear" in prompt
+        assert "Default" in prompt and "clear" in prompt
 
     def test_non_tank_image_logged_and_posted(self, tmp_path):
         not_tank = {"tank_visible": False, "concerns": [], "image_subject": "equipment"}
@@ -243,3 +243,49 @@ class TestSafeguards:
         import json
         entry = json.loads(log_file.read_text().strip())
         assert entry["image_subject"] == "equipment"
+
+    def test_prompt_zone_scan_instruction(self):
+        """Prompt must instruct model to scan foreground/midground/background zones."""
+        captured = {}
+
+        def capture(**kwargs):
+            captured["prompt"] = kwargs["messages"][0]["content"][1]["text"]
+            return FAKE_ANALYSIS
+
+        with patch("skills.shrimp_vision.run.call_claude", side_effect=capture):
+            analyze_snapshot(FAKE_JPEG)
+
+        prompt = captured["prompt"]
+        assert "foreground" in prompt
+        assert "midground" in prompt
+        assert "background" in prompt
+
+    def test_prompt_shrimp_counting_bias(self):
+        """Prompt must instruct model to include partial sightings and err toward counting."""
+        captured = {}
+
+        def capture(**kwargs):
+            captured["prompt"] = kwargs["messages"][0]["content"][1]["text"]
+            return FAKE_ANALYSIS
+
+        with patch("skills.shrimp_vision.run.call_claude", side_effect=capture):
+            analyze_snapshot(FAKE_JPEG)
+
+        prompt = captured["prompt"]
+        assert "partial" in prompt.lower()
+        assert "Err on the side of counting" in prompt
+
+    def test_prompt_shrimp_description_includes_juveniles(self):
+        """Prompt must describe juvenile and berried female appearance for accurate detection."""
+        captured = {}
+
+        def capture(**kwargs):
+            captured["prompt"] = kwargs["messages"][0]["content"][1]["text"]
+            return FAKE_ANALYSIS
+
+        with patch("skills.shrimp_vision.run.call_claude", side_effect=capture):
+            analyze_snapshot(FAKE_JPEG)
+
+        prompt = captured["prompt"]
+        assert "Juvenile" in prompt or "juvenile" in prompt
+        assert "berried" in prompt.lower()

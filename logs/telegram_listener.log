@@ -2256,3 +2256,28 @@ Day 27 of nitrogen cycle: A side view of the tank showing substrate, planted flo
 [call-toby] Telegram sent (info): Proposal `2026-04-17-sensorcalibrationwatch` rejected and archived.
 [call-toby] Telegram sent (info): Proposal `2026-04-17-sensorcalibrationwatch` rejected and archived.
 [telegram-listener] Processed 3 message(s), offset now 236833049
+[telegram-listener] Photo saved: 2026-04-17_17-26-09.jpg — 'grow light up 👍🫡'
+[call-toby] Telegram sent (info): "grow light up 👍🫡"
+0 shrimp visible · water: cloudy · plants: thriving
+Algae: Dense yellow-green suspended growth throughout water column; heavy surface-level algae accumulation visible at waterline, likely microalgae bloom typical of nitrogen cycle phase
+Concerns: Cloudiness consistent with bacterial/microalgal bloom expected during nitrogen cycle day 27, Yellow-green water tint indicates active algae bloom, No shrimp visible — tank is mid-cycle and uninhabited as expected
+
+Media Luna tank in day 27 of nitrogen cycle: water is noticeably cloudy with a yellow-green tint throughout the column, consistent with bacterial bloom. Bright planted top section with vigorous yellow-green growth visible at water line. Substrate is dark with scattered debris; a mesh feeding dish and what appears to be clay or terra cotta balls (possibly mineral supplements or biofilm media) are visible on the floor. LED lighting bar is mounted and operational. No shrimp observed in frame.
+[telegram-listener] Vision reply sent
+[telegram-listener] Processed 1 message(s), offset now 236833050
+[telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[telegram-listener] 'no the water is not cloudy, that’s the reflection in the glass and the yellow comes from the led lamp' → correction
+[call-toby] Telegram sent (info): Logged as correction: Owner clarifies that the water is not cloudy — the apparent cloudiness was a reflection in the glass, and the yellow tint was caused by the LED lamp. No actual water quality issue present. ✓
+[telegram-listener] Processed 1 message(s), offset now 236833051
+[telegram-listener] getUpdates failed: 401 Client Error: Unauthorized for url: https://api.telegram.org/bot8717821001:AAHS61rxysmE7j4GsF844CiGLe5jJNvKfC8/getUpdates?offset=236833051&timeout=0&limit=100
+[telegram-listener] getUpdates failed: 401 Client Error: Unauthorized for url: https://api.telegram.org/bot8717821001:AAHS61rxysmE7j4GsF844CiGLe5jJNvKfC8/getUpdates?offset=236833051&timeout=0&limit=100
+[telegram-listener] getUpdates failed: 401 Client Error: Unauthorized for url: https://api.telegram.org/bot8717821001:AAHS61rxysmE7j4GsF844CiGLe5jJNvKfC8/getUpdates?offset=236833051&timeout=0&limit=100
+[telegram-listener] getUpdates failed: 401 Client Error: Unauthorized for url: https://api.telegram.org/bot8717821001:AAHS61rxysmE7j4GsF844CiGLe5jJNvKfC8/getUpdates?offset=236833051&timeout=0&limit=100
+[telegram-listener] getUpdates failed: 401 Client Error: Unauthorized for url: https://api.telegram.org/bot8717821001:AAHS61rxysmE7j4GsF844CiGLe5jJNvKfC8/getUpdates?offset=236833051&timeout=0&limit=100
+[telegram-listener] getUpdates failed: 401 Client Error: Unauthorized for url: https://api.telegram.org/bot8717821001:AAHS61rxysmE7j4GsF844CiGLe5jJNvKfC8/getUpdates?offset=236833051&timeout=0&limit=100
+[telegram-listener] getUpdates failed: 401 Client Error: Unauthorized for url: https://api.telegram.org/bot8717821001:AAHS61rxysmE7j4GsF844CiGLe5jJNvKfC8/getUpdates?offset=236833051&timeout=0&limit=100
+[telegram-listener] getUpdates failed: 401 Client Error: Unauthorized for url: https://api.telegram.org/bot8717821001:AAHS61rxysmE7j4GsF844CiGLe5jJNvKfC8/getUpdates?offset=236833051&timeout=0&limit=100
+[telegram-listener] getUpdates failed: 401 Client Error: Unauthorized for url: https://api.telegram.org/bot8717821001:AAHS61rxysmE7j4GsF844CiGLe5jJNvKfC8/getUpdates?offset=236833051&timeout=0&limit=100
+[telegram-listener] getUpdates failed: 401 Client Error: Unauthorized for url: https://api.telegram.org/bot8717821001:AAHS61rxysmE7j4GsF844CiGLe5jJNvKfC8/getUpdates?offset=236833051&timeout=0&limit=100
+[telegram-listener] getUpdates failed: 401 Client Error: Unauthorized for url: https://api.telegram.org/bot8717821001:AAHS61rxysmE7j4GsF844CiGLe5jJNvKfC8/getUpdates?offset=236833051&timeout=0&limit=100
+[telegram-listener] getUpdates failed: 401 Client Error: Unauthorized for url: https://api.telegram.org/bot8717821001:AAHS61rxysmE7j4GsF844CiGLe5jJNvKfC8/getUpdates?offset=236833051&timeout=0&limit=100

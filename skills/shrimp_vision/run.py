@@ -112,10 +112,11 @@ def analyze_snapshot(img_bytes):
 This photo may be of the tank, or it may be of something related (test strips, equipment, a product, etc). First determine if the tank itself is visible.
 
 If tank visible:
-- Neocaridina shrimp in this colony are small (1-2cm), appear red or reddish-orange, or gray/translucent. Look specifically for these.
-- Count ONLY shrimp you can clearly see. If none are visible, report 0. Do not infer, estimate, or guess hidden shrimp.
-- Assess water clarity: only mark cloudy/murky if water itself looks turbid or muddy — suspended particles, milky haze, brown tint. Glass glare, reflections, or camera angle artifacts are NOT cloudiness. Default to "clear" unless water column itself is visibly degraded.
-- Flag concerns (water quality, disease signs, equipment issues) — not shrimp count
+- Scan methodically: foreground (front glass), midground (plants/substrate), background (rear glass, hardscape, heater/filter). Shrimp hide in all zones.
+- Neocaridina shrimp are small (1-2cm). Adults: red, orange-red, or deep red. Juveniles: translucent with faint red tint, easy to miss. Berried females: darker, with visible eggs under abdomen.
+- Count any shrimp you can identify — fully visible, partially visible, or peeking out from plants/substrate. Include partial sightings. Only exclude if you genuinely cannot distinguish shrimp from debris. Err on the side of counting.
+- Assess water clarity: only mark cloudy/murky if water itself looks turbid or muddy — suspended particles, milky haze, brown tint. Glass glare, reflections, or camera artifacts are NOT cloudiness. Default "clear" unless water column itself is degraded.
+- Flag concerns (water quality, disease signs, equipment issues) — not shrimp count.
 
 If tank not visible: set tank_visible=false, describe image_subject, leave tank fields empty."""
 

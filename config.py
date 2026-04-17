@@ -17,7 +17,7 @@ CLAUDE_MODEL = "claude-sonnet-4-6"
 SKILL_MODELS = {
     "shrimp-monitor": "claude-haiku-4-5",
     "shrimp-journal": "claude-haiku-4-5",
-    "shrimp-vision": "claude-haiku-4-5",
+    "shrimp-vision": "claude-sonnet-4-6",
     "daily-log": "claude-sonnet-4-6",
     "skill-writer": "claude-sonnet-4-6",
     "tweet-log": "claude-haiku-4-5",
@@ -27,7 +27,7 @@ SKILL_MODELS = {
 SKILL_MAX_TOKENS = {
     "shrimp-monitor": 512,
     "shrimp-journal": 1024,
-    "shrimp-vision": 512,
+    "shrimp-vision": 1024,
     "daily-log": 4096,
     "skill-writer": 4096,
     "telegram-listener": 500,

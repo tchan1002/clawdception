@@ -23,7 +23,13 @@ Both paths call `analyze_snapshot(img_bytes)` and write to the same log via `log
 
 **Failure behavior:** `process_photo` guards before sending to API — returns `None` and logs error entry if image empty or >4MB. If Claude returns no analysis, logs error entry; no event posted. Event only fires on successful analysis.
 
-**Shrimp detection hint in prompt:** Neocaridina in this colony appear red/reddish-orange or gray/translucent, 1-2cm. Prompt instructs: count only clearly visible, report 0 if none, no inference.
+**Model:** `claude-sonnet-4-6` (upgraded from haiku for better visual accuracy). Max tokens: 1024.
+
+**Shrimp detection in prompt:** Prompt biased toward finding shrimp, not away. Instructs model to:
+- Scan three zones: foreground (front glass), midground (plants/substrate), background (rear glass/hardscape)
+- Identify adults (red/orange-red/deep red), juveniles (translucent with faint red tint), berried females (darker, eggs visible)
+- Count fully visible AND partially visible shrimp — include partial sightings, err on side of counting
+- Exclude only if genuinely can't distinguish from debris
 
 **Water clarity in prompt:** Only mark `slightly_cloudy`/`cloudy`/`murky` if water column itself looks turbid or muddy — suspended particles, milky haze, brown tint. Glass glare, reflections, camera angle artifacts are NOT cloudiness. Default to `clear` unless water visibly degraded. (Tank water is crystal clear; false positives from glare were a known issue.)
 
