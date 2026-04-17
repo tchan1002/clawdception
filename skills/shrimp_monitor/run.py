@@ -456,6 +456,7 @@ def run(force=False):
         readings_recent = readings_24h[:4]  # last ~1 hour
         since_24h = (datetime.now() - timedelta(hours=24)).isoformat()
         recent_events = fetch_events(since=since_24h)
+        correction_events = fetch_events(event_type="correction", limit=10)
         notable_events = fetch_notable_events(days=14)
         last_claude_time = get_last_claude_time()
 
@@ -491,7 +492,15 @@ def run(force=False):
         colony_hours = (datetime.now() - COLONY_START).total_seconds() / 3600
         colony_line = f"{colony_hours:.1f}hr post-introduction (introduced 2026-04-13 16:00)"
 
-        prompt = f"""Day {cycle_day}. Time: {ts[:16]}. Colony: {colony_line}. Trigger: {reason}.{water_change_line}
+        corrections_lines = ""
+        if correction_events:
+            lines = []
+            for e in correction_events:
+                ts_c = e.get("timestamp", "")[:16]
+                lines.append(f"  [{ts_c}] {e.get('notes', '')}")
+            corrections_lines = "\n    ⚠ OWNER CORRECTIONS (treat as ground truth — override prior reasoning):\n" + "\n".join(lines) + "\n"
+
+        prompt = f"""Day {cycle_day}. Time: {ts[:16]}. Colony: {colony_line}. Trigger: {reason}.{water_change_line}{corrections_lines}
 
     CURRENT: Temp {latest.get('temp_f')}°F | pH {latest.get('ph')} | TDS {latest.get('tds_ppm')}ppm
 

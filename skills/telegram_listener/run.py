@@ -54,9 +54,9 @@ CLASSIFY_TOOL = {
                 "enum": [
                     "water_change", "water_test", "feeding", "observation",
                     "heater_adjust", "dosing", "maintenance", "plant_addition",
-                    "shrimp_added", "owner_note", "question"
+                    "shrimp_added", "owner_note", "question", "correction"
                 ],
-                "description": "Best-fit event type. Use question if owner is asking about tank status/parameters/history. Use owner_note if intent is unclear."
+                "description": "Best-fit event type. Use correction if owner is explicitly correcting a prior caretaker misinterpretation (e.g. 'that was a bug', 'those photos were not real', 'ignore that reading'). Use question if owner is asking about tank status/parameters/history. Use owner_note if intent is unclear."
             },
             "notes": {
                 "type": "string",

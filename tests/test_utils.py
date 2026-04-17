@@ -15,7 +15,7 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from utils import compute_stats, is_reading_stale, parse_json_response
+from utils import compute_stats, is_reading_stale, parse_json_response, NOTABLE_EVENT_TYPES
 
 
 # ---------------------------------------------------------------------------
@@ -151,3 +151,16 @@ class TestIsReadingStale:
         ts = datetime.now().isoformat()
         reading = {"timestamp": ts, "temp_f": 75.0, "ph": 7.0, "tds_ppm": 200}
         assert is_reading_stale(reading) is False
+
+
+# ---------------------------------------------------------------------------
+# NOTABLE_EVENT_TYPES — correction membership
+# ---------------------------------------------------------------------------
+
+class TestNotableEventTypes:
+    def test_correction_in_notable(self):
+        assert "correction" in NOTABLE_EVENT_TYPES
+
+    def test_core_types_present(self):
+        for t in ("water_change", "water_test", "owner_photo", "maintenance"):
+            assert t in NOTABLE_EVENT_TYPES

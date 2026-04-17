@@ -445,3 +445,19 @@ class TestRun:
                 with patch("requests.get", side_effect=Exception("timeout")):
                     run()  # must not raise
         patches["handle_text"].assert_not_called()
+
+
+# ---------------------------------------------------------------------------
+# correction event type
+# ---------------------------------------------------------------------------
+
+class TestCorrectionEventType:
+    def test_correction_in_classify_enum(self):
+        from skills.telegram_listener.run import CLASSIFY_TOOL
+        enum = CLASSIFY_TOOL["input_schema"]["properties"]["event_type"]["enum"]
+        assert "correction" in enum
+
+    def test_classify_description_mentions_correction(self):
+        from skills.telegram_listener.run import CLASSIFY_TOOL
+        desc = CLASSIFY_TOOL["input_schema"]["properties"]["event_type"]["description"]
+        assert "correction" in desc
