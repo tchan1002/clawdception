@@ -1006,3 +1006,13 @@
 {"timestamp": "2026-04-16T18:31:21.849355", "skill": "shrimp-journal", "model": "claude-haiku-4-5", "input_tokens": 4914, "output_tokens": 974, "total_tokens": 5888}
 {"timestamp": "2026-04-16T18:38:07.841640", "skill": "shrimp-vision", "model": "claude-haiku-4-5", "input_tokens": 3416, "output_tokens": 222, "total_tokens": 3638}
 {"timestamp": "2026-04-16T18:40:05.625279", "skill": "shrimp-vision", "model": "claude-haiku-4-5", "input_tokens": 3416, "output_tokens": 197, "total_tokens": 3613}
+{"timestamp": "2026-04-16T18:42:08.112725", "skill": "shrimp-vision", "model": "claude-haiku-4-5", "input_tokens": 3416, "output_tokens": 310, "total_tokens": 3726}
+{"timestamp": "2026-04-16T18:44:13.197424", "skill": "shrimp-vision", "model": "claude-haiku-4-5", "input_tokens": 3416, "output_tokens": 259, "total_tokens": 3675}
+{"timestamp": "2026-04-16T18:45:06.548989", "skill": "shrimp-monitor", "model": "claude-haiku-4-5", "input_tokens": 4707, "output_tokens": 477, "total_tokens": 5184}
+{"timestamp": "2026-04-16T18:46:07.945869", "skill": "shrimp-vision", "model": "claude-haiku-4-5", "input_tokens": 3416, "output_tokens": 222, "total_tokens": 3638}
+{"timestamp": "2026-04-16T18:48:06.376384", "skill": "shrimp-vision", "model": "claude-haiku-4-5", "input_tokens": 3416, "output_tokens": 195, "total_tokens": 3611}
+{"timestamp": "2026-04-16T18:50:06.508112", "skill": "shrimp-vision", "model": "claude-haiku-4-5", "input_tokens": 3416, "output_tokens": 192, "total_tokens": 3608}
+{"timestamp": "2026-04-16T18:52:06.806439", "skill": "shrimp-vision", "model": "claude-haiku-4-5", "input_tokens": 3416, "output_tokens": 223, "total_tokens": 3639}
+{"timestamp": "2026-04-16T18:54:08.415237", "skill": "shrimp-vision", "model": "claude-haiku-4-5", "input_tokens": 3416, "output_tokens": 298, "total_tokens": 3714}
+{"timestamp": "2026-04-16T18:56:07.310293", "skill": "shrimp-vision", "model": "claude-haiku-4-5", "input_tokens": 3416, "output_tokens": 225, "total_tokens": 3641}
+{"timestamp": "2026-04-16T18:58:07.023142", "skill": "shrimp-vision", "model": "claude-haiku-4-5", "input_tokens": 3416, "output_tokens": 228, "total_tokens": 3644}
