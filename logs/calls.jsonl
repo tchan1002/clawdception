@@ -184,3 +184,6 @@
 {"timestamp": "2026-04-16T18:23:54.497029", "urgency": "info", "message": "Journal \u2014 Day 26 \u00b7 2026-04-16 18:23", "sent_via": "telegram"}
 {"timestamp": "2026-04-16T18:28:37.178446", "urgency": "info", "message": "Journal \u2014 Day 26 \u00b7 2026-04-16 18:28", "sent_via": "telegram"}
 {"timestamp": "2026-04-16T18:31:22.540824", "urgency": "info", "message": "Journal \u2014 Day 26 \u00b7 2026-04-16 18:31", "sent_via": "telegram"}
+{"timestamp": "2026-04-16T20:00:07.614105", "urgency": "info", "message": "\u2705 All clear \u2014 T=76.44\u00b0F pH=6.38 TDS=186.0ppm\nAll parameters solid and stable; 76-hour acclimation progressing normally. Moss-digging is healthy naturalist behavior\u2014shrimp foraging and burrowing are exactly what you want to see this early.", "sent_via": "telegram"}
+{"timestamp": "2026-04-16T20:02:04.162860", "urgency": "warning", "message": "Photo received but download failed \u2014 event logged without image.", "sent_via": "telegram"}
+{"timestamp": "2026-04-16T20:02:07.530503", "urgency": "info", "message": "Logged as owner note: Toby clarifying a previous statement \u2014 \"they like it\" (referencing unknown subject/context) \u2713", "sent_via": "telegram"}
