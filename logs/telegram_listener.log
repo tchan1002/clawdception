@@ -2202,3 +2202,13 @@ Concerns: none
 [telegram-listener] Processed 6 message(s), offset now 236833036
 [call-toby] Telegram sent (info): Proposal `2026-04-16-manualtestreconciler` rejected.
 [telegram-listener] Processed 1 message(s), offset now 236833037
+[telegram-listener] Photo saved: 2026-04-17_00-26-03.jpg — ''
+[call-toby] Telegram sent (info): 1 shrimp visible · water: clear · plants: thriving
+Concerns: none
+
+A single cherry shrimp — vibrant red coloration — grips a dark plant stem or piece of hardscape in what appears to be a close-up macro shot. The shrimp is active and well-positioned; water is clear. The image is out of focus and tight, making broader tank assessment difficult, but the animal itself appears healthy and mobile.
+[telegram-listener] Vision reply sent
+[telegram-listener] Processed 1 message(s), offset now 236833038
+[telegram-listener] 'removed 2 tiny snails from the tank' → maintenance
+[call-toby] Telegram sent (info): Logged as maintenance: Removed 2 tiny snails from the tank manually. ✓
+[telegram-listener] Processed 1 message(s), offset now 236833039
