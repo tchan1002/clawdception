@@ -2242,3 +2242,17 @@ Concerns: Plant foliage yellowing and wilting — signs of nutrient stress or ni
 Day 27 of nitrogen cycle: A side view of the tank showing substrate, planted flora with yellowed/wilting foliage, no visible shrimp in frame. Water appears clear. Substrate is thoroughly covered with fine dark pellets, appearing clean. A mesh-like structure (possibly an intake guard or decor) is visible on the right. Sunlit ambient conditions suggest natural light exposure through the tank setup.
 [telegram-listener] Vision reply sent
 [telegram-listener] Processed 1 message(s), offset now 236833043
+[telegram-listener] Photo saved: 2026-04-17_16-12-04.jpg — 'duckweed growth tray today. put it in a sunny spot. hoping to track increase in biomass with a spare esp32 cam.'
+[telegram-listener] Message handling failed: 'water_clarity'
+[call-toby] Telegram failed: 400 Client Error: Bad Request for url: https://api.telegram.org/bot8717821001:AAHS61rxysmE7j4GsF844CiGLe5jJNvKfC8/sendMessage — falling back to log file
+[call-toby] ⚠️ Error processing message — check logs: 'water_clarity'
+[telegram-listener] Processed 1 message(s), offset now 236833044
+[telegram-listener] 'growth lights got here today, will install tonight' → maintenance
+[call-toby] Telegram sent (info): Logged as maintenance: Owner received growth lights; plans to install tonight. ✓
+[telegram-listener] 'how much light should shrimp get? do they sleep?' → question
+[call-toby] Telegram sent (info): Neocaridina do well with 8–10 hours of light a day — enough to grow algae and plants without triggering blooms. And yes, they sleep! They go still and dim their activity in dark periods, often tucking into low spots. A consistent light schedule matters more than intensity — their little circadian rhythms appreciate the routine.
+[telegram-listener] Processed 2 message(s), offset now 236833046
+[call-toby] Telegram sent (info): Proposal `2026-04-17-sensorcalibrationwatch` rejected and archived.
+[call-toby] Telegram sent (info): Proposal `2026-04-17-sensorcalibrationwatch` rejected and archived.
+[call-toby] Telegram sent (info): Proposal `2026-04-17-sensorcalibrationwatch` rejected and archived.
+[telegram-listener] Processed 3 message(s), offset now 236833049
