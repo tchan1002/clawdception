@@ -1206,3 +1206,198 @@ Traceback (most recent call last):
     f"{analysis['shrimp_count_estimate']} shrimp visible · "
        ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
 KeyError: 'shrimp_count_estimate'
+[telegram-listener] Photo saved: 2026-04-16_22-00-03.jpg — 'chilling by the moss'
+Traceback (most recent call last):
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 539, in <module>
+    run()
+    ~~~^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 527, in run
+    handle_photo(msg, token)
+    ~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 227, in handle_photo
+    call_toby(format_vision_reply(analysis, caption), urgency="info")
+              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 205, in format_vision_reply
+    f"{analysis['shrimp_count_estimate']} shrimp visible · "
+       ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'shrimp_count_estimate'
+[telegram-listener] Photo saved: 2026-04-16_22-02-03.jpg — 'chilling by the moss'
+Traceback (most recent call last):
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 539, in <module>
+    run()
+    ~~~^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 527, in run
+    handle_photo(msg, token)
+    ~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 227, in handle_photo
+    call_toby(format_vision_reply(analysis, caption), urgency="info")
+              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 205, in format_vision_reply
+    f"{analysis['shrimp_count_estimate']} shrimp visible · "
+       ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'shrimp_count_estimate'
+[telegram-listener] Photo saved: 2026-04-16_22-04-03.jpg — 'chilling by the moss'
+Traceback (most recent call last):
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 539, in <module>
+    run()
+    ~~~^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 527, in run
+    handle_photo(msg, token)
+    ~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 227, in handle_photo
+    call_toby(format_vision_reply(analysis, caption), urgency="info")
+              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 205, in format_vision_reply
+    f"{analysis['shrimp_count_estimate']} shrimp visible · "
+       ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'shrimp_count_estimate'
+[telegram-listener] Photo saved: 2026-04-16_22-06-03.jpg — 'chilling by the moss'
+Traceback (most recent call last):
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 539, in <module>
+    run()
+    ~~~^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 527, in run
+    handle_photo(msg, token)
+    ~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 227, in handle_photo
+    call_toby(format_vision_reply(analysis, caption), urgency="info")
+              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 205, in format_vision_reply
+    f"{analysis['shrimp_count_estimate']} shrimp visible · "
+       ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'shrimp_count_estimate'
+[telegram-listener] Photo saved: 2026-04-16_22-08-03.jpg — 'chilling by the moss'
+Traceback (most recent call last):
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 539, in <module>
+    run()
+    ~~~^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 527, in run
+    handle_photo(msg, token)
+    ~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 227, in handle_photo
+    call_toby(format_vision_reply(analysis, caption), urgency="info")
+              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 205, in format_vision_reply
+    f"{analysis['shrimp_count_estimate']} shrimp visible · "
+       ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'shrimp_count_estimate'
+[telegram-listener] Photo saved: 2026-04-16_22-10-03.jpg — 'chilling by the moss'
+Traceback (most recent call last):
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 539, in <module>
+    run()
+    ~~~^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 527, in run
+    handle_photo(msg, token)
+    ~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 227, in handle_photo
+    call_toby(format_vision_reply(analysis, caption), urgency="info")
+              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 205, in format_vision_reply
+    f"{analysis['shrimp_count_estimate']} shrimp visible · "
+       ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'shrimp_count_estimate'
+[telegram-listener] Photo saved: 2026-04-16_22-12-03.jpg — 'chilling by the moss'
+Traceback (most recent call last):
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 539, in <module>
+    run()
+    ~~~^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 527, in run
+    handle_photo(msg, token)
+    ~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 227, in handle_photo
+    call_toby(format_vision_reply(analysis, caption), urgency="info")
+              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 205, in format_vision_reply
+    f"{analysis['shrimp_count_estimate']} shrimp visible · "
+       ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'shrimp_count_estimate'
+[telegram-listener] Photo saved: 2026-04-16_22-14-03.jpg — 'chilling by the moss'
+Traceback (most recent call last):
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 539, in <module>
+    run()
+    ~~~^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 527, in run
+    handle_photo(msg, token)
+    ~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 227, in handle_photo
+    call_toby(format_vision_reply(analysis, caption), urgency="info")
+              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 205, in format_vision_reply
+    f"{analysis['shrimp_count_estimate']} shrimp visible · "
+       ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'shrimp_count_estimate'
+[telegram-listener] Photo saved: 2026-04-16_22-16-02.jpg — 'chilling by the moss'
+Traceback (most recent call last):
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 539, in <module>
+    run()
+    ~~~^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 527, in run
+    handle_photo(msg, token)
+    ~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 227, in handle_photo
+    call_toby(format_vision_reply(analysis, caption), urgency="info")
+              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 205, in format_vision_reply
+    f"{analysis['shrimp_count_estimate']} shrimp visible · "
+       ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'shrimp_count_estimate'
+[telegram-listener] Photo saved: 2026-04-16_22-18-03.jpg — 'chilling by the moss'
+Traceback (most recent call last):
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 539, in <module>
+    run()
+    ~~~^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 527, in run
+    handle_photo(msg, token)
+    ~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 227, in handle_photo
+    call_toby(format_vision_reply(analysis, caption), urgency="info")
+              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 205, in format_vision_reply
+    f"{analysis['shrimp_count_estimate']} shrimp visible · "
+       ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'shrimp_count_estimate'
+[telegram-listener] Photo saved: 2026-04-16_22-20-02.jpg — 'chilling by the moss'
+Traceback (most recent call last):
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 539, in <module>
+    run()
+    ~~~^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 527, in run
+    handle_photo(msg, token)
+    ~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 227, in handle_photo
+    call_toby(format_vision_reply(analysis, caption), urgency="info")
+              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 205, in format_vision_reply
+    f"{analysis['shrimp_count_estimate']} shrimp visible · "
+       ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'shrimp_count_estimate'
+[telegram-listener] Photo saved: 2026-04-16_22-22-02.jpg — 'chilling by the moss'
+Traceback (most recent call last):
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 593, in <module>
+    run()
+    ~~~^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 581, in run
+    handle_photo(msg, token)
+    ~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 228, in handle_photo
+    call_toby(format_vision_reply(analysis, caption), urgency="info")
+              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 206, in format_vision_reply
+    f"{analysis['shrimp_count_estimate']} shrimp visible · "
+       ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'shrimp_count_estimate'
+[telegram-listener] Photo saved: 2026-04-16_22-24-03.jpg — 'chilling by the moss'
+Traceback (most recent call last):
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 593, in <module>
+    run()
+    ~~~^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 581, in run
+    handle_photo(msg, token)
+    ~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 228, in handle_photo
+    call_toby(format_vision_reply(analysis, caption), urgency="info")
+              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 206, in format_vision_reply
+    f"{analysis['shrimp_count_estimate']} shrimp visible · "
+       ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'shrimp_count_estimate'

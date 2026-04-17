@@ -43,6 +43,7 @@ from skills.shrimp_vision.run import process_photo
 PHOTOS_DIR = Path("snapshots/photos")
 OFFSET_FILE = Path("logs/telegram_offset.txt")
 PENDING_EDIT_FILE = Path("state/pending_edit.json")
+PENDING_PROPOSAL_FILE = Path("state/pending_proposal.json")
 
 CLASSIFY_TOOL = {
     "name": "classify_event",
@@ -234,6 +235,11 @@ def handle_photo(msg, token):
 
 
 def handle_text(text):
+    pending_proposal = get_pending_proposal()
+    if pending_proposal:
+        handle_proposal_reply(text, pending_proposal)
+        return
+
     pending = get_pending_edit()
     if pending:
         handle_edit_reply(text, pending)
@@ -315,6 +321,54 @@ def reject_proposal(proposal_id):
             "status": "rejected",
             "rejected_at": datetime.now().isoformat(),
         }))
+
+
+def set_pending_proposal(proposal_id):
+    PENDING_PROPOSAL_FILE.parent.mkdir(parents=True, exist_ok=True)
+    PENDING_PROPOSAL_FILE.write_text(json.dumps({
+        "proposal": proposal_id,
+        "sent_at": datetime.now().isoformat(),
+    }))
+
+
+def get_pending_proposal():
+    if PENDING_PROPOSAL_FILE.exists():
+        try:
+            return json.loads(PENDING_PROPOSAL_FILE.read_text())
+        except Exception:
+            pass
+    return None
+
+
+def clear_pending_proposal():
+    if PENDING_PROPOSAL_FILE.exists():
+        PENDING_PROPOSAL_FILE.unlink()
+
+
+def handle_proposal_reply(text, pending):
+    proposal_id = pending["proposal"]
+    t = text.strip().lower()
+
+    if t in ("yes", "y", "approve", "approved", "yeah", "yep"):
+        success, msg = install_proposal(proposal_id)
+        clear_pending_proposal()
+        call_toby(msg, urgency="info" if success else "warning")
+
+    elif t in ("no", "n", "reject", "rejected", "nope", "pass"):
+        reject_proposal(proposal_id)
+        clear_pending_proposal()
+        call_toby(f"Proposal `{proposal_id}` rejected.", urgency="info")
+
+    elif t in ("edit", "e", "change", "modify"):
+        clear_pending_proposal()
+        set_pending_edit(proposal_id)
+        call_toby("Send your edit instructions.", urgency="info")
+
+    else:
+        call_toby(
+            f"Awaiting response for proposal `{proposal_id}` — reply yes, no, or edit.",
+            urgency="info",
+        )
 
 
 def set_pending_edit(proposal_id):

@@ -2,7 +2,7 @@
 
 **What it does:** Once a week, reflects on the past 7 days of logs and proposes ONE new skill or ONE modification to an existing skill. Writes the full proposal to `~/clawdception/proposals/`. Never modifies existing skills directly — all changes require Toby's manual review and approval.
 
-**When it runs:** Sundays at 8:00 AM via cron.
+**When it runs:** Daily at 8:30 AM via cron. Self-gates: skips if proposal already made today.
 
 **What it reads:**
 - Last 7 daily logs

@@ -20,7 +20,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from config import MODIFIABLE_SKILLS, PATHS, PROTECTED_SKILLS, get_cycle_day
 from utils import call_claude, read_daily_logs
-from skills.call_toby.run import call_toby, send_with_buttons
+from skills.call_toby.run import call_toby, send_document
 
 # Tool definition for skill proposal
 TOOL = {
@@ -87,7 +87,7 @@ def read_all_skill_specs():
 
 
 MIN_DAILY_LOGS = 7        # don't run until we have enough history to reason from
-MIN_DAYS_BETWEEN = 7      # don't propose more than once a week
+MIN_DAYS_BETWEEN = 1      # propose daily
 
 
 def should_run():
@@ -205,23 +205,13 @@ Use the tool to submit your proposal with:
     print(f"[skill-writer] Proposal written to {proposal_dir}")
 
     proposal_id = f"{today}-{skill_name}"
-    summary = (
-        f"*New skill proposal:* `{skill_name}`\n"
-        f"Type: {result['proposal_type']}  |  Risk: {result['risk_level']}\n\n"
-        f"{result['rationale'][:300].strip()}{'...' if len(result['rationale']) > 300 else ''}"
-    )
-    sent = send_with_buttons(
-        summary,
-        buttons=[
-            ("✅ Approve", f"approve:{proposal_id}"),
-            ("❌ Reject",  f"reject:{proposal_id}"),
-            ("✏️ Edit",    f"edit:{proposal_id}"),
-        ],
-        urgency="info",
-    )
-    if not sent:
-        # Fallback if Telegram failed
-        call_toby(f"New skill proposal: {skill_name} — review at proposals/{proposal_id}/", urgency="info")
+    proposal_file = proposal_dir / "proposal.md"
+
+    send_document(proposal_file)
+    call_toby(f"New skill proposal: `{skill_name}` ({result['proposal_type']}, risk: {result['risk_level']}) — reply yes, no, or edit", urgency="info")
+
+    from skills.telegram_listener.run import set_pending_proposal
+    set_pending_proposal(proposal_id)
 
 
 if __name__ == "__main__":
