@@ -8,25 +8,19 @@ Polls Telegram every 2min. Reads messages from owner chat only. Three message ty
 
 ```
 update
-  callback_query → handle_callback_query (approve/reject/edit proposal buttons)
+  callback_query → handle_callback_query (approve/reject proposal buttons)
   photo          → handle_photo → shrimp_vision.process_photo → vision reply via call_toby
   text/caption   → handle_text
-    pending_edit? → handle_edit_reply (proposal edit flow)
-    is_question?  → answer_question (heuristic pre-filter — no Claude classify call)
-    else          → classify_message (Claude tool call) → post_event + ack
+                   → classify_message (single Claude tool call)
+                     event_type == "question" → answer_question → call_toby reply
+                     else                     → post_event + ack via call_toby
 ```
-
-## `is_question` heuristic
-
-Runs before any Claude call. Routes to `answer_question` directly if:
-- text ends with `?`
-- text starts with: what / how / why / when / is / are / do / does / did / can / should / will
-
-No LLM cost for obvious questions. Edge cases that slip through get classified as `owner_note`.
 
 ## `classify_message`
 
-Single Claude tool call. `CLASSIFY_TOOL` enum: `water_change`, `water_test`, `feeding`, `observation`, `heater_adjust`, `dosing`, `maintenance`, `plant_addition`, `shrimp_added`, `owner_note`. No `question` type — routing handled upstream by heuristic.
+Single Claude tool call. `CLASSIFY_TOOL` enum: `water_change`, `water_test`, `feeding`, `observation`, `heater_adjust`, `dosing`, `maintenance`, `plant_addition`, `shrimp_added`, `owner_note`, `question`.
+
+Use `question` when owner asks about tank status, parameters, history, or advice. Use `owner_note` if intent unclear.
 
 Returns `{event_type, notes, data}`. `data.source = "telegram"` always injected by `handle_text`.
 
@@ -40,19 +34,21 @@ Builds context from: latest reading, 24hr events, 7-day notable events (owner_ph
 
 Download failure: logs `owner_photo` event with `error: download_failed`, sends warning.
 
+`format_vision_reply` outputs: caption (if present), shrimp count, water clarity, plant health, algae description (if visible), concerns, narrative.
+
 ## Proposal review (callback_query flow)
 
-Inline buttons on proposal messages: approve / reject / edit.
-- approve → `install_proposal` → copies run.py + SKILL.md to skills/{name}/
-- reject → writes status.json
-- edit → sets `state/pending_edit.json`, next text message → `handle_edit_reply` → `apply_edit_to_proposal` (Claude rewrites files) → re-sends proposal with buttons
+Inline buttons on proposal messages: approve / reject only (no edit flow).
+- approve → `install_proposal` → copies run.py + SKILL.md to skills/{name}/, writes status.json
+- reject → writes status.json as rejected
+
+Proposals sent by `skill_writer` via `send_with_buttons` — no text-based state machine.
 
 ## State files
 
 | File | Purpose |
 |------|---------|
 | `logs/telegram_offset.txt` | Last processed update_id + 1 |
-| `state/pending_edit.json` | Set when waiting for edit instructions; cleared after apply |
 
 ## Dependencies
 

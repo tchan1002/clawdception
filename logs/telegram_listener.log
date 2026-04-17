@@ -2106,3 +2106,99 @@ Traceback (most recent call last):
     lines.append(f"\n{analysis['narrative']}")
                       ~~~~~~~~^^^^^^^^^^^^^
 KeyError: 'narrative'
+[telegram-listener] Photo saved: 2026-04-17_00-00-02.jpg — 'chilling by the moss'
+Traceback (most recent call last):
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 593, in <module>
+    run()
+    ~~~^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 581, in run
+    handle_photo(msg, token)
+    ~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 228, in handle_photo
+    call_toby(format_vision_reply(analysis, caption), urgency="info")
+              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 214, in format_vision_reply
+    lines.append(f"\n{analysis['narrative']}")
+                      ~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'narrative'
+[telegram-listener] Photo saved: 2026-04-17_00-02-03.jpg — 'chilling by the moss'
+Traceback (most recent call last):
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 593, in <module>
+    run()
+    ~~~^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 581, in run
+    handle_photo(msg, token)
+    ~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 228, in handle_photo
+    call_toby(format_vision_reply(analysis, caption), urgency="info")
+              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 214, in format_vision_reply
+    lines.append(f"\n{analysis['narrative']}")
+                      ~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'narrative'
+[telegram-listener] Photo saved: 2026-04-17_00-04-03.jpg — 'chilling by the moss'
+Traceback (most recent call last):
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 593, in <module>
+    run()
+    ~~~^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 581, in run
+    handle_photo(msg, token)
+    ~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 228, in handle_photo
+    call_toby(format_vision_reply(analysis, caption), urgency="info")
+              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 214, in format_vision_reply
+    lines.append(f"\n{analysis['narrative']}")
+                      ~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'narrative'
+[telegram-listener] Photo saved: 2026-04-17_00-06-02.jpg — 'chilling by the moss'
+Traceback (most recent call last):
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 593, in <module>
+    run()
+    ~~~^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 581, in run
+    handle_photo(msg, token)
+    ~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 228, in handle_photo
+    call_toby(format_vision_reply(analysis, caption), urgency="info")
+              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 214, in format_vision_reply
+    lines.append(f"\n{analysis['narrative']}")
+                      ~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'narrative'
+[telegram-listener] Photo saved: 2026-04-17_00-08-03.jpg — 'chilling by the moss'
+Traceback (most recent call last):
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 593, in <module>
+    run()
+    ~~~^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 581, in run
+    handle_photo(msg, token)
+    ~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 228, in handle_photo
+    call_toby(format_vision_reply(analysis, caption), urgency="info")
+              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/clawdception/skills/telegram_listener/run.py", line 214, in format_vision_reply
+    lines.append(f"\n{analysis['narrative']}")
+                      ~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'narrative'
+[telegram-listener] Photo saved: 2026-04-17_00-10-03.jpg — 'chilling by the moss'
+[call-toby] Telegram sent (info): "chilling by the moss"
+1 shrimp visible · water: clear · plants: thriving
+Algae: Dense, feathery bright green filamentous algae (likely hair algae or similar fast-growing variety) covering the foreground. Growth is lush and prominent, indicating nutrient availability during the nitrogen cycle phase.
+Concerns: Significant algae bloom — expected during nitrogen cycle but worth monitoring to prevent overgrowth, Only one shrimp visible in frame; unclear if others are out of view or if colony is smaller than expected at day 27
+[telegram-listener] Vision reply sent
+[call-toby] Telegram sent (info): Awaiting response for proposal `2026-04-16-manualtestreconciler` — reply yes, no, or edit.
+[call-toby] Telegram sent (info): Awaiting response for proposal `2026-04-16-manualtestreconciler` — reply yes, no, or edit.
+[telegram-listener] Photo saved: 2026-04-17_00-10-10.jpg — 'look at this big boy'
+[call-toby] Telegram sent (info): "look at this big boy"
+1 shrimp visible · water: clear · plants: stable
+Concerns: none
+[telegram-listener] Vision reply sent
+[telegram-listener] Photo saved: 2026-04-17_00-10-14.jpg — ''
+[call-toby] Telegram sent (info): 1 shrimp visible · water: clear · plants: stable
+Concerns: none
+[telegram-listener] Vision reply sent
+[call-toby] Telegram sent (info): Awaiting response for proposal `2026-04-16-manualtestreconciler` — reply yes, no, or edit.
+[telegram-listener] Processed 6 message(s), offset now 236833036
+[call-toby] Telegram sent (info): Proposal `2026-04-16-manualtestreconciler` rejected.
+[telegram-listener] Processed 1 message(s), offset now 236833037

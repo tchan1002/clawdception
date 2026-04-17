@@ -42,8 +42,6 @@ from skills.shrimp_vision.run import process_photo
 
 PHOTOS_DIR = Path("snapshots/photos")
 OFFSET_FILE = Path("logs/telegram_offset.txt")
-PENDING_EDIT_FILE = Path("state/pending_edit.json")
-PENDING_PROPOSAL_FILE = Path("state/pending_proposal.json")
 
 CLASSIFY_TOOL = {
     "name": "classify_event",
@@ -56,9 +54,9 @@ CLASSIFY_TOOL = {
                 "enum": [
                     "water_change", "water_test", "feeding", "observation",
                     "heater_adjust", "dosing", "maintenance", "plant_addition",
-                    "shrimp_added", "owner_note"
+                    "shrimp_added", "owner_note", "question"
                 ],
-                "description": "Best-fit event type. Use owner_note if intent is unclear."
+                "description": "Best-fit event type. Use question if owner is asking about tank status/parameters/history. Use owner_note if intent is unclear."
             },
             "notes": {
                 "type": "string",
@@ -138,14 +136,6 @@ Use question if the message is asking about tank status, parameters, history, or
     except Exception as e:
         print(f"[telegram-listener] Classification failed: {e}")
         return {"event_type": "owner_note", "notes": text, "data": {"source": "telegram"}}
-
-
-def is_question(text):
-    t = text.strip().lower()
-    if t.endswith("?"):
-        return True
-    starters = ("what", "how", "why", "when", "is ", "are ", "do ", "does ", "did ", "can ", "should ", "will ")
-    return any(t.startswith(s) for s in starters)
 
 
 def answer_question(text):
@@ -235,30 +225,19 @@ def handle_photo(msg, token):
 
 
 def handle_text(text):
-    pending_proposal = get_pending_proposal()
-    if pending_proposal:
-        handle_proposal_reply(text, pending_proposal)
-        return
-
-    pending = get_pending_edit()
-    if pending:
-        handle_edit_reply(text, pending)
-        return
-
-    if is_question(text):
-        print(f"[telegram-listener] '{text}' → question — answering")
-        reply = answer_question(text)
-        call_toby(reply if reply else "Couldn't answer that right now — check logs.",
-                  urgency="info" if reply else "warning")
-        return
-
     classified = classify_message(text)
     event_type = classified.get("event_type", "owner_note")
     notes = classified.get("notes", text)
-    data = {**classified.get("data", {}), "source": "telegram"}
-    post_event(event_type, notes=notes, data=data)
     print(f"[telegram-listener] '{text}' → {event_type}")
-    call_toby(f"Logged as {event_type.replace('_', ' ')}: {notes} ✓", urgency="info")
+
+    if event_type == "question":
+        reply = answer_question(text)
+        call_toby(reply if reply else "Couldn't answer that right now — check logs.",
+                  urgency="info" if reply else "warning")
+    else:
+        data = {**classified.get("data", {}), "source": "telegram"}
+        post_event(event_type, notes=notes, data=data)
+        call_toby(f"Logged as {event_type.replace('_', ' ')}: {notes} ✓", urgency="info")
 
 
 def answer_callback(token, callback_query_id, text=""):
@@ -323,140 +302,6 @@ def reject_proposal(proposal_id):
         }))
 
 
-def set_pending_proposal(proposal_id):
-    PENDING_PROPOSAL_FILE.parent.mkdir(parents=True, exist_ok=True)
-    PENDING_PROPOSAL_FILE.write_text(json.dumps({
-        "proposal": proposal_id,
-        "sent_at": datetime.now().isoformat(),
-    }))
-
-
-def get_pending_proposal():
-    if PENDING_PROPOSAL_FILE.exists():
-        try:
-            return json.loads(PENDING_PROPOSAL_FILE.read_text())
-        except Exception:
-            pass
-    return None
-
-
-def clear_pending_proposal():
-    if PENDING_PROPOSAL_FILE.exists():
-        PENDING_PROPOSAL_FILE.unlink()
-
-
-def handle_proposal_reply(text, pending):
-    proposal_id = pending["proposal"]
-    t = text.strip().lower()
-
-    if t in ("yes", "y", "approve", "approved", "yeah", "yep"):
-        success, msg = install_proposal(proposal_id)
-        clear_pending_proposal()
-        call_toby(msg, urgency="info" if success else "warning")
-
-    elif t in ("no", "n", "reject", "rejected", "nope", "pass"):
-        reject_proposal(proposal_id)
-        clear_pending_proposal()
-        call_toby(f"Proposal `{proposal_id}` rejected.", urgency="info")
-
-    elif t in ("edit", "e", "change", "modify"):
-        clear_pending_proposal()
-        set_pending_edit(proposal_id)
-        call_toby("Send your edit instructions.", urgency="info")
-
-    else:
-        call_toby(
-            f"Awaiting response for proposal `{proposal_id}` — reply yes, no, or edit.",
-            urgency="info",
-        )
-
-
-def set_pending_edit(proposal_id):
-    PENDING_EDIT_FILE.parent.mkdir(parents=True, exist_ok=True)
-    PENDING_EDIT_FILE.write_text(json.dumps({
-        "proposal": proposal_id,
-        "waiting_since": datetime.now().isoformat(),
-    }))
-
-
-def get_pending_edit():
-    if PENDING_EDIT_FILE.exists():
-        try:
-            return json.loads(PENDING_EDIT_FILE.read_text())
-        except Exception:
-            pass
-    return None
-
-
-def clear_pending_edit():
-    if PENDING_EDIT_FILE.exists():
-        PENDING_EDIT_FILE.unlink()
-
-
-def apply_edit_to_proposal(proposal_id, instructions):
-    """Ask Claude to rewrite the proposal files based on edit instructions. Returns summary."""
-    proposal_dir = PATHS["proposals"] / proposal_id
-    proposal_md = proposal_dir / "proposal.md"
-    run_py = proposal_dir / "run.py"
-
-    current_proposal = proposal_md.read_text() if proposal_md.exists() else ""
-    current_run = run_py.read_text() if run_py.exists() else ""
-
-    EDIT_TOOL = {
-        "name": "apply_proposal_edit",
-        "description": "Apply edit instructions to a skill proposal",
-        "input_schema": {
-            "type": "object",
-            "properties": {
-                "updated_proposal_md": {
-                    "type": "string",
-                    "description": "Full updated content for proposal.md"
-                },
-                "updated_run_py": {
-                    "type": "string",
-                    "description": "Full updated content for run.py (pass empty string if unchanged)"
-                },
-                "summary": {
-                    "type": "string",
-                    "description": "1-2 sentence summary of what changed, for the Telegram reply"
-                },
-            },
-            "required": ["updated_proposal_md", "updated_run_py", "summary"],
-        }
-    }
-
-    prompt = f"""You are editing a skill proposal for the Media Luna shrimp tank system.
-
-CURRENT proposal.md:
-{current_proposal}
-
-CURRENT run.py:
-{current_run[:2000] if current_run else '(no run.py yet)'}
-
-EDIT INSTRUCTIONS FROM TOBY:
-{instructions}
-
-Apply the edit instructions. Return the full updated files and a short summary of what changed."""
-
-    try:
-        result = call_claude(
-            messages=[{"role": "user", "content": prompt}],
-            skill_name="skill-writer",
-            tools=[EDIT_TOOL],
-            tool_name=EDIT_TOOL["name"],
-        )
-    except Exception as e:
-        print(f"[telegram-listener] Edit Claude call failed: {e}")
-        return None
-
-    if result.get("updated_proposal_md"):
-        proposal_md.write_text(result["updated_proposal_md"])
-    if result.get("updated_run_py"):
-        run_py.write_text(result["updated_run_py"])
-
-    return result.get("summary", "Proposal updated.")
-
-
 def handle_callback_query(token, chat_id, callback_query):
     """Handle inline button taps (approve / reject / edit)."""
     cq_id = callback_query["id"]
@@ -478,61 +323,8 @@ def handle_callback_query(token, chat_id, callback_query):
         answer_callback(token, cq_id, "Rejected.")
         call_toby(f"Proposal `{proposal_id}` rejected and archived.", urgency="info")
 
-    elif action == "edit":
-        set_pending_edit(proposal_id)
-        answer_callback(token, cq_id, "Send me your edit instructions.")
-        call_toby(
-            f"Ready to edit `{proposal_id}`. Send your instructions as a message.",
-            urgency="info",
-        )
-
     else:
         answer_callback(token, cq_id, "Unknown action.")
-
-
-def handle_edit_reply(text, pending):
-    """Process an edit instruction message while a proposal edit is pending."""
-    proposal_id = pending["proposal"]
-    print(f"[telegram-listener] Applying edit to {proposal_id}: {text!r}")
-    summary = apply_edit_to_proposal(proposal_id, text)
-    clear_pending_edit()
-
-    if summary is None:
-        call_toby("Edit failed — check logs. Proposal unchanged.", urgency="warning")
-        return
-
-    # Re-read updated proposal for the summary message
-    proposal_dir = PATHS["proposals"] / proposal_id
-    proposal_md = proposal_dir / "proposal.md"
-    proposal_text = proposal_md.read_text() if proposal_md.exists() else ""
-    # Pull first ~200 chars of rationale for the preview
-    preview = ""
-    in_rationale = False
-    for line in proposal_text.splitlines():
-        if line.startswith("## Rationale"):
-            in_rationale = True
-            continue
-        if in_rationale and line.startswith("##"):
-            break
-        if in_rationale and line.strip():
-            preview += line + " "
-        if len(preview) > 200:
-            preview = preview[:200] + "..."
-            break
-
-    # Re-extract name/type/risk from proposal.md header
-    parts = proposal_id.split("-")
-    skill_name = "-".join(parts[3:]) if len(parts) > 3 else proposal_id
-    msg = f"*Updated proposal:* `{skill_name}`\n\n{summary}\n\n{preview.strip()}"
-    send_with_buttons(
-        msg,
-        buttons=[
-            ("✅ Approve", f"approve:{proposal_id}"),
-            ("❌ Reject",  f"reject:{proposal_id}"),
-            ("✏️ Edit",    f"edit:{proposal_id}"),
-        ],
-        urgency="info",
-    )
 
 
 def run():
@@ -577,10 +369,14 @@ def run():
         if not msg or str(msg.get("chat", {}).get("id", "")) != str(chat_id):
             continue
 
-        if "photo" in msg:
-            handle_photo(msg, token)
-        elif text := (msg.get("text") or msg.get("caption")):
-            handle_text(text)
+        try:
+            if "photo" in msg:
+                handle_photo(msg, token)
+            elif text := (msg.get("text") or msg.get("caption")):
+                handle_text(text)
+        except Exception as e:
+            print(f"[telegram-listener] Message handling failed: {e}")
+            call_toby(f"Error processing message — check logs: {e}", urgency="warning")
 
         processed += 1
 

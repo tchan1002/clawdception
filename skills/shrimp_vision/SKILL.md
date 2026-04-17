@@ -14,12 +14,14 @@ Both paths call `analyze_snapshot(img_bytes)` and write to the same log via `log
 - `tank_visible` — bool, whether tank appears in image (photo may be test strip, equipment, etc)
 - `shrimp_count_visible` — count of clearly-seen shrimp; 0 if none visible (no inference)
 - Water clarity, algae presence/description, substrate condition, plant health — only when `tank_visible=true`
-- List of visual concerns
+- `image_quality` — `clear` | `dark` | `blurry` | `obstructed` — physical quality of image itself; required. Distinguishes "no shrimp seen" from "couldn't see anything"
+- `narrative` — 1-2 sentence prose summary; required
+- `concerns` — list of visual anomalies; required
 - `image_subject` — what image shows if not tank
 - `owner_comment` — caption from owner (empty string if none)
 - Logged to `logs/vision/YYYY-MM-DD.jsonl`
 
-No narrative field. Output is structured event catalog only.
+**Failure behavior:** `process_photo` guards before sending to API — returns `None` and logs error entry if image empty or >4MB. If Claude returns no analysis, logs error entry; no event posted. Event only fires on successful analysis.
 
 **Shrimp detection hint in prompt:** Neocaridina in this colony appear red/reddish-orange or gray/translucent, 1-2cm. Prompt instructs: count only clearly visible, report 0 if none, no inference.
 
@@ -40,6 +42,8 @@ No narrative field. Output is structured event catalog only.
   "plant_health": "stable",
   "concerns": [],
   "image_subject": null,
+  "image_quality": "clear",
+  "narrative": "Three shrimp visible near filter. Tank looks healthy.",
   "status": "success",
   "source": "telegram"
 }
@@ -51,9 +55,21 @@ Non-tank image example:
   "timestamp": "...",
   "tank_visible": false,
   "image_subject": "test strip",
+  "image_quality": "clear",
+  "narrative": "Owner holding API test strip against light.",
   "concerns": [],
   "status": "success",
   "source": "telegram"
+}
+```
+
+Error entry (empty/oversized/API fail):
+```json
+{
+  "timestamp": "...",
+  "status": "error",
+  "reason": "empty image",
+  "filename": "photo.jpg"
 }
 ```
 

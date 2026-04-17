@@ -20,7 +20,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from config import MODIFIABLE_SKILLS, PATHS, PROTECTED_SKILLS, get_cycle_day
 from utils import call_claude, read_daily_logs
-from skills.call_toby.run import call_toby, send_document
+from skills.call_toby.run import call_toby, send_document, send_with_buttons
 
 # Tool definition for skill proposal
 TOOL = {
@@ -208,10 +208,14 @@ Use the tool to submit your proposal with:
     proposal_file = proposal_dir / "proposal.md"
 
     send_document(proposal_file)
-    call_toby(f"New skill proposal: `{skill_name}` ({result['proposal_type']}, risk: {result['risk_level']}) — reply yes, no, or edit", urgency="info")
-
-    from skills.telegram_listener.run import set_pending_proposal
-    set_pending_proposal(proposal_id)
+    send_with_buttons(
+        f"New skill proposal: `{skill_name}` ({result['proposal_type']}, risk: {result['risk_level']})",
+        buttons=[
+            ("✅ Approve", f"approve:{proposal_id}"),
+            ("❌ Reject",  f"reject:{proposal_id}"),
+        ],
+        urgency="info",
+    )
 
 
 if __name__ == "__main__":

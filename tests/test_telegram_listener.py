@@ -14,9 +14,8 @@ import pytest
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from skills.telegram_listener.run import (
-    answer_question, is_question, handle_text, format_vision_reply, handle_photo,
-    handle_proposal_reply, handle_callback_query, handle_edit_reply,
-    get_offset, save_offset, run,
+    answer_question, handle_text, format_vision_reply, handle_photo,
+    handle_callback_query, get_offset, save_offset, run,
 )
 from utils import format_recent_events
 
@@ -80,83 +79,51 @@ class TestAnswerQuestion:
         assert result is None
 
 
-class TestIsQuestion:
-    def test_question_mark_suffix(self):
-        assert is_question("is pH ok?") is True
-
-    def test_question_words(self):
-        for text in ("what is ammonia", "how are shrimp", "why is TDS high",
-                     "when did I feed", "are they stressed", "can I add more",
-                     "should I do water change", "will they survive", "did nitrite spike",
-                     "does this look normal"):
-            assert is_question(text) is True, f"Expected True for {text!r}"
-
-    def test_non_questions(self):
-        for text in ("fed them half a tab", "50% water change", "added 2 nerites",
-                     "top off tonight", "adjusted heater to 76F", ""):
-            assert is_question(text) is False, f"Expected False for {text!r}"
-
-    def test_case_insensitive(self):
-        assert is_question("WHAT is the temperature") is True
-        assert is_question("Is pH ok?") is True
-
-
 class TestHandleTextRouting:
     def _base_patches(self):
         return {
-            "get_pending_proposal": MagicMock(return_value=None),
-            "get_pending_edit": MagicMock(return_value=None),
             "call_toby": MagicMock(),
+            "answer_question": MagicMock(return_value="Tank looks good."),
+            "classify_message": MagicMock(return_value={"event_type": "owner_note", "notes": "x", "data": {}}),
+            "post_event": MagicMock(),
         }
 
-    def test_question_routes_to_answer_not_classify(self):
+    def test_question_type_routes_to_answer(self):
         patches = self._base_patches()
-        patches["answer_question"] = MagicMock(return_value="pH looks fine.")
-        patches["classify_message"] = MagicMock()
+        patches["classify_message"] = MagicMock(return_value={
+            "event_type": "question", "notes": "is pH ok?", "data": {}
+        })
         with patch.multiple("skills.telegram_listener.run", **patches):
             handle_text("is pH ok?")
         patches["answer_question"].assert_called_once_with("is pH ok?")
-        patches["classify_message"].assert_not_called()
+        patches["post_event"].assert_not_called()
 
-    def test_event_routes_to_classify_not_answer(self):
+    def test_event_type_logs_and_acks(self):
         patches = self._base_patches()
-        patches["answer_question"] = MagicMock()
         patches["classify_message"] = MagicMock(return_value={
             "event_type": "feeding", "notes": "half tab", "data": {}
         })
-        patches["post_event"] = MagicMock()
         with patch.multiple("skills.telegram_listener.run", **patches):
             handle_text("fed them half a tab")
-        patches["classify_message"].assert_called_once()
-        patches["answer_question"].assert_not_called()
         patches["post_event"].assert_called_once_with("feeding", notes="half tab",
                                                        data={"source": "telegram"})
+        patches["answer_question"].assert_not_called()
 
     def test_question_answer_failure_sends_warning(self):
         patches = self._base_patches()
+        patches["classify_message"] = MagicMock(return_value={
+            "event_type": "question", "notes": "how are they?", "data": {}
+        })
         patches["answer_question"] = MagicMock(return_value=None)
         with patch.multiple("skills.telegram_listener.run", **patches):
             handle_text("how are they?")
-        call_args = patches["call_toby"].call_args
-        assert call_args.kwargs.get("urgency") == "warning"
-
-    def test_pending_edit_routes_to_handle_edit_reply(self):
-        pending = {"proposal": "2026-04-16-some-skill", "waiting_since": "2026-04-16T10:00:00"}
-        patches = self._base_patches()
-        patches["get_pending_edit"] = MagicMock(return_value=pending)
-        patches["handle_edit_reply"] = MagicMock()
-        patches["classify_message"] = MagicMock()
-        with patch.multiple("skills.telegram_listener.run", **patches):
-            handle_text("make it run every 5 min instead")
-        patches["handle_edit_reply"].assert_called_once_with("make it run every 5 min instead", pending)
-        patches["classify_message"].assert_not_called()
+        assert patches["call_toby"].call_args.kwargs.get("urgency") == "warning"
 
     def test_classify_result_source_injected(self):
         patches = self._base_patches()
         patches["classify_message"] = MagicMock(return_value={
             "event_type": "observation", "notes": "molting shrimp", "data": {"color": "pale"}
         })
-        patches["post_event"] = MagicMock()
         with patch.multiple("skills.telegram_listener.run", **patches):
             handle_text("molting shrimp spotted")
         _, kwargs = patches["post_event"].call_args
@@ -291,72 +258,11 @@ class TestHandlePhoto:
                 pytest.fail(f"KeyError raised: {e}")
 
 
-FAKE_PROPOSAL = {"proposal": "2026-04-16-auto-feeder", "sent_at": "2026-04-16T10:00:00"}
-
-
-class TestHandleProposalReply:
-    def _patches(self):
-        return {
-            "install_proposal": MagicMock(return_value=(True, "Installed to skills/auto_feeder/")),
-            "reject_proposal": MagicMock(),
-            "clear_pending_proposal": MagicMock(),
-            "set_pending_edit": MagicMock(),
-            "call_toby": MagicMock(),
-        }
-
-    def test_yes_installs_and_clears(self):
-        for word in ("yes", "y", "approve", "approved", "yeah", "yep"):
-            patches = self._patches()
-            with patch.multiple("skills.telegram_listener.run", **patches):
-                handle_proposal_reply(word, FAKE_PROPOSAL)
-            patches["install_proposal"].assert_called_once_with("2026-04-16-auto-feeder")
-            patches["clear_pending_proposal"].assert_called_once()
-
-    def test_no_rejects_and_clears(self):
-        for word in ("no", "n", "reject", "rejected", "nope", "pass"):
-            patches = self._patches()
-            with patch.multiple("skills.telegram_listener.run", **patches):
-                handle_proposal_reply(word, FAKE_PROPOSAL)
-            patches["reject_proposal"].assert_called_once_with("2026-04-16-auto-feeder")
-            patches["clear_pending_proposal"].assert_called_once()
-
-    def test_edit_sets_pending_edit(self):
-        for word in ("edit", "e", "change", "modify"):
-            patches = self._patches()
-            with patch.multiple("skills.telegram_listener.run", **patches):
-                handle_proposal_reply(word, FAKE_PROPOSAL)
-            patches["set_pending_edit"].assert_called_once_with("2026-04-16-auto-feeder")
-            patches["clear_pending_proposal"].assert_called_once()
-
-    def test_unknown_reply_prompts_again(self):
-        patches = self._patches()
-        with patch.multiple("skills.telegram_listener.run", **patches):
-            handle_proposal_reply("sure whatever", FAKE_PROPOSAL)
-        patches["install_proposal"].assert_not_called()
-        patches["reject_proposal"].assert_not_called()
-        msg = patches["call_toby"].call_args.args[0]
-        assert "yes" in msg and "no" in msg
-
-    def test_install_failure_sends_warning(self):
-        patches = self._patches()
-        patches["install_proposal"] = MagicMock(return_value=(False, "Already exists"))
-        with patch.multiple("skills.telegram_listener.run", **patches):
-            handle_proposal_reply("yes", FAKE_PROPOSAL)
-        assert patches["call_toby"].call_args.kwargs.get("urgency") == "warning"
-
-    def test_case_insensitive(self):
-        patches = self._patches()
-        with patch.multiple("skills.telegram_listener.run", **patches):
-            handle_proposal_reply("YES", FAKE_PROPOSAL)
-        patches["install_proposal"].assert_called_once()
-
-
 class TestHandleCallbackQuery:
     def _patches(self):
         return {
             "install_proposal": MagicMock(return_value=(True, "Installed.")),
             "reject_proposal": MagicMock(),
-            "set_pending_edit": MagicMock(),
             "answer_callback": MagicMock(),
             "call_toby": MagicMock(),
         }
@@ -376,13 +282,6 @@ class TestHandleCallbackQuery:
         with patch.multiple("skills.telegram_listener.run", **patches):
             handle_callback_query("tok", "123", self._cq("reject"))
         patches["reject_proposal"].assert_called_once_with("2026-04-16-auto-feeder")
-        patches["call_toby"].assert_called_once()
-
-    def test_edit_sets_pending_and_prompts(self):
-        patches = self._patches()
-        with patch.multiple("skills.telegram_listener.run", **patches):
-            handle_callback_query("tok", "123", self._cq("edit"))
-        patches["set_pending_edit"].assert_called_once_with("2026-04-16-auto-feeder")
         patches["call_toby"].assert_called_once()
 
     def test_unknown_action_answers_callback(self):
@@ -405,40 +304,6 @@ class TestHandleCallbackQuery:
         with patch.multiple("skills.telegram_listener.run", **patches):
             handle_callback_query("tok", "123", self._cq("approve"))
         assert patches["call_toby"].call_args.kwargs.get("urgency") == "warning"
-
-
-class TestHandleEditReply:
-    def _patches(self):
-        return {
-            "apply_edit_to_proposal": MagicMock(return_value="Interval changed to 5min."),
-            "clear_pending_edit": MagicMock(),
-            "send_with_buttons": MagicMock(),
-            "call_toby": MagicMock(),
-        }
-
-    def test_success_clears_edit_and_sends_buttons(self):
-        pending = {"proposal": "2026-04-16-auto-feeder", "waiting_since": "2026-04-16T10:00:00"}
-        patches = self._patches()
-        # patch proposal_dir existence so handle_edit_reply doesn't read real fs
-        fake_proposal_dir = MagicMock()
-        fake_proposal_dir.exists.return_value = False
-        fake_paths = {"proposals": MagicMock()}
-        fake_paths["proposals"].__truediv__ = MagicMock(return_value=fake_proposal_dir)
-        with patch.multiple("skills.telegram_listener.run", **patches):
-            with patch("skills.telegram_listener.run.PATHS", fake_paths):
-                handle_edit_reply("run every 5 min", pending)
-        patches["clear_pending_edit"].assert_called_once()
-        patches["send_with_buttons"].assert_called_once()
-
-    def test_claude_failure_sends_warning(self):
-        pending = {"proposal": "2026-04-16-auto-feeder", "waiting_since": "2026-04-16T10:00:00"}
-        patches = self._patches()
-        patches["apply_edit_to_proposal"] = MagicMock(return_value=None)
-        with patch.multiple("skills.telegram_listener.run", **patches):
-            handle_edit_reply("run every 5 min", pending)
-        patches["clear_pending_edit"].assert_called_once()
-        assert patches["call_toby"].call_args.kwargs.get("urgency") == "warning"
-        patches["send_with_buttons"].assert_not_called()
 
 
 class TestOffsetReadWrite:

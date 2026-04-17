@@ -22,6 +22,7 @@ from config import PATHS, API_BASE, get_cycle_day
 from utils import call_claude, post_event
 
 SNAPSHOT_MAX_AGE_MINUTES = 30
+SNAPSHOT_MAX_BYTES = 4 * 1024 * 1024  # 4MB
 
 TOOL = {
     "name": "analyze_tank_image",
@@ -67,9 +68,18 @@ TOOL = {
             "image_subject": {
                 "type": "string",
                 "description": "What this image is of, if not the tank (e.g. 'test strip', 'equipment', 'full tank shot')"
+            },
+            "narrative": {
+                "type": "string",
+                "description": "1-2 sentence prose summary of what's visible — shrimp behavior, tank conditions, anything notable"
+            },
+            "image_quality": {
+                "type": "string",
+                "enum": ["clear", "dark", "blurry", "obstructed"],
+                "description": "Physical quality of the image itself — dark if underexposed, blurry if out of focus, obstructed if lens/glass blocks view"
             }
         },
-        "required": ["tank_visible", "concerns"]
+        "required": ["tank_visible", "concerns", "narrative", "image_quality"]
     }
 }
 
@@ -144,14 +154,22 @@ def log_entry(entry):
 def process_photo(img_bytes, filename, caption=None, source="esp32"):
     """Analyze photo, log vision entry, post owner_photo event. Returns analysis dict or None."""
     ts = datetime.now().isoformat()
+
+    if not img_bytes:
+        log_entry({"timestamp": ts, "status": "error", "reason": "empty image", "filename": filename})
+        return None
+    if len(img_bytes) > SNAPSHOT_MAX_BYTES:
+        log_entry({"timestamp": ts, "status": "error", "reason": f"image too large ({len(img_bytes)} bytes)", "filename": filename})
+        return None
+
     analysis = analyze_snapshot(img_bytes)
-    if analysis:
-        log_entry({**analysis, "timestamp": ts, "filename": filename, "status": "success",
-                   "source": source, "owner_comment": caption})
-    event_data = {"filename": filename, "source": source}
-    if analysis:
-        event_data.update(analysis)
-    post_event("owner_photo", notes=caption or "", data=event_data)
+    if not analysis:
+        log_entry({"timestamp": ts, "status": "error", "reason": "claude returned no analysis", "filename": filename})
+        return None
+
+    log_entry({**analysis, "timestamp": ts, "filename": filename, "status": "success",
+               "source": source, "owner_comment": caption})
+    post_event("owner_photo", notes=caption or "", data={"filename": filename, "source": source, **analysis})
     return analysis
 
 
@@ -173,8 +191,9 @@ def run(force=False):
             if analysis.get("tank_visible"):
                 count = analysis.get("shrimp_count_visible", "?")
                 clarity = analysis.get("water_clarity", "unknown")
+                quality = analysis.get("image_quality", "unknown")
                 print(f"[shrimp-vision] {ts[:16]} — {count} shrimp visible | "
-                      f"{clarity} water | concerns: {concerns_str}")
+                      f"{clarity} water | quality: {quality} | concerns: {concerns_str}")
             else:
                 subject = analysis.get("image_subject", "unknown subject")
                 print(f"[shrimp-vision] {ts[:16]} — tank not visible ({subject}) | concerns: {concerns_str}")

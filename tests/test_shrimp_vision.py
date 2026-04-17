@@ -140,24 +140,43 @@ class TestProcessPhoto:
         assert entry["shrimp_count_visible"] == 2
         assert entry["status"] == "success"
 
-    def test_event_posted_even_when_analysis_fails(self):
+    def test_no_event_when_analysis_fails(self):
         with patch("skills.shrimp_vision.run.analyze_snapshot", return_value=None), \
              patch("skills.shrimp_vision.run.post_event") as mock_post:
             result = process_photo(FAKE_JPEG, "photo.jpg", source="telegram")
 
         assert result is None
-        mock_post.assert_called_once()
-        data = mock_post.call_args.kwargs["data"]
-        assert data["filename"] == "photo.jpg"
-        assert "shrimp_count_visible" not in data
+        mock_post.assert_not_called()
 
-    def test_no_log_entry_when_analysis_fails(self):
+    def test_error_logged_when_analysis_fails(self):
         with patch("skills.shrimp_vision.run.analyze_snapshot", return_value=None), \
              patch("skills.shrimp_vision.run.post_event"), \
              patch("skills.shrimp_vision.run.log_entry") as mock_log:
             process_photo(FAKE_JPEG, "photo.jpg")
 
-        mock_log.assert_not_called()
+        mock_log.assert_called_once()
+        entry = mock_log.call_args.args[0]
+        assert entry["status"] == "error"
+        assert "reason" in entry
+
+    def test_empty_image_returns_none(self):
+        with patch("skills.shrimp_vision.run.log_entry") as mock_log, \
+             patch("skills.shrimp_vision.run.post_event") as mock_post:
+            result = process_photo(b"", "photo.jpg")
+        assert result is None
+        mock_post.assert_not_called()
+        entry = mock_log.call_args.args[0]
+        assert entry["status"] == "error"
+
+    def test_oversized_image_returns_none(self):
+        big = b"\xff\xd8\xff" + b"\x00" * (4 * 1024 * 1024 + 1)
+        with patch("skills.shrimp_vision.run.log_entry") as mock_log, \
+             patch("skills.shrimp_vision.run.post_event") as mock_post:
+            result = process_photo(big, "photo.jpg")
+        assert result is None
+        mock_post.assert_not_called()
+        entry = mock_log.call_args.args[0]
+        assert entry["status"] == "error"
 
 
 class TestSafeguards:
@@ -178,9 +197,10 @@ class TestSafeguards:
         assert "shrimp_count_visible" not in result
         assert "water_clarity" not in result
 
-    def test_schema_has_no_narrative(self):
+    def test_schema_has_narrative(self):
         from skills.shrimp_vision.run import TOOL
-        assert "narrative" not in TOOL["input_schema"]["properties"]
+        assert "narrative" in TOOL["input_schema"]["properties"]
+        assert "narrative" in TOOL["input_schema"]["required"]
 
     def test_schema_tank_visible_required(self):
         from skills.shrimp_vision.run import TOOL
