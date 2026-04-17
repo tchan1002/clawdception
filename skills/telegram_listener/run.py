@@ -203,7 +203,7 @@ def format_vision_reply(analysis, caption=""):
     if caption:
         lines.append(f'"{caption}"')
     lines.append(
-        f"{analysis['shrimp_count_estimate']} shrimp visible · "
+        f"{analysis.get('shrimp_count_visible', '?')} shrimp visible · "
         f"water: {analysis['water_clarity'].replace('_', ' ')} · "
         f"plants: {analysis['plant_health'].replace('_', ' ')}"
     )
