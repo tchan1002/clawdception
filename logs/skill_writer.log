@@ -13,3 +13,7 @@
 [skill-writer] Skipping — last proposal was 4 days ago (min 7)
 [skill-writer] Skipping — last proposal was 5 days ago (min 7)
 [skill-writer] Skipping — last proposal was 6 days ago (min 7)
+[skill-writer] Running — 14 daily logs available, conditions met (Day 27 of cycle)
+[skill-writer] Proposal written to /home/pi/clawdception/proposals/2026-04-17-sensorcalibrationwatch
+[call-toby] Document sent: proposal.md
+[call-toby] Sent with buttons (msg_id=333): New skill proposal: `sensorcalibrationwatch` (new, risk: low)
