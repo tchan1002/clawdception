@@ -248,3 +248,4 @@
 • Request a full-tank photo or short video when convenient—wide angle, good lighting, showing the entire visible colony and algae extent
 • Conduct manual ammonia and/or nitrite test if reagents available; definitive result would clarify cycle stage and inform next steps
 [shrimp-journal] Claude call failed: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'Invalid authentication credentials'}, 'request_id': 'req_011CaABR3Ygi1BKu81W1vk5g'} — skipping journal entry
+[shrimp-journal] Claude call failed: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CaAesJ7enHQr25zmemLAg'} — skipping journal entry
