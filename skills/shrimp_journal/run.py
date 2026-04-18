@@ -151,8 +151,13 @@ IMPORTANT: Only refer to physical tank details (plants, substrate, decorations, 
         return
 
     def _as_list(val):
+        if isinstance(val, list):
+            return val
         if isinstance(val, str):
-            return json.loads(val)
+            try:
+                return json.loads(val.strip()) or []
+            except json.JSONDecodeError:
+                return []
         return val or []
 
     # Format the journal entry with narrative, key observations, and watch list

@@ -1053,15 +1053,17 @@ function toggleEvents() {
 
 async function fetchEvents() {
   try {
-    const res = await fetch('/api/events?limit=50');
-    if (!res.ok) throw new Error();
-    const events = await res.json();
+    const [eventsRes, waterTestRes] = await Promise.all([
+      fetch('/api/events?limit=50'),
+      fetch('/api/events?type=water_test&limit=1')
+    ]);
+    if (!eventsRes.ok) throw new Error();
+    const events = await eventsRes.json();
     renderEvents(events);
 
-    // Update cycle panel with latest water_test
-    const waterTests = events.filter(e => e.event_type === 'water_test');
-    if (waterTests.length > 0) {
-      updateCyclePanel(waterTests[0]);
+    if (waterTestRes.ok) {
+      const waterTests = await waterTestRes.json();
+      if (waterTests.length > 0) updateCyclePanel(waterTests[0]);
     }
   } catch (e) {
     console.error('Failed to fetch events:', e);

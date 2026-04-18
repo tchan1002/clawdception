@@ -2502,3 +2502,15 @@ Day 28 of the nitrogen cycle and Media Luna is looking tidy and purposeful. The 
 [telegram-listener] Processed 1 message(s), offset now 236833053
 [telegram-listener] getUpdates failed: 401 Client Error: Unauthorized for url: https://api.telegram.org/bot8717821001:AAHS61rxysmE7j4GsF844CiGLe5jJNvKfC8/getUpdates?offset=236833053&timeout=0&limit=100
 [telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[call-toby] Telegram sent (info): Proposal `2026-04-18-cycletracker` rejected and archived.
+[telegram-listener] Photo saved: 2026-04-18_16-54-04.jpg — 'moss looks pretty healthy and does not appear to be melting'
+[call-toby] Telegram sent (info): "moss looks pretty healthy and does not appear to be melting"
+1 shrimp visible · water: clear · plants: stable
+Concerns: Moss clump appears unanchored or loosely resting on substrate — fronds are splaying outward and upward in a somewhat disheveled pattern, which may indicate it has detached or is not tied down, Some stem/branch material visible at the moss base appears dark or blackened, worth monitoring for die-off
+
+A dense, bright green moss clump — likely java moss or a similar fine-leaved aquatic moss — sits directly on the substrate near the rear corner of the tank, with one vivid red cherry shrimp visible nestled at its base, actively grazing or resting. The moss shows healthy green coloration overall but has some wispy, loose fronds extending outward and a few darker sections at the base that may warrant a closer look.
+[telegram-listener] Vision reply sent
+[telegram-listener] Processed 2 message(s), offset now 236833055
+[telegram-listener] 'yep the moss has always been free floating' → owner_note
+[call-toby] Telegram sent (info): Logged as owner note: Owner confirms that the moss in the tank has always been free-floating — not anchored to any hardscape or substrate. ✓
+[telegram-listener] Processed 1 message(s), offset now 236833056
