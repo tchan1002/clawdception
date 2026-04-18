@@ -17,3 +17,7 @@
 [skill-writer] Proposal written to /home/pi/clawdception/proposals/2026-04-17-sensorcalibrationwatch
 [call-toby] Document sent: proposal.md
 [call-toby] Sent with buttons (msg_id=333): New skill proposal: `sensorcalibrationwatch` (new, risk: low)
+[skill-writer] Running — 15 daily logs available, conditions met (Day 28 of cycle)
+[skill-writer] Proposal written to /home/pi/clawdception/proposals/2026-04-18-cycletracker
+[call-toby] Document sent: proposal.md
+[call-toby] Sent with buttons (msg_id=381): New skill proposal: `cycletracker` (new, risk: low)
