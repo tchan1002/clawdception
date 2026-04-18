@@ -2422,3 +2422,7 @@ All parameters solid and stable; 76-hour acclimation progressing normally. Moss-
 [2026-04-17T17:15] Day 27 | skipped (stable) | T=76.55°F pH=6.41 TDS=186.0ppm
 [2026-04-17T17:30] Day 27 | risk=green | [manual event since last check ] | T=76.44°F pH=6.41 TDS=188.0ppm | All parameters solidly in target range; 24hr trends are stable, micro-shifts wit
 [shrimp-monitor] Claude call failed: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'Invalid authentication credentials'}, 'request_id': 'req_011CaA9td8HzqcSB6KPWDYhw'}
+[shrimp-monitor] Claude call failed: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'Invalid authentication credentials'}, 'request_id': 'req_011CaAB2y6RvGeNNfHUBstwX'}
+[shrimp-monitor] Claude call failed: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'Invalid authentication credentials'}, 'request_id': 'req_011CaACBFwHXweydLhKubdfX'}
+[shrimp-monitor] Claude call failed: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'Invalid authentication credentials'}, 'request_id': 'req_011CaADKcG14FMdSzMGVh7jH'}
+[shrimp-monitor] Claude call failed: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CaAETyMMNSYoUedoryGPX'}
