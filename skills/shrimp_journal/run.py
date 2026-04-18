@@ -15,7 +15,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-from config import get_cycle_day
+from config import get_cycle_day, COLONY_START
 from utils import (
     write_journal_entry,
     call_claude,
@@ -108,7 +108,15 @@ def run():
     # --- Truncate existing journal to save tokens ---
     journal_excerpt = journal_so_far[-600:] if len(journal_so_far) > 600 else journal_so_far
 
+    days_since_colony = (ts - COLONY_START).days
+    hours_since_colony = int((ts - COLONY_START).total_seconds() / 3600)
+
     prompt = f"""Day {cycle_day} of the nitrogen cycle. It is {ts.strftime('%H:%M')}.
+
+COLONY CONTEXT (permanent facts — do not derive from photos):
+- Shrimp colony introduced: {COLONY_START.strftime('%B %d, %Y')} ({days_since_colony}d / {hours_since_colony}h ago)
+- Colony is always present. Low or zero shrimp count in photos = normal hiding in dense planting. Not absence. Not loss.
+- Never express uncertainty about whether shrimp exist in the tank. They do.
 
 You're writing a journal entry covering the past 6 hours in the Media Luna tank.
 

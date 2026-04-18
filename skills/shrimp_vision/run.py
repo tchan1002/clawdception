@@ -36,7 +36,7 @@ TOOL = {
             },
             "shrimp_count_visible": {
                 "type": "integer",
-                "description": "Number of shrimp clearly visible in the image. Only count confirmed individuals — report 0 if none seen."
+                "description": "Number of shrimp visible in this frame. Reports frame count only — not tank population. 0 is normal when owner sends plant or equipment photos."
             },
             "water_clarity": {
                 "type": "string",
@@ -109,6 +109,8 @@ def analyze_snapshot(img_bytes):
 
     prompt = f"""Day {cycle_day} of the nitrogen cycle. Catalog what you observe in this photo related to the Media Luna shrimp tank.
 
+Colony context: 6 Neocaridina shrimp added April 13, 2026. Colony is established. Owner sends selective photos — plants, a single shrimp, equipment, or full tank. shrimp_count_visible = shrimp in frame only, not tank population. Zero shrimp in frame is normal and never a concern.
+
 This photo may be of the tank, or it may be of something related (test strips, equipment, a product, etc). First determine if the tank itself is visible.
 
 If tank visible:
@@ -116,7 +118,7 @@ If tank visible:
 - Neocaridina shrimp are small (1-2cm). Adults: red, orange-red, or deep red. Juveniles: translucent with faint red tint, easy to miss. Berried females: darker, with visible eggs under abdomen.
 - Count any shrimp you can identify — fully visible, partially visible, or peeking out from plants/substrate. Include partial sightings. Only exclude if you genuinely cannot distinguish shrimp from debris. Err on the side of counting.
 - Assess water clarity: only mark cloudy/murky if water itself looks turbid or muddy — suspended particles, milky haze, brown tint. Glass glare, reflections, or camera artifacts are NOT cloudiness. Default "clear" unless water column itself is degraded.
-- Flag concerns (water quality, disease signs, equipment issues) — not shrimp count.
+- Flag concerns about water quality, disease signs, or equipment only. Never flag shrimp count or shrimp absence as a concern.
 
 If tank not visible: set tank_visible=false, describe image_subject, leave tank fields empty."""
 

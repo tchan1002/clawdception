@@ -2490,3 +2490,14 @@ Media Luna tank in day 27 of nitrogen cycle: water is noticeably cloudy with a y
 [telegram-listener] getUpdates failed: 401 Client Error: Unauthorized for url: https://api.telegram.org/bot8717821001:AAHS61rxysmE7j4GsF844CiGLe5jJNvKfC8/getUpdates?offset=236833051&timeout=0&limit=100
 [telegram-listener] getUpdates failed: 401 Client Error: Unauthorized for url: https://api.telegram.org/bot8717821001:AAHS61rxysmE7j4GsF844CiGLe5jJNvKfC8/getUpdates?offset=236833051&timeout=0&limit=100
 [telegram-listener] getUpdates failed: 401 Client Error: Unauthorized for url: https://api.telegram.org/bot8717821001:AAHS61rxysmE7j4GsF844CiGLe5jJNvKfC8/getUpdates?offset=236833051&timeout=0&limit=100
+[telegram-listener] Photo saved: 2026-04-18_01-12-03.jpg — ''
+[call-toby] Telegram sent (info): 0 shrimp visible · water: clear · plants: stable
+Concerns: No shrimp present — consistent with Day 28 cycling (tank not yet stocked, or shrimp not yet introduced), Mesh bag on substrate may restrict flow if positioned near filter intake — worth monitoring placement, Surface agitation appears active (rippling water line visible) which is good for gas exchange during cycling, Small green plant clumps visible in foreground left — unclear if healthy or beginning to melt; worth watching
+
+Day 28 of the nitrogen cycle and Media Luna is looking tidy and purposeful. The water is crystal clear, the dark substrate is clean, and a mesh bag — almost certainly crushed coral or similar carbonate media — sits squarely in the midground, doing the quiet work of buffering alkalinity. Equipment is visible on the right: what looks like a sponge filter stacked with ceramic bio-media, a heater, and a blue thermometer or CO2 diffuser in the center — a solid cycling rig. A few small green plant tufts are visible at the substrate level on the left, suggesting some early plant life is present, though no shrimp are visible yet, which is entirely expected at this stage.
+[telegram-listener] Vision reply sent
+[telegram-listener] Processed 1 message(s), offset now 236833052
+[telegram-listener] 'tank status?' → question
+[call-toby] Telegram sent (info): pH is low at 6.42 — that's been my main quiet worry, a bit soft for Neocaridina ideally. TDS and temp look fine. The shrimp were grazing nicely this afternoon which is the most reassuring signal of all — happy grazers don't lie.
+[telegram-listener] Processed 1 message(s), offset now 236833053
+[telegram-listener] getUpdates failed: 401 Client Error: Unauthorized for url: https://api.telegram.org/bot8717821001:AAHS61rxysmE7j4GsF844CiGLe5jJNvKfC8/getUpdates?offset=236833053&timeout=0&limit=100

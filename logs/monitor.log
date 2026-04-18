@@ -2450,3 +2450,18 @@ All parameters solid and stable; 76-hour acclimation progressing normally. Moss-
 [shrimp-monitor] Claude call failed: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CaAfdWfgHYtPEvXjbC51V'}
 [shrimp-monitor] Claude call failed: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CaAgmqX65dcGQfBwFEMTG'}
 [shrimp-monitor] Claude call failed: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CaAhvDtaiX44r4GNfvGeE'}
+[2026-04-18T01:00] Day 28 | risk=green | [manual event since last check ] | T=76.32°F pH=6.38 TDS=187.0ppm | Water chemistry is stable and well-centered in target ranges across all paramete
+[call-toby] Telegram sent (info): Water chemistry is stable and well-centered in target ranges across all parameters. Tank is 28 days post-setup, 105 hours post-introduction; shrimp are visibly active, molting normally, and grazing — all signs of successful acclimation and early colony establishment.
+
+• 👀 Observe shrimp behavior
+• 📸 Send a photo of the tank
+[2026-04-18T01:03] Day 28 | risk=green | [stable — no notable changes] | T=76.32°F pH=6.38 TDS=187.0ppm | All parameters are stable and within target range; the false alarm on water clar
+[2026-04-18T01:04] Day 28 | risk=green | [stable — no notable changes] | T=76.32°F pH=6.38 TDS=187.0ppm | All parameters stable and well within target range over 24 hours. Colony acclima
+[2026-04-18T01:04] Day 28 | risk=green | [stable — no notable changes] | T=76.32°F pH=6.38 TDS=187.0ppm | All parameters stable and centered in target range over 24 hours; minimal drift.
+[2026-04-18T01:06] Day 28 | risk=green | [stable — no notable changes] | T=76.55°F pH=6.41 TDS=189.0ppm | All parameters comfortably within target range with minimal 24-hour drift. Colon
+[2026-04-18T01:07] Day 28 | risk=green | [stable — no notable changes] | T=76.55°F pH=6.41 TDS=189.0ppm | All parameters centered in target range with gentle 24-hour uptrends — normal po
+[2026-04-18T01:08] Day 28 | risk=green | [stable — no notable changes] | T=76.55°F pH=6.41 TDS=189.0ppm | All parameters solidly in target range with minimal 24-hour drift. Colony now 4+
+[2026-04-18T01:09] Day 28 | risk=green | [stable — no notable changes] | T=76.55°F pH=6.41 TDS=189.0ppm | All parameters solidly within target range; 24-hour trends are gentle and normal
+[2026-04-18T01:15] Day 28 | risk=green | [manual event since last check ] | T=76.55°F pH=6.41 TDS=189.0ppm | All parameters well within target ranges; 24hr drift is minimal and expected dur
+[2026-04-18T01:30] Day 28 | skipped (stable) | T=76.32°F pH=6.42 TDS=188.0ppm
+[2026-04-18T01:45] Day 28 | skipped (stable) | T=76.44°F pH=6.41 TDS=186.0ppm
