@@ -2501,3 +2501,4 @@ Day 28 of the nitrogen cycle and Media Luna is looking tidy and purposeful. The 
 [call-toby] Telegram sent (info): pH is low at 6.42 — that's been my main quiet worry, a bit soft for Neocaridina ideally. TDS and temp look fine. The shrimp were grazing nicely this afternoon which is the most reassuring signal of all — happy grazers don't lie.
 [telegram-listener] Processed 1 message(s), offset now 236833053
 [telegram-listener] getUpdates failed: 401 Client Error: Unauthorized for url: https://api.telegram.org/bot8717821001:AAHS61rxysmE7j4GsF844CiGLe5jJNvKfC8/getUpdates?offset=236833053&timeout=0&limit=100
+[telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
