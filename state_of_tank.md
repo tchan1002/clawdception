@@ -1,8 +1,8 @@
 # State of Tank — Media Luna
 
-**Last updated:** 2026-04-16
-**Cycle day:** 26 (started 2026-03-22)
-**Tank status:** Post-cycle — shrimp introduced Day 23 — active establishment phase
+**Last updated:** 2026-04-17
+**Cycle day:** 27 (started 2026-03-22)
+**Tank status:** Active establishment phase — shrimp introduced Day 23
 
 ---
 
@@ -11,47 +11,47 @@
 | Animal | Count | Notes |
 |--------|-------|-------|
 | Neocaridina shrimp | 6 introduced | 4 male, 2 female; introduced 2026-04-13 ~15:36 |
-| Snails (unplanned) | 2 confirmed | Baby snails ~1mm observed 2026-04-15; hitchhikers, likely on plants |
+| Snails (unplanned) | Unknown — reduced | 2 tiny (~1mm) snails removed overnight 2026-04-17; total population unknown |
 
 **Shrimp observations:**
-- Molt observed 2026-04-14 (first confirmed post-introduction molt)
-- Colony now 80+ hours post-introduction; acclimation phase considered complete
-- Individual shrimp consistently visible across all photo frames this evening (one per shot); others likely sheltering in algae or resting out of frame
-- Behavioral note from prior journal: grazing on duckweed, clustering near filter sponges — signs of settling, not stress
-- No losses confirmed
+- Multiple photos across Day 27 (midnight through early morning) show at least one shrimp — described as vibrant red, active, gripping hardscape/stems
+- Shrimp visible in evening shots as well; consistent with normal daytime-hiding / nighttime-active behavior
+- No distress behavior reported; no deaths logged
 
 ---
 
-## Water Parameters (as of 2026-04-16)
+## Water Parameters
 
-| Parameter | Current Avg | Target Range | Status |
-|-----------|------------|--------------|--------|
-| Temperature | 76.46°F | 70–78°F | ✅ Stable |
-| pH | 6.394 | 6.5–7.5 | ⚠️ Below target low — stable, consistent, monitoring |
-| TDS | 183.9 ppm | 150–250 ppm | ✅ Stable |
+| Parameter | Current (avg) | Range today | Notes |
+|-----------|--------------|-------------|-------|
+| Temperature | 76.4°F | 76.21–76.78°F | Stable, well within Neocaridina range |
+| pH | 6.40 | 6.30–6.46 | Slow multi-day downward drift; still acceptable |
+| TDS | 187 ppm | 185–189 ppm | Slow upward trend; no concern yet |
 
-**Manual test results:** None logged for 2026-04-16. Last known: ammonia/nitrite/nitrate levels not on file for this date.
-
----
-
-## Biological Activity
-
-- **Algae bloom:** Vigorous filamentous green algae (hair/thread type) confirmed across substrate and lower plant zones via tonight's photo burst. Bright lime-green coloration, active growth, distributed unevenly across the tank. Expected and consistent with day-26 nutrient profile.
-- **Plant health:** Predominantly thriving across photo set. A handful of frames noted declining appearance (wilting tips, algae stress); may reflect localized patches or angle artifacts. Continuing to monitor.
-- **Biofilm/substrate:** Dark substrate clean overall; some organic matter and detritus accumulation visible in areas beneath algae mats. No detritus crisis flagged.
+No manual ammonia/nitrite/nitrate test logged today.
 
 ---
 
-## Equipment Notes
+## Equipment & Hardware
 
-- Filter intake tubing: minor algae/debris accumulation noted 2026-04-15; not flow-restrictive as of last observation
-- WiFi RSSI: −45 to −48 dBm (healthy signal)
-- All equipment checks passing
+- Heater: operational (confirmed in photo logs)
+- Filter: operational; mesh bag of ceramic media in use
+- LED lighting bar: installed and operational
+- **Growth lights:** received 2026-04-17, installation scheduled same evening — status: newly active as of tonight
 
 ---
 
-## Current Concerns (Ranked)
+## Plants & Algae
 
-1. **pH below target floor (6.39 avg)** — persistent but stable; no acute risk to shrimp; watching for drift downward
-2. **Algae bloom acceleration** — normal for this cycle stage; flag if smothering plants or consolidating into thick mats
-3. **Shrimp visibility** — only one shrimp per frame; others likely sheltering; not alarming at day 26 but worth confirming at next in-person check
+- Dense plant growth confirmed across multiple photos — predominantly fine-leaved/mossy plants; bright yellow-green coloration
+- Filamentous algae (bright green, hair/thread type) visible on plants and substrate surfaces — consistent with nitrogen cycle phase, expected
+- One afternoon photo appeared to show cloudiness/yellow-green tint; **corrected** — identified as glass reflection + LED lamp artifact, not an actual bloom
+- Water clarity confirmed clear in multiple reliable shots
+
+---
+
+## Recent Events
+
+- 2026-04-17 00:28 — 2 tiny snails removed manually
+- 2026-04-17 16:14 — Growth lights received, install planned for tonight
+- 2026-04-17 17:34 — Toby corrected visual misread: no cloudiness event, optical artifact
