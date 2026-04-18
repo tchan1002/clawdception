@@ -2514,3 +2514,6 @@ A dense, bright green moss clump — likely java moss or a similar fine-leaved a
 [telegram-listener] 'yep the moss has always been free floating' → owner_note
 [call-toby] Telegram sent (info): Logged as owner note: Owner confirms that the moss in the tank has always been free-floating — not anchored to any hardscape or substrate. ✓
 [telegram-listener] Processed 1 message(s), offset now 236833056
+[telegram-listener] 'no flow restriction at all from the mesh bag. shrimp seem healthy and are conducting their daytime grazing. saw one of them poop in real time. small green plant clumps are a visual artifact, all plants in tank seem stable and green.' → observation
+[call-toby] Telegram sent (info): Logged as observation: No flow restriction from mesh bag. Shrimp appear healthy and actively grazing. Observed real-time defecation (sign of healthy digestion). Small green clumps in tank are a visual artifact, not a plant issue — all plants stable and green. ✓
+[telegram-listener] Processed 1 message(s), offset now 236833057

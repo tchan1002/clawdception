@@ -2529,3 +2529,11 @@ All parameters solid and stable; 76-hour acclimation progressing normally. Moss-
 [2026-04-18T16:15] Day 28 | skipped (stable) | T=76.32°F pH=6.32 TDS=191.0ppm
 [2026-04-18T16:30] Day 28 | skipped (stable) | T=75.99°F pH=6.31 TDS=190.0ppm
 [2026-04-18T16:45] Day 28 | skipped (stable) | T=75.99°F pH=6.35 TDS=191.0ppm
+[2026-04-18T17:00] Day 28 | risk=green | [manual event since last check ] | T=76.1°F pH=6.38 TDS=191.0ppm | All parameters within safe operating range. Slight pH drift downward is typical 
+[2026-04-18T17:15] Day 28 | risk=green | [ph changed 0.11 in last hour] | T=76.21°F pH=6.42 TDS=197.0ppm | pH dipped 0.11 in the last hour but remains solidly in range and well within nor
+[call-toby] Telegram sent (info): pH dipped 0.11 in the last hour but remains solidly in range and well within normal cycling noise; all three parameters are tracking stable 24-hour means with minor acclimation drift expected at day 28 post-introduction. The colony is establishing normally, water chemistry is healthy, and recent photos confirm clear water and active grazing behavior.
+
+• 👀 Observe shrimp behavior — Monitor mesh bag position relative to filter intake over next 48 hours as biofilm load increases; verify no flow restriction developing
+• 👀 Observe shrimp behavior — Watch small green plant clumps noted in April 18 photo—distinguish between acclimation melt and stabilization over next 48-72 hours
+[2026-04-18T17:30] Day 28 | risk=green | [manual event since last check ] | T=76.21°F pH=6.43 TDS=198.0ppm | Colony is thriving at day 5.07 post-introduction; water chemistry is stable and 
+[2026-04-18T17:45] Day 28 | skipped (stable) | T=76.21°F pH=6.44 TDS=196.0ppm
