@@ -2438,3 +2438,7 @@ All parameters solid and stable; 76-hour acclimation progressing normally. Moss-
 [shrimp-monitor] Claude call failed: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CaARuPhJMAF4q4ZS92ZMF'}
 [shrimp-monitor] Claude call failed: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CaAT3hi77a4MnVfSo11qW'}
 [shrimp-monitor] Claude call failed: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CaAUC6acXhpDL4o6ZEXdM'}
+[shrimp-monitor] Claude call failed: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CaAVLRsK8nCzqFSRoSg5o'}
+[shrimp-monitor] Claude call failed: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CaAWUjhD8jxZ2Vjw9BSDS'}
+[shrimp-monitor] Claude call failed: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CaAXd8dSYrwYR7Ss6G9i3'}
+[shrimp-monitor] Claude call failed: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CaAYmSSbAZn4JUFD4B64y'}
