@@ -252,3 +252,21 @@
 [shrimp-journal] Entry written: 2026-04-18-0605.md (Day 28)
 [call-toby] Telegram sent (info): Journal — Day 28 · 2026-04-18 06:05
 [call-toby] Document sent: 2026-04-18-0605.md
+Traceback (most recent call last):
+  File "/home/pi/clawdception/skills/shrimp_journal/run.py", line 196, in <module>
+    run()
+    ~~~^^
+  File "/home/pi/clawdception/skills/shrimp_journal/run.py", line 173, in run
+    recommended_actions = _as_list(result.get("recommended_actions"))
+  File "/home/pi/clawdception/skills/shrimp_journal/run.py", line 155, in _as_list
+    return json.loads(val)
+           ~~~~~~~~~~^^^^^
+  File "/usr/lib/python3.13/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/usr/lib/python3.13/json/decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/json/decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 2 column 1 (char 1)
