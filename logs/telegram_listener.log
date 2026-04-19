@@ -2537,3 +2537,16 @@ A mesh feeding cloth or fine-net feeding dish dominates the foreground, laden wi
 [call-toby] Telegram sent (info): Logged as correction: Owner clarifies that the mesh bag in the tank holds ceramic media (biological filtration), not food. It is not a feeding cloth. No food present in the bag. ✓
 [telegram-listener] Processed 2 message(s), offset now 236833061
 [telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[telegram-listener] Photo saved: 2026-04-19_00-06-03.jpg — 'use this pic for tmrs daily log'
+[call-toby] Telegram sent (info): "use this pic for tmrs daily log"
+2 shrimp visible · water: clear · plants: stable
+Concerns: Mesh media bag sitting directly on substrate mid-tank — porous bag may trap detritus underneath over time if not periodically moved, Small plants visible clinging to or floating at the waterline surface — may be floating plant or surface growth worth monitoring
+
+A mesh media bag — likely containing crushed coral, aragonite, or similar buffering material — sits prominently on the substrate in the midground, flanked by a feathery green plant on the left and a sponge/ceramic media canister filter on the right. Two small reddish shrimp are visible near the base of the mesh bag, appearing to graze or rest. Water surface shows healthy surface agitation from what appears to be a blue-tipped spray bar or wand, and tiny floating plants dot the waterline.
+[telegram-listener] Vision reply sent
+[telegram-listener] Processed 1 message(s), offset now 236833062
+[telegram-listener] 'no it’s just ceramic media, not crushed coral' → correction
+[call-toby] Telegram sent (info): Logged as correction: Owner clarifies that the media in the tank is ceramic, not crushed coral. Prior caretaker assumption about crushed coral substrate/media was incorrect. ✓
+[telegram-listener] 'the blue tip is the ph sensor' → correction
+[call-toby] Telegram sent (info): Logged as correction: Owner clarifies that the blue-tipped sensor is the pH sensor — correcting a potential prior misidentification of the probe. ✓
+[telegram-listener] Processed 2 message(s), offset now 236833064
