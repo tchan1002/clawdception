@@ -1,8 +1,8 @@
 # State of Tank — Media Luna
 
-**Last updated:** 2026-04-17
-**Cycle day:** 27 (started 2026-03-22)
-**Tank status:** Active establishment phase — shrimp introduced Day 23
+**Last updated:** 2026-04-18
+**Cycle day:** 28 (started 2026-03-22)
+**Tank status:** Active cycling — shrimp introduced Day 23 (2026-04-13)
 
 ---
 
@@ -13,45 +13,58 @@
 | Neocaridina shrimp | 6 introduced | 4 male, 2 female; introduced 2026-04-13 ~15:36 |
 | Snails (unplanned) | Unknown — reduced | 2 tiny (~1mm) snails removed overnight 2026-04-17; total population unknown |
 
-**Shrimp observations:**
-- Multiple photos across Day 27 (midnight through early morning) show at least one shrimp — described as vibrant red, active, gripping hardscape/stems
-- Shrimp visible in evening shots as well; consistent with normal daytime-hiding / nighttime-active behavior
-- No distress behavior reported; no deaths logged
+**Shrimp observations (2026-04-18):**
+- 2 shrimp photographed actively foraging on mesh feeding dish (evening)
+- 1 shrimp photographed at base of moss clump (afternoon), appeared to be grazing or resting
+- Active grazing and defecation logged (17:22) — digestion confirmed, behavior normal
+- No surface clustering, no lethargy reported
 
 ---
 
-## Water Parameters
+## Equipment
 
-| Parameter | Current (avg) | Range today | Notes |
-|-----------|--------------|-------------|-------|
-| Temperature | 76.4°F | 76.21–76.78°F | Stable, well within Neocaridina range |
-| pH | 6.40 | 6.30–6.46 | Slow multi-day downward drift; still acceptable |
-| TDS | 187 ppm | 185–189 ppm | Slow upward trend; no concern yet |
-
-No manual ammonia/nitrite/nitrate test logged today.
-
----
-
-## Equipment & Hardware
-
-- Heater: operational (confirmed in photo logs)
-- Filter: operational; mesh bag of ceramic media in use
-- LED lighting bar: installed and operational
-- **Growth lights:** received 2026-04-17, installation scheduled same evening — status: newly active as of tonight
+| Item | Status |
+|------|--------|
+| Sponge filter (with ceramic bio-media in lower chamber) | Operational — visible in photos |
+| Heater with flow head | Operational — submerged, visible in photos |
+| Spray bar / airline (blue-tipped) | Operational — surface rippling visible |
+| Ceramic media in mesh bag | Present on substrate — confirmed ceramic (not crushed coral) per owner correction 2026-04-18 |
 
 ---
 
-## Plants & Algae
+## Plants & Hardscape
 
-- Dense plant growth confirmed across multiple photos — predominantly fine-leaved/mossy plants; bright yellow-green coloration
-- Filamentous algae (bright green, hair/thread type) visible on plants and substrate surfaces — consistent with nitrogen cycle phase, expected
-- One afternoon photo appeared to show cloudiness/yellow-green tint; **corrected** — identified as glass reflection + LED lamp artifact, not an actual bloom
-- Water clarity confirmed clear in multiple reliable shots
+- **Moss clump** (likely java moss or similar): free-floating by design, resting near rear corner of tank; healthy green coloration overall; some darker material at base — monitoring for die-off vs. normal shading
+- **Small green plant tufts**: visible at substrate level; plant health logged as stable
+- **Floating plants**: sparse/fragmented coverage at surface — monitoring
+- **Substrate**: dark granular, appears clean and uniform
 
 ---
 
-## Recent Events
+## Water Chemistry (current)
 
-- 2026-04-17 00:28 — 2 tiny snails removed manually
-- 2026-04-17 16:14 — Growth lights received, install planned for tonight
-- 2026-04-17 17:34 — Toby corrected visual misread: no cloudiness event, optical artifact
+| Parameter | Current Avg | Range (Day 28) | Target Range |
+|-----------|-------------|----------------|--------------|
+| Temperature | 76.3°F | 75.8–77.1°F | 72–78°F |
+| pH | 6.46 | 6.31–6.54 | 6.5–7.5 |
+| TDS | 192 ppm | 186–209 ppm | 150–250 ppm |
+
+- pH trending slightly low but stable; within acceptable range during cycling
+- TDS showing a slow upward drift — monitoring for evaporation concentration or food input contribution
+- Faint whitish haze noted in water column against back glass (evening photo) — consistent with bacterial bloom at day 28 of cycle; expected, monitoring
+
+---
+
+## Active Watch Items
+
+- Bacterial bloom haze: expected to clear as cycle completes; flag if persistent past ~day 35
+- Moss base darkening: slow watch, not acute
+- TDS drift: slow upward trend, monitor
+- Food load at feeding station: portion size appeared large in evening photo; monitor for uneaten food and ammonia risk
+- Snail population: unknown, monitoring
+
+---
+
+## Cycle Milestone
+
+Ammonia → nitrite → nitrate conversion in progress. No manual ammonia/nitrite/nitrate test logged since Day 23 introduction. A manual spot-check in the next few days would help confirm whether cycle is nearing completion.
