@@ -2550,3 +2550,7 @@ A mesh media bag — likely containing crushed coral, aragonite, or similar buff
 [telegram-listener] 'the blue tip is the ph sensor' → correction
 [call-toby] Telegram sent (info): Logged as correction: Owner clarifies that the blue-tipped sensor is the pH sensor — correcting a potential prior misidentification of the probe. ✓
 [telegram-listener] Processed 2 message(s), offset now 236833064
+[call-toby] Telegram sent (info): Proposal `2026-04-19-cycletracker` rejected and archived.
+[call-toby] Telegram sent (info): Proposal `2026-04-19-cycletracker` rejected and archived.
+[telegram-listener] Processed 2 message(s), offset now 236833066
+[telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
