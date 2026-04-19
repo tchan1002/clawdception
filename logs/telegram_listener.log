@@ -2517,3 +2517,23 @@ A dense, bright green moss clump — likely java moss or a similar fine-leaved a
 [telegram-listener] 'no flow restriction at all from the mesh bag. shrimp seem healthy and are conducting their daytime grazing. saw one of them poop in real time. small green plant clumps are a visual artifact, all plants in tank seem stable and green.' → observation
 [call-toby] Telegram sent (info): Logged as observation: No flow restriction from mesh bag. Shrimp appear healthy and actively grazing. Observed real-time defecation (sign of healthy digestion). Small green clumps in tank are a visual artifact, not a plant issue — all plants stable and green. ✓
 [telegram-listener] Processed 1 message(s), offset now 236833057
+[telegram-listener] Photo saved: 2026-04-18_19-28-04.jpg — 'the arena of life'
+[call-toby] Telegram sent (info): "the arena of life"
+1 shrimp visible · water: clear · plants: stable
+Concerns: Mesh media bag sitting directly on substrate in the open — may be worth checking its contents and confirming placement is intentional for the cycle, Floating plants at the surface appear sparse/fragmented — worth monitoring coverage
+
+A wide, low-angle shot taken from substrate level reveals the tank's interior clearly: a white mesh media bag (likely crushed coral, limestone, or similar buffering media) rests prominently in the midground, flanked by a feathery green plant on the left and a multi-stage sponge/ceramic filter unit on the right. At least one shrimp — a small red individual — is visible peeking from behind or beneath the mesh bag near center-right, identifiable by a flash of red. Water surface shows active rippling from the blue-tipped spray bar or airline, with what appears to be floating plants (possibly frogbit or duckweed) clustered at the surface.
+[telegram-listener] Vision reply sent
+[telegram-listener] Photo saved: 2026-04-18_19-28-17.jpg — ''
+[call-toby] Telegram sent (info): 2 shrimp visible · water: clear · plants: stable
+Concerns: A mesh feeding dish or breeder net is laid flat on the substrate — if this is a feeding station, the food load appears quite large and should be monitored to avoid fouling the water during an active nitrogen cycle, Water column shows a faint whitish haze against the back glass — could be early bacterial bloom consistent with day 28 of cycling, worth monitoring
+
+A mesh feeding cloth or fine-net feeding dish dominates the foreground, laden with what appears to be a substantial amount of food — two small red shrimp are visible actively foraging on or near it. In the background, the sponge filter (with visible bio-media balls in the lower chamber) and a heater with flow head are both submerged and appear operational, with green floating plants visible at the waterline.
+[telegram-listener] Vision reply sent
+[telegram-listener] Processed 2 message(s), offset now 236833059
+[telegram-listener] 'no crushed coral, just ceramic media' → correction
+[call-toby] Telegram sent (info): Logged as correction: Owner clarifies tank hardscape/media: no crushed coral present, only ceramic media. ✓
+[telegram-listener] 'also no it’s not a feeding cloth, the mesh bag just holds ceramic media there is no food' → correction
+[call-toby] Telegram sent (info): Logged as correction: Owner clarifies that the mesh bag in the tank holds ceramic media (biological filtration), not food. It is not a feeding cloth. No food present in the bag. ✓
+[telegram-listener] Processed 2 message(s), offset now 236833061
+[telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
