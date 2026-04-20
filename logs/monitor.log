@@ -2724,3 +2724,11 @@ All parameters remain comfortably within target range. The colony is 6 days post
 [2026-04-20T07:15] Day 30 | skipped (stable) | T=76.1°F pH=6.38 TDS=211.0ppm
 [2026-04-20T07:30] Day 30 | skipped (stable) | T=76.21°F pH=6.38 TDS=209.0ppm
 [2026-04-20T07:45] Day 30 | skipped (stable) | T=76.21°F pH=6.38 TDS=212.0ppm
+[2026-04-20T08:00] Day 30 | risk=green | [scheduled check-in (08:00)] | T=76.21°F pH=6.37 TDS=210.0ppm | pH has drifted 0.21 points lower in 24 hours and sits at the lower edge of targe
+[call-toby] Telegram sent (info): pH has drifted 0.21 points lower in 24 hours and sits at the lower edge of target, consistent with active nitrogen cycling producing organic acids—this is normal for day 30 post-introduction and does not require intervention. Temperature and TDS are stable and healthy; colony is grazing well and no signs of acute stress have been reported.
+
+• 📸 Send a photo of the tank — Check shrimp activity, visible count, and any new molts—confirm ongoing stable behavior. Assess moss/algae status and biofilm maturation on ceramic media.
+• 👀 Observe shrimp behavior — Watch pH trajectory over next 12–24 hours; expect slight recovery toward 6.5–7.0 as cycle stabilizes and organic acid buffering equilibrates.
+[2026-04-20T08:15] Day 30 | skipped (stable) | T=76.21°F pH=6.36 TDS=210.0ppm
+[2026-04-20T08:30] Day 30 | skipped (stable) | T=76.21°F pH=6.36 TDS=209.0ppm
+[2026-04-20T08:45] Day 30 | skipped (stable) | T=76.21°F pH=6.35 TDS=211.0ppm

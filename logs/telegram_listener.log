@@ -2576,3 +2576,6 @@ The foreground is dominated by a large white mesh bag — likely containing a po
 [call-toby] Telegram sent (info): Logged as correction: Owner clarifying that a sensor anomaly was caused by the water change, not a genuine reading — not a crisis event. ✓
 [telegram-listener] Processed 1 message(s), offset now 236833072
 [telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[call-toby] Telegram sent (info): Installed to skills/waterchangepredictor/ — add to cron manually when ready.
+[call-toby] Telegram sent (warning): skills/waterchangepredictor/ already exists — manual merge required
+[telegram-listener] Processed 2 message(s), offset now 236833074

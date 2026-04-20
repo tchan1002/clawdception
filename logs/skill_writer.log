@@ -25,3 +25,7 @@
 [skill-writer] Proposal written to /home/pi/clawdception/proposals/2026-04-19-cycletracker
 [call-toby] Document sent: proposal.md
 [call-toby] Sent with buttons (msg_id=420): New skill proposal: `cycletracker` (new, risk: low)
+[skill-writer] Running — 17 daily logs available, conditions met (Day 30 of cycle)
+[skill-writer] Proposal written to /home/pi/clawdception/proposals/2026-04-20-waterchangepredictor
+[call-toby] Document sent: proposal.md
+[call-toby] Sent with buttons (msg_id=459): New skill proposal: `waterchangepredictor` (new, risk: low)
