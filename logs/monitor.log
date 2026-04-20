@@ -2766,3 +2766,10 @@ All parameters remain comfortably within target range. The colony is 6 days post
 [2026-04-20T15:15] Day 30 | risk=green | [temp_f changed 1.01 in last ho] | T=77.0°F pH=6.21 TDS=185.0ppm | Day 30 post-setup, 167hr post-shrimp: pH dip is textbook early-cycle acidificati
 [2026-04-20T15:30] Day 30 | skipped (stable) | T=77.11°F pH=6.23 TDS=186.0ppm
 [2026-04-20T15:45] Day 30 | skipped (stable) | T=76.89°F pH=6.2 TDS=186.0ppm
+[2026-04-20T16:00] Day 30 | skipped (stable) | T=76.55°F pH=6.21 TDS=184.0ppm
+[2026-04-20T16:15] Day 30 | risk=green | [manual event since last check ] | T=76.21°F pH=6.24 TDS=189.0ppm | Day 30 post-introduction: cycle is advancing well, ammonia/nitrite remain at 0, 
+[2026-04-20T16:30] Day 30 | risk=green | [manual event since last check ] | T=76.21°F pH=6.23 TDS=188.0ppm | Water test (21:04) confirms zero ammonia/nitrite and reasonable nitrate (80ppm)—
+[call-toby] Telegram sent (info): Water test (21:04) confirms zero ammonia/nitrite and reasonable nitrate (80ppm)—cycle is progressing normally. pH dip is transient post-water-change; ceramic media and established biofilm will stabilize pH into range as cycle matures.
+
+• 📸 Send a photo of the tank — General tank check—verify shrimp count, posture, and early filamentous/moss growth density
+[2026-04-20T16:45] Day 30 | risk=green | [manual event since last check ] | T=76.1°F pH=6.23 TDS=187.0ppm | Day 30 of cycling with clean ammonia/nitrite (0/0) and manageable nitrate (80ppm
