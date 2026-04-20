@@ -1,13 +1,11 @@
 /*
- * Media Luna — ESP32-CAM Snapshot Poster
+ * Media Luna — ESP32-CAM
  * Board: AI Thinker ESP32-CAM
  *
- * Every SNAPSHOT_INTERVAL_MS milliseconds, captures a JPEG frame and POSTs it
- * to the Media Luna sensor server at POST /api/snapshot.
- *
- * Also runs a web server on port 80 for on-demand snapshots:
- *   - GET http://<esp-ip>/ — status page
- *   - GET http://<esp-ip>/capture — trigger immediate snapshot
+ * Endpoints:
+ *   GET /            — status page
+ *   GET /snapshot    — capture and return single JPEG (Pi pulls on demand)
+ *   GET /livestream  — continuous MJPEG stream (~10fps, not saved)
  *
  * Wiring reminder:
  *   - GPIO0 → GND during flash only; remove jumper before normal operation
@@ -18,22 +16,13 @@
 
 #include "esp_camera.h"
 #include <WiFi.h>
-#include <HTTPClient.h>
 #include <WebServer.h>
 
 // ── WiFi credentials ──────────────────────────────────────────────────────────
 const char* WIFI_SSID = "Shroomies";
 const char* WIFI_PASS = "AhnTheSpectrum69";
 
-// ── Server ────────────────────────────────────────────────────────────────────
-const char* SERVER_URL = "http://192.168.12.76:5001/api/snapshot";
-
-// ── Interval ──────────────────────────────────────────────────────────────────
-// Post a snapshot every 5 minutes. shrimp-vision runs every 2 hours and
-// considers any snapshot < 30 min old as "live".
-const unsigned long SNAPSHOT_INTERVAL_MS = 5UL * 60UL * 1000UL;
-
-// ── Web server for on-demand capture ──────────────────────────────────────────
+// ── Web server ────────────────────────────────────────────────────────────────
 WebServer server(80);
 
 // ── AI Thinker ESP32-CAM pin map ──────────────────────────────────────────────
@@ -118,53 +107,51 @@ void connectWiFi() {
 }
 
 
-bool postSnapshot() {
+void handleSnapshot() {
   camera_fb_t* fb = esp_camera_fb_get();
   if (!fb) {
+    server.send(503, "text/plain", "Camera capture failed");
     Serial.println("[snap] frame capture failed");
-    return false;
+    return;
   }
-
-  if (WiFi.status() != WL_CONNECTED) {
-    Serial.println("[snap] WiFi lost — reconnecting");
-    connectWiFi();
-  }
-
-  HTTPClient http;
-  http.begin(SERVER_URL);
-  http.addHeader("Content-Type", "image/jpeg");
-  http.setTimeout(10000);
-
-  int code = http.POST(fb->buf, fb->len);
+  server.sendHeader("Content-Disposition", "inline; filename=snapshot.jpg");
+  server.send_P(200, "image/jpeg", (const char*)fb->buf, fb->len);
+  Serial.printf("[snap] served %u bytes\n", fb->len);
   esp_camera_fb_return(fb);
-
-  if (code == 201) {
-    Serial.printf("[snap] posted %u bytes → %d\n", fb->len, code);
-    http.end();
-    return true;
-  } else {
-    Serial.printf("[snap] POST failed: %d\n", code);
-    http.end();
-    return false;
-  }
 }
 
 
-void handleCapture() {
-  Serial.println("[web] capture request received");
-  bool success = postSnapshot();
-  if (success) {
-    server.send(200, "text/plain", "Snapshot captured and posted");
-  } else {
-    server.send(500, "text/plain", "Snapshot failed");
+void handleLivestream() {
+  WiFiClient client = server.client();
+
+  client.println("HTTP/1.1 200 OK");
+  client.println("Content-Type: multipart/x-mixed-replace; boundary=frame");
+  client.println("Cache-Control: no-cache");
+  client.println("Connection: close");
+  client.println();
+
+  Serial.println("[stream] client connected");
+  while (client.connected()) {
+    camera_fb_t* fb = esp_camera_fb_get();
+    if (!fb) break;
+
+    client.printf("--frame\r\nContent-Type: image/jpeg\r\nContent-Length: %u\r\n\r\n", fb->len);
+    client.write(fb->buf, fb->len);
+    client.print("\r\n");
+    esp_camera_fb_return(fb);
+
+    delay(100);  // ~10fps
   }
+  Serial.println("[stream] client disconnected");
 }
+
 
 void handleRoot() {
   String html = "<html><body><h1>Media Luna ESP32-CAM</h1>";
   html += "<p>Status: Online</p>";
   html += "<p>IP: " + WiFi.localIP().toString() + "</p>";
-  html += "<p><a href='/capture'>Trigger Snapshot</a></p>";
+  html += "<p><a href='/snapshot'>Capture Snapshot</a></p>";
+  html += "<p><a href='/livestream'>View Livestream</a></p>";
   html += "</body></html>";
   server.send(200, "text/html", html);
 }
@@ -177,27 +164,15 @@ void setup() {
   initCamera();
   connectWiFi();
 
-  // Start web server for on-demand captures
   server.on("/", handleRoot);
-  server.on("/capture", handleCapture);
+  server.on("/snapshot", handleSnapshot);
+  server.on("/livestream", handleLivestream);
   server.begin();
   Serial.printf("[web] server started at http://%s/\n", WiFi.localIP().toString().c_str());
-
-  // Post immediately on boot so the server has a snapshot right away
-  postSnapshot();
 }
 
 
 void loop() {
-  server.handleClient();  // Handle web requests
-
-  static unsigned long lastPost = 0;
-  unsigned long now = millis();
-
-  if (now - lastPost >= SNAPSHOT_INTERVAL_MS) {
-    postSnapshot();
-    lastPost = now;
-  }
-
-  delay(100);  // Reduced delay for more responsive web server
+  server.handleClient();
+  delay(10);
 }

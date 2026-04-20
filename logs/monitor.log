@@ -2740,3 +2740,7 @@ All parameters remain comfortably within target range. The colony is 6 days post
 [2026-04-20T10:15] Day 30 | skipped (stable) | T=76.1°F pH=6.32 TDS=200.0ppm
 [2026-04-20T10:30] Day 30 | skipped (stable) | T=75.99°F pH=6.29 TDS=198.0ppm
 [2026-04-20T10:45] Day 30 | skipped (stable) | T=77.0°F pH=6.39 TDS=196.0ppm
+[2026-04-20T11:00] Day 30 | skipped (stable) | T=75.99°F pH=6.29 TDS=187.0ppm
+[2026-04-20T11:15] Day 30 | skipped (stable) | T=75.99°F pH=6.27 TDS=189.0ppm
+[2026-04-20T11:30] Day 30 | risk=green | [manual event since last check ] | T=75.99°F pH=6.27 TDS=189.0ppm | Temperature and TDS are solidly in range; pH is slightly low but tracking recove
+[2026-04-20T11:45] Day 30 | skipped (stable) | T=75.87°F pH=6.26 TDS=189.0ppm

@@ -37,11 +37,12 @@ from utils import (
     read_agent_state,
     read_journal,
 )
-from skills.call_toby.run import call_toby, send_with_buttons
+from skills.call_toby.run import call_toby, send_with_buttons, send_photo
 from skills.shrimp_vision.run import process_photo
 
 PHOTOS_DIR = Path("snapshots/photos")
 OFFSET_FILE = Path("logs/telegram_offset.txt")
+ESP32_CAM_URL = "http://192.168.12.32"
 
 CLASSIFY_TOOL = {
     "name": "classify_event",
@@ -55,7 +56,7 @@ CLASSIFY_TOOL = {
                     "water_change", "water_test", "feeding", "observation",
                     "heater_adjust", "dosing", "maintenance", "plant_addition",
                     "shrimp_added", "owner_note", "question", "correction",
-                    "system_update"
+                    "system_update", "capture_request"
                 ],
                 "description": "Best-fit event type. Use correction if owner is explicitly correcting a prior caretaker misinterpretation (e.g. 'that was a bug', 'those photos were not real', 'ignore that reading'). Use question if owner is asking about tank status/parameters/history. Use owner_note if intent is unclear."
             },
@@ -206,6 +207,33 @@ def format_vision_reply(analysis, caption=""):
     return "\n".join(lines)
 
 
+def fetch_esp32_snapshot():
+    """GET /snapshot from ESP32-CAM. Returns JPEG bytes or None."""
+    try:
+        r = requests.get(f"{ESP32_CAM_URL}/snapshot", timeout=10)
+        r.raise_for_status()
+        return r.content
+    except Exception as e:
+        print(f"[telegram-listener] ESP32-CAM fetch failed: {e}")
+        return None
+
+
+def handle_capture_request():
+    img_bytes = fetch_esp32_snapshot()
+    if not img_bytes:
+        call_toby("Couldn't reach camera — is it online?", urgency="warning")
+        return
+
+    filename = save_photo(img_bytes)
+    print(f"[telegram-listener] ESP32-CAM snapshot saved: {filename}")
+    analysis = process_photo(img_bytes, filename, source="capture_request")
+    if analysis:
+        caption = format_vision_reply(analysis)
+        send_photo(PHOTOS_DIR / filename, caption=caption)
+    else:
+        send_photo(PHOTOS_DIR / filename)
+
+
 def handle_photo(msg, token):
     caption = msg.get("caption", "")
     file_id = msg["photo"][-1]["file_id"]
@@ -235,6 +263,8 @@ def handle_text(text):
         reply = answer_question(text)
         call_toby(reply if reply else "Couldn't answer that right now — check logs.",
                   urgency="info" if reply else "warning")
+    elif event_type == "capture_request":
+        handle_capture_request()
     else:
         data = {**classified.get("data", {}), "source": "telegram"}
         post_event(event_type, notes=notes, data=data)
