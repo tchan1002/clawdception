@@ -2696,3 +2696,7 @@ All parameters remain comfortably within target range. The colony is 6 days post
 • 👀 Observe shrimp behavior — Watch pH recovery trajectory over next 12 hours. Should rebound toward 6.5–7.0 as water equilibrates.
 [2026-04-20T00:30] Day 30 | risk=yellow | [ph changed 0.12 in last hour] | T=75.76°F pH=6.11 TDS=202.0ppm | pH has slipped 0.12 points in the last hour and sits at 6.11—below target floor 
 [2026-04-20T00:45] Day 30 | skipped (stable) | T=75.76°F pH=6.14 TDS=201.0ppm
+[2026-04-20T01:00] Day 30 | skipped (stable) | T=75.76°F pH=6.15 TDS=203.0ppm
+[2026-04-20T01:15] Day 30 | skipped (stable) | T=75.76°F pH=6.19 TDS=210.0ppm
+[2026-04-20T01:30] Day 30 | skipped (stable) | T=75.76°F pH=6.22 TDS=210.0ppm
+[2026-04-20T01:45] Day 30 | skipped (stable) | T=75.76°F pH=6.23 TDS=208.0ppm
