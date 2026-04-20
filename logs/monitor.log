@@ -2744,3 +2744,10 @@ All parameters remain comfortably within target range. The colony is 6 days post
 [2026-04-20T11:15] Day 30 | skipped (stable) | T=75.99°F pH=6.27 TDS=189.0ppm
 [2026-04-20T11:30] Day 30 | risk=green | [manual event since last check ] | T=75.99°F pH=6.27 TDS=189.0ppm | Temperature and TDS are solidly in range; pH is slightly low but tracking recove
 [2026-04-20T11:45] Day 30 | skipped (stable) | T=75.87°F pH=6.26 TDS=189.0ppm
+[2026-04-20T12:00] Day 30 | skipped (stable) | T=75.87°F pH=6.24 TDS=190.0ppm
+[2026-04-20T12:15] Day 30 | skipped (stable) | T=75.87°F pH=6.24 TDS=189.0ppm
+[2026-04-20T12:30] Day 30 | risk=yellow | [manual event since last check ] | T=75.87°F pH=6.24 TDS=189.0ppm | pH is drifting slightly low in the wake of the water top-off (10% on 2026-04-19T
+[call-toby] Telegram sent (warning): pH is drifting slightly low in the wake of the water top-off (10% on 2026-04-19T22:20), but within a normal recovery envelope for day 30 of cycling. All other parameters stable and on-target; no shrimp distress signals in the latest photo (two boys actively grazing on duckweed).
+
+• 📸 Send a photo of the tank — Check for continued shrimp grazing behavior, moss/algae colonization density on ceramic media.
+[2026-04-20T12:45] Day 30 | skipped (stable) | T=75.87°F pH=6.24 TDS=189.0ppm
