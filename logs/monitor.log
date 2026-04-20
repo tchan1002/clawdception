@@ -2759,3 +2759,10 @@ All parameters remain comfortably within target range. The colony is 6 days post
 [2026-04-20T14:15] Day 30 | skipped (stable) | T=75.76°F pH=6.24 TDS=189.0ppm
 [2026-04-20T14:30] Day 30 | skipped (stable) | T=75.99°F pH=6.21 TDS=189.0ppm
 [2026-04-20T14:45] Day 30 | skipped (stable) | T=76.21°F pH=6.23 TDS=192.0ppm
+[2026-04-20T15:00] Day 30 | risk=green | [temp_f changed 1.02 in last ho] | T=76.78°F pH=6.23 TDS=186.0ppm | Tank is stable day-30 post-introduction; 1.02°F hourly temperature shift is norm
+[call-toby] Telegram sent (info): Tank is stable day-30 post-introduction; 1.02°F hourly temperature shift is normal sensor noise within a clear 24hr mean of 76°F and established pattern. pH is acidic but expected during active nitrogen cycling—no rapid deterioration visible.
+
+• 👀 Observe shrimp behavior
+[2026-04-20T15:15] Day 30 | risk=green | [temp_f changed 1.01 in last ho] | T=77.0°F pH=6.21 TDS=185.0ppm | Day 30 post-setup, 167hr post-shrimp: pH dip is textbook early-cycle acidificati
+[2026-04-20T15:30] Day 30 | skipped (stable) | T=77.11°F pH=6.23 TDS=186.0ppm
+[2026-04-20T15:45] Day 30 | skipped (stable) | T=76.89°F pH=6.2 TDS=186.0ppm
