@@ -2557,3 +2557,21 @@ A mesh media bag — likely containing crushed coral, aragonite, or similar buff
 [telegram-listener] 'how’s the water?' → question
 [call-toby] Telegram sent (info): pH at 6.36 is the one thing I'm watching — it's been sliding low and sitting there. TDS and temp look fine. Nothing urgent, but I'd like to see that pH nudge back toward 7 before too long.
 [telegram-listener] Processed 1 message(s), offset now 236833067
+[telegram-listener] 'added 10% treated water to restore water levels' → water_change
+[call-toby] Telegram sent (info): Logged as water change: Owner topped off tank with 10% treated water to restore evaporated water levels. ✓
+[telegram-listener] Photo saved: 2026-04-19_22-18-08.jpg — ''
+[call-toby] Telegram sent (info): 2 shrimp visible · water: clear · plants: stable
+Algae: Fine, wispy green filamentous algae visible on and around the mesh bag in the foreground, and scattered green plant fragments throughout. Appears to be early-stage filamentous or hair algae, low density.
+Concerns: Filamentous/hair algae visibly colonizing the mesh bag and surrounding area — consistent with a cycling tank where nutrients are available but not yet fully balanced by plant uptake, One shrimp visible on the mesh bag appears to be on its side or in an unusual resting posture — worth a second look to confirm it is active and not stressed
+
+The foreground is dominated by a large white mesh bag — likely containing a porous biological media (ceramic rings or similar) — resting on dark substrate. Two red Neocaridina shrimp are visible: one clearly on/near the mesh bag in the midground, one partially visible through the mesh. Fine green filamentous algae has begun colonizing the bag and loose plant matter is scattered around it, which is typical for day 29 of a cycle. Equipment visible includes a sponge filter on the right (with what appear to be ceramic media balls), a heater with a blue thermometer clip, and tubing — all consistent with an active cycling setup.
+[telegram-listener] Vision reply sent
+[telegram-listener] 'shook up the moss a little bit' → maintenance
+[call-toby] Telegram sent (info): Logged as maintenance: Owner gently agitated the moss to redistribute or clean it. ✓
+[telegram-listener] Processed 3 message(s), offset now 236833070
+[telegram-listener] 'the filamentous algae might be the moss' → correction
+[call-toby] Telegram sent (info): Logged as correction: Owner suggests the filamentous algae previously observed may actually be moss, not algae — a reidentification of prior visual observation. ✓
+[telegram-listener] Processed 1 message(s), offset now 236833071
+[telegram-listener] 'it’s fine just the water change knocking off the sensor' → correction
+[call-toby] Telegram sent (info): Logged as correction: Owner clarifying that a sensor anomaly was caused by the water change, not a genuine reading — not a crisis event. ✓
+[telegram-listener] Processed 1 message(s), offset now 236833072

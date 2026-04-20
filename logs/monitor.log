@@ -2663,3 +2663,14 @@ All parameters remain comfortably within target range. The colony is 6 days post
 [2026-04-19T21:15] Day 29 | skipped (stable) | T=75.99°F pH=6.37 TDS=211.0ppm
 [2026-04-19T21:30] Day 29 | skipped (stable) | T=75.87°F pH=6.39 TDS=212.0ppm
 [2026-04-19T21:45] Day 29 | skipped (stable) | T=75.87°F pH=6.37 TDS=211.0ppm
+[2026-04-19T22:00] Day 29 | skipped (stable) | T=75.87°F pH=6.35 TDS=212.0ppm
+[2026-04-19T22:15] Day 29 | skipped (stable) | T=75.87°F pH=6.34 TDS=212.0ppm
+[2026-04-19T22:30] Day 29 | risk=yellow | [manual event since last check ] | T=75.87°F pH=5.8 TDS=205.0ppm | pH has drifted into the low-yellow zone (5.8) with a 24-hour decline of 0.72—con
+[shrimp-alert] 🚨 ph is below danger threshold: 5.8 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.8 (below 6.0)
+[call-toby] Telegram sent (warning): pH has drifted into the low-yellow zone (5.8) with a 24-hour decline of 0.72—consistent with active nitrification and organic acid accumulation during day 29 of the cycle. Temperature and TDS are stable and healthy; shrimp are active and molting normally, suggesting no acute distress yet.
+
+⏳ 🧪 Run a water test (ammonia / nitrite / pH)
+[2026-04-19T22:45] Day 29 | risk=green | [manual event since last check ] | T=76.1°F pH=5.8 TDS=205.0ppm | pH has dipped to 5.8 following the 10% water change at 22:18, but this is expect
+[shrimp-alert] 🚨 ph is below danger threshold: 5.8 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.8 (below 6.0)
