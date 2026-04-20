@@ -1,7 +1,7 @@
 # State of Tank — Media Luna
 
-**Last updated:** 2026-04-18
-**Cycle day:** 28 (started 2026-03-22)
+**Last updated:** 2026-04-19
+**Cycle day:** 29 (started 2026-03-22)
 **Tank status:** Active cycling — shrimp introduced Day 23 (2026-04-13)
 
 ---
@@ -11,60 +11,48 @@
 | Animal | Count | Notes |
 |--------|-------|-------|
 | Neocaridina shrimp | 6 introduced | 4 male, 2 female; introduced 2026-04-13 ~15:36 |
-| Snails (unplanned) | Unknown — reduced | 2 tiny (~1mm) snails removed overnight 2026-04-17; total population unknown |
+| Snails (unplanned) | Unknown | 2 tiny (~1mm) snails removed 2026-04-17; total population unknown |
 
-**Shrimp observations (2026-04-18):**
-- 2 shrimp photographed actively foraging on mesh feeding dish (evening)
-- 1 shrimp photographed at base of moss clump (afternoon), appeared to be grazing or resting
-- Active grazing and defecation logged (17:22) — digestion confirmed, behavior normal
-- No surface clustering, no lethargy reported
+**Shrimp observations (2026-04-19):**
+- 2 shrimp visible in 10pm photo — one grazing on/near mesh media bag, one partially visible through the bag mesh
+- One shrimp appeared to be resting at an unusual angle (on its side) on the mesh bag — flagged for follow-up; not confirmed as distress
+- 2 shrimp visible in midnight photo near base of mesh bag — appeared active
 
 ---
 
 ## Equipment
 
-| Item | Status |
-|------|--------|
-| Sponge filter (with ceramic bio-media in lower chamber) | Operational — visible in photos |
-| Heater with flow head | Operational — submerged, visible in photos |
-| Spray bar / airline (blue-tipped) | Operational — surface rippling visible |
-| Ceramic media in mesh bag | Present on substrate — confirmed ceramic (not crushed coral) per owner correction 2026-04-18 |
+- Sponge filter with ceramic media balls (confirmed ceramic, not crushed coral — 2026-04-19 correction)
+- Heater with blue thermometer clip
+- Blue-tipped spray bar or surface agitator (visible in midnight photo)
+- Large white mesh media bag — contents unconfirmed (ceramic rings or similar biological media suspected); sitting on substrate mid-tank
 
 ---
 
-## Plants & Hardscape
+## Tank Physical Conditions
 
-- **Moss clump** (likely java moss or similar): free-floating by design, resting near rear corner of tank; healthy green coloration overall; some darker material at base — monitoring for die-off vs. normal shading
-- **Small green plant tufts**: visible at substrate level; plant health logged as stable
-- **Floating plants**: sparse/fragmented coverage at surface — monitoring
-- **Substrate**: dark granular, appears clean and uniform
-
----
-
-## Water Chemistry (current)
-
-| Parameter | Current Avg | Range (Day 28) | Target Range |
-|-----------|-------------|----------------|--------------|
-| Temperature | 76.3°F | 75.8–77.1°F | 72–78°F |
-| pH | 6.46 | 6.31–6.54 | 6.5–7.5 |
-| TDS | 192 ppm | 186–209 ppm | 150–250 ppm |
-
-- pH trending slightly low but stable; within acceptable range during cycling
-- TDS showing a slow upward drift — monitoring for evaporation concentration or food input contribution
-- Faint whitish haze noted in water column against back glass (evening photo) — consistent with bacterial bloom at day 28 of cycle; expected, monitoring
+- **Substrate:** Dark granular (clean, no visible debris as of 2026-04-19 midnight photo)
+- **Plants:** Feathery green plant visible left of mesh bag (midnight photo); scattered green plant fragments throughout (10pm photo)
+- **Algae:** Fine, wispy green filamentous algae visible on and around the mesh bag in 10pm photo — low density, early stage. Possibly moss rather than hair algae (correction logged 2026-04-19, unconfirmed)
+- **Water clarity:** Clear in both photos
 
 ---
 
-## Active Watch Items
+## Water Chemistry — Current
 
-- Bacterial bloom haze: expected to clear as cycle completes; flag if persistent past ~day 35
-- Moss base darkening: slow watch, not acute
-- TDS drift: slow upward trend, monitor
-- Food load at feeding station: portion size appeared large in evening photo; monitor for uneaten food and ammonia risk
-- Snail population: unknown, monitoring
+| Parameter | Recent Avg | Notes |
+|-----------|-----------|-------|
+| Temp | 76.0°F | Stable, within target |
+| pH | 6.43 avg; ~5.9 end-of-day | Post-water-change dip; expected to recover |
+| TDS | 206 ppm | Slight upward trend; within normal range |
+
+**Last manual test (Day 23, 2026-04-13):** NH₃ = 0, NO₂ = 0, NO₃ = 80 ppm — strong biofilter function confirmed
 
 ---
 
-## Cycle Milestone
+## Active Concerns
 
-Ammonia → nitrite → nitrate conversion in progress. No manual ammonia/nitrite/nitrate test logged since Day 23 introduction. A manual spot-check in the next few days would help confirm whether cycle is nearing completion.
+- **Shrimp posture (one individual, 10pm photo):** Resting on side near mesh bag — flag for follow-up visual check
+- **Filamentous algae/moss on mesh bag:** Early-stage; monitor growth rate. Identity unconfirmed (moss vs. hair algae)
+- **pH post-water-change dip:** Readings dropped into upper 5s following 10% top-off. Expected to recover naturally; no intervention needed
+- **Snail population:** Unknown total; 2 removed 2026-04-17, remainder untracked
