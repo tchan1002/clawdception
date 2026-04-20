@@ -2686,3 +2686,13 @@ All parameters remain comfortably within target range. The colony is 6 days post
 [2026-04-19T23:45] Day 29 | risk=yellow | [ph changed 0.14 in last hour] | T=75.76°F pH=5.99 TDS=206.0ppm | pH dropped 0.52 over 24 hours and now sits at 5.99—just above the danger thresho
 [shrimp-alert] 🚨 ph is below danger threshold: 5.99 (below 6.0)
 [call-toby] Telegram sent (critical): ph is below danger threshold: 5.99 (below 6.0)
+[2026-04-20T00:00] Day 30 | risk=yellow | [ph changed 0.12 in last hour] | T=75.87°F pH=6.05 TDS=202.0ppm | pH has drifted downward significantly over 24 hours—now 0.45 below target floor—
+[call-toby] Telegram sent (warning): pH has drifted downward significantly over 24 hours—now 0.45 below target floor—with a sharp 0.12-drop in the last hour. While not yet critical (danger zone is <6.0), this trend warrants close observation. Ceramic media, early plant colonization, and the active nitrogen cycle may all be contributing; Toby's 10% water-change yesterday was appropriate but hasn't arrested the slide.
+
+• 📸 Send a photo of the tank — Shrimp visible behavior—sheltering, grazing, molting. Moss condition.
+[2026-04-20T00:15] Day 30 | risk=green | [ph changed 0.12 in last hour] | T=75.76°F pH=6.08 TDS=202.0ppm | pH dip is consistent with the 10% water change Toby logged at 22:18 yesterday; f
+[call-toby] Telegram sent (info): pH dip is consistent with the 10% water change Toby logged at 22:18 yesterday; fresh treated water naturally shifts equilibrium slightly acidic during active cycling. All parameters remain within safe bounds for Neocaridina; temperature and TDS are stable and nominal.
+
+• 👀 Observe shrimp behavior — Watch pH recovery trajectory over next 12 hours. Should rebound toward 6.5–7.0 as water equilibrates.
+[2026-04-20T00:30] Day 30 | risk=yellow | [ph changed 0.12 in last hour] | T=75.76°F pH=6.11 TDS=202.0ppm | pH has slipped 0.12 points in the last hour and sits at 6.11—below target floor 
+[2026-04-20T00:45] Day 30 | skipped (stable) | T=75.76°F pH=6.14 TDS=201.0ppm
