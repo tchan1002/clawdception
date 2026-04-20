@@ -2674,3 +2674,15 @@ All parameters remain comfortably within target range. The colony is 6 days post
 [2026-04-19T22:45] Day 29 | risk=green | [manual event since last check ] | T=76.1°F pH=5.8 TDS=205.0ppm | pH has dipped to 5.8 following the 10% water change at 22:18, but this is expect
 [shrimp-alert] 🚨 ph is below danger threshold: 5.8 (below 6.0)
 [call-toby] Telegram sent (critical): ph is below danger threshold: 5.8 (below 6.0)
+[2026-04-19T23:00] Day 29 | risk=green | [ph changed 0.49 in last hour] | T=75.99°F pH=5.85 TDS=204.0ppm | The 0.49 pH dip is explained by Toby's 10% water change at 22:32—treated water t
+[shrimp-alert] 🚨 ph is below danger threshold: 5.85 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.85 (below 6.0)
+[2026-04-19T23:15] Day 29 | risk=yellow | [ph changed 0.13 in last hour] | T=75.87°F pH=5.93 TDS=206.0ppm | pH dipped 0.13 in the past hour and sits at 5.93 (just below target floor of 6.5
+[shrimp-alert] 🚨 ph is below danger threshold: 5.93 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.93 (below 6.0)
+[2026-04-19T23:30] Day 29 | risk=green | [ph changed 0.16 in last hour] | T=75.87°F pH=5.96 TDS=204.0ppm | pH dipped to 5.96 following a 10% top-off water change at 22:18—well within expe
+[shrimp-alert] 🚨 ph is below danger threshold: 5.96 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.96 (below 6.0)
+[2026-04-19T23:45] Day 29 | risk=yellow | [ph changed 0.14 in last hour] | T=75.76°F pH=5.99 TDS=206.0ppm | pH dropped 0.52 over 24 hours and now sits at 5.99—just above the danger thresho
+[shrimp-alert] 🚨 ph is below danger threshold: 5.99 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.99 (below 6.0)

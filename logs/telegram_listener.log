@@ -2575,3 +2575,4 @@ The foreground is dominated by a large white mesh bag — likely containing a po
 [telegram-listener] 'it’s fine just the water change knocking off the sensor' → correction
 [call-toby] Telegram sent (info): Logged as correction: Owner clarifying that a sensor anomaly was caused by the water change, not a genuine reading — not a crisis event. ✓
 [telegram-listener] Processed 1 message(s), offset now 236833072
+[telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))

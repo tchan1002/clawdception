@@ -275,3 +275,7 @@
 {"timestamp": "2026-04-19T22:30:07.577315", "urgency": "warning", "message": "pH has drifted into the low-yellow zone (5.8) with a 24-hour decline of 0.72\u2014consistent with active nitrification and organic acid accumulation during day 29 of the cycle. Temperature and TDS are stable and healthy; shrimp are active and molting normally, suggesting no acute distress yet.\n\n\u23f3 \ud83e\uddea Run a water test (ammonia / nitrite / pH)", "sent_via": "telegram"}
 {"timestamp": "2026-04-19T22:32:06.609008", "urgency": "info", "message": "Logged as correction: Owner clarifying that a sensor anomaly was caused by the water change, not a genuine reading \u2014 not a crisis event. \u2713", "sent_via": "telegram"}
 {"timestamp": "2026-04-19T22:45:02.302105", "urgency": "critical", "message": "ph is below danger threshold: 5.8 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-04-19T23:00:02.094617", "urgency": "critical", "message": "ph is below danger threshold: 5.85 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-04-19T23:15:01.965987", "urgency": "critical", "message": "ph is below danger threshold: 5.93 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-04-19T23:30:02.971378", "urgency": "critical", "message": "ph is below danger threshold: 5.96 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-04-19T23:45:02.619166", "urgency": "critical", "message": "ph is below danger threshold: 5.99 (below 6.0)", "sent_via": "telegram"}
