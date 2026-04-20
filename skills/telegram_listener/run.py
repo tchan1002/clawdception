@@ -54,7 +54,8 @@ CLASSIFY_TOOL = {
                 "enum": [
                     "water_change", "water_test", "feeding", "observation",
                     "heater_adjust", "dosing", "maintenance", "plant_addition",
-                    "shrimp_added", "owner_note", "question", "correction"
+                    "shrimp_added", "owner_note", "question", "correction",
+                    "system_update"
                 ],
                 "description": "Best-fit event type. Use correction if owner is explicitly correcting a prior caretaker misinterpretation (e.g. 'that was a bug', 'those photos were not real', 'ignore that reading'). Use question if owner is asking about tank status/parameters/history. Use owner_note if intent is unclear."
             },
@@ -302,6 +303,17 @@ def reject_proposal(proposal_id):
         }))
 
 
+def get_proposal_status(proposal_id):
+    """Return current proposal status string or None if pending/missing."""
+    status_file = PATHS["proposals"] / proposal_id / "status.json"
+    if status_file.exists():
+        try:
+            return json.loads(status_file.read_text()).get("status")
+        except Exception:
+            pass
+    return None
+
+
 def handle_callback_query(token, chat_id, callback_query):
     """Handle inline button taps (approve / reject / edit)."""
     cq_id = callback_query["id"]
@@ -313,9 +325,18 @@ def handle_callback_query(token, chat_id, callback_query):
 
     action, proposal_id = data.split(":", 1)
 
+    # Idempotency: ignore duplicate taps on already-processed proposals
+    current_status = get_proposal_status(proposal_id)
+    if current_status in ("approved", "rejected"):
+        answer_callback(token, cq_id, f"Already {current_status}.")
+        return
+
     if action == "approve":
         answer_callback(token, cq_id, "Installing...")
         success, msg = install_proposal(proposal_id)
+        if success:
+            skill_name = "-".join(proposal_id.split("-")[3:])
+            post_event("system_update", notes=f"Skill approved and installed: {skill_name}", data={"proposal_id": proposal_id, "source": "telegram"})
         call_toby(msg, urgency="info" if success else "warning")
 
     elif action == "reject":

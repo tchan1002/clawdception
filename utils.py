@@ -74,8 +74,7 @@ INTERNAL_EVENT_TYPES = {"smoke_test", "equipment_check"}
 NOTABLE_EVENT_TYPES = {
     "shrimp_added", "water_change", "water_test", "plant_addition",
     "maintenance", "heater_adjust", "dosing", "feeding",
-    "owner_note", "owner_photo", "plant_addition", "observation",
-    "correction",
+    "owner_note", "owner_photo", "correction", "system_update",
 }
 
 

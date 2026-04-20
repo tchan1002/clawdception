@@ -2732,3 +2732,7 @@ All parameters remain comfortably within target range. The colony is 6 days post
 [2026-04-20T08:15] Day 30 | skipped (stable) | T=76.21°F pH=6.36 TDS=210.0ppm
 [2026-04-20T08:30] Day 30 | skipped (stable) | T=76.21°F pH=6.36 TDS=209.0ppm
 [2026-04-20T08:45] Day 30 | skipped (stable) | T=76.21°F pH=6.35 TDS=211.0ppm
+[2026-04-20T09:00] Day 30 | skipped (stable) | T=76.1°F pH=6.38 TDS=199.0ppm
+[2026-04-20T09:15] Day 30 | skipped (stable) | T=76.21°F pH=6.36 TDS=198.0ppm
+[2026-04-20T09:30] Day 30 | risk=yellow | [manual event since last check ] | T=76.1°F pH=6.34 TDS=200.0ppm | pH has drifted slightly low (6.34 vs. target 6.5–7.5) over the past 24 hours, li
+[2026-04-20T09:45] Day 30 | risk=green | [manual event since last check ] | T=76.21°F pH=6.34 TDS=198.0ppm | Colony at day 30 post-introduction is thriving—2 boys actively foraging on duckw

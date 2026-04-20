@@ -39,6 +39,7 @@ Download failure: logs `owner_photo` event with `error: download_failed`, sends 
 ## Proposal review (callback_query flow)
 
 Inline buttons on proposal messages: approve / reject only (no edit flow).
+- **Idempotent**: `get_proposal_status` checked first — if already approved/rejected, callback dismissed silently. Prevents double-fire when Toby double-taps or Telegram redelivers.
 - approve → `install_proposal` → copies run.py + SKILL.md to skills/{name}/, writes status.json
 - reject → writes status.json as rejected
 

@@ -24,6 +24,7 @@
   telegram-listener (every 2min) → polls owner Telegram messages → classifies text into structured events, analyzes photos via shrimp-vision pathway → logs/vision/ (with filename) → replies with analysis
   call-toby → Telegram notifications
   skill-writer (8:30am, self-gated) → proposals/
+  water-change-predictor (8:05am) → state/next_water_change.md → call-toby if ≤2 days out
       ↓
 [Web Dashboard]
   media_luna_dashboard.html — served by Flask at GET /
@@ -44,6 +45,7 @@
 | `utils.py` | Shared functions used by all skills |
 | `state_of_tank.md` | Rolling tank state — rewritten daily by daily-log |
 | `agent_state.md` | Agent personality/disposition — rewritten daily by daily-log |
+| `state/next_water_change.md` | Water change timing prediction — rewritten daily by water-change-predictor |
 | `crontab.txt` | Cron schedule — review and install manually |
 | `setup.sh` | Run once on Pi to install deps and create directories |
 
@@ -63,6 +65,7 @@
 | `skills/shrimp_vision/` | shrimp-vision | Every 2hr (disabled) | ESP32-CAM snapshot → Claude vision analysis → logs/vision/ |
 | `skills/telegram_listener/` | telegram-listener | Every 2min | Poll Telegram for owner messages → heuristic pre-filter routes questions to `answer_question` (no classify call); events → `classify_message` (Claude tool); photos → `shrimp_vision.process_photo` → vision reply |
 | `skills/skill_writer/` | skill-writer | 8:30am daily | Self-improvement proposals → proposals/ (self-gated) |
+| `skills/waterchangepredictor/` | water-change-predictor | 8:05am daily | Linear trend on TDS/pH → days-until-threshold → state/next_water_change.md; alerts Toby if ≤2 days |
 
 ---
 

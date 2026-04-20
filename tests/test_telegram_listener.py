@@ -305,6 +305,35 @@ class TestHandleCallbackQuery:
             handle_callback_query("tok", "123", self._cq("approve"))
         assert patches["call_toby"].call_args.kwargs.get("urgency") == "warning"
 
+    def test_duplicate_reject_skipped(self):
+        # Proposal already rejected — second tap must not call reject_proposal or call_toby
+        patches = self._patches()
+        patches["get_proposal_status"] = MagicMock(return_value="rejected")
+        with patch.multiple("skills.telegram_listener.run", **patches):
+            handle_callback_query("tok", "123", self._cq("reject"))
+        patches["reject_proposal"].assert_not_called()
+        patches["call_toby"].assert_not_called()
+        patches["answer_callback"].assert_called_once()
+
+    def test_duplicate_approve_skipped(self):
+        # Proposal already approved — second tap must not install again
+        patches = self._patches()
+        patches["get_proposal_status"] = MagicMock(return_value="approved")
+        with patch.multiple("skills.telegram_listener.run", **patches):
+            handle_callback_query("tok", "123", self._cq("approve"))
+        patches["install_proposal"].assert_not_called()
+        patches["call_toby"].assert_not_called()
+        patches["answer_callback"].assert_called_once()
+
+    def test_pending_proposal_proceeds(self):
+        # status=None (pending) — should process normally
+        patches = self._patches()
+        patches["get_proposal_status"] = MagicMock(return_value=None)
+        with patch.multiple("skills.telegram_listener.run", **patches):
+            handle_callback_query("tok", "123", self._cq("reject"))
+        patches["reject_proposal"].assert_called_once()
+        patches["call_toby"].assert_called_once()
+
 
 class TestOffsetReadWrite:
     def test_get_offset_missing_file(self, tmp_path):

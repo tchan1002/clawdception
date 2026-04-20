@@ -115,6 +115,7 @@ def run(target_date=None):
     # --- Build context block ---
     stats_block = build_stats_block(day_readings)
     events_block = build_events_block(day_events)
+    system_updates = [e for e in day_events if e.get("event_type") == "system_update"]
 
     # Trim journal to keep tokens manageable
     journal_excerpt = journal_text[-1200:] if len(journal_text) > 1200 else journal_text
@@ -123,6 +124,10 @@ def run(target_date=None):
     prev_logs_text = ""
     for i, log in enumerate(recent_logs[:2]):
         prev_logs_text += f"\n--- Previous log {i+1} (truncated) ---\n{log[:600]}\n"
+
+    system_updates_block = "\n".join(
+        f"  [{e.get('timestamp','')[:16]}] {e.get('notes','')}" for e in system_updates
+    ) if system_updates else ""
 
     context = f"""Date: {target_date}
 Day {cycle_day_then} of the nitrogen cycle (cycle started 2026-03-22).
@@ -133,6 +138,7 @@ SENSOR STATS FOR {target_date}:
 
 EVENTS ON {target_date}:
 {events_block}
+{f"SYSTEM UPDATES ON {target_date} (rig additions, new skills, capability changes):{chr(10)}{system_updates_block}{chr(10)}" if system_updates_block else ""}
 
 AGENT DECISIONS — risk summary: {risk_summary}
 {chr(10).join([d.get('reasoning', '')[:100] for d in decisions[-6:]])}
@@ -163,7 +169,7 @@ CONTEXT:
 Write three sections, each clearly delimited:
 
 ===DAILY_LOG===
-[The immutable daily log for {target_date}. Day {cycle_day_then} of the cycle — let that inform the arc. Write something Toby will read with his morning coffee and remember. Let personality shine through. 200–300 words. STRICT: Only describe physical tank details (plants, substrate, decorations, animal behavior) that appear explicitly in the events, journal, or state above. Do not invent details from general aquarium knowledge — if it wasn't logged or submitted, it doesn't exist in your record.]
+[The immutable daily log for {target_date}. Day {cycle_day_then} of the cycle — let that inform the arc. Write something Toby will read with his morning coffee and remember. Let personality shine through. 200–300 words. STRICT: Only describe physical tank details (plants, substrate, decorations, animal behavior) that appear explicitly in the events, journal, or state above. Do not invent details from general aquarium knowledge — if it wasn't logged or submitted, it doesn't exist in your record.{" SYSTEM UPDATES PRESENT: weave them into the narrative as a meaningful moment — the rig gaining new hardware or capability is part of this story. The tank may be stable; the system watching it is not. Reflect on what changed and what it means." if system_updates else ""}]
 
 ===STATE_OF_TANK===
 [Updated rolling state of the tank. Plain facts + current conditions. What's true about this tank right now. 200-350 words.]
