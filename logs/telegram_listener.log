@@ -2554,3 +2554,6 @@ A mesh media bag — likely containing crushed coral, aragonite, or similar buff
 [call-toby] Telegram sent (info): Proposal `2026-04-19-cycletracker` rejected and archived.
 [telegram-listener] Processed 2 message(s), offset now 236833066
 [telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[telegram-listener] 'how’s the water?' → question
+[call-toby] Telegram sent (info): pH at 6.36 is the one thing I'm watching — it's been sliding low and sitting there. TDS and temp look fine. Nothing urgent, but I'd like to see that pH nudge back toward 7 before too long.
+[telegram-listener] Processed 1 message(s), offset now 236833067
