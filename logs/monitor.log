@@ -2777,3 +2777,7 @@ All parameters remain comfortably within target range. The colony is 6 days post
 [2026-04-20T17:15] Day 30 | risk=green | [manual event since last check ] | T=75.99°F pH=6.24 TDS=187.0ppm | Day 30 post-introduction: colony is established, nitrate stable at 80ppm (no amm
 [2026-04-20T17:30] Day 30 | risk=green | [manual event since last check ] | T=75.99°F pH=6.24 TDS=187.0ppm | Day 30 post-introduction: ammonia zero, nitrite zero, nitrate 80ppm—cycle is est
 [2026-04-20T17:45] Day 30 | risk=green | [manual event since last check ] | T=75.87°F pH=6.25 TDS=188.0ppm | Tank is on day 30 post-introduction with stable temperature and safe TDS; water 
+[2026-04-20T18:00] Day 30 | risk=green | [manual event since last check ] | T=75.99°F pH=6.25 TDS=188.0ppm | All three parameters are within or near safe operational bounds; pH dip to 6.25 
+[2026-04-20T18:15] Day 30 | risk=yellow | [manual event since last check ] | T=76.1°F pH=6.25 TDS=185.0ppm | pH is now 0.25 units below target floor, drifting downward 24hr trend (−0.09); t
+[2026-04-20T18:30] Day 30 | risk=green | [manual event since last check ] | T=76.1°F pH=6.22 TDS=189.0ppm | Temp and TDS are solid; pH is mild yellow but declining post-water-change is nor
+[2026-04-20T18:45] Day 30 | risk=green | [manual event since last check ] | T=75.99°F pH=6.24 TDS=187.0ppm | Colony is 7 days post-introduction with clean ammonia and nitrite; nitrogen cycl
