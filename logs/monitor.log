@@ -2880,3 +2880,12 @@ Day 30 post-introduction: shrimp are eating competitively, grazing algae off hea
 [2026-04-21T16:15] Day 31 | skipped (stable) | T=76.21°F pH=6.22 TDS=192.0ppm
 [2026-04-21T16:30] Day 31 | skipped (stable) | T=76.32°F pH=6.26 TDS=193.0ppm
 [2026-04-21T16:45] Day 31 | skipped (stable) | T=76.32°F pH=6.26 TDS=194.0ppm
+[2026-04-21T17:00] Day 31 | risk=green | [manual event since last check ] | T=76.32°F pH=6.22 TDS=193.0ppm | All parameters within or close to acceptable range for day 31 post-introduction;
+[call-toby] Telegram sent (info): All parameters within or close to acceptable range for day 31 post-introduction; shrimp are active and visibly grazing. pH is low-normal but not alarming—probe age warrants recalibration as a precaution.
+
+⏳ 🔧 Check equipment — pH probe calibration recommended within 24hr (30-day aging)
+• 👀 Observe shrimp behavior
+• 📸 Send a photo of the tank — Last photo 19hr ago; routine documentation recommended
+[2026-04-21T17:15] Day 31 | skipped (stable) | T=76.32°F pH=6.28 TDS=193.0ppm
+[2026-04-21T17:30] Day 31 | skipped (stable) | T=76.21°F pH=6.28 TDS=193.0ppm
+[2026-04-21T17:45] Day 31 | risk=yellow | [ph changed 0.1 in last hour] | T=76.32°F pH=6.32 TDS=194.0ppm | pH dropped 0.1 in the last hour and now reads 6.32—within acceptable range but t
