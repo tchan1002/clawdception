@@ -303,3 +303,9 @@ json.decoder.JSONDecodeError: Expecting value: line 2 column 1 (char 1)
 [shrimp-journal] Entry written: 2026-04-21-0605.md (Day 31)
 [call-toby] Telegram sent (info): Journal — Day 31 · 2026-04-21 06:05
 [call-toby] Document sent: 2026-04-21-0605.md
+[shrimp-journal] Entry written: 2026-04-21-1205.md (Day 31)
+[call-toby] Telegram sent (info): Journal — Day 31 · 2026-04-21 12:05
+[call-toby] Document sent: 2026-04-21-1205.md
+[call-toby] Telegram sent (info): Action items:
+• Calibrate the pH probe within the next 24 hours using fresh buffer solution (pH 7.0 and pH 4.0 or equivalent) to reset the 30-day clock and restore full confidence in readings
+• Run a manual water test (ammonia, nitrite, nitrate, pH) in the next 2-3 days to confirm where the cycle stands and compare against the 4/20 baseline (NH3: 0, NO2: 0, NO3: 80, pH: 6.8)
