@@ -688,3 +688,6 @@
 [2026-04-20T22:30] equipment-check | green | 0 issue(s) | All equipment checks passed. DS18B20 had 1 transient error(s) in last 24h. WiFi 
 [2026-04-20T23:00] equipment-check | green | 0 issue(s) | All equipment checks passed. DS18B20 had 1 transient error(s) in last 24h. WiFi 
 [2026-04-20T23:30] equipment-check | green | 0 issue(s) | All equipment checks passed. DS18B20 had 1 transient error(s) in last 24h. WiFi 
+[call-toby] Telegram sent (warning): pH probe last calibrated 30d ago — due every 30d.
+[2026-04-21T00:00] equipment-check | yellow | 1 issue(s) | 1 equipment issue(s): pH probe last calibrated 30d ago — due every 30d.
+[2026-04-21T00:30] equipment-check | yellow | 1 issue(s) | 1 equipment issue(s): pH probe last calibrated 30d ago — due every 30d.
