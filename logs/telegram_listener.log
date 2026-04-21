@@ -2631,3 +2631,24 @@ This is a close-up equipment shot showing a submersible heater mounted to the re
 [telegram-listener] Vision reply sent
 [telegram-listener] Processed 1 message(s), offset now 236833083
 [telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[telegram-listener] 'the old lady is good and swimming again' → observation
+[call-toby] Telegram sent (info): Logged as observation: The old lady (likely a specific shrimp, presumably a female) is active and swimming again after a period of concern or inactivity. ✓
+[telegram-listener] Photo saved: 2026-04-20_21-52-08.jpg — 'hanging out at the ol spot'
+[call-toby] Telegram sent (info): "hanging out at the ol spot"
+3 shrimp visible · water: clear · plants: stable
+Concerns: none
+
+Three vivid red cherry shrimp are perched on and among a dense clump of fine-leafed aquatic plant — likely hornwort or a similar feathery stem plant — actively picking through the foliage. The substrate is clean, the water is crystal clear, and the plant cluster looks like a lively little shrimp apartment complex.
+[telegram-listener] Vision reply sent
+[telegram-listener] Photo saved: 2026-04-20_21-52-17.jpg — 'use this for the daily log tmr'
+[call-toby] Telegram sent (info): "use this for the daily log tmr"
+1 shrimp visible · water: clear · plants: thriving
+Algae: Small green growth visible on substrate near the bottom-center of the frame — likely a patch of green spot algae or a low mat-forming plant/algae. Additional fine green particles suspended near the water surface and floating mid-column, possibly algae or plant detritus. Some yellow-green flecks on the substrate surface.
+Concerns: Fine particulate debris visible on substrate surface — consistent with an active nitrogen cycle at Day 30, not alarming, Image is underexposed/dark, limiting full assessment of the midground and background
+
+One brilliantly red Neocaridina shrimp is visible in the upper midground, tucked just beneath the floating plant canopy — it's vivid against the green root curtain and unmistakably healthy-looking. The floating plants are dense and lush, with long trailing roots that form a hanging forest at the waterline, suggesting strong surface growth on Day 30.
+[telegram-listener] Vision reply sent
+[telegram-listener] Processed 3 message(s), offset now 236833086
+[telegram-listener] 'it’s christmas moss' → correction
+[call-toby] Telegram sent (info): Logged as correction: Owner clarified that the moss in the tank is Christmas moss (Vesicularia montagnei). ✓
+[telegram-listener] Processed 1 message(s), offset now 236833087

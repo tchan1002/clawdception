@@ -2791,3 +2791,11 @@ Day 30 post-introduction: shrimp are eating competitively, grazing algae off hea
 [2026-04-20T20:15] Day 30 | risk=yellow | [manual event since last check ] | T=75.99°F pH=6.24 TDS=188.0ppm | pH has drifted downward to 6.24 over 24 hours (was 6.38, now 6.24), and today's 
 [2026-04-20T20:30] Day 30 | risk=green | [manual event since last check ] | T=75.99°F pH=6.28 TDS=187.0ppm | Day 30: shrimp are visibly feeding, competing for food, and grazing algae—all he
 [2026-04-20T20:45] Day 30 | risk=yellow | [manual event since last check ] | T=76.1°F pH=6.27 TDS=188.0ppm | pH dipped to 6.27 (still safe, but below target floor of 6.5) overnight—likely p
+[2026-04-20T21:00] Day 30 | risk=yellow | [manual event since last check ] | T=76.1°F pH=6.26 TDS=187.0ppm | pH dropped 0.11 over 24 hours post-water-change and now sits at 6.26—below targe
+[2026-04-20T21:15] Day 30 | risk=green | [manual event since last check ] | T=75.99°F pH=6.3 TDS=189.0ppm | All parameters within or very near target range; 24-hour trends are stable with 
+[call-toby] Telegram sent (info): All parameters within or very near target range; 24-hour trends are stable with normal post-water-change shifts. Shrimp are actively foraging, grazing algae, feeding competitively—strong behavioral indicators of health at day 30 post-introduction.
+
+• 👀 Observe shrimp behavior — Check on 'the old lady' (stationary shrimp in mid-back) to confirm normal resting/molting posture vs. distress
+• 👀 Observe shrimp behavior — Monitor moss/filamentous growth density on mesh bag—expect slow expansion but watch for sudden blooms
+[2026-04-20T21:30] Day 30 | skipped (stable) | T=75.99°F pH=6.35 TDS=188.0ppm
+[2026-04-20T21:45] Day 30 | skipped (stable) | T=75.99°F pH=6.35 TDS=189.0ppm
