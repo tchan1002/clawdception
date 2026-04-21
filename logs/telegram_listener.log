@@ -2630,3 +2630,4 @@ Concerns: none
 This is a close-up equipment shot showing a submersible heater mounted to the rear glass with a suction cup, alongside a multi-layer black foam sponge filter to its right — both submerged and apparently operational. The water is clear with no visible turbidity, and small bubbles are present along the heater's glass tube, suggesting it is actively heating. No plants or shrimp are visible in this tightly framed shot.
 [telegram-listener] Vision reply sent
 [telegram-listener] Processed 1 message(s), offset now 236833083
+[telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))

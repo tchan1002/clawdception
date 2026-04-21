@@ -2785,3 +2785,9 @@ All parameters remain comfortably within target range. The colony is 6 days post
 [2026-04-20T19:15] Day 30 | risk=green | [manual event since last check ] | T=75.99°F pH=6.23 TDS=186.0ppm | Chemistry trending stable post-maintenance: temp holding steady, TDS in range, p
 [2026-04-20T19:30] Day 30 | risk=green | [manual event since last check ] | T=75.99°F pH=6.25 TDS=187.0ppm | Colony is 7.1 days post-introduction; water test (ammonia 0, nitrite 0, nitrate 
 [2026-04-20T19:45] Day 30 | risk=green | [manual event since last check ] | T=75.99°F pH=6.25 TDS=186.0ppm | pH is soft (6.25) but within acceptable bounds post-water-change, and recent tes
+[2026-04-20T20:00] Day 30 | risk=green | [manual event since last check ] | T=75.99°F pH=6.24 TDS=187.0ppm | Day 30 post-introduction: shrimp are eating competitively, grazing algae off hea
+[call-toby] Telegram sent (info): ✅ All clear — T=75.99°F pH=6.24 TDS=187.0ppm
+Day 30 post-introduction: shrimp are eating competitively, grazing algae off heater, and foraging on duckweed—all signs of healthy acclimation and normal colony behavior. pH is slightly soft (6.24 sensor vs. 6.8 manual test), but within acceptable range for Neocaridina during cycling; temp, TDS, and ammonia/nitrite all solid.
+[2026-04-20T20:15] Day 30 | risk=yellow | [manual event since last check ] | T=75.99°F pH=6.24 TDS=188.0ppm | pH has drifted downward to 6.24 over 24 hours (was 6.38, now 6.24), and today's 
+[2026-04-20T20:30] Day 30 | risk=green | [manual event since last check ] | T=75.99°F pH=6.28 TDS=187.0ppm | Day 30: shrimp are visibly feeding, competing for food, and grazing algae—all he
+[2026-04-20T20:45] Day 30 | risk=yellow | [manual event since last check ] | T=76.1°F pH=6.27 TDS=188.0ppm | pH dipped to 6.27 (still safe, but below target floor of 6.5) overnight—likely p
