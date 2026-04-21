@@ -23,6 +23,7 @@ from utils import (
     fetch_events,
     fetch_notable_events,
     fetch_readings,
+    format_notable_events,
     read_decisions_since,
     read_journal,
 )
@@ -95,15 +96,7 @@ def run():
         event_lines.append(f"  [{ts_short}] {e.get('event_type')}: {json.dumps(e.get('data', {}))}")
     events_summary = "\n".join(event_lines) or "No events in this window."
 
-    # --- Notable events (14-day history) ---
-    notable_lines = []
-    for e in notable_events:
-        ts_short = e.get("timestamp", "")[:10]
-        notes = e.get("notes", "")
-        data = e.get("data", {})
-        detail = notes or json.dumps(data) if data else ""
-        notable_lines.append(f"  [{ts_short}] {e.get('event_type')}: {detail}")
-    notable_summary = "\n".join(notable_lines) or "No notable events in past 14 days."
+    notable_summary = format_notable_events(notable_events)
 
     # --- Truncate existing journal to save tokens ---
     journal_excerpt = journal_so_far[-600:] if len(journal_so_far) > 600 else journal_so_far

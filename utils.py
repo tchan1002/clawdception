@@ -1,8 +1,3 @@
-"""
-Shared utility functions for all Media Luna agent skills.
-All skills import from here — keep this stable and well-tested.
-"""
-
 import json
 import os
 import traceback
@@ -24,12 +19,7 @@ from config import (
 )
 
 
-# ---------------------------------------------------------------------------
-# Sensor data
-# ---------------------------------------------------------------------------
-
 def fetch_latest_reading():
-    """Returns the latest sensor reading as a dict, or None on failure."""
     try:
         r = requests.get(f"{API_BASE}/api/sensors/latest", timeout=10)
         r.raise_for_status()
@@ -40,7 +30,6 @@ def fetch_latest_reading():
 
 
 def fetch_readings(n=96):
-    """Returns the last N sensor readings as a list of dicts (newest first)."""
     try:
         r = requests.get(f"{API_BASE}/api/sensors", params={"limit": n}, timeout=10)
         r.raise_for_status()
@@ -65,10 +54,6 @@ def compute_stats(readings, field):
     }
 
 
-# ---------------------------------------------------------------------------
-# Events
-# ---------------------------------------------------------------------------
-
 INTERNAL_EVENT_TYPES = {"smoke_test", "equipment_check"}
 
 NOTABLE_EVENT_TYPES = {
@@ -79,7 +64,6 @@ NOTABLE_EVENT_TYPES = {
 
 
 def post_event(event_type, notes="", data=None):
-    """Posts an event to the API."""
     try:
         payload = {"event_type": event_type, "notes": notes, "data": data or {}}
         r = requests.post(f"{API_BASE}/api/events", json=payload, timeout=10)
@@ -89,10 +73,7 @@ def post_event(event_type, notes="", data=None):
 
 
 def fetch_events(since=None, event_type=None, limit=50):
-    """
-    Returns events from the API, filtered by since (ISO timestamp), event_type, or limit.
-    Internal event types (smoke_test) are always excluded.
-    """
+    """Internal event types (smoke_test, equipment_check) are always excluded."""
     try:
         params = {"limit": limit}
         if since:
@@ -108,18 +89,9 @@ def fetch_events(since=None, event_type=None, limit=50):
 
 
 def fetch_notable_events(days=14, limit=30):
-    """
-    Returns notable tank events (water changes, tests, shrimp additions, etc.)
-    from the past N days. Excludes observations and internal events.
-    Used to give agents persistent memory of significant tank history.
-    """
     since = (datetime.now() - timedelta(days=days)).isoformat()
     events = fetch_events(since=since, limit=limit * 2)
-    notable = [
-        e for e in events
-        if e.get("event_type") in NOTABLE_EVENT_TYPES
-        and e.get("event_type") != "observation"
-    ]
+    notable = [e for e in events if e.get("event_type") in NOTABLE_EVENT_TYPES]
     return notable[:limit]
 
 
@@ -150,50 +122,21 @@ def format_notable_events(events):
     return "\n".join(lines)
 
 
-def hours_since_last_water_test():
-    """
-    Returns hours elapsed since the most recent water_test event, or None if never.
-    """
-    events = fetch_events(event_type="water_test", limit=1)
+def hours_since_last_event(event_type):
+    events = fetch_events(event_type=event_type, limit=1)
     if not events:
         return None
     last_ts = events[0].get("timestamp")
     if not last_ts:
         return None
     try:
-        last_dt = datetime.fromisoformat(last_ts)
-        delta = datetime.now() - last_dt
-        return delta.total_seconds() / 3600
+        return (datetime.now() - datetime.fromisoformat(last_ts)).total_seconds() / 3600
     except Exception:
         return None
 
-
-def hours_since_last_photo():
-    """
-    Returns hours elapsed since the most recent owner_photo event, or None if never.
-    """
-    events = fetch_events(event_type="owner_photo", limit=1)
-    if not events:
-        return None
-    last_ts = events[0].get("timestamp")
-    if not last_ts:
-        return None
-    try:
-        last_dt = datetime.fromisoformat(last_ts)
-        return (datetime.now() - last_dt).total_seconds() / 3600
-    except Exception:
-        return None
-
-
-# ---------------------------------------------------------------------------
-# Journal
-# ---------------------------------------------------------------------------
 
 def read_journal(target_date=None, max_chars=None):
-    """
-    Reads all journal entries for a given date (defaults to today).
-    Concatenates individual timestamped files (YYYY-MM-DD-HHMM.md) in chronological order.
-    """
+    """Files are named YYYY-MM-DD-HHMM.md, concatenated in chronological order."""
     if target_date is None:
         target_date = date.today()
     if max_chars is None:
@@ -208,10 +151,6 @@ def read_journal(target_date=None, max_chars=None):
 
 
 def write_journal_entry(entry_text, ts=None):
-    """
-    Writes a single journal entry to its own timestamped file.
-    Filename: journal/YYYY-MM-DD-HHMM.md
-    """
     if ts is None:
         ts = datetime.now()
     PATHS["journal"].mkdir(parents=True, exist_ok=True)
@@ -221,18 +160,12 @@ def write_journal_entry(entry_text, ts=None):
     path.write_text(header + entry_text.strip() + "\n")
     return path
 
-# ---------------------------------------------------------------------------
-# Daily logs
-# ---------------------------------------------------------------------------
 
 def read_daily_logs(n=3):
-    """
-    Returns the last N daily log file contents as a list of strings (most recent first).
-    Skips missing files silently.
-    """
+    """Skips missing files silently."""
     logs = []
     today = date.today()
-    for i in range(1, n + 10):   # scan back far enough to find N existing logs
+    for i in range(1, n + 10):
         d = today - timedelta(days=i)
         path = PATHS["daily_logs"] / f"{d}.md"
         if path.exists():
@@ -243,12 +176,9 @@ def read_daily_logs(n=3):
 
 
 def write_daily_log(content, log_date=None):
-    """
-    Writes an immutable daily log. Will NOT overwrite if the file already exists.
-    Returns the path written, or None if skipped.
-    """
+    """Will NOT overwrite if the file already exists."""
     if log_date is None:
-        log_date = date.today() - timedelta(days=1)  # default: yesterday
+        log_date = date.today() - timedelta(days=1)
     PATHS["daily_logs"].mkdir(parents=True, exist_ok=True)
     path = PATHS["daily_logs"] / f"{log_date}.md"
     if path.exists():
@@ -257,10 +187,6 @@ def write_daily_log(content, log_date=None):
     path.write_text(content)
     return path
 
-
-# ---------------------------------------------------------------------------
-# State files
-# ---------------------------------------------------------------------------
 
 def read_state_of_tank():
     path = PATHS["state_of_tank"]
@@ -281,7 +207,6 @@ def read_agent_state():
 
 
 def write_agent_state(content):
-    # Archive a dated snapshot before overwriting
     history_dir = PATHS["agent_state_history"]
     history_dir.mkdir(parents=True, exist_ok=True)
     today = datetime.now().strftime("%Y-%m-%d-%H%M")
@@ -290,12 +215,7 @@ def write_agent_state(content):
     PATHS["agent_state"].write_text(content)
 
 
-# ---------------------------------------------------------------------------
-# Decision logging
-# ---------------------------------------------------------------------------
-
 def log_decision(decision_dict):
-    """Appends a decision dict to today's decisions JSONL file."""
     PATHS["decisions"].mkdir(parents=True, exist_ok=True)
     today = date.today()
     path = PATHS["decisions"] / f"{today}.jsonl"
@@ -305,9 +225,6 @@ def log_decision(decision_dict):
 
 
 def read_decisions_since(since_dt):
-    """
-    Returns all decision log entries since a given datetime, across multiple day files.
-    """
     entries = []
     d = since_dt.date()
     today = date.today()
@@ -328,27 +245,17 @@ def read_decisions_since(since_dt):
     return entries
 
 
-# ---------------------------------------------------------------------------
-# Claude API
-# ---------------------------------------------------------------------------
-
 def call_claude(messages, system=None, max_tokens=None, skill_name=None, tools=None, tool_name=None):
     """
-    Thin wrapper around the Anthropic SDK.
-    Routes to the correct model and max_tokens based on skill_name.
-    Logs token usage to logs/spend.jsonl.
-
-    When tools and tool_name are provided, uses tool_use mode and returns
-    the tool input as a dict. Otherwise returns response text.
+    Routes to correct model/max_tokens by skill_name. Logs token usage to logs/spend.jsonl.
+    When tools+tool_name provided, uses tool_use mode and returns tool input dict. Otherwise returns text.
     """
     import anthropic
 
-    # Check API key presence
     api_key = os.environ.get("ANTHROPIC_API_KEY")
     if not api_key:
         raise ValueError("ANTHROPIC_API_KEY environment variable not set")
 
-    # Route model and max_tokens by skill name
     model = CLAUDE_MODEL
     if skill_name and skill_name in SKILL_MODELS:
         model = SKILL_MODELS[skill_name]
@@ -356,11 +263,10 @@ def call_claude(messages, system=None, max_tokens=None, skill_name=None, tools=N
         if skill_name and skill_name in SKILL_MAX_TOKENS:
             max_tokens = SKILL_MAX_TOKENS[skill_name]
         else:
-            max_tokens = 1500  # default fallback
+            max_tokens = 1500
 
     client = anthropic.Anthropic(api_key=api_key)
 
-    # Build API call parameters
     api_params = {
         "model": model,
         "max_tokens": max_tokens,
@@ -368,14 +274,12 @@ def call_claude(messages, system=None, max_tokens=None, skill_name=None, tools=N
         "messages": messages,
     }
 
-    # Add tool_use parameters if provided
     if tools and tool_name:
         api_params["tools"] = tools
         api_params["tool_choice"] = {"type": "tool", "name": tool_name}
 
     response = client.messages.create(**api_params)
 
-    # Log token usage
     usage = response.usage
     spend_entry = {
         "timestamp": datetime.now().isoformat(),
@@ -390,16 +294,11 @@ def call_claude(messages, system=None, max_tokens=None, skill_name=None, tools=N
     with open(spend_log, "a") as f:
         f.write(json.dumps(spend_entry) + "\n")
 
-    # Return tool input dict if using tool_use, otherwise text
     if tools and tool_name:
         return response.content[0].input
     else:
         return response.content[0].text
 
-
-# ---------------------------------------------------------------------------
-# Utilities
-# ---------------------------------------------------------------------------
 
 class SkillLock:
     """
@@ -430,21 +329,16 @@ class SkillLock:
 
 
 def parse_json_response(response_text):
-    """
-    Parses JSON from Claude response, stripping markdown fences if present.
-    Logs parse failures to logs/ and raises JSONDecodeError on failure.
-    """
+    """Strips markdown fences if present. Logs parse failures; raises JSONDecodeError on failure."""
     clean = response_text.strip()
     if clean.startswith("```"):
         lines = clean.split("\n")
-        # Remove first line (```json or ```) and last line (```)
         clean = "\n".join(lines[1:-1]) if len(lines) > 2 else clean
         clean = clean.strip()
 
     try:
         return json.loads(clean)
     except json.JSONDecodeError as e:
-        # Log the failure
         PATHS["logs"].mkdir(parents=True, exist_ok=True)
         fail_log = PATHS["logs"] / "parse_failures.jsonl"
         entry = {
@@ -458,10 +352,7 @@ def parse_json_response(response_text):
 
 
 def is_reading_stale(reading):
-    """
-    Returns True if the reading is older than STALE_READING_THRESHOLD_MINUTES
-    or if reading is None. Returns False if reading is fresh.
-    """
+    """Returns True if reading is older than STALE_READING_THRESHOLD_MINUTES or None."""
     if reading is None:
         return True
     timestamp = reading.get("timestamp")
@@ -474,10 +365,6 @@ def is_reading_stale(reading):
     except (ValueError, TypeError):
         return True
 
-
-# ---------------------------------------------------------------------------
-# Internal helpers
-# ---------------------------------------------------------------------------
 
 def _log_error(context, exc):
     ts = datetime.now().isoformat()

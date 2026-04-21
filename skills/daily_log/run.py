@@ -17,7 +17,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-from config import PATHS, get_cycle_day
+from config import CYCLE_START, PATHS, get_cycle_day
 from utils import (
     call_claude,
     compute_stats,
@@ -39,7 +39,7 @@ TEMPLATE_PATH = Path(__file__).parent / "template.md"
 
 def fetch_day_readings(target_date):
     """Returns all sensor readings for a specific date."""
-    readings = fetch_readings(200)
+    readings = fetch_readings(96)
     date_str = str(target_date)
     return [r for r in readings if r.get("timestamp", "").startswith(date_str)]
 
@@ -87,7 +87,7 @@ def run(target_date=None):
     if target_date is None:
         target_date = date.today() - timedelta(days=1)
 
-    cycle_day_then = (target_date - date(2026, 3, 22)).days + 1
+    cycle_day_then = (target_date - CYCLE_START).days + 1
     cycle_day_now = get_cycle_day()
 
     print(f"[daily-log] Writing log for {target_date} (Day {cycle_day_then} of cycle)")
@@ -264,7 +264,7 @@ Write three sections, each clearly delimited:
     send_document(PATHS["daily_logs"] / f"{target_date}.md")
 
     # --- Send latest tank photo if one exists ---
-    photos_dir = Path("snapshots/photos")
+    photos_dir = PATHS["snapshots"] / "photos"
     if photos_dir.exists():
         photos = sorted(photos_dir.glob("*.jpg")) + sorted(photos_dir.glob("*.jpeg")) + sorted(photos_dir.glob("*.png"))
         if photos:

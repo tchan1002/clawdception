@@ -36,7 +36,8 @@ from utils import (
     fetch_readings,
     format_notable_events,
     format_recent_events,
-    hours_since_last_photo,
+    hours_since_last_event,
+    is_reading_stale,
     log_decision,
     read_journal,
     SkillLock,
@@ -284,10 +285,8 @@ def detect_water_change(readings):
     return False, ""
 
 
-def should_inject_photo_request():
-    """Returns True if a photo request should be added to actions."""
-    hours = hours_since_last_photo()
-    return hours is None or hours >= ACTION_COOLDOWNS["photo_request"]
+def should_inject_photo_request(photo_hours):
+    return photo_hours is None or photo_hours >= ACTION_COOLDOWNS["photo_request"]
 
 
 def load_cooldowns():
@@ -415,11 +414,10 @@ def run(force=False):
             print(f"[{ts[:16]}] [shrimp-monitor] No sensor data — skipping.")
             return
 
-        # --- Staleness check: alert if ESP32 hasn't posted in >30 min ---
         stale_nag_path = PATHS["logs"] / "last_stale_nag.txt"
-        reading_ts = datetime.fromisoformat(latest["timestamp"])
-        reading_age_min = (datetime.now() - reading_ts).total_seconds() / 60
-        if reading_age_min > 30:
+        if is_reading_stale(latest):
+            reading_ts = datetime.fromisoformat(latest["timestamp"])
+            reading_age_min = (datetime.now() - reading_ts).total_seconds() / 60
             last_stale_nag = None
             if stale_nag_path.exists():
                 try:
@@ -460,11 +458,9 @@ def run(force=False):
         notable_events = fetch_notable_events(days=14)
         last_claude_time = get_last_claude_time()
 
-        # --- Always: check danger zone and fire alerts ---
         for param, value, threshold, direction in check_danger(latest):
             alert(param, value, threshold, direction)
 
-        # --- Decide whether to call Claude ---
         call_it, reason = should_call_claude(latest, readings_recent, recent_events, last_claude_time)
         if not force and not call_it:
             summary_line = (
@@ -476,7 +472,6 @@ def run(force=False):
                 f.write(summary_line + "\n")
             return
 
-        # --- Build prompt ---
         reading_summary = summarize_readings_for_prompt(readings_24h)
         events_summary = format_recent_events(recent_events)
         notable_summary = format_notable_events(notable_events)
@@ -484,7 +479,7 @@ def run(force=False):
         journal_snippet = read_journal()
         journal_snippet = journal_snippet[-600:] if len(journal_snippet) > 600 else journal_snippet
 
-        photo_hours = hours_since_last_photo()
+        photo_hours = hours_since_last_event("owner_photo")
         photo_line = f"{int(photo_hours)}hr ago" if photo_hours is not None else "never"
 
         water_change_line = f"\n    ⚠ CONTEXT: {water_change_note}" if water_change_likely else ""
@@ -523,7 +518,6 @@ def run(force=False):
 
     Keep reasoning to 2 sentences. Use typed actions only. Omit notes unless non-obvious."""
 
-        # --- Call Claude ---
         try:
             decision = call_claude(
                 messages=[{"role": "user", "content": prompt}],
@@ -536,8 +530,7 @@ def run(force=False):
             log_decision({"error": str(e), "latest_reading": latest, "cycle_day": cycle_day})
             return
 
-        # --- Inject scheduled photo request if due ---
-        if should_inject_photo_request():
+        if should_inject_photo_request(photo_hours):
             existing_types = {a.get("type") for a in decision.get("actions", [])}
             if "photo_request" not in existing_types:
                 decision.setdefault("actions", []).append({
@@ -546,13 +539,9 @@ def run(force=False):
                     "urgency": "routine",
                 })
 
-        # --- Send owner actions to Toby ---
         send_owner_actions(decision, latest)
-
-        # --- Record this Claude call time ---
         record_monitor_call()
 
-        # --- Log decision ---
         decision["_cycle_day"] = cycle_day
         decision["_timestamp"] = ts
         decision["_trigger"] = reason

@@ -1,14 +1,9 @@
-"""
-Shared configuration for all Media Luna agent skills.
-All target ranges, paths, the system prompt, and shared constants live here.
-"""
-
 from pathlib import Path
 from datetime import date, datetime, timedelta
 
 BASE_DIR = Path(__file__).parent
 CYCLE_START = date(2026, 3, 22)
-COLONY_START = datetime(2026, 4, 13, 16, 0)  # Shrimp introduced April 13, 2026 at 4:00 PM
+COLONY_START = datetime(2026, 4, 13, 16, 0)
 CARETAKER_EPOCH = CYCLE_START + timedelta(days=14)  # day 0 of the caretaker's own clock
 API_BASE = "http://localhost:5001"
 CLAUDE_MODEL = "claude-sonnet-4-6"
@@ -34,14 +29,11 @@ SKILL_MAX_TOKENS = {
     "tweet-log": 150,
 }
 
-# Sensor staleness threshold (minutes)
 STALE_READING_THRESHOLD_MINUTES = 30
 
-# Journal max characters when reading (preserves most recent content)
+# preserves most recent content on truncation
 JOURNAL_MAX_CHARS = 2000
 
-# Water parameter ranges for Neocaridina shrimp
-# Do not modify without Toby's explicit instruction — these reflect target shrimp conditions.
 RANGES = {
     "temperature": {
         "target": (72, 78),
@@ -81,10 +73,9 @@ RANGES = {
     },
 }
 
-# How long before we nag Toby to run a manual water test (ammonia/nitrite)
+# how long before prompting Toby for manual water test (ammonia/nitrite)
 WATER_TEST_WARNING_HOURS = 48
 
-# File paths for all logs, journals, and state files
 PATHS = {
     "daily_logs": BASE_DIR / "daily-logs",
     "journal": BASE_DIR / "journal",
@@ -92,6 +83,7 @@ PATHS = {
     "decisions": BASE_DIR / "logs" / "decisions",
     "vision_logs": BASE_DIR / "logs" / "vision",
     "snapshots": BASE_DIR / "snapshots",
+    "state": BASE_DIR / "state",
     "proposals": BASE_DIR / "proposals",
     "state_of_tank": BASE_DIR / "state_of_tank.md",
     "agent_state": BASE_DIR / "agent_state.md",
@@ -105,7 +97,6 @@ PATHS = {
 PROTECTED_SKILLS = ["call-toby", "shrimp-alert", "skill-writer"]
 MODIFIABLE_SKILLS = ["shrimp-monitor", "shrimp-journal", "shrimp-vision", "daily-log"]
 
-# The caretaker identity — used as system prompt for all Claude API calls
 SYSTEM_PROMPT = """You are the Media Luna caretaker — an autonomous agent watching over a 10-gallon Neocaridina cherry shrimp tank in Hyde Park, Chicago. Your tank sits in Toby's apartment. You monitor water chemistry and the living conditions of the tank, and will eventually control the environment through smart plugs.
 
 You are measured and calibrated. Neocaridina shrimp are hardy animals; brief excursions outside target range, post-water-change shifts, and acclimation fluctuations are normal events, not emergencies. You distinguish between noise and signal. You recommend observation over intervention unless the situation is genuinely urgent. Reserve alarm for sustained danger-zone readings or rapid unexplained deterioration.
@@ -126,5 +117,4 @@ STRICT RULE — no invented physical details: You have no direct view of the tan
 
 
 def get_cycle_day():
-    """Returns the current day number of the nitrogen cycle (Day 1 = Mar 22, 2026)."""
     return (date.today() - CYCLE_START).days + 1

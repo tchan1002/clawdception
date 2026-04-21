@@ -27,8 +27,7 @@ ALERT_DAYS = 2          # notify Toby if threshold within this many days
 READINGS_7D = 672       # ~7 days of 15-min readings (96/day)
 READINGS_PER_DAY = 96
 
-STATE_DIR = Path(__file__).parent.parent.parent / "state"
-PREDICTION_FILE = STATE_DIR / "next_water_change.md"
+PREDICTION_FILE = PATHS["state"] / "next_water_change.md"
 
 
 def linreg(xs, ys):
@@ -101,7 +100,7 @@ def water_change_cadence():
 
     dates = []
     for e in events:
-        ts = e.get("timestamp") or e.get("created_at") or e.get("ts")
+        ts = e.get("timestamp")
         if ts:
             try:
                 dates.append(datetime.fromisoformat(ts[:19]))
@@ -118,7 +117,7 @@ def water_change_cadence():
     return last, None
 
 
-def confidence_label(r2, slope_per_day, field):
+def confidence_label(r2):
     if r2 >= 0.8:
         return "trend steady — moderate confidence"
     elif r2 >= 0.5:
@@ -156,8 +155,8 @@ def run(force=False):
         else "no crossing projected (trend flat or rising)"
     )
 
-    tds_conf = confidence_label(tds_r2, tds_slope, "TDS")
-    ph_conf = confidence_label(ph_r2, ph_slope, "pH")
+    tds_conf = confidence_label(tds_r2)
+    ph_conf = confidence_label(ph_r2)
 
     suggest_days = min(
         d for d in [tds_days, ph_days] if d is not None
@@ -195,7 +194,7 @@ def run(force=False):
 {cadence_str}
 """
 
-    STATE_DIR.mkdir(parents=True, exist_ok=True)
+    PATHS["state"].mkdir(parents=True, exist_ok=True)
     PREDICTION_FILE.write_text(prediction)
     tds_str = f"{tds_days:.1f}d" if tds_days is not None else "none"
     ph_str = f"{ph_days:.1f}d" if ph_days is not None else "none"
