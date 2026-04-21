@@ -2664,3 +2664,5 @@ One brilliantly red Neocaridina shrimp is visible in the upper midground, tucked
 [telegram-listener] 'how many days does it take to lower them?' → question
 [call-toby] Telegram sent (info): Nitrates don't drop on their own — they come down through water changes. A single 30–50% change can cut them roughly in half, so if you're sitting at 80ppm, one good change gets you to the 40s. Do two changes a few days apart and you'd be well into the safe zone (under 20ppm is ideal for shrimp).
 [telegram-listener] Processed 1 message(s), offset now 236833091
+[call-toby] Telegram sent (info): Installed to skills/postwaterchangewatcher/ — add to cron manually when ready.
+[telegram-listener] Processed 2 message(s), offset now 236833093
