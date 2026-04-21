@@ -1306,3 +1306,12 @@
 {"timestamp": "2026-04-20T21:52:15.458769", "skill": "shrimp-vision", "model": "claude-sonnet-4-6", "input_tokens": 3699, "output_tokens": 300, "total_tokens": 3999}
 {"timestamp": "2026-04-20T21:52:27.746859", "skill": "shrimp-vision", "model": "claude-sonnet-4-6", "input_tokens": 3699, "output_tokens": 443, "total_tokens": 4142}
 {"timestamp": "2026-04-20T21:54:05.660988", "skill": "telegram-listener", "model": "claude-sonnet-4-6", "input_tokens": 1608, "output_tokens": 111, "total_tokens": 1719}
+{"timestamp": "2026-04-20T22:00:07.457735", "skill": "shrimp-monitor", "model": "claude-haiku-4-5", "input_tokens": 4837, "output_tokens": 432, "total_tokens": 5269}
+{"timestamp": "2026-04-20T22:04:06.347666", "skill": "telegram-listener", "model": "claude-sonnet-4-6", "input_tokens": 1630, "output_tokens": 122, "total_tokens": 1752}
+{"timestamp": "2026-04-20T22:06:05.749460", "skill": "telegram-listener", "model": "claude-sonnet-4-6", "input_tokens": 1634, "output_tokens": 137, "total_tokens": 1771}
+{"timestamp": "2026-04-20T22:06:12.385335", "skill": "telegram-listener", "model": "claude-sonnet-4-6", "input_tokens": 1387, "output_tokens": 106, "total_tokens": 1493}
+{"timestamp": "2026-04-20T22:08:04.520986", "skill": "telegram-listener", "model": "claude-sonnet-4-6", "input_tokens": 1613, "output_tokens": 81, "total_tokens": 1694}
+{"timestamp": "2026-04-20T22:08:08.347839", "skill": "telegram-listener", "model": "claude-sonnet-4-6", "input_tokens": 1366, "output_tokens": 103, "total_tokens": 1469}
+{"timestamp": "2026-04-20T22:15:06.539346", "skill": "shrimp-monitor", "model": "claude-haiku-4-5", "input_tokens": 4858, "output_tokens": 434, "total_tokens": 5292}
+{"timestamp": "2026-04-20T22:36:05.562752", "skill": "telegram-listener", "model": "claude-sonnet-4-6", "input_tokens": 1613, "output_tokens": 120, "total_tokens": 1733}
+{"timestamp": "2026-04-20T22:36:09.540467", "skill": "telegram-listener", "model": "claude-sonnet-4-6", "input_tokens": 1366, "output_tokens": 86, "total_tokens": 1452}

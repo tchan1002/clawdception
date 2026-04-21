@@ -2652,3 +2652,15 @@ One brilliantly red Neocaridina shrimp is visible in the upper midground, tucked
 [telegram-listener] 'it’s christmas moss' → correction
 [call-toby] Telegram sent (info): Logged as correction: Owner clarified that the moss in the tank is Christmas moss (Vesicularia montagnei). ✓
 [telegram-listener] Processed 1 message(s), offset now 236833087
+[telegram-listener] 'flipped the mesh bag of live media around so the shrimp can graze on the algae growing on the other side' → maintenance
+[call-toby] Telegram sent (info): Logged as maintenance: Flipped the mesh bag of live media so shrimp can graze on algae growing on the other side. ✓
+[telegram-listener] Processed 1 message(s), offset now 236833088
+[telegram-listener] 'trying to get the shrimp to breed. not sure what the ratio of gender is among our current 6 inhabitants, should we introduce more?' → question
+[call-toby] Telegram sent (info): With only 6 shrimp the odds of a good male/female ratio are genuinely uncertain — you could easily have 4:2 either way. Bumping to 10–15 would give you much better breeding odds and Neocaridinas are social enough that more is almost always merrier. That said, with nitrates at 80ppm I'd want to see that number come down before adding new animals — ideally under 20–40ppm.
+[telegram-listener] Processed 1 message(s), offset now 236833089
+[telegram-listener] 'what brings down nitrates without a water change?' → question
+[call-toby] Telegram sent (info): Plants and algae are your best natural nitrate sinks — the Christmas moss is already doing some of this work, and anything with faster growth (floaters especially) would pull more. A denser biofilm/algae community on your hardscape helps too, which is partly why the shrimp grazing it actually matters — they're cycling nutrients back through their bodies rather than letting waste accumulate. Beyond that, just lower feeding frequency and lighter bioload are the mechanical levers.
+[telegram-listener] Processed 1 message(s), offset now 236833090
+[telegram-listener] 'how many days does it take to lower them?' → question
+[call-toby] Telegram sent (info): Nitrates don't drop on their own — they come down through water changes. A single 30–50% change can cut them roughly in half, so if you're sitting at 80ppm, one good change gets you to the 40s. Do two changes a few days apart and you'd be well into the safe zone (under 20ppm is ideal for shrimp).
+[telegram-listener] Processed 1 message(s), offset now 236833091
