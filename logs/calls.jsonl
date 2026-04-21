@@ -314,3 +314,4 @@
 {"timestamp": "2026-04-20T22:36:10.165931", "urgency": "info", "message": "Nitrates don't drop on their own \u2014 they come down through water changes. A single 30\u201350% change can cut them roughly in half, so if you're sitting at 80ppm, one good change gets you to the 40s. Do two changes a few days apart and you'd be well into the safe zone (under 20ppm is ideal for shrimp).", "sent_via": "telegram"}
 {"timestamp": "2026-04-21T00:00:02.275170", "urgency": "warning", "message": "pH probe last calibrated 30d ago \u2014 due every 30d.", "sent_via": "telegram"}
 {"timestamp": "2026-04-21T00:05:17.942547", "urgency": "info", "message": "Journal \u2014 Day 31 \u00b7 2026-04-21 00:05", "sent_via": "telegram"}
+{"timestamp": "2026-04-21T06:05:15.296981", "urgency": "info", "message": "Journal \u2014 Day 31 \u00b7 2026-04-21 06:05", "sent_via": "telegram"}
