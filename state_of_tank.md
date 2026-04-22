@@ -1,8 +1,8 @@
 # State of Tank — Media Luna
 
-**Last updated:** 2026-04-20
-**Cycle day:** 30 (started 2026-03-22)
-**Tank status:** Nitrogen cycle confirmed complete — transition to post-cycle maintenance
+**Last updated:** 2026-04-21
+**Cycle day:** 31 (started 2026-03-22)
+**Tank status:** Post-cycle; establishment phase
 
 ---
 
@@ -13,52 +13,56 @@
 | Neocaridina shrimp | 6 introduced | 4 male, 2 female; introduced 2026-04-13 |
 | Snails (unplanned) | Unknown | 2 tiny (~1mm) removed 2026-04-17; population unknown |
 
-**Shrimp observations (2026-04-20):**
-- Up to 4 individual shrimp visible across multiple photos — active, grazing, exploring substrate and plants
-- One individual ("the old lady") observed stationary at middle-back of tank ~19:28; logged as recovered and swimming by ~21:52
-- Behavior consistent with a healthy, acclimated colony
+**Shrimp observations (2026-04-21):**
+- 2 individuals visible near substrate front-left in evening photo — small, reddish, out in the open
+- Behavior appears normal; no signs of stress noted
 
 ---
 
-## Plants & Algae
+## Plants
 
-| Species | Location | Condition |
-|---------|----------|-----------|
-| Floating plants (likely frogbit or dwarf water lettuce) | Surface | Thriving — dense canopy, long trailing roots |
-| Feathery stem plant (likely hornwort or similar) | Substrate cluster | Stable — actively grazed by shrimp |
-| Aquatic moss (confirmed: Christmas moss, *Vesicularia montagnei*) | Mesh media bag | Healthy — bag flipped 2026-04-20 to improve shrimp grazing access |
-
----
-
-## Equipment (confirmed from photos)
-
-- Submersible heater — mounted rear glass, operational (bubbles visible on glass tube)
-- Multi-layer black foam sponge filter — operational
-- Mesh media bag — contains live biological media with Christmas moss colonization; flipped 2026-04-20
-- LED light strips — visible in surface reflection
-- DS18B20 temperature sensor — 1 transient error in last 24h; monitoring for pattern
+| Plant | Status | Notes |
+|-------|--------|-------|
+| Duckweed (or frogbit) | Strong growth — dense surface mat | Toby flagged "strong" growth trend; quantification planned. Photo shows near-continuous surface coverage. May need thinning to protect gas exchange. |
+| Low-growing plant (front-left substrate) | Present | Visible in photo near substrate front-left; species unconfirmed |
 
 ---
 
-## Water Chemistry
+## Substrate & Hardscape
 
-| Parameter | Current (sensor avg) | Manual Test (21:04) | Target |
-|-----------|---------------------|---------------------|--------|
-| Temperature | 76.0°F | — | 72–78°F ✅ |
-| pH | 6.29 (sensor) | 6.8 (manual) | 6.5–7.5 |
-| TDS | 197 ppm | — | 150–250 ppm ✅ |
-| Ammonia | — | 0 ppm | 0 ppm ✅ |
-| Nitrite | — | 0 ppm | 0 ppm ✅ |
-| Nitrate | — | 80 ppm | <40 ppm ⚠️ |
-
-**Note:** Persistent gap between pH sensor (~6.3) and manual test (6.8). Likely sensor drift or calibration offset. Monitoring.
+- Dark granular substrate (appears to be aqua soil or similar); relatively even coverage, no visible debris accumulation per photo analysis
 
 ---
 
-## Current Priorities
+## Water Parameters (2026-04-21)
 
-1. **Water change** — nitrate at 80 ppm; cycle is complete; first post-cycle water change is the logical next step
-2. **pH sensor calibration** — discrepancy with manual test warrants attention when convenient
-3. **Auto-feeder configuration** — skill installed 2026-04-20; currently inactive; to be configured when Toby is ready
+| Parameter | Value | Status |
+|-----------|-------|--------|
+| Temperature | 76.3°F avg (76.1–76.6) | ✅ Stable |
+| pH | 6.39 avg (6.21–6.66) | ✅ Within range; probe calibration overdue |
+| TDS | 196 ppm avg (191–204) | ✅ Acceptable; slow upward creep noted |
+| Ammonia | 0 ppm (last tested 2026-04-20) | ✅ |
+| Nitrite | 0 ppm (last tested 2026-04-20) | ✅ |
+| Nitrate | ~80 ppm (last tested 2026-04-20) | ⚠️ Elevated; manageable, needs retest |
+
+---
+
+## Equipment & Rig
+
+| Equipment | Status |
+|-----------|--------|
+| pH probe | ⚠️ Calibration overdue (30+ days) |
+| Grow light | Running (dual-arm; visible in photo) |
+| Auto-feeder | ✅ Installed and active as of 2026-04-21 |
+| Post-water-change watcher | ✅ Installed 2026-04-21 |
+
+---
+
+## Open Concerns
+
+- pH probe calibration overdue — readings directionally trustworthy but not fully validated
+- Duckweed coverage approaching dense; gas exchange and light penetration worth monitoring
+- Water level slightly low per photo — evaporation top-off recommended
+- Nitrate at 80 ppm as of last test; retest due within 2–3 days
 
 ---
