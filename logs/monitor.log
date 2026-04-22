@@ -2897,3 +2897,9 @@ Day 30 post-introduction: shrimp are eating competitively, grazing algae off hea
 [2026-04-21T19:15] Day 31 | skipped (stable) | T=76.44°F pH=6.42 TDS=202.0ppm
 [2026-04-21T19:30] Day 31 | skipped (stable) | T=76.44°F pH=6.41 TDS=202.0ppm
 [2026-04-21T19:45] Day 31 | skipped (stable) | T=76.21°F pH=6.41 TDS=202.0ppm
+[2026-04-21T20:00] Day 31 | risk=green | [scheduled check-in (20:00)] | T=76.32°F pH=6.42 TDS=202.0ppm | All parameters solidly within target range with gentle 24-hour upward drift—norm
+[call-toby] Telegram sent (info): ✅ All clear — T=76.32°F pH=6.42 TDS=202.0ppm
+All parameters solidly within target range with gentle 24-hour upward drift—normal for a cycling tank as bioload increases and evaporation concentrates minerals. Shrimp actively foraging, berried females suspected; colony settling into post-introduction equilibrium.
+[2026-04-21T20:15] Day 31 | risk=green | [ph changed 0.11 in last hour] | T=76.32°F pH=6.52 TDS=203.0ppm | All parameters sit comfortably in range; the 0.11 pH rise in the last hour is mi
+[2026-04-21T20:30] Day 31 | risk=yellow | [ph changed 0.14 in last hour] | T=76.44°F pH=6.55 TDS=203.0ppm | pH sensor shows a worrisome upward drift (0.28 in 24h, including a 0.14/hr spike
+[2026-04-21T20:45] Day 31 | risk=yellow | [ph changed 0.19 in last hour] | T=76.32°F pH=6.61 TDS=202.0ppm | pH rose 0.19 in one hour and 0.35 over 24hr—unusual drift pattern for a stable p
