@@ -2939,3 +2939,7 @@ All parameters solidly within target range with gentle 24-hour upward drift—no
 [2026-04-22T04:15] Day 32 | skipped (stable) | T=76.32°F pH=6.62 TDS=201.0ppm
 [2026-04-22T04:30] Day 32 | skipped (stable) | T=76.44°F pH=6.63 TDS=201.0ppm
 [2026-04-22T04:45] Day 32 | skipped (stable) | T=76.32°F pH=6.62 TDS=201.0ppm
+[2026-04-22T05:00] Day 32 | skipped (stable) | T=76.32°F pH=6.62 TDS=200.0ppm
+[2026-04-22T05:15] Day 32 | skipped (stable) | T=76.44°F pH=6.6 TDS=202.0ppm
+[2026-04-22T05:30] Day 32 | skipped (stable) | T=76.32°F pH=6.58 TDS=201.0ppm
+[2026-04-22T05:45] Day 32 | skipped (stable) | T=76.32°F pH=6.6 TDS=202.0ppm
