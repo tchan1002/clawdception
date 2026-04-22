@@ -738,3 +738,5 @@
 [2026-04-21T23:00] equipment-check | yellow | 1 issue(s) | 1 equipment issue(s): pH probe last calibrated 30d ago — due every 30d.
 [call-toby] Telegram sent (warning): pH probe last calibrated 30d ago — due every 30d.
 [2026-04-21T23:30] equipment-check | yellow | 1 issue(s) | 1 equipment issue(s): pH probe last calibrated 30d ago — due every 30d.
+[2026-04-22T00:00] equipment-check | yellow | 1 issue(s) | 1 equipment issue(s): pH probe last calibrated 31d ago — due every 30d.
+[2026-04-22T00:30] equipment-check | yellow | 1 issue(s) | 1 equipment issue(s): pH probe last calibrated 31d ago — due every 30d.

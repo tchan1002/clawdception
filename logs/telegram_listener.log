@@ -2679,3 +2679,6 @@ Media Luna on Day 31 is looking quietly alive — water reads clear, a dual-arm 
 [telegram-listener] 'feels like we’ve been having really good duckweed growth, want to quantify it soon.' → owner_note
 [call-toby] Telegram sent (info): Logged as owner note: Owner observes strong duckweed growth and wants to begin quantifying it soon. ✓
 [telegram-listener] Processed 1 message(s), offset now 236833095
+[telegram-listener] 'will calibrate the probe tmr I promise' → owner_note
+[call-toby] Telegram sent (info): Logged as owner note: Owner will calibrate the probe tomorrow. ✓
+[telegram-listener] Processed 1 message(s), offset now 236833096

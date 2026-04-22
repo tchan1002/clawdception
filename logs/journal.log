@@ -316,3 +316,6 @@ json.decoder.JSONDecodeError: Expecting value: line 2 column 1 (char 1)
 • Calibrate pH probe within 24 hours using fresh pH 7.0 and pH 4.0 buffer solutions to reset the 30-day clock and restore full confidence in readings
 • Run manual water test (ammonia, nitrite, nitrate, pH) in 2-3 days to confirm where the cycle stands relative to April 20 baseline and validate sensor readings post-calibration
 • Monitor auto-feeder for the next 7 days to confirm pellet output is appropriate for colony size and consumption patterns
+[shrimp-journal] Entry written: 2026-04-22-0005.md (Day 32)
+[call-toby] Telegram sent (info): Journal — Day 32 · 2026-04-22 00:05
+[call-toby] Document sent: 2026-04-22-0005.md

@@ -2915,3 +2915,11 @@ All parameters solidly within target range with gentle 24-hour upward drift—no
 [2026-04-21T23:15] Day 31 | skipped (stable) | T=76.44°F pH=6.66 TDS=204.0ppm
 [2026-04-21T23:30] Day 31 | skipped (stable) | T=76.44°F pH=6.65 TDS=203.0ppm
 [2026-04-21T23:45] Day 31 | skipped (stable) | T=76.32°F pH=6.64 TDS=200.0ppm
+[2026-04-22T00:00] Day 32 | skipped (stable) | T=76.44°F pH=6.66 TDS=200.0ppm
+[2026-04-22T00:15] Day 32 | risk=green | [manual event since last check ] | T=76.32°F pH=6.61 TDS=201.0ppm | All parameters hold steady within target range; 24-hour trends show minor upward
+[call-toby] Telegram sent (info): All parameters hold steady within target range; 24-hour trends show minor upward drift in pH, TDS, and temp—expected post-water-change and entirely normal for a young, maturing tank. Toby is on top of calibration, duckweed is thriving, and shrimp are actively feeding and visible—colony acclimating well.
+
+• 👀 Observe shrimp behavior — Monitor duckweed growth density over next few days; quantification plan is good—track if surface coverage impacts gas exchange or lower plant light.
+• 👀 Observe shrimp behavior — Continue watching competitive feeding behavior—healthy sign of appetite and social dominance settling; note any appetite changes as early stress indicator.
+[2026-04-22T00:30] Day 32 | skipped (stable) | T=76.32°F pH=6.65 TDS=200.0ppm
+[2026-04-22T00:45] Day 32 | skipped (stable) | T=76.44°F pH=6.65 TDS=200.0ppm
