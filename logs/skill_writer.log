@@ -33,3 +33,7 @@
 [skill-writer] Proposal written to /home/pi/clawdception/proposals/2026-04-21-postwaterchangewatcher
 [call-toby] Document sent: proposal.md
 [call-toby] Sent with buttons (msg_id=515): New skill proposal: `postwaterchangewatcher` (new, risk: low)
+[skill-writer] Running — 19 daily logs available, conditions met (Day 32 of cycle)
+[skill-writer] Proposal written to /home/pi/clawdception/proposals/2026-04-22-postwaterchangemonitor
+[call-toby] Document sent: proposal.md
+[call-toby] Sent with buttons (msg_id=543): New skill proposal: `postwaterchangemonitor` (new, risk: medium)
