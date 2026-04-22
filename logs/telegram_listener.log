@@ -2666,3 +2666,4 @@ One brilliantly red Neocaridina shrimp is visible in the upper midground, tucked
 [telegram-listener] Processed 1 message(s), offset now 236833091
 [call-toby] Telegram sent (info): Installed to skills/postwaterchangewatcher/ — add to cron manually when ready.
 [telegram-listener] Processed 2 message(s), offset now 236833093
+[telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
