@@ -2907,3 +2907,7 @@ All parameters solidly within target range with gentle 24-hour upward drift—no
 [2026-04-21T21:15] Day 31 | skipped (stable) | T=76.44°F pH=6.61 TDS=203.0ppm
 [2026-04-21T21:30] Day 31 | skipped (stable) | T=76.44°F pH=6.63 TDS=202.0ppm
 [2026-04-21T21:45] Day 31 | risk=yellow | [manual event since last check ] | T=76.32°F pH=6.62 TDS=204.0ppm | All parameters in target range, but pH probe is 30+ days uncalibrated and TDS ha
+[2026-04-21T22:00] Day 31 | risk=green | [manual event since last check ] | T=76.44°F pH=6.63 TDS=203.0ppm | All parameters are stable and within target ranges; the upward 24hr drift in pH 
+[2026-04-21T22:15] Day 31 | skipped (stable) | T=76.55°F pH=6.64 TDS=204.0ppm
+[2026-04-21T22:30] Day 31 | skipped (stable) | T=76.32°F pH=6.63 TDS=204.0ppm
+[2026-04-21T22:45] Day 31 | skipped (stable) | T=76.44°F pH=6.63 TDS=204.0ppm
