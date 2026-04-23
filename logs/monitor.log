@@ -3006,3 +3006,9 @@ All parameters solidly within target range with gentle 24-hour upward drift—no
 [2026-04-22T19:15] Day 32 | skipped (stable) | T=76.21°F pH=6.21 TDS=195.0ppm
 [2026-04-22T19:30] Day 32 | skipped (stable) | T=76.1°F pH=6.2 TDS=195.0ppm
 [2026-04-22T19:45] Day 32 | skipped (stable) | T=76.1°F pH=6.21 TDS=197.0ppm
+[2026-04-22T20:00] Day 32 | risk=green | [scheduled check-in (20:00)] | T=75.99°F pH=6.2 TDS=198.0ppm | All three parameters sit comfortably within safe zones; the mild pH dip is expec
+[call-toby] Telegram sent (info): ✅ All clear — T=75.99°F pH=6.2 TDS=198.0ppm
+All three parameters sit comfortably within safe zones; the mild pH dip is expected during active plant growth and duckweed proliferation, and the probe calibration will clarify whether this is real or instrument drift. Colony is 9 days post-introduction with visible feeding behavior, algae grazing, and surface activity—steady progress.
+[2026-04-22T20:15] Day 32 | skipped (stable) | T=76.1°F pH=6.22 TDS=195.0ppm
+[2026-04-22T20:30] Day 32 | skipped (stable) | T=75.99°F pH=6.18 TDS=195.0ppm
+[2026-04-22T20:45] Day 32 | skipped (stable) | T=75.87°F pH=6.25 TDS=194.0ppm
