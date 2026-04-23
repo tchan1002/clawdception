@@ -2684,3 +2684,14 @@ Media Luna on Day 31 is looking quietly alive — water reads clear, a dual-arm 
 [telegram-listener] Processed 1 message(s), offset now 236833096
 [telegram-listener] getUpdates failed: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8717821001:AAGRECjTkLrUOl6P2LqWnY3hFAftvfyg-pA/getUpdates?offset=236833096&timeout=0&limit=100 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7ffecc6117f0>: Failed to resolve 'api.telegram.org' ([Errno -3] Temporary failure in name resolution)"))
 [telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[telegram-listener] Photo saved: 2026-04-22_23-06-04.jpg — 'god’s eye view'
+[call-toby] Telegram sent (info): "god’s eye view"
+0 shrimp visible · water: clear · plants: thriving
+Concerns: Dense duckweed coverage may reduce surface gas exchange if left unmanaged, Duckweed accumulation near the filter outflow/powerhead zone — worth monitoring to ensure intake isn't obstructed over time
+
+This top-down shot of Media Luna on Day 32 of the nitrogen cycle tells a vivid botanical story: hundreds of bright lime-green duckweed fronds now carpet the surface, densely enough to create a nearly continuous living mat with small open-water windows. A single darker, rounder floating plant — likely a small moss ball or a cluster of a larger floater — sits near the midpoint of the tank, while the powerhead or filter return is churning vigorously in the lower-center, creating a clear turbulence zone that's kept duckweed pushed toward the glass edges. Two slim black light fixtures flank the tank on either side, and the dark substrate below is visible through the gaps in coverage — it reads clean and undisturbed.
+[telegram-listener] Vision reply sent
+[telegram-listener] Processed 1 message(s), offset now 236833097
+[telegram-listener] 'will do first thing tmr morning!' → owner_note
+[call-toby] Telegram sent (info): Logged as owner note: Owner confirmed they will do something first thing tomorrow morning. No specific action named — likely a reply to a prior recommendation or reminder. ✓
+[telegram-listener] Processed 1 message(s), offset now 236833098
