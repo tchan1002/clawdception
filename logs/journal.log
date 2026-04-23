@@ -337,3 +337,9 @@ json.decoder.JSONDecodeError: Expecting value: line 2 column 1 (char 1)
 [call-toby] Telegram sent (info): Action items:
 • Calibrate pH probe today as planned—probe is now overdue by 1 day; calibration is essential for maintaining confidence in all future pH readings
 • Begin duckweed quantification project this week—establish baseline surface coverage percentage or frond count to track growth rate and nutrient consumption over time
+[shrimp-journal] Entry written: 2026-04-23-0005.md (Day 33)
+[call-toby] Telegram sent (info): Journal — Day 33 · 2026-04-23 00:05
+[call-toby] Document sent: 2026-04-23-0005.md
+[call-toby] Telegram sent (info): Action items:
+• Recalibrate pH probe tomorrow morning per Toby's logged intention; this is overdue maintenance, not urgent but confirmed needed
+• Consider light trimming or harvesting of surface duckweed within 24–48 hours to reduce coverage density and ensure adequate surface gas exchange and light penetration to mid/low plants
