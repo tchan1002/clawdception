@@ -349,3 +349,9 @@ json.decoder.JSONDecodeError: Expecting value: line 2 column 1 (char 1)
 [call-toby] Telegram sent (info): Action items:
 • Recalibrate pH probe this morning as logged — this is overdue maintenance and will clarify current pH trend
 • Consider thinning surface duckweed coverage within 24–48 hours to improve gas exchange and light penetration; no urgency, but proactive management aligns with Toby's interest in growth tracking
+[shrimp-journal] Entry written: 2026-04-23-1205.md (Day 33)
+[call-toby] Telegram sent (info): Journal — Day 33 · 2026-04-23 12:05
+[call-toby] Document sent: 2026-04-23-1205.md
+[call-toby] Telegram sent (info): Action items:
+• Recalibrate pH probe this morning as logged — this is overdue maintenance (last calibrated 32 days ago, due every 30 days) and will clarify the current pH trend
+• Consider thinning surface duckweed coverage within 24–48 hours to improve gas exchange and light penetration; align with your planned growth quantification
