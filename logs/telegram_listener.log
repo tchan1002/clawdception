@@ -2695,3 +2695,4 @@ This top-down shot of Media Luna on Day 32 of the nitrogen cycle tells a vivid b
 [telegram-listener] 'will do first thing tmr morning!' → owner_note
 [call-toby] Telegram sent (info): Logged as owner note: Owner confirmed they will do something first thing tomorrow morning. No specific action named — likely a reply to a prior recommendation or reminder. ✓
 [telegram-listener] Processed 1 message(s), offset now 236833098
+[telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
