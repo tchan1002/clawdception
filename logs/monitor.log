@@ -2995,3 +2995,10 @@ All parameters solidly within target range with gentle 24-hour upward drift—no
 [2026-04-22T17:15] Day 32 | skipped (stable) | T=76.21°F pH=6.21 TDS=195.0ppm
 [2026-04-22T17:30] Day 32 | skipped (stable) | T=76.21°F pH=6.21 TDS=194.0ppm
 [2026-04-22T17:45] Day 32 | skipped (stable) | T=76.21°F pH=6.2 TDS=197.0ppm
+[2026-04-22T18:00] Day 32 | skipped (stable) | T=76.32°F pH=6.19 TDS=195.0ppm
+[2026-04-22T18:15] Day 32 | risk=green | [periodic check (10hr since las] | T=76.21°F pH=6.2 TDS=195.0ppm | Tank stability is solid across all parameters; temperature is steady, TDS is hea
+[call-toby] Telegram sent (info): Tank stability is solid across all parameters; temperature is steady, TDS is healthy, and pH is slightly low but stable and explained by probe calibration lag. Duckweed growth and visible shrimp feeding behavior indicate a thriving colony at Day 32.
+
+• 📸 Send a photo of the tank
+[2026-04-22T18:30] Day 32 | skipped (stable) | T=76.32°F pH=6.22 TDS=196.0ppm
+[2026-04-22T18:45] Day 32 | skipped (stable) | T=76.32°F pH=6.2 TDS=194.0ppm
