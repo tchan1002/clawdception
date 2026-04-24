@@ -1,8 +1,8 @@
 # State of Tank — Media Luna
 
-**Last updated:** 2026-04-22
-**Cycle day:** 32 (started 2026-03-22)
-**Tank status:** Post-cycle; establishment phase
+**Last updated:** 2026-04-23
+**Cycle day:** 33 (started 2026-03-22)
+**Tank status:** Nitrogen cycle in progress — late stage; establishment phase
 
 ---
 
@@ -15,52 +15,47 @@
 
 **Shrimp observations:**
 - Day 31: 2 individuals visible near substrate front-left in evening photo
-- Day 32: No shrimp visible from top-down photo — consistent with dense duckweed coverage obscuring view from above; not a welfare concern
+- Day 32: Colony active; grazing behavior and feeding response observed
+- Day 33: 1 individual photographed close-up, perched atop mesh media bag in foreground — vivid red coloration, posture relaxed and confident; water clarity excellent
 
 ---
 
-## Water Chemistry (Current)
+## Equipment
 
-| Parameter | Current Avg | Safe Range | Status |
-|-----------|-------------|------------|--------|
-| Temperature | 76.2°F | 65–80°F | ✅ Normal |
-| pH | 6.33 | 6.5–8.0 preferred | ⚠️ Slightly low |
-| TDS | 198 ppm | 150–250 ppm | ✅ Normal |
-
-**Nitrogen cycle status:**
-- Ammonia: 0 ppm (Day 30 manual test — cycle complete)
-- Nitrite: 0 ppm (Day 30 manual test — cycle complete)
-- Nitrate: 80 ppm (Day 30 manual test — elevated, water change pending; plant uptake may have reduced since)
+| Item | Status | Notes |
+|------|--------|-------|
+| pH probe | Operational | Last calibrated 2026-03-22 — **32 days ago, overdue (30-day window)** |
+| Heater/diffuser | Visible in photo | Mounted to rear glass with suction cup |
+| Filter/canister | Visible in photo | Right edge of tank |
+| Powerhead | Presumed active | Turbulence near surface visible in prior photos |
 
 ---
 
-## Equipment Status
+## Surface Plants
 
-| Equipment | Status | Notes |
-|-----------|--------|-------|
-| pH probe | ⚠️ Calibration overdue | Last calibrated Day 1; 31 days ago, due every 30d |
-| Powerhead/filter | Operating | Visible turbulence in top-down photo; keeping center surface open |
-| Auto-feeder | Online | Installed Day 31 |
+- Duckweed (or similar floating plant) mat present — coverage assessed as extensive in Day 31–32 photos
+- Duckweed-monitor skill installed 2026-04-23; baseline coverage measurement pending
+- No plant health concerns logged; no visible algae in most recent photo
 
 ---
 
-## Physical Tank (from submitted photos)
+## Water Parameters (as of 2026-04-23)
 
-**Surface:** Dense duckweed mat — nearly continuous coverage with small open-water windows. One darker, rounder floating plant visible near tank midpoint. Powerhead outflow maintains a turbulence zone that keeps duckweed pushed toward glass edges. Surface gas exchange should be monitored as coverage continues to expand.
+| Parameter | Current (avg) | Range | Target | Status |
+|-----------|--------------|-------|--------|--------|
+| Temperature | 76.6°F | 76.21–77.34°F | 72–78°F | ✅ |
+| pH | ~6.35 | 6.21–6.57 | 6.2–7.8 | ✅ (probe calibration pending) |
+| TDS | 196 ppm | 194–201 ppm | 100–300 ppm | ✅ |
 
-**Substrate:** Dark substrate visible through gaps in duckweed; appears clean and undisturbed.
-
-**Water:** Visually clear from both top-down and prior front-facing photos.
-
-**Lighting:** Two slim black light fixtures flank the tank on either side (visible in top-down photo).
+**Manual chemistry:** No test logged 2026-04-23. Last known: nitrite ~0 ppm, nitrate rising (Day ~30). Next test recommended within 2–3 days.
 
 ---
 
-## Active Concerns
+## Watch List
 
-1. **pH probe calibration overdue** — readings should be treated with mild skepticism until recalibrated; intraday pH swing of 0.40 may reflect probe drift
-2. **Duckweed coverage expanding** — gas exchange impact under observation; not yet problematic but trending toward management threshold
-3. **Nitrate follow-up needed** — 80 ppm on Day 30; no subsequent test; plant uptake may be helping but needs confirmation
-4. **pH trending low** — averaging 6.33; bears watching post-recalibration to determine if real or instrument artifact
+- pH probe recalibration — overdue, logged as pending
+- TDS gentle upward trend — monitoring for plateau vs. sustained climb
+- Duckweed coverage — new monitoring capability active; baseline needed
+- Cycle completion — nitrate trend will confirm; no ammonia/nitrite spike observed recently
 
 ---
