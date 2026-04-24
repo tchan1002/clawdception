@@ -3190,3 +3190,11 @@ All three parameters sit comfortably within safe zones; the mild pH dip is expec
 [2026-04-24T11:15] Day 34 | skipped (stable) | T=76.55°F pH=6.52 TDS=207.0ppm
 [2026-04-24T11:30] Day 34 | risk=yellow | [ph changed 0.17 in last hour] | T=76.44°F pH=6.69 TDS=198.0ppm | pH rose 0.17 in the last hour and +0.34 over 24hr—a steady drift rather than a s
 [2026-04-24T11:45] Day 34 | skipped (stable) | T=76.44°F pH=6.43 TDS=199.0ppm
+[2026-04-24T12:00] Day 34 | skipped (stable) | T=76.44°F pH=6.42 TDS=201.0ppm
+[2026-04-24T12:15] Day 34 | risk=yellow | [ph changed 0.31 in last hour] | T=76.44°F pH=6.38 TDS=201.0ppm | Sharp pH drop (6.38, down 0.31 in one hour) coincides with pending probe calibra
+[call-toby] Telegram sent (warning): Sharp pH drop (6.38, down 0.31 in one hour) coincides with pending probe calibration—likely sensor drift rather than genuine tank crisis. Colony is 260+ hours post-introduction with no visible welfare concerns; duckweed growth and competitive feeding behavior suggest stable conditions.
+
+❗ 🧪 Run a water test (ammonia / nitrite / pH)
+❗ 🔧 Check equipment — Confirm pH probe calibration status—if not completed, calibrate immediately to resolve sensor reliability question.
+[2026-04-24T12:30] Day 34 | skipped (stable) | T=76.55°F pH=6.37 TDS=200.0ppm
+[2026-04-24T12:45] Day 34 | skipped (stable) | T=76.55°F pH=6.37 TDS=200.0ppm

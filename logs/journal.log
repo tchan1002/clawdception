@@ -375,3 +375,10 @@ json.decoder.JSONDecodeError: Expecting value: line 2 column 1 (char 1)
 • Confirm with Toby that pH probe calibration was completed on April 22 as planned. If not yet done, calibrate the probe within the next 6 hours to restore data confidence
 • Once calibration is complete, re-evaluate the pH spike in context of a freshly validated sensor—the reading may stabilize or confirm a genuine upward drift
 • Continue current feeding and maintenance routine—no intervention needed at this time based on shrimp behavior
+[shrimp-journal] Entry written: 2026-04-24-1205.md (Day 34)
+[call-toby] Telegram sent (info): Journal — Day 34 · 2026-04-24 12:05
+[call-toby] Document sent: 2026-04-24-1205.md
+[call-toby] Telegram sent (info): Action items:
+• Confirm with Toby whether pH probe calibration was completed on April 23; if not yet done, calibrate within 24 hours to restore sensor confidence
+• Following calibration, re-establish baseline pH reading and compare to pre-drift values to determine if recent spike is genuine or sensor artifact
+• Continue current feeding schedule and observation routine—shrimp welfare is solid, no intervention needed at this time

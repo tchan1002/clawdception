@@ -2705,3 +2705,6 @@ A single vivid red Neocaridina shrimp is perched confidently atop what appears t
 [call-toby] Telegram failed: 400 Client Error: Bad Request for url: https://api.telegram.org/bot***/sendMessage — falling back to log file
 [call-toby] ℹ️ Installed to skills/duckweed_monitor/ — add to cron manually when ready.
 [telegram-listener] Processed 2 message(s), offset now 236833100
+[telegram-listener] 'how my guys doing?' → question
+[call-toby] Telegram sent (info): They're doing well! Saw one of them clearly in last night's photo — bold little thing. Only thing on my radar is that pH is sitting at 6.38, which is on the low side, but Toby, you've got a calibration coming up so let's see if the probe's been fibbing before we read into it. 🦐
+[telegram-listener] Processed 1 message(s), offset now 236833101
