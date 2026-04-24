@@ -2696,3 +2696,12 @@ This top-down shot of Media Luna on Day 32 of the nitrogen cycle tells a vivid b
 [call-toby] Telegram sent (info): Logged as owner note: Owner confirmed they will do something first thing tomorrow morning. No specific action named — likely a reply to a prior recommendation or reminder. ✓
 [telegram-listener] Processed 1 message(s), offset now 236833098
 [telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[telegram-listener] Photo saved: 2026-04-23_21-44-03.jpg — ''
+[call-toby] Telegram sent (info): 1 shrimp visible · water: clear · plants: none visible
+Concerns: none
+
+A single vivid red Neocaridina shrimp is perched confidently atop what appears to be a large mesh media bag in the foreground — a nice close-up look at one of the colony members. In the background, a submersible heater or CO2 diffuser is visible mounted to the rear glass with a suction cup, along with what looks like a canister or filter media container on the right edge.
+[telegram-listener] Vision reply sent
+[call-toby] Telegram failed: 400 Client Error: Bad Request for url: https://api.telegram.org/bot***/sendMessage — falling back to log file
+[call-toby] ℹ️ Installed to skills/duckweed_monitor/ — add to cron manually when ready.
+[telegram-listener] Processed 2 message(s), offset now 236833100
