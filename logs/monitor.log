@@ -3134,3 +3134,11 @@ All three parameters sit comfortably within safe zones; the mild pH dip is expec
 [2026-04-23T23:15] Day 33 | risk=green | [ph changed 0.13 in last hour] | T=76.32°F pH=6.51 TDS=201.0ppm | pH drifted +0.13 in the last hour, but lands safely within target and sits just 
 [2026-04-23T23:30] Day 33 | skipped (stable) | T=76.55°F pH=6.49 TDS=199.0ppm
 [2026-04-23T23:45] Day 33 | skipped (stable) | T=76.44°F pH=6.55 TDS=200.0ppm
+[2026-04-24T00:00] Day 34 | skipped (stable) | T=76.32°F pH=6.57 TDS=200.0ppm
+[2026-04-24T00:15] Day 34 | risk=yellow | [ph changed 0.18 in last hour] | T=76.55°F pH=6.67 TDS=200.0ppm | pH jumped 0.18 in one hour—unusual velocity, likely sensor drift. Recent log not
+[call-toby] Telegram sent (warning): pH jumped 0.18 in one hour—unusual velocity, likely sensor drift. Recent log notes probe calibration was planned for April 22; confirm this happened before trusting future pH trends.
+
+⏳ 🧪 Run a water test (ammonia / nitrite / pH) — Manual pH test to verify sensor reading. If manual test differs significantly from 6.67, probe calibration is needed.
+• 🔧 Check equipment — Confirm pH probe calibration was completed as noted on 2026-04-22. If not yet done, calibrate within 12 hours.
+[2026-04-24T00:30] Day 34 | risk=yellow | [ph changed 0.11 in last hour] | T=76.44°F pH=6.66 TDS=199.0ppm | pH rose 0.11 in the last hour and 0.27 over 24hr, tracking toward the upper edge
+[2026-04-24T00:45] Day 34 | risk=yellow | [ph changed 0.13 in last hour] | T=76.32°F pH=6.7 TDS=199.0ppm | pH rose 0.3 in 24hr and jumped 0.13 in the last hour—unusual for a stable 10-gal
