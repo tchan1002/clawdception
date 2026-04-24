@@ -3170,3 +3170,11 @@ All three parameters sit comfortably within safe zones; the mild pH dip is expec
 [2026-04-24T07:15] Day 34 | skipped (stable) | T=76.44°F pH=6.59 TDS=201.0ppm
 [2026-04-24T07:30] Day 34 | skipped (stable) | T=76.32°F pH=6.61 TDS=202.0ppm
 [2026-04-24T07:45] Day 34 | skipped (stable) | T=76.55°F pH=6.61 TDS=203.0ppm
+[2026-04-24T08:00] Day 34 | risk=green | [scheduled check-in (08:00)] | T=76.44°F pH=6.62 TDS=201.0ppm | All parameters within target range; 24hr trends show minor upward drift in pH (+
+[call-toby] Telegram sent (info): All parameters within target range; 24hr trends show minor upward drift in pH (+0.12) and TDS (+5ppm) typical of a maturing colony post-introduction. Probe calibration status is the only outstanding item.
+
+• 👀 Observe shrimp behavior — Duckweed density noted as strong on Day 31; monitor whether surface coverage is beginning to limit gas exchange or light penetration.
+• 📸 Send a photo of the tank
+[2026-04-24T08:15] Day 34 | risk=yellow | [ph changed 0.17 in last hour] | T=76.32°F pH=6.44 TDS=202.0ppm | pH dropped 0.08 over 24hr and shifted 0.17 in the last hour—suspect unvalidated 
+[2026-04-24T08:30] Day 34 | risk=yellow | [ph changed 0.16 in last hour] | T=76.44°F pH=6.45 TDS=201.0ppm | pH dropped 0.16 in one hour—unusual velocity. Probe calibration was scheduled fo
+[2026-04-24T08:45] Day 34 | risk=yellow | [ph changed 0.19 in last hour] | T=76.32°F pH=6.43 TDS=200.0ppm | pH dipped 0.19 in one hour and sits 0.07 below the lower target bound; however, 
