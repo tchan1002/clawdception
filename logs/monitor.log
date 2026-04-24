@@ -3130,3 +3130,7 @@ All three parameters sit comfortably within safe zones; the mild pH dip is expec
 [2026-04-23T22:15] Day 33 | skipped (stable) | T=76.55°F pH=6.36 TDS=200.0ppm
 [2026-04-23T22:30] Day 33 | skipped (stable) | T=76.44°F pH=6.38 TDS=200.0ppm
 [2026-04-23T22:45] Day 33 | skipped (stable) | T=76.55°F pH=6.4 TDS=199.0ppm
+[2026-04-23T23:00] Day 33 | skipped (stable) | T=76.44°F pH=6.45 TDS=200.0ppm
+[2026-04-23T23:15] Day 33 | risk=green | [ph changed 0.13 in last hour] | T=76.32°F pH=6.51 TDS=201.0ppm | pH drifted +0.13 in the last hour, but lands safely within target and sits just 
+[2026-04-23T23:30] Day 33 | skipped (stable) | T=76.55°F pH=6.49 TDS=199.0ppm
+[2026-04-23T23:45] Day 33 | skipped (stable) | T=76.44°F pH=6.55 TDS=200.0ppm
