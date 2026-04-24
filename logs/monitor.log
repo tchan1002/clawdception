@@ -3142,3 +3142,7 @@ All three parameters sit comfortably within safe zones; the mild pH dip is expec
 • 🔧 Check equipment — Confirm pH probe calibration was completed as noted on 2026-04-22. If not yet done, calibrate within 12 hours.
 [2026-04-24T00:30] Day 34 | risk=yellow | [ph changed 0.11 in last hour] | T=76.44°F pH=6.66 TDS=199.0ppm | pH rose 0.11 in the last hour and 0.27 over 24hr, tracking toward the upper edge
 [2026-04-24T00:45] Day 34 | risk=yellow | [ph changed 0.13 in last hour] | T=76.32°F pH=6.7 TDS=199.0ppm | pH rose 0.3 in 24hr and jumped 0.13 in the last hour—unusual for a stable 10-gal
+[2026-04-24T01:00] Day 34 | skipped (stable) | T=76.55°F pH=6.68 TDS=199.0ppm
+[2026-04-24T01:15] Day 34 | skipped (stable) | T=76.44°F pH=6.65 TDS=201.0ppm
+[2026-04-24T01:30] Day 34 | skipped (stable) | T=76.32°F pH=6.63 TDS=202.0ppm
+[2026-04-24T01:45] Day 34 | skipped (stable) | T=76.55°F pH=6.65 TDS=200.0ppm
