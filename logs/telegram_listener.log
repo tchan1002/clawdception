@@ -2718,3 +2718,41 @@ A single vivid red Neocaridina shrimp is perched confidently atop what appears t
 [telegram-listener] 'feels pretty sad, can’t believe we didn’t notice it' → owner_note
 [call-toby] Telegram sent (info): Logged as owner note: Owner expressed sadness about something going unnoticed — likely a loss or negative development in the tank. No specific event or parameter mentioned. ✓
 [telegram-listener] Processed 1 message(s), offset now 236833106
+[telegram-listener] 'shrimp seem kind of lethargic but I don’t know if I am mirroring' → owner_note
+[call-toby] Telegram sent (info): Logged as owner note: Owner observes shrimp appear lethargic but is uncertain whether this is real or a case of emotional mirroring / projection. ✓
+[telegram-listener] 'I took the dead shrimp out of the tank and laid it on a paper towel' → observation
+[call-toby] Telegram sent (info): Logged as observation: Owner removed a dead shrimp from the tank and placed it on a paper towel for inspection. ✓
+[telegram-listener] Processed 2 message(s), offset now 236833108
+[telegram-listener] Photo saved: 2026-04-24_22-12-03.jpg — 'should I remove the filamentous green algae?'
+[call-toby] Telegram sent (info): "should I remove the filamentous green algae?"
+0 shrimp visible · water: slightly cloudy · plants: none visible
+Algae: White/cream fuzzy growth — consistent with fungal or bacterial biofilm — coating what appears to be a mesh-covered object (likely a rock or hardscape piece) in the foreground. Fine hair-like strands extend upward from the surface, particularly concentrated along the top edge. A small patch of green is faintly visible on the mesh surface, possibly the earliest hint of green algae establishing.
+Concerns: White fuzzy biofilm/fungal growth heavily coating the mesh-covered foreground object — this is common mid-cycle bacterial/fungal bloom on organic material and is expected during nitrogen cycling, but worth monitoring for spread or persistence post-cycle., Water appears slightly hazy in the midground — could be a cycling bacterial bloom (normal at Day 34) or early particulate suspension; not alarming but worth noting., Fine hair-like strands extending off the mesh object may be fungal hyphae or bacterial filaments — benign during cycling but shrimp should not be introduced until this clears.
+
+Day 34 of the nitrogen cycle, and the tank is doing what cycling tanks do — growing things that weren't invited. The mesh-covered object in the foreground is blanketed in white fuzzy biofilm, almost certainly bacterial or fungal in origin, with fine filaments reaching upward like it's making a statement. This is textbook mid-cycle organic decomposition activity. A cyan light glows from what looks like a filter or heater unit at the right — the equipment is running, the chemistry is churning, and the tank is very much alive in the microbial sense, even before the shrimp arrive.
+[telegram-listener] Vision reply sent
+[telegram-listener] Photo saved: 2026-04-24_22-12-22.jpg — ''
+[call-toby] Telegram sent (info): 2 shrimp visible · water: clear · plants: stable
+Concerns: none
+
+A vivid red cherry shrimp is caught mid-foreground, posed low against the dark substrate like it owns the place — coloration is bold and saturated, a good sign of health. A second red shrimp is partially visible at the left edge, and what appears to be a decorative shell or hardscape piece peeks in from the right. In the background, a lush green plant — possibly a fine-leaved stem plant or moss clump — sprawls across the midground, looking healthy and full.
+[telegram-listener] Vision reply sent
+[telegram-listener] Processed 3 message(s), offset now 236833111
+[telegram-listener] 'duckweed is growing pretty dense' → observation
+[call-toby] Telegram sent (info): Logged as observation: Duckweed is growing notably dense in the tank. ✓
+[telegram-listener] Processed 1 message(s), offset now 236833112
+[telegram-listener] 'put a quarter of the duckweed out in a grow out tray' → maintenance
+[call-toby] Telegram sent (info): Logged as maintenance: Removed approximately 25% of duckweed from tank and transferred it to an external grow-out tray. ✓
+[telegram-listener] 'fed 5 pellets of food' → feeding
+[call-toby] Telegram sent (info): Logged as feeding: Owner fed 5 pellets of food to the tank. ✓
+[telegram-listener] Processed 2 message(s), offset now 236833114
+[telegram-listener] 'water smells kind of fishy' → observation
+[call-toby] Telegram sent (info): Logged as observation: Owner noticed the tank water smells fishy. ✓
+[telegram-listener] 'added a splotch of prime conditioner just in case' → dosing
+[call-toby] Telegram sent (info): Logged as dosing: Owner added a small, unspecified amount of Seachem Prime conditioner as a precautionary dose. ✓
+[telegram-listener] Processed 2 message(s), offset now 236833116
+[telegram-listener] 'the dead shrimp died under the bar of the filter by the aquarium, he was upside down. not sure about cause of death but water seems fine.' → observation
+[call-toby] Telegram sent (info): Logged as observation: Dead shrimp found upside down under the filter bar near the aquarium. Cause of death uncertain. Owner reports water appears fine. ✓
+[telegram-listener] 'it looked like he might have been molting' → observation
+[call-toby] Telegram sent (info): Logged as observation: Owner observed a shrimp that appeared to possibly be molting. ✓
+[telegram-listener] Processed 2 message(s), offset now 236833118
