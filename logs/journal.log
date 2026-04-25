@@ -396,3 +396,11 @@ json.decoder.JSONDecodeError: Expecting value: line 2 column 1 (char 1)
 [shrimp-journal] Entry written: 2026-04-25-0605.md (Day 35)
 [call-toby] Telegram sent (info): Journal — Day 35 · 2026-04-25 06:05
 [call-toby] Document sent: 2026-04-25-0605.md
+[shrimp-journal] Entry written: 2026-04-25-1205.md (Day 35)
+[call-toby] Telegram sent (info): Journal — Day 35 · 2026-04-25 12:05
+[call-toby] Document sent: 2026-04-25-1205.md
+[call-toby] Telegram sent (info): Action items:
+• Calibrate pH probe within 24 hours to restore confidence in readings and rule out drift-masked water shifts.
+• Perform manual water test (ammonia, nitrite, nitrate) within 24 hours to confirm nitrogen cycle stability post-loss.
+• Take a fresh photo of colony and note any visible shrimp count, behavior, feeding response, and odor status to establish post-loss baseline.
+• Consider small (15–20%) partial water change within 48 hours to lower TDS and help clear decomposition byproducts, unless nitrate reduction is specifically desired to slow cycle.
