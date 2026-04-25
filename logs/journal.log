@@ -390,3 +390,6 @@ json.decoder.JSONDecodeError: Expecting value: line 2 column 1 (char 1)
 • After calibration, submit a fresh pH reading and note the time—this will be the new baseline for trend assessment
 • If calibration reveals the probe was drifting (readings off by >0.3 pH), note the likely window of unreliable data (April 22–23) and treat those readings as noise
 • Continue observation schedule; no intervention needed on shrimp care or feeding at this time
+[shrimp-journal] Entry written: 2026-04-25-0005.md (Day 35)
+[call-toby] Telegram sent (info): Journal — Day 35 · 2026-04-25 00:05
+[call-toby] Document sent: 2026-04-25-0005.md
