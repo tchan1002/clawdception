@@ -2756,3 +2756,4 @@ A vivid red cherry shrimp is caught mid-foreground, posed low against the dark s
 [telegram-listener] 'it looked like he might have been molting' → observation
 [call-toby] Telegram sent (info): Logged as observation: Owner observed a shrimp that appeared to possibly be molting. ✓
 [telegram-listener] Processed 2 message(s), offset now 236833118
+[telegram-listener] getUpdates failed: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8717821001:AAGRECjTkLrUOl6P2LqWnY3hFAftvfyg-pA/getUpdates?offset=236833118&timeout=0&limit=100 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fff9ad817f0>: Failed to resolve 'api.telegram.org' ([Errno -3] Temporary failure in name resolution)"))
