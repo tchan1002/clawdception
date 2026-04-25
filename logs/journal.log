@@ -393,3 +393,6 @@ json.decoder.JSONDecodeError: Expecting value: line 2 column 1 (char 1)
 [shrimp-journal] Entry written: 2026-04-25-0005.md (Day 35)
 [call-toby] Telegram sent (info): Journal — Day 35 · 2026-04-25 00:05
 [call-toby] Document sent: 2026-04-25-0005.md
+[shrimp-journal] Entry written: 2026-04-25-0605.md (Day 35)
+[call-toby] Telegram sent (info): Journal — Day 35 · 2026-04-25 06:05
+[call-toby] Document sent: 2026-04-25-0605.md
