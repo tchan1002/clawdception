@@ -3226,3 +3226,11 @@ All three parameters sit comfortably within safe zones; the mild pH dip is expec
 [2026-04-24T19:15] Day 34 | skipped (stable) | T=76.44°F pH=6.33 TDS=198.0ppm
 [2026-04-24T19:30] Day 34 | skipped (stable) | T=76.44°F pH=6.33 TDS=198.0ppm
 [2026-04-24T19:45] Day 34 | skipped (stable) | T=76.32°F pH=6.33 TDS=199.0ppm
+[2026-04-24T20:00] Day 34 | risk=yellow | [scheduled check-in (20:00)] | T=76.44°F pH=6.32 TDS=199.0ppm | All three parameters are nominally in or near target range, and colony is now 11
+[call-toby] Telegram sent (warning): All three parameters are nominally in or near target range, and colony is now 11.2 days post-introduction with visible feeding behavior and healthy grazing activity. pH sensor calibration status remains the single variable; if probe calibration hasn't yet occurred (intended for April 22–23), confirm and execute within 24 hours to resolve uncertainty.
+
+• 👀 Observe shrimp behavior
+• 📸 Send a photo of the tank — Last photo 22hr old; routine colony check-in when convenient
+[2026-04-24T20:15] Day 34 | skipped (stable) | T=76.32°F pH=6.34 TDS=200.0ppm
+[2026-04-24T20:30] Day 34 | skipped (stable) | T=76.44°F pH=6.4 TDS=202.0ppm
+[2026-04-24T20:45] Day 34 | risk=yellow | [ph changed 0.11 in last hour] | T=76.44°F pH=6.43 TDS=201.0ppm | pH has drifted +0.14 in 24hr and jumped +0.11 in the last hour—concerning trend,
