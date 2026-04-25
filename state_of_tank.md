@@ -1,8 +1,8 @@
 # State of Tank — Media Luna
 
-**Last updated:** 2026-04-23
-**Cycle day:** 33 (started 2026-03-22)
-**Tank status:** Nitrogen cycle in progress — late stage; establishment phase
+**Last updated:** 2026-04-24
+**Cycle day:** 34 (started 2026-03-22)
+**Tank status:** Nitrogen cycle in progress — late stage; shrimp colony established, first mortality recorded
 
 ---
 
@@ -10,52 +10,63 @@
 
 | Animal | Count | Notes |
 |--------|-------|-------|
-| Neocaridina shrimp | 6 introduced | 4 male, 2 female; introduced 2026-04-13 |
+| Neocaridina shrimp | 5 confirmed living | 4 male, 2 female introduced 2026-04-13; 1 confirmed dead 2026-04-24 |
 | Snails (unplanned) | Unknown | 2 tiny (~1mm) removed 2026-04-17; population unknown |
 
-**Shrimp observations:**
-- Day 31: 2 individuals visible near substrate front-left in evening photo
-- Day 32: Colony active; grazing behavior and feeding response observed
-- Day 33: 1 individual photographed close-up, perched atop mesh media bag in foreground — vivid red coloration, posture relaxed and confident; water clarity excellent
+**Shrimp observations (2026-04-24):**
+- 1 shrimp found dead, upside down, under filter bar; removed by Toby; cause of death unknown
+- Cause flagged as possibly failed molt based on timing and position, but unconfirmed
+- 1 shrimp observed in possible molting behavior (same evening; may or may not be same individual)
+- 1 shrimp visible in photo: bold, saturated red coloration; low against substrate; posture and color consistent with healthy animal
+- Toby noted possible lethargy in colony but flagged low confidence and possible projection
 
 ---
 
-## Equipment
+## Plants & Surface
 
-| Item | Status | Notes |
-|------|--------|-------|
-| pH probe | Operational | Last calibrated 2026-03-22 — **32 days ago, overdue (30-day window)** |
-| Heater/diffuser | Visible in photo | Mounted to rear glass with suction cup |
-| Filter/canister | Visible in photo | Right edge of tank |
-| Powerhead | Presumed active | Turbulence near surface visible in prior photos |
+- **Duckweed:** Dense coverage as of 2026-04-24; Toby removed ~25% to a growout tray
+- **Background/midground plant:** Lush green, healthy appearance per 2026-04-24 photo (species unknown)
+- **Surface management ongoing** — duckweed thinning now an active maintenance task
 
 ---
 
-## Surface Plants
+## Hardscape & Equipment
 
-- Duckweed (or similar floating plant) mat present — coverage assessed as extensive in Day 31–32 photos
-- Duckweed-monitor skill installed 2026-04-23; baseline coverage measurement pending
-- No plant health concerns logged; no visible algae in most recent photo
-
----
-
-## Water Parameters (as of 2026-04-23)
-
-| Parameter | Current (avg) | Range | Target | Status |
-|-----------|--------------|-------|--------|--------|
-| Temperature | 76.6°F | 76.21–77.34°F | 72–78°F | ✅ |
-| pH | ~6.35 | 6.21–6.57 | 6.2–7.8 | ✅ (probe calibration pending) |
-| TDS | 196 ppm | 194–201 ppm | 100–300 ppm | ✅ |
-
-**Manual chemistry:** No test logged 2026-04-23. Last known: nitrite ~0 ppm, nitrate rising (Day ~30). Next test recommended within 2–3 days.
+- Dark gravel/substrate, rounded pellets, clean appearance
+- Mesh-covered object (likely rock or hardscape) in foreground — coated in white fuzzy bacterial/fungal biofilm; textbook mid-cycle organic bloom
+- Decorative shell or hardscape piece visible at right edge of tank (per photo)
+- Submersible heater or diffuser mounted to rear glass
+- Filter unit with cyan/teal indicator light; running
+- pH/temp probe mounted mid-tank
+- Powerhead maintaining surface movement near filter outflow
 
 ---
 
-## Watch List
+## Water Chemistry
 
-- pH probe recalibration — overdue, logged as pending
-- TDS gentle upward trend — monitoring for plateau vs. sustained climb
-- Duckweed coverage — new monitoring capability active; baseline needed
-- Cycle completion — nitrate trend will confirm; no ammonia/nitrite spike observed recently
+| Parameter | Current Avg | Notes |
+|-----------|-------------|-------|
+| Temperature | 76.4°F | Stable; within target range |
+| pH | 6.41 | Low; 6.25 floor recorded; probe calibrated 2026-04-24 |
+| TDS | 201.5 ppm | +14 ppm day change; within acceptable range |
+
+- pH probe calibrated 2026-04-24 after 33-day gap — prior readings carry uncertainty
+- Nitrates elevated (80 ppm recorded previously); manual retest recommended
+- Ammonia and nitrite: not tested today
+
+---
+
+## Recent Maintenance
+
+- 2026-04-24: Probe calibrated; duckweed thinned (~25% to growout tray); 5 pellets fed; Seachem Prime dosed (precautionary, unspecified volume); dead shrimp removed
+
+---
+
+## Active Concerns
+
+1. **Shrimp mortality** — 1 of 6 dead; cause unknown; possible molt failure; 5 remain
+2. **pH floor** — 6.25 is below comfortable molting range for Neocaridina; post-calibration readings needed to establish new baseline
+3. **Biofilm on mesh object** — normal at this cycle stage; monitor for recession post-cycle
+4. **Possible molter** — one shrimp may be mid-molt; vulnerable for 24–48 hours
 
 ---
