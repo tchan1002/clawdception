@@ -3267,3 +3267,7 @@ All three parameters sit comfortably within safe zones; the mild pH dip is expec
 ⏳ 👀 Observe shrimp behavior — Check for lethargy signs; note any additional losses or molts in next 12-24hr
 [2026-04-25T02:30] Day 35 | risk=yellow | [manual event since last check ] | T=75.76°F pH=6.78 TDS=217.0ppm | Manual water test confirms ammonia 0, nitrite 0, nitrate 80 ppm—nitrification is
 [2026-04-25T02:45] Day 35 | risk=green | [manual event since last check ] | T=75.76°F pH=6.79 TDS=217.0ppm | Water chemistry is stable across all parameters; ammonia and nitrite are zero, n
+[2026-04-25T03:00] Day 35 | risk=yellow | [manual event since last check ] | T=75.65°F pH=6.81 TDS=218.0ppm | All parameters are in range; water chemistry is stable post-crisis event. A dead
+[2026-04-25T03:15] Day 35 | skipped (stable) | T=75.65°F pH=6.81 TDS=218.0ppm
+[2026-04-25T03:30] Day 35 | skipped (stable) | T=75.65°F pH=6.83 TDS=218.0ppm
+[2026-04-25T03:45] Day 35 | skipped (stable) | T=75.43°F pH=6.78 TDS=220.0ppm
