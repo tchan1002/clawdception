@@ -3297,3 +3297,7 @@ All three parameters sit comfortably within safe zones; the mild pH dip is expec
 [call-toby] Telegram sent (warning): pH swing of +0.18 in one hour is unusual and worth flagging, though current reading (6.65) remains safely mid-range. Context matters: Toby dosed Seachem Prime last night, found a dead shrimp, and reports fishy smell—this is a post-loss, post-intervention window where minor chemistry noise is expected but behavioral health and odor warrant close observation.
 
 ⏳ 👀 Observe shrimp behavior
+[2026-04-25T09:00] Day 35 | risk=yellow | [ph changed 0.18 in last hour] | T=75.43°F pH=6.63 TDS=242.0ppm | pH spiked +0.18 in one hour post-test, and TDS climbed 45ppm in 24h despite yest
+[2026-04-25T09:15] Day 35 | skipped (stable) | T=75.43°F pH=6.63 TDS=242.0ppm
+[2026-04-25T09:30] Day 35 | skipped (stable) | T=75.31°F pH=6.59 TDS=240.0ppm
+[2026-04-25T09:45] Day 35 | skipped (stable) | T=75.31°F pH=6.54 TDS=241.0ppm
