@@ -3234,3 +3234,7 @@ All three parameters sit comfortably within safe zones; the mild pH dip is expec
 [2026-04-24T20:15] Day 34 | skipped (stable) | T=76.32°F pH=6.34 TDS=200.0ppm
 [2026-04-24T20:30] Day 34 | skipped (stable) | T=76.44°F pH=6.4 TDS=202.0ppm
 [2026-04-24T20:45] Day 34 | risk=yellow | [ph changed 0.11 in last hour] | T=76.44°F pH=6.43 TDS=201.0ppm | pH has drifted +0.14 in 24hr and jumped +0.11 in the last hour—concerning trend,
+[2026-04-24T21:00] Day 34 | risk=yellow | [ph changed 0.12 in last hour] | T=76.32°F pH=6.46 TDS=201.0ppm | pH drifted +0.12 in one hour (6.46 now, 6.34 an hour ago)—unusual velocity. The 
+[2026-04-24T21:15] Day 34 | skipped (stable) | T=76.44°F pH=6.47 TDS=201.0ppm
+[2026-04-24T21:30] Day 34 | skipped (stable) | T=76.32°F pH=6.48 TDS=202.0ppm
+[2026-04-24T21:45] Day 34 | risk=yellow | [manual event since last check ] | T=76.55°F pH=6.49 TDS=203.0ppm | Probe calibration completed today, but one shrimp death from failed molt is a va

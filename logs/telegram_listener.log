@@ -2708,3 +2708,13 @@ A single vivid red Neocaridina shrimp is perched confidently atop what appears t
 [telegram-listener] 'how my guys doing?' → question
 [call-toby] Telegram sent (info): They're doing well! Saw one of them clearly in last night's photo — bold little thing. Only thing on my radar is that pH is sitting at 6.38, which is on the low side, but Toby, you've got a calibration coming up so let's see if the probe's been fibbing before we read into it. 🦐
 [telegram-listener] Processed 1 message(s), offset now 236833101
+[telegram-listener] 'noticed a shrimp death from a failed molt, it was upside down and another shrimp was picking at it' → observation
+[call-toby] Telegram sent (info): Logged as observation: Owner observed one shrimp death attributed to a failed molt — found upside down, with another shrimp scavenging it. ✓
+[telegram-listener] 'I’ll do a water test' → owner_note
+[call-toby] Telegram sent (info): Logged as owner note: Owner plans to perform a manual water test. ✓
+[telegram-listener] 'oh probe calibrated' → maintenance
+[call-toby] Telegram sent (info): Logged as maintenance: Owner confirmed probe has been calibrated. ✓
+[telegram-listener] Processed 3 message(s), offset now 236833104
+[telegram-listener] 'feels pretty sad, can’t believe we didn’t notice it' → owner_note
+[call-toby] Telegram sent (info): Logged as owner note: Owner expressed sadness about something going unnoticed — likely a loss or negative development in the tank. No specific event or parameter mentioned. ✓
+[telegram-listener] Processed 1 message(s), offset now 236833106
