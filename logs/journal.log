@@ -413,3 +413,6 @@ json.decoder.JSONDecodeError: Expecting value: line 2 column 1 (char 1)
 [call-toby] Telegram sent (info): Action items:
 • Calibrate the pH probe within the next 24 hours — last confirmed calibration was Day 24; it is now overdue per 30-day maintenance schedule
 • If nitrate approaches 120 ppm before next scheduled water change, consider a partial (20%) water change to prevent accumulation stress
+[shrimp-journal] Entry written: 2026-04-26-0605.md (Day 36)
+[call-toby] Telegram sent (info): Journal — Day 36 · 2026-04-26 06:05
+[call-toby] Document sent: 2026-04-26-0605.md
