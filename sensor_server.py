@@ -869,50 +869,36 @@ def agent_status():
         }}
 
         async function navigateJournal(direction) {{
-            console.log('navigateJournal called with direction:', direction);
-            console.log('Current index before:', currentIndex);
-
             currentIndex += direction;
             if (currentIndex < 0) currentIndex = 0;
             if (currentIndex >= journalDates.length) currentIndex = journalDates.length - 1;
 
-            console.log('Current index after:', currentIndex);
-
             const date = journalDates[currentIndex];
-            console.log('Fetching journal for date:', date);
-
             const contentDiv = document.getElementById('journal-content');
+            document.getElementById('journal-date').textContent = date;
 
-            // Show loading state
+            if (window.JOURNAL_DATA) {{
+                contentDiv.classList.remove('loading');
+                const content = window.JOURNAL_DATA[date];
+                contentDiv.innerHTML = content
+                    ? '<pre style="margin: 0; font-family: inherit; white-space: pre-wrap;">' + content + '</pre>'
+                    : '<div class="not-available">No journal entry for this date</div>';
+                updateNavigationButtons();
+                return;
+            }}
+
             contentDiv.classList.add('loading');
             contentDiv.innerHTML = 'Loading...';
-
             try {{
-                const url = `/api/journal?date=${{date}}`;
-                console.log('Fetching URL:', url);
-
-                const response = await fetch(url);
-                console.log('Response status:', response.status);
-
+                const response = await fetch(`/api/journal?date=${{date}}`);
                 if (!response.ok) throw new Error('Failed to fetch journal');
-
                 const data = await response.json();
-                console.log('Response data:', data);
-
-                document.getElementById('journal-date').textContent = data.date;
-
-                // Remove loading state
                 contentDiv.classList.remove('loading');
-
-                if (data.exists && data.content) {{
-                    contentDiv.innerHTML = '<pre style="margin: 0; font-family: inherit; white-space: pre-wrap;">' + data.content + '</pre>';
-                }} else {{
-                    contentDiv.innerHTML = '<div class="not-available">No journal entry for this date</div>';
-                }}
-
+                contentDiv.innerHTML = data.exists && data.content
+                    ? '<pre style="margin: 0; font-family: inherit; white-space: pre-wrap;">' + data.content + '</pre>'
+                    : '<div class="not-available">No journal entry for this date</div>';
                 updateNavigationButtons();
             }} catch (error) {{
-                console.error('Error fetching journal:', error);
                 contentDiv.classList.remove('loading');
                 contentDiv.innerHTML = '<div class="not-available">Error loading journal</div>';
             }}
@@ -1429,11 +1415,24 @@ def export_dashboard():
 
 @app.route("/export/agent", methods=["GET"])
 def export_agent():
+    journal_dir = Path(__file__).parent / "journal"
+    journal_data = {}
+    if journal_dir.exists():
+        seen = set()
+        for f in sorted(journal_dir.glob("????-??-??-????.md"), reverse=True):
+            date = f.stem[:10]
+            seen.add(date)
+        for date in seen:
+            entries = sorted(journal_dir.glob(f"{date}-????.md"))
+            journal_data[date] = "\n\n".join(e.read_text() for e in entries)
+
     html = agent_status()
     html = html.replace('<a href="/">Dashboard</a>', '<a href="index.html">Dashboard</a>')
     html = html.replace('<a href="/agent" class="active">Agent</a>', '<a href="agent.html" class="active">Agent</a>')
     html = html.replace('<a href="/water-test">Water Test</a>', '')
     html = html.replace('<a href="/log-event">Log Event</a>', '')
+    injection = f'<script>window.JOURNAL_DATA = {json.dumps(journal_data)};</script>\n'
+    html = html.replace('</body>', injection + '</body>')
     return html, 200, {"Content-Type": "text/html; charset=utf-8"}
 
 
