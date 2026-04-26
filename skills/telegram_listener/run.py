@@ -196,8 +196,8 @@ def format_vision_reply(analysis, caption=""):
         lines.append(f'"{caption}"')
     lines.append(
         f"{analysis.get('shrimp_count_visible', '?')} shrimp visible · "
-        f"water: {analysis['water_clarity'].replace('_', ' ')} · "
-        f"plants: {analysis['plant_health'].replace('_', ' ')}"
+        f"water: {analysis.get('water_clarity', 'unknown').replace('_', ' ')} · "
+        f"plants: {analysis.get('plant_health', 'unknown').replace('_', ' ')}"
     )
     if analysis.get("visible_algae") and analysis.get("algae_description"):
         lines.append(f"Algae: {analysis['algae_description']}")
@@ -395,7 +395,8 @@ def run():
         )
         resp.raise_for_status()
     except Exception as e:
-        print(f"[telegram-listener] getUpdates failed: {e}")
+        safe = str(e).replace(token, "***") if token else str(e)
+        print(f"[telegram-listener] getUpdates failed: {safe}")
         return
 
     updates = resp.json().get("result", [])

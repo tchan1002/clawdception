@@ -34,7 +34,7 @@ Builds context from: latest reading, 24hr events, 7-day notable events (owner_ph
 
 Download failure: logs `owner_photo` event with `error: download_failed`, sends warning.
 
-`format_vision_reply` outputs: caption (if present), shrimp count, water clarity, plant health, algae description (if visible), concerns, narrative.
+`format_vision_reply` outputs: caption (if present), shrimp count, water clarity, plant health, algae description (if visible), concerns, narrative. `water_clarity` and `plant_health` are optional in vision schema — use `.get()` with `'unknown'` fallback; direct dict access crashes when Claude omits them for non-tank photos.
 
 ## Proposal review (callback_query flow)
 
