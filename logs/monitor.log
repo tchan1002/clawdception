@@ -3351,3 +3351,9 @@ All three parameters sit comfortably within safe zones; the mild pH dip is expec
 [2026-04-25T19:15] Day 35 | risk=yellow | [manual event since last check ] | T=74.86°F pH=6.6 TDS=243.0ppm | Water chemistry is rock-solid post-test. The yellow flag is behavioral recovery 
 [2026-04-25T19:30] Day 35 | risk=yellow | [manual event since last check ] | T=74.97°F pH=6.61 TDS=239.0ppm | Water chemistry is stable and in-range; ammonia and nitrite remain zero after ye
 [2026-04-25T19:45] Day 35 | risk=green | [manual event since last check ] | T=74.75°F pH=6.63 TDS=242.0ppm | Water chemistry is solid across all three parameters—pH stable, temp comfortable
+[2026-04-25T20:00] Day 35 | risk=green | [manual event since last check ] | T=74.86°F pH=6.65 TDS=240.0ppm | Water chemistry is stable and healthy across all three parameters; nitrate at 80
+[call-toby] Telegram sent (info): ✅ All clear — T=74.86°F pH=6.65 TDS=240.0ppm
+Water chemistry is stable and healthy across all three parameters; nitrate at 80ppm confirms active cycling is proceeding normally. Ammonia and nitrite remain zero—the colony is past the dangerous early acclimation window, and surviving shrimp have a solid foundation.
+[2026-04-25T20:15] Day 35 | risk=green | [manual event since last check ] | T=74.86°F pH=6.62 TDS=242.0ppm | All parameters in target; ammonia and nitrite remain zero (strong signal of a ta
+[2026-04-25T20:30] Day 35 | risk=yellow | [manual event since last check ] | T=74.86°F pH=6.62 TDS=239.0ppm | Water chemistry is stable and in range; the manual test confirms zero ammonia/ni
+[2026-04-25T20:45] Day 35 | risk=green | [manual event since last check ] | T=74.75°F pH=6.62 TDS=243.0ppm | Water chemistry remains stable and within target ranges; the manual test confirm
