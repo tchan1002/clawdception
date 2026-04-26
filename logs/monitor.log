@@ -3368,3 +3368,7 @@ Water chemistry is stable and healthy across all three parameters; nitrate at 80
 • 📸 Send a photo of the tank
 [2026-04-25T22:30] Day 35 | risk=green | [manual event since last check ] | T=74.86°F pH=6.7 TDS=250.0ppm | All three parameters in or very close to target; ammonia and nitrite both zero d
 [2026-04-25T22:45] Day 35 | risk=green | [manual event since last check ] | T=74.97°F pH=6.73 TDS=251.0ppm | Colony is 12 days past introduction with one confirmed loss during early acclima
+[2026-04-25T23:00] Day 35 | risk=green | [manual event since last check ] | T=75.09°F pH=6.75 TDS=251.0ppm | Water chemistry is stable and in-range; ammonia zero, nitrite zero, nitrate clim
+[2026-04-25T23:15] Day 35 | skipped (stable) | T=75.09°F pH=6.75 TDS=250.0ppm
+[2026-04-25T23:30] Day 35 | skipped (stable) | T=75.09°F pH=6.73 TDS=252.0ppm
+[2026-04-25T23:45] Day 35 | skipped (stable) | T=75.2°F pH=6.78 TDS=251.0ppm
