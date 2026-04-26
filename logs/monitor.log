@@ -3451,3 +3451,4 @@ pH dip is expected post-water-change signature, not a crisis—fresh water typic
 [2026-04-26T16:00] Day 36 | risk=green | [manual event since last check ] | T=76.32°F pH=6.65 TDS=203.0ppm | pH probe calibration completed today corrects systematic error; current 6.65 rea
 [2026-04-26T16:15] Day 36 | risk=green | [manual event since last check ] | T=76.32°F pH=6.67 TDS=203.0ppm | Post-calibration pH reading of 6.67 is now reliable and sits comfortably in targ
 [2026-04-26T16:30] Day 36 | risk=green | [manual event since last check ] | T=76.32°F pH=6.65 TDS=201.0ppm | pH probe recalibration completed today; current reading of 6.65 is solid and the
+[2026-04-26T16:45] Day 36 | risk=green | [manual event since last check ] | T=76.21°F pH=6.66 TDS=203.0ppm | pH calibration completed this afternoon has restored confidence in readings — cu

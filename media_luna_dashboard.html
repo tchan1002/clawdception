@@ -1238,15 +1238,34 @@ async function exportData() {
       return;
     }
 
-    // Convert to CSV
-    const headers = ['timestamp', 'temp_c', 'temp_f', 'ph', 'tds_ppm', 'source'];
+    const headers = [
+      'timestamp', 'temp_c', 'temp_f', 'ph', 'tds_ppm', 'source',
+      'ph_raw_adc', 'ph_voltage', 'ph_before_offset',
+      'tds_raw_adc', 'tds_voltage', 'tds_comp_voltage', 'temp_raw_c',
+      'ph_neutral_v', 'ph_acid_v', 'ph_offset', 'tds_vref', 'tds_temp_coeff',
+      'wifi_rssi', 'heap_free', 'uptime_sec', 'reading_num'
+    ];
     const csvRows = [headers.join(',')];
 
     data.reverse().forEach(row => {
-      const values = headers.map(h => {
-        const val = row[h];
-        return val !== null && val !== undefined ? val : '';
-      });
+      const raw = row.raw_json ? JSON.parse(row.raw_json) : {};
+      const dbg = raw.debug || {};
+      const cal = raw.calibration || {};
+      const sys = raw.system || {};
+      const flat = {
+        timestamp: row.timestamp, temp_c: row.temp_c, temp_f: row.temp_f,
+        ph: row.ph, tds_ppm: row.tds_ppm, source: row.source,
+        ph_raw_adc: dbg.ph_raw_adc, ph_voltage: dbg.ph_voltage,
+        ph_before_offset: dbg.ph_before_offset,
+        tds_raw_adc: dbg.tds_raw_adc, tds_voltage: dbg.tds_voltage,
+        tds_comp_voltage: dbg.tds_comp_voltage, temp_raw_c: dbg.temp_raw_c,
+        ph_neutral_v: cal.ph_neutral_v, ph_acid_v: cal.ph_acid_v,
+        ph_offset: cal.ph_offset, tds_vref: cal.tds_vref,
+        tds_temp_coeff: cal.tds_temp_coeff,
+        wifi_rssi: sys.wifi_rssi, heap_free: sys.heap_free,
+        uptime_sec: sys.uptime_sec, reading_num: sys.reading_num
+      };
+      const values = headers.map(h => flat[h] !== null && flat[h] !== undefined ? flat[h] : '');
       csvRows.push(values.join(','));
     });
 
