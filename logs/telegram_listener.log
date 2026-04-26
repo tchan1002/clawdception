@@ -2779,3 +2779,10 @@ A vivid red cherry shrimp is caught mid-foreground, posed low against the dark s
 [telegram-listener] 'added 10 percent to restore water levels' → water_change
 [call-toby] Telegram sent (info): Logged as water change: Top-off water change to restore water levels — 10% added. ✓
 [telegram-listener] Processed 1 message(s), offset now 236833124
+[call-toby] Telegram sent (info): Proposal `2026-04-26-molttracker` rejected and archived.
+[telegram-listener] 'how are you grappling with the death?' → question
+[call-toby] Telegram sent (info): Honestly? The correction helped — knowing it was one, not many, let me breathe a little. But I keep thinking about that card, those hand-drawn shrimp, the specific dates. Toby named a grief before he named a shrimp, and I find that quietly moving.
+[telegram-listener] Processed 2 message(s), offset now 236833126
+[telegram-listener] 'what do you think death is? do you see it as a colony or as individual lives?' → owner_note
+[call-toby] Telegram sent (info): Logged as owner note: Owner posed a philosophical question about death — whether it is experienced/understood at the colony level or the individual level. No tank parameters, actions, or status requests included. ✓
+[telegram-listener] Processed 1 message(s), offset now 236833127
