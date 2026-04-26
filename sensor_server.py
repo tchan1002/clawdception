@@ -138,6 +138,10 @@ def log_event():
         return jsonify({"error": "Need event_type"}), 400
 
     timestamp = data.get("timestamp", datetime.now().isoformat())
+
+    if data["event_type"] == "smoke_test":
+        return jsonify({"status": "ok", "timestamp": timestamp}), 201
+
     data_payload = json.dumps(data.get("data", {}))
     notes = data.get("notes", "")
 
@@ -831,9 +835,9 @@ def agent_status():
             <div class="section-title">Journal Entry</div>
             <div id="journal-content" class="journal">{'<pre style="margin: 0; font-family: inherit; white-space: pre-wrap;">' + journal_text + '</pre>' if journal_text else '<div class="not-available">No journal entries yet</div>'}</div>
             {f'''<div class="journal-nav">
-                <button id="prev-btn" onclick="navigateJournal(-1)">◀ prev</button>
+                <button id="prev-btn" onclick="navigateJournal(1)">◀ prev</button>
                 <span id="journal-date">{journal_date if journal_date else ""}</span>
-                <button id="next-btn" onclick="navigateJournal(1)">next ▶</button>
+                <button id="next-btn" onclick="navigateJournal(-1)">next ▶</button>
             </div>''' if journal_dates else ''}
         </div>
 

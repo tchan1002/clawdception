@@ -255,8 +255,8 @@
                 </div>
                 <div class="param-card">
                     <div class="param-name">pH</div>
-                    <div class="param-value status-green">6.65</div>
-                    <div class="param-note">Probe recalibrated today; reading now reflects corrected formula. Fresh baseline established post-calibration.</div>
+                    <div class="param-value status-green">6.67</div>
+                    <div class="param-note"></div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">TDS</div>
@@ -268,14 +268,14 @@
 
         <div class="section">
             <div class="section-title">Reasoning</div>
-            <div class="reasoning">pH probe calibration completed today corrects systematic error; current 6.65 reading is reliable and well within target. Tank parameters stable post-10% top-off; TDS 24-hour drop reflects dilution, not a crisis signal.</div>
+            <div class="reasoning">Post-calibration pH reading of 6.67 is now reliable and sits comfortably in target range; the 24-hour downward drift is consistent with a top-off water change diluting TDS and normalizing after probe correction. All three parameters are stable and well within safe bounds for the cycle stage.</div>
         </div>
 
         <div class="section">
             <div class="section-title">Actions</div>
             <div class="actions">
                 <ul>
-                    <li><strong>water_test</strong> [soon] — Cross-check pH 6.65 sensor reading against API test kit within 24 hours to establish new calibration offset and confirm formula fix.</li><li><strong>observe</strong> [routine] — Monitor pH stability over next 48 hours post-calibration; early drift would suggest calibration needs refinement.</li><li><strong>none</strong> [routine] — </li>
+                    <li><strong>observe</strong> [routine] — Monitor pH stability post-calibration over next 48–72 hours; compare to API test kit results to establish fresh offset if needed</li><li><strong>water_test</strong> [routine] — Manual API test kit check on pH to validate probe calibration and establish ground truth offset</li><li><strong>observe</strong> [routine] — Shrimp behavior and coloration in next photo — confirm ongoing comfort and no post-loss stress signs</li><li><strong>none</strong> [routine] — </li>
                 </ul>
             </div>
         </div>
@@ -366,15 +366,15 @@ I am waiting for that pH probe recalibration, but not holding my breath.
 - Continue monitoring pH without intervention — current reading of 6.45 is well within target range and post-top-off stabilization is normal
 </pre></div>
             <div class="journal-nav">
-                <button id="prev-btn" onclick="navigateJournal(-1)">◀ prev</button>
+                <button id="prev-btn" onclick="navigateJournal(1)">◀ prev</button>
                 <span id="journal-date">2026-04-26</span>
-                <button id="next-btn" onclick="navigateJournal(1)">next ▶</button>
+                <button id="next-btn" onclick="navigateJournal(-1)">next ▶</button>
             </div>
         </div>
 
         <div class="section">
             <div class="section-title">Monitor Log (Last 10)</div>
-            <div class="monitor-log"><div>[2026-04-26T15:15] Day 36 | skipped (stable) | T=76.44°F pH=9.07 TDS=209.0ppm</div><div>[shrimp-alert] 🚨 ph is above danger threshold: 9.07 (above 8.0)</div><div>[call-toby] Telegram sent (critical): ph is above danger threshold: 9.07 (above 8.0)</div><div>[2026-04-26T15:30] Day 36 | risk=green | [manual event since last check ] | T=77.0°F pH=6.79 TDS=202.0ppm | The pH probe calibration today finally corrected months of inverted readings—we </div><div>[call-toby] Telegram sent (info): The pH probe calibration today finally corrected months of inverted readings—we can now trust what we see. All three parameters sit comfortably in target range post-top-off; the 46ppm TDS drop reflects the 10% water change, and the 1.8°F temperature rise is gentle and normal. Shrimp remain visibly healthy and present.</div><div></div><div>• 🧪 Run a water test (ammonia / nitrite / pH) — Next manual API test kit check in 3–4 days to confirm pH probe offset is stable post-calibration and to track nitrate cycle trajectory</div><div>• 👀 Observe shrimp behavior — Monitor duckweed surface coverage and shrimp activity over next 48hr; dense plant cover is beneficial for nutrient cycling but assess gas exchange if coverage increases further</div><div>[2026-04-26T15:45] Day 36 | risk=green | [manual event since last check ] | T=76.32°F pH=6.63 TDS=203.0ppm | pH probe calibration completed today after discovery of systematic inversion in </div><div>[2026-04-26T16:00] Day 36 | risk=green | [manual event since last check ] | T=76.32°F pH=6.65 TDS=203.0ppm | pH probe calibration completed today corrects systematic error; current 6.65 rea</div></div>
+            <div class="monitor-log"><div>[shrimp-alert] 🚨 ph is above danger threshold: 9.07 (above 8.0)</div><div>[call-toby] Telegram sent (critical): ph is above danger threshold: 9.07 (above 8.0)</div><div>[2026-04-26T15:30] Day 36 | risk=green | [manual event since last check ] | T=77.0°F pH=6.79 TDS=202.0ppm | The pH probe calibration today finally corrected months of inverted readings—we </div><div>[call-toby] Telegram sent (info): The pH probe calibration today finally corrected months of inverted readings—we can now trust what we see. All three parameters sit comfortably in target range post-top-off; the 46ppm TDS drop reflects the 10% water change, and the 1.8°F temperature rise is gentle and normal. Shrimp remain visibly healthy and present.</div><div></div><div>• 🧪 Run a water test (ammonia / nitrite / pH) — Next manual API test kit check in 3–4 days to confirm pH probe offset is stable post-calibration and to track nitrate cycle trajectory</div><div>• 👀 Observe shrimp behavior — Monitor duckweed surface coverage and shrimp activity over next 48hr; dense plant cover is beneficial for nutrient cycling but assess gas exchange if coverage increases further</div><div>[2026-04-26T15:45] Day 36 | risk=green | [manual event since last check ] | T=76.32°F pH=6.63 TDS=203.0ppm | pH probe calibration completed today after discovery of systematic inversion in </div><div>[2026-04-26T16:00] Day 36 | risk=green | [manual event since last check ] | T=76.32°F pH=6.65 TDS=203.0ppm | pH probe calibration completed today corrects systematic error; current 6.65 rea</div><div>[2026-04-26T16:15] Day 36 | risk=green | [manual event since last check ] | T=76.32°F pH=6.67 TDS=203.0ppm | Post-calibration pH reading of 6.67 is now reliable and sits comfortably in targ</div></div>
         </div>
     </div>
 
