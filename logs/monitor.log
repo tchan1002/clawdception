@@ -3408,3 +3408,9 @@ Water chemistry is stable and healthy across all three parameters; nitrate at 80
 • 📸 Send a photo of the tank — Last photo was 17hr ago; tank view would confirm shrimp visibility and duckweed status for daily log.
 [2026-04-26T07:30] Day 36 | risk=yellow | [ph changed 0.5 in last hour] | T=75.87°F pH=6.32 TDS=240.0ppm | The pH drop from 6.83 to 6.32 in one hour post-water-change is notable but expla
 [2026-04-26T07:45] Day 36 | risk=yellow | [ph changed 0.44 in last hour] | T=75.54°F pH=6.35 TDS=241.0ppm | The pH drop is a direct consequence of the 10% top-off—fresh water typically shi
+[2026-04-26T08:00] Day 36 | risk=green | [ph changed 0.41 in last hour] | T=75.87°F pH=6.38 TDS=240.0ppm | pH dip is expected post-water-change signature, not a crisis—fresh water typical
+[call-toby] Telegram sent (info): ✅ All clear — T=75.87°F pH=6.38 TDS=240.0ppm
+pH dip is expected post-water-change signature, not a crisis—fresh water typically carries lower pH than established tank water, and the 10% top-off confirms the timing. Ammonia and nitrite remain zero, nitrate is stable at 80ppm, and temperature is holding steady.
+[2026-04-26T08:15] Day 36 | skipped (stable) | T=76.1°F pH=6.39 TDS=238.0ppm
+[2026-04-26T08:30] Day 36 | skipped (stable) | T=76.1°F pH=6.42 TDS=240.0ppm
+[2026-04-26T08:45] Day 36 | skipped (stable) | T=76.1°F pH=6.44 TDS=240.0ppm
