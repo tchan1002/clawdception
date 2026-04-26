@@ -3361,3 +3361,10 @@ Water chemistry is stable and healthy across all three parameters; nitrate at 80
 [2026-04-25T21:15] Day 35 | risk=yellow | [manual event since last check ] | T=74.75°F pH=6.63 TDS=240.0ppm | Water chemistry is solid and within target—ammonia and nitrite both zero, pH sta
 [2026-04-25T21:30] Day 35 | risk=green | [manual event since last check ] | T=74.75°F pH=6.63 TDS=239.0ppm | Water chemistry is stable and within target across all parameters; the manual te
 [2026-04-25T21:45] Day 35 | risk=green | [manual event since last check ] | T=74.86°F pH=6.66 TDS=250.0ppm | Water chemistry stable and within target; nitrogen cycle established (ammonia 0,
+[2026-04-25T22:00] Day 35 | risk=green | [manual event since last check ] | T=74.86°F pH=6.69 TDS=253.0ppm | Water parameters are stable and within safe ranges post-water-test. Nitrate at 8
+[2026-04-25T22:15] Day 35 | risk=green | [manual event since last check ] | T=74.86°F pH=6.71 TDS=252.0ppm | All parameters nominal; cycle is progressing cleanly (ammonia 0, nitrite 0, nitr
+[call-toby] Telegram sent (info): All parameters nominal; cycle is progressing cleanly (ammonia 0, nitrite 0, nitrate 80). TDS rise is expected nitrogen cycle signature and still safe. Survivors are visibly healthy with bold coloration; colony is stabilizing post-loss.
+
+• 📸 Send a photo of the tank
+[2026-04-25T22:30] Day 35 | risk=green | [manual event since last check ] | T=74.86°F pH=6.7 TDS=250.0ppm | All three parameters in or very close to target; ammonia and nitrite both zero d
+[2026-04-25T22:45] Day 35 | risk=green | [manual event since last check ] | T=74.97°F pH=6.73 TDS=251.0ppm | Colony is 12 days past introduction with one confirmed loss during early acclima
