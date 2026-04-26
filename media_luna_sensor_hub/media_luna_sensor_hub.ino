@@ -38,17 +38,18 @@ const unsigned long READ_INTERVAL = 900000;
 #define TDS_PIN      35
 
 // ============================================================
-// CALIBRATION — Mar 30, 2026
-//   pH 7.0 buffer → 1.37V avg
-//   pH 4.0 buffer → 1.88V avg
-//   Offset: -1.10 (matched to API kit reading of 6.4)
+// CALIBRATION — Apr 26, 2026
+//   pH 7.0 buffer → 1.374V avg (stable readings)
+//   pH 4.0 buffer → 1.901V avg (stable readings)
+//   Offset: 0.0 (reset; re-establish vs API kit on tank water)
+//   Formula: higher voltage = lower pH (Nernst, DFRobot V2)
 //   Temp: DS18B20 factory spec ±0.5°C, no offset applied
 //   TDS: DFRobot formula, no offset needed
 // ============================================================
 
-#define PH_NEUTRAL_V    1.37
-#define PH_ACID_V       1.88
-#define PH_OFFSET       -1.10
+#define PH_NEUTRAL_V    1.374
+#define PH_ACID_V       1.901
+#define PH_OFFSET       0.0
 
 #define TDS_VREF        3.3
 #define TDS_TEMP_COEFF  0.02
@@ -180,7 +181,7 @@ float readPH(float tempC) {
     dbg_ph_voltage = voltage;
     
     float slope = (7.0 - 4.0) / (PH_NEUTRAL_V - PH_ACID_V);
-    float ph = 7.0 + (PH_NEUTRAL_V - voltage) * slope;
+    float ph = 7.0 + (voltage - PH_NEUTRAL_V) * slope;
     
     // Temperature compensation
     ph += (tempC - 25.0) * 0.003;
