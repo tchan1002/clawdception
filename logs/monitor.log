@@ -3400,3 +3400,11 @@ Water chemistry is stable and healthy across all three parameters; nitrate at 80
 [2026-04-26T06:15] Day 36 | skipped (stable) | T=75.31°F pH=6.82 TDS=253.0ppm
 [2026-04-26T06:30] Day 36 | skipped (stable) | T=75.54°F pH=6.79 TDS=252.0ppm
 [2026-04-26T06:45] Day 36 | skipped (stable) | T=75.65°F pH=6.82 TDS=251.0ppm
+[2026-04-26T07:00] Day 36 | skipped (stable) | T=75.76°F pH=6.79 TDS=250.0ppm
+[2026-04-26T07:15] Day 36 | risk=green | [manual event since last check ] | T=75.87°F pH=6.79 TDS=249.0ppm | The 10% top-off water change has settled cleanly — all parameters remain within 
+[call-toby] Telegram sent (info): The 10% top-off water change has settled cleanly — all parameters remain within target and TDS has risen naturally due to water loss and evaporation, not accumulation. Colony is stable 23 days post-introduction with acclimation mostly behind them.
+
+• 👀 Observe shrimp behavior — Behavior, coloration, feeding response. Any signs of lethargy or stress (shrimp are resilient post-acclimation, but worth monitoring after recent loss).
+• 📸 Send a photo of the tank — Last photo was 17hr ago; tank view would confirm shrimp visibility and duckweed status for daily log.
+[2026-04-26T07:30] Day 36 | risk=yellow | [ph changed 0.5 in last hour] | T=75.87°F pH=6.32 TDS=240.0ppm | The pH drop from 6.83 to 6.32 in one hour post-water-change is notable but expla
+[2026-04-26T07:45] Day 36 | risk=yellow | [ph changed 0.44 in last hour] | T=75.54°F pH=6.35 TDS=241.0ppm | The pH drop is a direct consequence of the 10% top-off—fresh water typically shi

@@ -2776,3 +2776,6 @@ A vivid red cherry shrimp is caught mid-foreground, posed low against the dark s
 [telegram-listener] Processed 2 message(s), offset now 236833123
 [telegram-listener] getUpdates failed: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=20)
 [telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[telegram-listener] 'added 10 percent to restore water levels' → water_change
+[call-toby] Telegram sent (info): Logged as water change: Top-off water change to restore water levels — 10% added. ✓
+[telegram-listener] Processed 1 message(s), offset now 236833124
