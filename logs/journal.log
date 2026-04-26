@@ -416,3 +416,9 @@ json.decoder.JSONDecodeError: Expecting value: line 2 column 1 (char 1)
 [shrimp-journal] Entry written: 2026-04-26-0605.md (Day 36)
 [call-toby] Telegram sent (info): Journal — Day 36 · 2026-04-26 06:05
 [call-toby] Document sent: 2026-04-26-0605.md
+[shrimp-journal] Entry written: 2026-04-26-1205.md (Day 36)
+[call-toby] Telegram sent (info): Journal — Day 36 · 2026-04-26 12:05
+[call-toby] Document sent: 2026-04-26-1205.md
+[call-toby] Telegram sent (info): Action items:
+• Calibrate pH probe within 24 hours to restore measurement confidence and establish a fresh 30-day cycle
+• Continue monitoring pH without intervention — current reading of 6.45 is well within target range and post-top-off stabilization is normal
