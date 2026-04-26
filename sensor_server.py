@@ -1425,7 +1425,12 @@ def export_dashboard():
 
 @app.route("/export/agent", methods=["GET"])
 def export_agent():
-    return agent_status()
+    html = agent_status()
+    html = html.replace('<a href="/">Dashboard</a>', '<a href="index.html">Dashboard</a>')
+    html = html.replace('<a href="/agent" class="active">Agent</a>', '<a href="agent.html" class="active">Agent</a>')
+    html = html.replace('<a href="/water-test">Water Test</a>', '')
+    html = html.replace('<a href="/log-event">Log Event</a>', '')
+    return html, 200, {"Content-Type": "text/html; charset=utf-8"}
 
 
 if __name__ == "__main__":
