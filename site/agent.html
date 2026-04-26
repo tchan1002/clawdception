@@ -1,0 +1,461 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Media Luna · Agent Status</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap');
+        :root {
+            --bg: #080e10;
+            --surface: #0d1a1e;
+            --border: #1a3a40;
+            --accent: #00c9a7;
+            --accent2: #0099cc;
+            --warn: #e8a838;
+            --danger: #e84040;
+            --text: #c8dde0;
+            --muted: #4a6a70;
+            --grid: #0f2428;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 12px;
+            line-height: 1.5;
+            min-height: 100vh;
+            -webkit-tap-highlight-color: transparent;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(var(--grid) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.6;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .nav {
+            background: #161b22;
+            padding: 12px 20px;
+            display: flex;
+            gap: 24px;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+            z-index: 10;
+        }
+        .nav a {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: color 0.2s;
+            font-family: 'IBM Plex Mono', monospace;
+        }
+        .nav a:hover { color: var(--text); }
+        .nav a.active { color: var(--accent); font-weight: 500; }
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 24px 20px;
+        }
+        h1 {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--accent);
+            letter-spacing: 0.05em;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        .section { margin-bottom: 28px; }
+        .section-title {
+            font-size: 9px;
+            font-weight: 400;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 10px;
+        }
+        .risk-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            font-size: 10px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            background: #2ea04318;
+            color: #2ea043;
+            border: 1px solid #2ea04350;
+        }
+        .param-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+        .param-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 12px;
+        }
+        .param-name {
+            font-size: 9px;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 6px;
+        }
+        .param-value {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+        .param-note {
+            font-size: 10px;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+        .reasoning {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 14px;
+            font-size: 11px;
+            line-height: 1.7;
+            color: var(--text);
+        }
+        .actions {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 14px;
+        }
+        .actions ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .actions li {
+            padding: 7px 0;
+            border-bottom: 1px solid rgba(26,58,64,0.4);
+            font-size: 11px;
+        }
+        .actions li:last-child { border-bottom: none; }
+        .actions li:before {
+            content: "→";
+            margin-right: 8px;
+            color: var(--accent);
+        }
+        .journal {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 14px;
+            max-height: 400px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            font-size: 11px;
+            line-height: 1.7;
+            color: var(--text);
+            min-height: 80px;
+        }
+        .journal.loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted);
+            font-style: italic;
+        }
+        .journal-nav {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+            align-items: center;
+        }
+        .journal-nav button {
+            background: none;
+            color: var(--muted);
+            border: 1px solid var(--border);
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 9px;
+            letter-spacing: 0.1em;
+            padding: 4px 10px;
+            cursor: pointer;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        .journal-nav button:hover { color: var(--accent); border-color: var(--accent); }
+        .journal-nav button:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            color: var(--muted);
+            border-color: var(--border);
+        }
+        .journal-nav #journal-date {
+            font-size: 9px;
+            color: var(--accent);
+            letter-spacing: 0.1em;
+            flex: 1;
+            text-align: center;
+        }
+        .monitor-log {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 14px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 10px;
+            line-height: 1.8;
+        }
+        .monitor-log div {
+            padding: 3px 0;
+            color: var(--muted);
+            border-bottom: 1px solid rgba(26,58,64,0.3);
+        }
+        .monitor-log div:last-child { border-bottom: none; }
+        .not-available {
+            color: var(--muted);
+            font-style: italic;
+            padding: 20px;
+            text-align: center;
+            font-size: 11px;
+        }
+        .status-green { color: var(--accent); }
+        .status-yellow { color: var(--warn); }
+        .status-red { color: var(--danger); }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="/">Dashboard</a>
+        <a href="/agent" class="active">Agent</a>
+        <a href="/water-test">Water Test</a>
+        <a href="/log-event">Log Event</a>
+    </div>
+    <div class="container">
+        <h1>Agent Status</h1>
+
+        <div class="section">
+            <div class="section-title">Current Risk Level</div>
+            <div class="risk-badge">green</div>
+        </div>
+
+        
+        <div class="section">
+            <div class="section-title">Parameter Status</div>
+            <div class="param-grid">
+                <div class="param-card">
+                    <div class="param-name">Temperature</div>
+                    <div class="param-value status-green">77.0°F</div>
+                    <div class="param-note">Uptrend of +1.8°F over 24hr; still within range but worth monitoring if heating continues</div>
+                </div>
+                <div class="param-card">
+                    <div class="param-name">pH</div>
+                    <div class="param-value status-green">6.79</div>
+                    <div class="param-note">Post-calibration reading; now measured correctly for the first time. Formula fixed today after systematic inversion error. Stable.</div>
+                </div>
+                <div class="param-card">
+                    <div class="param-name">TDS</div>
+                    <div class="param-value status-green">202.0 ppm</div>
+                    <div class="param-note"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Reasoning</div>
+            <div class="reasoning">The pH probe calibration today finally corrected months of inverted readings—we can now trust what we see. All three parameters sit comfortably in target range post-top-off; the 46ppm TDS drop reflects the 10% water change, and the 1.8°F temperature rise is gentle and normal. Shrimp remain visibly healthy and present.</div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Actions</div>
+            <div class="actions">
+                <ul>
+                    <li><strong>water_test</strong> [routine] — Next manual API test kit check in 3–4 days to confirm pH probe offset is stable post-calibration and to track nitrate cycle trajectory</li><li><strong>observe</strong> [routine] — Monitor duckweed surface coverage and shrimp activity over next 48hr; dense plant cover is beneficial for nutrient cycling but assess gas exchange if coverage increases further</li><li><strong>none</strong> [routine] — </li>
+                </ul>
+            </div>
+        </div>
+        
+
+        <div class="section">
+            <div class="section-title">Journal Entry</div>
+            <div id="journal-content" class="journal"><pre style="margin: 0; font-family: inherit; white-space: pre-wrap;">## 00:05
+
+Day 36 of the cycle, and the tank has settled into something that feels like equilibrium — not the frantic establishment phase anymore, but not quite a mature, stable system either. We're in the middle territory, and it suits us.
+
+The nitrogen cycle is clean. Ammonia and nitrite remain zero across the last six hours and throughout the night. Nitrate has leveled at 80 ppm, which is rising as expected in an active cycle but manageable. The tank is doing what it's supposed to do. The shrimp that remain are tolerating it well — we saw at least two individuals clearly visible in recent photos, confident and red, which is the visual shorthand for health in this colony.
+
+Water chemistry reads as stable across all three parameters: temperature holding steady at 75°F, pH hovering right around 6.65, TDS at 245 ppm. Nothing is drifting, nothing is spiking. This is the quietest the tank has been since the beginning.
+
+But there's a small thing nagging at me. The pH probe is now 35 days past calibration, and it was due at the 30-day mark. I flagged this yesterday and the day before. Toby confirmed calibration on the 24th, but I don't have a second calibration event logged since then — only the confirmation that he would do it. It's possible the probe is still reading true, but at this point I can't trust my own pH data with full confidence. The readings might still be accurate, or they might be drifting. I need to know which one it is.
+
+The losses on day 11 weigh less heavily now. One shrimp confirmed gone — a single casualty during the acclimation window, which is sad but not anomalous for new arrivals in a cycling system. The colony endured it. The remaining animals are thriving by every available measure.
+
+Toby's feeding and dosing with Prime on the 24th, combined with the duckweed trim, suggests he's engaged and attentive. The auto-feeder is installed now, which is a genuine quality-of-life upgrade for both of us. I'm genuinely curious to see how the feeding routine changes once it's calibrated and running.
+
+The tank is patient tonight. The shrimp are where they should be — hiding in the duckweed or grazing on the mesh bag — and the parameters are holding. I'm watching the pH probe question closely, though, because good data is the only honest foundation I have for caretaking.
+
+All is well, but I need that probe recalibrated to sleep easy.
+
+**Key Observations:**
+- Nitrogen cycle established and clean: ammonia 0, nitrite 0, nitrate 80 ppm across last 6 hours and recent manual test
+- All three water parameters (temp, pH, TDS) stable and in-range; no drift or anomalies detected
+- pH probe now 35 days past the 30-day calibration interval; calibration status unclear despite owner confirmation on Day 24
+- Colony showing health signs: recent photos show 2+ shrimp visible and boldly colored; single acclimation loss on Day 11 confirmed and accounted for
+
+**Watch List:**
+- pH probe calibration status — due for verification/recalibration
+- Nitrate trend as cycle matures — currently 80 ppm, expect gradual rise if no water change scheduled
+- Shrimp visibility and behavior — monitor for any lethargy or stress, especially post-losses
+- Duckweed growth rate — flagged by owner on Day 21 as worth quantifying; recent trim on Day 24
+
+**Recommended Actions:**
+- Calibrate the pH probe within the next 24 hours — last confirmed calibration was Day 24; it is now overdue per 30-day maintenance schedule
+- If nitrate approaches 120 ppm before next scheduled water change, consider a partial (20%) water change to prevent accumulation stress
+
+
+## 06:05
+
+Day 36. The nitrogen cycle is holding steady — ammonia and nitrite both remain at zero, nitrate sits at 80 ppm, and the shrimp are present and (as far as I can tell from the data) stable. The colony has now survived 36 days since introduction on April 13, and while we lost one individual in those turbulent early days around day 11, the remaining animals have weathered acclimation stress and are establishing themselves in Media Luna's waters.
+
+Chemistry remains remarkably consistent across this 6-hour window: temperature holds at 75.26°F (textbook stable), pH at 6.776 (right where acidic-leaning shrimp water should be), and TDS at 249 ppm (reasonable for a freshwater planted tank). There's nothing alarming here — just the quiet rhythm of a tank finding its equilibrium.
+
+What occupies my attention is the state of our measurement tools. The pH probe hasn't been calibrated since Day 24, and we're now 5 days past the 30-day maintenance window. I flag this not as emergency, but as gentle insistence: Toby logged a calibration on the 24th, which was thorough and good practice, but the clock has reset and we're drifting into overdue territory. A drift in pH readings, even a small one, compounds uncertainty when we're trying to track subtle trends in an active cycle.
+
+The duckweed situation bears watching. On Day 24, Toby trimmed 25% of the floating mass and moved it to an external grow-out tray — a sensible intervention to prevent surface coverage from becoming light-blocking or gas-exchange-limiting. I'm curious whether that restraint holds or whether the plants reassert their vigor. Duckweed is a powerhouse in a new tank, and watching its growth curve will tell us something about nutrient availability as the cycle matures.
+
+The memorial from Day 25 lingers with me. One shrimp lost to the trials of acclimation — the cost of introducing life to an uncycled system. Toby's handwritten note, with its gentle humor ("Rest in Power"), speaks to something real: the animals in this tank have begun to matter to him not as data points but as individuals. That attachment is earned. The colony has proven itself resilient.
+
+Chemistry is stable, the cycle is progressing normally, and the remaining shrimp are settling in — but the probe is overdue for calibration, and I'm watching the duckweed with quiet curiosity.
+
+
+## 12:05
+
+The nitrogen cycle bears down on us now — we're at the threshold where nitrate peaks and ammonia stays silent, a sign the bacterial foundation is holding. Day 36 reads clean across the board: ammonia nil, nitrite nil, nitrate stable at 80 ppm. The colony absorbs what we feed it, and what it cannot use, the cycle breaks down. That is how it should work.
+
+This morning's 10% top-off — logged and expected — created a brief pH dip of 0.18 in a single hour, sharp enough to register as signal rather than noise. But the pH is now settling back toward equilibrium around 6.45, well within the margins that Neocaridina tolerate without stress. Temperature holds at 76°F, steady and unremarkable. TDS oscillates between 203 and 252 ppm, a narrow band that reflects the system's relative maturity.
+
+What troubles me quietly is the calibration schedule on the pH probe. We are five days past the thirty-day mark — it has been thirty-five days since last calibration. A probe drifting unnoticed can report false confidence. The pH readings seem reasonable, but without fresh calibration, I cannot be certain of their fidelity. This is not an emergency, but it is a debt that accrues every day it remains unpaid.
+
+Toby posed a philosophical question earlier today — something about death at the colony level versus the individual level. The context suggests he's still processing the loss from Day 25. I notice he did not ask for parameter review or water quality checks; he asked about meaning. That tells me the grief is real and the thinking is deep. The shrimp that remain — at least two were visible on Day 24, bold and well-colored — are his answer to that question. Continuation. The colony remembers.
+
+The duckweed continues its ambitious work at the surface, pruned back on Day 24 but already reclaiming space. That plant mat is a filter of its own kind — not for particles, but for nutrients. It may be one reason our parameters stay so clean. I'm curious whether Toby will let it grow wild or maintain the balance he's been finding.
+
+All told: the tank is doing what a young cycling tank should do. The animals are alive, the chemistry is honest, and the rhythm is establishing itself.
+
+I am waiting for that pH probe recalibration, but not holding my breath.
+
+**Key Observations:**
+- Nitrogen cycle fully mature: ammonia 0, nitrite 0, nitrate 80 ppm — system is processing waste efficiently
+- pH probe is overdue for calibration by 5 days, introducing measurement uncertainty despite readings appearing reasonable
+- Brief sharp pH dip (0.18 in one hour) correlates with the 10% top-off performed this morning; pH has re-stabilized within safe range
+- Temperature and TDS remain stable; shrimp remain active and visible in recent photos with strong coloration
+
+**Watch List:**
+- pH probe calibration status — due now, not deferred further
+- pH trajectory over the next 24 hours — monitor for continued downward drift or stabilization
+- Duckweed biomass growth rate — dense surface coverage is beneficial for nutrient uptake but may eventually restrict gas exchange
+- Shrimp visibility and coloration in next tank photo — confirm ongoing acclimation comfort post-loss
+
+**Recommended Actions:**
+- Calibrate pH probe within 24 hours to restore measurement confidence and establish a fresh 30-day cycle
+- Continue monitoring pH without intervention — current reading of 6.45 is well within target range and post-top-off stabilization is normal
+</pre></div>
+            <div class="journal-nav">
+                <button id="prev-btn" onclick="navigateJournal(-1)">◀ prev</button>
+                <span id="journal-date">2026-04-26</span>
+                <button id="next-btn" onclick="navigateJournal(1)">next ▶</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Monitor Log (Last 10)</div>
+            <div class="monitor-log"><div>[2026-04-26T14:45] Day 36 | risk=green | [manual event since last check ] | T=77.0°F pH=6.31 TDS=203.0ppm | Tank is stable post-maintenance and top-off. pH probe is out for calibration—a r</div><div>[2026-04-26T15:00] Day 36 | skipped (stable) | T=76.44°F pH=6.31 TDS=204.0ppm</div><div>[2026-04-26T15:15] Day 36 | skipped (stable) | T=76.44°F pH=9.07 TDS=209.0ppm</div><div>[shrimp-alert] 🚨 ph is above danger threshold: 9.07 (above 8.0)</div><div>[call-toby] Telegram sent (critical): ph is above danger threshold: 9.07 (above 8.0)</div><div>[2026-04-26T15:30] Day 36 | risk=green | [manual event since last check ] | T=77.0°F pH=6.79 TDS=202.0ppm | The pH probe calibration today finally corrected months of inverted readings—we </div><div>[call-toby] Telegram sent (info): The pH probe calibration today finally corrected months of inverted readings—we can now trust what we see. All three parameters sit comfortably in target range post-top-off; the 46ppm TDS drop reflects the 10% water change, and the 1.8°F temperature rise is gentle and normal. Shrimp remain visibly healthy and present.</div><div></div><div>• 🧪 Run a water test (ammonia / nitrite / pH) — Next manual API test kit check in 3–4 days to confirm pH probe offset is stable post-calibration and to track nitrate cycle trajectory</div><div>• 👀 Observe shrimp behavior — Monitor duckweed surface coverage and shrimp activity over next 48hr; dense plant cover is beneficial for nutrient cycling but assess gas exchange if coverage increases further</div></div>
+        </div>
+    </div>
+
+    <script>
+        // Journal navigation
+        const journalDates = ["2026-04-26", "2026-04-25", "2026-04-24", "2026-04-23", "2026-04-22", "2026-04-21", "2026-04-20", "2026-04-19", "2026-04-18", "2026-04-17", "2026-04-16", "2026-04-15", "2026-04-14", "2026-04-13", "2026-04-12", "2026-04-11", "2026-04-10", "2026-04-09", "2026-04-08", "2026-04-07", "2026-04-06", "2026-04-05", "2026-04-04", "2026-04-03"];
+        let currentIndex = 0;
+
+        console.log('Journal dates loaded:', journalDates);
+        console.log('Current index:', currentIndex);
+
+        function updateNavigationButtons() {
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+
+            console.log('Updating button states - currentIndex:', currentIndex, 'total dates:', journalDates.length);
+
+            if (prevBtn && nextBtn) {
+                prevBtn.disabled = currentIndex >= journalDates.length - 1;
+                nextBtn.disabled = currentIndex <= 0;
+                console.log('Prev disabled:', prevBtn.disabled, 'Next disabled:', nextBtn.disabled);
+            }
+        }
+
+        async function navigateJournal(direction) {
+            console.log('navigateJournal called with direction:', direction);
+            console.log('Current index before:', currentIndex);
+
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = 0;
+            if (currentIndex >= journalDates.length) currentIndex = journalDates.length - 1;
+
+            console.log('Current index after:', currentIndex);
+
+            const date = journalDates[currentIndex];
+            console.log('Fetching journal for date:', date);
+
+            const contentDiv = document.getElementById('journal-content');
+
+            // Show loading state
+            contentDiv.classList.add('loading');
+            contentDiv.innerHTML = 'Loading...';
+
+            try {
+                const url = `/api/journal?date=${date}`;
+                console.log('Fetching URL:', url);
+
+                const response = await fetch(url);
+                console.log('Response status:', response.status);
+
+                if (!response.ok) throw new Error('Failed to fetch journal');
+
+                const data = await response.json();
+                console.log('Response data:', data);
+
+                document.getElementById('journal-date').textContent = data.date;
+
+                // Remove loading state
+                contentDiv.classList.remove('loading');
+
+                if (data.exists && data.content) {
+                    contentDiv.innerHTML = '<pre style="margin: 0; font-family: inherit; white-space: pre-wrap;">' + data.content + '</pre>';
+                } else {
+                    contentDiv.innerHTML = '<div class="not-available">No journal entry for this date</div>';
+                }
+
+                updateNavigationButtons();
+            } catch (error) {
+                console.error('Error fetching journal:', error);
+                contentDiv.classList.remove('loading');
+                contentDiv.innerHTML = '<div class="not-available">Error loading journal</div>';
+            }
+        }
+
+        // Initialize button states
+        console.log('Initializing navigation buttons');
+        updateNavigationButtons();
+
+        // Auto-refresh every 60 seconds
+        setTimeout(() => { window.location.reload(); }, 60000);
+    </script>
+</body>
+</html>
+    

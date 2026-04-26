@@ -1364,6 +1364,67 @@ def get_snapshot():
     return send_file(str(latest), mimetype="image/jpeg")
 
 
+# --- Static snapshot export for GitHub Pages ---
+@app.route("/export/dashboard", methods=["GET"])
+def export_dashboard():
+    cutoff = (datetime.now() - timedelta(hours=24)).isoformat()
+    conn = get_db()
+    sensors = [dict(r) for r in conn.execute(
+        "SELECT * FROM sensor_readings WHERE timestamp > ? ORDER BY timestamp DESC LIMIT 500",
+        (cutoff,)
+    ).fetchall()]
+
+    events_rows = conn.execute(
+        "SELECT * FROM manual_events ORDER BY timestamp DESC LIMIT 50"
+    ).fetchall()
+    events = []
+    for r in events_rows:
+        row = dict(r)
+        row["data"] = json.loads(row["data"]) if row.get("data") else {}
+        events.append(row)
+
+    wt_row = conn.execute(
+        "SELECT * FROM manual_events WHERE event_type = 'water_test' ORDER BY timestamp DESC LIMIT 1"
+    ).fetchone()
+    water_test = None
+    if wt_row:
+        water_test = dict(wt_row)
+        water_test["data"] = json.loads(water_test["data"]) if water_test.get("data") else {}
+    conn.close()
+
+    history_dir = Path(__file__).parent / "agent_state_history"
+    agent_dates = []
+    agent_content = {}
+    if history_dir.exists():
+        files = sorted(history_dir.glob("????-??-??-????.md"), reverse=True)
+        seen = set()
+        for f in files:
+            date = f.stem[:10]
+            if date not in seen:
+                seen.add(date)
+                agent_dates.append(date)
+                agent_content[date] = f.read_text()
+
+    static_data = {
+        "sensors": sensors,
+        "events": events,
+        "waterTest": water_test,
+        "agentStateDates": agent_dates,
+        "agentStateContent": agent_content,
+        "snapshotTime": datetime.now().isoformat(),
+    }
+
+    html = (Path(__file__).parent / "media_luna_dashboard.html").read_text()
+    injection = f"window.STATIC_DATA = {json.dumps(static_data)};\n\n"
+    html = html.replace("const API_URL = '/api/sensors';", injection + "const API_URL = '/api/sensors';")
+    return html, 200, {"Content-Type": "text/html; charset=utf-8"}
+
+
+@app.route("/export/agent", methods=["GET"])
+def export_agent():
+    return agent_status()
+
+
 if __name__ == "__main__":
     init_db()
     # 0.0.0.0 makes it accessible from ESP32 on same WiFi network

@@ -143,6 +143,7 @@
   }
 
   .dot.offline { background: var(--danger); box-shadow: 0 0 8px var(--danger); animation: none; }
+  .dot.snapshot { background: var(--warn); box-shadow: 0 0 8px var(--warn); animation: none; }
 
   @keyframes pulse {
     0%, 100% { opacity: 1; }
@@ -1015,12 +1016,21 @@ function render(data) {
   document.getElementById('logCount').textContent = `${window24.length} readings / 24 h`;
 
   // Last update
-  document.getElementById('lastUpdate').textContent =
-    'LAST UPDATE ' + new Date().toLocaleTimeString();
+  document.getElementById('lastUpdate').textContent = window.STATIC_DATA
+    ? 'SNAPSHOT ' + new Date(window.STATIC_DATA.snapshotTime).toLocaleTimeString()
+    : 'LAST UPDATE ' + new Date().toLocaleTimeString();
 }
 
 // ─── FETCH LIVE ────────────────────────────────────────
 async function poll() {
+  if (window.STATIC_DATA) {
+    readings = window.STATIC_DATA.sensors;
+    document.getElementById('statusDot').className = 'dot snapshot';
+    document.getElementById('statusText').textContent = 'SNAPSHOT';
+    document.getElementById('demoNotice').style.display = 'none';
+    render(readings);
+    return;
+  }
   try {
     const res = await fetch(`${API_URL}?limit=500`, { signal: AbortSignal.timeout(5000) });
     if (!res.ok) throw new Error();
@@ -1063,6 +1073,11 @@ function toggleEvents() {
 }
 
 async function fetchEvents() {
+  if (window.STATIC_DATA) {
+    renderEvents(window.STATIC_DATA.events);
+    if (window.STATIC_DATA.waterTest) updateCyclePanel(window.STATIC_DATA.waterTest);
+    return;
+  }
   try {
     const [eventsRes, waterTestRes] = await Promise.all([
       fetch('/api/events?limit=50'),
@@ -1302,6 +1317,19 @@ let agentStateDates = [];
 let agentStateIndex = 0;
 
 async function initAgentStateHistory() {
+  if (window.STATIC_DATA) {
+    agentStateDates = window.STATIC_DATA.agentStateDates || [];
+    if (agentStateDates.length === 0) {
+      document.getElementById('agentStateBody').textContent = 'No history yet.';
+      return;
+    }
+    agentStateIndex = 0;
+    document.getElementById('asDate').textContent = agentStateDates[0];
+    document.getElementById('asPrev').disabled = (agentStateDates.length <= 1);
+    document.getElementById('asNext').disabled = true;
+    renderAgentState(window.STATIC_DATA.agentStateContent[agentStateDates[0]] || '');
+    return;
+  }
   try {
     const res = await fetch('/api/agent-state-history');
     if (!res.ok) throw new Error();
@@ -1323,6 +1351,10 @@ async function loadAgentState(idx) {
   document.getElementById('asDate').textContent = date;
   document.getElementById('asPrev').disabled = (idx >= agentStateDates.length - 1);
   document.getElementById('asNext').disabled = (idx <= 0);
+  if (window.STATIC_DATA) {
+    renderAgentState(window.STATIC_DATA.agentStateContent[date] || '');
+    return;
+  }
   try {
     const res = await fetch(`/api/agent-state-history?date=${date}`);
     if (!res.ok) throw new Error();
