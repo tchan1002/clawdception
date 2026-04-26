@@ -1417,6 +1417,9 @@ def export_dashboard():
     html = (Path(__file__).parent / "media_luna_dashboard.html").read_text()
     injection = f"window.STATIC_DATA = {json.dumps(static_data)};\n\n"
     html = html.replace("const API_URL = '/api/sensors';", injection + "const API_URL = '/api/sensors';")
+    html = html.replace('<a href="/agent">Agent</a>', '<a href="agent.html">Agent</a>')
+    html = html.replace('<a href="/water-test">Water Test</a>', '')
+    html = html.replace('<a href="/log-event">Log Event</a>', '')
     return html, 200, {"Content-Type": "text/html; charset=utf-8"}
 
 
