@@ -1,9 +1,6 @@
 # clawdception
 
-i've wanted to keep shrimp since i was a kid. a few weeks ago, i finally did it.  
-like any responsible shrimp dad, i built a baby monitor.
-
-Media Luna is a 10-gallon cherry shrimp colony in Hyde Park, Chicago. Clawdception is the autonomous AI system watching over it 24/7 — reading water chemistry, reasoning about the colony's state, and writing daily journal entries i read with my tea.
+baby monitor for a 10 gallon cherry shrimp tank in hyde park, chicago.
 
 ---
 
@@ -28,8 +25,3 @@ Media Luna is a 10-gallon cherry shrimp colony in Hyde Park, Chicago. Clawdcepti
 
 ---
 
-## build log
-
-full documentation in the project files. water chemistry logs, caretaker decision logs, and daily journal entries all tracked in GitHub.
-
-hosting house tours of the rig if you're in Hyde Park.
