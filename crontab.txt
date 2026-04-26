@@ -42,4 +42,4 @@
 0 * * * * cd ~/clawdception && python3 skills/auto_feeder/run.py >> logs/auto_feeder.log 2>&1
 
 # git-commit: every hour — generate static snapshots, then push
-0 * * * *  cd ~/clawdception && mkdir -p site && curl -sf http://localhost:5001/export/dashboard -o site/index.html; curl -sf http://localhost:5001/export/agent -o site/agent.html; git add -A && (git diff --cached --quiet || git commit -m "auto: $(date +\%Y-\%m-\%d_\%H:\%M)") && git push origin main >> logs/git.log 2>&1
+0 * * * *  cd ~/clawdception && curl -sf http://localhost:5001/export/dashboard -o site/index.html; curl -sf http://localhost:5001/export/agent -o site/agent.html; git add -A && (git diff --cached --quiet || git commit -m "auto: $(date +\%Y-\%m-\%d_\%H:\%M)") && git push origin main >> logs/git.log 2>&1
