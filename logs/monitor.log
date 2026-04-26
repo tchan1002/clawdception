@@ -3438,3 +3438,12 @@ pH dip is expected post-water-change signature, not a crisis—fresh water typic
 [2026-04-26T14:15] Day 36 | skipped (stable) | T=75.99°F pH=6.37 TDS=205.0ppm
 [2026-04-26T14:30] Day 36 | skipped (stable) | T=76.1°F pH=6.35 TDS=205.0ppm
 [2026-04-26T14:45] Day 36 | risk=green | [manual event since last check ] | T=77.0°F pH=6.31 TDS=203.0ppm | Tank is stable post-maintenance and top-off. pH probe is out for calibration—a r
+[2026-04-26T15:00] Day 36 | skipped (stable) | T=76.44°F pH=6.31 TDS=204.0ppm
+[2026-04-26T15:15] Day 36 | skipped (stable) | T=76.44°F pH=9.07 TDS=209.0ppm
+[shrimp-alert] 🚨 ph is above danger threshold: 9.07 (above 8.0)
+[call-toby] Telegram sent (critical): ph is above danger threshold: 9.07 (above 8.0)
+[2026-04-26T15:30] Day 36 | risk=green | [manual event since last check ] | T=77.0°F pH=6.79 TDS=202.0ppm | The pH probe calibration today finally corrected months of inverted readings—we 
+[call-toby] Telegram sent (info): The pH probe calibration today finally corrected months of inverted readings—we can now trust what we see. All three parameters sit comfortably in target range post-top-off; the 46ppm TDS drop reflects the 10% water change, and the 1.8°F temperature rise is gentle and normal. Shrimp remain visibly healthy and present.
+
+• 🧪 Run a water test (ammonia / nitrite / pH) — Next manual API test kit check in 3–4 days to confirm pH probe offset is stable post-calibration and to track nitrate cycle trajectory
+• 👀 Observe shrimp behavior — Monitor duckweed surface coverage and shrimp activity over next 48hr; dense plant cover is beneficial for nutrient cycling but assess gas exchange if coverage increases further

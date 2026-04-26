@@ -36,7 +36,7 @@
 | Item | Status |
 |------|--------|
 | pH probe | ⚠️ Calibration overdue — last calibrated Day 0; 35 days elapsed (due every 30d); ~0.3 unit drift vs. manual test |
-| Auto-feeder | ✅ Skill installed 2026-04-25 — scheduling capability now active |
+| Auto-feeder | ✅ Skill installed 2026-04-26 — nags Toby if >48h since last feeding event |
 | Heater | Presumed operational (temp stable) |
 | Filter | Presumed operational (cycle progressing normally) |
 

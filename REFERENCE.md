@@ -66,6 +66,7 @@
 | `skills/telegram_listener/` | telegram-listener | Every 2min | Poll Telegram for owner messages → heuristic pre-filter routes questions to `answer_question` (no classify call); events → `classify_message` (Claude tool); photos → `shrimp_vision.process_photo` → vision reply |
 | `skills/skill_writer/` | skill-writer | 8:30am daily | Self-improvement proposals → proposals/ (self-gated) |
 | `skills/waterchangepredictor/` | water-change-predictor | 8:05am daily | Linear trend on TDS/pH → days-until-threshold → state/next_water_change.md; alerts Toby if ≤2 days |
+| `skills/auto_feeder/` | auto-feeder | Hourly | Check hours since last feeding event; nag Toby if >48h (4h nag cooldown) |
 
 ---
 

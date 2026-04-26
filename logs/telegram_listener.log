@@ -2803,3 +2803,7 @@ A net containing what appears to be gravel or substrate material rests on the ta
 [telegram-listener] 'going to take the ph probe out now to calibrate' → maintenance
 [call-toby] Telegram sent (info): Logged as maintenance: Owner removing pH probe from tank for calibration. ✓
 [telegram-listener] Processed 1 message(s), offset now 236833130
+[telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[telegram-listener] 'finished calibrating ph probe' → maintenance
+[call-toby] Telegram sent (info): Logged as maintenance: Owner completed calibration of the pH probe. ✓
+[telegram-listener] Processed 1 message(s), offset now 236833131
