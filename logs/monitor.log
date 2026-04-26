@@ -3357,3 +3357,7 @@ Water chemistry is stable and healthy across all three parameters; nitrate at 80
 [2026-04-25T20:15] Day 35 | risk=green | [manual event since last check ] | T=74.86°F pH=6.62 TDS=242.0ppm | All parameters in target; ammonia and nitrite remain zero (strong signal of a ta
 [2026-04-25T20:30] Day 35 | risk=yellow | [manual event since last check ] | T=74.86°F pH=6.62 TDS=239.0ppm | Water chemistry is stable and in range; the manual test confirms zero ammonia/ni
 [2026-04-25T20:45] Day 35 | risk=green | [manual event since last check ] | T=74.75°F pH=6.62 TDS=243.0ppm | Water chemistry remains stable and within target ranges; the manual test confirm
+[2026-04-25T21:00] Day 35 | risk=green | [manual event since last check ] | T=74.86°F pH=6.62 TDS=238.0ppm | Water chemistry is stable across all three parameters and squarely within safe r
+[2026-04-25T21:15] Day 35 | risk=yellow | [manual event since last check ] | T=74.75°F pH=6.63 TDS=240.0ppm | Water chemistry is solid and within target—ammonia and nitrite both zero, pH sta
+[2026-04-25T21:30] Day 35 | risk=green | [manual event since last check ] | T=74.75°F pH=6.63 TDS=239.0ppm | Water chemistry is stable and within target across all parameters; the manual te
+[2026-04-25T21:45] Day 35 | risk=green | [manual event since last check ] | T=74.86°F pH=6.66 TDS=250.0ppm | Water chemistry stable and within target; nitrogen cycle established (ammonia 0,
