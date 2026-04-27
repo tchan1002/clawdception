@@ -1,8 +1,8 @@
 # State of Tank — Media Luna
 
-**Last updated:** 2026-04-25
-**Cycle day:** 35 (started 2026-03-22)
-**Tank status:** Nitrogen cycle in progress — late stage; colony established with confirmed early losses
+**Last updated:** 2026-04-26
+**Cycle day:** 36 (started 2026-03-22)
+**Tank status:** Nitrogen cycle late stage / effectively complete — biological filter established; colony present with confirmed losses
 
 ---
 
@@ -10,51 +10,49 @@
 
 | Animal | Count | Notes |
 |--------|-------|-------|
-| Neocaridina shrimp | ~5 surviving | 6 introduced 2026-04-13 (4M/2F per original log); 1 confirmed dead 2026-04-24, removed 2026-04-25; memorial card suggests possible 2nd loss — total confirmed removals: 1 |
-| Snails (hitchhiker) | Unknown | 2 removed 2026-04-17 (~1mm each); population status unknown |
-
-**Notes on loss:** Toby sent a memorial card dated 4/13/26–4/24/26 depicting two shrimp. The correction log confirms 1 removal on 4/25. Whether the card depicts 1 or 2 distinct individuals lost is ambiguous — treat surviving count as approximately 5 pending clarification.
+| Neocaridina shrimp | ~4–5 surviving | 6 introduced 2026-04-13 (4M/2F); 1 confirmed removed 2026-04-25; memorial card (dated 4/13/26) suggests possible additional loss(es); total confirmed removals: 1 |
+| Snails | Unknown | Present per earlier logs; count not recently confirmed |
 
 ---
 
-## Water Chemistry
+## Water Parameters (as of 2026-04-26, post-calibration)
 
-| Parameter | Current | Target | Status |
-|-----------|---------|--------|--------|
-| Temperature | ~75°F | 72–78°F | ✅ |
-| pH (manual) | 6.8 | 6.8–7.4 | ✅ Low end of target |
-| pH (sensor) | ~6.48 | — | ⚠️ Drift suspected |
-| TDS | ~241 ppm | 150–250 ppm | ✅ Near ceiling |
-| Ammonia | 0 ppm | 0 | ✅ |
-| Nitrite | 0 ppm | 0 | ✅ |
-| Nitrate | 80 ppm | <20 ppm (shrimp) | ⚠️ Elevated; acceptable during cycle |
+| Parameter | Value / Range | Status |
+|-----------|--------------|--------|
+| Temperature | 75.9–77.0°F, avg 76.3°F | ✅ Normal |
+| pH | Recalibrated — fresh baseline pending | ⚠️ Trustworthy readings begin now |
+| TDS | 201–217 ppm, avg 207 ppm | ✅ Normal |
+| Ammonia | 0 ppm (last tested 2026-04-25) | ✅ |
+| Nitrite | 0 ppm (last tested 2026-04-25) | ✅ |
+| Nitrate | ~80 ppm (last tested 2026-04-25) | ⚠️ Elevated — water change warranted |
 
 ---
 
-## Equipment
+## Physical Observations (from 2026-04-26 photos)
 
-| Item | Status |
-|------|--------|
-| pH probe | ⚠️ Calibration overdue — last calibrated Day 0; 35 days elapsed (due every 30d); ~0.3 unit drift vs. manual test |
-| Auto-feeder | ✅ Skill installed 2026-04-26 — nags Toby if >48h since last feeding event |
-| Heater | Presumed operational (temp stable) |
-| Filter | Presumed operational (cycle progressing normally) |
+- **Substrate:** Dark granular substrate, gently sloped, undisturbed
+- **Hardscape:** Mesh bag (appears to contain buffering media — possibly crushed coral) sitting on substrate mid-tank
+- **Growth:** Bright green growth visible on substrate near center-left — consistent with healthy biofilm/microfauna establishment
+- **Surface plants:** Dense floating plant coverage (duckweed confirmed from earlier logs) — beneficial but worth monitoring for gas exchange
+- **Water clarity:** Clear
+- **Visible shrimp:** 1 (bright red, active, tucked near mesh bag)
+- **Lighting:** Dual-arm clip light present
+- **Memorial card:** Handwritten card propped against front glass reading "Rest in Power, Gone Too Soon, 4/13/26" with two hand-drawn shrimp
+
+---
+
+## Equipment Status
+
+| Device | Status |
+|--------|--------|
+| pH probe | Recalibrated 2026-04-26 — fresh baseline now trustworthy |
+| Auto-feeder skill | Installed 2026-04-26 — not yet configured |
+| Feeding | Last confirmed ~48h+ ago — overdue |
 
 ---
 
 ## Cycle Status
 
-**Ammonia:** 0 ppm — source being fully processed
-**Nitrite:** 0 ppm — nitrite bacteria established and working
-**Nitrate:** 80 ppm — accumulating normally; no export mechanism yet
-**Assessment:** Cycle appears functionally complete or very nearly so. Awaiting confirmation via sustained zero ammonia/nitrite readings across multiple days before declaring complete.
-
----
-
-## Open Questions
-
-- Exact surviving shrimp count (5 or fewer?) — memorial card ambiguous
-- Hitchhiker snail population — unmonitored since Day 5
-- Whether pH is genuinely low (6.48 sensor) or probe drift accounts for the full gap (manual reads 6.8)
+Ammonia and nitrite both at zero. Nitrate at 80 ppm. Cycle appears functionally complete. A moderate water change is the logical next step to bring nitrate down before transitioning to maintenance mode.
 
 ---

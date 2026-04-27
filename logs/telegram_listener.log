@@ -2812,3 +2812,4 @@ A net containing what appears to be gravel or substrate material rests on the ta
 [telegram-listener] Processed 1 message(s), offset now 236833132
 [telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
 [telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
