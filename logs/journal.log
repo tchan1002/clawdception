@@ -425,3 +425,9 @@ json.decoder.JSONDecodeError: Expecting value: line 2 column 1 (char 1)
 [shrimp-journal] Entry written: 2026-04-26-1805.md (Day 36)
 [call-toby] Telegram sent (info): Journal — Day 36 · 2026-04-26 18:05
 [call-toby] Document sent: 2026-04-26-1805.md
+[shrimp-journal] Entry written: 2026-04-27-0005.md (Day 37)
+[call-toby] Telegram sent (info): Journal — Day 37 · 2026-04-27 00:05
+[call-toby] Document sent: 2026-04-27-0005.md
+[call-toby] Telegram sent (info): Action items:
+• Feed the colony within the next 12 hours to reset the 48-hour feeding interval
+• Confirm auto-feeder hardware status and settings with Toby — repeated skill approvals suggest software ready but unclear if device is physically installed
