@@ -3456,3 +3456,10 @@ pH dip is expected post-water-change signature, not a crisis—fresh water typic
 [2026-04-26T17:15] Day 36 | risk=green | [manual event since last check ] | T=76.21°F pH=6.62 TDS=205.0ppm | All parameters are within target range post-calibration. pH probe formula was co
 [2026-04-26T17:30] Day 36 | risk=green | [manual event since last check ] | T=76.21°F pH=6.65 TDS=203.0ppm | pH probe recalibrated this afternoon; current 6.65 reading is valid and well wit
 [2026-04-26T17:45] Day 36 | risk=green | [manual event since last check ] | T=76.1°F pH=6.65 TDS=202.0ppm | pH probe calibration completed today; current reading of 6.65 is solid and post-
+[2026-04-26T18:00] Day 36 | risk=green | [manual event since last check ] | T=76.1°F pH=6.66 TDS=204.0ppm | pH probe calibration completed today; all parameters now sitting solidly in targ
+[2026-04-26T18:15] Day 36 | risk=green | [manual event since last check ] | T=76.21°F pH=6.67 TDS=204.0ppm | pH probe calibration completed today; new readings align with manual test kit (6
+[2026-04-26T18:30] Day 36 | risk=green | [manual event since last check ] | T=76.1°F pH=6.64 TDS=204.0ppm | pH probe calibration completed today resolves prior firmware confusion; all thre
+[2026-04-26T18:45] Day 36 | risk=green | [manual event since last check ] | T=76.1°F pH=6.65 TDS=203.0ppm | pH probe recalibration today corrected an inverted voltage mapping — today's 6.6
+[call-toby] Telegram sent (info): pH probe recalibration today corrected an inverted voltage mapping — today's 6.65 reading is now trustworthy after firmware fix. All parameters sit comfortably in target range; the 24hr pH swing reflects the sensor correction artifact, not water chemistry chaos.
+
+• 📸 Send a photo of the tank
