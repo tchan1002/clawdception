@@ -2807,3 +2807,6 @@ A net containing what appears to be gravel or substrate material rests on the ta
 [telegram-listener] 'finished calibrating ph probe' → maintenance
 [call-toby] Telegram sent (info): Logged as maintenance: Owner completed calibration of the pH probe. ✓
 [telegram-listener] Processed 1 message(s), offset now 236833131
+[telegram-listener] 'ph probe has been calibrated. no need to nag.' → correction
+[call-toby] Telegram sent (info): Logged as correction: Owner confirms pH probe has been freshly calibrated. Flagging any prior nag about pH probe accuracy as resolved — readings should now be treated as trustworthy baseline. ✓
+[telegram-listener] Processed 1 message(s), offset now 236833132
