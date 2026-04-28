@@ -2837,3 +2837,6 @@ Seven cherry shrimp are visible and actively distributed across the substrate �
 [telegram-listener] 'there are just 5 shrimp in the tank, the 7 was a miscount that included reflections in the glass' → correction
 [call-toby] Telegram sent (info): Logged as correction: Owner clarifies shrimp count: only 5 shrimp in the tank. Previous count of 7 was a miscount caused by reflections in the glass. ✓
 [telegram-listener] Processed 1 message(s), offset now 236833137
+[telegram-listener] 'how’s the water' → question
+[call-toby] Telegram sent (info): Water's looking decent — 76°F, TDS at 209, pH at 6.63 which is a touch low for Neocaridina but stable. Nothing alarming for five hardy little shrimp. Keep an eye on the pH trend but no action needed today.
+[telegram-listener] Processed 1 message(s), offset now 236833138
