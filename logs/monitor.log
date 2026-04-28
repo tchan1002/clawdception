@@ -3578,3 +3578,6 @@ pH probe recalibrated this afternoon after Toby discovered and corrected an inve
 [2026-04-27T19:30] Day 37 | risk=green | [ph changed 0.11 in last hour] | T=76.21°F pH=6.67 TDS=208.0ppm | All parameters remain solidly in target range post-feeding and post-calibration;
 [2026-04-27T19:45] Day 37 | risk=green | [ph changed 0.11 in last hour] | T=76.21°F pH=6.69 TDS=206.0ppm | The pH shift of +0.11 in one hour is notable but modest; pH probe is freshly cal
 [2026-04-27T20:00] Day 37 | skipped (stable) | T=76.21°F pH=6.7 TDS=207.0ppm
+[2026-04-27T20:15] Day 37 | skipped (stable) | T=76.21°F pH=6.67 TDS=207.0ppm
+[2026-04-27T20:30] Day 37 | skipped (stable) | T=76.1°F pH=6.67 TDS=208.0ppm
+[2026-04-27T20:45] Day 37 | skipped (stable) | T=76.1°F pH=6.71 TDS=208.0ppm
