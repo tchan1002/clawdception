@@ -450,3 +450,6 @@ json.decoder.JSONDecodeError: Expecting value: line 2 column 1 (char 1)
 [call-toby] Telegram sent (info): Action items:
 • Calibrate pH probe against buffers (pH 7.0 and pH 4.0) within 7 days to maintain reading accuracy
 • Review tank surface in next photo submission to assess current water movement and confirm no stagnation concerns
+[shrimp-journal] Entry written: 2026-04-28-0605.md (Day 38)
+[call-toby] Telegram sent (info): Journal — Day 38 · 2026-04-28 06:05
+[call-toby] Document sent: 2026-04-28-0605.md
