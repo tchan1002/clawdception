@@ -2819,3 +2819,18 @@ A net containing what appears to be gravel or substrate material rests on the ta
 [telegram-listener] getUpdates failed: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot***/getUpdates?offset=236833132&timeout=0&limit=100 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fff88db17f0>: Failed to resolve 'api.telegram.org' ([Errno -3] Temporary failure in name resolution)"))
 [telegram-listener] getUpdates failed: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot***/getUpdates?offset=236833132&timeout=0&limit=100 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fff0cc617f0>: Failed to resolve 'api.telegram.org' ([Errno -3] Temporary failure in name resolution)"))
 [telegram-listener] getUpdates failed: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot***/getUpdates?offset=236833132&timeout=0&limit=100 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7ffebec717f0>: Failed to resolve 'api.telegram.org' ([Errno -3] Temporary failure in name resolution)"))
+[telegram-listener] Photo saved: 2026-04-27_19-02-05.jpg — 'feeding at the crater'
+[call-toby] Telegram sent (info): "feeding at the crater"
+7 shrimp visible · water: clear · plants: stable
+Concerns: none
+
+Seven cherry shrimp are visible and actively distributed across the substrate — a cluster of four near the front-left glass and three more scattered toward the center and right midground, all appearing bright red and in motion or actively grazing. A wisp of green plant growth is visible in the upper right corner, suggesting healthy vegetation just out of frame.
+[telegram-listener] Vision reply sent
+[telegram-listener] 'duckweed has grown but seems manageable' → observation
+[call-toby] Telegram sent (info): Logged as observation: Duckweed has grown but remains manageable — no thinning or removal performed yet. ✓
+[telegram-listener] Processed 2 message(s), offset now 236833134
+[telegram-listener] 'it’s 4 shrimp in frame, the 3 on the side are reflections' → correction
+[call-toby] Telegram sent (info): Logged as correction: Owner clarifies that a previously logged or interpreted photo showed 4 shrimp, not 7 — the 3 extra were reflections off the glass, not additional animals. ✓
+[telegram-listener] 'shrimp fed btw' → feeding
+[call-toby] Telegram sent (info): Logged as feeding: Toby fed the shrimp. ✓
+[telegram-listener] Processed 2 message(s), offset now 236833136
