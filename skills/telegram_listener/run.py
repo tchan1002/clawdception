@@ -18,7 +18,7 @@ import json
 import os
 import shutil
 import sys
-from datetime import datetime
+from datetime import datetime, date
 from pathlib import Path
 
 import requests
@@ -56,9 +56,9 @@ CLASSIFY_TOOL = {
                     "water_change", "water_test", "feeding", "observation",
                     "heater_adjust", "dosing", "maintenance", "plant_addition",
                     "shrimp_added", "owner_note", "question", "correction",
-                    "system_update", "capture_request"
+                    "system_update", "capture_request", "ph_calibration"
                 ],
-                "description": "Best-fit event type. Use correction if owner is explicitly correcting a prior caretaker misinterpretation (e.g. 'that was a bug', 'those photos were not real', 'ignore that reading'). Use question if owner is asking about tank status/parameters/history. Use owner_note if intent is unclear."
+                "description": "Best-fit event type. Use ph_calibration when owner says they calibrated the pH probe (e.g. 'calibrated pH', 'ran calibration', 'did the pH buffers'). Use correction if owner is explicitly correcting a prior caretaker misinterpretation (e.g. 'that was a bug', 'those photos were not real', 'ignore that reading'). Use question if owner is asking about tank status/parameters/history. Use owner_note if intent is unclear."
             },
             "notes": {
                 "type": "string",
@@ -253,6 +253,17 @@ def handle_photo(msg, token):
         call_toby("Photo received but download failed — event logged without image.", urgency="warning")
 
 
+def _update_ph_calibration_date():
+    state_path = PATHS["logs"] / "equipment_state.json"
+    try:
+        state = json.loads(state_path.read_text()) if state_path.exists() else {}
+        state["ph_probe_last_calibrated"] = date.today().isoformat()
+        state_path.write_text(json.dumps(state, indent=2))
+        print(f"[telegram-listener] ph_probe_last_calibrated → {date.today()}")
+    except Exception as e:
+        print(f"[telegram-listener] Failed to update equipment state: {e}")
+
+
 def handle_text(text):
     classified = classify_message(text)
     event_type = classified.get("event_type", "owner_note")
@@ -265,6 +276,11 @@ def handle_text(text):
                   urgency="info" if reply else "warning")
     elif event_type == "capture_request":
         handle_capture_request()
+    elif event_type == "ph_calibration":
+        data = {**classified.get("data", {}), "source": "telegram"}
+        post_event(event_type, notes=notes, data=data)
+        _update_ph_calibration_date()
+        call_toby(f"Logged as pH calibration: {notes} — nag timer reset ✓", urgency="info")
     else:
         data = {**classified.get("data", {}), "source": "telegram"}
         post_event(event_type, notes=notes, data=data)

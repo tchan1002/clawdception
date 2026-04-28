@@ -1,14 +1,15 @@
 # Skill: shrimp-vision
 
-**What it does:** Visual tank analysis via Claude vision. Called from two sources:
-- **telegram-listener** — owner sends photo via Telegram; `analyze_snapshot()` called immediately on receipt
-- **ESP32-CAM cron** (disabled — camera not connected) — fetches `snapshots/latest.jpg`, analyzes on schedule
+**What it does:** Visual tank analysis via Claude vision. Called from three sources:
+- **telegram-listener** — owner sends photo via Telegram; `process_photo()` called immediately on receipt
+- **telegram-listener capture_request** — owner texts "take a photo"; listener GETs `/snapshot` from ESP32-CAM at `192.168.12.32`, calls `process_photo()`, sends photo + vision caption back via Telegram
+- **ESP32-CAM cron** — fetches `snapshots/latest.jpg`, analyzes on schedule (cron line in `crontab.txt`)
 
-Both paths call `analyze_snapshot(img_bytes)` and write to the same log via `log_entry()`.
+All paths call `analyze_snapshot(img_bytes)` and write to same log via `log_entry()`.
 
 **When it runs:**
-- On demand: whenever telegram-listener receives a photo from the owner
-- Scheduled: every 2 hours at :30 via cron (uncomment in `crontab.txt` once ESP32-CAM connected)
+- On demand: whenever telegram-listener receives a photo, or owner sends capture_request text
+- Scheduled: every 2 hours at :30 via cron
 
 **What it produces per analysis:**
 - `tank_visible` — bool, whether tank appears in image (photo may be test strip, equipment, etc)
@@ -83,16 +84,14 @@ Error entry (empty/oversized/API fail):
 
 **Data flow:**
 ```
-Owner Telegram photo → telegram-listener → analyze_snapshot() → logs/vision/
-ESP32-CAM (future) → POST /api/snapshot → snapshots/latest.jpg → shrimp-vision cron → analyze_snapshot() → logs/vision/
+Owner Telegram photo         → telegram-listener → process_photo() → logs/vision/ → vision reply via call_toby
+Owner texts capture_request  → telegram-listener → GET 192.168.12.32/snapshot → process_photo() → send_photo + caption
+ESP32-CAM cron               → snapshots/latest.jpg → shrimp-vision run.py → process_photo() → logs/vision/
 ```
 
-**Dependencies:** `utils.py`, `config.py`. No extra pip packages required.
+**ESP32-CAM:** Live at `192.168.12.32`. Endpoints: `GET /snapshot` (JPEG), `GET /livestream` (MJPEG), `GET /` (status).
 
-**How to enable ESP32-CAM cron:**
-1. Flash `esp32_cam/esp32_cam.ino` to AI Thinker ESP32-CAM (set WiFi creds first)
-2. Confirm snapshots arriving: `curl http://localhost:5001/api/snapshot/latest -o /tmp/test.jpg`
-3. Uncomment the shrimp-vision cron line in `crontab.txt`
+**Dependencies:** `utils.py`, `config.py`. No extra pip packages required.
 
 **How to test manually:**
 ```bash

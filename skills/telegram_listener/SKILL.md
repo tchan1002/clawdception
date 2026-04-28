@@ -12,15 +12,25 @@ update
   photo          → handle_photo → shrimp_vision.process_photo → vision reply via call_toby
   text/caption   → handle_text
                    → classify_message (single Claude tool call)
-                     event_type == "question" → answer_question → call_toby reply
-                     else                     → post_event + ack via call_toby
+                     event_type == "question"         → answer_question → call_toby reply
+                     event_type == "capture_request"  → handle_capture_request → fetch ESP32-CAM → send_photo + vision caption
+                     else                             → post_event + ack via call_toby
 ```
 
 ## `classify_message`
 
-Single Claude tool call. `CLASSIFY_TOOL` enum: `water_change`, `water_test`, `feeding`, `observation`, `heater_adjust`, `dosing`, `maintenance`, `plant_addition`, `shrimp_added`, `owner_note`, `question`.
+Single Claude tool call. `CLASSIFY_TOOL` enum: `water_change`, `water_test`, `feeding`, `observation`, `heater_adjust`, `dosing`, `maintenance`, `plant_addition`, `shrimp_added`, `owner_note`, `question`, `correction`, `system_update`, `capture_request`.
 
-Use `question` when owner asks about tank status, parameters, history, or advice. Use `owner_note` if intent unclear.
+- `question` — owner asks about tank status, parameters, history, or advice
+- `capture_request` — owner requests live snapshot from ESP32-CAM (e.g. "take a photo", "show me the tank")
+- `correction` — owner explicitly correcting prior caretaker misinterpretation
+- `owner_note` — intent unclear
+
+## Capture request flow
+
+`handle_capture_request` → `fetch_esp32_snapshot` (GET `192.168.12.32/snapshot`) → `save_photo` → `process_photo` (shrimp_vision) → `send_photo` with vision caption.
+
+Camera offline: sends warning via `call_toby`. Analysis failure: sends photo without caption.
 
 Returns `{event_type, notes, data}`. `data.source = "telegram"` always injected by `handle_text`.
 

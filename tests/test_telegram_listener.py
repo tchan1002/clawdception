@@ -477,6 +477,69 @@ class TestRun:
 
 
 # ---------------------------------------------------------------------------
+# capture_request / ESP32-CAM flow
+# ---------------------------------------------------------------------------
+
+class TestHandleCaptureRequest:
+    def _base_patches(self):
+        return {
+            "fetch_esp32_snapshot": MagicMock(return_value=b"\xff\xd8\xff" + b"x" * 1000),
+            "save_photo": MagicMock(return_value="2026-04-28_12-00-00.jpg"),
+            "process_photo": MagicMock(return_value=FAKE_ANALYSIS),
+            "send_photo": MagicMock(return_value=True),
+            "call_toby": MagicMock(),
+        }
+
+    def test_success_sends_photo_with_caption(self):
+        patches = self._base_patches()
+        with patch.multiple("skills.telegram_listener.run", **patches):
+            from skills.telegram_listener.run import handle_capture_request
+            handle_capture_request()
+        patches["send_photo"].assert_called_once()
+        _, kwargs = patches["send_photo"].call_args
+        assert "3 shrimp visible" in kwargs.get("caption", "")
+
+    def test_camera_offline_sends_warning(self):
+        patches = self._base_patches()
+        patches["fetch_esp32_snapshot"] = MagicMock(return_value=None)
+        with patch.multiple("skills.telegram_listener.run", **patches):
+            from skills.telegram_listener.run import handle_capture_request
+            handle_capture_request()
+        patches["send_photo"].assert_not_called()
+        assert patches["call_toby"].call_args.kwargs.get("urgency") == "warning"
+
+    def test_analysis_failure_sends_photo_without_caption(self):
+        patches = self._base_patches()
+        patches["process_photo"] = MagicMock(return_value=None)
+        with patch.multiple("skills.telegram_listener.run", **patches):
+            from skills.telegram_listener.run import handle_capture_request
+            handle_capture_request()
+        patches["send_photo"].assert_called_once()
+        _, kwargs = patches["send_photo"].call_args
+        assert not kwargs.get("caption")
+
+    def test_capture_request_event_type_routes_to_handler(self):
+        patches = {
+            "classify_message": MagicMock(return_value={
+                "event_type": "capture_request", "notes": "take a photo", "data": {}
+            }),
+            "handle_capture_request": MagicMock(),
+            "call_toby": MagicMock(),
+            "post_event": MagicMock(),
+            "answer_question": MagicMock(),
+        }
+        with patch.multiple("skills.telegram_listener.run", **patches):
+            handle_text("take a photo")
+        patches["handle_capture_request"].assert_called_once()
+        patches["post_event"].assert_not_called()
+
+    def test_capture_request_in_classify_enum(self):
+        from skills.telegram_listener.run import CLASSIFY_TOOL
+        enum = CLASSIFY_TOOL["input_schema"]["properties"]["event_type"]["enum"]
+        assert "capture_request" in enum
+
+
+# ---------------------------------------------------------------------------
 # correction event type
 # ---------------------------------------------------------------------------
 

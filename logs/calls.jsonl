@@ -472,3 +472,4 @@
 {"timestamp": "2026-04-28T12:05:29.981925", "urgency": "info", "message": "Journal \u2014 Day 38 \u00b7 2026-04-28 12:05", "sent_via": "telegram"}
 {"timestamp": "2026-04-28T12:05:31.704163", "urgency": "info", "message": "Action items:\n\u2022 Plan pH probe re-calibration within the next 5\u20137 days (target: by May 3\u20134). No rush; this is routine maintenance.\n\u2022 Continue current feeding schedule\u2014shrimp are on a healthy 24\u201348h cycle", "sent_via": "telegram"}
 {"timestamp": "2026-04-28T13:00:12.565408", "urgency": "info", "message": "Water's looking decent \u2014 76\u00b0F, TDS at 209, pH at 6.63 which is a touch low for Neocaridina but stable. Nothing alarming for five hardy little shrimp. Keep an eye on the pH trend but no action needed today.", "sent_via": "telegram"}
+{"timestamp": "2026-04-28T16:50:03.991338", "urgency": "warning", "message": "Couldn't reach camera \u2014 is it online?", "sent_via": "telegram"}

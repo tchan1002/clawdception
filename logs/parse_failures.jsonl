@@ -120,3 +120,7 @@
 {"timestamp": "2026-04-26T15:32:03.162411", "error": "Expecting value: line 1 column 1 (char 0)", "response_text": "```json\n```"}
 {"timestamp": "2026-04-26T15:42:29.283204", "error": "Expecting value: line 1 column 1 (char 0)", "response_text": "not valid json"}
 {"timestamp": "2026-04-26T15:42:29.284131", "error": "Expecting value: line 1 column 1 (char 0)", "response_text": "```json\n```"}
+{"timestamp": "2026-04-28T16:51:11.323337", "error": "Expecting value: line 1 column 1 (char 0)", "response_text": "not valid json"}
+{"timestamp": "2026-04-28T16:51:11.324344", "error": "Expecting value: line 1 column 1 (char 0)", "response_text": "```json\n```"}
+{"timestamp": "2026-04-28T16:51:36.739148", "error": "Expecting value: line 1 column 1 (char 0)", "response_text": "not valid json"}
+{"timestamp": "2026-04-28T16:51:36.740208", "error": "Expecting value: line 1 column 1 (char 0)", "response_text": "```json\n```"}

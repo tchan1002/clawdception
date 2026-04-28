@@ -2840,3 +2840,7 @@ Seven cherry shrimp are visible and actively distributed across the substrate �
 [telegram-listener] 'how’s the water' → question
 [call-toby] Telegram sent (info): Water's looking decent — 76°F, TDS at 209, pH at 6.63 which is a touch low for Neocaridina but stable. Nothing alarming for five hardy little shrimp. Keep an eye on the pH trend but no action needed today.
 [telegram-listener] Processed 1 message(s), offset now 236833138
+[telegram-listener] 'take a photo of the tank' → capture_request
+[telegram-listener] ESP32-CAM snapshot saved: 2026-04-28_16-56-08.jpg
+[call-toby] Photo sent: 2026-04-28_16-56-08.jpg
+[telegram-listener] Processed 1 message(s), offset now 236833139
