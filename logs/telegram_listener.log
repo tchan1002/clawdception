@@ -2834,3 +2834,6 @@ Seven cherry shrimp are visible and actively distributed across the substrate �
 [telegram-listener] 'shrimp fed btw' → feeding
 [call-toby] Telegram sent (info): Logged as feeding: Toby fed the shrimp. ✓
 [telegram-listener] Processed 2 message(s), offset now 236833136
+[telegram-listener] 'there are just 5 shrimp in the tank, the 7 was a miscount that included reflections in the glass' → correction
+[call-toby] Telegram sent (info): Logged as correction: Owner clarifies shrimp count: only 5 shrimp in the tank. Previous count of 7 was a miscount caused by reflections in the glass. ✓
+[telegram-listener] Processed 1 message(s), offset now 236833137
