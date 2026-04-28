@@ -1,7 +1,7 @@
 """
 telegram-listener — poll Telegram for owner messages and record them as events.
 
-Runs every 2 minutes via cron. Reads messages from the owner's chat only.
+Runs every minute via cron. Reads messages from the owner's chat only.
 
 Text messages → classified by Claude into a proper event type (water_change,
   water_test, feeding, etc.) with structured data extracted where possible.

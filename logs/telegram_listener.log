@@ -2844,3 +2844,22 @@ Seven cherry shrimp are visible and actively distributed across the substrate �
 [telegram-listener] ESP32-CAM snapshot saved: 2026-04-28_16-56-08.jpg
 [call-toby] Photo sent: 2026-04-28_16-56-08.jpg
 [telegram-listener] Processed 1 message(s), offset now 236833139
+[telegram-listener] 'take a tank photo' → capture_request
+[telegram-listener] ESP32-CAM snapshot saved: 2026-04-28_17-04-10.jpg
+[call-toby] Photo sent: 2026-04-28_17-04-10.jpg
+[telegram-listener] Processed 1 message(s), offset now 236833140
+[telegram-listener] 'how can we get a clearer view of the tank by upgrading from a esp32cam?' → question
+[call-toby] Telegram sent (info): The easiest upgrade from the ESP32-CAM is a proper IP camera — something like a Wyze Cam or Reolink, which give you 1080p+, better low-light performance, and stable WiFi without the fiddly compression artifacts. Mount it on a small tripod or suction-cup mount flush against the glass to minimize reflections (the bane of our shrimp-counting accuracy). Bonus: most of these integrate with Home Assistant if that's ever in the cards.
+[telegram-listener] Processed 1 message(s), offset now 236833141
+[telegram-listener] 'take a photo of the tank' → capture_request
+[telegram-listener] ESP32-CAM snapshot saved: 2026-04-28_17-21-09.jpg
+[call-toby] Photo sent: 2026-04-28_17-21-09.jpg
+[telegram-listener] Processed 1 message(s), offset now 236833142
+[telegram-listener] 'take a tank phoot' → capture_request
+[telegram-listener] ESP32-CAM snapshot saved: 2026-04-28_17-37-08.jpg
+[call-toby] Photo sent: 2026-04-28_17-37-08.jpg
+[telegram-listener] Processed 1 message(s), offset now 236833143
+[telegram-listener] 'take a photo' → capture_request
+[telegram-listener] ESP32-CAM snapshot saved: 2026-04-28_17-44-09.jpg
+[call-toby] Photo sent: 2026-04-28_17-44-09.jpg
+[telegram-listener] Processed 1 message(s), offset now 236833144
