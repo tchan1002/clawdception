@@ -3681,3 +3681,7 @@ All parameters holding steady in target range; 24-hour trends are stable and min
 [2026-04-28T18:15] Day 38 | skipped (stable) | T=76.32°F pH=6.59 TDS=213.0ppm
 [2026-04-28T18:30] Day 38 | skipped (stable) | T=76.44°F pH=6.58 TDS=213.0ppm
 [2026-04-28T18:45] Day 38 | skipped (stable) | T=76.32°F pH=6.56 TDS=213.0ppm
+[2026-04-28T19:00] Day 38 | skipped (stable) | T=76.32°F pH=6.57 TDS=213.0ppm
+[2026-04-28T19:15] Day 38 | skipped (stable) | T=76.44°F pH=6.56 TDS=212.0ppm
+[2026-04-28T19:30] Day 38 | risk=yellow | [manual event since last check ] | T=76.32°F pH=6.56 TDS=213.0ppm | Water chemistry is solid and stable across all parameters, well within target ra
+[2026-04-28T19:45] Day 38 | skipped (stable) | T=76.21°F pH=6.58 TDS=212.0ppm

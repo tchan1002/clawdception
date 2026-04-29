@@ -2863,3 +2863,10 @@ Seven cherry shrimp are visible and actively distributed across the substrate �
 [telegram-listener] ESP32-CAM snapshot saved: 2026-04-28_17-44-09.jpg
 [call-toby] Photo sent: 2026-04-28_17-44-09.jpg
 [telegram-listener] Processed 1 message(s), offset now 236833144
+[telegram-listener] 'take a photo' → capture_request
+[telegram-listener] ESP32-CAM snapshot saved: 2026-04-28_19-24-07.jpg
+[call-toby] Photo sent: 2026-04-28_19-24-07.jpg
+[telegram-listener] Processed 1 message(s), offset now 236833145
+[telegram-listener] 'how's the water' → question
+[call-toby] Telegram sent (info): Water's looking a little soft right now — pH at 6.58 and TDS at 212 are both running low for Neocaridina, but nothing acute. Worth keeping an eye on, especially the pH. Five shrimp, all accounted for. 🦐
+[telegram-listener] Processed 1 message(s), offset now 236833146
