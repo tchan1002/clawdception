@@ -3685,3 +3685,10 @@ All parameters holding steady in target range; 24-hour trends are stable and min
 [2026-04-28T19:15] Day 38 | skipped (stable) | T=76.44°F pH=6.56 TDS=212.0ppm
 [2026-04-28T19:30] Day 38 | risk=yellow | [manual event since last check ] | T=76.32°F pH=6.56 TDS=213.0ppm | Water chemistry is solid and stable across all parameters, well within target ra
 [2026-04-28T19:45] Day 38 | skipped (stable) | T=76.21°F pH=6.58 TDS=212.0ppm
+[2026-04-28T20:00] Day 38 | skipped (stable) | T=76.21°F pH=6.57 TDS=213.0ppm
+[2026-04-28T20:15] Day 38 | risk=green | [manual event since last check ] | T=76.21°F pH=6.56 TDS=214.0ppm | All parameters well within target bands; temp and pH stable post-calibration, TD
+[call-toby] Telegram sent (info): All parameters well within target bands; temp and pH stable post-calibration, TDS climbing gently as expected during active cycling phase. Algae and biofilm blooms visible in photos are consistent with day 38 nitrogen cycle maturation—biologically normal, not a crisis.
+
+• 🧪 Run a water test (ammonia / nitrite / pH) — Optional: ammonia/nitrite/nitrate panel in 2–3 days to confirm cycle trajectory and peak nitrate timing
+[2026-04-28T20:30] Day 38 | skipped (stable) | T=76.21°F pH=6.6 TDS=213.0ppm
+[2026-04-28T20:45] Day 38 | skipped (stable) | T=76.32°F pH=6.6 TDS=213.0ppm
