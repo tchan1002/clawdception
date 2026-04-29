@@ -1095,3 +1095,5 @@
 [2026-04-29T06:00] equipment-check | green | 0 issue(s) | All equipment checks passed. WiFi RSSI OK — mean -48 dBm. Heap OK — min 226,128 
 [2026-04-29T06:30] equipment-check | green | 0 issue(s) | All equipment checks passed. WiFi RSSI OK — mean -48 dBm. Heap OK — min 226,128 
 [2026-04-29T07:00] equipment-check | green | 0 issue(s) | All equipment checks passed. WiFi RSSI OK — mean -48 dBm. Heap OK — min 226,128 
+[2026-04-29T07:30] equipment-check | green | 0 issue(s) | All equipment checks passed. WiFi RSSI OK — mean -46 dBm. Heap OK — min 226,128 
+[2026-04-29T08:00] equipment-check | green | 0 issue(s) | All equipment checks passed. WiFi RSSI OK — mean -40 dBm. Heap OK — min 226,128 
