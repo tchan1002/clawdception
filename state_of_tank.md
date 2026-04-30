@@ -1,8 +1,8 @@
 # State of Tank — Media Luna
 
-**Last updated:** 2026-04-28
-**Cycle day:** 38 (started 2026-03-22)
-**Tank status:** Nitrogen cycle in late-stage progression; biological filter active; colony present and grazing
+**Last updated:** 2026-04-29
+**Cycle day:** 39 (started 2026-03-22)
+**Tank status:** Nitrogen cycle in late-stage progression; biological filter active; bacterial bloom visible; floating plant canopy at near-total surface coverage
 
 ---
 
@@ -10,56 +10,48 @@
 
 | Animal | Count | Notes |
 |--------|-------|-------|
-| Neocaridina shrimp | 5 confirmed | 6 introduced 2026-04-13 (4M/2F); 1 confirmed removed 2026-04-25; apparent count of 7 on 2026-04-27 was corrected 2026-04-28 — attributed to reflections in glass; 5 is current best confirmed count |
+| Neocaridina shrimp | 5 confirmed | 6 introduced 2026-04-13 (4M/2F); 1 confirmed removed 2026-04-25; one visible mid-water in 2026-04-29 photo — active, untroubled |
 
 ---
 
-## Water Parameters (2026-04-28)
+## Water Chemistry (as of 2026-04-29)
 
-| Parameter | Value | Status |
-|-----------|-------|--------|
-| Temperature | 76.4°F avg (76.1–77.2°F) | ✅ Normal |
-| pH | 6.59 avg (6.48–6.72) | ✅ Acceptable for cycling tank |
-| TDS | 210 ppm avg (206–215 ppm) | ✅ Normal; slow upward trend noted |
-| Ammonia | Not tested today | — |
-| Nitrite | Not tested today | — |
-| Nitrate | Not tested today | — |
+| Parameter | Current Avg | Range | Status |
+|-----------|------------|-------|--------|
+| Temperature | 75.7°F | 75.09–76.44°F | ✅ Nominal |
+| pH | 6.60 | 6.44–6.71 | ✅ Acceptable; low-end buffered by crushed coral |
+| TDS | 216 ppm | 213–219 ppm | ✅ Stable |
 
----
-
-## Equipment
-
-- Two sponge filters with ceramic bio-media — confirmed visible in photos, operating normally
-- Heater — confirmed visible in photos
-- pH, TDS, and temperature probes — active and transmitting; pH probe due for routine 30-day recalibration (~3 days overdue)
-- **Auto-feeder skill: INSTALLED 2026-04-28** — agent can now schedule and trigger feedings directly
+No ammonia, nitrite, or nitrate manual test results on file for this date.
 
 ---
 
-## Biological Activity
+## Physical Environment (from photo 2026-04-29)
 
-- White fuzzy biofilm coating sponge filter surfaces — consistent with active nitrogen cycle; shrimp observed grazing on it
-- Green algae established on back glass — confirmed by owner observation and multiple photos on 2026-04-28
-- Mild water turbidity noted in late-evening photo — likely bacterial bloom consistent with late-stage cycling
+- **Substrate:** Dark granular substrate; appears generally clean
+- **Hardscape/Media:** Mesh bag (likely crushed coral or aragonite) resting on substrate near center — purpose appears to be pH/KH buffering; permanence unconfirmed
+- **Surface plants:** Dense floating plant layer (frogbit, duckweed, or similar) covering approximately 90%+ of water surface — full canopy
+- **Lower tank:** Some green growth visible on substrate lower left — possibly a small stem plant or moss establishing
+- **Water clarity:** Slightly cloudy — faint bacterial bloom visible, consistent with active cycling at Day 39
+- **Algae:** Green algae noted on substrate and rear glass in recent photos
 
 ---
 
-## Plants
+## Active Concerns / Watch List
 
-- Surface plants (fine-leafed floaters, confirmed in photos) carpeting the waterline — described as thriving
-- Fine-leafed stem plants visible mid-column — stable
-- Green growth on back wall — some may be plant colonization, some likely algae; difficult to distinguish at current photo quality
+| Item | Status | Notes |
+|------|--------|-------|
+| Bacterial bloom | 🟡 Monitoring | Faint haze consistent with Day 39 cycling activity; expected to clear as cycle completes |
+| Surface plant canopy density | 🟡 Monitoring | 90%+ coverage may restrict gas exchange; beneficial now, warrants thinning before bioload increases |
+| Crushed coral bag — permanence | 🟡 Clarification needed | Appears to be buffering pH floor; unclear if permanent fixture or temporary |
+| Feeding cadence | 🟡 Action needed | Last feed >51h ago as of end of day; exceeded 48h threshold |
+| Cycle completion | 🟢 On track | Day 39; approaching completion; awaiting manual ammonia/nitrite confirmation |
 
 ---
 
 ## Recent Events
 
-- 2026-04-28: Shrimp count corrected from 7 to 5 (reflection artifact)
-- 2026-04-28: Algae bloom on tank sides confirmed by owner observation
-- 2026-04-28: Auto-feeder skill installed and active
-- 2026-04-27: Seven shrimp apparent in photo (subsequently revised)
-- 2026-04-26: pH probe recalibrated after voltage map correction
-- 2026-04-25: One shrimp removed (confirmed by Toby)
-- 2026-04-13: 6 shrimp introduced (4M/2F)
-
----
+- **2026-04-13:** 6 shrimp introduced (4M/2F)
+- **2026-04-25:** 1 shrimp confirmed removed (illness/death)
+- **2026-04-27:** 7 apparent count — corrected 2026-04-28 as glass reflections; 5 is current confirmed count
+- **2026-04-29:** Photo submitted — bacterial bloom, dense floating plant canopy, one shrimp visible mid-water; crushed coral bag present on substrate
