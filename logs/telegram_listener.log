@@ -2895,3 +2895,13 @@ Concerns: Surface plant coverage is extremely dense — nearly 90%+ of the water
 Day 39 of the cycle and the tank is unmistakably alive — one shrimp is visible mid-water, a vivid red streak against the hazy column. The floating plant layer has gone full canopy, blanketing nearly the entire surface, and a crushed coral (or similar) media bag sits squarely on the substrate, doing quiet buffering work. The water carries a faint milkiness that fits the profile of a bacterial bloom mid-cycle.
 [telegram-listener] Vision reply sent
 [telegram-listener] Processed 1 message(s), offset now 236833151
+[telegram-listener] 'take a photo' → capture_request
+[telegram-listener] ESP32-CAM snapshot saved: 2026-04-30_12-09-05.jpg
+[call-toby] Photo sent: 2026-04-30_12-09-05.jpg
+[telegram-listener] Processed 1 message(s), offset now 236833152
+[telegram-listener] 'noticing 6 or 7 little snails pop up over the tank, expecting a population bloom' → observation
+[call-toby] Telegram sent (info): Logged as observation: Owner noticed 6–7 small snails appearing around the tank. Anticipating a population bloom. ✓
+[telegram-listener] 'take a photo' → capture_request
+[telegram-listener] ESP32-CAM snapshot saved: 2026-04-30_12-16-10.jpg
+[call-toby] Photo sent: 2026-04-30_12-16-10.jpg
+[telegram-listener] Processed 2 message(s), offset now 236833154

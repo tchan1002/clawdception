@@ -3868,3 +3868,7 @@ All parameters are solidly in target range. The 24-hour trends are stable and mi
 [2026-04-30T11:15] Day 40 | skipped (stable) | T=75.87°F pH=6.51 TDS=213.0ppm
 [2026-04-30T11:30] Day 40 | skipped (stable) | T=75.87°F pH=6.51 TDS=215.0ppm
 [2026-04-30T11:45] Day 40 | skipped (stable) | T=75.65°F pH=6.55 TDS=214.0ppm
+[2026-04-30T12:00] Day 40 | skipped (stable) | T=75.54°F pH=6.57 TDS=215.0ppm
+[2026-04-30T12:15] Day 40 | risk=yellow | [manual event since last check ] | T=75.43°F pH=6.6 TDS=213.0ppm | Chemistry is solid and stable across all parameters. Green algae colonization at
+[2026-04-30T12:30] Day 40 | risk=yellow | [manual event since last check ] | T=75.2°F pH=6.62 TDS=212.0ppm | Chemistry is solid and stable; the yellow flag is ecological. Toby has observed 
+[2026-04-30T12:45] Day 40 | skipped (stable) | T=75.2°F pH=6.61 TDS=215.0ppm
