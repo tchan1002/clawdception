@@ -65,3 +65,7 @@
 [skill-writer] Proposal written to /home/pi/clawdception/proposals/2026-04-29-molttracker
 [call-toby] Document sent: proposal.md
 [call-toby] Sent with buttons (msg_id=800): New skill proposal: `molttracker` (new, risk: low)
+[skill-writer] Running — 27 daily logs available, conditions met (Day 40 of cycle)
+[skill-writer] Proposal written to /home/pi/clawdception/proposals/2026-04-30-nitratetracker
+[call-toby] Document sent: proposal.md
+[call-toby] Sent with buttons (msg_id=823): New skill proposal: `nitratetracker` (new, risk: low)

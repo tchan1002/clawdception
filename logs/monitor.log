@@ -3850,3 +3850,10 @@ All parameters are in target range with stable trajectories. The slight pH drift
 [2026-04-30T07:15] Day 40 | skipped (stable) | T=76.21°F pH=6.46 TDS=218.0ppm
 [2026-04-30T07:30] Day 40 | skipped (stable) | T=76.1°F pH=6.43 TDS=218.0ppm
 [2026-04-30T07:45] Day 40 | skipped (stable) | T=76.1°F pH=6.45 TDS=218.0ppm
+[2026-04-30T08:00] Day 40 | risk=green | [scheduled check-in (08:00)] | T=76.1°F pH=6.44 TDS=218.0ppm | All parameters are solidly in target range. The 24-hour trends are stable and mi
+[call-toby] Telegram sent (info): ✅ All clear — T=76.1°F pH=6.44 TDS=218.0ppm
+All parameters are solidly in target range. The 24-hour trends are stable and minor (±0.22°F, -0.05 pH, +5 ppm TDS) — well within normal post-water-change and daily drift. The colony is 400 hours (16.7 days) into introduction on a 40-day timeline, with one loss behind us and five shrimp accounted for.
+[2026-04-30T08:15] Day 40 | skipped (stable) | T=76.21°F pH=6.45 TDS=218.0ppm
+[2026-04-30T08:30] Day 40 | skipped (stable) | T=76.1°F pH=6.44 TDS=217.0ppm
+[2026-04-30T08:45] Day 40 | skipped (stable) | T=76.1°F pH=6.44 TDS=219.0ppm
+[2026-04-30T09:00] Day 40 | skipped (stable) | T=76.1°F pH=6.44 TDS=217.0ppm

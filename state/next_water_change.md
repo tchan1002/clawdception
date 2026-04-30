@@ -1,18 +1,18 @@
 # Water Change Prediction
-**Updated:** 2026-04-29 08:05 (Day 39)
+**Updated:** 2026-04-30 08:05 (Day 40)
 
 ## Current Readings
-- TDS: 213 ppm (ceiling 250 ppm, slope +1.3 ppm/day)
-- pH: 6.46 (floor 6.2, slope +0.031/day)
+- TDS: 218 ppm (ceiling 250 ppm, slope -0.3 ppm/day)
+- pH: 6.44 (floor 6.2, slope -0.005/day)
 
 ## Projections
-- TDS hits 250 ppm: ~26.9 days (Tue May 26)
-  - no clear trend — projection unreliable (R²=0.03)
-- pH hits 6.2: no crossing projected (trend flat or rising)
-  - no clear trend — projection unreliable (R²=0.02)
+- TDS hits 250 ppm: no crossing projected (trend flat or falling)
+  - no clear trend — projection unreliable (R²=0.00)
+- pH hits 6.2: ~76.8 days (Thu Jul 16)
+  - no clear trend — projection unreliable (R²=0.00)
 
 ## Suggested Change Window
-Tuesday, May 26 (~27d)
+Thursday, Jul 16 (~77d)
 
 ## History
 4d avg cadence, last change 2026-04-26
