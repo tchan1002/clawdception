@@ -483,3 +483,6 @@ json.decoder.JSONDecodeError: Expecting value: line 2 column 1 (char 1)
 [call-toby] Telegram sent (info): Action items:
 • Feed the shrimp within the next 12 hours to reset the 48-hour feeding window and maintain nutritional consistency
 • Consider a partial water change (15–20%) within 48 hours if final cycle completion tests show nitrate >80 ppm or ammonia/nitrite finally hitting zero — currently holding data from 2026-04-25 shows nitrate at 80 and NH3/NO2 at 0, suggesting cycle may be at or very near completion
+[shrimp-journal] Entry written: 2026-04-30-0605.md (Day 40)
+[call-toby] Telegram sent (info): Journal — Day 40 · 2026-04-30 06:05
+[call-toby] Document sent: 2026-04-30-0605.md
