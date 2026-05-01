@@ -3900,3 +3900,12 @@ All parameters are solidly in target range. The 24-hour trends are stable and mi
 [2026-04-30T19:15] Day 40 | skipped (stable) | T=74.3°F pH=6.69 TDS=214.0ppm
 [2026-04-30T19:30] Day 40 | skipped (stable) | T=74.53°F pH=6.69 TDS=215.0ppm
 [2026-04-30T19:45] Day 40 | skipped (stable) | T=74.64°F pH=6.68 TDS=213.0ppm
+[2026-04-30T20:00] Day 40 | risk=yellow | [scheduled check-in (20:00)] | T=74.41°F pH=6.7 TDS=215.0ppm | Temperature drifting slightly downward (24hr Δ -0.9°F); pH stable post-calibrati
+[call-toby] Telegram sent (warning): Temperature drifting slightly downward (24hr Δ -0.9°F); pH stable post-calibration. The colony is 17 days established; emerging snail population and visible green algae are normal cycling phenomena. Water chemistry remains solid, but nitrate levels from April 25 (80 ppm) warrant a retest before water change decisions.
+
+⏳ 🧪 Run a water test (ammonia / nitrite / pH) — Confirm nitrate stabilization post-cycle; last test (Apr 25) logged 80 ppm. If sustained above 40 ppm, plan 20–30% water change.
+• 📸 Send a photo of the tank — Clear, well-lit interior shot—confirm visual status, coloration, and behavior of all five shrimp, especially post-snail bloom observation.
+• 👀 Observe shrimp behavior — Monitor temperature trend; slight downward drift over 24hr is not urgent but worth noting if it continues.
+[2026-04-30T20:15] Day 40 | skipped (stable) | T=74.41°F pH=6.67 TDS=215.0ppm
+[2026-04-30T20:30] Day 40 | skipped (stable) | T=74.41°F pH=6.69 TDS=216.0ppm
+[2026-04-30T20:45] Day 40 | skipped (stable) | T=74.53°F pH=6.68 TDS=215.0ppm
