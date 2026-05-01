@@ -3982,3 +3982,7 @@ All parameters are solidly in target range. The 24-hour trends are stable and mi
 ❗ 👀 Observe shrimp behavior — Monitor molting shrimp closely for next 1-2 hours—watch for difficulty, failure to exit shell completely, or lethargy post-molt. Difficult molts can indicate pH/mineral stress or be isolated events; assess context when molt completes.
 [2026-05-01T11:45] Day 41 | risk=red | [manual event since last check ] | T=75.76°F pH=6.73 TDS=221.0ppm | One of five shrimp is actively molting in visible distress—tipped over mid-molt 
 [2026-05-01T12:00] Day 41 | skipped (stable) | T=75.87°F pH=6.67 TDS=221.0ppm
+[2026-05-01T12:15] Day 41 | risk=yellow | [manual event since last check ] | T=75.99°F pH=6.65 TDS=222.0ppm | Parameters are solid, but the molting shrimp photographed at 11:31 is in acute v
+[2026-05-01T12:30] Day 41 | risk=green | [manual event since last check ] | T=75.99°F pH=6.63 TDS=222.0ppm | All parameters are solidly in target range with minimal drift over 24 hours. The
+[2026-05-01T12:45] Day 41 | skipped (stable) | T=75.99°F pH=6.59 TDS=222.0ppm
+[2026-05-01T13:00] Day 41 | skipped (stable) | T=76.1°F pH=6.57 TDS=222.0ppm

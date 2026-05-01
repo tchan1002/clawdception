@@ -3005,3 +3005,20 @@ Concerns: Water appears slightly hazy/cloudy in the mid-to-upper water column �
 The tank is shot from a low angle looking toward the back wall, revealing a large mesh media bag dominating the foreground substrate, with at least two small red shrimp visible — one on the substrate near the left plant cluster and one resting on or near the mesh bag. The water column in the background shows a soft haze, consistent with a bacterial bloom that's common in the late stages of a nitrogen cycle.
 [telegram-listener] Vision reply sent
 [telegram-listener] Processed 1 message(s), offset now 236833178
+[telegram-listener] 'the autofeeder is just a skill right now' → owner_note
+[call-toby] Telegram sent (info): Logged as owner note: Owner clarifies that the autofeeder is not yet a physical device — it currently exists only as an Alexa/voice skill (software integration), not hardware installed on the tank. ✓
+[telegram-listener] 'still doing manual feeding' → feeding
+[call-toby] Telegram sent (info): Logged as feeding: Owner confirmed manual feeding is ongoing — no automated feeding in place yet. ✓
+[telegram-listener] Processed 2 message(s), offset now 236833180
+[telegram-listener] 'he lived! glad we didn’t remove him prematurely' → observation
+[call-toby] Telegram sent (info): Logged as observation: Shrimp survivor confirmed alive — owner relieved they waited before considering removal. Likely a shrimp that had been still or showing signs of stress. ✓
+[telegram-listener] '5 shrimp in tank' → shrimp_added
+[call-toby] Telegram sent (info): Logged as shrimp added: Owner reports 5 shrimp are now in the tank. ✓
+[telegram-listener] Processed 2 message(s), offset now 236833182
+[telegram-listener] Photo saved: 2026-05-01_12-26-02.jpg — ''
+[call-toby] Telegram sent (info): 1 shrimp visible · water: clear · plants: none visible
+Concerns: none
+
+One deeply saturated red Neocaridina shrimp stands confidently on the dark substrate, photographed in crisp close-up profile — antennae extended forward, posture upright and alert. In the background, a large rounded object (possibly a rock, decoration, or hardscape element) is slightly out of focus but shows some texture and faint green spotting that may be the earliest hint of algae colonization.
+[telegram-listener] Vision reply sent
+[telegram-listener] Processed 1 message(s), offset now 236833183

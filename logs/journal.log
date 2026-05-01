@@ -505,3 +505,6 @@ json.decoder.JSONDecodeError: Expecting value: line 2 column 1 (char 1)
 [call-toby] Telegram sent (info): Action items:
 • Confirm auto-feeder is activated and feeding—check device status immediately; if offline, resume manual feeding within next 24 hours and diagnose feeder connectivity/setup
 • If auto-feeder is not yet active: feed colony with standard portion (check Toby's feeding log for typical portion size if unknown) within 24 hours to close the 83-hour gap
+[shrimp-journal] Entry written: 2026-05-01-1205.md (Day 41)
+[call-toby] Telegram sent (info): Journal — Day 41 · 2026-05-01 12:05
+[call-toby] Document sent: 2026-05-01-1205.md

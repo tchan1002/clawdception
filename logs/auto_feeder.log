@@ -129,3 +129,4 @@
 [2026-05-01T10:00] auto-feeder | yellow | Last feeding 86.9h ago — exceeds 48h threshold.
 [2026-05-01T11:00] auto-feeder | green | Last feeding 0.1h ago — within 48h threshold.
 [2026-05-01T12:00] auto-feeder | green | Last feeding 1.1h ago — within 48h threshold.
+[2026-05-01T13:00] auto-feeder | green | Last feeding 0.9h ago — within 48h threshold.
