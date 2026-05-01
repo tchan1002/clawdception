@@ -3909,3 +3909,8 @@ All parameters are solidly in target range. The 24-hour trends are stable and mi
 [2026-04-30T20:15] Day 40 | skipped (stable) | T=74.41°F pH=6.67 TDS=215.0ppm
 [2026-04-30T20:30] Day 40 | skipped (stable) | T=74.41°F pH=6.69 TDS=216.0ppm
 [2026-04-30T20:45] Day 40 | skipped (stable) | T=74.53°F pH=6.68 TDS=215.0ppm
+[2026-04-30T21:00] Day 40 | risk=green | [manual event since last check ] | T=74.64°F pH=6.69 TDS=214.0ppm | All parameters sit comfortably within target ranges with stable 24hr trends; mos
+[call-toby] Telegram sent (info): All parameters sit comfortably within target ranges with stable 24hr trends; most recent photo (0hr ago) logged a healthy molt, indicating shrimp are acclimating well at day 40 post-introduction. Nitrate retest needed within 48hr to confirm post-cycle stabilization, but current readings offer no immediate cause for concern.
+
+• feeding
+[2026-04-30T21:15] Day 40 | skipped (stable) | T=74.64°F pH=6.66 TDS=220.0ppm
