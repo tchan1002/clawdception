@@ -3925,3 +3925,8 @@ All parameters are solidly in target range. The 24-hour trends are stable and mi
 [2026-04-30T23:30] Day 40 | skipped (stable) | T=74.64°F pH=6.56 TDS=220.0ppm
 [2026-04-30T23:45] Day 40 | stale | last reading 37min ago (23:07)
 [call-toby] Telegram sent (warning): ESP32 offline — no sensor data for 37 min. Last reading: 23:07.
+[2026-05-01T00:00] Day 41 | risk=green | [temp_f changed 2.36 in last ho] | T=77.0°F pH=6.55 TDS=208.0ppm | All three parameters are solidly in range. The temperature spike is worth watchi
+[2026-05-01T00:15] Day 41 | skipped (stable) | T=74.53°F pH=6.51 TDS=215.0ppm
+[2026-05-01T00:30] Day 41 | skipped (stable) | T=74.64°F pH=6.51 TDS=216.0ppm
+[2026-05-01T00:45] Day 41 | risk=green | [temp_f changed 2.25 in last ho] | T=74.75°F pH=6.5 TDS=215.0ppm | Tank is stable across all parameters. The 2.25°F temp drop in one hour is within
+[2026-05-01T01:00] Day 41 | skipped (stable) | T=75.09°F pH=6.48 TDS=214.0ppm
