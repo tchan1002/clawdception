@@ -3974,3 +3974,11 @@ All parameters are solidly in target range. The 24-hour trends are stable and mi
 [2026-05-01T10:15] Day 41 | skipped (stable) | T=75.43°F pH=6.5 TDS=216.0ppm
 [2026-05-01T10:30] Day 41 | skipped (stable) | T=75.43°F pH=6.52 TDS=217.0ppm
 [2026-05-01T10:45] Day 41 | skipped (stable) | T=75.31°F pH=6.54 TDS=215.0ppm
+[2026-05-01T11:00] Day 41 | risk=green | [manual event since last check ] | T=75.2°F pH=6.53 TDS=216.0ppm | All parameters comfortably in target range; 24-hour stats show normal drift with
+[2026-05-01T11:15] Day 41 | risk=yellow | [manual event since last check ] | T=75.31°F pH=6.76 TDS=219.0ppm | Water chemistry is stable and within target range. However, Toby just observed f
+[2026-05-01T11:30] Day 41 | risk=yellow | [manual event since last check ] | T=75.31°F pH=6.75 TDS=222.0ppm | Colony is in an active molt event—one shrimp observed struggling, tipped over bu
+[call-toby] Telegram sent (warning): Colony is in an active molt event—one shrimp observed struggling, tipped over but righted itself—which is developmentally normal at Day 41 but demands close observation over the next hour. Water parameters are solid and stable; the real risk is molt complications or injury during the vulnerable window Toby is monitoring.
+
+❗ 👀 Observe shrimp behavior — Monitor molting shrimp closely for next 1-2 hours—watch for difficulty, failure to exit shell completely, or lethargy post-molt. Difficult molts can indicate pH/mineral stress or be isolated events; assess context when molt completes.
+[2026-05-01T11:45] Day 41 | risk=red | [manual event since last check ] | T=75.76°F pH=6.73 TDS=221.0ppm | One of five shrimp is actively molting in visible distress—tipped over mid-molt 
+[2026-05-01T12:00] Day 41 | skipped (stable) | T=75.87°F pH=6.67 TDS=221.0ppm

@@ -2937,3 +2937,71 @@ The tank is photographed from above, revealing a strikingly dense carpet of brig
 [telegram-listener] 'heading out for the weekend for a camping trip, be back in about 48 hours' → owner_note
 [call-toby] Telegram sent (info): Logged as owner note: Owner heading out for a camping trip; will be away for approximately 48 hours. ✓
 [telegram-listener] Processed 1 message(s), offset now 236833161
+[telegram-listener] Processed 1 message(s), offset now 236833162
+[telegram-listener] Photo saved: 2026-05-01_11-04-04.jpg — ''
+[call-toby] Telegram sent (info): 4 shrimp visible · water: clear · plants: stable
+Concerns: none
+
+Four shrimp are visible in this shot — two vivid red adults cruising the foreground substrate and at least two more translucent/pale individuals mid-column near the left, possibly younger or less-pigmented animals. A clump of green moss anchors the right side of the frame, and a fine-stemmed plant reaches up toward the surface on the left. The colony looks active and settled; nobody is stationary in an alarming way, and the water column is clean.
+[telegram-listener] Vision reply sent
+[telegram-listener] Photo saved: 2026-05-01_11-04-15.jpg — ''
+[call-toby] Telegram sent (info): 2 shrimp visible · water: clear · plants: stable
+Algae: Green feathery/filamentous growth visible on the left side, likely hornwort or a fine-leaved stem plant with some mixed brown/olive discoloration at the base — could include some algae colonization. Small green spots visible on the mesh/net object in the right foreground.
+Concerns: A mesh or net bag object occupies the right foreground — identity unclear (could be a filter media bag, mesh breeder, or similar equipment). Worth confirming its purpose if not intentional., The feathery plant on the left shows some browning/olive discoloration at the lower portion, suggesting possible die-back or algae coating on older growth.
+
+Two red shrimp are visible on the substrate near the base of the left plant cluster — one clearly in the midground, one slightly further back. The water column itself reads clean and clear; the slightly hazy appearance is glass glare, not turbidity. A large mesh bag dominates the right foreground, its purpose unknown from this angle.
+[telegram-listener] Vision reply sent
+[telegram-listener] Processed 2 message(s), offset now 236833164
+[telegram-listener] 'observing some fighting behavior, one shrimp was flipped completely upside down and did not seem like it could get back up' → observation
+[call-toby] Telegram sent (info): Logged as observation: Owner observed fighting behavior among shrimp; one shrimp was flipped completely upside down and appeared unable to right itself. ✓
+[telegram-listener] 'it’s still moving it’s swimmerets but does not look like it’s in good shape, should I remove it from the tank?' → question
+[call-toby] Telegram sent (info): Yes, remove it. A shrimp that's been flipped and can't right itself is in serious distress — leaving it risks stress to the others and, if it dies in place, a ammonia spike while you're away. Pop it in a small cup of tank water and see if it recovers isolated; if it doesn't within an hour or two, euthanize in ice water.
+[telegram-listener] Processed 2 message(s), offset now 236833166
+[telegram-listener] 'by chance of survival?' → question
+[call-toby] Telegram sent (info): The flipped shrimp is the one thing I can't shake — that's not normal jostling, that's a shrimp in real distress, possibly a bad molt or an injury from the "fighting" behavior. 48 hours is a long time to leave that unresolved with no one watching. If you have anyone who can check in even once, I'd ask them to look for that individual and remove it if it's still upside down or being harassed.
+[telegram-listener] Processed 1 message(s), offset now 236833167
+[telegram-listener] 'oh it seems like it’s midmolt' → observation
+[call-toby] Telegram sent (info): Logged as observation: Owner observed a shrimp in mid-molt. ✓
+[telegram-listener] Processed 1 message(s), offset now 236833169
+[telegram-listener] 'going to check back in in an hour' → owner_note
+[call-toby] Telegram sent (info): Logged as owner note: Owner stepping away; will check back in about an hour. ✓
+[telegram-listener] Processed 1 message(s), offset now 236833170
+[telegram-listener] 'its managed to turn itself back upright, the molt looks painful but I believe it’ll pull through' → observation
+[call-toby] Telegram sent (info): Logged as observation: Shrimp observed struggling through a molt — had tipped over but righted itself. Owner reports the molt looks difficult but is cautiously optimistic it will survive. ✓
+[telegram-listener] Processed 1 message(s), offset now 236833172
+[telegram-listener] Photo saved: 2026-05-01_11-18-04.jpg — ''
+[call-toby] Telegram sent (info): 1 shrimp visible · water: clear · plants: none visible
+Concerns: none
+
+A single vivid red Neocaridina cherry shrimp is perched confidently on the substrate, caught in sharp profile — antennae forward, posture relaxed and alert. The water is crystal clear with excellent visibility, and the shrimp's deep red coloration is a strong indicator of good health and pigmentation.
+[telegram-listener] Vision reply sent
+[telegram-listener] 'got a really clear shot of another inhabitant in the tank' → capture_request
+[telegram-listener] ESP32-CAM snapshot saved: 2026-05-01_11-18-17.jpg
+[call-toby] Photo sent: 2026-05-01_11-18-17.jpg
+[telegram-listener] Processed 2 message(s), offset now 236833174
+[telegram-listener] Photo saved: 2026-05-01_11-20-04.jpg — ''
+[call-toby] Telegram sent (info): 1 shrimp visible · water: clear · plants: stable
+Algae: Light biofilm or early algae growth visible on substrate pellets and faintly on background hardscape/mesh structure. Consistent with a cycling tank developing its first microbial layers.
+Concerns: none
+
+A single brilliantly-colored cherry shrimp stands confidently on the substrate — deep, saturated red coloration with good body posture and visible antennae extended forward, suggesting an alert and healthy animal. In the background, what appears to be a mesh or lace-structured object (possibly a breeder box, filter media bag, or decorative element) occupies the upper half of the frame, with faint greenish algae spotting visible on its surface — a natural sign of the tank's biology waking up at Day 41.
+[telegram-listener] Vision reply sent
+[telegram-listener] Photo saved: 2026-05-01_11-20-15.jpg — ''
+[call-toby] Telegram sent (info): 1 shrimp visible · water: clear · plants: none visible
+Algae: Small patches of green algae visible on what appears to be a large hardscape element (rock or driftwood) in the background. Also a few dark specks on the hardscape surface that may be algae or biofilm. Amount appears modest and typical for a cycling tank.
+Concerns: none
+
+A single cherry shrimp — vibrant, deeply saturated red — is posed in confident profile on the substrate, antennae extended forward and legs actively planted. The shrimp looks healthy: coloration is rich and opaque, body posture is upright and alert, and there are no visible signs of disease, stress banding, or lethargy.
+[telegram-listener] Vision reply sent
+[telegram-listener] Processed 2 message(s), offset now 236833176
+[telegram-listener] 'removed 50% of the duckweed in the tank' → maintenance
+[call-toby] Telegram sent (info): Logged as maintenance: Removed approximately 50% of the duckweed from the tank. ✓
+[telegram-listener] Processed 1 message(s), offset now 236833177
+[telegram-listener] Photo saved: 2026-05-01_11-31-04.jpg — 'the molting shrimp is fighting for its life'
+[call-toby] Telegram sent (info): "the molting shrimp is fighting for its life"
+2 shrimp visible · water: slightly cloudy · plants: stable
+Concerns: Water appears slightly hazy/cloudy in the mid-to-upper water column — could be bacterial bloom consistent with active nitrogen cycling on Day 41, Mesh media bag occupying significant foreground floor space — unclear if intentional hardscape or temporary placement
+
+The tank is shot from a low angle looking toward the back wall, revealing a large mesh media bag dominating the foreground substrate, with at least two small red shrimp visible — one on the substrate near the left plant cluster and one resting on or near the mesh bag. The water column in the background shows a soft haze, consistent with a bacterial bloom that's common in the late stages of a nitrogen cycle.
+[telegram-listener] Vision reply sent
+[telegram-listener] Processed 1 message(s), offset now 236833178
