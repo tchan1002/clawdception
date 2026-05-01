@@ -1,8 +1,8 @@
 # State of Tank — Media Luna
 
-**Last updated:** 2026-04-29
-**Cycle day:** 39 (started 2026-03-22)
-**Tank status:** Nitrogen cycle in late-stage progression; biological filter active; bacterial bloom visible; floating plant canopy at near-total surface coverage
+**Last updated:** 2026-04-30
+**Cycle day:** 40 (started 2026-03-22)
+**Tank status:** Nitrogen cycle at day 40 — late-stage, biological filter active; water carrying slight green tint consistent with algal growth
 
 ---
 
@@ -10,48 +10,46 @@
 
 | Animal | Count | Notes |
 |--------|-------|-------|
-| Neocaridina shrimp | 5 confirmed | 6 introduced 2026-04-13 (4M/2F); 1 confirmed removed 2026-04-25; one visible mid-water in 2026-04-29 photo — active, untroubled |
+| Neocaridina cherry shrimp | 5 confirmed (assumed) | 6 introduced 2026-04-13 (4M/2F); 1 confirmed removed 2026-04-25; 1 shrimp visible in noon photo 2026-04-30 — present and unhurried |
+| Snails | 6–7 observed | First logged count; observed 2026-04-30; population bloom expected per Toby |
 
 ---
 
-## Water Chemistry (as of 2026-04-29)
+## Water Parameters
 
-| Parameter | Current Avg | Range | Status |
-|-----------|------------|-------|--------|
-| Temperature | 75.7°F | 75.09–76.44°F | ✅ Nominal |
-| pH | 6.60 | 6.44–6.71 | ✅ Acceptable; low-end buffered by crushed coral |
-| TDS | 216 ppm | 213–219 ppm | ✅ Stable |
-
-No ammonia, nitrite, or nitrate manual test results on file for this date.
-
----
-
-## Physical Environment (from photo 2026-04-29)
-
-- **Substrate:** Dark granular substrate; appears generally clean
-- **Hardscape/Media:** Mesh bag (likely crushed coral or aragonite) resting on substrate near center — purpose appears to be pH/KH buffering; permanence unconfirmed
-- **Surface plants:** Dense floating plant layer (frogbit, duckweed, or similar) covering approximately 90%+ of water surface — full canopy
-- **Lower tank:** Some green growth visible on substrate lower left — possibly a small stem plant or moss establishing
-- **Water clarity:** Slightly cloudy — faint bacterial bloom visible, consistent with active cycling at Day 39
-- **Algae:** Green algae noted on substrate and rear glass in recent photos
+| Parameter | Current (2026-04-30 avg) | Notes |
+|-----------|--------------------------|-------|
+| Temperature | 75.2°F avg (74.2–77.0) | Normal range; +0.9°F day change |
+| pH | 6.60 avg (6.41–6.74) | Slightly low for Neocaridina (target 7.0–7.6); stable trend |
+| TDS | 216 ppm avg (208–221) | Within acceptable range; slight downward drift |
+| Ammonia | Unknown | Retest needed |
+| Nitrite | Unknown | Retest needed |
+| Nitrate | Last tested 2026-04-25: ~80 ppm | Elevated; retest overdue; target <40 ppm |
 
 ---
 
-## Active Concerns / Watch List
+## Physical Conditions
 
-| Item | Status | Notes |
-|------|--------|-------|
-| Bacterial bloom | 🟡 Monitoring | Faint haze consistent with Day 39 cycling activity; expected to clear as cycle completes |
-| Surface plant canopy density | 🟡 Monitoring | 90%+ coverage may restrict gas exchange; beneficial now, warrants thinning before bioload increases |
-| Crushed coral bag — permanence | 🟡 Clarification needed | Appears to be buffering pH floor; unclear if permanent fixture or temporary |
-| Feeding cadence | 🟡 Action needed | Last feed >51h ago as of end of day; exceeded 48h threshold |
-| Cycle completion | 🟢 On track | Day 39; approaching completion; awaiting manual ammonia/nitrite confirmation |
+- **Substrate:** Brown granular material, clean and undisturbed (confirmed 2026-04-30 evening photo)
+- **Rear glass:** Green algae colonization visible (documented from day 38 onward)
+- **Water tint:** Slightly green as of 2026-04-30 evening — consistent with algal growth in column
+- **Plants:** Healthy cluster of bright green small-leafed aquatic plant visible in upper-left area of tank (confirmed thriving, 2026-04-30 evening photo); floating plant canopy documented at ~90%+ as of 2026-04-29
+- **Equipment:** Filter media bag (cylindrical bio-rings), pump/powerhead with suction cup mount, LED strip (submerged, operational), teal filter intake, black device (heater or secondary filter) — all visible in recent photos; all equipment checks passing
 
 ---
 
-## Recent Events
+## Open Questions
 
-- **2026-04-13:** 6 shrimp introduced (4M/2F)
-- **2026-04-25:** 1 shrimp confirmed removed (illness/death)
-- **2026-04-27:** 7 apparent count — corrected 2026-04-28 as glass reflections; 5 is current confirmed count
-- **2026-04-29:** Photo submitted — bacterial bloom, dense floating plant canopy, one shrimp visible mid-water; crushed coral bag present on substrate
+- Nitrate level — needs retest; 80 ppm reading from April 25 may necessitate a water change
+- Whether green water deepens or stabilizes over coming days
+- Feeding: last logged feed was >75 hours ago as of end of day 40
+- Full visual confirmation of all 5 shrimp still pending
+
+---
+
+## Recent History
+
+- **2026-04-13:** 6 shrimp introduced
+- **2026-04-25:** 1 shrimp removed (confirmed); nitrate tested at ~80 ppm
+- **2026-04-29:** Single shrimp visible mid-water in photo; floating plant canopy near total coverage
+- **2026-04-30:** 6–7 snails counted; water described as slightly green; 1 shrimp visible in noon photo; ESP32 offline 37 min late evening (recovered)
