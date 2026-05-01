@@ -69,3 +69,7 @@
 [skill-writer] Proposal written to /home/pi/clawdception/proposals/2026-04-30-nitratetracker
 [call-toby] Document sent: proposal.md
 [call-toby] Sent with buttons (msg_id=823): New skill proposal: `nitratetracker` (new, risk: low)
+[skill-writer] Running — 28 daily logs available, conditions met (Day 41 of cycle)
+[skill-writer] Proposal written to /home/pi/clawdception/proposals/2026-05-01-algae-monitor
+[call-toby] Document sent: proposal.md
+[call-toby] Sent with buttons (msg_id=857): New skill proposal: `algae-monitor` (new, risk: low)
