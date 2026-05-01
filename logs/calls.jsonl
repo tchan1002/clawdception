@@ -518,3 +518,4 @@
 {"timestamp": "2026-04-30T23:45:02.069706", "urgency": "warning", "message": "ESP32 offline \u2014 no sensor data for 37 min. Last reading: 23:07.", "sent_via": "telegram"}
 {"timestamp": "2026-05-01T00:05:17.098842", "urgency": "info", "message": "Journal \u2014 Day 41 \u00b7 2026-05-01 00:05", "sent_via": "telegram"}
 {"timestamp": "2026-05-01T01:00:01.908604", "urgency": "info", "message": "Media Luna \u2014 last feeding 78h ago. Time to feed the shrimp.", "sent_via": "telegram"}
+{"timestamp": "2026-05-01T05:00:02.912767", "urgency": "info", "message": "Media Luna \u2014 last feeding 82h ago. Time to feed the shrimp.", "sent_via": "telegram"}
