@@ -2916,3 +2916,24 @@ Top-down shot looking into the tank, catching a good slice of the interior: a me
 [telegram-listener] 'water looks a little more green but conditions seem stable' → observation
 [call-toby] Telegram sent (info): Logged as observation: Water appears slightly greener than before; overall conditions seem stable per owner observation. ✓
 [telegram-listener] Processed 1 message(s), offset now 236833156
+[telegram-listener] 'just fed the tank' → feeding
+[call-toby] Telegram sent (info): Logged as feeding: Toby fed the tank. ✓
+[telegram-listener] Photo saved: 2026-05-01_10-52-11.jpg — ''
+[call-toby] Telegram sent (info): 1 shrimp visible · water: slightly cloudy · plants: thriving
+Algae: Dense carpet of floating plants (likely frogbit or duckweed) covering nearly the entire water surface — bright yellow-green, appearing healthy and prolific. A small clump of green stem or moss plant is visible on the substrate toward the left-center of the tank.
+Concerns: Water has a faint greenish-grey haze — could reflect green water (algae bloom) or be a camera/lighting artifact; worth monitoring, Surface plant coverage is extremely dense and may be blocking significant light from reaching submerged plants and substrate, A white mesh bag (likely containing crushed coral or similar buffering media) is sitting directly on the substrate — placement looks stable but worth noting as a new or modified element
+
+Day 41 of the cycle and the tank is showing real signs of life — the surface is blanketed in floating plants, thriving in that window light, and a small clump of aquatic plant is establishing on the substrate. There's at least one shrimp visible tucked near the mesh bag toward the right-center. The water carries a faint greenish cast that could be the early stages of green water or just a trick of the light bouncing off all that surface growth — worth keeping an eye on over the next few days.
+[telegram-listener] Vision reply sent
+[telegram-listener] Photo saved: 2026-05-01_10-52-26.jpg — ''
+[call-toby] Telegram sent (info): 0 shrimp visible · water: clear · plants: thriving
+Concerns: Dense duckweed coverage — surface is nearly 80–90% covered, which may reduce gas exchange and limit light penetration to any submerged plants below, Two vertical equipment tubes (likely heater and filter intake/output) are visible mid-tank — confirm both are functioning and seated correctly, Shadow/dark zone in the upper-center of the surface mat may indicate a circulation dead spot where duckweed is being pushed aside by surface agitation — worth monitoring
+
+The tank is photographed from above, revealing a strikingly dense carpet of bright chartreuse duckweed blanketing nearly the entire water surface — a vivid, almost electric green mosaic. The water beneath appears clear where visible through gaps in the mat, with a bubbling disturbance near the center suggesting active aeration or filter outflow.
+[telegram-listener] Vision reply sent
+[telegram-listener] 'thick duckweed growth so we removed some' → maintenance
+[call-toby] Telegram sent (info): Logged as maintenance: Duckweed growth was thick; a portion was manually removed to manage surface coverage. ✓
+[telegram-listener] Processed 4 message(s), offset now 236833160
+[telegram-listener] 'heading out for the weekend for a camping trip, be back in about 48 hours' → owner_note
+[call-toby] Telegram sent (info): Logged as owner note: Owner heading out for a camping trip; will be away for approximately 48 hours. ✓
+[telegram-listener] Processed 1 message(s), offset now 236833161
