@@ -3921,3 +3921,7 @@ All parameters are solidly in target range. The 24-hour trends are stable and mi
 [2026-04-30T22:30] Day 40 | skipped (stable) | T=74.64°F pH=6.6 TDS=219.0ppm
 [2026-04-30T22:45] Day 40 | skipped (stable) | T=74.64°F pH=6.58 TDS=221.0ppm
 [2026-04-30T23:00] Day 40 | skipped (stable) | T=74.53°F pH=6.58 TDS=219.0ppm
+[2026-04-30T23:15] Day 40 | skipped (stable) | T=74.64°F pH=6.56 TDS=220.0ppm
+[2026-04-30T23:30] Day 40 | skipped (stable) | T=74.64°F pH=6.56 TDS=220.0ppm
+[2026-04-30T23:45] Day 40 | stale | last reading 37min ago (23:07)
+[call-toby] Telegram sent (warning): ESP32 offline — no sensor data for 37 min. Last reading: 23:07.
