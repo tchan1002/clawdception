@@ -1,8 +1,8 @@
 # State of Tank — Media Luna
 
-**Last updated:** 2026-04-30
-**Cycle day:** 40 (started 2026-03-22)
-**Tank status:** Nitrogen cycle at day 40 — late-stage, biological filter active; water carrying slight green tint consistent with algal growth
+**Last updated:** 2026-05-01
+**Cycle day:** 41 (started 2026-03-22)
+**Tank status:** Nitrogen cycle active, Day 41. Biological filter established. Colony introduction complete.
 
 ---
 
@@ -10,46 +10,46 @@
 
 | Animal | Count | Notes |
 |--------|-------|-------|
-| Neocaridina cherry shrimp | 5 confirmed (assumed) | 6 introduced 2026-04-13 (4M/2F); 1 confirmed removed 2026-04-25; 1 shrimp visible in noon photo 2026-04-30 — present and unhurried |
-| Snails | 6–7 observed | First logged count; observed 2026-04-30; population bloom expected per Toby |
+| Neocaridina cherry shrimp | 6 confirmed | 1 original resident (survived solo since 2026-04-25 removal of others); 5 new individuals added 2026-05-01 at 12:25 |
+
+**Notable:** One shrimp experienced a difficult/hard molt on the morning of 2026-05-01. Was found inverted and unable to right itself (~11:05). Righted itself by 11:17. Currently in recovery. Post-molt vulnerability window: 24–48 hours. Coloration and feeding behavior are key recovery signals to watch.
+
+**New arrivals:** Introduced 2026-05-01. Expected to hide during acclimation — low visible counts in photos over the next several days are normal and not cause for concern.
 
 ---
 
-## Water Parameters
+## Water Chemistry (as of 2026-05-01)
 
-| Parameter | Current (2026-04-30 avg) | Notes |
-|-----------|--------------------------|-------|
-| Temperature | 75.2°F avg (74.2–77.0) | Normal range; +0.9°F day change |
-| pH | 6.60 avg (6.41–6.74) | Slightly low for Neocaridina (target 7.0–7.6); stable trend |
-| TDS | 216 ppm avg (208–221) | Within acceptable range; slight downward drift |
-| Ammonia | Unknown | Retest needed |
-| Nitrite | Unknown | Retest needed |
-| Nitrate | Last tested 2026-04-25: ~80 ppm | Elevated; retest overdue; target <40 ppm |
+| Parameter | Value | Status |
+|-----------|-------|--------|
+| Temperature | 75.2–76.1°F, avg 75.8°F | ✅ Stable, within Neocaridina range |
+| pH | 6.37–6.76, avg 6.47 | ⚠️ Low end for Neocaridina (target 6.8–7.5) — stable, no acute trend |
+| TDS | 214–226 ppm, avg 221.7 ppm | ✅ Within acceptable range; slight uptick post-introduction |
+
+pH has been running on the low side for several days. No acute danger, but worth tracking. Post-introduction TDS rise of ~9 ppm is consistent with adding animals and is expected.
 
 ---
 
-## Physical Conditions
+## Physical Tank (confirmed from photos)
 
-- **Substrate:** Brown granular material, clean and undisturbed (confirmed 2026-04-30 evening photo)
-- **Rear glass:** Green algae colonization visible (documented from day 38 onward)
-- **Water tint:** Slightly green as of 2026-04-30 evening — consistent with algal growth in column
-- **Plants:** Healthy cluster of bright green small-leafed aquatic plant visible in upper-left area of tank (confirmed thriving, 2026-04-30 evening photo); floating plant canopy documented at ~90%+ as of 2026-04-29
-- **Equipment:** Filter media bag (cylindrical bio-rings), pump/powerhead with suction cup mount, LED strip (submerged, operational), teal filter intake, black device (heater or secondary filter) — all visible in recent photos; all equipment checks passing
+- **Substrate:** Dark granular pellets — appears to be aqua soil or similar black/dark substrate
+- **Hardscape:** Large rounded pale/cream stone visible in full-tank shot; additional rounded object (possibly rock) in background showing early algae/biofilm spotting
+- **Equipment:** Filter head and cords visible; two vertical equipment tubes (likely heater and filter intake/output); white mesh media bag sitting on substrate
+- **Plants:** Dense green plant mass (bushy/stem plant) in midground/background; fine-stemmed plant reaching toward surface; green moss clump visible in one photo; duckweed floating surface plant — trimmed 50% on 2026-05-01 morning
+- **Algae:** Early green spotting visible on hardscape elements — appropriate for Day 41; faint biofilm on some substrate pellets; no nuisance algae
+- **Water clarity:** Mostly clear; faint mid-column haze in one photo consistent with late-stage cycling bacterial activity
+
+---
+
+## Recent Events
+
+- **2026-05-01:** 50% duckweed trim; difficult molt observed and resolved; 5 new shrimp introduced; two feedings logged; Toby departed for 48-hour camping trip
+- **2026-04-30:** Water described as "slightly more green" — consistent with algal bloom in late cycling
 
 ---
 
 ## Open Questions
 
-- Nitrate level — needs retest; 80 ppm reading from April 25 may necessitate a water change
-- Whether green water deepens or stabilizes over coming days
-- Feeding: last logged feed was >75 hours ago as of end of day 40
-- Full visual confirmation of all 5 shrimp still pending
-
----
-
-## Recent History
-
-- **2026-04-13:** 6 shrimp introduced
-- **2026-04-25:** 1 shrimp removed (confirmed); nitrate tested at ~80 ppm
-- **2026-04-29:** Single shrimp visible mid-water in photo; floating plant canopy near total coverage
-- **2026-04-30:** 6–7 snails counted; water described as slightly green; 1 shrimp visible in noon photo; ESP32 offline 37 min late evening (recovered)
+- pH running consistently below target range — is this a buffering issue, substrate influence (aqua soil is known to lower pH), or something else?
+- Molting shrimp: full recovery to be confirmed via next photo opportunity
+- Autofeeder not yet installed — manual feeding only
