@@ -3022,3 +3022,4 @@ Concerns: none
 One deeply saturated red Neocaridina shrimp stands confidently on the dark substrate, photographed in crisp close-up profile — antennae extended forward, posture upright and alert. In the background, a large rounded object (possibly a rock, decoration, or hardscape element) is slightly out of focus but shows some texture and faint green spotting that may be the earliest hint of algae colonization.
 [telegram-listener] Vision reply sent
 [telegram-listener] Processed 1 message(s), offset now 236833183
+[telegram-listener] getUpdates failed: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot***/getUpdates?offset=236833183&timeout=0&limit=100 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fff444b5550>: Failed to resolve 'api.telegram.org' ([Errno -3] Temporary failure in name resolution)"))
