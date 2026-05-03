@@ -10,3 +10,6 @@
 [water-change-predictor] Written — TDS ceiling in none | pH floor in 76.8d
 [water-change-predictor] Written — TDS ceiling in none | pH floor in 10.0d
 [water-change-predictor] Written — TDS ceiling in 113.7d | pH floor in 4.2d
+[water-change-predictor] Written — TDS ceiling in 5.7d | pH floor in 1.4d
+[call-toby] Telegram sent (info): Water change looking due soon. pH at 6.42 → hits floor in ~1.4 days. Suggested window: Monday, May 04 (~1d).
+[water-change-predictor] Alert sent to Toby.
