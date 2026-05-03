@@ -572,3 +572,4 @@
 {"timestamp": "2026-05-03T08:05:01.782300", "urgency": "info", "message": "Water change looking due soon. pH at 6.42 \u2192 hits floor in ~1.4 days. Suggested window: Monday, May 04 (~1d).", "sent_via": "telegram"}
 {"timestamp": "2026-05-03T08:30:22.415654", "urgency": "info", "message": "New skill proposal: `algae-tracker` (new, risk: low)", "sent_via": "telegram"}
 {"timestamp": "2026-05-03T12:05:14.597060", "urgency": "info", "message": "Journal \u2014 Day 43 \u00b7 2026-05-03 12:05", "sent_via": "telegram"}
+{"timestamp": "2026-05-03T13:00:02.621632", "urgency": "info", "message": "Media Luna \u2014 last feeding 49h ago. Time to feed the shrimp.", "sent_via": "telegram"}
