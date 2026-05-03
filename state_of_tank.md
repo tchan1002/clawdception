@@ -1,8 +1,8 @@
 # State of Tank — Media Luna
 
-**Last updated:** 2026-05-01
-**Cycle day:** 41 (started 2026-03-22)
-**Tank status:** Nitrogen cycle active, Day 41. Biological filter established. Colony introduction complete.
+**Last updated:** 2026-05-02
+**Cycle day:** 42 (started 2026-03-22)
+**Tank status:** Nitrogen cycle active, Day 42. Biological filter established. Colony present approximately one week.
 
 ---
 
@@ -10,46 +10,42 @@
 
 | Animal | Count | Notes |
 |--------|-------|-------|
-| Neocaridina cherry shrimp | 6 confirmed | 1 original resident (survived solo since 2026-04-25 removal of others); 5 new individuals added 2026-05-01 at 12:25 |
+| Neocaridina cherry shrimp | 5 confirmed + 1 original resident | Colony has been present for approximately one week as of 2026-05-02 |
 
-**Notable:** One shrimp experienced a difficult/hard molt on the morning of 2026-05-01. Was found inverted and unable to right itself (~11:05). Righted itself by 11:17. Currently in recovery. Post-molt vulnerability window: 24–48 hours. Coloration and feeding behavior are key recovery signals to watch.
-
-**New arrivals:** Introduced 2026-05-01. Expected to hide during acclimation — low visible counts in photos over the next several days are normal and not cause for concern.
+**Notable:** One healthy molt confirmed 2026-04-30. Colony introduction occurred prior to 2026-05-01 (exact date to be confirmed from earlier logs). One original resident predates the group.
 
 ---
 
-## Water Chemistry (as of 2026-05-01)
+## Water Chemistry (as of 2026-05-02)
 
-| Parameter | Value | Status |
-|-----------|-------|--------|
-| Temperature | 75.2–76.1°F, avg 75.8°F | ✅ Stable, within Neocaridina range |
-| pH | 6.37–6.76, avg 6.47 | ⚠️ Low end for Neocaridina (target 6.8–7.5) — stable, no acute trend |
-| TDS | 214–226 ppm, avg 221.7 ppm | ✅ Within acceptable range; slight uptick post-introduction |
-
-pH has been running on the low side for several days. No acute danger, but worth tracking. Post-introduction TDS rise of ~9 ppm is consistent with adding animals and is expected.
+| Parameter | Current | Target Range | Status |
+|-----------|---------|--------------|--------|
+| Temperature | 75.9°F avg | 72–78°F | ✅ Stable |
+| pH | 6.46 avg | 6.5–7.5 | ⚠️ Low edge — stable, not worsening |
+| TDS | 228 ppm avg | 150–250 ppm | ✅ Within range |
+| Ammonia | Unknown | 0 ppm | Awaiting test |
+| Nitrite | Unknown | 0 ppm | Awaiting test |
+| Nitrate | Unknown | <20 ppm | Awaiting test |
 
 ---
 
-## Physical Tank (confirmed from photos)
+## Equipment & Connectivity
 
-- **Substrate:** Dark granular pellets — appears to be aqua soil or similar black/dark substrate
-- **Hardscape:** Large rounded pale/cream stone visible in full-tank shot; additional rounded object (possibly rock) in background showing early algae/biofilm spotting
-- **Equipment:** Filter head and cords visible; two vertical equipment tubes (likely heater and filter intake/output); white mesh media bag sitting on substrate
-- **Plants:** Dense green plant mass (bushy/stem plant) in midground/background; fine-stemmed plant reaching toward surface; green moss clump visible in one photo; duckweed floating surface plant — trimmed 50% on 2026-05-01 morning
-- **Algae:** Early green spotting visible on hardscape elements — appropriate for Day 41; faint biofilm on some substrate pellets; no nuisance algae
-- **Water clarity:** Mostly clear; faint mid-column haze in one photo consistent with late-stage cycling bacterial activity
+All equipment checks passing. WiFi RSSI stable (~−51 dBm). Memory heap healthy. No anomalies in last 24 hours.
 
 ---
 
 ## Recent Events
 
-- **2026-05-01:** 50% duckweed trim; difficult molt observed and resolved; 5 new shrimp introduced; two feedings logged; Toby departed for 48-hour camping trip
-- **2026-04-30:** Water described as "slightly more green" — consistent with algal bloom in late cycling
+- **2026-04-30:** Healthy molt confirmed.
+- **2026-05-01:** Duckweed removal (~50%). Manual intervention logged.
+- **2026-05-02:** Toby corrected a caretaker error — colony has been present approximately one week, not introduced on 2026-05-01. Record updated accordingly.
 
 ---
 
 ## Open Questions
 
-- pH running consistently below target range — is this a buffering issue, substrate influence (aqua soil is known to lower pH), or something else?
-- Molting shrimp: full recovery to be confirmed via next photo opportunity
-- Autofeeder not yet installed — manual feeding only
+- Exact colony introduction date needs reconciliation from earlier logs.
+- Manual water test (ammonia/nitrite/nitrate) overdue — cycle completion unconfirmed.
+- Water clarity trend post-bacterial bloom unconfirmed; photo would help.
+- Duckweed regrowth rate post-50% removal unknown.
