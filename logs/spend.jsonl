@@ -1652,3 +1652,4 @@
 {"timestamp": "2026-05-03T07:00:39.862970", "skill": "daily-log", "model": "claude-sonnet-4-6", "input_tokens": 3044, "output_tokens": 1891, "total_tokens": 4935}
 {"timestamp": "2026-05-03T08:30:20.546002", "skill": "skill-writer", "model": "claude-sonnet-4-6", "input_tokens": 4394, "output_tokens": 749, "total_tokens": 5143}
 {"timestamp": "2026-05-03T12:05:14.002330", "skill": "shrimp-journal", "model": "claude-haiku-4-5", "input_tokens": 8589, "output_tokens": 847, "total_tokens": 9436}
+{"timestamp": "2026-05-03T17:15:06.032105", "skill": "shrimp-monitor", "model": "claude-haiku-4-5", "input_tokens": 9189, "output_tokens": 294, "total_tokens": 9483}
