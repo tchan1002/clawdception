@@ -3023,3 +3023,12 @@ One deeply saturated red Neocaridina shrimp stands confidently on the dark subst
 [telegram-listener] Vision reply sent
 [telegram-listener] Processed 1 message(s), offset now 236833183
 [telegram-listener] getUpdates failed: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot***/getUpdates?offset=236833183&timeout=0&limit=100 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fff444b5550>: Failed to resolve 'api.telegram.org' ([Errno -3] Temporary failure in name resolution)"))
+[telegram-listener] 'the colony was not introduced just yesterday, that’s kind of a big hallucination. check logs to understand the colony has been there for a week. how did this happen?' → correction
+[call-toby] Telegram sent (info): Logged as correction: Owner correcting a prior caretaker misinterpretation: the shrimp colony was not introduced yesterday — it has been present for approximately one week per the logs. Owner is asking how the error occurred. ✓
+[telegram-listener] 'Im still away at the camping trip at devil’s lake' → owner_note
+[call-toby] Telegram sent (info): Logged as owner note: Owner is still away on a camping trip at Devil's Lake. No action taken or requested. ✓
+[telegram-listener] Processed 2 message(s), offset now 236833185
+[telegram-listener] 'examine the reliability of your memory. no new shrimp has been introduced' → correction
+[call-toby] Telegram failed: 400 Client Error: Bad Request for url: https://api.telegram.org/bot***/sendMessage — falling back to log file
+[call-toby] ℹ️ Logged as correction: Owner explicitly correcting a prior misinterpretation: no new shrimp has been introduced to the tank. Caretaker should audit recent memory/logs for any erroneous shrimp_added event or assumption. ✓
+[telegram-listener] Processed 1 message(s), offset now 236833186

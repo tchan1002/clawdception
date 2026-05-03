@@ -4125,3 +4125,10 @@ All parameters are solidly in target range; 24-hour trends show modest stability
 [2026-05-02T19:15] Day 42 | skipped (stable) | T=75.99°F pH=6.48 TDS=228.0ppm
 [2026-05-02T19:30] Day 42 | skipped (stable) | T=75.99°F pH=6.46 TDS=229.0ppm
 [2026-05-02T19:45] Day 42 | skipped (stable) | T=75.99°F pH=6.46 TDS=229.0ppm
+[2026-05-02T20:00] Day 42 | risk=green | [scheduled check-in (20:00)] | T=75.99°F pH=6.46 TDS=228.0ppm | Tank is stable across all parameters at Day 42 post-introduction. The 24hr trend
+[call-toby] Telegram sent (info): ✅ All clear — T=75.99°F pH=6.46 TDS=228.0ppm
+Tank is stable across all parameters at Day 42 post-introduction. The 24hr trends show modest upward drift in all three metrics, entirely consistent with late-cycle nitrogen accumulation and no intervention needed.
+[2026-05-02T20:15] Day 42 | skipped (stable) | T=75.99°F pH=6.44 TDS=228.0ppm
+[2026-05-02T20:30] Day 42 | skipped (stable) | T=75.99°F pH=6.44 TDS=230.0ppm
+[2026-05-02T20:45] Day 42 | risk=green | [manual event since last check ] | T=75.87°F pH=6.42 TDS=229.0ppm | All parameters are stable and well within target ranges; 24-hour trends show onl
+[2026-05-02T21:00] Day 42 | skipped (stable) | T=75.87°F pH=6.45 TDS=228.0ppm
