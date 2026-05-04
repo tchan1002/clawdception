@@ -1,8 +1,8 @@
 # State of Tank — Media Luna
 
-**Last updated:** 2026-05-02
-**Cycle day:** 42 (started 2026-03-22)
-**Tank status:** Nitrogen cycle active, Day 42. Biological filter established. Colony present approximately one week.
+**Last updated:** 2026-05-03
+**Cycle day:** 43 (started 2026-03-22)
+**Tank status:** Nitrogen cycle active, biologically established. Colony in second week of residence.
 
 ---
 
@@ -10,42 +10,46 @@
 
 | Animal | Count | Notes |
 |--------|-------|-------|
-| Neocaridina cherry shrimp | 5 confirmed + 1 original resident | Colony has been present for approximately one week as of 2026-05-02 |
+| Neocaridina cherry shrimp | 5 confirmed + 1 original resident | Present approximately 8–9 days as of 2026-05-03 |
 
-**Notable:** One healthy molt confirmed 2026-04-30. Colony introduction occurred prior to 2026-05-01 (exact date to be confirmed from earlier logs). One original resident predates the group.
-
----
-
-## Water Chemistry (as of 2026-05-02)
-
-| Parameter | Current | Target Range | Status |
-|-----------|---------|--------------|--------|
-| Temperature | 75.9°F avg | 72–78°F | ✅ Stable |
-| pH | 6.46 avg | 6.5–7.5 | ⚠️ Low edge — stable, not worsening |
-| TDS | 228 ppm avg | 150–250 ppm | ✅ Within range |
-| Ammonia | Unknown | 0 ppm | Awaiting test |
-| Nitrite | Unknown | 0 ppm | Awaiting test |
-| Nitrate | Unknown | <20 ppm | Awaiting test |
+**Notable:** One healthy molt confirmed 2026-04-30. No losses logged. Last confirmed colony health observation approximately 18 hours prior to 2026-05-03 end of day — no behavioral or health concerns at that time.
 
 ---
 
-## Equipment & Connectivity
+## Water Chemistry — Current
 
-All equipment checks passing. WiFi RSSI stable (~−51 dBm). Memory heap healthy. No anomalies in last 24 hours.
+| Parameter | Current Avg | Status |
+|-----------|-------------|--------|
+| Temperature | 76.0°F | Stable. Within target range. |
+| pH | 6.39 (low: 6.19) | Slightly low; daily dip to 6.19 noted. Monitoring. |
+| TDS | 232 ppm | Stable, +5 ppm from yesterday. |
+
+No manual test results (ammonia/nitrite/nitrate) on file for today.
 
 ---
 
-## Recent Events
+## Biological Filter
 
-- **2026-04-30:** Healthy molt confirmed.
-- **2026-05-01:** Duckweed removal (~50%). Manual intervention logged.
-- **2026-05-02:** Toby corrected a caretaker error — colony has been present approximately one week, not introduced on 2026-05-01. Record updated accordingly.
+Cycle is Day 43. Bacterial bloom phase appears to have passed. No ammonia or nitrite spikes logged in recent days. Water clarity described as clear in most recent observations. Filter considered biologically established based on trend data.
+
+---
+
+## Surface Coverage
+
+Duckweed trimmed approximately 50% on 2026-05-01. Regrowth status unknown — no visual observation logged since trim. Two full days of regrowth as of 2026-05-03.
+
+---
+
+## Feeding Status
+
+Last logged feeding: approximately 57–59 hours ago as of end of 2026-05-03. Exceeds 48-hour soft threshold. Toby is away; no automated feeder in place. Colony fasting; no acute concern yet, but feeding upon return is a priority.
 
 ---
 
 ## Open Questions
 
-- Exact colony introduction date needs reconciliation from earlier logs.
-- Manual water test (ammonia/nitrite/nitrate) overdue — cycle completion unconfirmed.
-- Water clarity trend post-bacterial bloom unconfirmed; photo would help.
-- Duckweed regrowth rate post-50% removal unknown.
+- pH floor (6.19 today): diurnal swing or a developing trend?
+- Duckweed regrowth rate: stabilizing or rebounding toward dense canopy?
+- Colony behavior: no visual data since pre-camping confirmation.
+
+---
