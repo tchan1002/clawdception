@@ -81,3 +81,7 @@
 [skill-writer] Proposal written to /home/pi/clawdception/proposals/2026-05-03-algae-tracker
 [call-toby] Document sent: proposal.md
 [call-toby] Sent with buttons (msg_id=946): New skill proposal: `algae-tracker` (new, risk: low)
+[skill-writer] Running — 31 daily logs available, conditions met (Day 44 of cycle)
+[skill-writer] Proposal written to /home/pi/clawdception/proposals/2026-05-04-molt-tracker
+[call-toby] Document sent: proposal.md
+[call-toby] Sent with buttons (msg_id=971): New skill proposal: `molt-tracker` (new, risk: low)
