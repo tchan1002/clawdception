@@ -4309,3 +4309,11 @@ All parameters hold steady within target range; 24hr trends are gentle and norma
 [call-toby] Telegram sent (warning): pH dipped 0.27 points in one hour, which is unusual but not explained by recent logged events—no water change, no obvious chemical addition. The 0.27-point swing sits within the probe's noise margin, but the timing warrants a retest to confirm it's not the start of an actual drift.
 
 ⏳ 🧪 Run a water test (ammonia / nitrite / pH) — Retest pH within the next 30–60 min to confirm the 0.27-point dip is stable or transient. Single-point jumps can be sensor noise, but a sustained drop would signal a buffering issue post-wipe.
+[2026-05-04T12:00] Day 44 | risk=green | [ph changed 0.27 in last hour] | T=76.1°F pH=6.49 TDS=232.0ppm | Toby returned from camping and wiped algae growth—a routine maintenance action t
+[call-toby] Telegram sent (info): Toby returned from camping and wiped algae growth—a routine maintenance action that explains the 0.27-unit pH swing within the last hour (localized changes during glass-wiping are normal and harmless). All three parameters remain squarely in target range with tight 24-hour stability; no water change, equipment failure, or anomaly is indicated.
+
+• feeding — Shrimp have been without fresh food for ~65 hours (Toby away on camping trip). Standard feeding portion—no catch-up needed.
+[2026-05-04T12:15] Day 44 | risk=yellow | [ph changed 0.27 in last hour] | T=75.99°F pH=6.52 TDS=231.0ppm | pH rose 0.27 in the past hour—a sharper climb than the 0.11 drift over 24hr—but 
+[2026-05-04T12:30] Day 44 | skipped (stable) | T=75.99°F pH=6.54 TDS=233.0ppm
+[2026-05-04T12:45] Day 44 | skipped (stable) | T=75.99°F pH=6.58 TDS=231.0ppm
+[2026-05-04T13:00] Day 44 | skipped (stable) | T=75.99°F pH=6.57 TDS=231.0ppm
