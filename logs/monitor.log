@@ -4300,3 +4300,12 @@ All parameters hold steady within target range; 24hr trends are gentle and norma
 [2026-05-04T10:30] Day 44 | skipped (stable) | T=75.99°F pH=6.17 TDS=235.0ppm
 [2026-05-04T10:45] Day 44 | skipped (stable) | T=76.1°F pH=6.17 TDS=237.0ppm
 [2026-05-04T11:00] Day 44 | skipped (stable) | T=76.1°F pH=6.22 TDS=236.0ppm
+[2026-05-04T11:15] Day 44 | skipped (stable) | T=75.99°F pH=6.25 TDS=235.0ppm
+[2026-05-04T11:30] Day 44 | risk=green | [manual event since last check ] | T=75.99°F pH=6.44 TDS=231.0ppm | All parameters are stable and well within target range after a 65-hour owner abs
+[call-toby] Telegram sent (info): All parameters are stable and well within target range after a 65-hour owner absence. Algae wipe on return is routine maintenance; water chemistry shows no distress signals.
+
+• 📸 Send a photo of the tank — Colony overview when convenient—confirm all 5 shrimp present and active
+[2026-05-04T11:45] Day 44 | risk=yellow | [ph changed 0.27 in last hour] | T=75.99°F pH=6.44 TDS=231.0ppm | pH dipped 0.27 points in one hour, which is unusual but not explained by recent 
+[call-toby] Telegram sent (warning): pH dipped 0.27 points in one hour, which is unusual but not explained by recent logged events—no water change, no obvious chemical addition. The 0.27-point swing sits within the probe's noise margin, but the timing warrants a retest to confirm it's not the start of an actual drift.
+
+⏳ 🧪 Run a water test (ammonia / nitrite / pH) — Retest pH within the next 30–60 min to confirm the 0.27-point dip is stable or transient. Single-point jumps can be sensor noise, but a sustained drop would signal a buffering issue post-wipe.
