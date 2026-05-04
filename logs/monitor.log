@@ -4323,3 +4323,10 @@ All parameters hold steady within target range; 24hr trends are gentle and norma
 • feeding
 [2026-05-04T13:30] Day 44 | skipped (stable) | T=75.76°F pH=6.63 TDS=233.0ppm
 [2026-05-04T13:45] Day 44 | risk=yellow | [temp_f changed 6.64 in last ho] | T=69.35°F pH=6.63 TDS=249.0ppm | Temperature dropped 6.64°F in one hour and is now 69.35°F—below optimal but stil
+[2026-05-04T14:00] Day 44 | risk=green | [temp_f changed 5.18 in last ho] | T=71.82°F pH=6.62 TDS=242.0ppm | Toby returned from 48hr absence, wiped algae growth, and reports tank conditions
+[call-toby] Telegram sent (info): Toby returned from 48hr absence, wiped algae growth, and reports tank conditions look fine—readings support that assessment. Temperature dip is a post-maintenance artifact, not a sign of equipment failure or crisis; pH and TDS remain stable and in target range.
+
+• 👀 Observe shrimp behavior — Monitor temperature trend over next 6–8 hours; should stabilize back toward mean (~76°F) as tank equilibrates post-wiping.
+[2026-05-04T14:15] Day 44 | risk=green | [temp_f changed 2.47 in last ho] | T=73.29°F pH=6.64 TDS=239.0ppm | Temperature dip is modest and within normal post-maintenance range; all three pa
+[2026-05-04T14:30] Day 44 | risk=green | [temp_f changed 4.72 in last ho] | T=74.07°F pH=6.65 TDS=239.0ppm | Temperature dropped 1.8°F over 24 hours (from a peak of 77°F), likely from the r
+[2026-05-04T14:45] Day 44 | risk=green | [temp_f changed 3.15 in last ho] | T=74.97°F pH=6.65 TDS=235.0ppm | Temperature spiked 3.15°F in the past hour but remains well within range and is 
