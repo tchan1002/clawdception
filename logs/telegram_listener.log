@@ -3041,3 +3041,4 @@ One deeply saturated red Neocaridina shrimp stands confidently on the dark subst
 [call-toby] Telegram sent (info): Logged as maintenance: Wiped the interior sides of the tank to remove algae growth ✓
 [telegram-listener] Processed 3 message(s), offset now 236833189
 [telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[telegram-listener] getUpdates failed: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot***/getUpdates?offset=236833189&timeout=0&limit=100 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fff5c8f5550>: Failed to resolve 'api.telegram.org' ([Errno -3] Temporary failure in name resolution)"))

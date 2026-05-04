@@ -1351,3 +1351,5 @@
 [2026-05-04T14:00] equipment-check | green | 0 issue(s) | All equipment checks passed. DS18B20 had 1 transient error(s) in last 24h. WiFi 
 [2026-05-04T14:30] equipment-check | green | 0 issue(s) | All equipment checks passed. DS18B20 had 1 transient error(s) in last 24h. WiFi 
 [2026-05-04T15:00] equipment-check | green | 0 issue(s) | All equipment checks passed. DS18B20 had 1 transient error(s) in last 24h. WiFi 
+[2026-05-04T15:30] equipment-check | green | 0 issue(s) | All equipment checks passed. DS18B20 had 1 transient error(s) in last 24h. WiFi 
+[2026-05-04T16:00] equipment-check | green | 0 issue(s) | All equipment checks passed. DS18B20 had 1 transient error(s) in last 24h. WiFi 

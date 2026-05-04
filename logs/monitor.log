@@ -4330,3 +4330,11 @@ All parameters hold steady within target range; 24hr trends are gentle and norma
 [2026-05-04T14:15] Day 44 | risk=green | [temp_f changed 2.47 in last ho] | T=73.29°F pH=6.64 TDS=239.0ppm | Temperature dip is modest and within normal post-maintenance range; all three pa
 [2026-05-04T14:30] Day 44 | risk=green | [temp_f changed 4.72 in last ho] | T=74.07°F pH=6.65 TDS=239.0ppm | Temperature dropped 1.8°F over 24 hours (from a peak of 77°F), likely from the r
 [2026-05-04T14:45] Day 44 | risk=green | [temp_f changed 3.15 in last ho] | T=74.97°F pH=6.65 TDS=235.0ppm | Temperature spiked 3.15°F in the past hour but remains well within range and is 
+[2026-05-04T15:00] Day 44 | risk=green | [temp_f changed 1.91 in last ho] | T=75.2°F pH=6.68 TDS=236.0ppm | All parameters are solidly in range. The 1.91°F drop in the last hour is a minor
+[2026-05-04T15:15] Day 44 | risk=green | [temp_f changed 2.25 in last ho] | T=76.32°F pH=6.64 TDS=234.0ppm | Toby just returned from 65 hours away; the 2.25°F temp spike in the last hour is
+[2026-05-04T15:30] Day 44 | skipped (stable) | T=75.54°F pH=6.56 TDS=236.0ppm
+[2026-05-04T15:45] Day 44 | risk=yellow | [ph changed 0.12 in last hour] | T=74.86°F pH=6.56 TDS=236.0ppm | pH rose 0.12 in one hour—a modest uptick but worth watching after Toby's algae w
+[call-toby] Telegram sent (warning): pH rose 0.12 in one hour—a modest uptick but worth watching after Toby's algae wipe this morning, which can temporarily shift water chemistry as biofilm disturbs. All three parameters remain in target range; the 1.24°F overnight drop is normal ambient drift in a 10-gallon system. No emergency, but a follow-up test in 2–3 hours will confirm the pH has stabilized."
+
+• feeding
+• 📸 Send a photo of the tank

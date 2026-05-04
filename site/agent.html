@@ -93,9 +93,9 @@
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 0.15em;
-            background: #2ea04318;
-            color: #2ea043;
-            border: 1px solid #2ea04350;
+            background: #d2992218;
+            color: #d29922;
+            border: 1px solid #d2992250;
         }
         .param-grid {
             display: grid;
@@ -241,7 +241,7 @@
 
         <div class="section">
             <div class="section-title">Current Risk Level</div>
-            <div class="risk-badge">green</div>
+            <div class="risk-badge">yellow</div>
         </div>
 
         
@@ -250,17 +250,17 @@
             <div class="param-grid">
                 <div class="param-card">
                     <div class="param-name">Temperature</div>
-                    <div class="param-value status-green">74.97°F</div>
+                    <div class="param-value status-green">74.86°F</div>
                     <div class="param-note"></div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">pH</div>
-                    <div class="param-value status-green">6.65</div>
+                    <div class="param-value status-green">6.56</div>
                     <div class="param-note"></div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">TDS</div>
-                    <div class="param-value status-green">235.0 ppm</div>
+                    <div class="param-value status-green">236.0 ppm</div>
                     <div class="param-note"></div>
                 </div>
             </div>
@@ -268,14 +268,14 @@
 
         <div class="section">
             <div class="section-title">Reasoning</div>
-            <div class="reasoning">Temperature spiked 3.15°F in the past hour but remains well within range and is normalizing from a 24-hour high of 77°F; a 3°F swing post-maintenance (Toby wiped the interior glass and returned from 65 hours away) is noise, not signal. All parameters sit solidly green, pH stable post-calibration, and the 24-hour trend shows the tank is cycling predictably through normal daily fluctuation.</div>
+            <div class="reasoning">pH rose 0.12 in one hour—a modest uptick but worth watching after Toby's algae wipe this morning, which can temporarily shift water chemistry as biofilm disturbs. All three parameters remain in target range; the 1.24°F overnight drop is normal ambient drift in a 10-gallon system. No emergency, but a follow-up test in 2–3 hours will confirm the pH has stabilized."</div>
         </div>
 
         <div class="section">
             <div class="section-title">Actions</div>
             <div class="actions">
                 <ul>
-                    <li><strong>observe</strong> [routine] — </li><li><strong>feeding</strong> [routine] — </li><li><strong>photo_request</strong> [routine] — </li>
+                    <li><strong>water_test</strong> [soon] — Retest pH in 2–3 hours to confirm it has stabilized post-algae wipe; watch for further drift.</li><li><strong>observe</strong> [routine] — Colony behavior and coloration after 65+ hour owner absence and tank maintenance.</li><li><strong>feeding</strong> [routine] — </li><li><strong>photo_request</strong> [routine] — </li>
                 </ul>
             </div>
         </div>
@@ -387,7 +387,7 @@ I'm watching to see if Toby submits a photo post-maintenance so I can verify the
 
         <div class="section">
             <div class="section-title">Monitor Log (Last 10)</div>
-            <div class="monitor-log"><div>• feeding</div><div>[2026-05-04T13:30] Day 44 | skipped (stable) | T=75.76°F pH=6.63 TDS=233.0ppm</div><div>[2026-05-04T13:45] Day 44 | risk=yellow | [temp_f changed 6.64 in last ho] | T=69.35°F pH=6.63 TDS=249.0ppm | Temperature dropped 6.64°F in one hour and is now 69.35°F—below optimal but stil</div><div>[2026-05-04T14:00] Day 44 | risk=green | [temp_f changed 5.18 in last ho] | T=71.82°F pH=6.62 TDS=242.0ppm | Toby returned from 48hr absence, wiped algae growth, and reports tank conditions</div><div>[call-toby] Telegram sent (info): Toby returned from 48hr absence, wiped algae growth, and reports tank conditions look fine—readings support that assessment. Temperature dip is a post-maintenance artifact, not a sign of equipment failure or crisis; pH and TDS remain stable and in target range.</div><div></div><div>• 👀 Observe shrimp behavior — Monitor temperature trend over next 6–8 hours; should stabilize back toward mean (~76°F) as tank equilibrates post-wiping.</div><div>[2026-05-04T14:15] Day 44 | risk=green | [temp_f changed 2.47 in last ho] | T=73.29°F pH=6.64 TDS=239.0ppm | Temperature dip is modest and within normal post-maintenance range; all three pa</div><div>[2026-05-04T14:30] Day 44 | risk=green | [temp_f changed 4.72 in last ho] | T=74.07°F pH=6.65 TDS=239.0ppm | Temperature dropped 1.8°F over 24 hours (from a peak of 77°F), likely from the r</div><div>[2026-05-04T14:45] Day 44 | risk=green | [temp_f changed 3.15 in last ho] | T=74.97°F pH=6.65 TDS=235.0ppm | Temperature spiked 3.15°F in the past hour but remains well within range and is </div></div>
+            <div class="monitor-log"><div>[2026-05-04T14:30] Day 44 | risk=green | [temp_f changed 4.72 in last ho] | T=74.07°F pH=6.65 TDS=239.0ppm | Temperature dropped 1.8°F over 24 hours (from a peak of 77°F), likely from the r</div><div>[2026-05-04T14:45] Day 44 | risk=green | [temp_f changed 3.15 in last ho] | T=74.97°F pH=6.65 TDS=235.0ppm | Temperature spiked 3.15°F in the past hour but remains well within range and is </div><div>[2026-05-04T15:00] Day 44 | risk=green | [temp_f changed 1.91 in last ho] | T=75.2°F pH=6.68 TDS=236.0ppm | All parameters are solidly in range. The 1.91°F drop in the last hour is a minor</div><div>[2026-05-04T15:15] Day 44 | risk=green | [temp_f changed 2.25 in last ho] | T=76.32°F pH=6.64 TDS=234.0ppm | Toby just returned from 65 hours away; the 2.25°F temp spike in the last hour is</div><div>[2026-05-04T15:30] Day 44 | skipped (stable) | T=75.54°F pH=6.56 TDS=236.0ppm</div><div>[2026-05-04T15:45] Day 44 | risk=yellow | [ph changed 0.12 in last hour] | T=74.86°F pH=6.56 TDS=236.0ppm | pH rose 0.12 in one hour—a modest uptick but worth watching after Toby's algae w</div><div>[call-toby] Telegram sent (warning): pH rose 0.12 in one hour—a modest uptick but worth watching after Toby's algae wipe this morning, which can temporarily shift water chemistry as biofilm disturbs. All three parameters remain in target range; the 1.24°F overnight drop is normal ambient drift in a 10-gallon system. No emergency, but a follow-up test in 2–3 hours will confirm the pH has stabilized."</div><div></div><div>• feeding</div><div>• 📸 Send a photo of the tank</div></div>
         </div>
     </div>
 
