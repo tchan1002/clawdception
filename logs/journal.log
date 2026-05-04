@@ -535,3 +535,10 @@ json.decoder.JSONDecodeError: Expecting value: line 2 column 1 (char 1)
 [shrimp-journal] Entry written: 2026-05-03-1805.md (Day 43)
 [call-toby] Telegram sent (info): Journal — Day 43 · 2026-05-03 18:05
 [call-toby] Document sent: 2026-05-03-1805.md
+[shrimp-journal] Entry written: 2026-05-04-0005.md (Day 44)
+[call-toby] Telegram sent (info): Journal — Day 44 · 2026-05-04 00:05
+[call-toby] Document sent: 2026-05-04-0005.md
+[call-toby] Telegram sent (info): Action items:
+• Feed the tank as soon as Toby returns from camping (expected within hours). Standard portion, no need to 'make up' for the gap—shrimp are grazing on biofilm.
+• Once Toby logs a feeding, assess whether tank behavior and water parameters remain stable; if all is well, no further action needed.
+• If Toby submits a photo upon return, use it to confirm the status of the mineral media bag and overall tank appearance post-camping.
