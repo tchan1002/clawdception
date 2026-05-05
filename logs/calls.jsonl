@@ -650,3 +650,11 @@
 {"timestamp": "2026-05-05T07:15:02.039920", "urgency": "critical", "message": "ph is below danger threshold: 5.64 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-05T07:30:01.929185", "urgency": "critical", "message": "ph is below danger threshold: 5.66 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-05T07:45:02.408282", "urgency": "critical", "message": "ph is below danger threshold: 5.71 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-05T08:00:02.842922", "urgency": "critical", "message": "ph is below danger threshold: 5.71 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-05T08:00:08.597741", "urgency": "warning", "message": "pH is drifting into caution territory (5.71 vs target 6.5\u20137.5), but the temperature probe incident yesterday casts doubt on recent readings\u2014we should treat this trend with skepticism until we confirm stability. Temperature and TDS are solid; Toby returned from camping yesterday and the tank appears well-maintained, so no acute crisis, just monitoring warranted.\n\n\u2022 \ud83d\udcf8 Send a photo of the tank", "sent_via": "telegram"}
+{"timestamp": "2026-05-05T08:05:02.165093", "urgency": "info", "message": "Water change looking due soon. pH at 5.74 \u2192 hits floor in ~0.0 days. Suggested window: Tuesday, May 05 (~0d).", "sent_via": "telegram"}
+{"timestamp": "2026-05-05T08:15:01.788565", "urgency": "critical", "message": "ph is below danger threshold: 5.74 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-05T08:30:02.775665", "urgency": "critical", "message": "ph is below danger threshold: 5.75 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-05T08:30:23.657076", "urgency": "info", "message": "New skill proposal: `algae-tracker` (new, risk: low)", "sent_via": "telegram"}
+{"timestamp": "2026-05-05T08:45:02.610578", "urgency": "critical", "message": "ph is below danger threshold: 5.76 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-05T09:00:02.813717", "urgency": "critical", "message": "ph is below danger threshold: 5.78 (below 6.0)", "sent_via": "telegram"}

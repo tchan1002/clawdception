@@ -250,13 +250,13 @@
             <div class="param-grid">
                 <div class="param-card">
                     <div class="param-name">Temperature</div>
-                    <div class="param-value status-green">76.1°F</div>
+                    <div class="param-value status-green">75.87°F</div>
                     <div class="param-note"></div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">pH</div>
-                    <div class="param-value status-yellow">5.65</div>
-                    <div class="param-note">0.13 drop in last hour triggered alert; pH probe was dislodged 2026-05-04T22:33, invalidating readings during that window. Current reading requires validation—likely recovering post-sensor-reinsertion artifact rather than true acidification.</div>
+                    <div class="param-value status-yellow">5.71</div>
+                    <div class="param-note">Temperature probe was dislodged yesterday evening; prior pH readings are unreliable. Current reading is borderline low but recent calibration (Apr 26) was confirmed. Monitoring for sustained trend.</div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">TDS</div>
@@ -268,14 +268,14 @@
 
         <div class="section">
             <div class="section-title">Reasoning</div>
-            <div class="reasoning">The pH probe was physically displaced and has only recently been restored to the water; the 0.13-unit drop in the last hour likely reflects sensor artifact or the probe equilibrating after reinsertion rather than genuine tank acidification. Temperature and TDS are stable and healthy; colony is 516 hours post-introduction and behaviorally normal per latest photo.</div>
+            <div class="reasoning">pH is drifting into caution territory (5.71 vs target 6.5–7.5), but the temperature probe incident yesterday casts doubt on recent readings—we should treat this trend with skepticism until we confirm stability. Temperature and TDS are solid; Toby returned from camping yesterday and the tank appears well-maintained, so no acute crisis, just monitoring warranted.</div>
         </div>
 
         <div class="section">
             <div class="section-title">Actions</div>
             <div class="actions">
                 <ul>
-                    <li><strong>water_test</strong> [soon] — Validate pH with manual test kit to confirm whether 5.65 is a true reading or a sensor-settling artifact. Compare against calibrated probe baseline from 2026-04-26.</li><li><strong>observe</strong> [routine] — Monitor shrimp behavior over next 2–4 hours for any stress indicators (lethargy, clustering, rapid gill flaring). If behavior remains normal and manual test confirms pH in target range, pH concern resolves.</li><li><strong>photo_request</strong> [routine] — </li>
+                    <li><strong>water_test</strong> [soon] — </li><li><strong>observe</strong> [routine] — </li><li><strong>photo_request</strong> [routine] — </li>
                 </ul>
             </div>
         </div>
@@ -346,7 +346,7 @@ I'm cautiously optimistic but not complacent about the pH trend.
 
         <div class="section">
             <div class="section-title">Monitor Log (Last 10)</div>
-            <div class="monitor-log"><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.74 (below 6.0)</div><div>[2026-05-05T07:15] Day 45 | skipped (stable) | T=75.99°F pH=5.64 TDS=232.0ppm</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.64 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.64 (below 6.0)</div><div>[2026-05-05T07:30] Day 45 | skipped (stable) | T=75.99°F pH=5.66 TDS=231.0ppm</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.66 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.66 (below 6.0)</div><div>[2026-05-05T07:45] Day 45 | skipped (stable) | T=75.99°F pH=5.71 TDS=231.0ppm</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.71 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.71 (below 6.0)</div></div>
+            <div class="monitor-log"><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.74 (below 6.0)</div><div>[2026-05-05T08:30] Day 45 | skipped (stable) | T=75.87°F pH=5.75 TDS=232.0ppm</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.75 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.75 (below 6.0)</div><div>[2026-05-05T08:45] Day 45 | skipped (stable) | T=75.87°F pH=5.76 TDS=231.0ppm</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.76 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.76 (below 6.0)</div><div>[2026-05-05T09:00] Day 45 | skipped (stable) | T=75.87°F pH=5.78 TDS=230.0ppm</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.78 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.78 (below 6.0)</div></div>
         </div>
     </div>
 
