@@ -555,3 +555,9 @@ json.decoder.JSONDecodeError: Expecting value: line 2 column 1 (char 1)
 [call-toby] Telegram sent (info): Action items:
 • Feed the tank today—within next 6-12 hours, use standard portion only; shrimp do not require catch-up feeding or extra rations after brief hunger gaps
 • If Toby submits a photo, prioritize visual assessment of colony appearance (coloration, activity level, any signs of stress or unexpected change) to confirm health post-maintenance
+[shrimp-journal] Entry written: 2026-05-04-1805.md (Day 44)
+[call-toby] Telegram sent (info): Journal — Day 44 · 2026-05-04 18:05
+[call-toby] Document sent: 2026-05-04-1805.md
+[call-toby] Telegram sent (info): Action items:
+• Feed the tank within the next 6–12 hours using standard portion size; no catch-up or extra rations needed after a brief gap
+• Monitor pH over the next 12 hours to confirm post-wipe stability; if it continues drifting upward beyond 6.7, escalate to Toby with a clarifying photo request
