@@ -250,17 +250,17 @@
             <div class="param-grid">
                 <div class="param-card">
                     <div class="param-name">Temperature</div>
-                    <div class="param-value status-green">75.76°F</div>
+                    <div class="param-value status-green">75.09°F</div>
                     <div class="param-note"></div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">pH</div>
-                    <div class="param-value status-yellow">6.35</div>
-                    <div class="param-note">0.53 pH drop in 1 hour is sharp; however, temperature probe was just restored to water on 2026-05-04T22:33, which likely caused artificial pH oscillation during that restoration period. Treat this spike with skepticism until next stable reading confirms true pH state.</div>
+                    <div class="param-value status-green">6.95</div>
+                    <div class="param-note"></div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">TDS</div>
-                    <div class="param-value status-green">238.0 ppm</div>
+                    <div class="param-value status-green">229.0 ppm</div>
                     <div class="param-note"></div>
                 </div>
             </div>
@@ -268,14 +268,14 @@
 
         <div class="section">
             <div class="section-title">Reasoning</div>
-            <div class="reasoning">The 0.53 pH swing is real in the logs but almost certainly an artifact of the temperature probe's recent dislodgement and water re-entry (reported 2026-05-04T22:33). The current pH 6.35 is slightly low but still within the shrimp's comfort zone; the buffering media (mesh bag on substrate) is doing its job. Wait for the next stable reading before escalating.</div>
+            <div class="reasoning">The 0.56 pH swing in one hour is unusual and warrants scrutiny, but occurred *after* a 20% water change at 13:01 — pH shifts post-change are normal, and today's baseline readings are solid green. Prior pH data reliability was already compromised by the probe dislodging yesterday; current readings appear stable now. A photo check and continued observation over the next few hours will confirm whether this was a transient post-change ripple or the start of a concerning drift.</div>
         </div>
 
         <div class="section">
             <div class="section-title">Actions</div>
             <div class="actions">
                 <ul>
-                    <li><strong>water_test</strong> [soon] — Verify pH stability over the next 2–3 hours to distinguish probe artifact from genuine chemistry drift. Single-point readings post-probe-restoration are unreliable.</li><li><strong>observe</strong> [routine] — Watch shrimp behavior (activity, posture, feeding) for any signs of pH stress. At pH 6.35 they should remain unconcerned, but behavioral cues matter.</li><li><strong>none</strong> [routine] — </li><li><strong>photo_request</strong> [routine] — </li>
+                    <li><strong>photo_request</strong> [routine] — Confirm shrimp activity and plant health post-water-change; assess whether any signs of stress or unusual behavior</li><li><strong>observe</strong> [routine] — Watch pH trend over next 2–3 hours to see if the 0.56-point jump was a transient post-change anomaly or sustained drift</li><li><strong>none</strong> [routine] — </li>
                 </ul>
             </div>
         </div>
@@ -375,7 +375,7 @@ Toby is home. The tank is cycling. Everything points toward a colony that is acc
 
         <div class="section">
             <div class="section-title">Monitor Log (Last 10)</div>
-            <div class="monitor-log"><div>[call-toby] Telegram sent (warning): The sharp pH drop coincides with probe restoration after dislodgement—likely instrument drift rather than water chemistry crisis. All three parameters are otherwise in or near target range; shrimp welfare appears stable on the evidence of yesterday's clear photo and feeding activity.</div><div></div><div>⏳ 🧪 Run a water test (ammonia / nitrite / pH) — Confirm pH with manual test kit to verify probe reading post-restoration.</div><div>[2026-05-05T12:15] Day 45 | risk=yellow | [ph changed 0.53 in last hour] | T=75.76°F pH=6.35 TDS=238.0ppm | The 0.53 pH swing is real in the logs but almost certainly an artifact of the te</div><div>[call-toby] Telegram sent (warning): The 0.53 pH swing is real in the logs but almost certainly an artifact of the temperature probe's recent dislodgement and water re-entry (reported 2026-05-04T22:33). The current pH 6.35 is slightly low but still within the shrimp's comfort zone; the buffering media (mesh bag on substrate) is doing its job. Wait for the next stable reading before escalating.</div><div></div><div>• 📸 Send a photo of the tank</div><div>[2026-05-05T12:30] Day 45 | skipped (stable) | T=75.76°F pH=6.35 TDS=238.0ppm</div><div>[2026-05-05T12:45] Day 45 | skipped (stable) | T=75.87°F pH=6.4 TDS=238.0ppm</div><div>[2026-05-05T13:00] Day 45 | skipped (stable) | T=75.87°F pH=6.39 TDS=238.0ppm</div></div>
+            <div class="monitor-log"><div>[2026-05-05T12:15] Day 45 | risk=yellow | [ph changed 0.53 in last hour] | T=75.76°F pH=6.35 TDS=238.0ppm | The 0.53 pH swing is real in the logs but almost certainly an artifact of the te</div><div>[call-toby] Telegram sent (warning): The 0.53 pH swing is real in the logs but almost certainly an artifact of the temperature probe's recent dislodgement and water re-entry (reported 2026-05-04T22:33). The current pH 6.35 is slightly low but still within the shrimp's comfort zone; the buffering media (mesh bag on substrate) is doing its job. Wait for the next stable reading before escalating.</div><div></div><div>• 📸 Send a photo of the tank</div><div>[2026-05-05T12:30] Day 45 | skipped (stable) | T=75.76°F pH=6.35 TDS=238.0ppm</div><div>[2026-05-05T12:45] Day 45 | skipped (stable) | T=75.87°F pH=6.4 TDS=238.0ppm</div><div>[2026-05-05T13:00] Day 45 | skipped (stable) | T=75.87°F pH=6.39 TDS=238.0ppm</div><div>[2026-05-05T13:15] Day 45 | risk=green | [manual event since last check ] | T=75.76°F pH=6.7 TDS=227.0ppm | Fresh 20% water change explains the TDS dip and slight pH rise; temperature has </div><div>[2026-05-05T13:30] Day 45 | risk=yellow | [ph changed 0.58 in last hour] | T=75.09°F pH=6.98 TDS=228.0ppm | The 0.58 pH jump in one hour is sharp and warrants investigation, but the 20% wa</div><div>[2026-05-05T13:45] Day 45 | risk=yellow | [ph changed 0.56 in last hour] | T=75.09°F pH=6.95 TDS=229.0ppm | The 0.56 pH swing in one hour is unusual and warrants scrutiny, but occurred *af</div></div>
         </div>
     </div>
 

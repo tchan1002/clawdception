@@ -4548,3 +4548,6 @@ All parameters hold steady within target range; 24hr trends are gentle and norma
 [2026-05-05T12:30] Day 45 | skipped (stable) | T=75.76°F pH=6.35 TDS=238.0ppm
 [2026-05-05T12:45] Day 45 | skipped (stable) | T=75.87°F pH=6.4 TDS=238.0ppm
 [2026-05-05T13:00] Day 45 | skipped (stable) | T=75.87°F pH=6.39 TDS=238.0ppm
+[2026-05-05T13:15] Day 45 | risk=green | [manual event since last check ] | T=75.76°F pH=6.7 TDS=227.0ppm | Fresh 20% water change explains the TDS dip and slight pH rise; temperature has 
+[2026-05-05T13:30] Day 45 | risk=yellow | [ph changed 0.58 in last hour] | T=75.09°F pH=6.98 TDS=228.0ppm | The 0.58 pH jump in one hour is sharp and warrants investigation, but the 20% wa
+[2026-05-05T13:45] Day 45 | risk=yellow | [ph changed 0.56 in last hour] | T=75.09°F pH=6.95 TDS=229.0ppm | The 0.56 pH swing in one hour is unusual and warrants scrutiny, but occurred *af
