@@ -93,9 +93,9 @@
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 0.15em;
-            background: #2ea04318;
-            color: #2ea043;
-            border: 1px solid #2ea04350;
+            background: #d2992218;
+            color: #d29922;
+            border: 1px solid #d2992250;
         }
         .param-grid {
             display: grid;
@@ -241,7 +241,7 @@
 
         <div class="section">
             <div class="section-title">Current Risk Level</div>
-            <div class="risk-badge">green</div>
+            <div class="risk-badge">yellow</div>
         </div>
 
         
@@ -250,32 +250,32 @@
             <div class="param-grid">
                 <div class="param-card">
                     <div class="param-name">Temperature</div>
-                    <div class="param-value status-green">73.4°F</div>
-                    <div class="param-note">Within target range; 24hr mean 75.5°F shows normal ambient drift post-camping trip return. 1.35°F rise in last hour is minor fluctuation, not alarm.</div>
+                    <div class="param-value status-green">73.06°F</div>
+                    <div class="param-note">Down 3.15°F from 24hr mean; likely post-maintenance cooling. Still comfortably in target range.</div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">pH</div>
-                    <div class="param-value status-green">6.48</div>
-                    <div class="param-note">Stable and healthy for Neocaridina. Post-maintenance wipe has not destabilized buffering. Probe freshly calibrated (2026-04-26).</div>
+                    <div class="param-value status-yellow">6.31</div>
+                    <div class="param-note">Sharp 0.13 drop in last hour. Tank-wipe this morning may have released dissolved CO2 or altered microbial balance. Trending slightly downward from 24hr mean (6.327). Not yet critical, but warrants close monitoring.</div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">TDS</div>
-                    <div class="param-value status-green">240.0 ppm</div>
-                    <div class="param-note">Solid mid-range. 24hr uptick of +8ppm is normal bioload growth; no concern.</div>
+                    <div class="param-value status-green">243.0 ppm</div>
+                    <div class="param-note">Within target. Up 9ppm over 24hr, consistent with evaporation and shrimp bioload accumulation. Normal drift.</div>
                 </div>
             </div>
         </div>
 
         <div class="section">
             <div class="section-title">Reasoning</div>
-            <div class="reasoning">Tank parameters are stable and well-centered in target bands. Toby returned from camping to find conditions healthy after 48 hours unattended; the 24hr temp decline (-2.81°F) and minor pH/TDS shifts reflect normal post-maintenance settling and bioload maturation in a 44-day-old colony. Gentle observation only.</div>
+            <div class="reasoning">pH drop of 0.13 in one hour is rapid but not unprecedented post-maintenance; tank-wipe can release biofilm and CO2. Temperature cooling is expected but stable. No shrimp behavioral crisis reported, but pH trend deserves observation over the next 6 hours to rule out ongoing drift.</div>
         </div>
 
         <div class="section">
             <div class="section-title">Actions</div>
             <div class="actions">
                 <ul>
-                    <li><strong>observe</strong> [routine] — Confirm shrimp behavioral health and coloration after maintenance wipe—no urgent flags, but a visual check before next feeding would be reassuring.</li><li><strong>feeding</strong> [routine] — Feed within 12 hours. Last logged feed was 2026-05-01; no hunger crisis, but routine nutrition is due.</li><li><strong>photo_request</strong> [routine] — </li>
+                    <li><strong>photo_request</strong> [routine] — </li>
                 </ul>
             </div>
         </div>
@@ -421,7 +421,7 @@ I'm watching, patient, and ready to speak up if anything genuinely shifts.
 
         <div class="section">
             <div class="section-title">Monitor Log (Last 10)</div>
-            <div class="monitor-log"><div>[2026-05-04T18:30] Day 44 | skipped (stable) | T=74.07°F pH=6.57 TDS=238.0ppm</div><div>[2026-05-04T18:45] Day 44 | skipped (stable) | T=74.3°F pH=6.56 TDS=237.0ppm</div><div>[2026-05-04T19:00] Day 44 | risk=green | [temp_f changed 1.57 in last ho] | T=72.05°F pH=6.53 TDS=243.0ppm | Water chemistry is stable and centered in target post-maintenance. Temperature d</div><div>[2026-05-04T19:15] Day 44 | risk=green | [temp_f changed 1.12 in last ho] | T=72.95°F pH=6.51 TDS=241.0ppm | Toby wiped the tank interior this morning and returned from camping to find cond</div><div>[2026-05-04T19:30] Day 44 | risk=green | [temp_f changed 1.01 in last ho] | T=73.29°F pH=6.5 TDS=241.0ppm | All parameters are solidly within target range post-maintenance (glass wipe on 2</div><div>[2026-05-04T19:45] Day 44 | risk=green | [temp_f changed 1.35 in last ho] | T=73.4°F pH=6.48 TDS=240.0ppm | Tank parameters are stable and well-centered in target bands. Toby returned from</div><div>[call-toby] Telegram sent (info): Tank parameters are stable and well-centered in target bands. Toby returned from camping to find conditions healthy after 48 hours unattended; the 24hr temp decline (-2.81°F) and minor pH/TDS shifts reflect normal post-maintenance settling and bioload maturation in a 44-day-old colony. Gentle observation only.</div><div></div><div>• feeding — Feed within 12 hours. Last logged feed was 2026-05-01; no hunger crisis, but routine nutrition is due.</div><div>• 📸 Send a photo of the tank</div></div>
+            <div class="monitor-log"><div>• feeding — Feed within 12 hours. Last logged feed was 2026-05-01; no hunger crisis, but routine nutrition is due.</div><div>• 📸 Send a photo of the tank</div><div>[2026-05-04T20:00] Day 44 | skipped (stable) | T=73.74°F pH=6.44 TDS=240.0ppm</div><div>[2026-05-04T20:15] Day 44 | risk=green | [ph changed 0.14 in last hour] | T=72.95°F pH=6.36 TDS=244.0ppm | Toby returned from camping and cleaned algae off glass this afternoon; temperatu</div><div>[2026-05-04T20:30] Day 44 | risk=green | [ph changed 0.13 in last hour] | T=72.16°F pH=6.35 TDS=246.0ppm | Tank returned from maintenance with a brief thermal dip and minor pH flutter—bot</div><div>[call-toby] Telegram sent (info): Tank returned from maintenance with a brief thermal dip and minor pH flutter—both normal. All parameters are stable and within target. Toby reports general conditions fine; colony remains stable at 5 shrimp, 508.5 hours post-introduction.</div><div></div><div>• 👀 Observe shrimp behavior</div><div>[2026-05-04T20:45] Day 44 | risk=yellow | [ph changed 0.13 in last hour] | T=73.06°F pH=6.31 TDS=243.0ppm | pH drop of 0.13 in one hour is rapid but not unprecedented post-maintenance; tan</div><div>[2026-05-04T21:00] Day 44 | skipped (stable) | T=72.95°F pH=6.32 TDS=242.0ppm</div></div>
         </div>
     </div>
 
