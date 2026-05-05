@@ -4437,3 +4437,18 @@ All parameters hold steady within target range; 24hr trends are gentle and norma
 [2026-05-05T03:45] Day 45 | risk=yellow | [ph changed 0.18 in last hour] | T=76.21°F pH=5.7 TDS=231.0ppm | pH has drifted below target (5.7 vs. 6.5–7.5) and dropped 0.18 in one hour post-
 [shrimp-alert] 🚨 ph is below danger threshold: 5.7 (below 6.0)
 [call-toby] Telegram sent (critical): ph is below danger threshold: 5.7 (below 6.0)
+[2026-05-05T04:00] Day 45 | risk=yellow | [ph changed 0.13 in last hour] | T=76.1°F pH=5.65 TDS=232.0ppm | The pH probe was physically displaced and has only recently been restored to the
+[shrimp-alert] 🚨 ph is below danger threshold: 5.65 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.65 (below 6.0)
+[2026-05-05T04:15] Day 45 | skipped (stable) | T=76.1°F pH=5.64 TDS=230.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 5.64 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.64 (below 6.0)
+[2026-05-05T04:30] Day 45 | skipped (stable) | T=76.21°F pH=5.67 TDS=231.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 5.67 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.67 (below 6.0)
+[2026-05-05T04:45] Day 45 | skipped (stable) | T=76.1°F pH=5.68 TDS=231.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 5.68 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.68 (below 6.0)
+[2026-05-05T05:00] Day 45 | skipped (stable) | T=76.1°F pH=5.68 TDS=231.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 5.68 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.68 (below 6.0)
