@@ -4350,3 +4350,12 @@ All parameters hold steady within target range; 24hr trends are gentle and norma
 [2026-05-04T18:15] Day 44 | skipped (stable) | T=73.62°F pH=6.58 TDS=239.0ppm
 [2026-05-04T18:30] Day 44 | skipped (stable) | T=74.07°F pH=6.57 TDS=238.0ppm
 [2026-05-04T18:45] Day 44 | skipped (stable) | T=74.3°F pH=6.56 TDS=237.0ppm
+[2026-05-04T19:00] Day 44 | risk=green | [temp_f changed 1.57 in last ho] | T=72.05°F pH=6.53 TDS=243.0ppm | Water chemistry is stable and centered in target post-maintenance. Temperature d
+[2026-05-04T19:15] Day 44 | risk=green | [temp_f changed 1.12 in last ho] | T=72.95°F pH=6.51 TDS=241.0ppm | Toby wiped the tank interior this morning and returned from camping to find cond
+[2026-05-04T19:30] Day 44 | risk=green | [temp_f changed 1.01 in last ho] | T=73.29°F pH=6.5 TDS=241.0ppm | All parameters are solidly within target range post-maintenance (glass wipe on 2
+[2026-05-04T19:45] Day 44 | risk=green | [temp_f changed 1.35 in last ho] | T=73.4°F pH=6.48 TDS=240.0ppm | Tank parameters are stable and well-centered in target bands. Toby returned from
+[call-toby] Telegram sent (info): Tank parameters are stable and well-centered in target bands. Toby returned from camping to find conditions healthy after 48 hours unattended; the 24hr temp decline (-2.81°F) and minor pH/TDS shifts reflect normal post-maintenance settling and bioload maturation in a 44-day-old colony. Gentle observation only.
+
+• feeding — Feed within 12 hours. Last logged feed was 2026-05-01; no hunger crisis, but routine nutrition is due.
+• 📸 Send a photo of the tank
+[2026-05-04T20:00] Day 44 | skipped (stable) | T=73.74°F pH=6.44 TDS=240.0ppm
