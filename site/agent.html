@@ -250,17 +250,17 @@
             <div class="param-grid">
                 <div class="param-card">
                     <div class="param-name">Temperature</div>
-                    <div class="param-value status-green">73.06°F</div>
+                    <div class="param-value status-green">76.32°F</div>
                     <div class="param-note"></div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">pH</div>
-                    <div class="param-value status-yellow">5.88</div>
-                    <div class="param-note">Probe was dislodged earlier today; reading is post-restoration and should stabilize over next 12hr. Recent interior wipe may have altered pH slightly.</div>
+                    <div class="param-value status-yellow">5.91</div>
+                    <div class="param-note">Probe was dislodged earlier today; readings since ~22:33 may be unreliable. Pre-dislodge baseline was ~6.31. Current 5.91 is near yellow threshold but could reflect sensor error rather than genuine acidification.</div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">TDS</div>
-                    <div class="param-value status-green">241.0 ppm</div>
+                    <div class="param-value status-green">228.0 ppm</div>
                     <div class="param-note"></div>
                 </div>
             </div>
@@ -268,14 +268,14 @@
 
         <div class="section">
             <div class="section-title">Reasoning</div>
-            <div class="reasoning">pH has dropped 0.33 points in 24 hours and now sits at 5.88—just barely shy of the 6.0 danger threshold. The probe dislodgment and interior wipe create legitimate uncertainty about the trend, but this is the second yellow-flag pH moment in recent memory and bears close attention. Temperature and TDS are solid; shrimp were fed 12 minutes ago and appear visibly healthy in the last clear photo.</div>
+            <div class="reasoning">pH dip to 5.91 coincides with temperature probe dislodgement and subsequent reinsertion—sensor artifact is plausible. TDS and temp are stable; feeding 1.5hr ago is consistent with expected post-meal stability. Warrant 4–6hr observation before escalating.</div>
         </div>
 
         <div class="section">
             <div class="section-title">Actions</div>
             <div class="actions">
                 <ul>
-                    <li><strong>observe</strong> [soon] — Watch for any signs of stress or lethargy in the colony over the next 12 hours; check shrimp activity and coloration when convenient.</li><li><strong>water_test</strong> [soon] — Retest pH in 12 hours to confirm post-probe and post-wipe stability. If pH remains below 6.0 or continues downward, escalate to partial water change.</li><li><strong>none</strong> [routine] — </li>
+                    <li><strong>water_test</strong> [soon] — Confirm pH reading with manual test strip or reagent kit—probe reliability is uncertain after dislodgement. If manual test confirms 5.91, escalate; if it reads 6.3–6.5, probe placement/calibration likely the culprit.</li><li><strong>observe</strong> [routine] — Monitor shrimp behavior over next 4–6 hours. At 5.91 sustained, shrimp would show stress (lethargy, lack of appetite). Alert behavior despite low pH reading suggests sensor error.</li>
                 </ul>
             </div>
         </div>
@@ -421,7 +421,7 @@ I'm watching, patient, and ready to speak up if anything genuinely shifts.
 
         <div class="section">
             <div class="section-title">Monitor Log (Last 10)</div>
-            <div class="monitor-log"><div>[2026-05-04T21:30] Day 44 | skipped (stable) | T=73.29°F pH=6.28 TDS=242.0ppm</div><div>[2026-05-04T21:45] Day 44 | skipped (stable) | T=72.95°F pH=6.26 TDS=244.0ppm</div><div>[2026-05-04T22:00] Day 44 | skipped (stable) | T=72.28°F pH=6.23 TDS=247.0ppm</div><div>[2026-05-04T22:15] Day 44 | risk=green | [temp_f changed 1.13 in last ho] | T=72.16°F pH=6.23 TDS=247.0ppm | Temperature drop is a post-maintenance artifact; all parameters are within targe</div><div>[2026-05-04T22:30] Day 44 | risk=red | [ph changed 0.34 in last hour] | T=72.39°F pH=5.92 TDS=242.0ppm | pH has crashed into danger territory (5.92) with a sharp 0.34-point drop in one </div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.92 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.92 (below 6.0)</div><div>[2026-05-04T22:45] Day 44 | risk=yellow | [manual event since last check ] | T=73.06°F pH=5.88 TDS=241.0ppm | pH has dropped 0.33 points in 24 hours and now sits at 5.88—just barely shy of t</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.88 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.88 (below 6.0)</div></div>
+            <div class="monitor-log"><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.88 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.88 (below 6.0)</div><div>[2026-05-04T23:00] Day 44 | risk=yellow | [ph changed 0.11 in last hour] | T=73.18°F pH=6.12 TDS=238.0ppm | Temperature probe dislodgement and interior glass wipe both risk brief chemistry</div><div>[2026-05-04T23:15] Day 44 | risk=yellow | [ph changed 0.11 in last hour] | T=76.32°F pH=6.03 TDS=229.0ppm | Temperature probe was out of water until 22:33 (42 minutes ago), rendering pH re</div><div>[2026-05-04T23:30] Day 44 | risk=yellow | [temp_f changed 3.26 in last ho] | T=76.32°F pH=5.9 TDS=229.0ppm | The 3.26°F temperature spike is a false signal—probe dislodgement explains it, a</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.9 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.9 (below 6.0)</div><div>[2026-05-04T23:45] Day 44 | risk=yellow | [ph changed 0.21 in last hour] | T=76.32°F pH=5.91 TDS=228.0ppm | pH dip to 5.91 coincides with temperature probe dislodgement and subsequent rein</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.91 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.91 (below 6.0)</div></div>
         </div>
     </div>
 

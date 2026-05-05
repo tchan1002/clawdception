@@ -4377,3 +4377,11 @@ All parameters hold steady within target range; 24hr trends are gentle and norma
 [2026-05-04T22:45] Day 44 | risk=yellow | [manual event since last check ] | T=73.06°F pH=5.88 TDS=241.0ppm | pH has dropped 0.33 points in 24 hours and now sits at 5.88—just barely shy of t
 [shrimp-alert] 🚨 ph is below danger threshold: 5.88 (below 6.0)
 [call-toby] Telegram sent (critical): ph is below danger threshold: 5.88 (below 6.0)
+[2026-05-04T23:00] Day 44 | risk=yellow | [ph changed 0.11 in last hour] | T=73.18°F pH=6.12 TDS=238.0ppm | Temperature probe dislodgement and interior glass wipe both risk brief chemistry
+[2026-05-04T23:15] Day 44 | risk=yellow | [ph changed 0.11 in last hour] | T=76.32°F pH=6.03 TDS=229.0ppm | Temperature probe was out of water until 22:33 (42 minutes ago), rendering pH re
+[2026-05-04T23:30] Day 44 | risk=yellow | [temp_f changed 3.26 in last ho] | T=76.32°F pH=5.9 TDS=229.0ppm | The 3.26°F temperature spike is a false signal—probe dislodgement explains it, a
+[shrimp-alert] 🚨 ph is below danger threshold: 5.9 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.9 (below 6.0)
+[2026-05-04T23:45] Day 44 | risk=yellow | [ph changed 0.21 in last hour] | T=76.32°F pH=5.91 TDS=228.0ppm | pH dip to 5.91 coincides with temperature probe dislodgement and subsequent rein
+[shrimp-alert] 🚨 ph is below danger threshold: 5.91 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.91 (below 6.0)
