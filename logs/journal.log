@@ -561,3 +561,6 @@ json.decoder.JSONDecodeError: Expecting value: line 2 column 1 (char 1)
 [call-toby] Telegram sent (info): Action items:
 • Feed the tank within the next 6–12 hours using standard portion size; no catch-up or extra rations needed after a brief gap
 • Monitor pH over the next 12 hours to confirm post-wipe stability; if it continues drifting upward beyond 6.7, escalate to Toby with a clarifying photo request
+[shrimp-journal] Entry written: 2026-05-05-0005.md (Day 45)
+[call-toby] Telegram sent (info): Journal — Day 45 · 2026-05-05 00:05
+[call-toby] Document sent: 2026-05-05-0005.md
