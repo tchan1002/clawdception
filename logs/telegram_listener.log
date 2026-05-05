@@ -3042,3 +3042,15 @@ One deeply saturated red Neocaridina shrimp stands confidently on the dark subst
 [telegram-listener] Processed 3 message(s), offset now 236833189
 [telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
 [telegram-listener] getUpdates failed: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot***/getUpdates?offset=236833189&timeout=0&limit=100 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fff5c8f5550>: Failed to resolve 'api.telegram.org' ([Errno -3] Temporary failure in name resolution)"))
+[telegram-listener] Photo saved: 2026-05-04_22-33-03.jpg — ''
+[call-toby] Telegram sent (info): 1 shrimp visible · water: clear · plants: thriving
+Concerns: none
+
+A well-equipped rear corner of Media Luna is on full display — dual sponge filters loaded with ceramic media balls, a submersible pump or powerhead, a teal thermometer, and what appears to be a large mesh bag of substrate or mineral media occupying the foreground. Dense, fine-leafed floating plants (likely frogbit or a similar species) carpet the surface overhead, looking lush and healthy. One small shrimp — appears juvenilish, translucent with a reddish tint — is visible on or near the mesh bag in the lower left foreground.
+[telegram-listener] Vision reply sent
+[telegram-listener] 'temperature probe was dislodged for a bit and out of the water, might have caused bad ph readings' → correction
+[call-toby] Telegram sent (info): Logged as correction: Temperature probe was dislodged and out of the water for an unknown period, which may have caused unreliable pH readings during that time. Prior pH data should be treated with skepticism until probe placement was restored. ✓
+[telegram-listener] Processed 2 message(s), offset now 236833191
+[telegram-listener] 'fed some pellets' → feeding
+[call-toby] Telegram sent (info): Logged as feeding: Fed some pellets to the tank. ✓
+[telegram-listener] Processed 1 message(s), offset now 236833192

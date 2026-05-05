@@ -4370,3 +4370,10 @@ All parameters hold steady within target range; 24hr trends are gentle and norma
 [2026-05-04T21:30] Day 44 | skipped (stable) | T=73.29°F pH=6.28 TDS=242.0ppm
 [2026-05-04T21:45] Day 44 | skipped (stable) | T=72.95°F pH=6.26 TDS=244.0ppm
 [2026-05-04T22:00] Day 44 | skipped (stable) | T=72.28°F pH=6.23 TDS=247.0ppm
+[2026-05-04T22:15] Day 44 | risk=green | [temp_f changed 1.13 in last ho] | T=72.16°F pH=6.23 TDS=247.0ppm | Temperature drop is a post-maintenance artifact; all parameters are within targe
+[2026-05-04T22:30] Day 44 | risk=red | [ph changed 0.34 in last hour] | T=72.39°F pH=5.92 TDS=242.0ppm | pH has crashed into danger territory (5.92) with a sharp 0.34-point drop in one 
+[shrimp-alert] 🚨 ph is below danger threshold: 5.92 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.92 (below 6.0)
+[2026-05-04T22:45] Day 44 | risk=yellow | [manual event since last check ] | T=73.06°F pH=5.88 TDS=241.0ppm | pH has dropped 0.33 points in 24 hours and now sits at 5.88—just barely shy of t
+[shrimp-alert] 🚨 ph is below danger threshold: 5.88 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.88 (below 6.0)
