@@ -619,3 +619,7 @@
 {"timestamp": "2026-05-05T00:15:02.218123", "urgency": "critical", "message": "ph is below danger threshold: 5.91 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-05T00:30:02.176816", "urgency": "critical", "message": "ph is below danger threshold: 5.84 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-05T00:45:02.451104", "urgency": "critical", "message": "ph is below danger threshold: 5.87 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-05T01:00:02.354301", "urgency": "critical", "message": "ph is below danger threshold: 5.84 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-05T01:15:02.367187", "urgency": "critical", "message": "ph is below danger threshold: 5.87 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-05T01:30:01.977353", "urgency": "critical", "message": "ph is below danger threshold: 5.41 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-05T01:45:01.939534", "urgency": "critical", "message": "ph is below danger threshold: 5.48 (below 6.0)", "sent_via": "telegram"}
