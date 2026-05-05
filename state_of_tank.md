@@ -1,8 +1,8 @@
 # State of Tank — Media Luna
 
-**Last updated:** 2026-05-03
-**Cycle day:** 43 (started 2026-03-22)
-**Tank status:** Nitrogen cycle active, biologically established. Colony in second week of residence.
+**Last updated:** 2026-05-04
+**Cycle day:** 44 (started 2026-03-22)
+**Tank status:** Nitrogen cycle active, biologically established. Colony in ~second week of residence.
 
 ---
 
@@ -10,46 +10,54 @@
 
 | Animal | Count | Notes |
 |--------|-------|-------|
-| Neocaridina cherry shrimp | 5 confirmed + 1 original resident | Present approximately 8–9 days as of 2026-05-03 |
+| Neocaridina cherry shrimp | 5 confirmed + 1 original resident | Approximately 13–14 days in tank as of 2026-05-04 |
 
-**Notable:** One healthy molt confirmed 2026-04-30. No losses logged. Last confirmed colony health observation approximately 18 hours prior to 2026-05-03 end of day — no behavioral or health concerns at that time.
+**Notable:** One healthy molt confirmed 2026-04-30. No losses logged. One shrimp visible in 2026-05-04 evening photo — juvenilish, translucent with reddish tint, observed on mesh media bag in equipment corner. Colony health indicators remain positive.
+
+---
+
+## Equipment
+
+- Dual sponge filters with ceramic media balls (confirmed via photo)
+- Submersible pump or powerhead (confirmed via photo)
+- Teal thermometer (confirmed via photo)
+- Large mesh bag — substrate or mineral media — in equipment corner foreground (confirmed via photo)
+- DS18B20 temperature probe — **dislodged out of water 2026-05-04 ~21:50–22:33; reseated by Toby at 22:33**
+
+---
+
+## Plants
+
+- Dense, fine-leafed floating plants (likely frogbit or similar) — confirmed thriving via photo, providing full surface canopy overhead
+- Additional planting confirmed from prior observations; specifics not logged
 
 ---
 
 ## Water Chemistry — Current
 
-| Parameter | Current Avg | Status |
-|-----------|-------------|--------|
-| Temperature | 76.0°F | Stable. Within target range. |
-| pH | 6.39 (low: 6.19) | Slightly low; daily dip to 6.19 noted. Monitoring. |
-| TDS | 232 ppm | Stable, +5 ppm from yesterday. |
+| Parameter | Current Approx. | Stable Range (target) |
+|-----------|----------------|----------------------|
+| Temperature | ~75–76°F | 72–78°F |
+| pH | ~6.2–6.4 | 6.2–7.5 |
+| TDS | ~237 ppm | 150–300 ppm |
 
-No manual test results (ammonia/nitrite/nitrate) on file for today.
-
----
-
-## Biological Filter
-
-Cycle is Day 43. Bacterial bloom phase appears to have passed. No ammonia or nitrite spikes logged in recent days. Water clarity described as clear in most recent observations. Filter considered biologically established based on trend data.
+All sensor excursions on 2026-05-04 attributed to probe dislodgement — discard as signal.
 
 ---
 
-## Surface Coverage
+## Recent Events
 
-Duckweed trimmed approximately 50% on 2026-05-01. Regrowth status unknown — no visual observation logged since trim. Two full days of regrowth as of 2026-05-03.
-
----
-
-## Feeding Status
-
-Last logged feeding: approximately 57–59 hours ago as of end of 2026-05-03. Exceeds 48-hour soft threshold. Toby is away; no automated feeder in place. Colony fasting; no acute concern yet, but feeding upon return is a priority.
+- **2026-05-04 morning:** Maintenance performed (interior glass wipe per prior journal); TDS and pH drifted down slightly post-maintenance, as expected
+- **2026-05-04 22:33:** Temperature probe confirmed dislodged and out of water; reseated by Toby
+- **2026-05-04 22:34:** Colony fed pellets — closes 78+ hour feeding gap
+- **2026-04-30:** One clean molt confirmed
 
 ---
 
-## Open Questions
+## Active Watch Items
 
-- pH floor (6.19 today): diurnal swing or a developing trend?
-- Duckweed regrowth rate: stabilizing or rebounding toward dense canopy?
-- Colony behavior: no visual data since pre-camping confirmation.
+- pH stabilization post-maintenance and post-probe-correction — confirm holding 6.2–6.5
+- Feeding resumed; next feeding should occur within normal 48-hour window
+- Colony visual health — last photo shows one healthy individual; broader colony check welcome
 
 ---
