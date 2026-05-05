@@ -93,9 +93,9 @@
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 0.15em;
-            background: #da363318;
-            color: #da3633;
-            border: 1px solid #da363350;
+            background: #d2992218;
+            color: #d29922;
+            border: 1px solid #d2992250;
         }
         .param-grid {
             display: grid;
@@ -241,7 +241,7 @@
 
         <div class="section">
             <div class="section-title">Current Risk Level</div>
-            <div class="risk-badge">red</div>
+            <div class="risk-badge">yellow</div>
         </div>
 
         
@@ -250,13 +250,13 @@
             <div class="param-grid">
                 <div class="param-card">
                     <div class="param-name">Temperature</div>
-                    <div class="param-value status-green">76.1°F</div>
+                    <div class="param-value status-green">76.21°F</div>
                     <div class="param-note"></div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">pH</div>
                     <div class="param-value status-red">5.48</div>
-                    <div class="param-note">pH probe was out of water until ~22:33 on 2026-05-04; prior readings in this range should be treated with skepticism. Current drop of -0.73 in 24hr is significant and may reflect both probe artifact correction and genuine tank drift. Requires validation.</div>
+                    <div class="param-note">Temperature probe was out of water on 2026-05-04T22:33; prior pH data flagged unreliable. Current 5.48 reading is suspect until probe reinsertion is confirmed stable. The dramatic 0.39 drop in the last hour may be a sensor artifact.</div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">TDS</div>
@@ -268,7 +268,7 @@
 
         <div class="section">
             <div class="section-title">Reasoning</div>
-            <div class="reasoning">pH 5.48 is below the danger threshold of 6.0 and acidic enough to stress Neocaridina shrimp; however, the temperature probe was out of water until just ~2 hours ago, making current readings highly suspect. The -0.36 pH shift in the last hour alone suggests the sensor may still be stabilizing or there is a rapid acidification event occurring.</div>
+            <div class="reasoning">pH reading of 5.48 is below the danger threshold (6.0), but the temperature probe dislodgement correction makes this reading unreliable—we cannot trust the sensor data in this window. Once probe placement is confirmed stable, reassess before escalating to urgent action.</div>
         </div>
 
         <div class="section">
@@ -319,7 +319,7 @@ I remain cautiously optimistic about what we're building here.
 
         <div class="section">
             <div class="section-title">Monitor Log (Last 10)</div>
-            <div class="monitor-log"><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.84 (below 6.0)</div><div>[2026-05-05T01:15] Day 45 | skipped (stable) | T=76.21°F pH=5.87 TDS=230.0ppm</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.87 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.87 (below 6.0)</div><div>[2026-05-05T01:30] Day 45 | risk=red | [ph changed 0.46 in last hour] | T=76.1°F pH=5.41 TDS=231.0ppm | pH has plummeted to 5.41 in the past hour—below danger threshold and a sharp div</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.41 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.41 (below 6.0)</div><div>[2026-05-05T01:45] Day 45 | risk=red | [ph changed 0.36 in last hour] | T=76.1°F pH=5.48 TDS=230.0ppm | pH 5.48 is below the danger threshold of 6.0 and acidic enough to stress Neocari</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.48 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.48 (below 6.0)</div></div>
+            <div class="monitor-log"><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.48 (below 6.0)</div><div>[2026-05-05T02:30] Day 45 | skipped (stable) | T=76.21°F pH=5.45 TDS=230.0ppm</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.45 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.45 (below 6.0)</div><div>[2026-05-05T02:45] Day 45 | skipped (stable) | T=76.21°F pH=5.48 TDS=229.0ppm</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.48 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.48 (below 6.0)</div><div>[2026-05-05T03:00] Day 45 | skipped (stable) | T=76.21°F pH=5.52 TDS=229.0ppm</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.52 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.52 (below 6.0)</div></div>
         </div>
     </div>
 

@@ -4409,3 +4409,18 @@ All parameters hold steady within target range; 24hr trends are gentle and norma
 [2026-05-05T01:45] Day 45 | risk=red | [ph changed 0.36 in last hour] | T=76.1°F pH=5.48 TDS=230.0ppm | pH 5.48 is below the danger threshold of 6.0 and acidic enough to stress Neocari
 [shrimp-alert] 🚨 ph is below danger threshold: 5.48 (below 6.0)
 [call-toby] Telegram sent (critical): ph is below danger threshold: 5.48 (below 6.0)
+[2026-05-05T02:00] Day 45 | risk=yellow | [ph changed 0.39 in last hour] | T=76.21°F pH=5.48 TDS=230.0ppm | pH reading of 5.48 is below the danger threshold (6.0), but the temperature prob
+[shrimp-alert] 🚨 ph is below danger threshold: 5.48 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.48 (below 6.0)
+[2026-05-05T02:15] Day 45 | skipped (stable) | T=76.21°F pH=5.48 TDS=231.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 5.48 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.48 (below 6.0)
+[2026-05-05T02:30] Day 45 | skipped (stable) | T=76.21°F pH=5.45 TDS=230.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 5.45 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.45 (below 6.0)
+[2026-05-05T02:45] Day 45 | skipped (stable) | T=76.21°F pH=5.48 TDS=229.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 5.48 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.48 (below 6.0)
+[2026-05-05T03:00] Day 45 | skipped (stable) | T=76.21°F pH=5.52 TDS=229.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 5.52 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.52 (below 6.0)
