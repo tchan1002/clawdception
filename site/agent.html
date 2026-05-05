@@ -255,12 +255,12 @@
                 </div>
                 <div class="param-card">
                     <div class="param-name">pH</div>
-                    <div class="param-value status-red">5.48</div>
-                    <div class="param-note">Temperature probe was out of water on 2026-05-04T22:33; prior pH data flagged unreliable. Current 5.48 reading is suspect until probe reinsertion is confirmed stable. The dramatic 0.39 drop in the last hour may be a sensor artifact.</div>
+                    <div class="param-value status-yellow">5.7</div>
+                    <div class="param-note">0.18 drop in last hour following probe reinsertion; probe was out of water 2026-05-04T22:33, creating unreliable readings during that period. Current 5.7 is below target floor (6.5) and requires confirmation.</div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">TDS</div>
-                    <div class="param-value status-green">230.0 ppm</div>
+                    <div class="param-value status-green">231.0 ppm</div>
                     <div class="param-note"></div>
                 </div>
             </div>
@@ -268,14 +268,14 @@
 
         <div class="section">
             <div class="section-title">Reasoning</div>
-            <div class="reasoning">pH reading of 5.48 is below the danger threshold (6.0), but the temperature probe dislodgement correction makes this reading unreliable—we cannot trust the sensor data in this window. Once probe placement is confirmed stable, reassess before escalating to urgent action.</div>
+            <div class="reasoning">pH has drifted below target (5.7 vs. 6.5–7.5) and dropped 0.18 in one hour post-probe reinsertion, but the dislodged probe window means this reading needs validation before escalating concern. Temperature and TDS are nominal; 5 shrimp appear settled with no reported behavioral stress.</div>
         </div>
 
         <div class="section">
             <div class="section-title">Actions</div>
             <div class="actions">
                 <ul>
-                    <li style='color:#6e7681'>No actions</li>
+                    <li><strong>photo_request</strong> [routine] — </li>
                 </ul>
             </div>
         </div>
@@ -319,7 +319,7 @@ I remain cautiously optimistic about what we're building here.
 
         <div class="section">
             <div class="section-title">Monitor Log (Last 10)</div>
-            <div class="monitor-log"><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.48 (below 6.0)</div><div>[2026-05-05T02:30] Day 45 | skipped (stable) | T=76.21°F pH=5.45 TDS=230.0ppm</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.45 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.45 (below 6.0)</div><div>[2026-05-05T02:45] Day 45 | skipped (stable) | T=76.21°F pH=5.48 TDS=229.0ppm</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.48 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.48 (below 6.0)</div><div>[2026-05-05T03:00] Day 45 | skipped (stable) | T=76.21°F pH=5.52 TDS=229.0ppm</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.52 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.52 (below 6.0)</div></div>
+            <div class="monitor-log"><div>[2026-05-05T03:30] Day 45 | risk=yellow | [ph changed 0.25 in last hour] | T=76.21°F pH=5.73 TDS=230.0ppm | pH 5.73 is outside the danger floor (6.0), but the probe was just restored to se</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.73 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.73 (below 6.0)</div><div>[call-toby] Telegram sent (warning): pH 5.73 is outside the danger floor (6.0), but the probe was just restored to service after an unknown out-of-water period—the sharp 0.25 drop in the last hour is most likely probe re-equilibration noise, not a genuine tank pH crash. Temperature and TDS are stable and healthy; shrimp showed good activity in the last photo 4 hours ago.</div><div></div><div>⏳ 👀 Observe shrimp behavior — Watch shrimp behavior and surface activity over the next 2–4 hours. If pH continues dropping or shrimp show stress (clustering, reduced feeding), escalate; if readings stabilize, artifact is confirmed.</div><div>• 📸 Send a photo of the tank</div><div>[2026-05-05T03:45] Day 45 | risk=yellow | [ph changed 0.18 in last hour] | T=76.21°F pH=5.7 TDS=231.0ppm | pH has drifted below target (5.7 vs. 6.5–7.5) and dropped 0.18 in one hour post-</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.7 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.7 (below 6.0)</div></div>
         </div>
     </div>
 
