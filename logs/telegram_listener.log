@@ -3061,3 +3061,4 @@ A well-equipped rear corner of Media Luna is on full display — dual sponge fil
 [telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
 [telegram-listener] getUpdates failed: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=20)
 [telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
