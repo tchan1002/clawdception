@@ -741,3 +741,8 @@
 {"timestamp": "2026-05-06T09:25:07.573509", "urgency": "info", "message": "Installed to skills/sensor_anomaly_tagger/ \u2014 add to cron manually when ready.", "sent_via": "telegram"}
 {"timestamp": "2026-05-06T09:30:02.268631", "urgency": "critical", "message": "ph is below danger threshold: 5.61 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-06T09:45:02.042504", "urgency": "critical", "message": "ph is below danger threshold: 5.59 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T10:00:02.834184", "urgency": "critical", "message": "ph is below danger threshold: 5.59 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T10:15:01.988942", "urgency": "critical", "message": "ph is below danger threshold: 5.6 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T10:30:02.711089", "urgency": "critical", "message": "ph is below danger threshold: 5.62 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T10:45:02.628521", "urgency": "critical", "message": "ph is below danger threshold: 5.65 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T10:45:09.305099", "urgency": "warning", "message": "pH probe showing persistent low bias (5.65 vs. owner's manual 6.6) despite recent calibration and thermometer displacement history; TDS and temperature are solid. Discrepancy warrants probe re-calibration or replacement before pH-dependent decisions are made.\n\n\u2022 \ud83d\udd27 Check equipment \u2014 Verify pH probe is fully submerged and stable in water column \u2014 thermometer displacement history on May 4 suggests hardware placement issues may recur.\n\u2022 \ud83d\udcf8 Send a photo of the tank", "sent_via": "telegram"}
