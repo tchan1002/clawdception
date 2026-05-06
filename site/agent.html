@@ -250,17 +250,17 @@
             <div class="param-grid">
                 <div class="param-card">
                     <div class="param-name">Temperature</div>
-                    <div class="param-value status-green">73.74°F</div>
+                    <div class="param-value status-green">73.51°F</div>
                     <div class="param-note"></div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">pH</div>
-                    <div class="param-value status-yellow">5.82</div>
-                    <div class="param-note">Probe reads 5.82 but Toby's manual test 9 minutes ago measured 6.6; this is a 0.78 divergence. Probe is drifting post-recalibration and should not be trusted as primary data. Manual test is ground truth.</div>
+                    <div class="param-value status-yellow">5.93</div>
+                    <div class="param-note">Probe reads 5.93; manual test this morning (14:25) read 6.6. Probe is drifting post-recalibration—use Toby's manual tests as ground truth until replacement.</div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">TDS</div>
-                    <div class="param-value status-green">240.0 ppm</div>
+                    <div class="param-value status-green">241.0 ppm</div>
                     <div class="param-note"></div>
                 </div>
             </div>
@@ -268,7 +268,7 @@
 
         <div class="section">
             <div class="section-title">Reasoning</div>
-            <div class="reasoning">pH probe is unreliable post-recalibration and diverges significantly from Toby's manual test (probe 5.82 vs. manual 6.6). Using manual test as ground truth, actual pH is 6.6 (green), but the probe drift creates ambiguity for automated decision-making and needs resolution soon. All other parameters are in target, ammonia and nitrite are zero, and the shrimp colony shows no distress signals.</div>
+            <div class="reasoning">Probe drift is persistent but Toby's manual test (6.6) confirms actual tank pH is safely in range; temperature stable and trending down slightly post-return from camping (normal). TDS healthy, ammonia/nitrite zero, nitrate elevated (80ppm) but manageable in a 10gal with 5 shrimp at day 46.</div>
         </div>
 
         <div class="section">
@@ -374,7 +374,7 @@ I'm stuck in a holding pattern until the probe question is resolved; nothing els
 
         <div class="section">
             <div class="section-title">Monitor Log (Last 10)</div>
-            <div class="monitor-log"><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.82 (below 6.0)</div><div>[2026-05-06T14:15] Day 46 | risk=yellow | [manual event since last check ] | T=73.85°F pH=5.81 TDS=241.0ppm | Probe pH has drifted 0.79 units below Toby's manual reading, making it unreliabl</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.81 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.81 (below 6.0)</div><div>[2026-05-06T14:30] Day 46 | risk=yellow | [manual event since last check ] | T=73.74°F pH=5.82 TDS=240.0ppm | pH probe is unreliable post-recalibration and diverges significantly from Toby's</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.82 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.82 (below 6.0)</div><div>[2026-05-06T14:45] Day 46 | skipped (stable) | T=73.62°F pH=5.88 TDS=238.0ppm</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.88 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.88 (below 6.0)</div></div>
+            <div class="monitor-log"><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.93 (below 6.0)</div><div>[call-toby] Telegram sent (warning): Probe drift is persistent but Toby's manual test (6.6) confirms actual tank pH is safely in range; temperature stable and trending down slightly post-return from camping (normal). TDS healthy, ammonia/nitrite zero, nitrate elevated (80ppm) but manageable in a 10gal with 5 shrimp at day 46.</div><div></div><div>• 📸 Send a photo of the tank</div><div>[2026-05-06T15:30] Day 46 | skipped (stable) | T=73.62°F pH=5.91 TDS=238.0ppm</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.91 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.91 (below 6.0)</div><div>[2026-05-06T15:45] Day 46 | skipped (stable) | T=73.62°F pH=5.89 TDS=240.0ppm</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.89 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.89 (below 6.0)</div></div>
         </div>
     </div>
 

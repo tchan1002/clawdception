@@ -765,3 +765,8 @@
 {"timestamp": "2026-05-06T14:15:02.506654", "urgency": "critical", "message": "ph is below danger threshold: 5.81 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-06T14:30:02.325608", "urgency": "critical", "message": "ph is below danger threshold: 5.82 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-06T14:45:02.434771", "urgency": "critical", "message": "ph is below danger threshold: 5.88 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T15:00:02.414969", "urgency": "critical", "message": "ph is below danger threshold: 5.84 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T15:15:02.526947", "urgency": "critical", "message": "ph is below danger threshold: 5.93 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T15:15:09.614651", "urgency": "warning", "message": "Probe drift is persistent but Toby's manual test (6.6) confirms actual tank pH is safely in range; temperature stable and trending down slightly post-return from camping (normal). TDS healthy, ammonia/nitrite zero, nitrate elevated (80ppm) but manageable in a 10gal with 5 shrimp at day 46.\n\n\u2022 \ud83d\udcf8 Send a photo of the tank", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T15:30:02.201006", "urgency": "critical", "message": "ph is below danger threshold: 5.91 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T15:45:02.640998", "urgency": "critical", "message": "ph is below danger threshold: 5.89 (below 6.0)", "sent_via": "telegram"}

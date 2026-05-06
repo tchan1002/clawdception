@@ -4827,3 +4827,18 @@ pH has drifted into the 5.6–5.7 range over the past 24 hours (24hr_change: −
 [2026-05-06T14:45] Day 46 | skipped (stable) | T=73.62°F pH=5.88 TDS=238.0ppm
 [shrimp-alert] 🚨 ph is below danger threshold: 5.88 (below 6.0)
 [call-toby] Telegram sent (critical): ph is below danger threshold: 5.88 (below 6.0)
+[2026-05-06T15:00] Day 46 | skipped (stable) | T=73.62°F pH=5.84 TDS=240.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 5.84 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.84 (below 6.0)
+[2026-05-06T15:15] Day 46 | risk=yellow | [ph changed 0.11 in last hour] | T=73.51°F pH=5.93 TDS=241.0ppm | Probe drift is persistent but Toby's manual test (6.6) confirms actual tank pH i
+[shrimp-alert] 🚨 ph is below danger threshold: 5.93 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.93 (below 6.0)
+[call-toby] Telegram sent (warning): Probe drift is persistent but Toby's manual test (6.6) confirms actual tank pH is safely in range; temperature stable and trending down slightly post-return from camping (normal). TDS healthy, ammonia/nitrite zero, nitrate elevated (80ppm) but manageable in a 10gal with 5 shrimp at day 46.
+
+• 📸 Send a photo of the tank
+[2026-05-06T15:30] Day 46 | skipped (stable) | T=73.62°F pH=5.91 TDS=238.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 5.91 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.91 (below 6.0)
+[2026-05-06T15:45] Day 46 | skipped (stable) | T=73.62°F pH=5.89 TDS=240.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 5.89 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.89 (below 6.0)
