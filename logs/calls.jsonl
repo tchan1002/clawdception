@@ -723,3 +723,8 @@
 {"timestamp": "2026-05-06T06:30:02.086802", "urgency": "critical", "message": "ph is below danger threshold: 5.6 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-06T06:30:07.810363", "urgency": "warning", "message": "pH dropped 0.15 points over 24hr and sits at 5.6\u2014slightly acidic but expected behavior post-water-change and within acceptable acclimation range for a 22-day-old colony. Temperature and TDS are stable and healthy; no acute stress signals.\n\n\u2022 \ud83d\udc40 Observe shrimp behavior \u2014 Visual tank inspection, shrimp behavior and activity level. Last photo is 31hr old.\n\u2022 \ud83d\udcf8 Send a photo of the tank", "sent_via": "telegram"}
 {"timestamp": "2026-05-06T06:45:02.751576", "urgency": "critical", "message": "ph is below danger threshold: 5.59 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T07:00:02.077886", "urgency": "critical", "message": "ph is below danger threshold: 5.59 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T07:00:39.414007", "urgency": "info", "message": "Morning log ready \ud83c\udf05 \u2014 Day 45 of the cycle. Day 45 \u2014 2026-05-05 \u2014 Routine, Which Is Its Own Achievement", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T07:15:02.593762", "urgency": "critical", "message": "ph is below danger threshold: 5.57 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T07:30:02.546688", "urgency": "critical", "message": "ph is below danger threshold: 5.59 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T07:45:02.502028", "urgency": "critical", "message": "ph is below danger threshold: 5.6 (below 6.0)", "sent_via": "telegram"}

@@ -1,8 +1,8 @@
 # State of Tank — Media Luna
 
-**Last updated:** 2026-05-04
-**Cycle day:** 44 (started 2026-03-22)
-**Tank status:** Nitrogen cycle active, biologically established. Colony in ~second week of residence.
+**Last updated:** 2026-05-05
+**Cycle day:** 45 (started 2026-03-22)
+**Tank status:** Nitrogen cycle active, biologically established. Colony in ~third week of residence.
 
 ---
 
@@ -10,54 +10,43 @@
 
 | Animal | Count | Notes |
 |--------|-------|-------|
-| Neocaridina cherry shrimp | 5 confirmed + 1 original resident | Approximately 13–14 days in tank as of 2026-05-04 |
+| Neocaridina cherry shrimp | 5 confirmed + 1 original resident | ~15 days in tank as of 2026-05-05 |
 
-**Notable:** One healthy molt confirmed 2026-04-30. No losses logged. One shrimp visible in 2026-05-04 evening photo — juvenilish, translucent with reddish tint, observed on mesh media bag in equipment corner. Colony health indicators remain positive.
-
----
-
-## Equipment
-
-- Dual sponge filters with ceramic media balls (confirmed via photo)
-- Submersible pump or powerhead (confirmed via photo)
-- Teal thermometer (confirmed via photo)
-- Large mesh bag — substrate or mineral media — in equipment corner foreground (confirmed via photo)
-- DS18B20 temperature probe — **dislodged out of water 2026-05-04 ~21:50–22:33; reseated by Toby at 22:33**
+**Notable:** One healthy molt confirmed 2026-04-30. No losses logged. One juvenile shrimp visible in 2026-05-04 photo — translucent-reddish, active posture on mesh bag. Low overall visibility consistent with early-settlement phase.
 
 ---
 
-## Plants
+## Water Chemistry
 
-- Dense, fine-leafed floating plants (likely frogbit or similar) — confirmed thriving via photo, providing full surface canopy overhead
-- Additional planting confirmed from prior observations; specifics not logged
-
----
-
-## Water Chemistry — Current
-
-| Parameter | Current Approx. | Stable Range (target) |
-|-----------|----------------|----------------------|
-| Temperature | ~75–76°F | 72–78°F |
-| pH | ~6.2–6.4 | 6.2–7.5 |
-| TDS | ~237 ppm | 150–300 ppm |
-
-All sensor excursions on 2026-05-04 attributed to probe dislodgement — discard as signal.
+| Parameter | Current Range | Notes |
+|-----------|--------------|-------|
+| Temperature | 74.5–76.0°F | Post-water-change dip; well within safe range |
+| pH | 6.1–6.7 (typical inter-change band) | Spikes to ~6.98 post-water-change, settles into 6.6s; buffering media active |
+| TDS | 227–238 ppm | Stable multi-day band; appropriate for Neocaridina |
+| Ammonia | Not recently tested | Manual test recommended at Day 45+ |
+| Nitrite | Not recently tested | Manual test recommended at Day 45+ |
+| Nitrate | Not recently tested | Manual test recommended at Day 45+ |
 
 ---
 
 ## Recent Events
 
-- **2026-05-04 morning:** Maintenance performed (interior glass wipe per prior journal); TDS and pH drifted down slightly post-maintenance, as expected
-- **2026-05-04 22:33:** Temperature probe confirmed dislodged and out of water; reseated by Toby
-- **2026-05-04 22:34:** Colony fed pellets — closes 78+ hour feeding gap
-- **2026-04-30:** One clean molt confirmed
+- **2026-05-05:** 20% water change (13:01). pH spiked to 6.98, settled; TDS +3 ppm; temp −1.35°F — all within expected post-change parameters.
+- **2026-05-04:** pH probe dislodgement corrected by Toby. Prior anomalous readings explained; sensor trust restored. Colony fed.
+- **2026-04-30:** One clean molt confirmed.
 
 ---
 
-## Active Watch Items
+## Equipment Status
 
-- pH stabilization post-maintenance and post-probe-correction — confirm holding 6.2–6.5
-- Feeding resumed; next feeding should occur within normal 48-hour window
-- Colony visual health — last photo shows one healthy individual; broader colony check welcome
+All equipment passing checks. WiFi RSSI stable (−36 to −40 dBm range). Heap stable (min ~226K bytes). No alerts active.
+
+---
+
+## Current Concerns
+
+**Low-level watch:** pH floor between water changes drifting into low-to-mid 6s. Acceptable for Neocaridina, but worth monitoring over time to ensure it doesn't creep lower as the cycle matures.
+
+**No acute concerns.**
 
 ---

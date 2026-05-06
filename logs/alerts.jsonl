@@ -110,3 +110,7 @@
 {"timestamp": "2026-05-06T06:30:01.552556", "param": "ph", "value": 5.6, "threshold": 6.0, "direction": "below", "message": "ph is below danger threshold: 5.6 (below 6.0)"}
 {"timestamp": "2026-05-06T06:45:02.227346", "param": "ph", "value": 5.59, "threshold": 6.0, "direction": "below", "message": "ph is below danger threshold: 5.59 (below 6.0)"}
 {"timestamp": "2026-05-06T07:00:01.469928", "param": "ph", "value": 5.59, "threshold": 6.0, "direction": "below", "message": "ph is below danger threshold: 5.59 (below 6.0)"}
+{"timestamp": "2026-05-06T07:15:02.019651", "param": "ph", "value": 5.57, "threshold": 6.0, "direction": "below", "message": "ph is below danger threshold: 5.57 (below 6.0)"}
+{"timestamp": "2026-05-06T07:30:02.016299", "param": "ph", "value": 5.59, "threshold": 6.0, "direction": "below", "message": "ph is below danger threshold: 5.59 (below 6.0)"}
+{"timestamp": "2026-05-06T07:45:01.893675", "param": "ph", "value": 5.6, "threshold": 6.0, "direction": "below", "message": "ph is below danger threshold: 5.6 (below 6.0)"}
+{"timestamp": "2026-05-06T08:00:02.035576", "param": "ph", "value": 5.6, "threshold": 6.0, "direction": "below", "message": "ph is below danger threshold: 5.6 (below 6.0)"}
