@@ -4678,3 +4678,15 @@ All parameters hold steady within target range; 24hr trends are gentle and norma
 [shrimp-alert] 🚨 ph is below danger threshold: 5.57 (below 6.0)
 [call-toby] Telegram failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')) — falling back to log file
 [call-toby] 🚨 ph is below danger threshold: 5.57 (below 6.0)
+[2026-05-06T04:00] Day 46 | skipped (stable) | T=74.41°F pH=5.57 TDS=237.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 5.57 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.57 (below 6.0)
+[2026-05-06T04:15] Day 46 | skipped (stable) | T=74.41°F pH=5.57 TDS=235.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 5.57 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.57 (below 6.0)
+[2026-05-06T04:30] Day 46 | skipped (stable) | T=74.41°F pH=5.6 TDS=237.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 5.6 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.6 (below 6.0)
+[2026-05-06T04:45] Day 46 | skipped (stable) | T=74.41°F pH=5.57 TDS=237.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 5.57 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.57 (below 6.0)
