@@ -751,3 +751,8 @@
 {"timestamp": "2026-05-06T11:30:02.453075", "urgency": "critical", "message": "ph is below danger threshold: 5.66 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-06T11:45:02.682226", "urgency": "critical", "message": "ph is below danger threshold: 5.72 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-06T12:00:02.069458", "urgency": "critical", "message": "ph is below danger threshold: 5.74 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T12:00:08.553486", "urgency": "warning", "message": "Owner's manual pH test (6.6) conflicts sharply with probe reading (5.74)\u2014a 0.86 unit gap signals likely sensor drift despite April 26th calibration. Temperature stable, TDS healthy, and colony behavior data is sparse but recent photos show good shrimp condition; this is a sensor issue, not a tank crisis.\n\n\u23f3 \ud83e\uddea Run a water test (ammonia / nitrite / pH) \u2014 Confirm actual pH with a fresh manual test (preferably with multiple reagent drops or a second kit) to establish ground truth. Probe needs recalibration or replacement if drift persists.", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T12:05:16.737216", "urgency": "info", "message": "Journal \u2014 Day 46 \u00b7 2026-05-06 12:05", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T12:15:02.514958", "urgency": "critical", "message": "ph is below danger threshold: 5.74 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T12:30:02.230972", "urgency": "critical", "message": "ph is below danger threshold: 5.75 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T12:45:02.178387", "urgency": "critical", "message": "ph is below danger threshold: 5.76 (below 6.0)", "sent_via": "telegram"}
