@@ -735,3 +735,9 @@
 {"timestamp": "2026-05-06T08:30:02.832999", "urgency": "critical", "message": "ph is below danger threshold: 5.58 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-06T08:30:23.664656", "urgency": "info", "message": "New skill proposal: `sensor-anomaly-tagger` (new, risk: low)", "sent_via": "telegram"}
 {"timestamp": "2026-05-06T08:45:02.761668", "urgency": "critical", "message": "ph is below danger threshold: 5.62 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T09:00:01.938766", "urgency": "critical", "message": "ph is below danger threshold: 5.61 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T09:15:02.502045", "urgency": "critical", "message": "ph is below danger threshold: 5.61 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T09:25:06.436931", "urgency": "info", "message": "Logged as pH calibration: Owner ran a manual pH test and got 6.6, which diverges from the probe reading. Suspects the probe is off and may need calibration or inspection. \u2014 nag timer reset \u2713", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T09:25:07.573509", "urgency": "info", "message": "Installed to skills/sensor_anomaly_tagger/ \u2014 add to cron manually when ready.", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T09:30:02.268631", "urgency": "critical", "message": "ph is below danger threshold: 5.61 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T09:45:02.042504", "urgency": "critical", "message": "ph is below danger threshold: 5.59 (below 6.0)", "sent_via": "telegram"}

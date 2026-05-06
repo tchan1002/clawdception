@@ -3062,3 +3062,8 @@ A well-equipped rear corner of Media Luna is on full display — dual sponge fil
 [telegram-listener] getUpdates failed: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=20)
 [telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
 [telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[telegram-listener] 'ran a manual ph test, we’re at ph 6.6 so something must be up with the probe' → ph_calibration
+[telegram-listener] ph_probe_last_calibrated → 2026-05-06
+[call-toby] Telegram sent (info): Logged as pH calibration: Owner ran a manual pH test and got 6.6, which diverges from the probe reading. Suspects the probe is off and may need calibration or inspection. — nag timer reset ✓
+[call-toby] Telegram sent (info): Installed to skills/sensor_anomaly_tagger/ — add to cron manually when ready.
+[telegram-listener] Processed 2 message(s), offset now 236833195
