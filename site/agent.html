@@ -250,13 +250,13 @@
             <div class="param-grid">
                 <div class="param-card">
                     <div class="param-name">Temperature</div>
-                    <div class="param-value status-green">74.07°F</div>
+                    <div class="param-value status-green">73.74°F</div>
                     <div class="param-note"></div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">pH</div>
-                    <div class="param-value status-red">5.82</div>
-                    <div class="param-note">Probe reading 5.82 vs. manual test 6.6 from today (0.78 divergence). Probe is drifting; treating manual test as ground truth until probe replaced.</div>
+                    <div class="param-value status-yellow">5.82</div>
+                    <div class="param-note">Probe reads 5.82 but Toby's manual test 9 minutes ago measured 6.6; this is a 0.78 divergence. Probe is drifting post-recalibration and should not be trusted as primary data. Manual test is ground truth.</div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">TDS</div>
@@ -268,7 +268,7 @@
 
         <div class="section">
             <div class="section-title">Reasoning</div>
-            <div class="reasoning">Probe-reported pH is creeping into caution (5.82), but Toby's manual test logged same-day reads 6.6, placing actual tank pH safely in green. The probe needs replacement; relying on manual tests until that happens.</div>
+            <div class="reasoning">pH probe is unreliable post-recalibration and diverges significantly from Toby's manual test (probe 5.82 vs. manual 6.6). Using manual test as ground truth, actual pH is 6.6 (green), but the probe drift creates ambiguity for automated decision-making and needs resolution soon. All other parameters are in target, ammonia and nitrite are zero, and the shrimp colony shows no distress signals.</div>
         </div>
 
         <div class="section">
@@ -374,7 +374,7 @@ I'm stuck in a holding pattern until the probe question is resolved; nothing els
 
         <div class="section">
             <div class="section-title">Monitor Log (Last 10)</div>
-            <div class="monitor-log"><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.81 (below 6.0)</div><div>[call-toby] Telegram sent (warning): The pH probe is drifting badly (0.79 points off manual reading), but actual tank pH via manual test is safe at 6.6. Temperature and TDS are solid; the 20% water change yesterday explains the slight cooling and TDS bump—all normal post-intervention behavior. Nitrate at 80ppm is elevated but consistent with an actively cycling young tank.</div><div></div><div>• 👀 Observe shrimp behavior</div><div>[2026-05-06T13:30] Day 46 | risk=yellow | [manual event since last check ] | T=74.19°F pH=5.79 TDS=241.0ppm | Probe reliability is compromised—manual test 6.6 vs. probe 5.79 is a 0.81-point </div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.79 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.79 (below 6.0)</div><div>[2026-05-06T13:45] Day 46 | risk=yellow | [manual event since last check ] | T=74.07°F pH=5.82 TDS=240.0ppm | Probe-reported pH is creeping into caution (5.82), but Toby's manual test logged</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.82 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.82 (below 6.0)</div></div>
+            <div class="monitor-log"><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.82 (below 6.0)</div><div>[2026-05-06T14:15] Day 46 | risk=yellow | [manual event since last check ] | T=73.85°F pH=5.81 TDS=241.0ppm | Probe pH has drifted 0.79 units below Toby's manual reading, making it unreliabl</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.81 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.81 (below 6.0)</div><div>[2026-05-06T14:30] Day 46 | risk=yellow | [manual event since last check ] | T=73.74°F pH=5.82 TDS=240.0ppm | pH probe is unreliable post-recalibration and diverges significantly from Toby's</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.82 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.82 (below 6.0)</div><div>[2026-05-06T14:45] Day 46 | skipped (stable) | T=73.62°F pH=5.88 TDS=238.0ppm</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.88 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.88 (below 6.0)</div></div>
         </div>
     </div>
 

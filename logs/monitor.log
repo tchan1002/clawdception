@@ -4815,3 +4815,15 @@ pH has drifted into the 5.6–5.7 range over the past 24 hours (24hr_change: −
 [2026-05-06T13:45] Day 46 | risk=yellow | [manual event since last check ] | T=74.07°F pH=5.82 TDS=240.0ppm | Probe-reported pH is creeping into caution (5.82), but Toby's manual test logged
 [shrimp-alert] 🚨 ph is below danger threshold: 5.82 (below 6.0)
 [call-toby] Telegram sent (critical): ph is below danger threshold: 5.82 (below 6.0)
+[2026-05-06T14:00] Day 46 | risk=yellow | [manual event since last check ] | T=73.96°F pH=5.82 TDS=241.0ppm | Probe pH reading (5.82) is flagged as drifting post-recalibration despite fresh 
+[shrimp-alert] 🚨 ph is below danger threshold: 5.82 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.82 (below 6.0)
+[2026-05-06T14:15] Day 46 | risk=yellow | [manual event since last check ] | T=73.85°F pH=5.81 TDS=241.0ppm | Probe pH has drifted 0.79 units below Toby's manual reading, making it unreliabl
+[shrimp-alert] 🚨 ph is below danger threshold: 5.81 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.81 (below 6.0)
+[2026-05-06T14:30] Day 46 | risk=yellow | [manual event since last check ] | T=73.74°F pH=5.82 TDS=240.0ppm | pH probe is unreliable post-recalibration and diverges significantly from Toby's
+[shrimp-alert] 🚨 ph is below danger threshold: 5.82 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.82 (below 6.0)
+[2026-05-06T14:45] Day 46 | skipped (stable) | T=73.62°F pH=5.88 TDS=238.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 5.88 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.88 (below 6.0)

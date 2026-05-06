@@ -761,3 +761,7 @@
 {"timestamp": "2026-05-06T13:15:07.936794", "urgency": "warning", "message": "The pH probe is drifting badly (0.79 points off manual reading), but actual tank pH via manual test is safe at 6.6. Temperature and TDS are solid; the 20% water change yesterday explains the slight cooling and TDS bump\u2014all normal post-intervention behavior. Nitrate at 80ppm is elevated but consistent with an actively cycling young tank.\n\n\u2022 \ud83d\udc40 Observe shrimp behavior", "sent_via": "telegram"}
 {"timestamp": "2026-05-06T13:30:02.578987", "urgency": "critical", "message": "ph is below danger threshold: 5.79 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-06T13:45:02.653529", "urgency": "critical", "message": "ph is below danger threshold: 5.82 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T14:00:02.909308", "urgency": "critical", "message": "ph is below danger threshold: 5.82 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T14:15:02.506654", "urgency": "critical", "message": "ph is below danger threshold: 5.81 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T14:30:02.325608", "urgency": "critical", "message": "ph is below danger threshold: 5.82 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T14:45:02.434771", "urgency": "critical", "message": "ph is below danger threshold: 5.88 (below 6.0)", "sent_via": "telegram"}
