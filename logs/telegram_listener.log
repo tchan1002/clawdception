@@ -3057,3 +3057,6 @@ A well-equipped rear corner of Media Luna is on full display — dual sponge fil
 [telegram-listener] 'added 20% water into the tank' → water_change
 [call-toby] Telegram sent (info): Logged as water change: Owner added 20% water into the tank. ✓
 [telegram-listener] Processed 1 message(s), offset now 236833193
+[telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[telegram-listener] getUpdates failed: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=20)
