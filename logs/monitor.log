@@ -4730,3 +4730,18 @@ All parameters hold steady within target range; 24hr trends are gentle and norma
 [2026-05-06T07:45] Day 46 | skipped (stable) | T=75.09°F pH=5.6 TDS=236.0ppm
 [shrimp-alert] 🚨 ph is below danger threshold: 5.6 (below 6.0)
 [call-toby] Telegram sent (critical): ph is below danger threshold: 5.6 (below 6.0)
+[2026-05-06T08:00] Day 46 | risk=yellow | [scheduled check-in (08:00)] | T=75.09°F pH=5.6 TDS=237.0ppm | pH has drifted into the 5.6–5.7 range over the past 24 hours (24hr_change: −0.14
+[shrimp-alert] 🚨 ph is below danger threshold: 5.6 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.6 (below 6.0)
+[call-toby] Telegram failed: 400 Client Error: Bad Request for url: https://api.telegram.org/bot***/sendMessage — falling back to log file
+[call-toby] ℹ️ ✅ All clear — T=75.09°F pH=5.6 TDS=237.0ppm
+pH has drifted into the 5.6–5.7 range over the past 24 hours (24hr_change: −0.14), but this is still above the hard danger line of 6.0. The 20% water change on May 5th would normally raise pH; the current reading suggests either the tank's carbonate buffering is genuinely weak or the probe displacement on May 4th corrupted baseline data. A cautious re-baseline water test would clarify the true trend before the cycle completes.
+[2026-05-06T08:15] Day 46 | skipped (stable) | T=75.2°F pH=5.61 TDS=236.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 5.61 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.61 (below 6.0)
+[2026-05-06T08:30] Day 46 | skipped (stable) | T=75.2°F pH=5.58 TDS=238.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 5.58 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.58 (below 6.0)
+[2026-05-06T08:45] Day 46 | skipped (stable) | T=75.2°F pH=5.62 TDS=237.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 5.62 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.62 (below 6.0)

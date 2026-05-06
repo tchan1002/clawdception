@@ -89,3 +89,7 @@
 [skill-writer] Proposal written to /home/pi/clawdception/proposals/2026-05-05-algae-tracker
 [call-toby] Document sent: proposal.md
 [call-toby] Sent with buttons (msg_id=1051): New skill proposal: `algae-tracker` (new, risk: low)
+[skill-writer] Running — 33 daily logs available, conditions met (Day 46 of cycle)
+[skill-writer] Proposal written to /home/pi/clawdception/proposals/2026-05-06-sensor-anomaly-tagger
+[call-toby] Document sent: proposal.md
+[call-toby] Sent with buttons (msg_id=1135): New skill proposal: `sensor-anomaly-tagger` (new, risk: low)
