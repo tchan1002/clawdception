@@ -675,3 +675,8 @@
 {"timestamp": "2026-05-05T13:01:04.824539", "urgency": "info", "message": "Logged as water change: Owner added 20% water into the tank. \u2713", "sent_via": "telegram"}
 {"timestamp": "2026-05-05T18:05:17.483701", "urgency": "info", "message": "Journal \u2014 Day 45 \u00b7 2026-05-05 18:05", "sent_via": "telegram"}
 {"timestamp": "2026-05-05T19:45:02.214763", "urgency": "critical", "message": "ph is below danger threshold: 5.69 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-05T20:00:02.778479", "urgency": "critical", "message": "ph is below danger threshold: 5.67 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-05T20:00:09.851205", "urgency": "warning", "message": "The 0.91-point pH drop in one hour is sharp, but coincides with a 20% water change at 13:01 (6+ hours prior)\u2014likely the system settling rather than active acidification. Temp and TDS stable; probe trust restored post-dislodgement. Colony at 532hr (22+ days) is well-established and no distress signals present.\n\n\u2022 \ud83d\udc40 Observe shrimp behavior \u2014 Watch for any stress signs (lethargy, molting difficulty, loss of appetite) over next 6\u20138 hours; otherwise tank behavior should remain normal.\n\u2022 \ud83d\udcf8 Send a photo of the tank", "sent_via": "telegram"}
+{"timestamp": "2026-05-05T20:15:02.619489", "urgency": "critical", "message": "ph is below danger threshold: 5.66 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-05T20:30:02.654195", "urgency": "critical", "message": "ph is below danger threshold: 5.65 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-05T20:45:02.134604", "urgency": "critical", "message": "ph is below danger threshold: 5.64 (below 6.0)", "sent_via": "telegram"}
