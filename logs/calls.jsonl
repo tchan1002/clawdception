@@ -746,3 +746,8 @@
 {"timestamp": "2026-05-06T10:30:02.711089", "urgency": "critical", "message": "ph is below danger threshold: 5.62 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-06T10:45:02.628521", "urgency": "critical", "message": "ph is below danger threshold: 5.65 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-06T10:45:09.305099", "urgency": "warning", "message": "pH probe showing persistent low bias (5.65 vs. owner's manual 6.6) despite recent calibration and thermometer displacement history; TDS and temperature are solid. Discrepancy warrants probe re-calibration or replacement before pH-dependent decisions are made.\n\n\u2022 \ud83d\udd27 Check equipment \u2014 Verify pH probe is fully submerged and stable in water column \u2014 thermometer displacement history on May 4 suggests hardware placement issues may recur.\n\u2022 \ud83d\udcf8 Send a photo of the tank", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T11:00:02.337723", "urgency": "critical", "message": "ph is below danger threshold: 5.64 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T11:15:02.245130", "urgency": "critical", "message": "ph is below danger threshold: 5.66 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T11:30:02.453075", "urgency": "critical", "message": "ph is below danger threshold: 5.66 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T11:45:02.682226", "urgency": "critical", "message": "ph is below danger threshold: 5.72 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T12:00:02.069458", "urgency": "critical", "message": "ph is below danger threshold: 5.74 (below 6.0)", "sent_via": "telegram"}

@@ -250,13 +250,13 @@
             <div class="param-grid">
                 <div class="param-card">
                     <div class="param-name">Temperature</div>
-                    <div class="param-value status-green">74.97°F</div>
+                    <div class="param-value status-green">74.86°F</div>
                     <div class="param-note"></div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">pH</div>
-                    <div class="param-value status-yellow">5.65</div>
-                    <div class="param-note">Probe reading diverges from owner's manual test (6.6 pH); probe may be miscalibrated despite April 26 calibration. Recent thermometer displacement (May 4) raises confidence concerns.</div>
+                    <div class="param-value status-yellow">5.72</div>
+                    <div class="param-note">Probe reading diverges from owner's manual test (6.6 today). Probe may need recalibration.</div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">TDS</div>
@@ -268,14 +268,14 @@
 
         <div class="section">
             <div class="section-title">Reasoning</div>
-            <div class="reasoning">pH probe showing persistent low bias (5.65 vs. owner's manual 6.6) despite recent calibration and thermometer displacement history; TDS and temperature are solid. Discrepancy warrants probe re-calibration or replacement before pH-dependent decisions are made.</div>
+            <div class="reasoning">Probe pH (5.72) conflicts with owner's manual test (6.6), suggesting sensor drift—a recalibration is warranted. Temperature and TDS remain healthy; shrimp appear behaviorally sound in recent photos.</div>
         </div>
 
         <div class="section">
             <div class="section-title">Actions</div>
             <div class="actions">
                 <ul>
-                    <li><strong>water_test</strong> [soon] — Manual pH test (by API kit or equivalent) to confirm probe accuracy. Last owner test was 6.6 today at 14:25; probe reads 5.65 now at 10:45. If divergence persists, probe calibration needed.</li><li><strong>check_equipment</strong> [routine] — Verify pH probe is fully submerged and stable in water column — thermometer displacement history on May 4 suggests hardware placement issues may recur.</li><li><strong>observe</strong> [routine] — Shrimp behavior and coloration; water clarity. Last photo is 36 hours old.</li><li><strong>photo_request</strong> [routine] — </li>
+                    <li><strong>water_test</strong> [soon] — Run another manual pH test to confirm which reading is accurate—probe or test strip. This will guide recalibration decisions.</li><li><strong>observe</strong> [routine] — Watch for any behavioral changes in shrimp (lethargy, clustering, molting difficulty) that might indicate pH stress. Current manual test of 6.6 suggests colony is in safer territory than probe reading implies.</li><li><strong>check_equipment</strong> [soon] — Visually inspect pH probe placement and calibration cap storage. Confirm no new displacement since May 4 thermometer incident.</li><li><strong>photo_request</strong> [routine] — </li>
                 </ul>
             </div>
         </div>
@@ -347,7 +347,7 @@ I'm settled and observant, waiting for the next signal from Toby or a change in 
 
         <div class="section">
             <div class="section-title">Monitor Log (Last 10)</div>
-            <div class="monitor-log"><div>[2026-05-06T10:30] Day 46 | risk=red | [manual event since last check ] | T=74.97°F pH=5.62 TDS=240.0ppm | The pH probe is reporting 5.62 while Toby's manual test today reads 6.6 — a crit</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.62 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.62 (below 6.0)</div><div>[2026-05-06T10:45] Day 46 | risk=yellow | [manual event since last check ] | T=74.97°F pH=5.65 TDS=241.0ppm | pH probe showing persistent low bias (5.65 vs. owner's manual 6.6) despite recen</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.65 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.65 (below 6.0)</div><div>[call-toby] Telegram sent (warning): pH probe showing persistent low bias (5.65 vs. owner's manual 6.6) despite recent calibration and thermometer displacement history; TDS and temperature are solid. Discrepancy warrants probe re-calibration or replacement before pH-dependent decisions are made.</div><div></div><div>• 🔧 Check equipment — Verify pH probe is fully submerged and stable in water column — thermometer displacement history on May 4 suggests hardware placement issues may recur.</div><div>• 📸 Send a photo of the tank</div></div>
+            <div class="monitor-log"><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.64 (below 6.0)</div><div>[2026-05-06T11:15] Day 46 | risk=yellow | [manual event since last check ] | T=74.86°F pH=5.66 TDS=239.0ppm | Probe pH (5.66) diverges sharply from owner's manual test (6.6) conducted same d</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.66 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.66 (below 6.0)</div><div>[2026-05-06T11:30] Day 46 | risk=yellow | [manual event since last check ] | T=74.86°F pH=5.66 TDS=239.0ppm | pH probe reading (5.66) conflicts with Toby's manual test (6.6) — a 0.94-point d</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.66 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.66 (below 6.0)</div><div>[2026-05-06T11:45] Day 46 | risk=yellow | [manual event since last check ] | T=74.86°F pH=5.72 TDS=241.0ppm | Probe pH (5.72) conflicts with owner's manual test (6.6), suggesting sensor drif</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.72 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.72 (below 6.0)</div></div>
         </div>
     </div>
 
