@@ -833,3 +833,9 @@
 {"timestamp": "2026-05-07T05:30:03.447228", "urgency": "critical", "message": "ph is below danger threshold: 5.52 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-07T05:45:02.613493", "urgency": "critical", "message": "ph is below danger threshold: 5.55 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-07T06:00:02.431612", "urgency": "critical", "message": "ph is below danger threshold: 5.52 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-07T06:05:17.489832", "urgency": "info", "message": "Journal \u2014 Day 47 \u00b7 2026-05-07 06:05", "sent_via": "telegram"}
+{"timestamp": "2026-05-07T06:05:19.280667", "urgency": "info", "message": "Action items:\n\u2022 Feed the colony within the next 12 hours to reset the 48-hour window\n\u2022 Capture or submit an updated photo of the tank (full view preferred) to assess current visual condition, plant health, shrimp activity, and any changes since May 4th", "sent_via": "telegram"}
+{"timestamp": "2026-05-07T06:15:02.067157", "urgency": "critical", "message": "ph is below danger threshold: 5.53 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-07T06:15:09.253457", "urgency": "warning", "message": "pH probe reliability is suspect after May 4th dislodgement; manual test on May 6th (6.6) diverges sharply from probe reading (5.53 today). TDS and temperature are stable and within target. The colony is well-established at 566+ hours and tolerating conditions, but probe calibration needs urgent verification.\n\n\u2757 \ud83e\uddea Run a water test (ammonia / nitrite / pH)", "sent_via": "telegram"}
+{"timestamp": "2026-05-07T06:30:02.341255", "urgency": "critical", "message": "ph is below danger threshold: 5.52 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-07T06:45:02.139995", "urgency": "critical", "message": "ph is below danger threshold: 5.53 (below 6.0)", "sent_via": "telegram"}
