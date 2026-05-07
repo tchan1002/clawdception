@@ -844,3 +844,11 @@
 {"timestamp": "2026-05-07T07:15:02.295461", "urgency": "critical", "message": "ph is below danger threshold: 5.54 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-07T07:30:02.576612", "urgency": "critical", "message": "ph is below danger threshold: 5.55 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-07T07:45:02.265214", "urgency": "critical", "message": "ph is below danger threshold: 5.52 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-07T08:00:02.671274", "urgency": "info", "message": "Media Luna \u2014 last feeding 57h ago. Time to feed the shrimp.", "sent_via": "telegram"}
+{"timestamp": "2026-05-07T08:00:02.712204", "urgency": "critical", "message": "ph is below danger threshold: 5.54 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-07T08:00:10.553737", "urgency": "warning", "message": "Temperature and TDS are stable and healthy; pH probe readings diverge significantly from Toby's manual test (5.54 vs 6.6), creating uncertainty about actual tank chemistry. A 24hr slight downward drift in pH and the probe anomaly flagged on May 4th warrant close observation, but no immediate crisis given the colony's resilience and normal activity patterns.\n\n\u2022 \ud83d\udcf8 Send a photo of the tank", "sent_via": "telegram"}
+{"timestamp": "2026-05-07T08:05:02.685821", "urgency": "info", "message": "Water change looking due soon. TDS at 243 ppm \u2192 hits ceiling in ~2.0 days; pH at 5.55 \u2192 hits floor in ~0.0 days. Suggested window: Thursday, May 07 (~0d).", "sent_via": "telegram"}
+{"timestamp": "2026-05-07T08:15:02.371043", "urgency": "critical", "message": "ph is below danger threshold: 5.55 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-07T08:30:02.375910", "urgency": "critical", "message": "ph is below danger threshold: 5.55 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-07T08:30:25.173589", "urgency": "info", "message": "New skill proposal: `sensorcalibrationtracker` (new, risk: low)", "sent_via": "telegram"}
+{"timestamp": "2026-05-07T08:45:02.405306", "urgency": "critical", "message": "ph is below danger threshold: 5.56 (below 6.0)", "sent_via": "telegram"}
