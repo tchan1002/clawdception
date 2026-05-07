@@ -788,3 +788,8 @@
 {"timestamp": "2026-05-06T19:15:02.196912", "urgency": "critical", "message": "ph is below danger threshold: 5.85 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-06T19:30:02.710376", "urgency": "critical", "message": "ph is below danger threshold: 5.81 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-06T19:45:02.109770", "urgency": "critical", "message": "ph is below danger threshold: 5.82 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T20:00:02.694117", "urgency": "critical", "message": "ph is below danger threshold: 5.82 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T20:00:09.749775", "urgency": "warning", "message": "pH probe is drifting (reads 5.82 vs. manual 6.6) and requires re-calibration or inspection despite recent owner work; actual pH is likely in mid-range (6.5\u20136.6), not acidic. Nitrate at 80 ppm is climbing into the upper-safe zone and will warrant a water change within 3\u20135 days if uptrend continues.\n\n\u2022 \ud83d\udcf8 Send a photo of the tank", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T20:15:02.480291", "urgency": "critical", "message": "ph is below danger threshold: 5.8 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T20:30:01.992340", "urgency": "critical", "message": "ph is below danger threshold: 5.81 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-06T20:45:02.445007", "urgency": "critical", "message": "ph is below danger threshold: 5.78 (below 6.0)", "sent_via": "telegram"}
