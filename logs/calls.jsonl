@@ -864,3 +864,9 @@
 {"timestamp": "2026-05-07T11:15:02.497389", "urgency": "critical", "message": "ph is below danger threshold: 5.63 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-07T11:30:01.968407", "urgency": "critical", "message": "ph is below danger threshold: 5.62 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-07T11:45:02.439971", "urgency": "critical", "message": "ph is below danger threshold: 5.64 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-07T12:00:01.936837", "urgency": "critical", "message": "ph is below danger threshold: 5.66 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-07T12:05:14.789021", "urgency": "info", "message": "Journal \u2014 Day 47 \u00b7 2026-05-07 12:05", "sent_via": "telegram"}
+{"timestamp": "2026-05-07T12:05:16.320711", "urgency": "info", "message": "Action items:\n\u2022 Feed the colony as soon as possible within the next 12 hours to reset the feeding window and establish a regular schedule moving forward\n\u2022 Capture and submit a current full-tank photo to assess plant health, surface coverage, substrate condition, and any visible shrimp activity", "sent_via": "telegram"}
+{"timestamp": "2026-05-07T12:15:02.619112", "urgency": "critical", "message": "ph is below danger threshold: 5.66 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-07T12:30:02.696907", "urgency": "critical", "message": "ph is below danger threshold: 5.68 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-07T12:45:02.526423", "urgency": "critical", "message": "ph is below danger threshold: 5.69 (below 6.0)", "sent_via": "telegram"}
