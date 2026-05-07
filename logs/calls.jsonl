@@ -819,3 +819,8 @@
 {"timestamp": "2026-05-07T02:15:02.611625", "urgency": "critical", "message": "ph is below danger threshold: 5.5 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-07T02:30:02.838273", "urgency": "critical", "message": "ph is below danger threshold: 5.51 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-07T02:45:02.572418", "urgency": "critical", "message": "ph is below danger threshold: 5.5 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-07T03:00:02.887569", "urgency": "info", "message": "Media Luna \u2014 last feeding 52h ago. Time to feed the shrimp.", "sent_via": "telegram"}
+{"timestamp": "2026-05-07T03:00:02.899462", "urgency": "critical", "message": "ph is below danger threshold: 5.51 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-07T03:15:02.071376", "urgency": "critical", "message": "ph is below danger threshold: 5.52 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-07T03:30:03.016258", "urgency": "critical", "message": "ph is below danger threshold: 5.52 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-07T03:45:02.788251", "urgency": "critical", "message": "ph is below danger threshold: 5.48 (below 6.0)", "sent_via": "telegram"}
