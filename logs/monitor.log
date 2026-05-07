@@ -4953,3 +4953,15 @@ pH has drifted into the 5.6–5.7 range over the past 24 hours (24hr_change: −
 [2026-05-07T00:45] Day 47 | skipped (stable) | T=73.74°F pH=5.5 TDS=241.0ppm
 [shrimp-alert] 🚨 ph is below danger threshold: 5.5 (below 6.0)
 [call-toby] Telegram sent (critical): ph is below danger threshold: 5.5 (below 6.0)
+[2026-05-07T01:00] Day 47 | skipped (stable) | T=73.74°F pH=5.51 TDS=242.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 5.51 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.51 (below 6.0)
+[2026-05-07T01:15] Day 47 | skipped (stable) | T=73.85°F pH=5.49 TDS=241.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 5.49 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.49 (below 6.0)
+[2026-05-07T01:30] Day 47 | skipped (stable) | T=73.85°F pH=5.49 TDS=243.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 5.49 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.49 (below 6.0)
+[2026-05-07T01:45] Day 47 | skipped (stable) | T=73.96°F pH=5.49 TDS=241.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 5.49 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.49 (below 6.0)
