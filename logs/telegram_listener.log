@@ -3078,3 +3078,10 @@ A well-equipped rear corner of Media Luna is on full display — dual sponge fil
 [telegram-listener] ph_probe_last_calibrated → 2026-05-08
 [call-toby] Telegram sent (info): Logged as pH calibration: Owner's recent manual pH tests suggest the probe may be reading inaccurately and likely needs recalibration. — nag timer reset ✓
 [telegram-listener] Processed 3 message(s), offset now 236833198
+[telegram-listener] 'take a photo' → capture_request
+[telegram-listener] ESP32-CAM snapshot saved: 2026-05-08_16-53-13.jpg
+[call-toby] Photo sent: 2026-05-08_16-53-13.jpg
+[telegram-listener] Processed 1 message(s), offset now 236833199
+[telegram-listener] 'manual ph test at 6.4' → water_test
+[call-toby] Telegram sent (info): Logged as water test: Owner performed a manual pH test, reading 6.4. ✓
+[telegram-listener] Processed 1 message(s), offset now 236833200

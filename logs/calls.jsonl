@@ -1002,3 +1002,8 @@
 {"timestamp": "2026-05-08T15:30:02.203022", "urgency": "critical", "message": "ph is below danger threshold: 5.31 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-08T15:30:07.850036", "urgency": "warning", "message": "A 0.38 pH drop in one hour is an anomaly worth investigating, but owner flagged probe recalibration concerns just today \u2014 this sharp reading may reflect sensor error rather than genuine water chemistry collapse. Shrimp appeared behaviorally healthy at 14:03, and TDS/temp are stable; manual test by Toby will clarify whether this is a probe artifact or early acidification signal.\n\n\u2757 \ud83e\uddea Run a water test (ammonia / nitrite / pH)", "sent_via": "telegram"}
 {"timestamp": "2026-05-08T15:45:02.219482", "urgency": "critical", "message": "ph is below danger threshold: 5.47 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-08T16:00:01.944909", "urgency": "critical", "message": "ph is below danger threshold: 5.34 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-08T16:15:01.859020", "urgency": "critical", "message": "ph is below danger threshold: 5.32 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-08T16:30:02.476821", "urgency": "critical", "message": "ph is below danger threshold: 5.3 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-08T16:45:01.819207", "urgency": "critical", "message": "ph is below danger threshold: 5.37 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-08T16:57:04.928871", "urgency": "info", "message": "Logged as water test: Owner performed a manual pH test, reading 6.4. \u2713", "sent_via": "telegram"}
