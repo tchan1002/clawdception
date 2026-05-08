@@ -5346,3 +5346,17 @@ pH has drifted into the 5.6–5.7 range over the past 24 hours (24hr_change: −
 ❗ 👀 Observe shrimp behavior — Check for visible signs of stress, lethargy, or loss of color in shrimp; confirm pH probe placement and calibration status
 ❗ 📸 Send a photo of the tank
 ❗ 💧 Do a water change — Large partial water change (30–50%) with buffered/neutral replacement water to arrest pH crash
+[2026-05-08T08:00] Day 48 | risk=red | [ph changed 0.11 in last hour] | T=73.62°F pH=5.34 TDS=235.0ppm | pH has plummeted to 5.34 — well below the Neocaridina danger floor of 6.0 — afte
+[shrimp-alert] 🚨 ph is below danger threshold: 5.34 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.34 (below 6.0)
+[call-toby] Telegram sent (info): ✅ All clear — T=73.62°F pH=5.34 TDS=235.0ppm
+pH has plummeted to 5.34 — well below the Neocaridina danger floor of 6.0 — after dropping 0.45 points in 36 hours since the last test. Neocaridina are hardy but prolonged exposure below pH 6.0 risks molting failure, shell degradation, and stress cascade. This is not noise; this is a clear threat requiring immediate diagnosis and correction.
+[2026-05-08T08:15] Day 48 | skipped (stable) | T=73.74°F pH=5.32 TDS=234.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 5.32 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.32 (below 6.0)
+[2026-05-08T08:30] Day 48 | risk=red | [ph changed 0.13 in last hour] | T=73.74°F pH=5.22 TDS=234.0ppm | pH has dropped to 5.22 — below the 6.0 danger threshold and unsafe for Neocaridi
+[shrimp-alert] 🚨 ph is below danger threshold: 5.22 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.22 (below 6.0)
+[2026-05-08T08:45] Day 48 | risk=red | [ph changed 0.37 in last hour] | T=73.74°F pH=4.97 TDS=234.0ppm | pH has crashed below the danger floor (6.0) with a 0.37-point drop in one hour a
+[shrimp-alert] 🚨 ph is below danger threshold: 4.97 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 4.97 (below 6.0)
