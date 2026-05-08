@@ -3070,3 +3070,11 @@ A well-equipped rear corner of Media Luna is on full display — dual sponge fil
 [telegram-listener] getUpdates failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
 [telegram-listener] getUpdates failed: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot***/getUpdates?offset=236833195&timeout=0&limit=100 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fff1fe05550>: Failed to resolve 'api.telegram.org' ([Errno -3] Temporary failure in name resolution)"))
 [telegram-listener] getUpdates failed: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=20)
+[telegram-listener] 'sorry I’ve let the tank go! will give updates today' → owner_note
+[call-toby] Telegram sent (info): Logged as owner note: Toby checking back in after a gap — acknowledging he hasn't logged updates recently and promising reports today. ✓
+[telegram-listener] 'shrimp seem happy and well' → observation
+[call-toby] Telegram sent (info): Logged as observation: Shrimp appear happy and well — owner reports positive behavioral observation. ✓
+[telegram-listener] 'recent manual ph tests confirm that probe might need recalibration' → ph_calibration
+[telegram-listener] ph_probe_last_calibrated → 2026-05-08
+[call-toby] Telegram sent (info): Logged as pH calibration: Owner's recent manual pH tests suggest the probe may be reading inaccurately and likely needs recalibration. — nag timer reset ✓
+[telegram-listener] Processed 3 message(s), offset now 236833198

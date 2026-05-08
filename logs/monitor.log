@@ -5426,3 +5426,21 @@ pH has plummeted to 5.34 — well below the Neocaridina danger floor of 6.0 — 
 [2026-05-08T13:45] Day 48 | skipped (stable) | T=74.19°F pH=5.25 TDS=234.0ppm
 [shrimp-alert] 🚨 ph is below danger threshold: 5.25 (below 6.0)
 [call-toby] Telegram sent (critical): ph is below danger threshold: 5.25 (below 6.0)
+[2026-05-08T14:00] Day 48 | risk=yellow | [ph changed 0.2 in last hour] | T=74.19°F pH=5.4 TDS=234.0ppm | pH at 5.4 is below danger threshold (6.0) but the 0.2-point drop in one hour is 
+[shrimp-alert] 🚨 ph is below danger threshold: 5.4 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.4 (below 6.0)
+[call-toby] Telegram sent (warning): pH at 5.4 is below danger threshold (6.0) but the 0.2-point drop in one hour is physically implausible without a major event (massive organic decay, large feeding surge, or sensor malfunction). Given the probe's recent dislodgment, this warrants immediate manual retest before escalating. Shrimp in last photo were alert; no behavioral distress noted.
+
+• 📸 Send a photo of the tank
+[2026-05-08T14:15] Day 48 | risk=red | [manual event since last check ] | T=74.19°F pH=5.51 TDS=235.0ppm | pH reading of 5.51 falls into danger territory and directly contradicts the manu
+[shrimp-alert] 🚨 ph is below danger threshold: 5.51 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.51 (below 6.0)
+[2026-05-08T14:30] Day 48 | risk=yellow | [ph changed 0.38 in last hour] | T=74.3°F pH=5.63 TDS=236.0ppm | pH at 5.63 is below target range and a sharp 1-hour drop of 0.38 is unusual; how
+[shrimp-alert] 🚨 ph is below danger threshold: 5.63 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.63 (below 6.0)
+[call-toby] Telegram sent (warning): pH at 5.63 is below target range and a sharp 1-hour drop of 0.38 is unusual; however, owner's recent note flags probe accuracy concern, and sensor drift from prior dislodging cannot be ruled out. Shrimp appear behaviorally healthy per latest observation, and other parameters are stable — situation warrants immediate manual verification before escalation.
+
+❗ 🧪 Run a water test (ammonia / nitrite / pH)
+[2026-05-08T14:45] Day 48 | risk=red | [ph changed 0.47 in last hour] | T=74.41°F pH=4.93 TDS=236.0ppm | pH has dropped into danger territory (4.93) with a sharp 0.47-point shift in one
+[shrimp-alert] 🚨 ph is below danger threshold: 4.93 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 4.93 (below 6.0)
