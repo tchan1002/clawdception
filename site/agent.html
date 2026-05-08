@@ -250,13 +250,13 @@
             <div class="param-grid">
                 <div class="param-card">
                     <div class="param-name">Temperature</div>
-                    <div class="param-value status-green">73.74°F</div>
+                    <div class="param-value status-green">73.96°F</div>
                     <div class="param-note"></div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">pH</div>
-                    <div class="param-value status-red">4.97</div>
-                    <div class="param-note">Sharp drop from 5.79 max yesterday to 4.97 now; crossed red danger threshold <6.0. Last calibration 2026-04-26 was reliable baseline.</div>
+                    <div class="param-value status-red">5.32</div>
+                    <div class="param-note">Sharp 0.35-point drop in 1hr; pH has been trending downward (5.79→5.32 in 24hr). Last calibration 2026-04-26 confirmed good. Temperature probe dislodgement on 2026-05-04 casts doubt on earlier readings, but current 24hr trend is clear. Below danger threshold of 6.0.</div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">TDS</div>
@@ -268,7 +268,7 @@
 
         <div class="section">
             <div class="section-title">Reasoning</div>
-            <div class="reasoning">pH has crashed below the danger floor (6.0) with a 0.37-point drop in one hour alone, moving from safely acidic (5.79) to critically low (4.97). This is a sustained danger signal, not noise—no water change or logged event explains it, and the probe was freshly calibrated on 2026-04-26.</div>
+            <div class="reasoning">pH has dropped into the danger zone (5.32 < 6.0) and is accelerating downward; the 1-hour swing from ~5.67 to 5.32 suggests an active driver, not drift. Neocaridina tolerate 6.0–7.5 comfortably; sustained sub-6.0 stress will compound mortality risk and molt success. Immediate investigation and water testing required.</div>
         </div>
 
         <div class="section">
@@ -345,7 +345,7 @@ I'm cautiously content — the colony is safe, the parameters are right, and the
 
         <div class="section">
             <div class="section-title">Monitor Log (Last 10)</div>
-            <div class="monitor-log"><div>pH has plummeted to 5.34 — well below the Neocaridina danger floor of 6.0 — after dropping 0.45 points in 36 hours since the last test. Neocaridina are hardy but prolonged exposure below pH 6.0 risks molting failure, shell degradation, and stress cascade. This is not noise; this is a clear threat requiring immediate diagnosis and correction.</div><div>[2026-05-08T08:15] Day 48 | skipped (stable) | T=73.74°F pH=5.32 TDS=234.0ppm</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.32 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.32 (below 6.0)</div><div>[2026-05-08T08:30] Day 48 | risk=red | [ph changed 0.13 in last hour] | T=73.74°F pH=5.22 TDS=234.0ppm | pH has dropped to 5.22 — below the 6.0 danger threshold and unsafe for Neocaridi</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.22 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.22 (below 6.0)</div><div>[2026-05-08T08:45] Day 48 | risk=red | [ph changed 0.37 in last hour] | T=73.74°F pH=4.97 TDS=234.0ppm | pH has crashed below the danger floor (6.0) with a 0.37-point drop in one hour a</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 4.97 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 4.97 (below 6.0)</div></div>
+            <div class="monitor-log"><div>❗ 🧪 Run a water test (ammonia / nitrite / pH)</div><div>❗ 👀 Observe shrimp behavior — Look for signs of acute stress or distress in shrimp behavior; check for substrate discoloration, equipment malfunction, or leaks.</div><div>❗ 📸 Send a photo of the tank</div><div>❗ 🔧 Check equipment — Verify pH probe calibration and placement after 2026-05-04 dislodgement incident; also inspect for any substrate or equipment that could be acidifying the water (peat, driftwood decay, etc.).</div><div>[2026-05-08T09:30] Day 48 | risk=red | [ph changed 0.35 in last hour] | T=73.96°F pH=5.32 TDS=234.0ppm | pH has dropped into the danger zone (5.32 < 6.0) and is accelerating downward; t</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.32 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.32 (below 6.0)</div><div>[2026-05-08T09:45] Day 48 | skipped (stable) | T=73.96°F pH=5.37 TDS=235.0ppm</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.37 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.37 (below 6.0)</div></div>
         </div>
     </div>
 
