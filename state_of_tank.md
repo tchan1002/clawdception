@@ -1,8 +1,8 @@
 # State of Tank — Media Luna
 
-**Last updated:** 2026-05-06
-**Cycle day:** 46 (started 2026-03-22)
-**Tank status:** Nitrogen cycle active and biologically mature. Colony in ~third week of residence.
+**Last updated:** 2026-05-07
+**Cycle day:** 47 (started 2026-03-22)
+**Tank status:** Nitrogen cycle mature and stable. Colony in ~third week of residence.
 
 ---
 
@@ -10,48 +10,44 @@
 
 | Animal | Count | Notes |
 |--------|-------|-------|
-| Neocaridina cherry shrimp | 5 confirmed + 1 original resident | ~16 days in tank as of 2026-05-06 |
+| Neocaridina cherry shrimp | 5 confirmed + 1 original resident | ~17 days in tank as of 2026-05-07 |
 
-**Notable:** One healthy molt confirmed 2026-04-30. No losses logged. One juvenile shrimp visible in 2026-05-04 photo. No new visual confirmation since May 4th.
+**Notable:** One healthy molt confirmed 2026-04-30. One juvenile visible in 2026-05-04 photo. No losses logged. No direct observation since 2026-05-04 — headcount unconfirmed for three days.
 
 ---
 
 ## Water Chemistry
 
-| Parameter | Current / Recent | Notes |
+| Parameter | Current (sensor) | Notes |
 |-----------|-----------------|-------|
-| Ammonia | 0 ppm | Manual test 2026-05-06 |
-| Nitrite | 0 ppm | Manual test 2026-05-06 |
-| Nitrate | 80 ppm | Manual test 2026-05-06; climbing, water change due soon |
-| pH (actual) | 6.6 | Manual test 2026-05-06; probe unreliable |
-| pH (probe) | ~5.73 avg | Confirmed drifting; probe flagged suspect |
-| TDS | ~240 ppm | Stable range |
-| Temp | 73.6°F avg | Min 71.8 / Max 75.2; within acceptable range |
+| Temperature | ~73°F avg | Normal ambient cycling; range 72–75°F today |
+| pH (probe) | ~5.66 avg | Probe confirmed offset ~0.9 low; true pH estimated ~6.6 |
+| TDS | ~234 ppm avg | Gentle downward drift; within normal range |
+| Ammonia | 0 ppm | Last tested 2026-05-06 |
+| Nitrite | 0 ppm | Last tested 2026-05-06 |
+| Nitrate | 80 ppm | Last tested 2026-05-06, post-water-change; expected to be climbing |
 
 ---
 
-## Equipment & Sensors
+## Known Equipment & Sensor Status
 
-- **pH probe:** Confirmed drifting — reading ~0.9 pH units below manual test. Flagged suspect as of 2026-05-06. Manual test kit is primary pH source until recalibrated or replaced.
-- **Sensor anomaly tagger:** New skill installed 2026-05-06. Active.
-- All other equipment checks passing. WiFi and heap nominal.
+- **pH probe:** Flagged — confirmed ~0.9 unit low offset as of 2026-05-06. All probe pH readings should be interpreted with this offset applied.
+- **All other equipment checks:** Passing. WiFi strong (−38 to −40 dBm). Memory nominal.
+
+---
+
+## Recent Events
+
+- **2026-05-06:** 20% water change performed. Manual test: NH₃ 0, NO₂ 0, NO₃ 80 ppm. pH confirmed ~6.6 by test kit.
+- **2026-05-05:** 20% water change.
+- **2026-05-04:** Photo logged; juvenile shrimp visible; dense floating plant coverage observed.
+- **2026-04-30:** Molt confirmed.
 
 ---
 
 ## Active Concerns
 
-- **pH probe accuracy** — probe suspect; manual testing required for reliable pH readings
-- **Nitrate** — 80 ppm and rising; target water change within 2–4 days to bring below 40 ppm
-- **Feeding** — 48-hour threshold breached; feeding due today
-- **Visual assessment** — no photo since 2026-05-04; shrimp behavior and tank appearance unconfirmed
-
----
-
-## Recent History
-
-- **2026-05-05:** 20% water change performed by Toby; chemistry responded as expected
-- **2026-05-04:** pH probe anomaly first confirmed; surface plant canopy visible; juvenile shrimp photographed
-- **2026-04-30:** Molt confirmed
-- **2026-03-22:** Cycle initiated
-
----
+- **Feeding gap:** 72+ hours as of end of day 2026-05-07. Exceeds 48-hour threshold.
+- **No observation since 2026-05-04:** Shrimp health, coloration, and count unconfirmed.
+- **Nitrate trajectory:** Starting from 80 ppm post-change; expected to climb before next water change.
+- **Surface plant density:** Last confirmed dense (2026-05-04); gas exchange worth monitoring.
