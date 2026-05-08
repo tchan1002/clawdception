@@ -5444,3 +5444,18 @@ pH has plummeted to 5.34 — well below the Neocaridina danger floor of 6.0 — 
 [2026-05-08T14:45] Day 48 | risk=red | [ph changed 0.47 in last hour] | T=74.41°F pH=4.93 TDS=236.0ppm | pH has dropped into danger territory (4.93) with a sharp 0.47-point shift in one
 [shrimp-alert] 🚨 ph is below danger threshold: 4.93 (below 6.0)
 [call-toby] Telegram sent (critical): ph is below danger threshold: 4.93 (below 6.0)
+[2026-05-08T15:00] Day 48 | risk=red | [ph changed 0.13 in last hour] | T=74.53°F pH=5.38 TDS=236.0ppm | pH has dropped to 5.38—below danger threshold—and shifted 0.13 in the last hour 
+[shrimp-alert] 🚨 ph is below danger threshold: 5.38 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.38 (below 6.0)
+[2026-05-08T15:15] Day 48 | risk=yellow | [ph changed 0.14 in last hour] | T=74.97°F pH=5.49 TDS=235.0ppm | pH probe accuracy is now the critical question — a 0.14-unit swing in one hour i
+[shrimp-alert] 🚨 ph is below danger threshold: 5.49 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.49 (below 6.0)
+[2026-05-08T15:30] Day 48 | risk=yellow | [ph changed 0.38 in last hour] | T=74.97°F pH=5.31 TDS=235.0ppm | A 0.38 pH drop in one hour is an anomaly worth investigating, but owner flagged 
+[shrimp-alert] 🚨 ph is below danger threshold: 5.31 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.31 (below 6.0)
+[call-toby] Telegram sent (warning): A 0.38 pH drop in one hour is an anomaly worth investigating, but owner flagged probe recalibration concerns just today — this sharp reading may reflect sensor error rather than genuine water chemistry collapse. Shrimp appeared behaviorally healthy at 14:03, and TDS/temp are stable; manual test by Toby will clarify whether this is a probe artifact or early acidification signal.
+
+❗ 🧪 Run a water test (ammonia / nitrite / pH)
+[2026-05-08T15:45] Day 48 | skipped (stable) | T=75.09°F pH=5.47 TDS=234.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 5.47 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.47 (below 6.0)
