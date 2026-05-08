@@ -5402,3 +5402,15 @@ pH has plummeted to 5.34 — well below the Neocaridina danger floor of 6.0 — 
 [2026-05-08T11:45] Day 48 | risk=yellow | [ph changed 0.28 in last hour] | T=74.07°F pH=5.36 TDS=234.0ppm | pH has drifted slightly low (5.36) and a sharp 1-hour drop merits attention, but
 [shrimp-alert] 🚨 ph is below danger threshold: 5.36 (below 6.0)
 [call-toby] Telegram sent (critical): ph is below danger threshold: 5.36 (below 6.0)
+[2026-05-08T12:00] Day 48 | risk=red | [ph changed 0.13 in last hour] | T=74.07°F pH=5.38 TDS=234.0ppm | pH has spiked downward to 5.38 — below the 6.0 danger threshold — with a sharp 0
+[shrimp-alert] 🚨 ph is below danger threshold: 5.38 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.38 (below 6.0)
+[2026-05-08T12:15] Day 48 | skipped (stable) | T=74.07°F pH=5.36 TDS=235.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 5.36 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.36 (below 6.0)
+[2026-05-08T12:30] Day 48 | skipped (stable) | T=74.19°F pH=5.27 TDS=235.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 5.27 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.27 (below 6.0)
+[2026-05-08T12:45] Day 48 | risk=red | [ph changed 0.12 in last hour] | T=74.19°F pH=5.26 TDS=234.0ppm | pH has crossed the danger threshold (5.26 < 6.0) with sustained downward momentu
+[shrimp-alert] 🚨 ph is below danger threshold: 5.26 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.26 (below 6.0)
