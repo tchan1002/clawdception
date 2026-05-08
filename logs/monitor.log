@@ -5471,3 +5471,18 @@ pH has plummeted to 5.34 — well below the Neocaridina danger floor of 6.0 — 
 [2026-05-08T16:45] Day 48 | skipped (stable) | T=74.97°F pH=5.37 TDS=234.0ppm
 [shrimp-alert] 🚨 ph is below danger threshold: 5.37 (below 6.0)
 [call-toby] Telegram sent (critical): ph is below danger threshold: 5.37 (below 6.0)
+[2026-05-08T17:00] Day 48 | risk=yellow | [manual event since last check ] | T=74.97°F pH=5.4 TDS=236.0ppm | Owner's two manual pH tests today (6.4) diverge sharply from probe reading (5.4)
+[shrimp-alert] 🚨 ph is below danger threshold: 5.4 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.4 (below 6.0)
+[call-toby] Telegram sent (warning): Owner's two manual pH tests today (6.4) diverge sharply from probe reading (5.4), signaling probe drift or calibration failure despite recent service. Shrimp appear behaviorally healthy, and 24-hour trend shows movement toward target range — ground truth likely favors manual results over sensor data.
+
+❗ 🧪 Run a water test (ammonia / nitrite / pH) — Urgent pH retest needed — owner's manual tests (6.4×2) contradict probe (5.4). Confirm current true pH and validate probe accuracy.
+[2026-05-08T17:15] Day 48 | risk=yellow | [manual event since last check ] | T=75.09°F pH=5.29 TDS=236.0ppm | Probe pH and manual pH diverge sharply (5.29 vs 6.4), signaling sensor unreliabi
+[shrimp-alert] 🚨 ph is below danger threshold: 5.29 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.29 (below 6.0)
+[2026-05-08T17:30] Day 48 | risk=red | [manual event since last check ] | T=75.2°F pH=5.28 TDS=236.0ppm | Probe pH (5.28) conflicts directly with Toby's manual pH test (6.4) logged 33 mi
+[shrimp-alert] 🚨 ph is below danger threshold: 5.28 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.28 (below 6.0)
+[2026-05-08T17:45] Day 48 | risk=yellow | [manual event since last check ] | T=75.2°F pH=5.27 TDS=236.0ppm | Manual pH test (6.4) contradicts probe reading (5.27) by over 1 unit—a major red
+[shrimp-alert] 🚨 ph is below danger threshold: 5.27 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.27 (below 6.0)

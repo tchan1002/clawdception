@@ -1007,3 +1007,9 @@
 {"timestamp": "2026-05-08T16:30:02.476821", "urgency": "critical", "message": "ph is below danger threshold: 5.3 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-08T16:45:01.819207", "urgency": "critical", "message": "ph is below danger threshold: 5.37 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-08T16:57:04.928871", "urgency": "info", "message": "Logged as water test: Owner performed a manual pH test, reading 6.4. \u2713", "sent_via": "telegram"}
+{"timestamp": "2026-05-08T17:00:02.305953", "urgency": "info", "message": "Media Luna \u2014 last feeding 90h ago. Time to feed the shrimp.", "sent_via": "telegram"}
+{"timestamp": "2026-05-08T17:00:02.398553", "urgency": "critical", "message": "ph is below danger threshold: 5.4 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-08T17:00:09.259036", "urgency": "warning", "message": "Owner's two manual pH tests today (6.4) diverge sharply from probe reading (5.4), signaling probe drift or calibration failure despite recent service. Shrimp appear behaviorally healthy, and 24-hour trend shows movement toward target range \u2014 ground truth likely favors manual results over sensor data.\n\n\u2757 \ud83e\uddea Run a water test (ammonia / nitrite / pH) \u2014 Urgent pH retest needed \u2014 owner's manual tests (6.4\u00d72) contradict probe (5.4). Confirm current true pH and validate probe accuracy.", "sent_via": "telegram"}
+{"timestamp": "2026-05-08T17:15:01.843289", "urgency": "critical", "message": "ph is below danger threshold: 5.29 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-08T17:30:02.244952", "urgency": "critical", "message": "ph is below danger threshold: 5.28 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-08T17:45:02.190748", "urgency": "critical", "message": "ph is below danger threshold: 5.27 (below 6.0)", "sent_via": "telegram"}
