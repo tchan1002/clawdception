@@ -5567,3 +5567,19 @@ Probe pH reads 5.23 (danger), but Toby's fresh manual test reads 6.4 (safe)—th
 [2026-05-08T23:45] Day 48 | risk=red | [ph changed 0.17 in last hour] | T=74.64°F pH=5.16 TDS=235.0ppm | Probe pH (5.16) contradicts Toby's manual test (6.4) by 1.24 units — an impossib
 [shrimp-alert] 🚨 ph is below danger threshold: 5.16 (below 6.0)
 [call-toby] Telegram sent (critical): ph is below danger threshold: 5.16 (below 6.0)
+[2026-05-09T00:00] Day 49 | risk=red | [ph changed 0.11 in last hour] | T=74.53°F pH=5.15 TDS=235.0ppm | pH sensor is reporting 5.15—well below safe range—while Toby's manual test 16 ho
+[shrimp-alert] 🚨 ph is below danger threshold: 5.15 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.15 (below 6.0)
+[call-toby] Telegram sent (critical): pH sensor is reporting 5.15—well below safe range—while Toby's manual test 16 hours ago read 6.4. A sudden 0.11 drop in the last hour, combined with this persistent sensor-manual discrepancy, signals either probe malfunction or a real but undetected acidification event; either way, we need ground truth now.
+
+❗ 🧪 Run a water test (ammonia / nitrite / pH)
+❗ 👀 Observe shrimp behavior — Watch for stress behavior in shrimp: lethargy, unusual positioning, rapid gill movement, or molting distress.
+[2026-05-09T00:15] Day 49 | risk=red | [ph changed 0.95 in last hour] | T=74.53°F pH=4.11 TDS=237.0ppm | The pH probe is reading 4.11 while Toby's manual test 16 hours ago was 6.4—a 2.3
+[shrimp-alert] 🚨 ph is below danger threshold: 4.11 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 4.11 (below 6.0)
+[2026-05-09T00:30] Day 49 | risk=yellow | [ph changed 0.29 in last hour] | T=74.41°F pH=4.87 TDS=236.0ppm | Temperature and TDS are stable and healthy. The pH probe reading of 4.87 is a sh
+[shrimp-alert] 🚨 ph is below danger threshold: 4.87 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 4.87 (below 6.0)
+[2026-05-09T00:45] Day 49 | risk=yellow | [ph changed 0.2 in last hour] | T=74.41°F pH=4.95 TDS=237.0ppm | Probe is malfunctioning—sensor reads 4.95 but Toby's manual pH test 7 hours ago 
+[shrimp-alert] 🚨 ph is below danger threshold: 4.95 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 4.95 (below 6.0)
