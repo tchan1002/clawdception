@@ -5486,3 +5486,19 @@ pH has plummeted to 5.34 — well below the Neocaridina danger floor of 6.0 — 
 [2026-05-08T17:45] Day 48 | risk=yellow | [manual event since last check ] | T=75.2°F pH=5.27 TDS=236.0ppm | Manual pH test (6.4) contradicts probe reading (5.27) by over 1 unit—a major red
 [shrimp-alert] 🚨 ph is below danger threshold: 5.27 (below 6.0)
 [call-toby] Telegram sent (critical): ph is below danger threshold: 5.27 (below 6.0)
+[2026-05-08T18:00] Day 48 | risk=red | [manual event since last check ] | T=75.2°F pH=5.27 TDS=237.0ppm | Probe pH (5.27) vs. manual test (6.4) creates critical ambiguity — if probe is a
+[shrimp-alert] 🚨 ph is below danger threshold: 5.27 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.27 (below 6.0)
+[2026-05-08T18:15] Day 48 | risk=yellow | [manual event since last check ] | T=75.2°F pH=5.04 TDS=235.0ppm | Probe-vs-manual pH discrepancy is significant and unresolved; if probe is accura
+[shrimp-alert] 🚨 ph is below danger threshold: 5.04 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.04 (below 6.0)
+[call-toby] Telegram sent (warning): Probe-vs-manual pH discrepancy is significant and unresolved; if probe is accurate the tank is dangerously acidic, but manual tests suggest actual pH is safe. Temperature is stable and trending up slightly (normal post-20%-change drift). Ammonia and nitrite are zero, nitrate at 80ppm (elevated but manageable for a 3-week colony).
+
+• 👀 Observe shrimp behavior — Watch for lethargy, clustering, or reduced foraging at next feeding—would confirm pH distress if real.
+• 📸 Send a photo of the tank — High-resolution, level, well-lit tank shot to assess shrimp posture and activity.
+[2026-05-08T18:30] Day 48 | risk=yellow | [manual event since last check ] | T=75.31°F pH=5.14 TDS=234.0ppm | Probe-manual test divergence is real and significant: 1.26 pH units apart. Toby'
+[shrimp-alert] 🚨 ph is below danger threshold: 5.14 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.14 (below 6.0)
+[2026-05-08T18:45] Day 48 | risk=red | [manual event since last check ] | T=75.31°F pH=5.18 TDS=236.0ppm | Probe pH (5.18) and manual test pH (6.4) are in direct conflict—a 1.2-unit gap t
+[shrimp-alert] 🚨 ph is below danger threshold: 5.18 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.18 (below 6.0)
