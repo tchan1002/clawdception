@@ -1023,3 +1023,8 @@
 {"timestamp": "2026-05-08T19:15:02.774490", "urgency": "critical", "message": "ph is below danger threshold: 5.27 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-08T19:30:02.793027", "urgency": "critical", "message": "ph is below danger threshold: 5.26 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-08T19:45:02.757278", "urgency": "critical", "message": "ph is below danger threshold: 5.24 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-08T20:00:02.229833", "urgency": "critical", "message": "ph is below danger threshold: 5.23 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-08T20:00:07.692840", "urgency": "info", "message": "\u2705 All clear \u2014 T=75.31\u00b0F pH=5.23 TDS=235.0ppm\nProbe pH reads 5.23 (danger), but Toby's fresh manual test reads 6.4 (safe)\u2014the probe is unreliable and should be disregarded. Tank chemistry is functionally sound: ammonia zero, nitrate 80 (stable), nitrite zero, and shrimp were observed happy earlier today.", "sent_via": "telegram"}
+{"timestamp": "2026-05-08T20:15:02.261541", "urgency": "critical", "message": "ph is below danger threshold: 5.21 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-08T20:30:02.174401", "urgency": "critical", "message": "ph is below danger threshold: 5.05 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-08T20:45:02.810859", "urgency": "critical", "message": "ph is below danger threshold: 4.94 (below 6.0)", "sent_via": "telegram"}

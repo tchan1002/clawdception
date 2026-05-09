@@ -5514,3 +5514,17 @@ pH has plummeted to 5.34 — well below the Neocaridina danger floor of 6.0 — 
 [2026-05-08T19:45] Day 48 | risk=yellow | [manual event since last check ] | T=75.31°F pH=5.24 TDS=236.0ppm | Probe and manual tests are in direct conflict (5.24 vs 6.4); this is the pivot p
 [shrimp-alert] 🚨 ph is below danger threshold: 5.24 (below 6.0)
 [call-toby] Telegram sent (critical): ph is below danger threshold: 5.24 (below 6.0)
+[2026-05-08T20:00] Day 48 | risk=yellow | [manual event since last check ] | T=75.31°F pH=5.23 TDS=235.0ppm | Probe pH reads 5.23 (danger), but Toby's fresh manual test reads 6.4 (safe)—the 
+[shrimp-alert] 🚨 ph is below danger threshold: 5.23 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.23 (below 6.0)
+[call-toby] Telegram sent (info): ✅ All clear — T=75.31°F pH=5.23 TDS=235.0ppm
+Probe pH reads 5.23 (danger), but Toby's fresh manual test reads 6.4 (safe)—the probe is unreliable and should be disregarded. Tank chemistry is functionally sound: ammonia zero, nitrate 80 (stable), nitrite zero, and shrimp were observed happy earlier today.
+[2026-05-08T20:15] Day 48 | risk=yellow | [manual event since last check ] | T=75.31°F pH=5.21 TDS=236.0ppm | Probe pH (5.21) contradicts owner's manual test (6.4) by >1 unit, flagging calib
+[shrimp-alert] 🚨 ph is below danger threshold: 5.21 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.21 (below 6.0)
+[2026-05-08T20:30] Day 48 | risk=yellow | [manual event since last check ] | T=75.31°F pH=5.05 TDS=236.0ppm | Probe pH (5.05) contradicts Toby's manual test (6.4) by 1.35 units — a major dis
+[shrimp-alert] 🚨 ph is below danger threshold: 5.05 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.05 (below 6.0)
+[2026-05-08T20:45] Day 48 | risk=red | [manual event since last check ] | T=75.2°F pH=4.94 TDS=236.0ppm | Manual pH test (6.4) and probe reading (4.94) diverge dangerously—a 1.46-point g
+[shrimp-alert] 🚨 ph is below danger threshold: 4.94 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 4.94 (below 6.0)
