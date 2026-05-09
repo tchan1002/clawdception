@@ -335,3 +335,6 @@
 [2026-05-09T04:00] auto-feeder | yellow | Last feeding 101.4h ago — exceeds 48h threshold.
 [2026-05-09T05:00] auto-feeder | yellow | Last feeding 102.4h ago — exceeds 48h threshold.
 [2026-05-09T06:00] auto-feeder | yellow | Last feeding 103.4h ago — exceeds 48h threshold.
+[call-toby] Telegram sent (info): Media Luna — last feeding 104h ago. Time to feed the shrimp.
+[2026-05-09T07:00] auto-feeder | yellow | Last feeding 104.4h ago — exceeds 48h threshold.
+[2026-05-09T08:00] auto-feeder | yellow | Last feeding 105.4h ago — exceeds 48h threshold.
