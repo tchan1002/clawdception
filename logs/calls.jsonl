@@ -1083,3 +1083,10 @@
 {"timestamp": "2026-05-09T07:15:02.216422", "urgency": "critical", "message": "ph is below danger threshold: 4.89 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-09T07:30:02.233378", "urgency": "critical", "message": "ph is below danger threshold: 4.89 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-09T07:45:02.684402", "urgency": "critical", "message": "ph is below danger threshold: 4.91 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-09T08:00:02.372471", "urgency": "critical", "message": "ph is below danger threshold: 4.9 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-09T08:00:07.672091", "urgency": "warning", "message": "Probe integrity is questionable\u2014manual pH test (6.4) contradicts sensor (4.9), and the probe was dislodged days ago with unknown impact. Temperature and TDS are healthy; shrimp appear behaviorally sound per most recent log. Immediate validation needed before escalating.\n\n\u2022 \ud83d\udcf8 Send a photo of the tank", "sent_via": "telegram"}
+{"timestamp": "2026-05-09T08:05:02.336194", "urgency": "info", "message": "Water change looking due soon. pH at 4.90 \u2192 hits floor in ~0.0 days. Suggested window: Saturday, May 09 (~0d).", "sent_via": "telegram"}
+{"timestamp": "2026-05-09T08:15:02.000892", "urgency": "critical", "message": "ph is below danger threshold: 4.9 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-09T08:30:01.934121", "urgency": "critical", "message": "ph is below danger threshold: 4.91 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-09T08:30:25.320803", "urgency": "info", "message": "New skill proposal: `probetrust` (new, risk: medium)", "sent_via": "telegram"}
+{"timestamp": "2026-05-09T08:45:02.517254", "urgency": "critical", "message": "ph is below danger threshold: 4.91 (below 6.0)", "sent_via": "telegram"}

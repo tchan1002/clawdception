@@ -101,3 +101,7 @@
 [skill-writer] Proposal written to /home/pi/clawdception/proposals/2026-05-08-probecalibrationtracker
 [call-toby] Document sent: proposal.md
 [call-toby] Sent with buttons (msg_id=1380): New skill proposal: `probecalibrationtracker` (new, risk: low)
+[skill-writer] Running — 36 daily logs available, conditions met (Day 49 of cycle)
+[skill-writer] Proposal written to /home/pi/clawdception/proposals/2026-05-09-probetrust
+[call-toby] Document sent: proposal.md
+[call-toby] Sent with buttons (msg_id=1518): New skill proposal: `probetrust` (new, risk: medium)
