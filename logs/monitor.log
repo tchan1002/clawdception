@@ -5635,3 +5635,15 @@ Probe pH reads 5.23 (danger), but Toby's fresh manual test reads 6.4 (safe)—th
 [2026-05-09T04:45] Day 49 | skipped (stable) | T=74.19°F pH=4.99 TDS=239.0ppm
 [shrimp-alert] 🚨 ph is below danger threshold: 4.99 (below 6.0)
 [call-toby] Telegram sent (critical): ph is below danger threshold: 4.99 (below 6.0)
+[2026-05-09T05:00] Day 49 | skipped (stable) | T=74.19°F pH=4.93 TDS=238.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 4.93 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 4.93 (below 6.0)
+[2026-05-09T05:15] Day 49 | skipped (stable) | T=74.3°F pH=4.89 TDS=237.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 4.89 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 4.89 (below 6.0)
+[2026-05-09T05:30] Day 49 | skipped (stable) | T=74.19°F pH=4.9 TDS=238.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 4.9 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 4.9 (below 6.0)
+[2026-05-09T05:45] Day 49 | skipped (stable) | T=74.3°F pH=4.93 TDS=238.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 4.93 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 4.93 (below 6.0)
