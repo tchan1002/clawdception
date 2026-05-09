@@ -26,7 +26,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-from config import PATHS, RANGES, COLONY_START, get_cycle_day
+from config import PATHS, RANGES, COLONY_START, get_cycle_day, PH_CALIBRATING
 from utils import (
     call_claude,
     compute_stats,
@@ -188,6 +188,8 @@ def check_danger(reading):
         field = cfg.get("field")
         if not field or field not in reading:
             continue
+        if PH_CALIBRATING and field == "ph":
+            continue
         value = reading[field]
         if value is None:
             continue
@@ -238,6 +240,8 @@ def should_call_claude(latest, readings_recent, recent_events, last_claude_time)
     # Notable rate of change over last ~4 readings (~1 hour)
     if len(readings_recent) >= 4:
         for field, threshold in RATE_THRESHOLDS.items():
+            if PH_CALIBRATING and field == "ph":
+                continue
             vals = [r[field] for r in readings_recent[:4] if r.get(field) is not None]
             if len(vals) >= 2:
                 change = abs(vals[0] - vals[-1])

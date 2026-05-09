@@ -5725,3 +5725,15 @@ Probe pH reads 5.23 (danger), but Toby's fresh manual test reads 6.4 (safe)—th
 [call-toby] Telegram sent (warning): A 0.13 pH drop in one hour is unusual, but manual test 18 hours ago read 6.4—a full 1.39 points higher than the sensor now. The recent temp probe dislodgement history counsels skepticism. Probe calibration was verified 13 days ago, but drift is plausible under tank conditions.
 
 • 👀 Observe shrimp behavior — Watch for shrimp stress, lethargy, or molting difficulty if pH is genuinely depressed
+[2026-05-09T12:00] Day 49 | risk=red | [manual event since last check ] | T=75.09°F pH=5.01 TDS=238.0ppm | pH sensor is reporting 5.01, but Toby's manual test 24 hours ago read 6.4 — a di
+[shrimp-alert] 🚨 ph is below danger threshold: 5.01 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.01 (below 6.0)
+[2026-05-09T12:15] Day 49 | skipped (stable) | T=74.97°F pH=5.03 TDS=239.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 5.03 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.03 (below 6.0)
+[2026-05-09T12:30] Day 49 | skipped (stable) | T=74.97°F pH=5.08 TDS=238.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 5.08 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.08 (below 6.0)
+[2026-05-09T12:45] Day 49 | skipped (stable) | T=74.97°F pH=5.1 TDS=237.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 5.1 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.1 (below 6.0)

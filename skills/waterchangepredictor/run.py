@@ -17,7 +17,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-from config import PATHS, get_cycle_day
+from config import PATHS, get_cycle_day, PH_CALIBRATING
 from utils import fetch_events, fetch_readings
 from skills.call_toby.run import call_toby
 
@@ -133,7 +133,7 @@ def run(force=False):
         return
 
     tds_vals = [r["tds_ppm"] for r in readings if r.get("tds_ppm") is not None]
-    ph_vals = [r["ph"] for r in readings if r.get("ph") is not None]
+    ph_vals = [] if PH_CALIBRATING else [r["ph"] for r in readings if r.get("ph") is not None]
 
     tds_days, tds_slope, tds_current, tds_r2 = days_to_threshold(tds_vals, TDS_CEILING, rising=True)
     ph_days, ph_slope, ph_current, ph_r2 = days_to_threshold(ph_vals, PH_FLOOR, rising=False)
@@ -179,7 +179,7 @@ def run(force=False):
 
 ## Current Readings
 - TDS: {tds_current:.0f} ppm (ceiling {TDS_CEILING} ppm, slope {tds_slope:+.1f} ppm/day)
-- pH: {ph_current:.2f} (floor {PH_FLOOR}, slope {ph_slope:+.3f}/day)
+- pH: {"calibrating" if PH_CALIBRATING else f"{ph_current:.2f} (floor {PH_FLOOR}, slope {ph_slope:+.3f}/day)"}
 
 ## Projections
 - TDS hits {TDS_CEILING} ppm: {tds_line}

@@ -1050,10 +1050,11 @@ async function poll() {
 }
 
 // ─── BOOT ──────────────────────────────────────────────
-fetch('/api/health').then(r => r.json()).then(h => { phCalibrating = !!h.ph_calibrating; }).catch(() => {});
-render(readings); // show demo immediately
-poll();           // try live
-setInterval(poll, POLL_MS);
+fetch('/api/health').then(r => r.json()).then(h => { phCalibrating = !!h.ph_calibrating; }).catch(() => {}).finally(() => {
+  render(readings); // show demo (with correct calibrating state)
+  poll();           // try live
+  setInterval(poll, POLL_MS);
+});
 
 // Cycle day counter from tank start Mar 22
 const tankStart = new Date('2026-03-22');

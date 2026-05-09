@@ -1103,3 +1103,9 @@
 {"timestamp": "2026-05-09T11:30:02.106625", "urgency": "critical", "message": "ph is below danger threshold: 4.97 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-09T11:45:02.596509", "urgency": "critical", "message": "ph is below danger threshold: 5.01 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-09T11:45:09.128620", "urgency": "warning", "message": "A 0.13 pH drop in one hour is unusual, but manual test 18 hours ago read 6.4\u2014a full 1.39 points higher than the sensor now. The recent temp probe dislodgement history counsels skepticism. Probe calibration was verified 13 days ago, but drift is plausible under tank conditions.\n\n\u2022 \ud83d\udc40 Observe shrimp behavior \u2014 Watch for shrimp stress, lethargy, or molting difficulty if pH is genuinely depressed", "sent_via": "telegram"}
+{"timestamp": "2026-05-09T12:00:02.609464", "urgency": "info", "message": "Media Luna \u2014 last feeding 109h ago. Time to feed the shrimp.", "sent_via": "telegram"}
+{"timestamp": "2026-05-09T12:00:02.744049", "urgency": "critical", "message": "ph is below danger threshold: 5.01 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-09T12:05:16.741020", "urgency": "info", "message": "Journal \u2014 Day 49 \u00b7 2026-05-09 12:05", "sent_via": "telegram"}
+{"timestamp": "2026-05-09T12:15:01.878879", "urgency": "critical", "message": "ph is below danger threshold: 5.03 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-09T12:30:02.236387", "urgency": "critical", "message": "ph is below danger threshold: 5.08 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-09T12:45:02.275524", "urgency": "critical", "message": "ph is below danger threshold: 5.1 (below 6.0)", "sent_via": "telegram"}
