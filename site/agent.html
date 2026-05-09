@@ -250,17 +250,17 @@
             <div class="param-grid">
                 <div class="param-card">
                     <div class="param-name">Temperature</div>
-                    <div class="param-value status-green">75.09°F</div>
+                    <div class="param-value status-green">74.64°F</div>
                     <div class="param-note"></div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">pH</div>
-                    <div class="param-value status-red">5.18</div>
-                    <div class="param-note">Probe reading conflicts sharply with manual test (6.4 at 16:57, ~4.5hr ago). Probe calibration pending. Ground-truth manual tests: 6.4 (today 16:57) and 6.6 (2026-05-06). Probe likely drifting low.</div>
+                    <div class="param-value status-red">5.16</div>
+                    <div class="param-note">Probe shows 5.16; Toby's manual test 2hr ago read 6.4. Critical discrepancy — probe likely needs recalibration despite April 26 claim. Tank cannot be at both 5.16 and 6.4.</div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">TDS</div>
-                    <div class="param-value status-green">237.0 ppm</div>
+                    <div class="param-value status-green">235.0 ppm</div>
                     <div class="param-note"></div>
                 </div>
             </div>
@@ -268,7 +268,7 @@
 
         <div class="section">
             <div class="section-title">Reasoning</div>
-            <div class="reasoning">Probe pH (5.18) vs. manual pH (6.4 same day) is a 1.22-unit divergence—unreliable sensor data masquerading as a crisis. The 0.25 pH drop in the last hour is probe drift, not tank chemistry, but we cannot trust the current reading to guide intervention.</div>
+            <div class="reasoning">Probe pH (5.16) contradicts Toby's manual test (6.4) by 1.24 units — an impossible gap. This is not calibration drift; this is probe failure or a fundamental measurement error. With shrimp at 48 days post-intro and only 5 animals in the system, pH stress compounds quickly in a small tank.</div>
         </div>
 
         <div class="section">
@@ -405,7 +405,7 @@ The feeding gap, the pH ambiguity, the sensor calibration trigger—these aren't
 
         <div class="section">
             <div class="section-title">Monitor Log (Last 10)</div>
-            <div class="monitor-log"><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.1 (below 6.0)</div><div>[2026-05-08T22:15] Day 48 | risk=red | [ph changed 0.25 in last hour] | T=75.09°F pH=5.18 TDS=237.0ppm | Probe pH (5.18) vs. manual pH (6.4 same day) is a 1.22-unit divergence—unreliabl</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.18 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.18 (below 6.0)</div><div>[2026-05-08T22:30] Day 48 | skipped (stable) | T=74.97°F pH=4.97 TDS=237.0ppm</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 4.97 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 4.97 (below 6.0)</div><div>[2026-05-08T22:45] Day 48 | skipped (stable) | T=74.97°F pH=5.08 TDS=237.0ppm</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.08 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.08 (below 6.0)</div></div>
+            <div class="monitor-log"><div>• 📸 Send a photo of the tank</div><div>[2026-05-08T23:15] Day 48 | skipped (stable) | T=74.75°F pH=5.04 TDS=237.0ppm</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.04 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.04 (below 6.0)</div><div>[2026-05-08T23:30] Day 48 | skipped (stable) | T=74.64°F pH=5.06 TDS=236.0ppm</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.06 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.06 (below 6.0)</div><div>[2026-05-08T23:45] Day 48 | risk=red | [ph changed 0.17 in last hour] | T=74.64°F pH=5.16 TDS=235.0ppm | Probe pH (5.16) contradicts Toby's manual test (6.4) by 1.24 units — an impossib</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.16 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.16 (below 6.0)</div></div>
         </div>
     </div>
 
