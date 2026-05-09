@@ -1071,3 +1071,9 @@
 {"timestamp": "2026-05-09T05:15:01.828192", "urgency": "critical", "message": "ph is below danger threshold: 4.89 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-09T05:30:02.845596", "urgency": "critical", "message": "ph is below danger threshold: 4.9 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-09T05:45:02.754772", "urgency": "critical", "message": "ph is below danger threshold: 4.93 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-09T06:00:02.830105", "urgency": "critical", "message": "ph is below danger threshold: 4.92 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-09T06:05:16.695684", "urgency": "info", "message": "Journal \u2014 Day 49 \u00b7 2026-05-09 06:05", "sent_via": "telegram"}
+{"timestamp": "2026-05-09T06:05:18.675681", "urgency": "info", "message": "Action items:\n\u2022 Feed the colony today; log it to reset the feeding window counter\n\u2022 Perform a manual pH test within 24 hours to validate or refute current sensor reading of 4.967\n\u2022 Retest water parameters (ammonia, nitrite, nitrate) within 48 hours to establish current bioload and nitrate trajectory\n\u2022 Submit a tank photo within 24 hours for visual confirmation of colony health and behavior", "sent_via": "telegram"}
+{"timestamp": "2026-05-09T06:15:02.324475", "urgency": "critical", "message": "ph is below danger threshold: 4.97 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-09T06:30:02.897732", "urgency": "critical", "message": "ph is below danger threshold: 4.95 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-09T06:45:02.706569", "urgency": "critical", "message": "ph is below danger threshold: 4.95 (below 6.0)", "sent_via": "telegram"}

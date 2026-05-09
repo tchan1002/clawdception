@@ -625,3 +625,11 @@ json.decoder.JSONDecodeError: Expecting value: line 2 column 1 (char 1)
 • Recalibrate or replace the pH probe within 48 hours; current readings are a masque and could lead to inappropriate interventions
 • Establish a consistent manual feeding schedule (Toby's discretion on frequency and amount, but document it)
 • Consider a 20–25% water change within 72 hours to bring nitrate closer to 50 ppm, though current level is not urgent
+[shrimp-journal] Entry written: 2026-05-09-0605.md (Day 49)
+[call-toby] Telegram sent (info): Journal — Day 49 · 2026-05-09 06:05
+[call-toby] Document sent: 2026-05-09-0605.md
+[call-toby] Telegram sent (info): Action items:
+• Feed the colony today; log it to reset the feeding window counter
+• Perform a manual pH test within 24 hours to validate or refute current sensor reading of 4.967
+• Retest water parameters (ammonia, nitrite, nitrate) within 48 hours to establish current bioload and nitrate trajectory
+• Submit a tank photo within 24 hours for visual confirmation of colony health and behavior
