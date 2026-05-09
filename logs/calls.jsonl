@@ -1090,3 +1090,8 @@
 {"timestamp": "2026-05-09T08:30:01.934121", "urgency": "critical", "message": "ph is below danger threshold: 4.91 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-09T08:30:25.320803", "urgency": "info", "message": "New skill proposal: `probetrust` (new, risk: medium)", "sent_via": "telegram"}
 {"timestamp": "2026-05-09T08:45:02.517254", "urgency": "critical", "message": "ph is below danger threshold: 4.91 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-09T09:00:02.728766", "urgency": "critical", "message": "ph is below danger threshold: 4.89 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-09T09:15:02.333430", "urgency": "critical", "message": "ph is below danger threshold: 4.91 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-09T09:30:02.630440", "urgency": "critical", "message": "ph is below danger threshold: 4.89 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-09T09:45:01.961385", "urgency": "critical", "message": "ph is below danger threshold: 4.88 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-09T10:00:02.352611", "urgency": "critical", "message": "ph is below danger threshold: 4.61 (below 6.0)", "sent_via": "telegram"}
