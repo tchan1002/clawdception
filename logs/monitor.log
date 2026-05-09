@@ -5583,3 +5583,19 @@ Probe pH reads 5.23 (danger), but Toby's fresh manual test reads 6.4 (safe)—th
 [2026-05-09T00:45] Day 49 | risk=yellow | [ph changed 0.2 in last hour] | T=74.41°F pH=4.95 TDS=237.0ppm | Probe is malfunctioning—sensor reads 4.95 but Toby's manual pH test 7 hours ago 
 [shrimp-alert] 🚨 ph is below danger threshold: 4.95 (below 6.0)
 [call-toby] Telegram sent (critical): ph is below danger threshold: 4.95 (below 6.0)
+[2026-05-09T01:00] Day 49 | risk=red | [ph changed 0.93 in last hour] | T=74.19°F pH=5.04 TDS=236.0ppm | pH probe is reading 5.04 (danger zone) but manual test 24 hours ago showed 6.4 (
+[shrimp-alert] 🚨 ph is below danger threshold: 5.04 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.04 (below 6.0)
+[2026-05-09T01:15] Day 49 | risk=red | [ph changed 0.12 in last hour] | T=74.19°F pH=4.99 TDS=236.0ppm | Probe reads 4.99 pH (danger zone), but manual test 12hr ago was 6.4 and shrimp b
+[shrimp-alert] 🚨 ph is below danger threshold: 4.99 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 4.99 (below 6.0)
+[call-toby] Telegram sent (critical): Probe reads 4.99 pH (danger zone), but manual test 12hr ago was 6.4 and shrimp behavior is reported normal—a 1.4-unit drift in 12 hours suggests instrument failure, not tank crisis. Urgent probe replacement or validation needed before trust is restored.
+
+❗ 👀 Observe shrimp behavior — Perform a fresh manual pH test immediately. Compare to probe reading to confirm whether probe has drifted or failed.
+❗ 🔧 Check equipment — Inspect pH probe placement and condition. Verify it is fully submerged and not fouled. Consider replacement if drift persists after reseating.
+[2026-05-09T01:30] Day 49 | skipped (stable) | T=74.19°F pH=4.99 TDS=237.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 4.99 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 4.99 (below 6.0)
+[2026-05-09T01:45] Day 49 | skipped (stable) | T=74.07°F pH=4.95 TDS=237.0ppm
+[shrimp-alert] 🚨 ph is below danger threshold: 4.95 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 4.95 (below 6.0)
