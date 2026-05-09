@@ -7,6 +7,7 @@ COLONY_START = datetime(2026, 4, 13, 16, 0)
 CARETAKER_EPOCH = CYCLE_START + timedelta(days=14)  # day 0 of the caretaker's own clock
 API_BASE = "http://localhost:5001"
 CLAUDE_MODEL = "claude-sonnet-4-6"
+PH_CALIBRATING = True  # pH probe in calibration — suppress alerts, grey dashboard
 
 # Per-skill model routing (Haiku for frequent/small tasks, Sonnet for synthesis)
 SKILL_MODELS = {

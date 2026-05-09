@@ -15,6 +15,7 @@ import json
 from datetime import datetime, timedelta
 from pathlib import Path
 from flask import Flask, request, jsonify, send_file
+from config import PH_CALIBRATING
 
 app = Flask(__name__)
 DB_PATH = "media_luna.db"
@@ -1272,7 +1273,7 @@ def health():
     conn.close()
 
     last_reading = dict(row)["timestamp"] if row else "never"
-    return jsonify({"status": "alive", "last_reading": last_reading})
+    return jsonify({"status": "alive", "last_reading": last_reading, "ph_calibrating": PH_CALIBRATING})
 
 
 # --- Owner photo upload endpoints ---

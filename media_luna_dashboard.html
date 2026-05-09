@@ -178,6 +178,9 @@
 
   .card.warn::before { background: var(--warn); }
   .card.danger::before { background: var(--danger); }
+  .card.calibrating::before { background: var(--muted); }
+  .card.calibrating .card-value { color: var(--muted); }
+  .card.calibrating .card-label::after { content: ' (calibrating)'; font-style: italic; }
 
   .card-label {
     font-size: 9px;
@@ -233,12 +236,6 @@
     text-transform: uppercase;
     color: var(--muted);
     margin-bottom: 14px;
-  }
-  .cal-legend {
-    color: #ff4040;
-    font-size: 8px;
-    letter-spacing: 0.1em;
-    opacity: 0.8;
   }
 
   .chart-wrap {
@@ -759,7 +756,7 @@
       </div>
     </div>
     <div class="chart-panel">
-      <div class="chart-title">pH — 24 h / 15 min <span class="cal-legend">&#9679; calibration artifact</span></div>
+      <div class="chart-title">pH — 24 h / 15 min</div>
       <div class="chart-wrap">
         <canvas id="chartPh"></canvas>
       </div>
@@ -838,6 +835,7 @@
 const API_URL = '/api/sensors';
 const POLL_MS = 30000;
 const WINDOW_HOURS = 24;
+let phCalibrating = false;
 
 // ─── DEMO DATA (generated: 96 readings × 15 min = 24 h) ─
 function buildDemoData() {
@@ -952,7 +950,10 @@ function render(data) {
 
   const ph = latest.ph;
   const cPh = document.getElementById('cardPh');
-  if (ph != null) {
+  if (phCalibrating) {
+    document.getElementById('valPh').textContent = ph != null ? ph.toFixed(2) : '—';
+    cPh.className = 'card calibrating';
+  } else if (ph != null) {
     document.getElementById('valPh').textContent = ph.toFixed(2);
     const phLow = ph < 6.5, phHigh = ph > 7.5;
     const phWarn = ph < 6.8 || ph > 7.2;
@@ -977,13 +978,11 @@ function render(data) {
   tdsChart.data.datasets[0].data = tdss;
   tdsChart.update();
 
-  const CAL_COLOR = '#ff4040';
-  const phColors = phs.map(v => (v != null && (v > 7.8 || v < 5.5)) ? CAL_COLOR : '#e8a838');
-  const phRadii  = phs.map(v => (v != null && (v > 7.8 || v < 5.5)) ? 3 : 0);
   phChart.data.labels = labels;
   phChart.data.datasets[0].data = phs;
-  phChart.data.datasets[0].pointBackgroundColor = phColors;
-  phChart.data.datasets[0].pointRadius = phRadii;
+  phChart.data.datasets[0].borderColor = phCalibrating ? '#4a6a70' : '#e8a838';
+  phChart.data.datasets[0].pointBackgroundColor = phCalibrating ? '#4a6a70' : '#e8a838';
+  phChart.data.datasets[0].pointRadius = 0;
   phChart.update();
 
   // Log - most recent first
@@ -1051,6 +1050,7 @@ async function poll() {
 }
 
 // ─── BOOT ──────────────────────────────────────────────
+fetch('/api/health').then(r => r.json()).then(h => { phCalibrating = !!h.ph_calibrating; }).catch(() => {});
 render(readings); // show demo immediately
 poll();           // try live
 setInterval(poll, POLL_MS);

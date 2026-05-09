@@ -5710,3 +5710,18 @@ Probe pH reads 5.23 (danger), but Toby's fresh manual test reads 6.4 (safe)—th
 [2026-05-09T10:45] Day 49 | risk=red | [ph changed 0.19 in last hour] | T=75.31°F pH=4.8 TDS=239.0ppm | Sensor pH reading (4.8) is dangerously low and contradicts Toby's manual test (6
 [shrimp-alert] 🚨 ph is below danger threshold: 4.8 (below 6.0)
 [call-toby] Telegram sent (critical): ph is below danger threshold: 4.8 (below 6.0)
+[2026-05-09T11:00] Day 49 | risk=red | [ph changed 0.16 in last hour] | T=75.31°F pH=4.88 TDS=239.0ppm | The pH probe is almost certainly malfunctioning or misplaced. Owner's manual tes
+[shrimp-alert] 🚨 ph is below danger threshold: 4.88 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 4.88 (below 6.0)
+[2026-05-09T11:15] Day 49 | risk=yellow | [ph changed 0.17 in last hour] | T=75.2°F pH=4.91 TDS=239.0ppm | The pH probe is reading 4.91, but Toby's manual test yesterday registered 6.4—a 
+[shrimp-alert] 🚨 ph is below danger threshold: 4.91 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 4.91 (below 6.0)
+[2026-05-09T11:30] Day 49 | risk=yellow | [ph changed 0.17 in last hour] | T=75.2°F pH=4.97 TDS=239.0ppm | A sharp 0.17 pH drop in one hour is concerning on its face, but the probe readin
+[shrimp-alert] 🚨 ph is below danger threshold: 4.97 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 4.97 (below 6.0)
+[2026-05-09T11:45] Day 49 | risk=yellow | [ph changed 0.13 in last hour] | T=75.2°F pH=5.01 TDS=239.0ppm | A 0.13 pH drop in one hour is unusual, but manual test 18 hours ago read 6.4—a f
+[shrimp-alert] 🚨 ph is below danger threshold: 5.01 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.01 (below 6.0)
+[call-toby] Telegram sent (warning): A 0.13 pH drop in one hour is unusual, but manual test 18 hours ago read 6.4—a full 1.39 points higher than the sensor now. The recent temp probe dislodgement history counsels skepticism. Probe calibration was verified 13 days ago, but drift is plausible under tank conditions.
+
+• 👀 Observe shrimp behavior — Watch for shrimp stress, lethargy, or molting difficulty if pH is genuinely depressed
