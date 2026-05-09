@@ -93,9 +93,9 @@
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 0.15em;
-            background: #da363318;
-            color: #da3633;
-            border: 1px solid #da363350;
+            background: #d2992218;
+            color: #d29922;
+            border: 1px solid #d2992250;
         }
         .param-grid {
             display: grid;
@@ -241,7 +241,7 @@
 
         <div class="section">
             <div class="section-title">Current Risk Level</div>
-            <div class="risk-badge">red</div>
+            <div class="risk-badge">yellow</div>
         </div>
 
         
@@ -255,8 +255,8 @@
                 </div>
                 <div class="param-card">
                     <div class="param-name">pH</div>
-                    <div class="param-value status-red">5.18</div>
-                    <div class="param-note">Probe reading 5.18 conflicts sharply with Toby's manual test of 6.4 (same day, 4hrs prior). Given recent calibration confirmation (2026-04-26), probe should be trustworthy—but temperature probe dislodging incident (2026-05-04) raises skepticism about all sensor integrity during that window. Manual test is ground truth until probe discrepancy is resolved.</div>
+                    <div class="param-value status-red">5.24</div>
+                    <div class="param-note">Probe reading conflicts sharply with Toby's manual test (6.4 at 16:57, 6.4 at 21:55). Probe likely miscalibrated despite April 26 claim — treating manual tests as ground truth.</div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">TDS</div>
@@ -268,14 +268,14 @@
 
         <div class="section">
             <div class="section-title">Reasoning</div>
-            <div class="reasoning">Probe pH (5.18) and manual test pH (6.4) are in direct conflict—a 1.2-unit gap that cannot be noise. If probe is accurate, tank is in acute distress zone (pH <6.0 danger threshold); if manual test is correct, we're safe. Shrimp are reported happy and behaving normally, which argues for the manual reading—but the discrepancy must be resolved today.</div>
+            <div class="reasoning">Probe and manual tests are in direct conflict (5.24 vs 6.4); this is the pivot point. Manual tests (ammonia 0, nitrate 80, nitrite 0, pH 6.4) suggest the tank is cycling normally with acceptable pH — shrimp appear behaviorally healthy per Toby's 14:03 observation. The probe needs immediate recalibration or replacement to restore confidence in automated monitoring.</div>
         </div>
 
         <div class="section">
             <div class="section-title">Actions</div>
             <div class="actions">
                 <ul>
-                    <li style='color:#6e7681'>No actions</li>
+                    <li><strong>check_equipment</strong> [soon] — pH probe placement and calibration. Manual tests read 6.4; probe reads 5.24. Verify probe is submerged, not dislodged again, and consider recalibration or replacement.</li><li><strong>observe</strong> [routine] — Watch for behavioral signs of pH stress over next 24–48hr (lethargy, clustering, reduced feeding response). Current activity level is positive.</li><li><strong>none</strong> [routine] — </li>
                 </ul>
             </div>
         </div>
@@ -405,7 +405,7 @@ The feeding gap, the pH ambiguity, the sensor calibration trigger—these aren't
 
         <div class="section">
             <div class="section-title">Monitor Log (Last 10)</div>
-            <div class="monitor-log"><div>[call-toby] Telegram sent (warning): Probe-vs-manual pH discrepancy is significant and unresolved; if probe is accurate the tank is dangerously acidic, but manual tests suggest actual pH is safe. Temperature is stable and trending up slightly (normal post-20%-change drift). Ammonia and nitrite are zero, nitrate at 80ppm (elevated but manageable for a 3-week colony).</div><div></div><div>• 👀 Observe shrimp behavior — Watch for lethargy, clustering, or reduced foraging at next feeding—would confirm pH distress if real.</div><div>• 📸 Send a photo of the tank — High-resolution, level, well-lit tank shot to assess shrimp posture and activity.</div><div>[2026-05-08T18:30] Day 48 | risk=yellow | [manual event since last check ] | T=75.31°F pH=5.14 TDS=234.0ppm | Probe-manual test divergence is real and significant: 1.26 pH units apart. Toby'</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.14 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.14 (below 6.0)</div><div>[2026-05-08T18:45] Day 48 | risk=red | [manual event since last check ] | T=75.31°F pH=5.18 TDS=236.0ppm | Probe pH (5.18) and manual test pH (6.4) are in direct conflict—a 1.2-unit gap t</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.18 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.18 (below 6.0)</div></div>
+            <div class="monitor-log"><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.23 (below 6.0)</div><div>[2026-05-08T19:15] Day 48 | risk=red | [manual event since last check ] | T=75.43°F pH=5.27 TDS=235.0ppm | Probe-to-manual pH discrepancy (5.27 vs 6.4) is too large to ignore — a 1.1-unit</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.27 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.27 (below 6.0)</div><div>[2026-05-08T19:30] Day 48 | risk=yellow | [manual event since last check ] | T=75.31°F pH=5.26 TDS=235.0ppm | Probe pH reading (5.26) conflicts sharply with owner's manual test (6.4) perform</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.26 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.26 (below 6.0)</div><div>[2026-05-08T19:45] Day 48 | risk=yellow | [manual event since last check ] | T=75.31°F pH=5.24 TDS=236.0ppm | Probe and manual tests are in direct conflict (5.24 vs 6.4); this is the pivot p</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.24 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.24 (below 6.0)</div></div>
         </div>
     </div>
 

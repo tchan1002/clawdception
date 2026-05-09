@@ -5502,3 +5502,15 @@ pH has plummeted to 5.34 — well below the Neocaridina danger floor of 6.0 — 
 [2026-05-08T18:45] Day 48 | risk=red | [manual event since last check ] | T=75.31°F pH=5.18 TDS=236.0ppm | Probe pH (5.18) and manual test pH (6.4) are in direct conflict—a 1.2-unit gap t
 [shrimp-alert] 🚨 ph is below danger threshold: 5.18 (below 6.0)
 [call-toby] Telegram sent (critical): ph is below danger threshold: 5.18 (below 6.0)
+[2026-05-08T19:00] Day 48 | risk=yellow | [manual event since last check ] | T=75.31°F pH=5.23 TDS=235.0ppm | Probe pH and manual pH diverge sharply (5.23 vs 6.4); manual test is reliable gr
+[shrimp-alert] 🚨 ph is below danger threshold: 5.23 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.23 (below 6.0)
+[2026-05-08T19:15] Day 48 | risk=red | [manual event since last check ] | T=75.43°F pH=5.27 TDS=235.0ppm | Probe-to-manual pH discrepancy (5.27 vs 6.4) is too large to ignore — a 1.1-unit
+[shrimp-alert] 🚨 ph is below danger threshold: 5.27 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.27 (below 6.0)
+[2026-05-08T19:30] Day 48 | risk=yellow | [manual event since last check ] | T=75.31°F pH=5.26 TDS=235.0ppm | Probe pH reading (5.26) conflicts sharply with owner's manual test (6.4) perform
+[shrimp-alert] 🚨 ph is below danger threshold: 5.26 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.26 (below 6.0)
+[2026-05-08T19:45] Day 48 | risk=yellow | [manual event since last check ] | T=75.31°F pH=5.24 TDS=236.0ppm | Probe and manual tests are in direct conflict (5.24 vs 6.4); this is the pivot p
+[shrimp-alert] 🚨 ph is below danger threshold: 5.24 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 5.24 (below 6.0)
