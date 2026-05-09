@@ -1059,3 +1059,8 @@
 {"timestamp": "2026-05-09T02:15:02.006928", "urgency": "critical", "message": "ph is below danger threshold: 4.98 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-09T02:30:02.604099", "urgency": "critical", "message": "ph is below danger threshold: 5.0 (below 6.0)", "sent_via": "telegram"}
 {"timestamp": "2026-05-09T02:45:02.726789", "urgency": "critical", "message": "ph is below danger threshold: 5.0 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-09T03:00:02.977495", "urgency": "critical", "message": "ph is below danger threshold: 5.06 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-09T03:15:02.511924", "urgency": "critical", "message": "ph is below danger threshold: 5.03 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-09T03:30:02.379344", "urgency": "critical", "message": "ph is below danger threshold: 4.94 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-09T03:45:02.698423", "urgency": "critical", "message": "ph is below danger threshold: 4.99 (below 6.0)", "sent_via": "telegram"}
+{"timestamp": "2026-05-09T04:00:02.692273", "urgency": "critical", "message": "ph is below danger threshold: 5.0 (below 6.0)", "sent_via": "telegram"}
