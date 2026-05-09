@@ -5528,3 +5528,15 @@ Probe pH reads 5.23 (danger), but Toby's fresh manual test reads 6.4 (safe)—th
 [2026-05-08T20:45] Day 48 | risk=red | [manual event since last check ] | T=75.2°F pH=4.94 TDS=236.0ppm | Manual pH test (6.4) and probe reading (4.94) diverge dangerously—a 1.46-point g
 [shrimp-alert] 🚨 ph is below danger threshold: 4.94 (below 6.0)
 [call-toby] Telegram sent (critical): ph is below danger threshold: 4.94 (below 6.0)
+[2026-05-08T21:00] Day 48 | risk=yellow | [manual event since last check ] | T=75.31°F pH=4.9 TDS=236.0ppm | Probe and manual test contradict sharply (4.9 vs 6.4); manual reading suggests a
+[shrimp-alert] 🚨 ph is below danger threshold: 4.9 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 4.9 (below 6.0)
+[2026-05-08T21:15] Day 48 | risk=yellow | [manual event since last check ] | T=75.2°F pH=4.92 TDS=236.0ppm | Manual pH test (6.4) contradicts probe reading (4.92) by 1.48 units—probe recali
+[shrimp-alert] 🚨 ph is below danger threshold: 4.92 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 4.92 (below 6.0)
+[2026-05-08T21:30] Day 48 | risk=yellow | [manual event since last check ] | T=75.2°F pH=4.93 TDS=237.0ppm | Probe pH (4.93) is dangerously low and conflicts directly with Toby's manual tes
+[shrimp-alert] 🚨 ph is below danger threshold: 4.93 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 4.93 (below 6.0)
+[2026-05-08T21:45] Day 48 | risk=yellow | [manual event since last check ] | T=75.2°F pH=4.98 TDS=237.0ppm | Probe pH reading of 4.98 conflicts sharply with Toby's manual tests (6.4, 6.6) l
+[shrimp-alert] 🚨 ph is below danger threshold: 4.98 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 4.98 (below 6.0)

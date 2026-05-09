@@ -93,9 +93,9 @@
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 0.15em;
-            background: #da363318;
-            color: #da3633;
-            border: 1px solid #da363350;
+            background: #d2992218;
+            color: #d29922;
+            border: 1px solid #d2992250;
         }
         .param-grid {
             display: grid;
@@ -241,7 +241,7 @@
 
         <div class="section">
             <div class="section-title">Current Risk Level</div>
-            <div class="risk-badge">red</div>
+            <div class="risk-badge">yellow</div>
         </div>
 
         
@@ -255,12 +255,12 @@
                 </div>
                 <div class="param-card">
                     <div class="param-name">pH</div>
-                    <div class="param-value status-red">4.94</div>
-                    <div class="param-note">Probe reading 4.94 conflicts with Toby's manual test of 6.4 (same day, 5hr earlier). Probe may still be miscalibrated despite prior calibration note on 2026-04-26. Manual test is ground truth until probe accuracy is confirmed.</div>
+                    <div class="param-value status-red">4.98</div>
+                    <div class="param-note">Probe reads 4.98 but Toby's manual tests read 6.4 and 6.6 over recent days. Probe was dislodged on 2026-05-04; calibration status unclear despite 2026-05-08 log flagging need. Manual tests are ground truth until probe accuracy is re-established.</div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">TDS</div>
-                    <div class="param-value status-green">236.0 ppm</div>
+                    <div class="param-value status-green">237.0 ppm</div>
                     <div class="param-note"></div>
                 </div>
             </div>
@@ -268,14 +268,14 @@
 
         <div class="section">
             <div class="section-title">Reasoning</div>
-            <div class="reasoning">Manual pH test (6.4) and probe reading (4.94) diverge dangerously—a 1.46-point gap that cannot be noise. The 20% water change on 2026-05-05 and subsequent feedings should have stabilized pH; this discrepancy suggests either the probe is still drifting post-calibration or something acidic has entered the system unlogged. Toby's manual test is credible ground truth; shrimp appear behaviorally fine per last observation, but we cannot safely ignore a potential pH crisis if the probe is correct.</div>
+            <div class="reasoning">Probe pH reading of 4.98 conflicts sharply with Toby's manual tests (6.4, 6.6) logged today and yesterday—this is a sensor reliability crisis, not a true tank pH crash. Shrimp appear behaviorally normal and nitrate/ammonia readings are safe, but the discrepancy must be resolved immediately to avoid false-alarm intervention or missed genuine trouble.</div>
         </div>
 
         <div class="section">
             <div class="section-title">Actions</div>
             <div class="actions">
                 <ul>
-                    <li style='color:#6e7681'>No actions</li>
+                    <li><strong>photo_request</strong> [routine] — </li>
                 </ul>
             </div>
         </div>
@@ -405,7 +405,7 @@ The feeding gap, the pH ambiguity, the sensor calibration trigger—these aren't
 
         <div class="section">
             <div class="section-title">Monitor Log (Last 10)</div>
-            <div class="monitor-log"><div>Probe pH reads 5.23 (danger), but Toby's fresh manual test reads 6.4 (safe)—the probe is unreliable and should be disregarded. Tank chemistry is functionally sound: ammonia zero, nitrate 80 (stable), nitrite zero, and shrimp were observed happy earlier today.</div><div>[2026-05-08T20:15] Day 48 | risk=yellow | [manual event since last check ] | T=75.31°F pH=5.21 TDS=236.0ppm | Probe pH (5.21) contradicts owner's manual test (6.4) by >1 unit, flagging calib</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.21 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.21 (below 6.0)</div><div>[2026-05-08T20:30] Day 48 | risk=yellow | [manual event since last check ] | T=75.31°F pH=5.05 TDS=236.0ppm | Probe pH (5.05) contradicts Toby's manual test (6.4) by 1.35 units — a major dis</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 5.05 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 5.05 (below 6.0)</div><div>[2026-05-08T20:45] Day 48 | risk=red | [manual event since last check ] | T=75.2°F pH=4.94 TDS=236.0ppm | Manual pH test (6.4) and probe reading (4.94) diverge dangerously—a 1.46-point g</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 4.94 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 4.94 (below 6.0)</div></div>
+            <div class="monitor-log"><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 4.9 (below 6.0)</div><div>[2026-05-08T21:15] Day 48 | risk=yellow | [manual event since last check ] | T=75.2°F pH=4.92 TDS=236.0ppm | Manual pH test (6.4) contradicts probe reading (4.92) by 1.48 units—probe recali</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 4.92 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 4.92 (below 6.0)</div><div>[2026-05-08T21:30] Day 48 | risk=yellow | [manual event since last check ] | T=75.2°F pH=4.93 TDS=237.0ppm | Probe pH (4.93) is dangerously low and conflicts directly with Toby's manual tes</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 4.93 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 4.93 (below 6.0)</div><div>[2026-05-08T21:45] Day 48 | risk=yellow | [manual event since last check ] | T=75.2°F pH=4.98 TDS=237.0ppm | Probe pH reading of 4.98 conflicts sharply with Toby's manual tests (6.4, 6.6) l</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 4.98 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 4.98 (below 6.0)</div></div>
         </div>
     </div>
 
