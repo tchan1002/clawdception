@@ -93,9 +93,9 @@
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 0.15em;
-            background: #d2992218;
-            color: #d29922;
-            border: 1px solid #d2992250;
+            background: #da363318;
+            color: #da3633;
+            border: 1px solid #da363350;
         }
         .param-grid {
             display: grid;
@@ -241,7 +241,7 @@
 
         <div class="section">
             <div class="section-title">Current Risk Level</div>
-            <div class="risk-badge">yellow</div>
+            <div class="risk-badge">red</div>
         </div>
 
         
@@ -250,17 +250,17 @@
             <div class="param-grid">
                 <div class="param-card">
                     <div class="param-name">Temperature</div>
-                    <div class="param-value status-green">75.09°F</div>
+                    <div class="param-value status-green">75.31°F</div>
                     <div class="param-note"></div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">pH</div>
-                    <div class="param-value status-red">4.9</div>
-                    <div class="param-note">Probe reading conflicts with Toby's manual test (6.4 at 2026-05-08T16:57); recent probe dislodgement (2026-05-04) and calibration flag (2026-05-08T14:03) suggest sensor unreliability.</div>
+                    <div class="param-value status-red">4.8</div>
+                    <div class="param-note">Manual test 2026-05-08T16:57 read 6.4; sensor reads 4.8. Probe recalibration completed 2026-04-26, but recent manual tests suggest sensor drift. Treating manual reading (6.4) as more reliable than sensor (4.8).</div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">TDS</div>
-                    <div class="param-value status-green">238.0 ppm</div>
+                    <div class="param-value status-green">239.0 ppm</div>
                     <div class="param-note"></div>
                 </div>
             </div>
@@ -268,14 +268,14 @@
 
         <div class="section">
             <div class="section-title">Reasoning</div>
-            <div class="reasoning">Probe integrity is questionable—manual pH test (6.4) contradicts sensor (4.9), and the probe was dislodged days ago with unknown impact. Temperature and TDS are healthy; shrimp appear behaviorally sound per most recent log. Immediate validation needed before escalating.</div>
+            <div class="reasoning">Sensor pH reading (4.8) is dangerously low and contradicts Toby's manual test (6.4) from 17 hours ago—likely sensor drift despite recent calibration. The 0.19 pH shift in the last hour is alarm-like, but sensor unreliability is the real signal here.</div>
         </div>
 
         <div class="section">
             <div class="section-title">Actions</div>
             <div class="actions">
                 <ul>
-                    <li><strong>water_test</strong> [soon] — </li><li><strong>photo_request</strong> [routine] — </li><li><strong>none</strong> [routine] — </li>
+                    <li><strong>photo_request</strong> [routine] — </li>
                 </ul>
             </div>
         </div>
@@ -355,7 +355,7 @@ I remain quietly concerned about the feeding gap and the pH readings, but not al
 
         <div class="section">
             <div class="section-title">Monitor Log (Last 10)</div>
-            <div class="monitor-log"><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 4.89 (below 6.0)</div><div>[2026-05-09T09:15] Day 49 | skipped (stable) | T=75.31°F pH=4.91 TDS=237.0ppm</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 4.91 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 4.91 (below 6.0)</div><div>[2026-05-09T09:30] Day 49 | skipped (stable) | T=75.31°F pH=4.89 TDS=238.0ppm</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 4.89 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 4.89 (below 6.0)</div><div>[2026-05-09T09:45] Day 49 | skipped (stable) | T=75.31°F pH=4.88 TDS=238.0ppm</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 4.88 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 4.88 (below 6.0)</div></div>
+            <div class="monitor-log"><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 4.61 (below 6.0)</div><div>[2026-05-09T10:15] Day 49 | risk=red | [ph changed 0.17 in last hour] | T=75.31°F pH=4.72 TDS=239.0ppm | Probe pH reading of 4.72 contradicts manual test of 6.4 from 17 hours ago—a 1.68</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 4.72 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 4.72 (below 6.0)</div><div>[2026-05-09T10:30] Day 49 | risk=red | [ph changed 0.14 in last hour] | T=75.31°F pH=4.74 TDS=239.0ppm | Probe is reporting 4.74 pH, but Toby's manual test yesterday was 6.4 — a 1.66-po</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 4.74 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 4.74 (below 6.0)</div><div>[2026-05-09T10:45] Day 49 | risk=red | [ph changed 0.19 in last hour] | T=75.31°F pH=4.8 TDS=239.0ppm | Sensor pH reading (4.8) is dangerously low and contradicts Toby's manual test (6</div><div>[shrimp-alert] 🚨 ph is below danger threshold: 4.8 (below 6.0)</div><div>[call-toby] Telegram sent (critical): ph is below danger threshold: 4.8 (below 6.0)</div></div>
         </div>
     </div>
 

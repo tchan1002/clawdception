@@ -5698,3 +5698,15 @@ Probe pH reads 5.23 (danger), but Toby's fresh manual test reads 6.4 (safe)—th
 [2026-05-09T09:45] Day 49 | skipped (stable) | T=75.31°F pH=4.88 TDS=238.0ppm
 [shrimp-alert] 🚨 ph is below danger threshold: 4.88 (below 6.0)
 [call-toby] Telegram sent (critical): ph is below danger threshold: 4.88 (below 6.0)
+[2026-05-09T10:00] Day 49 | risk=red | [ph changed 0.3 in last hour] | T=75.31°F pH=4.61 TDS=238.0ppm | pH sensor is reading 4.61 (dangerously acidic) while Toby's manual test 17 hours
+[shrimp-alert] 🚨 ph is below danger threshold: 4.61 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 4.61 (below 6.0)
+[2026-05-09T10:15] Day 49 | risk=red | [ph changed 0.17 in last hour] | T=75.31°F pH=4.72 TDS=239.0ppm | Probe pH reading of 4.72 contradicts manual test of 6.4 from 17 hours ago—a 1.68
+[shrimp-alert] 🚨 ph is below danger threshold: 4.72 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 4.72 (below 6.0)
+[2026-05-09T10:30] Day 49 | risk=red | [ph changed 0.14 in last hour] | T=75.31°F pH=4.74 TDS=239.0ppm | Probe is reporting 4.74 pH, but Toby's manual test yesterday was 6.4 — a 1.66-po
+[shrimp-alert] 🚨 ph is below danger threshold: 4.74 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 4.74 (below 6.0)
+[2026-05-09T10:45] Day 49 | risk=red | [ph changed 0.19 in last hour] | T=75.31°F pH=4.8 TDS=239.0ppm | Sensor pH reading (4.8) is dangerously low and contradicts Toby's manual test (6
+[shrimp-alert] 🚨 ph is below danger threshold: 4.8 (below 6.0)
+[call-toby] Telegram sent (critical): ph is below danger threshold: 4.8 (below 6.0)
