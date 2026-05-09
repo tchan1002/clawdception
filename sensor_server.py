@@ -1403,6 +1403,7 @@ def export_dashboard():
         "agentStateDates": agent_dates,
         "agentStateContent": agent_content,
         "snapshotTime": datetime.now().isoformat(),
+        "phCalibrating": PH_CALIBRATING,
     }
 
     html = (Path(__file__).parent / "media_luna_dashboard.html").read_text()

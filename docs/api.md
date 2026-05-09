@@ -12,7 +12,9 @@
 | GET | `/api/events` | Query events (`?limit=N`, `?since=ISO`, `?type=water_test`) |
 | POST | `/api/photos` | Upload owner photo (multipart: `file` + optional `notes`); save to `snapshots/photos/` & create `photo` event |
 | GET | `/api/photos/<filename>` | Serve photo from `snapshots/photos/` |
-| GET | `/api/health` | Health check, return last read timestamp |
+| GET | `/api/health` | Health check; returns `{status, last_reading, ph_calibrating}` |
+| GET | `/export/dashboard` | Snapshot export — bakes sensor/event/agent state + `ph_calibrating` into `media_luna_dashboard.html` as `window.STATIC_DATA`; served as GitHub Pages `site/index.html` |
+| GET | `/export/agent` | Snapshot export — bakes journal data into agent status HTML; served as `site/agent.html` |
 
 Server: `http://localhost:5001` (Pi) or `http://192.168.12.76:5001` (remote)
 

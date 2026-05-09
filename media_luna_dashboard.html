@@ -1050,6 +1050,7 @@ async function poll() {
 }
 
 // ─── BOOT ──────────────────────────────────────────────
+if (window.STATIC_DATA) phCalibrating = !!window.STATIC_DATA.phCalibrating;
 fetch('/api/health').then(r => r.json()).then(h => { phCalibrating = !!h.ph_calibrating; }).catch(() => {}).finally(() => {
   render(readings); // show demo (with correct calibrating state)
   poll();           // try live

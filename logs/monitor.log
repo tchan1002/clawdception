@@ -5753,3 +5753,7 @@ Probe pH reads 5.23 (danger), but Toby's fresh manual test reads 6.4 (safe)—th
 [2026-05-09T15:30] Day 49 | skipped (stable) | T=75.2°F pH=5.29 TDS=238.0ppm
 [2026-05-09T15:45] Day 49 | skipped (stable) | T=75.2°F pH=5.31 TDS=239.0ppm
 [2026-05-09T16:00] Day 49 | skipped (stable) | T=75.2°F pH=5.33 TDS=240.0ppm
+[2026-05-09T16:15] Day 49 | skipped (stable) | T=75.2°F pH=5.3 TDS=238.0ppm
+[2026-05-09T16:30] Day 49 | skipped (stable) | T=75.09°F pH=5.35 TDS=238.0ppm
+[2026-05-09T16:45] Day 49 | risk=yellow | [manual event since last check ] | T=75.2°F pH=5.34 TDS=238.0ppm | pH probe is mid-calibration and unreliable; last manual test (6.4 at 2026-05-08T
+[2026-05-09T17:00] Day 49 | skipped (stable) | T=75.2°F pH=5.35 TDS=239.0ppm
