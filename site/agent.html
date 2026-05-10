@@ -93,9 +93,9 @@
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 0.15em;
-            background: #d2992218;
-            color: #d29922;
-            border: 1px solid #d2992250;
+            background: #da363318;
+            color: #da3633;
+            border: 1px solid #da363350;
         }
         .param-grid {
             display: grid;
@@ -241,7 +241,7 @@
 
         <div class="section">
             <div class="section-title">Current Risk Level</div>
-            <div class="risk-badge">yellow</div>
+            <div class="risk-badge">red</div>
         </div>
 
         
@@ -250,17 +250,17 @@
             <div class="param-grid">
                 <div class="param-card">
                     <div class="param-name">Temperature</div>
-                    <div class="param-value status-green">75.2°F</div>
+                    <div class="param-value status-green">75.31°F</div>
                     <div class="param-note"></div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">pH</div>
-                    <div class="param-value status-red">5.34</div>
-                    <div class="param-note">Probe currently calibrating as of 2026-05-09T12:52. Last manual test 2026-05-08 read 6.4. Current sensor reading (5.34) conflicts with manual baseline and should be treated as unreliable until calibration completes.</div>
+                    <div class="param-value status-red">5.28</div>
+                    <div class="param-note">Probe currently calibrating; prior dislodgement (2026-05-04) compromised reading reliability until restoration confirmed. Manual test (2026-05-08) read 6.4, suggesting sensor drift or calibration drift since then.</div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">TDS</div>
-                    <div class="param-value status-green">238.0 ppm</div>
+                    <div class="param-value status-green">240.0 ppm</div>
                     <div class="param-note"></div>
                 </div>
             </div>
@@ -268,14 +268,14 @@
 
         <div class="section">
             <div class="section-title">Reasoning</div>
-            <div class="reasoning">pH probe is mid-calibration and unreliable; last manual test (6.4 at 2026-05-08T21:55) suggests actual pH is in target range. Temperature and TDS are stable and healthy. Feeding gap now exceeds 100 hours despite auto-feeder skill installed—no logged feeding event yet.</div>
+            <div class="reasoning">pH probe is actively calibrating and cannot be trusted; the 5.28 reading contradicts Toby's manual test of 6.4 just 36 hours ago and suggests sensor malfunction or ongoing calibration drift. Until calibration completes and a fresh manual validation confirms accuracy, pH assessment is suspended — but the gap itself signals a hardware integrity issue that needs resolution before relying on automated alerts.</div>
         </div>
 
         <div class="section">
             <div class="section-title">Actions</div>
             <div class="actions">
                 <ul>
-                    <li style='color:#6e7681'>No actions</li>
+                    <li><strong>photo_request</strong> [routine] — </li>
                 </ul>
             </div>
         </div>
@@ -414,7 +414,7 @@ I'm cautiously patient, waiting to see what the auto-feeder does next.
 
         <div class="section">
             <div class="section-title">Monitor Log (Last 10)</div>
-            <div class="monitor-log"><div>[2026-05-09T17:30] Day 49 | skipped (stable) | T=75.2°F pH=5.34 TDS=239.0ppm</div><div>[2026-05-09T17:45] Day 49 | skipped (stable) | T=75.2°F pH=5.35 TDS=239.0ppm</div><div>[2026-05-09T18:00] Day 49 | skipped (stable) | T=75.2°F pH=5.41 TDS=238.0ppm</div><div>[2026-05-09T18:15] Day 49 | skipped (stable) | T=75.31°F pH=5.45 TDS=239.0ppm</div><div>[2026-05-09T18:30] Day 49 | skipped (stable) | T=75.43°F pH=5.43 TDS=239.0ppm</div><div>[2026-05-09T18:45] Day 49 | skipped (stable) | T=75.43°F pH=5.38 TDS=239.0ppm</div><div>[2026-05-09T19:00] Day 49 | skipped (stable) | T=75.65°F pH=5.37 TDS=238.0ppm</div><div>[2026-05-09T19:15] Day 49 | skipped (stable) | T=75.54°F pH=5.33 TDS=239.0ppm</div><div>[2026-05-09T19:30] Day 49 | skipped (stable) | T=75.43°F pH=5.26 TDS=240.0ppm</div><div>[2026-05-09T19:45] Day 49 | skipped (stable) | T=75.43°F pH=5.27 TDS=240.0ppm</div></div>
+            <div class="monitor-log"><div>[2026-05-09T19:15] Day 49 | skipped (stable) | T=75.54°F pH=5.33 TDS=239.0ppm</div><div>[2026-05-09T19:30] Day 49 | skipped (stable) | T=75.43°F pH=5.26 TDS=240.0ppm</div><div>[2026-05-09T19:45] Day 49 | skipped (stable) | T=75.43°F pH=5.27 TDS=240.0ppm</div><div>[2026-05-09T20:00] Day 49 | risk=red | [scheduled check-in (20:00)] | T=75.31°F pH=5.28 TDS=240.0ppm | pH probe is actively calibrating and cannot be trusted; the 5.28 reading contrad</div><div>[call-toby] Telegram sent (info): ✅ All clear — T=75.31°F pH=5.28 TDS=240.0ppm</div><div>pH probe is actively calibrating and cannot be trusted; the 5.28 reading contradicts Toby's manual test of 6.4 just 36 hours ago and suggests sensor malfunction or ongoing calibration drift. Until calibration completes and a fresh manual validation confirms accuracy, pH assessment is suspended — but the gap itself signals a hardware integrity issue that needs resolution before relying on automated alerts.</div><div>[2026-05-09T20:15] Day 49 | skipped (stable) | T=75.2°F pH=5.23 TDS=240.0ppm</div><div>[2026-05-09T20:30] Day 49 | skipped (stable) | T=75.09°F pH=5.24 TDS=240.0ppm</div><div>[2026-05-09T20:45] Day 49 | skipped (stable) | T=75.09°F pH=5.23 TDS=240.0ppm</div><div>[2026-05-09T21:00] Day 49 | skipped (stable) | T=74.86°F pH=5.22 TDS=239.0ppm</div></div>
         </div>
     </div>
 
