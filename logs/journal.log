@@ -645,3 +645,10 @@ json.decoder.JSONDecodeError: Expecting value: line 2 column 1 (char 1)
 [call-toby] Telegram sent (info): Action items:
 • Toby: Log a manual feeding or confirm the autofeeder hardware is active and scheduled within 24 hours — the 120+ hour gap needs resolution
 • Toby: When convenient, check that the mesh bag isn't restricting shrimp access to substrate or inhibiting movement patterns
+[shrimp-journal] Entry written: 2026-05-10-0605.md (Day 50)
+[call-toby] Telegram sent (info): Journal — Day 50 · 2026-05-10 06:05
+[call-toby] Document sent: 2026-05-10-0605.md
+[call-toby] Telegram sent (info): Action items:
+• Toby: Log a manual feeding or confirm the autofeeder hardware is physically installed and running within 24 hours — the 127-hour gap needs resolution
+• Toby: Once convenient, check the pH probe recalibration status and confirm when the calibrating flag will be cleared so full alert logic resumes
+• Toby: Visually confirm the mesh media bag isn't restricting shrimp access to the substrate or inhibiting natural movement and foraging behavior
