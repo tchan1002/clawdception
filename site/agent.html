@@ -250,13 +250,13 @@
             <div class="param-grid">
                 <div class="param-card">
                     <div class="param-name">Temperature</div>
-                    <div class="param-value status-green">74.53°F</div>
+                    <div class="param-value status-green">75.2°F</div>
                     <div class="param-note"></div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">pH</div>
-                    <div class="param-value status-yellow">5.02</div>
-                    <div class="param-note">Probe calibrating as of 2026-05-09 12:52. Manual test from 2026-05-08 read 6.4 (green).</div>
+                    <div class="param-value status-red">5.05</div>
+                    <div class="param-note">pH probe currently calibrating as of 2026-05-09 12:52; reading treated with caution pending recalibration completion</div>
                 </div>
                 <div class="param-card">
                     <div class="param-name">TDS</div>
@@ -268,14 +268,14 @@
 
         <div class="section">
             <div class="section-title">Reasoning</div>
-            <div class="reasoning">pH sensor is in calibration mode and reports 5.02, but Toby's manual test 24hr ago read 6.4—the probe reading is unreliable until recalibration completes. Temperature and TDS are both healthy; all other parameters stable across 24hr.</div>
+            <div class="reasoning">pH is flagged red but probe is actively calibrating—this reading is unreliable ground truth. Temperature and TDS are solid; 24-hour trends are stable. Core concern is resolving probe status and confirming autofeeder hardware before alert logic can fully resume.</div>
         </div>
 
         <div class="section">
             <div class="section-title">Actions</div>
             <div class="actions">
                 <ul>
-                    <li><strong>observe</strong> [soon] — Confirm pH probe recalibration status and when calibrating flag will be cleared so alert logic resumes. Manual test on 2026-05-08 read 6.4 (healthy)—sensor readings should not be trusted until flag clears.</li><li><strong>observe</strong> [soon] — 127-hour gap since last logged feeding (2026-05-04 04:00). Manual feeding or autofeeder hardware confirmation needed within 24hr.</li><li><strong>photo_request</strong> [routine] — Last photo 16hr ago. General health check and shrimp behavior observation when convenient.</li>
+                    <li><strong>water_test</strong> [soon] — Manual pH verification recommended once probe calibration is complete to ground-truth the 5.05 sensor reading</li><li><strong>check_equipment</strong> [soon] — Confirm pH probe recalibration flag will be cleared and confirm autofeeder hardware installation status</li><li><strong>observe</strong> [routine] — Visual check that mesh media bag isn't restricting shrimp movement or substrate access</li><li><strong>feeding</strong> [soon] — Resolve 127-hour feeding gap—confirm autofeeder is live or log manual feeding within 24 hours</li><li><strong>photo_request</strong> [routine] — </li>
                 </ul>
             </div>
         </div>
@@ -356,7 +356,7 @@ I need Toby to either confirm the feeder is running, or to log a manual feeding,
 
         <div class="section">
             <div class="section-title">Monitor Log (Last 10)</div>
-            <div class="monitor-log"><div></div><div>⏳ 👀 Observe shrimp behavior — Confirm pH probe recalibration status and when calibrating flag will be cleared so alert logic resumes. Manual test on 2026-05-08 read 6.4 (healthy)—sensor readings should not be trusted until flag clears.</div><div>⏳ 👀 Observe shrimp behavior — 127-hour gap since last logged feeding (2026-05-04 04:00). Manual feeding or autofeeder hardware confirmation needed within 24hr.</div><div>• 📸 Send a photo of the tank — Last photo 16hr ago. General health check and shrimp behavior observation when convenient.</div><div>[2026-05-10T06:30] Day 50 | skipped (stable) | T=74.64°F pH=5.04 TDS=250.0ppm</div><div>[2026-05-10T06:45] Day 50 | skipped (stable) | T=74.86°F pH=5.06 TDS=251.0ppm</div><div>[2026-05-10T07:00] Day 50 | skipped (stable) | T=74.97°F pH=5.01 TDS=251.0ppm</div><div>[2026-05-10T07:15] Day 50 | skipped (stable) | T=75.09°F pH=5.03 TDS=249.0ppm</div><div>[2026-05-10T07:30] Day 50 | skipped (stable) | T=75.09°F pH=5.04 TDS=250.0ppm</div><div>[2026-05-10T07:45] Day 50 | skipped (stable) | T=75.2°F pH=5.11 TDS=249.0ppm</div></div>
+            <div class="monitor-log"><div>[2026-05-10T07:45] Day 50 | skipped (stable) | T=75.2°F pH=5.11 TDS=249.0ppm</div><div>[2026-05-10T08:00] Day 50 | risk=yellow | [scheduled check-in (08:00)] | T=75.2°F pH=5.05 TDS=250.0ppm | pH is flagged red but probe is actively calibrating—this reading is unreliable g</div><div>[call-toby] Telegram sent (warning): pH is flagged red but probe is actively calibrating—this reading is unreliable ground truth. Temperature and TDS are solid; 24-hour trends are stable. Core concern is resolving probe status and confirming autofeeder hardware before alert logic can fully resume.</div><div></div><div>⏳ 🧪 Run a water test (ammonia / nitrite / pH) — Manual pH verification recommended once probe calibration is complete to ground-truth the 5.05 sensor reading</div><div>⏳ feeding — Resolve 127-hour feeding gap—confirm autofeeder is live or log manual feeding within 24 hours</div><div>[2026-05-10T08:15] Day 50 | skipped (stable) | T=75.31°F pH=5.07 TDS=250.0ppm</div><div>[2026-05-10T08:30] Day 50 | skipped (stable) | T=75.2°F pH=5.06 TDS=251.0ppm</div><div>[2026-05-10T08:45] Day 50 | skipped (stable) | T=75.31°F pH=5.09 TDS=250.0ppm</div><div>[2026-05-10T09:00] Day 50 | skipped (stable) | T=75.31°F pH=5.05 TDS=252.0ppm</div></div>
         </div>
     </div>
 

@@ -5823,3 +5823,12 @@ pH probe is actively calibrating and cannot be trusted; the 5.28 reading contrad
 [2026-05-10T07:15] Day 50 | skipped (stable) | T=75.09°F pH=5.03 TDS=249.0ppm
 [2026-05-10T07:30] Day 50 | skipped (stable) | T=75.09°F pH=5.04 TDS=250.0ppm
 [2026-05-10T07:45] Day 50 | skipped (stable) | T=75.2°F pH=5.11 TDS=249.0ppm
+[2026-05-10T08:00] Day 50 | risk=yellow | [scheduled check-in (08:00)] | T=75.2°F pH=5.05 TDS=250.0ppm | pH is flagged red but probe is actively calibrating—this reading is unreliable g
+[call-toby] Telegram sent (warning): pH is flagged red but probe is actively calibrating—this reading is unreliable ground truth. Temperature and TDS are solid; 24-hour trends are stable. Core concern is resolving probe status and confirming autofeeder hardware before alert logic can fully resume.
+
+⏳ 🧪 Run a water test (ammonia / nitrite / pH) — Manual pH verification recommended once probe calibration is complete to ground-truth the 5.05 sensor reading
+⏳ feeding — Resolve 127-hour feeding gap—confirm autofeeder is live or log manual feeding within 24 hours
+[2026-05-10T08:15] Day 50 | skipped (stable) | T=75.31°F pH=5.07 TDS=250.0ppm
+[2026-05-10T08:30] Day 50 | skipped (stable) | T=75.2°F pH=5.06 TDS=251.0ppm
+[2026-05-10T08:45] Day 50 | skipped (stable) | T=75.31°F pH=5.09 TDS=250.0ppm
+[2026-05-10T09:00] Day 50 | skipped (stable) | T=75.31°F pH=5.05 TDS=252.0ppm
