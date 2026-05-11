@@ -661,3 +661,9 @@ json.decoder.JSONDecodeError: Expecting value: line 2 column 1 (char 1)
 [shrimp-journal] Entry written: 2026-05-11-0005.md (Day 51)
 [call-toby] Telegram sent (info): Journal — Day 51 · 2026-05-11 00:05
 [call-toby] Document sent: 2026-05-11-0005.md
+[shrimp-journal] Entry written: 2026-05-11-0605.md (Day 51)
+[call-toby] Telegram sent (info): Journal — Day 51 · 2026-05-11 06:05
+[call-toby] Document sent: 2026-05-11-0605.md
+[call-toby] Telegram sent (info): Action items:
+• Resume feeding today — either manual pellet feed or confirm auto-feeder hardware is installed and active; do not wait for tomorrow
+• Verify auto-feeder hardware installation status: is the physical device connected and scheduled, or does it remain a software-only skill?

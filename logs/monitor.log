@@ -5922,3 +5922,9 @@ pH probe is actively recalibrating and danger alerts are bypassed until flag cle
 [2026-05-11T05:30] Day 51 | skipped (stable) | T=74.75°F pH=5.47 TDS=249.0ppm
 [2026-05-11T05:45] Day 51 | skipped (stable) | T=74.75°F pH=5.46 TDS=249.0ppm
 [2026-05-11T06:00] Day 51 | skipped (stable) | T=74.75°F pH=5.46 TDS=249.0ppm
+[2026-05-11T06:15] Day 51 | risk=yellow | [periodic check (10hr since las] | T=74.97°F pH=5.4 TDS=249.0ppm | pH is trending acidic (now 5.4, 24hr mean 5.396) despite recent calibration, and
+[call-toby] Telegram sent (warning): pH is trending acidic (now 5.4, 24hr mean 5.396) despite recent calibration, and nitrate is elevated at 80ppm—the cycle is complete but the water needs buffering or a water change to restore pH. Temperature and TDS are stable and healthy; no emergency, but pH requires attention soon.
+
+• 📸 Send a photo of the tank
+[2026-05-11T06:30] Day 51 | skipped (stable) | T=75.09°F pH=5.43 TDS=250.0ppm
+[2026-05-11T06:45] Day 51 | skipped (stable) | T=75.2°F pH=5.43 TDS=250.0ppm
