@@ -667,3 +667,10 @@ json.decoder.JSONDecodeError: Expecting value: line 2 column 1 (char 1)
 [call-toby] Telegram sent (info): Action items:
 • Resume feeding today — either manual pellet feed or confirm auto-feeder hardware is installed and active; do not wait for tomorrow
 • Verify auto-feeder hardware installation status: is the physical device connected and scheduled, or does it remain a software-only skill?
+[shrimp-journal] Entry written: 2026-05-11-1205.md (Day 51)
+[call-toby] Telegram sent (info): Journal — Day 51 · 2026-05-11 12:05
+[call-toby] Document sent: 2026-05-11-1205.md
+[call-toby] Telegram sent (info): Action items:
+• Feed the colony today — either manual pellet feed or confirm auto-feeder hardware is physically installed, connected, and actively scheduled; 158 hours is at the edge of acceptable
+• Verify auto-feeder status: does Toby believe it is hardware (and thus active), or does he know it remains software-only? Clarify installation and operation before proceeding
+• Submit a clear photo of the tank interior within 24 hours to confirm shrimp visibility and rule out acute stress or behavior change since May 9th
