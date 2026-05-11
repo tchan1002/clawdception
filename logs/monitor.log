@@ -5879,3 +5879,10 @@ pH probe is actively calibrating and cannot be trusted; the 5.28 reading contrad
 [2026-05-10T19:15] Day 50 | skipped (stable) | T=75.76°F pH=5.68 TDS=247.0ppm
 [2026-05-10T19:30] Day 50 | skipped (stable) | T=75.76°F pH=5.62 TDS=247.0ppm
 [2026-05-10T19:45] Day 50 | skipped (stable) | T=75.76°F pH=5.53 TDS=248.0ppm
+[2026-05-10T20:00] Day 50 | risk=yellow | [scheduled check-in (20:00)] | T=75.76°F pH=5.59 TDS=247.0ppm | pH probe is actively recalibrating and danger alerts are bypassed until flag cle
+[call-toby] Telegram sent (info): ✅ All clear — T=75.76°F pH=5.59 TDS=247.0ppm
+pH probe is actively recalibrating and danger alerts are bypassed until flag clears; current reading of 5.59 is at the low end of acceptable range but not critical. Temperature and TDS are stable and healthy across all 24-hour metrics.
+[2026-05-10T20:15] Day 50 | skipped (stable) | T=75.65°F pH=5.55 TDS=248.0ppm
+[2026-05-10T20:30] Day 50 | skipped (stable) | T=75.76°F pH=5.51 TDS=248.0ppm
+[2026-05-10T20:45] Day 50 | skipped (stable) | T=75.54°F pH=5.53 TDS=247.0ppm
+[2026-05-10T21:00] Day 50 | skipped (stable) | T=75.54°F pH=5.35 TDS=248.0ppm
