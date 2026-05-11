@@ -5868,3 +5868,11 @@ pH probe is actively calibrating and cannot be trusted; the 5.28 reading contrad
 [2026-05-10T17:30] Day 50 | skipped (stable) | T=75.65°F pH=5.57 TDS=247.0ppm
 [2026-05-10T17:45] Day 50 | skipped (stable) | T=75.65°F pH=5.62 TDS=247.0ppm
 [2026-05-10T18:00] Day 50 | skipped (stable) | T=75.54°F pH=5.59 TDS=246.0ppm
+[2026-05-10T18:15] Day 50 | risk=yellow | [periodic check (10hr since las] | T=75.65°F pH=5.6 TDS=248.0ppm | Temperature and TDS are stable and on-target. pH probe is actively recalibrating
+[call-toby] Telegram sent (warning): Temperature and TDS are stable and on-target. pH probe is actively recalibrating (flag set 2026-05-09); automated readings should be disregarded until recalibration clears, though Toby's manual test of 6.4 on 2026-05-08 suggests actual tank pH is safely in the target window. No urgent action needed; calibration completion is the priority.
+
+• 📸 Send a photo of the tank — Last photo was 28 hours ago. Confirm shrimp visible, feeding behavior normal, and mesh bag status (intent to retain or remove).
+• 👀 Observe shrimp behavior
+[2026-05-10T18:30] Day 50 | skipped (stable) | T=75.65°F pH=5.63 TDS=246.0ppm
+[2026-05-10T18:45] Day 50 | skipped (stable) | T=75.76°F pH=5.69 TDS=247.0ppm
+[2026-05-10T19:00] Day 50 | skipped (stable) | T=75.76°F pH=5.68 TDS=246.0ppm
