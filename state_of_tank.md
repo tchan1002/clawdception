@@ -1,8 +1,8 @@
 # State of Tank — Media Luna
 
-**Last updated:** 2026-05-09
-**Cycle day:** 49 (started 2026-03-22)
-**Tank status:** Cycle mature. Colony established. Auto-feeder skill installed. pH probe calibrating.
+**Last updated:** 2026-05-10
+**Cycle day:** 50 (started 2026-03-22)
+**Tank status:** Cycle mature. Colony established. Auto-feeder skill installed but feeding event confirmation still absent. pH probe in recalibration.
 
 ---
 
@@ -10,54 +10,45 @@
 
 | Animal | Count | Notes |
 |--------|-------|-------|
-| Neocaridina cherry shrimp | 5 confirmed + 1 original resident | ~19 days in tank as of 2026-05-09 |
+| Neocaridina cherry shrimp | 5 confirmed + 1 original resident | ~27 days in tank as of 2026-05-10 |
 
-**Visible today:** One red-orange adult shrimp in lower right corner near mesh bag (2026-05-09 photo). Appeared unbothered.
-**Notable history:** One healthy molt confirmed 2026-04-30. One juvenile visible in 2026-05-04 photo. No losses logged.
-**Feeding gap:** Last confirmed feed 120+ hours ago as of 2026-05-09. Auto-feeder skill installed; first confirmed dispense not yet logged.
+**Last confirmed visual:** One red-orange adult shrimp, lower right corner near mesh bag (2026-05-09 photo). Appeared unbothered. No new photos or observations logged on 2026-05-10.
 
 ---
 
-## Water Chemistry
+## Water Chemistry — Current
 
-| Parameter | Current Best Value | Source | Date |
-|-----------|-------------------|--------|------|
-| Temperature | ~75°F | Sensor (reliable) | 2026-05-09 |
-| pH | ~6.4 | Manual test kit | 2026-05-06 |
-| TDS | ~239 ppm | Sensor (reliable) | 2026-05-09 |
-| Ammonia | ~0 ppm | Manual | 2026-05-06 |
-| Nitrite | ~0 ppm | Manual | 2026-05-06 |
-| Nitrate | ~80 ppm | Manual | 2026-05-06 |
-
-**pH probe status:** Flagged for calibration as of 2026-05-09 12:52. Sensor readings suppressed in alerts and water change predictor. Manual test kit is the authoritative pH reference until flag cleared.
+| Parameter | Status | Notes |
+|-----------|--------|-------|
+| Temperature | ✅ Stable | Avg 75.48°F, within range |
+| pH (sensor) | ⚠️ Calibrating | Avg 5.36; manual test 2026-05-08 read 6.4 — sensor not yet trusted |
+| TDS | ✅ Stable | 248.9 ppm avg, minimal daily movement |
+| Ammonia | Unknown | Last manual test 2026-05-08 |
+| Nitrite | Unknown | Last manual test 2026-05-08 |
+| Nitrate | Unknown | Last manual test 2026-05-08 |
 
 ---
 
-## Tank Appearance (from 2026-05-09 photos)
+## Equipment
 
-- **Substrate:** Dark rounded granules (appears to be lava rock or black aqua soil)
-- **Floating plants:** Dense surface coverage — likely frogbit or duckweed
-- **Midground plants:** Moss clump (likely java moss or similar), healthy green aquatic plant cluster at left midground
-- **Algae/biofilm:** Fine green algae on water surface equipment and mesh bag — normal for day 49; biofilm visible and healthy
-- **Equipment visible:** Heater, sponge filter with ceramic/clay media balls, circulation pump or powerhead, blue thermometer or CO2 indicator
-- **Mesh bag:** Large bag resting directly on substrate — likely cycling media or mineral buffer. Purpose unconfirmed. Significant foreground object.
-- **Water clarity:** Clear
+| Equipment | Status | Notes |
+|-----------|--------|-------|
+| pH probe | ⚠️ Calibrating | Recalibration flagged by Toby 2026-05-08; not yet cleared |
+| Auto-feeder | ⚠️ Unconfirmed | Skill installed 2026-05-09; no feeding events logged; hardware execution uncertain |
+| WiFi / sensors | ✅ OK | RSSI -40 dBm, heap stable |
 
 ---
 
-## System Capabilities
+## Active Concerns
 
-| Capability | Status |
-|------------|--------|
-| pH probe | Calibrating — data suppressed |
-| Auto-feeder | Installed 2026-05-09 — first dispense unconfirmed |
-| Temperature sensor | Operational |
-| TDS sensor | Operational |
+- **Feeding gap:** 144+ hours since last confirmed feeding. Auto-feeder status unknown. Manual feeding strongly advisable.
+- **pH probe:** Sensor reads ~1.0 unit below manual test kit. Alert logic and water-change scheduling suspended pending recalibration.
+- **Mesh media bag:** Present in tank; long-term intention unclear.
 
 ---
 
-## Open Questions
+## Recent Events
 
-- What is the mesh bag holding, and does it stay?
-- Has the auto-feeder dispensed food yet?
-- Nitrate retest due — last reading 80 ppm at day 46
+- **2026-05-09:** Two interior photos submitted. Floating plant coverage visible at surface. Algae/biofilm on equipment and mesh bag. Auto-feeder skill installed.
+- **2026-05-08:** Two manual pH/chemistry tests run (both pH 6.4). Probe recalibration flagged.
+- **2026-04-13:** 5 cherry shrimp introduced to tank.
