@@ -1144,3 +1144,4 @@
 {"timestamp": "2026-05-11T08:00:09.261655", "urgency": "info", "message": "\u2705 All clear \u2014 T=75.43\u00b0F pH=5.5 TDS=250.0ppm\npH is slightly depressed at 5.5 but trending upward and not in danger zone; temperature and TDS are healthy. Shrimp colony (5 animals, 664 hours post-introduction) is well-established and feeding has lapsed \u2014 resume today.", "sent_via": "telegram"}
 {"timestamp": "2026-05-11T08:05:02.485091", "urgency": "info", "message": "Water change looking due soon. TDS at 251 ppm \u2192 hits ceiling in ~0.0 days. Suggested window: Monday, May 11 (~0d).", "sent_via": "telegram"}
 {"timestamp": "2026-05-11T08:30:25.284695", "urgency": "info", "message": "New skill proposal: `phcalibrationtracker` (new, risk: low)", "sent_via": "telegram"}
+{"timestamp": "2026-05-11T10:00:02.211538", "urgency": "info", "message": "Media Luna \u2014 last feeding 155h ago. Time to feed the shrimp.", "sent_via": "telegram"}
