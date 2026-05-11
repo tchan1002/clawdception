@@ -34,3 +34,6 @@
 [water-change-predictor] Written — TDS ceiling in 0.0d | pH floor in none
 [call-toby] Telegram sent (info): Water change looking due soon. TDS at 250 ppm → hits ceiling in ~0.0 days. Suggested window: Sunday, May 10 (~0d).
 [water-change-predictor] Alert sent to Toby.
+[water-change-predictor] Written — TDS ceiling in 0.0d | pH floor in none
+[call-toby] Telegram sent (info): Water change looking due soon. TDS at 251 ppm → hits ceiling in ~0.0 days. Suggested window: Monday, May 11 (~0d).
+[water-change-predictor] Alert sent to Toby.

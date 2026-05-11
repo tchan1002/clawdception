@@ -5932,3 +5932,10 @@ pH probe is actively recalibrating and danger alerts are bypassed until flag cle
 [2026-05-11T07:15] Day 51 | skipped (stable) | T=75.43°F pH=5.45 TDS=249.0ppm
 [2026-05-11T07:30] Day 51 | skipped (stable) | T=75.43°F pH=5.48 TDS=249.0ppm
 [2026-05-11T07:45] Day 51 | skipped (stable) | T=75.43°F pH=5.39 TDS=251.0ppm
+[2026-05-11T08:00] Day 51 | risk=yellow | [scheduled check-in (08:00)] | T=75.43°F pH=5.5 TDS=250.0ppm | pH is slightly depressed at 5.5 but trending upward and not in danger zone; temp
+[call-toby] Telegram sent (info): ✅ All clear — T=75.43°F pH=5.5 TDS=250.0ppm
+pH is slightly depressed at 5.5 but trending upward and not in danger zone; temperature and TDS are healthy. Shrimp colony (5 animals, 664 hours post-introduction) is well-established and feeding has lapsed — resume today.
+[2026-05-11T08:15] Day 51 | skipped (stable) | T=75.54°F pH=5.43 TDS=251.0ppm
+[2026-05-11T08:30] Day 51 | skipped (stable) | T=75.54°F pH=5.23 TDS=249.0ppm
+[2026-05-11T08:45] Day 51 | skipped (stable) | T=75.54°F pH=5.26 TDS=250.0ppm
+[2026-05-11T09:00] Day 51 | skipped (stable) | T=75.54°F pH=5.56 TDS=250.0ppm
