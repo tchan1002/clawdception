@@ -5975,3 +5975,10 @@ pH is slightly depressed at 5.5 but trending upward and not in danger zone; temp
 [2026-05-11T17:30] Day 51 | skipped (stable) | T=73.96°F pH=5.55 TDS=257.0ppm
 [2026-05-11T17:45] Day 51 | skipped (stable) | T=73.85°F pH=5.63 TDS=254.0ppm
 [2026-05-11T18:00] Day 51 | skipped (stable) | T=73.85°F pH=5.6 TDS=255.0ppm
+[2026-05-11T18:15] Day 51 | risk=yellow | [periodic check (10hr since las] | T=73.85°F pH=5.62 TDS=255.0ppm | pH is drifting downward (now 5.62, 24hr mean 5.51) and sits just above the red t
+[call-toby] Telegram sent (warning): pH is drifting downward (now 5.62, 24hr mean 5.51) and sits just above the red threshold; TDS is marginally elevated. No acute crisis, but the system is showing gradual acidification characteristic of a buffering-limited tank. Shrimp remain stable, but sustained pH drift below 5.5 will trigger concern.
+
+• 📸 Send a photo of the tank
+[2026-05-11T18:30] Day 51 | skipped (stable) | T=73.85°F pH=5.62 TDS=254.0ppm
+[2026-05-11T18:45] Day 51 | skipped (stable) | T=73.85°F pH=5.61 TDS=255.0ppm
+[2026-05-11T19:00] Day 51 | skipped (stable) | T=73.85°F pH=5.63 TDS=255.0ppm
