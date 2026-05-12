@@ -6035,3 +6035,10 @@ pH at 5.8 is consistently below target (6.5–7.5) and 24hr mean of 5.516 confir
 [2026-05-12T07:15] Day 52 | skipped (stable) | T=74.97°F pH=5.14 TDS=258.0ppm
 [2026-05-12T07:30] Day 52 | skipped (stable) | T=75.09°F pH=5.12 TDS=257.0ppm
 [2026-05-12T07:45] Day 52 | skipped (stable) | T=75.09°F pH=5.09 TDS=257.0ppm
+[2026-05-12T08:00] Day 52 | risk=red | [scheduled check-in (08:00)] | T=75.09°F pH=5.09 TDS=257.0ppm | pH 5.09 is dangerously acidic and well below target (6.5–7.5); this represents a
+[call-toby] Telegram sent (info): ✅ All clear — T=75.09°F pH=5.09 TDS=257.0ppm
+pH 5.09 is dangerously acidic and well below target (6.5–7.5); this represents a genuine shift from May 8th manual test (6.4) and May 6th test (6.6). TDS has crept to the upper edge of acceptable range, suggesting organic load is accumulating without recent intervention to address the acidic drift.
+[2026-05-12T08:15] Day 52 | skipped (stable) | T=75.09°F pH=5.08 TDS=258.0ppm
+[2026-05-12T08:30] Day 52 | skipped (stable) | T=75.09°F pH=5.13 TDS=257.0ppm
+[2026-05-12T08:45] Day 52 | skipped (stable) | T=75.09°F pH=5.09 TDS=257.0ppm
+[2026-05-12T09:00] Day 52 | skipped (stable) | T=75.09°F pH=5.11 TDS=256.0ppm
