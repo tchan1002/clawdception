@@ -694,3 +694,6 @@ json.decoder.JSONDecodeError: Expecting value: line 2 column 1 (char 1)
 • Confirm feeding status with Toby — clarify whether 175-hour gap since May 4th was intentional or oversight; resume manual feeding within 24 hours if gap was unplanned
 • Resume feeding schedule: if resuming, target 2–3 meals per week until auto-feeder hardware is installed (currently voice skill only)
 • Monitor pH probe calibration through next 24–48 hours — expect full stabilization and return to normal monitoring by May 11th–12th
+[shrimp-journal] Entry written: 2026-05-12-1205.md (Day 52)
+[call-toby] Telegram sent (info): Journal — Day 52 · 2026-05-12 12:05
+[call-toby] Document sent: 2026-05-12-1205.md

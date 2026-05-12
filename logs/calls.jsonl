@@ -1164,3 +1164,5 @@
 {"timestamp": "2026-05-12T08:00:09.242694", "urgency": "info", "message": "\u2705 All clear \u2014 T=75.09\u00b0F pH=5.09 TDS=257.0ppm\npH 5.09 is dangerously acidic and well below target (6.5\u20137.5); this represents a genuine shift from May 8th manual test (6.4) and May 6th test (6.6). TDS has crept to the upper edge of acceptable range, suggesting organic load is accumulating without recent intervention to address the acidic drift.", "sent_via": "telegram"}
 {"timestamp": "2026-05-12T08:05:02.080190", "urgency": "info", "message": "Water change looking due soon. TDS at 258 ppm \u2192 hits ceiling in ~0.0 days. Suggested window: Tuesday, May 12 (~0d).", "sent_via": "telegram"}
 {"timestamp": "2026-05-12T08:30:29.621217", "urgency": "info", "message": "New skill proposal: `probe-confidence` (new, risk: low)", "sent_via": "telegram"}
+{"timestamp": "2026-05-12T12:05:16.673375", "urgency": "info", "message": "Journal \u2014 Day 52 \u00b7 2026-05-12 12:05", "sent_via": "telegram"}
+{"timestamp": "2026-05-12T13:00:03.096990", "urgency": "info", "message": "Media Luna \u2014 last feeding 182h ago. Time to feed the shrimp.", "sent_via": "telegram"}
