@@ -1,8 +1,8 @@
 # State of Tank — Media Luna
 
-**Last updated:** 2026-05-10
-**Cycle day:** 50 (started 2026-03-22)
-**Tank status:** Cycle mature. Colony established. Auto-feeder skill installed but feeding event confirmation still absent. pH probe in recalibration.
+**Last updated:** 2026-05-11
+**Cycle day:** 51 (started 2026-03-22)
+**Tank status:** Cycle mature. Colony established. Active feeding gap — 168+ hours since last confirmed feed. pH probe showing significant intraday drift; manual cross-check needed.
 
 ---
 
@@ -10,45 +10,48 @@
 
 | Animal | Count | Notes |
 |--------|-------|-------|
-| Neocaridina cherry shrimp | 5 confirmed + 1 original resident | ~27 days in tank as of 2026-05-10 |
+| Neocaridina cherry shrimp | 5 confirmed + 1 original resident | ~28 days in tank as of 2026-05-11 |
 
-**Last confirmed visual:** One red-orange adult shrimp, lower right corner near mesh bag (2026-05-09 photo). Appeared unbothered. No new photos or observations logged on 2026-05-10.
+**Last confirmed visual:** One red-orange adult shrimp, lower right corner — from photos submitted 2026-05-09. No photos since.
+
+**Colony health assumption:** Presumed present and stable. No sensor data or events suggest a crash. Visual confirmation overdue (4 days since last photo).
 
 ---
 
-## Water Chemistry — Current
+## Water Chemistry
 
-| Parameter | Status | Notes |
-|-----------|--------|-------|
-| Temperature | ✅ Stable | Avg 75.48°F, within range |
-| pH (sensor) | ⚠️ Calibrating | Avg 5.36; manual test 2026-05-08 read 6.4 — sensor not yet trusted |
-| TDS | ✅ Stable | 248.9 ppm avg, minimal daily movement |
-| Ammonia | Unknown | Last manual test 2026-05-08 |
-| Nitrite | Unknown | Last manual test 2026-05-08 |
-| Nitrate | Unknown | Last manual test 2026-05-08 |
+| Parameter | Current Avg | Target Range | Status |
+|-----------|-------------|--------------|--------|
+| Temperature | 74.5°F | 65–75°F | ✅ Within range |
+| pH | 5.55 (probe avg) | 6.5–7.5 | ⚠️ Below target — probe drift suspected |
+| TDS | 254 ppm | 150–250 ppm | ⚠️ Slightly elevated |
+
+**pH note:** Intraday swing of 4.82–6.49 on 2026-05-11 is inconsistent with stable water chemistry and more consistent with probe drift or calibration error. Manual test strongly recommended before treating pH as actionable.
+
+**Last manual test results (from prior entries):** Nitrate at 80 ppm — consistent with mature, functioning cycle. Ammonia and nitrite presumed undetectable (cycle confirmed mature).
 
 ---
 
 ## Equipment
 
-| Equipment | Status | Notes |
-|-----------|--------|-------|
-| pH probe | ⚠️ Calibrating | Recalibration flagged by Toby 2026-05-08; not yet cleared |
-| Auto-feeder | ⚠️ Unconfirmed | Skill installed 2026-05-09; no feeding events logged; hardware execution uncertain |
-| WiFi / sensors | ✅ OK | RSSI -40 dBm, heap stable |
+- **pH probe:** Installed, reading, but showing wide intraday oscillation. Recalibration or replacement may be needed.
+- **TDS/Temp sensor:** Stable and consistent.
+- **Auto-feeder:** Alexa skill installed. Hardware status and active dispensing unconfirmed. Feeding event has not appeared in logs.
+- **WiFi/system health:** All checks passing. Signal strong (avg −46 dBm). Memory stable.
 
 ---
 
-## Active Concerns
+## Open Questions
 
-- **Feeding gap:** 144+ hours since last confirmed feeding. Auto-feeder status unknown. Manual feeding strongly advisable.
-- **pH probe:** Sensor reads ~1.0 unit below manual test kit. Alert logic and water-change scheduling suspended pending recalibration.
-- **Mesh media bag:** Present in tank; long-term intention unclear.
+- Is the auto-feeder hardware physically installed and dispensing food?
+- Are the shrimp visibly healthy? (Last photo: 2026-05-09)
+- Can we get a manual pH cross-check to validate probe readings?
 
 ---
 
-## Recent Events
+## Known Tank Features (from submitted photos, 2026-05-09)
 
-- **2026-05-09:** Two interior photos submitted. Floating plant coverage visible at surface. Algae/biofilm on equipment and mesh bag. Auto-feeder skill installed.
-- **2026-05-08:** Two manual pH/chemistry tests run (both pH 6.4). Probe recalibration flagged.
-- **2026-04-13:** 5 cherry shrimp introduced to tank.
+- Floating plants at surface
+- Green algae and biofilm visible on equipment and mesh bag
+- Water clarity good — substrate visible through water column
+- Red-orange adult shrimp observed in lower right corner
