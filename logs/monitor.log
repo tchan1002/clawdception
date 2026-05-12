@@ -5985,3 +5985,10 @@ pH is slightly depressed at 5.5 but trending upward and not in danger zone; temp
 [2026-05-11T19:15] Day 51 | skipped (stable) | T=73.85°F pH=5.62 TDS=256.0ppm
 [2026-05-11T19:30] Day 51 | skipped (stable) | T=73.74°F pH=5.81 TDS=255.0ppm
 [2026-05-11T19:45] Day 51 | skipped (stable) | T=73.74°F pH=5.77 TDS=255.0ppm
+[2026-05-11T20:00] Day 51 | risk=yellow | [scheduled check-in (20:00)] | T=73.62°F pH=5.8 TDS=254.0ppm | pH at 5.8 is consistently below target (6.5–7.5) and 24hr mean of 5.516 confirms
+[call-toby] Telegram sent (info): ✅ All clear — T=73.62°F pH=5.8 TDS=254.0ppm
+pH at 5.8 is consistently below target (6.5–7.5) and 24hr mean of 5.516 confirms sustained acidic skew—likely linked to the nitrogen cycle and organic load. TDS nudging the ceiling after a 20% water change (2026-05-05) and recent feeding suggests normal bioload accumulation, not a crisis. Temperature stable. No logged events or anomalies in past 24hr, but auto-feeder status remains unconfirmed and last photo is 54hr old—visual re-check and feeding clarity needed soon.
+[2026-05-11T20:15] Day 51 | skipped (stable) | T=73.51°F pH=6.07 TDS=256.0ppm
+[2026-05-11T20:30] Day 51 | skipped (stable) | T=73.4°F pH=5.7 TDS=257.0ppm
+[2026-05-11T20:45] Day 51 | skipped (stable) | T=73.4°F pH=5.65 TDS=255.0ppm
+[2026-05-11T21:00] Day 51 | skipped (stable) | T=73.29°F pH=5.8 TDS=256.0ppm
