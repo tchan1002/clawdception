@@ -1168,3 +1168,5 @@
 {"timestamp": "2026-05-12T13:00:03.096990", "urgency": "info", "message": "Media Luna \u2014 last feeding 182h ago. Time to feed the shrimp.", "sent_via": "telegram"}
 {"timestamp": "2026-05-12T17:00:02.681053", "urgency": "info", "message": "Media Luna \u2014 last feeding 186h ago. Time to feed the shrimp.", "sent_via": "telegram"}
 {"timestamp": "2026-05-12T18:05:17.874097", "urgency": "info", "message": "Journal \u2014 Day 52 \u00b7 2026-05-12 18:05", "sent_via": "telegram"}
+{"timestamp": "2026-05-12T20:00:09.190512", "urgency": "info", "message": "\u2705 All clear \u2014 T=74.86\u00b0F pH=5.04 TDS=259.0ppm\npH has dropped to 5.04 \u2014 below the 6.0 danger threshold \u2014 and manual testing 6 days ago showed 6.6, indicating a sustained acidification trend over the past week. At pH 5.04, the shrimp are in a stress zone; this is the signal, not noise.", "sent_via": "telegram"}
+{"timestamp": "2026-05-12T20:01:05.670609", "urgency": "info", "message": "Logged as feeding: Fed a couple of pellets to the tank. \u2713", "sent_via": "telegram"}

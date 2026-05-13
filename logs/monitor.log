@@ -6085,3 +6085,10 @@ pH 5.09 is dangerously acidic and well below target (6.5–7.5); this represents
 [2026-05-12T19:15] Day 52 | skipped (stable) | T=74.97°F pH=4.97 TDS=258.0ppm
 [2026-05-12T19:30] Day 52 | skipped (stable) | T=74.97°F pH=5.02 TDS=258.0ppm
 [2026-05-12T19:45] Day 52 | skipped (stable) | T=74.97°F pH=5.04 TDS=258.0ppm
+[2026-05-12T20:00] Day 52 | risk=red | [scheduled check-in (20:00)] | T=74.86°F pH=5.04 TDS=259.0ppm | pH has dropped to 5.04 — below the 6.0 danger threshold — and manual testing 6 d
+[call-toby] Telegram sent (info): ✅ All clear — T=74.86°F pH=5.04 TDS=259.0ppm
+pH has dropped to 5.04 — below the 6.0 danger threshold — and manual testing 6 days ago showed 6.6, indicating a sustained acidification trend over the past week. At pH 5.04, the shrimp are in a stress zone; this is the signal, not noise.
+[2026-05-12T20:15] Day 52 | risk=red | [manual event since last check ] | T=74.86°F pH=4.99 TDS=258.0ppm | pH 4.99 is dangerously acidic and outside safe bounds for Neocaridina; this is s
+[2026-05-12T20:30] Day 52 | skipped (stable) | T=74.86°F pH=5.03 TDS=260.0ppm
+[2026-05-12T20:45] Day 52 | skipped (stable) | T=74.97°F pH=4.99 TDS=259.0ppm
+[2026-05-12T21:00] Day 52 | skipped (stable) | T=74.97°F pH=5.01 TDS=259.0ppm
