@@ -855,7 +855,9 @@ const DEMO_DATA = buildDemoData();
 
 // ─── HELPERS ───────────────────────────────────────────
 function filter24h(data) {
-  const cutoff = Date.now() - WINDOW_HOURS * 3600 * 1000;
+  if (!data.length) return data;
+  const latest = Math.max(...data.map(r => new Date(r.timestamp).getTime()));
+  const cutoff = latest - WINDOW_HOURS * 3600 * 1000;
   return data.filter(r => new Date(r.timestamp).getTime() >= cutoff);
 }
 
